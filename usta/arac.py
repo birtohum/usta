@@ -331,6 +331,132 @@ def _tirnak(s: str) -> str:
     return "'" + s.replace("'", "'\"'\"'") + "'"
 
 
+WSL_DAGITIM = os.environ.get("USTA_WSL_DAGITIM", "usta-kum")
+WSL_KULLANICI = "usta"
+
+# Dağıtımın İÇİNDE çalışan yardımcı. İstek, betiğin başına base64 olarak gömülür ve betik stdin'den okunur
+# (wsl.exe komut satırı tırnaklaması ve Türkçe karakterler sorun çıkarmasın diye). Yanıt: işaretten sonra JSON.
+_WSL_YARDIMCI = r'''
+import base64, json, os, shutil, signal, subprocess, sys, tempfile
+I = json.loads(base64.b64decode(ISTEK))
+KOK = I["kok"]
+def tam(yol):
+    p = os.path.realpath(os.path.join(KOK, yol))
+    if p != KOK and not p.startswith(KOK + "/"):
+        raise PermissionError("disari")
+    return p
+def yap():
+    t = I["tur"]
+    if t == "ac":
+        os.makedirs(KOK + "/.tmp", exist_ok=True)
+        return {"tamam": True}
+    if t == "yaz":
+        p = tam(I["yol"]); os.makedirs(os.path.dirname(p), exist_ok=True)
+        with open(p, "w", encoding="utf-8") as f: f.write(I["icerik"])
+        return {"tamam": True}
+    if t == "oku":
+        with open(tam(I["yol"]), "rb") as f: veri = f.read()
+        try: return {"metin": veri.decode("utf-8")}
+        except UnicodeDecodeError: return {"hata": "unicode"}
+    if t == "listele":
+        out = []
+        for d, dirs, files in os.walk(KOK):
+            dirs[:] = [x for x in dirs if x not in ("__pycache__", ".pytest_cache", ".tmp")]
+            for ad in files:
+                p = os.path.join(d, ad)
+                if not os.path.islink(p) and os.path.getsize(p) < 200000:
+                    out.append(os.path.relpath(p, KOK))
+        return {"liste": sorted(out)}
+    if t == "calistir":
+        env = {"PATH": "/usr/local/bin:/usr/bin:/bin", "HOME": KOK, "TMPDIR": KOK + "/.tmp", "LANG": "C.UTF-8",
+               "PYTHONIOENCODING": "utf-8", "PYTHONDONTWRITEBYTECODE": "1"}
+        # Ağ kapalı: yalnızca 'lo' olan yeni ağ ad alanı (kullanıcı ad alanıyla, root gerekmeden).
+        argv = ["unshare", "--net", "--map-current-user", "bash", "-c", I["komut"]]
+        with tempfile.TemporaryFile() as cikti:
+            p = subprocess.Popen(argv, cwd=KOK, env=env, stdin=subprocess.DEVNULL, stdout=cikti,
+                                 stderr=subprocess.STDOUT, start_new_session=True)
+            try:
+                kod = p.wait(timeout=I["sure"])
+            except subprocess.TimeoutExpired:
+                os.killpg(p.pid, signal.SIGKILL); p.wait(); kod = 124
+            cikti.seek(0)
+            return {"kod": kod, "cikti": cikti.read(4 * 1024 * 1024).decode("utf-8", "replace")}
+    if t == "kapat":
+        shutil.rmtree(KOK, ignore_errors=True)
+        return {"tamam": True}
+try:
+    s = yap()
+except FileNotFoundError:
+    s = {"hata": "yok"}
+except PermissionError as e:
+    s = {"hata": "disari" if str(e) == "disari" else "os", "mesaj": str(e)}
+except (OSError, ValueError) as e:
+    s = {"hata": "os", "mesaj": f"{type(e).__name__}: {e}"}
+sys.stdout.write("\n@@USTA@@" + json.dumps(s))
+'''
+
+
+class WslCalisma(Calisma):
+    """Usta'ya özel WSL2 dağıtımında (varsayılan 'usta-kum') çalışma: Windows dosyaları bağlanmamış (automount kapalı),
+    .exe çalıştırma kapalı (interop kapalı), root olmayan kullanıcı, komutlar ağsız ad alanında. Dağıtımda sır yoktur.
+    Çalışma klasörü dağıtımın içindedir (/home/usta/is/<id>); Windows yolu hiç kullanılmaz."""
+
+    def __init__(self):
+        import uuid
+        self.kok = f"/home/{WSL_KULLANICI}/is/{uuid.uuid4().hex[:12]}"
+        self._istek({"tur": "ac"})
+
+    def _istek(self, istek: dict, sure: int = 60) -> dict:
+        import base64
+        istek = {**istek, "kok": self.kok}
+        betik = f"ISTEK = {base64.b64encode(json.dumps(istek).encode()).decode()!r}\n" + _WSL_YARDIMCI
+        try:
+            r = subprocess.run(["wsl.exe", "-d", WSL_DAGITIM, "-u", WSL_KULLANICI, "--cd", "/", "--exec",
+                                "python3", "-"], input=betik.encode("utf-8"), capture_output=True, timeout=sure + 30)
+        except subprocess.TimeoutExpired:
+            return {"kod": 124, "cikti": ""}
+        cikti = r.stdout.decode("utf-8", "replace")
+        if "@@USTA@@" not in cikti:
+            raise RuntimeError(f"WSL dağıtımı '{WSL_DAGITIM}' yanıt vermedi: {(cikti + r.stderr.decode('utf-8', 'replace'))[-300:]}")
+        s = json.loads(cikti.rsplit("@@USTA@@", 1)[1])
+        hata = s.get("hata")
+        if hata == "yok":
+            raise FileNotFoundError(istek.get("yol"))
+        if hata == "unicode":
+            raise UnicodeDecodeError("utf-8", b"", 0, 1, "ikili dosya")
+        if hata == "disari":
+            raise AracHatasi(f"çalışma klasörü dışına çıkan yol reddedildi: {istek.get('yol')}")
+        if hata == "os":
+            raise OSError(s.get("mesaj", ""))
+        return s
+
+    def _yaz(self, yol, icerik):
+        self._istek({"tur": "yaz", "yol": yol, "icerik": icerik})
+
+    def _oku(self, yol):
+        return self._istek({"tur": "oku", "yol": yol})["metin"]
+
+    def _calistir(self, komut, sure):
+        s = self._istek({"tur": "calistir", "komut": komut, "sure": sure}, sure)
+        return s["kod"], s["cikti"] + (f"\nzaman aşımı: {sure} sn" if s["kod"] == 124 else "")
+
+    def _listele(self):
+        return self._istek({"tur": "listele"})["liste"]
+
+    def kapat(self):
+        try:
+            self._istek({"tur": "kapat"})
+        except Exception:
+            pass
+
+
 def calisma_ac(tur: str | None = None) -> Calisma:
-    tur = tur or os.environ.get("USTA_CALISMA", "yerel")
-    return ModalCalisma() if tur == "modal" else YerelCalisma()
+    """Varsayılan 'wsl' (usta-kum dağıtımı). 'yerel' yalıtımsızdır: yalnızca USTA_CALISMA=yerel ile ve uyarıyla açılır."""
+    tur = tur or os.environ.get("USTA_CALISMA", "wsl")
+    if tur == "modal":
+        return ModalCalisma()
+    if tur == "yerel":
+        print("UYARI: yerel çalışma kipi yalıtımsızdır; model komutları bu bilgisayarda sizin yetkinizle çalışır "
+              "(bkz. tests/GUVENLIK.md B-10).", file=sys.stderr)
+        return YerelCalisma()
+    return WslCalisma()

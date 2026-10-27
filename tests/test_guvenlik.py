@@ -1,6 +1,6 @@
 """Araç çalıştırıcısı ve web arayüzü için saldırı testleri (kötü niyetli ya da hatalı model çıktısı).
 
-Kurallar: yalnızca YerelCalisma, yalnızca geçici klasörler; ağ yok, Modal yok. Yükler zararsızdır:
+Kurallar: YerelCalisma ve WslCalisma (usta-kum dağıtımı varsa), yalnızca geçici klasörler; ağ yok, Modal yok. Yükler zararsızdır:
 gerçek dosya silinmez, gerçek anahtar okunmaz — sahte nöbetçi (sentinel) değerlerle açığın varlığı kanıtlanır.
 
 Açık bulgular `xfail(strict=True)` ile işaretlidir: test GÜVENLİ davranışı ister ve bugün başarısız olur.
@@ -17,7 +17,7 @@ from pathlib import Path
 import pytest
 
 from usta import arac
-from usta.arac import CIKTI_SINIRI, AracHatasi, YerelCalisma, guvenli_yol, komut_denetle
+from usta.arac import CIKTI_SINIRI, AracHatasi, WslCalisma, YerelCalisma, guvenli_yol, komut_denetle
 
 NOBETCI = "USTA-SAHTE-ANAHTAR-7f3a9c"   # gerçek anahtar değil; sızıp sızmadığını izlemek için
 
@@ -26,9 +26,23 @@ def bulgu(no: str, neden: str):
     return pytest.mark.xfail(strict=True, reason=f"{no}: {neden}")
 
 
+def _wsl_var() -> bool:
+    if os.name != "nt":
+        return False
+    try:
+        r = subprocess.run(["wsl.exe", "-l", "-q"], capture_output=True, timeout=30)
+    except (OSError, subprocess.TimeoutExpired):
+        return False
+    return arac.WSL_DAGITIM in r.stdout.replace(b"\0", b"").decode("utf-8", "ignore").split()
+
+
+WSL_VAR = _wsl_var()
+wsl_gerekli = pytest.mark.skipif(not WSL_VAR, reason=f"WSL dağıtımı '{arac.WSL_DAGITIM}' kurulu değil")
+
+
 @pytest.fixture
-def kafes(tmp_path, monkeypatch):
-    """Çalışma klasörünü tmp_path/dis altında açar; böylece 'üst klasör' de geçici ve gözlenebilir olur."""
+def yerel_kafes(tmp_path, monkeypatch):
+    """YerelCalisma'yı tmp_path/dis altında açar; böylece 'üst klasör' de geçici ve gözlenebilir olur."""
     dis = tmp_path / "dis"
     dis.mkdir()
     monkeypatch.setattr(tempfile, "tempdir", str(dis))
@@ -36,6 +50,25 @@ def kafes(tmp_path, monkeypatch):
     with YerelCalisma() as c:
         assert c.kok.parent == dis
         yield c, dis
+
+
+@pytest.fixture(params=["yerel", pytest.param("wsl", marks=wsl_gerekli)])
+def kafes(request, tmp_path, monkeypatch):
+    """Her iki çalıştırıcı. 'dis', Windows tarafında sırların durduğu yeri temsil eder (WSL'de çalışma klasörü
+    dağıtımın içindedir; yerelde dis'in altındadır)."""
+    if request.param == "yerel":
+        yield request.getfixturevalue("yerel_kafes")
+        return
+    dis = tmp_path / "dis"
+    dis.mkdir()
+    monkeypatch.setattr(arac, "KOMUT_SURESI", 5)
+    with WslCalisma() as c:
+        yield c, dis
+
+
+def _icerde(c, isim: str):
+    """Çalışma klasöründe ikili dosya ve klasör hazırlar (filtreyi atlayarak, iki çalıştırıcıda da aynı yolla)."""
+    c._calistir(f"printf '\\211PNG\\377\\376\\000\\201' > {isim}; mkdir -p klasor", 10)
 
 
 # ---------------------------------------------------------------- 1. Yol kaçışı (Write/Read/Edit)
@@ -67,7 +100,7 @@ def test_garip_yol_disari_yazamaz(kafes, yol):
     except (ValueError, OSError):
         sonuc = "HATA (istisna)"   # ayrı bulgu (B-4); burada yalnızca kaçış olmadığını denetliyoruz
     sonra = set(dis.rglob("*"))
-    yeni = [p for p in sonra - once if c.kok not in p.parents and p != c.kok]
+    yeni = [p for p in sonra - once if not isinstance(c.kok, Path) or (c.kok not in p.parents and p != c.kok)]
     assert not yeni, f"{yol!r} çalışma klasörü dışında dosya oluşturdu: {yeni} ({sonuc})"
 
 
@@ -84,8 +117,8 @@ def _bag_kur(hedef: Path, bag: Path, klasor: bool):
     pytest.skip("bu sistemde sembolik bağ kurulamıyor (Windows'ta Geliştirici Modu gerekir)")
 
 
-def test_sembolik_bag_klasor_ile_kacis_engellenir(kafes):
-    c, dis = kafes
+def test_sembolik_bag_klasor_ile_kacis_engellenir(yerel_kafes):
+    c, dis = yerel_kafes
     (dis / "gizli.txt").write_text(NOBETCI, encoding="utf-8")
     _bag_kur(dis, c.kok / "bag", klasor=True)
     assert c.arac_calistir("Read", {"path": "bag/gizli.txt"}).startswith("HATA")
@@ -95,8 +128,8 @@ def test_sembolik_bag_klasor_ile_kacis_engellenir(kafes):
     assert (dis / "gizli.txt").read_text(encoding="utf-8") == NOBETCI
 
 
-def test_sembolik_bag_dosya_ile_kacis_engellenir(kafes):
-    c, dis = kafes
+def test_sembolik_bag_dosya_ile_kacis_engellenir(yerel_kafes):
+    c, dis = yerel_kafes
     (dis / "gizli.txt").write_text(NOBETCI, encoding="utf-8")
     _bag_kur(dis / "gizli.txt", c.kok / "masum.py", klasor=False)
     assert NOBETCI not in c.arac_calistir("Read", {"path": "masum.py"})
@@ -104,9 +137,9 @@ def test_sembolik_bag_dosya_ile_kacis_engellenir(kafes):
     assert (dis / "gizli.txt").read_text(encoding="utf-8") == NOBETCI
 
 
-def test_dosyalar_sembolik_bagi_izlemez(kafes):
+def test_dosyalar_sembolik_bagi_izlemez(yerel_kafes):
     """Sonuç ekranına giden dosyalar() dışarıdaki dosyayı içeriğiyle sızdırmamalı."""
-    c, dis = kafes
+    c, dis = yerel_kafes
     (dis / "gizli.txt").write_text(NOBETCI, encoding="utf-8")
     _bag_kur(dis / "gizli.txt", c.kok / "masum.txt", klasor=False)
     assert NOBETCI not in "".join(c.dosyalar().values())
@@ -215,8 +248,7 @@ def test_dogrudan_tehlikeli_komutlar_reddedilir(komut):
 ])
 def test_bozuk_girdi_istisna_firlatmaz(kafes, ad, arg):
     c, _ = kafes
-    (c.kok / "ikili.bin").write_bytes(b"\xff\xfe\x00\x81")
-    (c.kok / "klasor").mkdir()
+    _icerde(c, "ikili.bin")
     sonuc = c.arac_calistir(ad, arg)   # istisna fırlatmamalı
     assert sonuc.startswith("HATA")
 
@@ -224,7 +256,7 @@ def test_bozuk_girdi_istisna_firlatmaz(kafes, ad, arg):
 def test_ajan_ikili_dosya_okumasinda_cokmez(kafes, monkeypatch):
     from usta import ajan, glimmer
     c, _ = kafes
-    (c.kok / "resim.png").write_bytes(b"\x89PNG\r\n\x1a\n\xff\xff")
+    _icerde(c, "resim.png")
     cevaplar = iter([
         {"content": "", "tool_calls": [{"id": "1", "function": {"name": "Read", "arguments": '{"path": "resim.png"}'}}],
          "_usage": {}, "_finish": "tool_calls"},
@@ -432,11 +464,70 @@ def test_kabuk_baska_klasorde_acilirsa_calisma_reddedilir(monkeypatch, tmp_path)
 # calisma_ac() varsayılanı "yerel" olduğundan (main 5f75d83) web arayüzü de bu kipte çalışır. Yol filtreleri yalnızca
 # komut metnine bakar; yol hex/chr ile kurulursa hiçbir kalıp eşleşmez.
 
+def _gizli_okuma_komutlari(gizli: Path) -> list[str]:
+    wsl_yolu = "/mnt/" + gizli.drive[0].lower() + gizli.as_posix()[2:] if gizli.drive else gizli.as_posix()
+    return [f"python -c \"print(open(bytes.fromhex('{y.encode().hex()}').decode()).read())\""
+            for y in (str(gizli), wsl_yolu)]
+
+
 @bulgu("B-10", "yerel kipte mutlak yol hex ile gizlenince klasör dışındaki dosya (ör. ~/.pflow-anahtarlar.env) okunabiliyor")
-def test_gizlenmis_mutlak_yol_ile_disari_okunamaz(kafes):
-    c, dis = kafes
+def test_gizlenmis_mutlak_yol_ile_disari_okunamaz_yerel(yerel_kafes):
+    c, dis = yerel_kafes
     gizli = dis / "anahtarlar.env"
     gizli.write_text(f"META_MODEL_API_KEY={NOBETCI}\n", encoding="utf-8")
-    komut = f"python -c \"print(open(bytes.fromhex('{str(gizli).encode().hex()}').decode()).read())\""
+    komut = _gizli_okuma_komutlari(gizli)[0]
     komut_denetle(komut)   # filtreden geçtiğini ayrıca göster
     assert NOBETCI not in c.arac_calistir("Bash", {"command": komut})
+
+
+@wsl_gerekli
+def test_gizlenmis_mutlak_yol_ile_disari_okunamaz_wsl(tmp_path):
+    """B-10 düzeltmesi: WslCalisma'da Windows dosya sistemi hiç bağlı değil."""
+    gizli = tmp_path / "anahtarlar.env"
+    gizli.write_text(f"META_MODEL_API_KEY={NOBETCI}\n", encoding="utf-8")
+    with WslCalisma() as c:
+        for komut in _gizli_okuma_komutlari(gizli):
+            komut_denetle(komut)
+            assert NOBETCI not in c.arac_calistir("Bash", {"command": komut})
+            assert NOBETCI not in c._calistir(komut, 20)[1]   # filtre hiç olmasa da
+
+
+@wsl_gerekli
+def test_wsl_icinden_windows_ve_ag_erisilemez():
+    """Filtreyi atlayarak (_calistir) dener: Windows sürücüleri, .exe'ler, ağ ve root yetkisi yok.
+    Gerçek anahtar dosyalarına dokunmaz: yalnızca bağlama noktalarını ve çalıştırılabilirleri yoklar."""
+    with WslCalisma() as c:
+        kod, cikti = c._calistir("id -u; ls -A /mnt/c | wc -l; ls /mnt/c/Windows 2>&1 | head -1", 20)
+        satir = cikti.splitlines()
+        assert satir[0] != "0" and satir[1] == "0" and "No such file" in satir[2], cikti
+        for exe in ["cmd.exe /c ver", "/mnt/c/Windows/System32/cmd.exe /c ver", "powershell.exe -c 1", "wsl.exe -l",
+                    "explorer.exe ."]:
+            kod, cikti = c._calistir(exe, 20)
+            assert kod != 0 and ("not found" in cikti or "No such file" in cikti), (exe, cikti)
+        # yalnızca salt okunur GPU sürücü klasörü (/usr/lib/wsl/drivers) bağlı; Windows sürücüsü (drvfs) yok
+        kod, cikti = c._calistir("mount | grep -i -E 'drvfs|9p' | grep -v /usr/lib/wsl/drivers | wc -l", 20)
+        assert cikti.split()[-1] == "0", cikti
+        kod, cikti = c._calistir("python -c \"import socket; socket.create_connection(('1.1.1.1', 53), 3)\"", 20)
+        assert kod != 0 and "unreachable" in cikti.lower(), cikti
+        kod, cikti = c._calistir("sudo -n true", 20)
+        assert kod != 0
+
+
+@wsl_gerekli
+def test_wsl_sembolik_bag_ile_kacis_engellenir():
+    with WslCalisma() as c:
+        c._calistir("ln -s /etc bag; ln -s /etc/passwd masum.txt", 10)
+        assert c.arac_calistir("Read", {"path": "bag/passwd"}).startswith("HATA")
+        assert c.arac_calistir("Read", {"path": "masum.txt"}).startswith("HATA")
+        assert c.arac_calistir("Write", {"path": "bag/yeni", "content": "x"}).startswith("HATA")
+        assert "root:" not in "".join(c.dosyalar().values())
+
+
+def test_calisma_ac_varsayilani_wsl_yerel_yalniz_acikca(monkeypatch, capsys):
+    monkeypatch.delenv("USTA_CALISMA", raising=False)
+    monkeypatch.setattr(arac, "WslCalisma", lambda: "wsl")
+    assert arac.calisma_ac() == "wsl"
+    monkeypatch.setenv("USTA_CALISMA", "yerel")
+    with arac.calisma_ac() as c:
+        assert isinstance(c, YerelCalisma)
+    assert "UYARI" in capsys.readouterr().err
