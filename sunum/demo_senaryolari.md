@@ -114,6 +114,29 @@ bunu elle yapar. Görev uzun ve çok kurallı (14 kabul testi, 19 gizli test) �
 çıkmazsa aynı görevi farklı koşuyla dene, ya da 5/6 numaraya geç. Hiçbiri olmazsa kayıtlı `c_g21.json`'u dürüstçe
 "değerlendirmeden gerçek koşu" diye göster — canlıymış gibi sunma.
 
+**Kayıtlı koşu güncel kodla mı?** Evet: `c_g21.json` içinde `hakem` alanı var (8 karar). Hakem adımı ve
+yalnızca adlandırmaya indirilmiş sözleşme aynı commit'te (695d8af) geldiği için bu koşu yeni kodla yapılmış.
+Depodaki kopyası `sonuclar/zor/c_g21.json`.
+
+**Kırmızıyla başlayan diğer kayıtlı c koşuları** (hepsinde `hakem` alanı var):
+
+| Görev | Turlar | Gizli testler | Demoya uygun mu |
+|---|---|---|---|
+| g21 vade.py | 6/14 → 14/14 | 19/19 | **evet, ana gösteri** |
+| g19 SlugUretici (Türkçe slug, I→ı→i) | 11/12 → 12/12 | 16/16 | **evet, yedek**: Türkçe harf konusu, kısa |
+| g17 PlakaKayit (Bursa otopark) | 0/2 → 12/12 | 18/18 | zayıf: tur 1'de yalnızca 2 test sayıldı (büyük olasılıkla toplama/içe aktarma hatası); "6/14" kadar okunaklı değil |
+| g26, g32 | 12/13 → 13/13, 11/12 → 12/12 | 15/17 | hayır: kabul testleri geçti ama gizli testler kaldı |
+| g25 | 11/12 → 11/12 → 12/12 | 3/17 | hayır |
+| g22 | 0/2 üç tur | 0/2 | hayır |
+
+g26/g32/g25 sonuçları videoda değil, ama dürüstlük bölümünde işe yarar: "kabul testlerini geçmek, gizli testleri
+geçmeyi garanti etmiyor".
+
+**GPU durumu (ana oturumun bildirdiği):** Modal kredisi bitti; Glimmer kullanıcı karar verene kadar kapalı. GPU
+açılmazsa video kayıtlı koşularla (g21 ana gösteri, g19 yedek) çekilir. Bu durumda ekranda "recorded run from our
+evaluation" yazar. Sesle açılış (senaryo 1) için yalnızca Voice Transcribe adımı canlı gösterilebilir; bunun için
+Glimmer gerekmez.
+
 ---
 
 ## 5. E-ticaret stok CSV raporu
