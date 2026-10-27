@@ -67,11 +67,12 @@ Tasks g07–g40 (34 tasks not looked at while tuning the method):
 
 | Mode | All hidden tests pass | Hidden tests passed | Avg. Glimmer steps | Avg. Glimmer tokens | Spark cost |
 |---|---|---|---|---|---|
-| (a) Glimmer alone | **20/34 (59%)** | 94% | 13.2 | 81k | – |
-| (b) Glimmer + own tests | 14/34 (41%) | 89% | 8.5 | 58k | – |
-| (c) Usta | 18/34 (53%) | 92% | 9.6 | 66k | $0.08 total |
+| (a) Glimmer alone | **20/34 (59%; 95% CI 42–74)** | 94% | 13.2 | 81k | – |
+| (b) Glimmer + own tests | 14/34 (41%; 26–58) | 89% | 8.5 | 58k | – |
+| (c) Usta | 18/34 (53%; 37–69) | 92% | 9.6 | 66k | $0.08 total |
 
-Paired, same task: c vs a — only c passed 0, only a passed 2. c vs b — only c passed 5, only b passed 1.
+Paired, same task: c vs a — only c passed 0, only a passed 2 (difference −5.9 points, 95% task-bootstrap CI −14.7 … 0.0).
+c vs b — only c passed 5, only b passed 1 (+11.8 points, CI 0.0 … +26.5). Intervals are Wilson (single rates) and task-level bootstrap (paired).
 All 40 tasks: a 25/40, b 19/40, c 23/40. Raw per-run records: [`sonuclar/`](sonuclar/).
 
 What we read from this (single run per task and mode, so differences of 1–3 tasks are noise):
