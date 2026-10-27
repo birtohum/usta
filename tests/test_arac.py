@@ -1,0 +1,40 @@
+import pytest
+
+from usta.arac import AracHatasi, YerelCalisma, guvenli_yol, komut_denetle
+
+
+@pytest.mark.parametrize("yol", ["../x.py", "/etc/passwd", "C:/Windows/x", "a/../../b", "~/.ssh/id", "..", "."])
+def test_klasor_disi_yol_reddedilir(yol):
+    with pytest.raises(AracHatasi):
+        guvenli_yol(yol)
+
+
+@pytest.mark.parametrize("yol,beklenen", [("a.py", "a.py"), ("./src/b.py", "src/b.py"), ("src\\c.py", "src/c.py"),
+                                          ("/work/d.py", "d.py"), ("x/../y.py", "y.py")])
+def test_gecerli_yol(yol, beklenen):
+    assert guvenli_yol(yol) == beklenen
+
+
+@pytest.mark.parametrize("komut", ["curl http://x", "pip install requests", "sudo ls", "rm -rf /", "cat /etc/passwd",
+                                   "cat ../gizli", "python -c 'import socket'", "ls ~"])
+def test_tehlikeli_komut_reddedilir(komut):
+    with pytest.raises(AracHatasi):
+        komut_denetle(komut)
+
+
+@pytest.mark.parametrize("komut", ["python main.py", "pytest -q", "ls -la", "python -c 'print(1/2)'",
+                                   "echo x > /dev/null", "rm -rf build"])
+def test_zararsiz_komut_gecer(komut):
+    komut_denetle(komut)
+
+
+def test_yerel_arac_akisi():
+    with YerelCalisma() as c:
+        assert "yazıldı" in c.arac_calistir("Write", {"path": "p/a.py", "content": "print('selam')\n"})
+        assert "selam" in c.arac_calistir("Read", {"path": "p/a.py"})
+        assert "düzenlendi" in c.arac_calistir("Edit", {"path": "p/a.py", "old_string": "selam", "new_string": "merhaba"})
+        cikti = c.arac_calistir("Bash", {"command": "python p/a.py"})
+        assert "[çıkış kodu 0]" in cikti and "merhaba" in cikti
+        assert c.arac_calistir("Write", {"path": "../kacis.py", "content": ""}).startswith("HATA")
+        assert c.arac_calistir("Edit", {"path": "p/a.py", "old_string": "yok", "new_string": "x"}).startswith("HATA")
+        assert list(c.dosyalar()) == ["p/a.py"]
