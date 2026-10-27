@@ -114,7 +114,6 @@ def test_dosyalar_sembolik_bagi_izlemez(kafes):
 
 # ---------------------------------------------------------------- 2. Bash ile klasör dışına erişim (YerelCalisma)
 
-@bulgu("B-1", "Bash çalışma klasöründen çıkabiliyor: 'cd ..;' ve python os.pardir filtreyi atlatıyor")
 @pytest.mark.parametrize("komut", [
     "cd ..; cat gizli.env",
     "cd ..&&cat gizli.env",
@@ -127,14 +126,12 @@ def test_bash_ust_klasoru_okuyamaz(kafes, komut):
     assert NOBETCI not in c.arac_calistir("Bash", {"command": komut})
 
 
-@bulgu("B-1", "Bash çalışma klasörü dışına dosya yazabiliyor")
 def test_bash_ust_klasore_yazamaz(kafes):
     c, dis = kafes
     c.arac_calistir("Bash", {"command": "cd ..; echo zararsiz > kacis.txt"})
     assert not (dis / "kacis.txt").exists()
 
 
-@bulgu("B-1", "$HOME genişlemesi mutlak yol filtresini atlatıyor; ev dizinindeki anahtar dosyası okunabiliyor")
 def test_bash_ev_dizinindeki_anahtar_dosyasini_okuyamaz(kafes, tmp_path, monkeypatch):
     c, _ = kafes
     ev = tmp_path / "ev"
@@ -146,7 +143,6 @@ def test_bash_ev_dizinindeki_anahtar_dosyasini_okuyamaz(kafes, tmp_path, monkeyp
 
 # ---------------------------------------------------------------- 3. Ortam değişkenlerinden anahtar sızdırma
 
-@bulgu("B-2", "YerelCalisma alt süreci tüm ortamı (API anahtarları dahil) devralıyor")
 @pytest.mark.parametrize("komut", ["env", "printenv", "set",
                                    "python -c \"import os; print(dict(os.environ))\"",
                                    "echo $USTA_GLIMMER_TOKEN $META_MODEL_API_KEY"])
@@ -210,7 +206,6 @@ def test_dogrudan_tehlikeli_komutlar_reddedilir(komut):
 
 # ---------------------------------------------------------------- 5. Hatalı model çıktısı görevi çökertmemeli
 
-@bulgu("B-4", "UnicodeDecodeError/PermissionError/ValueError yakalanmıyor; ajan döngüsü ve görev çöküyor")
 @pytest.mark.parametrize("ad,arg", [
     ("Read", {"path": "ikili.bin"}),
     ("Edit", {"path": "ikili.bin", "old_string": "a", "new_string": "b"}),
@@ -226,7 +221,6 @@ def test_bozuk_girdi_istisna_firlatmaz(kafes, ad, arg):
     assert sonuc.startswith("HATA")
 
 
-@bulgu("B-4", "tek bir ikili dosya okuması tüm ajan görevini düşürüyor")
 def test_ajan_ikili_dosya_okumasinda_cokmez(kafes, monkeypatch):
     from usta import ajan, glimmer
     c, _ = kafes
@@ -273,7 +267,6 @@ def test_kabuk_ici_sonsuz_dongu_zaman_asimiyla_kesilir(kafes, monkeypatch):
 
 # DİKKAT: buradaki yükler kasıtlı olarak 6-8 sn ile SINIRLIDIR. Gerçek bir 'while True: pass' kullanmayın:
 # bash öldürüldükten sonra python yetim kalır, sonsuza dek CPU yer ve arac_calistir hiç dönmez (elle denendi).
-@bulgu("B-5", "zaman aşımı yalnızca bash'i öldürür; çıktı borusunu tutan alt süreç bitene kadar beklenir")
 @pytest.mark.parametrize("komut", [
     "python -c \"import time; time.sleep(8)\"; echo son",     # bash çatallanır, python alt süreç olur
     "python -c \"import time; time.sleep(8)\" & echo arka",   # arka plan süreci boruyu açık tutar
@@ -287,7 +280,6 @@ def test_zaman_asimi_torun_surecleri_de_keser(kafes, monkeypatch, komut):
     assert time.monotonic() - bas < 4
 
 
-@bulgu("B-6", "Write içeriğine ve dosya sayısına sınır yok; dosyalar() hepsini belleğe ve arayüze taşır")
 def test_write_boyut_siniri(kafes):
     c, _ = kafes
     assert c.arac_calistir("Write", {"path": "dev.txt", "content": "z" * 50_000_000}).startswith("HATA")
@@ -355,14 +347,12 @@ def test_web_basit_capraz_kaynak_istegi_gorev_baslatamaz(istemci, tur):
     assert r.status_code == 422 and not baslayan
 
 
-@bulgu("B-7", "Host başlığı denetlenmiyor; DNS yeniden bağlama ile yabancı site görev açabilir")
 def test_web_yabanci_host_reddedilir(istemci):
     tc, *_ = istemci
     r = tc.post("/api/gorev", json={"gorev": "x"}, headers={"host": "kotu.example:8765"})
     assert r.status_code in (400, 403, 421)
 
 
-@bulgu("B-8", "aynı anda başlatılabilecek görev sayısına sınır yok (her biri Modal Sandbox + GPU + Spark harcar)")
 def test_web_eszamanli_gorev_siniri(istemci):
     tc, _, baslayan, serbest = istemci
     kodlar = [tc.post("/api/gorev", json={"gorev": f"görev {i}"}).status_code for i in range(25)]

@@ -13,12 +13,16 @@ python -m pip install pytest==8.3.3 fastapi httpx python-multipart websockets
 python -m pytest -q tests/ -rxX
 ```
 
-Bugünkü sonuç (Windows 11, Git Bash, Python 3.12): **113 geçti, 2 atlandı, 40 xfail.** Atlanan 2 test, dosyaya
-sembolik bağ kurmak için Geliştirici Modu gerektiriyor. Klasör bağı (junction) üzerinden yapılan saldırı testi geçiyor.
+**Durum:** Düzeltme diff'i ([`guvenlik_duzeltme.diff`](guvenlik_duzeltme.diff)) main'e 69d9baa commit'iyle uygulandı.
+B-1, B-2, B-4, B-5, B-6, B-7 ve B-8'in eşzamanlılık bölümü kapandı; bu bulgulara ait 23 testin xfail işareti
+kaldırıldı. Açık kalanlar: B-3 ve B-8'in sahipsiz iş bölümü.
 
-Tüm düzeltmeleri içeren diff: [`guvenlik_duzeltme.diff`](guvenlik_duzeltme.diff) (`git apply tests/guvenlik_duzeltme.diff`).
-Bu diff `usta/` kodunun bir kopyasına uygulanıp denendi. Sonuç: B-1, B-2, B-4, B-5, B-6, B-7 ve B-8'in eşzamanlılık
-bölümüne ait **23 test XPASS'a döndü.** `test_arac.py` dahil geri kalan bütün testler geçmeye devam etti.
+Düzeltme sonrası sonuç (Windows 11, Git Bash, Python 3.12): **136 geçti, 2 atlandı, 17 xfail** (16 tanesi B-3, 1
+tanesi B-8). Sonuç üç ardışık çalıştırmada aynı çıktı. Atlanan 2 test, dosyaya sembolik bağ kurmak için Geliştirici
+Modu gerektiriyor. Klasör bağı (junction) üzerinden yapılan saldırı testi geçiyor.
+
+Düzeltme öncesindeki sonuç 113 geçti, 2 atlandı, 40 xfail idi. Aşağıdaki "Bulgular" bölümü kodun düzeltme öncesi
+halini anlatır.
 
 ## Bağlam: tehdit modeli
 
