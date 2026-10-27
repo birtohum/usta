@@ -1,0 +1,23 @@
+{
+ "id": "g11",
+ "kip": "a",
+ "kategori": "doğrulama ve ayrıştırma (TC kimlik, IBAN, telefon, plaka, e-posta, adres biçimi)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "telefon.py oluşturuldu: normalize_et boşlukları kırpıp yalnızca rakam/+/-/boşluk/paranteze izin verir, parantez dengesini ve konumunu denetler, ayraçları temizleyip 05'li 11 hane / 5'li 10 hane / 90'lı 12 hane / +90'lı 13 karakter kurallarıyla +90'lı E164 döndürür; operator_bul aynı doğrulamayla 530-539 Turkcell, 540-549 Vodafone, 500-529 ve 550-599 Türk Telekom, diğerine Bilinmiyor döndürür. Yalnızca standart kütüphane, ağ/zaman/rastgelelik yok.",
+ "adim": 3,
+ "yurutucu_token": {
+  "girdi": 8071,
+  "cikti": 13283
+ },
+ "yurutucu_usd": 0.0034637,
+ "bitirdi": true,
+ "sure_sn": 112.0,
+ "gizli": {
+  "gecti": true,
+  "gecen": 19,
+  "toplam": 19,
+  "cikti": "...................                                                      [100%]\r\n19 passed in 0.03s\r\n"
+ }
+}

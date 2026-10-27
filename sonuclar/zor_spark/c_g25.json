@@ -1,0 +1,34 @@
+{
+ "id": "g25",
+ "kip": "c",
+ "kategori": "Türkçe metin işleme (Türkçe harfler, büyük/küçük harf, hece, ek, sıralama, sayı/yazı)",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 19,
+   "basarili": 19
+  }
+ ],
+ "spark_usd": 0.0023299,
+ "arayuz": "adres.py içinde class AdresDuzenleyici: duzenle(self, mahalle: str, cadde: str, bina_no: int) -> str, posta_kodu_dogrula(self, kod: str) -> bool, __eq__(self, other: object) -> bool, __lt__(self, other: object) -> bool ile eşitlik ve sıralama yapılır.",
+ "hakem": [],
+ "geri_alma": 0,
+ "iptal_edilen_test": [],
+ "kabul_gecti": true,
+ "ozet": "adres.py içinde AdresDuzenleyici sınıfı yazıldı: duzenle Türkçe başlıklandırma (i→İ, ı→I), boşluk normalizasyonu, uzunluk/rakam kontrolleri (ValueError/TypeError) ve \"Mahalle: X, Cadde: Y, No: Z\" çıktısı; posta_kodu_dogrula 5 rakam kontrolü; __eq__/__lt__ Türkçe küçük harf duyarsız (mahalle, cadde, bina_no) sıralı. pytest ile 10 test geçti.",
+ "adim": 6,
+ "yurutucu_token": {
+  "girdi": 19591,
+  "cikti": 11229
+ },
+ "yurutucu_usd": 0.0042049,
+ "bitirdi": true,
+ "sure_sn": 106.9,
+ "gizli": {
+  "gecti": false,
+  "gecen": 9,
+  "toplam": 17,
+  "cikti": "yici.__init__() takes 1 positional argument but 4 were given\r\n\r\n.gizli\\test_gizli.py:91: TypeError\r\n_________________________ test_siralama_mahalle_once __________________________\r\n\r\n    def test_siralama_mahalle_once():\r\n>       a1 = AdresDuzenleyici('bursa', 'cumhuriyet caddesi', 1)\r\nE       TypeError: AdresDuzenleyici.__init__() takes 1 positional argument but 4 were given\r\n\r\n.gizli\\test_gizli.py:100: TypeError\r\n_______________________ test_siralama_cadde_sonra_bina ________________________\r\n\r\n    def test_siralama_cadde_sonra_bina():\r\n>       a1 = AdresDuzenleyici('ankara', 'b caddesi', 1)\r\nE       TypeError: AdresDuzenleyici.__init__() takes 1 positional argument but 4 were given\r\n\r\n.gizli\\test_gizli.py:106: TypeError\r\n=========================== short test summary info ===========================\r\nFAILED .gizli/test_gizli.py::test_duzenle_basic_format - AssertionError: asse...\r\nFAILED .gizli/test_gizli.py::test_duzenle_i_harfi - AssertionError: assert 'M...\r\nFAILED .gizli/test_gizli.py::test_duzenle_noktasiz_i - AssertionError: assert...\r\nFAILED .gizli/test_gizli.py::test_duzenle_cok_kelimeli_buyuk_harf - Assertion...\r\nFAILED .gizli/test_gizli.py::test_duzenle_fazla_bosluk - AssertionError: asse...\r\nFAILED .gizli/test_gizli.py::test_esitlik_turkce_duyarsiz - TypeError: AdresD...\r\nFAILED .gizli/test_gizli.py::test_siralama_mahalle_once - TypeError: AdresDuz...\r\nFAILED .gizli/test_gizli.py::test_siralama_cadde_sonra_bina - TypeError: Adre...\r\n8 failed, 9 passed in 0.23s\r\n"
+ }
+}

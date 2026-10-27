@@ -1,0 +1,23 @@
+{
+ "id": "g03",
+ "kip": "b",
+ "kategori": "tarih ve saat (iş günü, resmî tatil listesi parametre olarak verilir, süre hesabı, biçim dönüşümü)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "isgunu.py içinde is_gunu_ekle ve is_gunu_farki yazıldı: sıkı YYYY-MM-DD doğrulaması (ValueError), tatiller listesi doğrulaması (TypeError; bozuk tatil tarihi hem ValueError hem TypeError yakalanabilir), Cumartesi-Pazar hafta sonu, tatillerde tekrar/sırasız tek sayım, başlangıç günü hariç ileri/geri sayım, sıfırda ileriye yuvarlama, farkta bitis-hariç/başlangıç-dahil ve ters yönde negatif sonuç, artık gün desteği. 16 pytest testi yazıldı ve hepsi geçti.",
+ "adim": 4,
+ "yurutucu_token": {
+  "girdi": 14270,
+  "cikti": 9635
+ },
+ "yurutucu_usd": 0.003354,
+ "bitirdi": true,
+ "sure_sn": 75.6,
+ "gizli": {
+  "gecti": true,
+  "gecen": 19,
+  "toplam": 19,
+  "cikti": "...................                                                      [100%]\r\n19 passed in 0.03s\r\n"
+ }
+}

@@ -1,0 +1,46 @@
+{
+ "id": "g01",
+ "kip": "c",
+ "kategori": "Türkçe metin işleme (Türkçe harfler, büyük/küçük harf, hece, ek, sıralama, sayı/yazı)",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": false,
+   "toplam": 16,
+   "basarili": 15
+  },
+  {
+   "gecti": true,
+   "toplam": 16,
+   "basarili": 16
+  }
+ ],
+ "spark_usd": 0.0029688,
+ "arayuz": "",
+ "hakem": [
+  {
+   "test": "test_kesme_isaretli_kelime_ek_ayri_hecelenmez",
+   "karar": "gerekli",
+   "gerekce": "Görev metni her hecede tam bir ünlü bulunmasını açıkça şart koşuyor.",
+   "tur": 1
+  }
+ ],
+ "geri_alma": 0,
+ "iptal_edilen_test": [],
+ "kabul_gecti": true,
+ "ozet": "Kesme işareti düzeltildi: ek son heceye yapıştırılmak yerine işaret yok sayılarak normal kuralla hecelenip işareti yerine konuyor (Ankara'ya -> An-ka-ra'-ya). Böylece her hecede tek ünlü kabul testi geçiyor; 16/16 kabul + 7 kendi testimiz geçiyor. Not: görev metnindeki 'ek ayrı hecelenmez' ifadesi, kabul testindeki 'her hecede tam bir ünlü' kuralıyla çeliştiği için kabul testine uyuldu.",
+ "adim": 14,
+ "yurutucu_token": {
+  "girdi": 86493,
+  "cikti": 28063
+ },
+ "yurutucu_usd": 0.0142619,
+ "bitirdi": true,
+ "sure_sn": 290.7,
+ "gizli": {
+  "gecti": true,
+  "gecen": 19,
+  "toplam": 19,
+  "cikti": "...................                                                      [100%]\r\n19 passed in 0.04s\r\n"
+ }
+}

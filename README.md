@@ -1,9 +1,10 @@
 # Usta — a Turkish coding agent that proves its own work
 
-> **TR:** Usta'ya Türkçe bir yazılım görevi verirsiniz (yazıyla ya da sesle). Açık ağırlıklı **Muse Glimmer** kodu ağı
-> kapalı bir sandbox'ta yazar ve çalıştırır; **Muse Spark** ise görev metninden, ajanın kodunu görmeden, bağımsız kabul
-> testleri yazar. Testler kalırsa hata çıktısı Glimmer'a geri verilir; sonuç ekranı hangi testlerin kaç turda geçtiğini
-> gösterir. "Bitti" demek yetmez — Usta kanıt gösterir.
+> **TR:** Usta'ya Türkçe bir yazılım görevi verirsiniz (yazıyla ya da sesle). Bir yürütücü model (açık ağırlıklı
+> **Muse Glimmer** ya da **Muse Spark**) kodu araçlarla yazar ve çalıştırır; **Muse Spark** ise ayrı çağrılarda, ajanın
+> kodunu görmeden, görev metninden bağımsız kabul testleri yazar. Testler kalırsa hata çıktısı ajana geri verilir; sonuç
+> ekranı hangi testlerin kaç turda geçtiğini gösterir. Ölçümlerimiz, bu döngünün en güçlü tek-başına koşudan daha yüksek
+> başarı sağlamadığını da gösteriyor; sayılar aşağıda.
 
 Built for the Meta Global AI Developer Hackathon (Indie track, theme *Build for Your World*).
 All code in this repository was written during the hackathon (27 Oct – 4 Nov 2026); see the git history.
@@ -21,13 +22,12 @@ work independently and shows the evidence.
  Turkish task (text, or voice → Muse Voice Transcribe)
         │
         ▼
- Muse Spark ── writes an interface contract (file / function names, signatures, error behaviour)
+ Muse Spark ── naming contract only if the task leaves file / function names open
         │                         │
-        │                         └──(in parallel)── Muse Spark writes acceptance tests + a reference solution
-        ▼                                            the tests are run against the reference in a separate sandbox;
- Muse Glimmer 30B (open weights, vLLM on Modal H100)     tests the reference also fails are dropped as faulty
-   native tool calls: Write / Read / Edit / Bash / Done
-   inside a Modal Sandbox with networking disabled
+        │                         └──(in parallel)── Muse Spark writes requirement-by-requirement acceptance tests
+        ▼                                            + a reference solution; tests the reference fails are dropped
+ Executor: Muse Glimmer 30B (open weights, vLLM on Modal H100)  or  Muse Spark (Meta Model API)
+   native tool calls: Write / Read / Edit / Bash / Done, in a fresh workspace
         │
         ▼
  acceptance tests run ── pass → result screen with evidence
@@ -35,18 +35,26 @@ work independently and shows the evidence.
         ▼
  Muse Spark arbiter: does the task text clearly require this? ── unclear / faulty → not enforced, shown in report
         │ clearly required
-        └──► failing output goes back to Glimmer (up to 3 rounds)
+        └──► failing output goes back to the executor (up to 3 rounds);
+             a round that breaks a previously passing test is rolled back
 ```
 
-- **Writer ≠ verifier.** Glimmer sees the contract, never the acceptance tests while working. Spark never sees
-  Glimmer's code. The test file is rewritten before every run, so the agent cannot "fix" the tests.
+- **Writer ≠ verifier.** The executor never sees the acceptance tests while working; the test writer never sees the
+  code. The test file is rewritten before every run, so the agent cannot "fix" the tests. When Spark is also the
+  executor, writer and verifier are separate calls of the same model — independent in context, not in training.
 - **Faulty-test filter.** An LLM-written test can itself be wrong (in development Spark asserted an IBAN as valid
   whose mod-97 checksum is actually invalid; Glimmer's correct code failed 3 tests for 3 rounds). Spark therefore also
-  writes a reference solution; tests that the reference fails are deselected. This catches wrong expectations that
-  the reference computes correctly; it cannot catch a mistake Spark makes consistently in both.
-- **Isolation.** Each task gets its own Modal Sandbox (`block_network=True` — not even DNS resolves; verified), working
-  directory `/work`. Paths outside the workspace and network / privilege / package-install commands are rejected
-  before execution, commands time out after 60 s and output is truncated.
+  writes a reference solution; tests that the reference fails are deselected. It cannot catch a mistake Spark makes
+  consistently in both.
+- **Workspaces.** Two runners share the same tool layer (path checks, command deny-list, 60 s timeout, output
+  truncation, minimal environment without API keys):
+  - `ModalCalisma`: a Modal Sandbox per task with `block_network=True` (verified: not even DNS resolves). Used for the
+    Glimmer measurements.
+  - `YerelCalisma`: a temporary folder on the local machine, run through Git Bash. **There is no OS-level isolation and
+    no network restriction in this mode** — only the checks above. The deny-list can be bypassed (e.g. `c''url`); it
+    is a guard rail, not a sandbox. Used for the Spark measurements and the current demo, because our Modal credit ran
+    out. (A bug we found here: on Windows the `bash` on PATH is WSL, which ran commands in the Linux home directory
+    instead of the workspace — Usta now accepts only Git Bash and checks `pwd` before running anything.)
 - **Authenticated model endpoint.** The Glimmer server (`sunucu/glimmer_modal.py`) runs Meta's
   `vllm/vllm-openai:muse-glimmer` image with `--api-key`; unauthenticated requests get 401. It scales to zero after
   5 idle minutes.
@@ -55,70 +63,84 @@ work independently and shows the evidence.
 
 | Tool | Role |
 |---|---|
-| **Muse Glimmer 30B** (open weights, Apache 2.0) | The executor agent; native tool calling via vLLM's `muse_glimmer` parser (verified: returns `tool_calls`) |
-| **Muse Spark 1.3** (Meta Model API) | Interface contract, independent acceptance tests, reference solution; also generated the evaluation sets |
+| **Muse Glimmer 30B** (open weights, Apache 2.0) | Executor; native tool calling via vLLM's `muse_glimmer` parser (verified: returns `tool_calls`). Measured on Modal H100. |
+| **Muse Spark 1.3** (Meta Model API, `muse-spark-1.3-contributor`) | Verifier (naming contract, acceptance tests, reference solution, arbiter), evaluation-set generator, and — since the GPU budget ran out — alternative executor with native tool calls |
 | **Muse Voice Transcribe 1.0** | Spoken Turkish task → text (realtime WebSocket API) |
 
 ## Measurement
 
-**Result (hard set, 27–28 Oct 2026): the expected ordering (c) > (b) > (a) did not hold.** Glimmer alone was best.
+Setup: (a) executor alone, (b) executor instructed to write and pass its own tests, (c) Usta (independent Spark tests
++ arbiter + repair loop). Every task runs in a fresh workspace; afterwards **hidden tests** — never shown to the agent
+or to Usta's test writer — are run. The 40 hard tasks (≥6 explicit requirements each, 12–20 hidden tests) and their
+hidden tests were generated by Muse Spark; a task entered the set only if Spark's reference solution passed all of its
+hidden tests. g01–g06 were used while tuning the method and are excluded from the headline numbers. One run per task
+and mode.
 
-Tasks g07–g40 (34 tasks not looked at while tuning the method):
+**Result: the expected ordering (c) > (b) > (a) did not hold with either executor.** The executor alone was best or
+statistically tied.
 
-| Mode | All hidden tests pass | Hidden tests passed | Avg. Glimmer steps | Avg. Glimmer tokens | Spark cost |
-|---|---|---|---|---|---|
-| (a) Glimmer alone | **20/34 (59%; 95% CI 42–74)** | 94% | 13.2 | 81k | – |
-| (b) Glimmer + own tests | 14/34 (41%; 26–58) | 89% | 8.5 | 58k | – |
-| (c) Usta | 18/34 (53%; 37–69) | 92% | 9.6 | 66k | $0.08 total |
+Tasks g07–g40 (34 tasks), share of tasks where *all* hidden tests pass (95% Wilson interval):
 
-Paired, same task: c vs a — only c passed 0, only a passed 2 (difference −5.9 points, 95% task-bootstrap CI −14.7 … 0.0).
-c vs b — only c passed 5, only b passed 1 (+11.8 points, CI 0.0 … +26.5). Intervals are Wilson (single rates) and task-level bootstrap (paired).
-All 40 tasks: a 25/40, b 19/40, c 23/40. Raw per-run records: [`sonuclar/`](sonuclar/).
+| Mode | Glimmer 30B executor (Modal Sandbox, 27–28 Oct) | Spark executor (local runner, 28 Oct) |
+|---|---|---|
+| (a) executor alone | **20/34 (59%; 42–74)** | **30/34 (88%; 73–95)** |
+| (b) + own tests | 14/34 (41%; 26–58) | 28/34 (82%; 66–92) |
+| (c) Usta | 18/34 (53%; 37–69) | 29/34 (85%; 70–94) |
+| c vs a, paired (task bootstrap 95% CI) | −5.9 points (−14.7 … 0.0) | −2.9 points (−11.8 … +5.9) |
+| c vs b, paired | +11.8 points (0.0 … +26.5) | +2.9 points (−8.8 … +17.6) |
+| Usta said "tests pass" but hidden tests failed | 15 of 33 | 5 of 34 |
 
-What we read from this (single run per task and mode, so differences of 1–3 tasks are noise):
-- Asking Glimmer to write and pass its own tests (b) made it stop earlier (8.5 vs 13.2 steps) and pass fewer tasks.
-  Glimmer's own tests share its misreadings of the task, so "my tests pass" became a premature stop signal.
-- Usta's independent tests recovered most of that loss (c vs b: +5 / −1) but did not beat letting Glimmer work
-  without the testing instruction. The verification loop's value here is **evidence and catching premature
-  "done"**, not a higher pass rate than the strongest baseline.
-- Two failure modes we found and fixed during development, both visible in the history: (1) Spark's interface
-  contract invented behaviour rules not in the task, and the acceptance tests enforced them, so Glimmer broke correct
-  code — the contract is now naming-only; (2) when the task text admits two readings, the acceptance test and the
-  hidden test can pick different ones — a Spark **arbiter** now only enforces failing tests the task clearly requires.
-- Total Muse Spark spend for all of this (contracts, tests, arbiter, generating both task sets): **$0.38**.
+Between the two runs we changed the method based on the Glimmer analysis (requirement-by-requirement acceptance tests,
+12–20 instead of ~12; rollback on regression), so the two columns differ in executor, runner *and* method version.
+Raw records: [`sonuclar/`](sonuclar/); task-by-task analysis of the Glimmer run:
+[`sonuclar/analiz_c_vs_a.md`](sonuclar/analiz_c_vs_a.md).
 
-Setup: (a) Glimmer alone, (b) Glimmer instructed to write and pass its own tests, (c) Usta (independent Spark tests +
-repair loop). Every task runs in a fresh sandbox; afterwards **hidden tests** — never shown to the agent or to Usta's
-test writer — are run. Tasks and hidden tests were generated by Muse Spark, not hand-written; a task entered the set
-only if Spark's reference solution passed all of its hidden tests in the sandbox.
+What we read from this:
+- **The loop is limited by test coverage.** In 12 of the 16 Glimmer tasks Usta failed, its acceptance tests passed and
+  the hidden tests failed on the *same* requirements as the executor alone — the bug was never detected, so the repair
+  loop never ran. With the Spark executor the acceptance tests passed in the first round on all 34 tasks: the repair
+  loop never triggered at all, and c vs a is run-to-run noise.
+- **Self-testing can hurt.** Telling Glimmer to write and pass its own tests (b) made it stop earlier (8.5 vs 13.2
+  steps) and pass fewer tasks; its tests share its misreadings. Usta's independent tests recovered most of that loss.
+- **Correlated judges.** With the Spark executor, the code, the acceptance tests and the hidden tests all come from the
+  same model family, so they share interpretations — this likely inflates the Spark column and explains why the
+  verifier rarely disagrees with the executor.
+- Failure modes found and fixed along the way (all in the git history): an interface contract that invented
+  behaviour (now naming-only); ambiguous task text read differently by acceptance and hidden tests (Spark arbiter);
+  a repair round that broke previously working code (rollback); faulty LLM tests (reference filter).
+- What Usta does deliver: a visible, reproducible record of what was checked, which tests passed in which round, and
+  which were not enforced and why. It does not, in our measurements, raise the pass rate over the best baseline.
 
-Honest caveats:
-- On the first ("easy") set, a 6-task pilot gave 100% for all three modes — the tasks were too easy to separate them.
-  We therefore generated a harder set (≥6 explicit requirements per task, 12–20 hidden tests).
-- The hidden tests and Usta's acceptance tests are written by the same model (Spark), in separate calls without
-  access to each other. Their errors may be correlated.
-- N=40, one run per task and mode; differences of a few tasks are within noise.
-- g01–g06 were used while tuning the method (contract, arbiter); the headline table excludes them.
+Before the hackathon (separate project, not part of this repository) untrained Muse Glimmer 30B scored 88% on our
+Turkish coding exam. On a first "easy" set, a 6-task pilot gave 100% for all three modes, which is why we built the
+hard set. Total Meta API spend for everything in this repository so far: about $1.6.
 
 ## Run it
 
-Requirements: Python 3.12, a Modal account, a Meta Model API key.
+Requirements: Python 3.12, Git Bash on Windows (or bash elsewhere), a Meta Model API key. Modal is only needed for the
+Glimmer executor and the network-isolated sandbox.
 
 ```bash
 pip install -r requirements.txt
-python -c "import secrets;print('USTA_GLIMMER_TOKEN='+secrets.token_urlsafe(32))" > .env
-modal deploy sunucu/glimmer_modal.py          # Glimmer on an H100; first start ~3 min
 export META_MODEL_API_KEY=...                 # or put it in ~/.pflow-anahtarlar.env
-python calistir.py                            # web UI at http://127.0.0.1:8765
+python calistir.py                            # web UI at http://127.0.0.1:8765 (Spark executor, local runner)
+```
+
+With Glimmer on Modal (H100, ~$4/h):
+
+```bash
+python -c "import secrets;print('USTA_GLIMMER_TOKEN='+secrets.token_urlsafe(32))" > .env
+modal deploy sunucu/glimmer_modal.py          # first start ~3 min
+USTA_CALISMA=modal python calistir.py         # pick "Muse Glimmer" in the UI
 modal app stop -y usta-glimmer                # stop the GPU when done
 ```
 
 Evaluation:
 
 ```bash
-python betikler/set_uret.py --zorluk zor --cikis veri/zor.jsonl    # generate a task set (Spark)
-python betikler/degerlendir.py --set zor --kipler a b c --paralel 12
-python betikler/degerlendir.py --set zor --ozet
+python betikler/degerlendir.py --set zor --yurutucu spark --kipler a b c --paralel 10
+python betikler/degerlendir.py --set zor --yurutucu spark --ozet
+python betikler/set_uret.py --zorluk zor --cikis veri/zor.jsonl    # generate a new task set (Spark)
 ```
 
 Privacy: requests to `muse-spark-1.3-contributor` may be used by Meta for product development, and voice recordings
@@ -129,9 +151,9 @@ are sent to Meta for transcription. Do not send personal data.
 | Path | What |
 |---|---|
 | `sunucu/glimmer_modal.py` | Authenticated vLLM server for Muse Glimmer on Modal |
-| `usta/ajan.py` | Agent loop (Glimmer tool calls → sandbox → results) |
-| `usta/arac.py` | Tools and isolated runners (Modal Sandbox; local mode for development only) |
-| `usta/dogrulayici.py` | Spark contract, acceptance tests, reference-solution filter |
+| `usta/ajan.py` | Agent loop (executor tool calls → workspace → results); Glimmer or Spark executor |
+| `usta/arac.py` | Tools and runners (Modal Sandbox; local Git Bash runner without network isolation) |
+| `usta/dogrulayici.py` | Spark naming contract, acceptance tests, reference-solution filter, arbiter |
 | `usta/surec.py` | End-to-end pipeline and the a/b/c modes |
 | `usta/spark.py` | Muse Spark client with a spending counter (stops at a set limit) |
 | `usta/ses.py` | Muse Voice Transcribe client |

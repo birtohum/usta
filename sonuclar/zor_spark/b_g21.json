@@ -1,0 +1,23 @@
+{
+ "id": "g21",
+ "kip": "b",
+ "kategori": "tarih ve saat (iş günü, resmî tatil listesi parametre olarak verilir, süre hesabı, biçim dönüşümü)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "`vade.py` yazıldı: tüm bayraklar zorunlu (argparse, eksikte çıkış 2); fatura-tarihi ve tatiller sıkı `YYYY-MM-DD` denetimiyle doğrulanıyor (bozuk takvim günü/boş token → stderr + çıkış 2); vade-gun yalnızca `[+-]?\\d+` kalıbıyla kabul edilip 0-365 aralığı denetleniyor (ondalıklı/üs gösterimi geçersiz → çıkış 2); öteleme yalnızca `ileri`/`geri` (büyük harf geçersiz), hafta sonu+tatil çakışması seçilen yönde döngüyle zincir çözülüyor; çıktı `YYYY-MM-DD`/`DD-MM-YYYY` formatında stdout'a tek satır olarak yazılıyor. 18 pytest testi (`test_vade.py`) `python -m pytest -q` ile geçiyor.",
+ "adim": 10,
+ "yurutucu_token": {
+  "girdi": 41323,
+  "cikti": 13852
+ },
+ "yurutucu_usd": 0.0069027,
+ "bitirdi": true,
+ "sure_sn": 118.7,
+ "gizli": {
+  "gecti": true,
+  "gecen": 19,
+  "toplam": 19,
+  "cikti": "...................                                                      [100%]\r\n19 passed in 3.86s\r\n"
+ }
+}

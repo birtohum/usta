@@ -1,0 +1,23 @@
+{
+ "id": "g39",
+ "kip": "a",
+ "kategori": "tarih ve saat (iş günü, resmî tatil listesi parametre olarak verilir, süre hesabı, biçim dönüşümü)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "`kidem.py` içinde `kidem_hesapla(ise_giris: str, cikis: str) -> dict` yazıldı. YYYY-MM-DD regex + strptime ile doğrulanıyor (biçim/takvim hatasında ValueError, str olmayan türde TypeError, çıkış< giriş ise ValueError, eşitlikte sıfır sonuç). Klasik yıl-ay-gün farkı, gün<0 iken bitiş ayından geriye ay uzunluğu kadar döngüsel ödünç alma ile hesaplanıyor (2026-01-31→2026-02-28 = 0-0-28, artık gün 2024-02-29 doğru). `toplam_gun` (bitiş-başlangıç).days, `toplam_ay_asagi`=yıl*12+ay ile aşağı yuvarlanıyor.",
+ "adim": 3,
+ "yurutucu_token": {
+  "girdi": 7144,
+  "cikti": 8402
+ },
+ "yurutucu_usd": 0.0023948000000000003,
+ "bitirdi": true,
+ "sure_sn": 63.7,
+ "gizli": {
+  "gecti": true,
+  "gecen": 18,
+  "toplam": 18,
+  "cikti": "..................                                                       [100%]\r\n18 passed in 0.04s\r\n"
+ }
+}

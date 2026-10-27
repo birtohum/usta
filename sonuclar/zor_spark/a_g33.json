@@ -1,0 +1,23 @@
+{
+ "id": "g33",
+ "kip": "a",
+ "kategori": "tarih ve saat (iş günü, resmî tatil listesi parametre olarak verilir, süre hesabı, biçim dönüşümü)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "zaman_damgasi.py oluşturuldu: parse_tr_tarih üç biçimi (DD-MM-YYYY HH:MM, DD/MM/YYYY HH:MM, YYYY-MM-DDTHH:MM) sıkı regex + datetime doğrulamasıyla YYYY-MM-DD HH:MM'ye normalize eder; gun_farki_iso yalnızca bu çıktıyı kabul edip (b-a)//86400 taban bölmesiyle tam gün farkı döndürür. Tür hatalarında TypeError, biçim/takvim hatalarında ValueError yükseltilir.",
+ "adim": 5,
+ "yurutucu_token": {
+  "girdi": 14504,
+  "cikti": 11122
+ },
+ "yurutucu_usd": 0.0036748,
+ "bitirdi": true,
+ "sure_sn": 88.6,
+ "gizli": {
+  "gecti": false,
+  "gecen": 16,
+  "toplam": 18,
+  "cikti": ".............F.F..                                                       [100%]\r\n================================== FAILURES ===================================\r\n_____________________ test_gun_farki_23h59_zero_negative ______________________\r\n\r\n    def test_gun_farki_23h59_zero_negative():\r\n>       assert gun_farki_iso(\"2026-01-05 23:59\", \"2026-01-05 00:00\") == 0\r\nE       AssertionError: assert -1 == 0\r\nE        +  where -1 = gun_farki_iso('2026-01-05 23:59', '2026-01-05 00:00')\r\n\r\n.gizli\\test_gizli.py:58: AssertionError\r\n_________________ test_gun_farki_half_hour_truncated_negative _________________\r\n\r\n    def test_gun_farki_half_hour_truncated_negative():\r\n>       assert gun_farki_iso(\"2026-01-06 00:30\", \"2026-01-05 00:00\") == -1\r\nE       AssertionError: assert -2 == -1\r\nE        +  where -2 = gun_farki_iso('2026-01-06 00:30', '2026-01-05 00:00')\r\n\r\n.gizli\\test_gizli.py:64: AssertionError\r\n=========================== short test summary info ===========================\r\nFAILED .gizli/test_gizli.py::test_gun_farki_23h59_zero_negative - AssertionEr...\r\nFAILED .gizli/test_gizli.py::test_gun_farki_half_hour_truncated_negative - As...\r\n2 failed, 16 passed in 0.19s\r\n"
+ }
+}

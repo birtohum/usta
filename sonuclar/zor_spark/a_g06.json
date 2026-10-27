@@ -1,0 +1,23 @@
+{
+ "id": "g06",
+ "kip": "a",
+ "kategori": "veri yapıları ve algoritmalar (kuyruk, önbellek, arama, gruplama, birleştirme, durum makinesi)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "lru_cache.py içinde TTLCache sınıfı yazıldı: kurucu doğrulaması, monoton `simdi` ile TTL kontrolü (ttl=0 anında geçersiz), dolulukta önce expired temizliği sonra LRU + eklenme-sırası eşitlik bozma, set/get MRU güncellemeleri, tembel silme ve hit/miss/size istatistikleri. Davranışlar kabuk testleriyle doğrulandı.",
+ "adim": 5,
+ "yurutucu_token": {
+  "girdi": 17206,
+  "cikti": 21112
+ },
+ "yurutucu_usd": 0.005943,
+ "bitirdi": true,
+ "sure_sn": 181.0,
+ "gizli": {
+  "gecti": true,
+  "gecen": 18,
+  "toplam": 18,
+  "cikti": "..................                                                       [100%]\r\n18 passed in 0.03s\r\n"
+ }
+}

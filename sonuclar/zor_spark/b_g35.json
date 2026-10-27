@@ -1,0 +1,23 @@
+{
+ "id": "g35",
+ "kip": "b",
+ "kategori": "doğrulama ve ayrıştırma (TC kimlik, IBAN, telefon, plaka, e-posta, adres biçimi)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "toplu_kontrol.py yazıldı: CSV'den `deger` okur; tc (11 hane algoritması), iban (MOD97), plaka (01-81 + harf/rakam), eposta (regex+ek kontroller) doğrular. Başlık yoksa stderr + çıkış 2, hatalı --tur çıkış 2, --hata-modu dur ise ilk geçersizde dosya yazmadan çıkış 3, atla ise gecerli/hata listesi yazar. --siralama artan/azalan/yok desteklenir. Yalnızca standart kütüphane kullanılır. 11 pytest testi geçiyor.",
+ "adim": 10,
+ "yurutucu_token": {
+  "girdi": 53234,
+  "cikti": 17304
+ },
+ "yurutucu_usd": 0.008784199999999999,
+ "bitirdi": true,
+ "sure_sn": 160.4,
+ "gizli": {
+  "gecti": true,
+  "gecen": 16,
+  "toplam": 16,
+  "cikti": "................                                                         [100%]\r\n16 passed in 2.15s\r\n"
+ }
+}

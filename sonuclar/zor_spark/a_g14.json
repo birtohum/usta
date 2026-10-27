@@ -1,0 +1,23 @@
+{
+ "id": "g14",
+ "kip": "a",
+ "kategori": "küçük işletme hesapları (KDV, fatura, taksit, indirim, stok, kur dönüşümü, yuvarlama)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "stok.py içinde StokTakip sınıfı oluşturuldu: kodlar büyük harfe normalize edilip 3-12 uzunluk ve A-Z/0-9/- kontrolü yapılıyor, giriş 1-100000 adet ve pozitif en fazla 2 basamaklı Decimal maliyet istiyor, ağırlıklı ortalama toplam tutar üzerinden yuvarlamasız tutulup yalnızca envanter raporu ve çıkış toplamı ROUND_HALF_UP ile 2 basamağa yuvarlanıyor, çıkış toplam maliyeti döndürüyor, stok sıfırlanınca ortalama sıfırlanıyor, envanter koda göre sıralı tuple-uyumlu satırlar döndürüyor, tip hatalarında TypeError ve kural ihlallerinde ValueError veriliyor.",
+ "adim": 15,
+ "yurutucu_token": {
+  "girdi": 130020,
+  "cikti": 27498
+ },
+ "yurutucu_usd": 0.0185016,
+ "bitirdi": true,
+ "sure_sn": 231.4,
+ "gizli": {
+  "gecti": true,
+  "gecen": 17,
+  "toplam": 17,
+  "cikti": ".................                                                        [100%]\r\n17 passed in 0.04s\r\n"
+ }
+}

@@ -1,0 +1,23 @@
+{
+ "id": "g31",
+ "kip": "b",
+ "kategori": "Türkçe metin işleme (Türkçe harfler, büyük/küçük harf, hece, ek, sıralama, sayı/yazı)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "siralama.py yazıldı: Türkçe alfabeye göre turkce_karsilastir (-1/0/1) ve kararlı turkce_sirala (orijinal yazımı koruyan yeni liste). Türkçe küçük harf çevrimi (I→ı, İ→i), rakamlar önce, noktalama/boşluk yok sayılır, ValueError (boş/200+ karakter) ve TypeError (liste dışı/str olmayan) kontrolleri eklendi. test_siralama.py ile 13 test (alfabe sırası, case/I-ı/i-İ eşitliği, rakam, noktalama, kararlılık, ascii, 5000 öğe) `python -m pytest -q` ile geçti.",
+ "adim": 4,
+ "yurutucu_token": {
+  "girdi": 11970,
+  "cikti": 10366
+ },
+ "yurutucu_usd": 0.0032702,
+ "bitirdi": true,
+ "sure_sn": 91.0,
+ "gizli": {
+  "gecti": true,
+  "gecen": 16,
+  "toplam": 16,
+  "cikti": "................                                                         [100%]\r\n16 passed in 0.07s\r\n"
+ }
+}

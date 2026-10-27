@@ -1,0 +1,23 @@
+{
+ "id": "g11",
+ "kip": "b",
+ "kategori": "doğrulama ve ayrıştırma (TC kimlik, IBAN, telefon, plaka, e-posta, adres biçimi)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "telefon.py içinde normalize_et ve operator_bul yazıldı: boşluk kırpma, yalnızca rakam/+/-/boşluk/parantez izni, tek dengeli baş parantez (0XXX) kontrolü, ayraç temizliği sonrası 11/13/12/10 hane kuralları ve +90 E164 dönüşümü; operatör aralıkları Turkcell 530-539, Vodafone 540-549, Türk Telekom 500-529/550-599, diğer Bilinmiyor. Hiç import yok. pytest ile 12 test geçti.",
+ "adim": 7,
+ "yurutucu_token": {
+  "girdi": 22597,
+  "cikti": 22512
+ },
+ "yurutucu_usd": 0.0067621,
+ "bitirdi": true,
+ "sure_sn": 194.9,
+ "gizli": {
+  "gecti": false,
+  "gecen": 18,
+  "toplam": 19,
+  "cikti": "        # Izin verilen karakterler: rakam, '+', bosluk, tire, parantez.\r\n        # Ortadaki bosluk/tire/parantez disindaki (rakam ve basdaki '+' haric)\r\n        # her karakter gecersizdir.\r\n        for ch in s:\r\n            if ch.isdigit():\r\n                continue\r\n            if ch in (\"+\", \" \", \"-\", \"(\", \")\"):\r\n                continue\r\n            raise ValueError(\"gecersiz karakter\")\r\n        # Parantez kurallari: varsa yalnizca en basta sifir ve alan kodu etrafinda,\r\n        # dengeli tek cift olabilir. Ic ice veya eksik parantez gecersizdir.\r\n        ac = s.count(\"(\")\r\n        ka = s.count(\")\")\r\n        if ac == 0 and ka == 0:\r\n            pass\r\n        else:\r\n            if ac != 1 or ka != 1:\r\n                raise ValueError(\"gecersiz parantez\")\r\n            if not s.startswith(\"(\"):\r\n                raise ValueError(\"parantez yalnizca en basta olabilir\")\r\n            idx_kapa = s.find(\")\")\r\n            ic = s[1:idx_kapa]\r\n            if len(ic) != 4:\r\n>               raise ValueError(\"parantez ici gecersiz\")\r\nE               ValueError: parantez ici gecersiz\r\n\r\ntelefon.py:32: ValueError\r\n=========================== short test summary info ===========================\r\nFAILED .gizli/test_gizli.py::test_normalize_parantezli - ValueError: parantez...\r\n1 failed, 18 passed in 0.20s\r\n"
+ }
+}

@@ -1,0 +1,34 @@
+{
+ "id": "g02",
+ "kip": "c",
+ "kategori": "küçük işletme hesapları (KDV, fatura, taksit, indirim, stok, kur dönüşümü, yuvarlama)",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 18,
+   "basarili": 18
+  }
+ ],
+ "spark_usd": 0.0021665,
+ "arayuz": "fatura.py: FaturaKalemi(ad: str, miktar: int, birim_fiyat: Decimal, kdv_oran: int); KdvHesaplayici.__init__(varsayilan_oran: int); ekle(ad: str, miktar: int, birim_fiyat: Decimal, kdv_oran: int | None = None); ozet() -> dict; dokum() -> str; doğrula(numara: str) -> bool",
+ "hakem": [],
+ "geri_alma": 0,
+ "iptal_edilen_test": [],
+ "kabul_gecti": true,
+ "ozet": "fatura.py içinde FaturaKalemi dataclass, KdvHesaplayici sınıfı (oran 0-40 kontrolü, ekle doğrulamaları, Decimal ile yuvarlamasız ara hesap + ROUND_HALF_UP son yuvarlama, ozet ve sıralı dokum) ve TR-YYYY-NNNN doğrulayan doğrula() implemente edildi; 12 pytest testi geçiyor.",
+ "adim": 12,
+ "yurutucu_token": {
+  "girdi": 69526,
+  "cikti": 23224
+ },
+ "yurutucu_usd": 0.011597400000000002,
+ "bitirdi": true,
+ "sure_sn": 212.9,
+ "gizli": {
+  "gecti": false,
+  "gecen": 14,
+  "toplam": 18,
+  "cikti": ".gizli\\test_gizli.py:98: AttributeError\r\n____________________ test_dokum_ada_gore_case_insensitive _____________________\r\n\r\n    def test_dokum_ada_gore_case_insensitive():\r\n        h = KdvHesaplayici(10)\r\n        h.ekle('Zebra', 1, Decimal('1.00'), 10)\r\n        h.ekle('apple', 1, Decimal('1.00'), 10)\r\n        d = h.dokum()\r\n>       adlar = [k.ad for k in d]\r\nE       AttributeError: 'str' object has no attribute 'ad'\r\n\r\n.gizli\\test_gizli.py:107: AttributeError\r\n_____________________ test_dokum_esitlikte_eklenme_sirasi _____________________\r\n\r\n    def test_dokum_esitlikte_eklenme_sirasi():\r\n        h = KdvHesaplayici(10)\r\n        h.ekle('Kalem', 1, Decimal('1.00'), 10)\r\n        h.ekle('kalem', 2, Decimal('2.00'), 10)\r\n        h.ekle('KALEM', 3, Decimal('3.00'), 10)\r\n        d = h.dokum()\r\n>       assert [k.miktar for k in d] == [1, 2, 3]\r\nE       AttributeError: 'str' object has no attribute 'miktar'\r\n\r\n.gizli\\test_gizli.py:116: AttributeError\r\n=========================== short test summary info ===========================\r\nFAILED .gizli/test_gizli.py::test_ekle_varsayilan_oran_kullanir - AttributeEr...\r\nFAILED .gizli/test_gizli.py::test_dokum_once_kdv_oranina_gore - AttributeErro...\r\nFAILED .gizli/test_gizli.py::test_dokum_ada_gore_case_insensitive - Attribute...\r\nFAILED .gizli/test_gizli.py::test_dokum_esitlikte_eklenme_sirasi - AttributeE...\r\n4 failed, 14 passed in 0.22s\r\n"
+ }
+}

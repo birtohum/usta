@@ -1,0 +1,23 @@
+{
+ "id": "g06",
+ "kip": "b",
+ "kategori": "veri yapıları ve algoritmalar (kuyruk, önbellek, arama, gruplama, birleştirme, durum makinesi)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "lru_cache.py içinde TTLCache sınıfını yazdım: kurucu doğrulama, TTL süre-dolumu (ttl=0 anında geçersiz), kapasite dolunca önce süresi dolmuşları temizleme sonra LRU+eklenme-sırası tahliyesi, set/get MRU taşıma ve tembel silme, istatistik() sözlüğü. test_cache.py ile 11 pytest testi geçti.",
+ "adim": 4,
+ "yurutucu_token": {
+  "girdi": 13246,
+  "cikti": 11147
+ },
+ "yurutucu_usd": 0.003554,
+ "bitirdi": true,
+ "sure_sn": 95.0,
+ "gizli": {
+  "gecti": true,
+  "gecen": 18,
+  "toplam": 18,
+  "cikti": "..................                                                       [100%]\r\n18 passed in 0.04s\r\n"
+ }
+}

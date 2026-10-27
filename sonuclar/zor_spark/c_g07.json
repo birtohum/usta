@@ -1,0 +1,43 @@
+{
+ "id": "g07",
+ "kip": "c",
+ "kategori": "Türkçe metin işleme (Türkçe harfler, büyük/küçük harf, hece, ek, sıralama, sayı/yazı)",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 18,
+   "basarili": 18
+  }
+ ],
+ "spark_usd": 0.0068772,
+ "arayuz": "",
+ "hakem": [
+  {
+   "test": "test_ozel_isim_kesmesiz",
+   "karar": "belirsiz",
+   "gerekce": "Ekin ilk harf durumunu kökle eşleştirin ifadesi büyük harfli kökte ekin büyük mü küçük mü olacağını tek anlamlı belirtmiyor.",
+   "tur": 1
+  }
+ ],
+ "geri_alma": 0,
+ "iptal_edilen_test": [
+  "test_ozel_isim_kesmesiz"
+ ],
+ "kabul_gecti": true,
+ "ozet": "ekler.py içinde Ekleyici sınıfı yazıldı: büyük ünlü uyumu, ünsüz yumuşaması (p-ç-t-k→b-c-d-ğ), ünsüz benzeşmesi (c-d-g→ç-t-k), kök doğrulama (1-40 Türkçe harf, qwx yabancı, TypeError/ValueError), cogul_yap (lar/ler, yumuşama/benzeşme yok), özel isimde ek baş harfi büyütme ve kesme işaretsiz birleştirme. pytest ile 6 test geçti.",
+ "adim": 8,
+ "yurutucu_token": {
+  "girdi": 29427,
+  "cikti": 28824
+ },
+ "yurutucu_usd": 0.0087075,
+ "bitirdi": true,
+ "sure_sn": 300.5,
+ "gizli": {
+  "gecti": true,
+  "gecen": 19,
+  "toplam": 19,
+  "cikti": "...................                                                      [100%]\r\n19 passed in 0.03s\r\n"
+ }
+}

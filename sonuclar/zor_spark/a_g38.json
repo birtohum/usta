@@ -1,0 +1,23 @@
+{
+ "id": "g38",
+ "kip": "a",
+ "kategori": "küçük işletme hesapları (KDV, fatura, taksit, indirim, stok, kur dönüşümü, yuvarlama)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "efatura.py yazıldı: CSV doğrulama (başlık eksikse exit 2, dosya yoksa exit 3), numara/tarih/tutar kontrolü, geçersiz satırları atlayıp stderr uyarısı, tekrar numara hatalı sayımı, sabit kurlarla (USD 32.5, EUR 35.2) ara yuvarlamasız çevrim, ROUND_HALF_UP 2 basamak yuvarlama, tarih+numara sıralı JSON rapor (toplam_fatura, toplam_tutar, hatali_satir_sayisi), --yardim desteği. Yalnızca standart kütüphane, deterministik.",
+ "adim": 4,
+ "yurutucu_token": {
+  "girdi": 18058,
+  "cikti": 12281
+ },
+ "yurutucu_usd": 0.004262,
+ "bitirdi": true,
+ "sure_sn": 99.1,
+ "gizli": {
+  "gecti": true,
+  "gecen": 16,
+  "toplam": 16,
+  "cikti": "................                                                         [100%]\r\n16 passed in 1.89s\r\n"
+ }
+}

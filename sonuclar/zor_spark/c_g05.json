@@ -1,0 +1,34 @@
+{
+ "id": "g05",
+ "kip": "c",
+ "kategori": "doğrulama ve ayrıştırma (TC kimlik, IBAN, telefon, plaka, e-posta, adres biçimi)",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 19,
+   "basarili": 19
+  }
+ ],
+ "spark_usd": 0.0063145,
+ "arayuz": "",
+ "hakem": [],
+ "geri_alma": 0,
+ "iptal_edilen_test": [],
+ "kabul_gecti": true,
+ "ozet": "iban_arac.py içinde iban_dogrula ve iban_coz yazıldı: boşluklar silinip büyük harfe çevriliyor, 26 karakter/TR/ASCII rakam/02-98 kontrolü ve MOD97 (A=10..Z=35) uygulanıyor; str-dışı TypeError, geçersizde False/ValueError veriliyor, iban_coz banka/sube/hesap/ülke sözlüğü döndürüyor. test_iban.py ile 13 pytest testi geçti.",
+ "adim": 5,
+ "yurutucu_token": {
+  "girdi": 16756,
+  "cikti": 6538
+ },
+ "yurutucu_usd": 0.0029832,
+ "bitirdi": true,
+ "sure_sn": 211.1,
+ "gizli": {
+  "gecti": true,
+  "gecen": 19,
+  "toplam": 19,
+  "cikti": "...................                                                      [100%]\r\n19 passed in 0.03s\r\n"
+ }
+}

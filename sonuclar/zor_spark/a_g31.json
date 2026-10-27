@@ -1,0 +1,23 @@
+{
+ "id": "g31",
+ "kip": "a",
+ "kategori": "Türkçe metin işleme (Türkçe harfler, büyük/küçük harf, hece, ek, sıralama, sayı/yazı)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "siralama.py oluşturuldu: turkce_karsilastir ve turkce_sirala Türkçe alfabe sırasına göre, Türkçe küçük harf çevrimiyle (I→ı, İ→i), büyük/küçük harf duyarsız, kararlı sıralama, rakamlar önce, noktalama yok sayılarak çalışır; hata kontrolleri (ValueError/TypeError) ve 5000 öğe performansı doğrulandı.",
+ "adim": 5,
+ "yurutucu_token": {
+  "girdi": 12248,
+  "cikti": 9610
+ },
+ "yurutucu_usd": 0.0031468000000000004,
+ "bitirdi": true,
+ "sure_sn": 93.2,
+ "gizli": {
+  "gecti": true,
+  "gecen": 16,
+  "toplam": 16,
+  "cikti": "................                                                         [100%]\r\n16 passed in 0.08s\r\n"
+ }
+}

@@ -1,0 +1,34 @@
+{
+ "id": "g30",
+ "kip": "c",
+ "kategori": "veri yapıları ve algoritmalar (kuyruk, önbellek, arama, gruplama, birleştirme, durum makinesi)",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 17,
+   "basarili": 17
+  }
+ ],
+ "spark_usd": 0.0015887000000000002,
+ "arayuz": "",
+ "hakem": [],
+ "geri_alma": 0,
+ "iptal_edilen_test": [],
+ "kabul_gecti": true,
+ "ozet": "siparis_durum.py içinde SiparisDurumMakinesi sınıfı yazıldı, 14 pytest testi geçti.",
+ "adim": 4,
+ "yurutucu_token": {
+  "girdi": 11294,
+  "cikti": 5166
+ },
+ "yurutucu_usd": 0.0021626,
+ "bitirdi": true,
+ "sure_sn": 55.5,
+ "gizli": {
+  "gecti": false,
+  "gecen": 16,
+  "toplam": 17,
+  "cikti": ".............F...                                                        [100%]\r\n================================== FAILURES ===================================\r\n_________________ test_terminal_iptalden_ilerlet_runtimeerror _________________\r\n\r\n    def test_terminal_iptalden_ilerlet_runtimeerror():\r\n        m = SiparisDurumMakinesi(\"S1\", 10.0)\r\n        m.ilerlet(\"iptal_edildi\")\r\n        with pytest.raises(RuntimeError):\r\n            m.ilerlet(\"odendi\")\r\n        with pytest.raises(RuntimeError):\r\n>           m.ilerlet(\"bilinmeyen_xyz\")\r\n\r\n.gizli\\test_gizli.py:94: \r\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\r\n\r\nself = <siparis_durum.SiparisDurumMakinesi object at 0x000001CC351E6C00>\r\nhedef = 'bilinmeyen_xyz'\r\n\r\n    def ilerlet(self, hedef: str):\r\n        if hedef not in self._GECERLI_DURUMLAR:\r\n>           raise KeyError(hedef)\r\nE           KeyError: 'bilinmeyen_xyz'\r\n\r\nsiparis_durum.py:54: KeyError\r\n=========================== short test summary info ===========================\r\nFAILED .gizli/test_gizli.py::test_terminal_iptalden_ilerlet_runtimeerror - Ke...\r\n1 failed, 16 passed in 0.20s\r\n"
+ }
+}

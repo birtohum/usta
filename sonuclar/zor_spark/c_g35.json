@@ -1,0 +1,34 @@
+{
+ "id": "g35",
+ "kip": "c",
+ "kategori": "doğrulama ve ayrıştırma (TC kimlik, IBAN, telefon, plaka, e-posta, adres biçimi)",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 16,
+   "basarili": 16
+  }
+ ],
+ "spark_usd": 0.0020619,
+ "arayuz": "",
+ "hakem": [],
+ "geri_alma": 0,
+ "iptal_edilen_test": [],
+ "kabul_gecti": true,
+ "ozet": "toplu_kontrol.py yazıldı: tc (11 hane + checksum), iban (TR 26 hane + mod97), plaka (01-81 + harf/sayı düzeni), eposta doğrulaması; --tur/--hata-modu/--siralama kontrolü, başlık yoksa stderr + çıkış 2, hatalı turda çıkış 2, dur modunda ilk geçersizde dosya yazmadan çıkış 3, atla modunda gecerli/hata alanlı JSON çıktısı. test_toplu.py ile 6 test geçiyor.",
+ "adim": 9,
+ "yurutucu_token": {
+  "girdi": 50541,
+  "cikti": 15895
+ },
+ "yurutucu_usd": 0.0082331,
+ "bitirdi": true,
+ "sure_sn": 150.7,
+ "gizli": {
+  "gecti": true,
+  "gecen": 16,
+  "toplam": 16,
+  "cikti": "................                                                         [100%]\r\n16 passed in 2.04s\r\n"
+ }
+}

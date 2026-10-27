@@ -1,0 +1,23 @@
+{
+ "id": "g29",
+ "kip": "a",
+ "kategori": "doğrulama ve ayrıştırma (TC kimlik, IBAN, telefon, plaka, e-posta, adres biçimi)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "vergi.py içinde VergiDogrulayici sınıfı yazıldı: 4 sayaçlı __init__, kırpmadan tam 10 ASCII rakam + ilk hane sıfır yasağı + ağırlıklı toplam/mod check-digit VKN doğrulaması, 16 ASCII rakam + geçerli VKN öneki + 000001-999999 sıra numaralı MERSIS doğrulaması, str dışı girdide TypeError, her çağrıda ilgili sorgu sayacı artışı ve ozet() sözlüğü. Yalnızca standart kütüphane kullanıldı.",
+ "adim": 6,
+ "yurutucu_token": {
+  "girdi": 19101,
+  "cikti": 17183
+ },
+ "yurutucu_usd": 0.0053467,
+ "bitirdi": true,
+ "sure_sn": 160.9,
+ "gizli": {
+  "gecti": true,
+  "gecen": 17,
+  "toplam": 17,
+  "cikti": ".................                                                        [100%]\r\n17 passed in 0.04s\r\n"
+ }
+}

@@ -1,0 +1,34 @@
+{
+ "id": "g38",
+ "kip": "c",
+ "kategori": "küçük işletme hesapları (KDV, fatura, taksit, indirim, stok, kur dönüşümü, yuvarlama)",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 17,
+   "basarili": 17
+  }
+ ],
+ "spark_usd": 0.0025613000000000003,
+ "arayuz": "",
+ "hakem": [],
+ "geri_alma": 0,
+ "iptal_edilen_test": [],
+ "kabul_gecti": true,
+ "ozet": "efatura.py yazıldı: --girdi/--cikti/--para-birimi/--yardim bayraklarını destekler, CSV başlık kontrolünde stderr+çıkış 2, dosya yoksa çıkış 3, numara (2 harf+13 rakam)/tarih (geçerli gün)/tutar (≥0.01)/birim doğrulaması yapıp hatalı satırları stderr uyarısıyla atlar, tekrar eden numarayı hatalı sayar, USD=32.5/EUR=35.2 TL tabanlı kurlarla ara yuvarlamasız çevirip fatura ve genel toplamı ROUND_HALF_UP ile yuvarlar, faturaları tarih+numaraya göre sıralı JSON rapor yazar. 10 pytest testi geçiyor.",
+ "adim": 8,
+ "yurutucu_token": {
+  "girdi": 37644,
+  "cikti": 26382
+ },
+ "yurutucu_usd": 0.009040800000000002,
+ "bitirdi": true,
+ "sure_sn": 243.9,
+ "gizli": {
+  "gecti": true,
+  "gecen": 16,
+  "toplam": 16,
+  "cikti": "................                                                         [100%]\r\n16 passed in 1.88s\r\n"
+ }
+}

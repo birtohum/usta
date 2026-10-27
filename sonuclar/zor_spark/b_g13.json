@@ -1,0 +1,23 @@
+{
+ "id": "g13",
+ "kip": "b",
+ "kategori": "Türkçe metin işleme (Türkçe harfler, büyük/küçük harf, hece, ek, sıralama, sayı/yazı)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "tutar_yazi.py içinde TutarYazici sınıfını yazdım: tamsayiyi_yaziya_cevir (0-999999, 100=yüz, 1000=bin), sayiyi_yaziya_cevir (kuruşa ROUND_HALF_UP yuvarlama, \"X lira Y kuruş\" biçimi, kuruş sıfırsa yalnız lira, ValueError/TypeError kontrolleri) ve Türkçe büyük harf çevirisi (i->İ, ı->I). pytest ile 10 test geçti.",
+ "adim": 6,
+ "yurutucu_token": {
+  "girdi": 26244,
+  "cikti": 8789
+ },
+ "yurutucu_usd": 0.0043822,
+ "bitirdi": true,
+ "sure_sn": 77.0,
+ "gizli": {
+  "gecti": true,
+  "gecen": 16,
+  "toplam": 16,
+  "cikti": "................                                                         [100%]\r\n16 passed in 0.03s\r\n"
+ }
+}

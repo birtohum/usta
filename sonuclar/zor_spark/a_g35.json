@@ -1,0 +1,23 @@
+{
+ "id": "g35",
+ "kip": "a",
+ "kategori": "doğrulama ve ayrıştırma (TC kimlik, IBAN, telefon, plaka, e-posta, adres biçimi)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "toplu_kontrol.py yazıldı: UTF-8 CSV'den deger sütununu okur, tc/iban/plaka/eposta doğrular, atla/dur modları ile çıkış kodları 2/3'ü uygular, artan/azalan sıralama yapar ve deger/gecerli/hata listesini JSON'a yazar. Yalnızca standart kütüphane kullanıldı.",
+ "adim": 11,
+ "yurutucu_token": {
+  "girdi": 76480,
+  "cikti": 16585
+ },
+ "yurutucu_usd": 0.010964999999999999,
+ "bitirdi": true,
+ "sure_sn": 159.1,
+ "gizli": {
+  "gecti": true,
+  "gecen": 16,
+  "toplam": 16,
+  "cikti": "................                                                         [100%]\r\n16 passed in 2.02s\r\n"
+ }
+}

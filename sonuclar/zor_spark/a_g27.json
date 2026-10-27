@@ -1,0 +1,23 @@
+{
+ "id": "g27",
+ "kip": "a",
+ "kategori": "tarih ve saat (iş günü, resmî tatil listesi parametre olarak verilir, süre hesabı, biçim dönüşümü)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "sla.py içinde sla_bitis fonksiyonu yazıldı: YYYY-MM-DD HH:MM doğrulaması (ValueError), 08:30-18:00 mesai, 12:30-13:30 öğle arası atlama ve 13:30'a öteleme, çalışma dışı başlangıcın sonraki iş günü 08:30'a alınması, hafta sonu/tatil atlama, 1-10080 aralığı (ValueError) ve ondalık/bool tip kontrolü (TypeError), liste olmayan tatiller için TypeError, sıfır dolgulu sonuç formatı. Tüm sınır değerler test edildi.",
+ "adim": 10,
+ "yurutucu_token": {
+  "girdi": 67625,
+  "cikti": 27101
+ },
+ "yurutucu_usd": 0.012182700000000001,
+ "bitirdi": true,
+ "sure_sn": 225.9,
+ "gizli": {
+  "gecti": true,
+  "gecen": 18,
+  "toplam": 18,
+  "cikti": "..................                                                       [100%]\r\n18 passed in 0.04s\r\n"
+ }
+}

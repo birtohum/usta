@@ -1,0 +1,23 @@
+{
+ "id": "g21",
+ "kip": "a",
+ "kategori": "tarih ve saat (iş günü, resmî tatil listesi parametre olarak verilir, süre hesabı, biçim dönüşümü)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "vade.py yazıldı: 5 zorunlu bayrak, fatura-tarihi ve tatil tarihleri katı YYYY-MM-DD + gerçek takvim kontrolü, vade-gun tam sayı 0-365 (ondalıklı geçersiz), öteleme ileri/geri ile hafta sonu+tatil zincir çözümü, iki çıktı formatı, stdout'ta yalnızca tek satır, tüm girdi hatalarında stderr + çıkış kodu 2.",
+ "adim": 13,
+ "yurutucu_token": {
+  "girdi": 62511,
+  "cikti": 14062
+ },
+ "yurutucu_usd": 0.0090635,
+ "bitirdi": true,
+ "sure_sn": 130.8,
+ "gizli": {
+  "gecti": true,
+  "gecen": 19,
+  "toplam": 19,
+  "cikti": "...................                                                      [100%]\r\n19 passed in 3.81s\r\n"
+ }
+}

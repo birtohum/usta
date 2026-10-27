@@ -1,0 +1,23 @@
+{
+ "id": "g33",
+ "kip": "b",
+ "kategori": "tarih ve saat (iş günü, resmî tatil listesi parametre olarak verilir, süre hesabı, biçim dönüşümü)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "zaman_damgasi.py içinde parse_tr_tarih ve gun_farki_iso yazıldı; sıkı regex + datetime doğrulaması, TypeError/ValueError ayrımı, floor(24s) fark hesabı uygulandı. test_zaman.py ile 16 pytest testi geçti.",
+ "adim": 4,
+ "yurutucu_token": {
+  "girdi": 12993,
+  "cikti": 6555
+ },
+ "yurutucu_usd": 0.0026103,
+ "bitirdi": true,
+ "sure_sn": 51.2,
+ "gizli": {
+  "gecti": false,
+  "gecen": 16,
+  "toplam": 18,
+  "cikti": ".............F.F..                                                       [100%]\r\n================================== FAILURES ===================================\r\n_____________________ test_gun_farki_23h59_zero_negative ______________________\r\n\r\n    def test_gun_farki_23h59_zero_negative():\r\n>       assert gun_farki_iso(\"2026-01-05 23:59\", \"2026-01-05 00:00\") == 0\r\nE       AssertionError: assert -1 == 0\r\nE        +  where -1 = gun_farki_iso('2026-01-05 23:59', '2026-01-05 00:00')\r\n\r\n.gizli\\test_gizli.py:58: AssertionError\r\n_________________ test_gun_farki_half_hour_truncated_negative _________________\r\n\r\n    def test_gun_farki_half_hour_truncated_negative():\r\n>       assert gun_farki_iso(\"2026-01-06 00:30\", \"2026-01-05 00:00\") == -1\r\nE       AssertionError: assert -2 == -1\r\nE        +  where -2 = gun_farki_iso('2026-01-06 00:30', '2026-01-05 00:00')\r\n\r\n.gizli\\test_gizli.py:64: AssertionError\r\n=========================== short test summary info ===========================\r\nFAILED .gizli/test_gizli.py::test_gun_farki_23h59_zero_negative - AssertionEr...\r\nFAILED .gizli/test_gizli.py::test_gun_farki_half_hour_truncated_negative - As...\r\n2 failed, 16 passed in 0.25s\r\n"
+ }
+}

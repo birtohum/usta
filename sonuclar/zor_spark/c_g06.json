@@ -1,0 +1,34 @@
+{
+ "id": "g06",
+ "kip": "c",
+ "kategori": "veri yapıları ve algoritmalar (kuyruk, önbellek, arama, gruplama, birleştirme, durum makinesi)",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 20,
+   "basarili": 20
+  }
+ ],
+ "spark_usd": 0.0020723,
+ "arayuz": "",
+ "hakem": [],
+ "geri_alma": 0,
+ "iptal_edilen_test": [],
+ "kabul_gecti": true,
+ "ozet": "lru_cache.py içinde TTLCache sınıfını yazdım: kurucu doğrulaması, TTL süre kontrolü (fark > ttl, ttl=0 anında geçersiz), LRU sırası için OrderedDict, kapasite dolunca önce süresi dolmuşları temizleme sonra LRU tahliye (eklenme sırası eşitlik bozma), set/get güncelleme kuralları, tembel silme ve hit/miss/size istatistikleri. Sistem saati okunmuyor. test_cache.py ile 12 pytest testi yazıp hepsini geçirdim.",
+ "adim": 5,
+ "yurutucu_token": {
+  "girdi": 14565,
+  "cikti": 18738
+ },
+ "yurutucu_usd": 0.0052041,
+ "bitirdi": true,
+ "sure_sn": 173.0,
+ "gizli": {
+  "gecti": true,
+  "gecen": 18,
+  "toplam": 18,
+  "cikti": "..................                                                       [100%]\r\n18 passed in 0.04s\r\n"
+ }
+}

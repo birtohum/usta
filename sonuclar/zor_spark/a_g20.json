@@ -1,0 +1,23 @@
+{
+ "id": "g20",
+ "kip": "a",
+ "kategori": "küçük işletme hesapları (KDV, fatura, taksit, indirim, stok, kur dönüşümü, yuvarlama)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "indirim.py oluşturuldu: sira_indirim ve kupon_uygula fonksiyonları Decimal ile, ara yuvarlamasız sıralı indirim, ROUND_HALF_UP ile iki basamak sonuç, tip ve değer doğrulamaları (TypeError/ValueError), kupon biçimi ve 500 TL eşiği kurallarına uygun şekilde yazıldı ve testlerle doğrulandı.",
+ "adim": 7,
+ "yurutucu_token": {
+  "girdi": 25975,
+  "cikti": 10824
+ },
+ "yurutucu_usd": 0.0047623,
+ "bitirdi": true,
+ "sure_sn": 83.0,
+ "gizli": {
+  "gecti": true,
+  "gecen": 18,
+  "toplam": 18,
+  "cikti": "..................                                                       [100%]\r\n18 passed in 0.03s\r\n"
+ }
+}

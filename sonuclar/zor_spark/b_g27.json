@@ -1,0 +1,23 @@
+{
+ "id": "g27",
+ "kip": "b",
+ "kategori": "tarih ve saat (iş günü, resmî tatil listesi parametre olarak verilir, süre hesabı, biçim dönüşümü)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "sla.py içinde sla_bitis fonksiyonu yazıldı: biçim/ValueError-TypeError kontrolleri, 08:30-18:00 mesai ve 12:30-13:30 öğle arası atlama, 08:30 dahil/18:00 hariç sınırları, çalışma dışı başlangıcın sonraki iş günü 08:30'a alınması, hafta sonu+tatil atlama ve 12:30'a denk gelen bitişin 13:30'a ötelenmesi kuralları uygulandı. pytest ile 14 test geçti.",
+ "adim": 4,
+ "yurutucu_token": {
+  "girdi": 14416,
+  "cikti": 15603
+ },
+ "yurutucu_usd": 0.004562200000000001,
+ "bitirdi": true,
+ "sure_sn": 118.9,
+ "gizli": {
+  "gecti": true,
+  "gecen": 18,
+  "toplam": 18,
+  "cikti": "..................                                                       [100%]\r\n18 passed in 0.03s\r\n"
+ }
+}

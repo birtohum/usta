@@ -1,0 +1,23 @@
+{
+ "id": "g03",
+ "kip": "a",
+ "kategori": "tarih ve saat (iş günü, resmî tatil listesi parametre olarak verilir, süre hesabı, biçim dönüşümü)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "isgunu.py yazıldı: is_gunu_ekle ve is_gunu_farki; YYYY-MM-DD regex+takvim doğrulaması, hafta sonu+tatile göre iş günü hesabı, 0/pozitif/negatif yönler, [başlangıç, bitiş) fark mantığı ve negatif fark, tatil listesi TypeError kontrolleri uygulandı ve test edildi.",
+ "adim": 6,
+ "yurutucu_token": {
+  "girdi": 18754,
+  "cikti": 9501
+ },
+ "yurutucu_usd": 0.0037756,
+ "bitirdi": true,
+ "sure_sn": 80.0,
+ "gizli": {
+  "gecti": true,
+  "gecen": 19,
+  "toplam": 19,
+  "cikti": "...................                                                      [100%]\r\n19 passed in 0.03s\r\n"
+ }
+}

@@ -1,0 +1,23 @@
+{
+ "id": "g24",
+ "kip": "a",
+ "kategori": "veri yapıları ve algoritmalar (kuyruk, önbellek, arama, gruplama, birleştirme, durum makinesi)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "log_birlestir.py yazıldı: --girdi/--cikti/--bicim/--sirala bayrakları, ISO zaman + ' - ' ayrımı, geçersiz satırları atlayıp stderr'e ATLANAN: N, sıralıda zaman+dosya adı+satır no kararlı sıralama, sırasızda veriliş sırası, jsonl/csv çıktı, hata kodları 2/3, boş dosya ve üst dizin oluşturma desteği. Testlerle doğrulandı, test artıkları temizlendi.",
+ "adim": 5,
+ "yurutucu_token": {
+  "girdi": 18012,
+  "cikti": 8229
+ },
+ "yurutucu_usd": 0.0034470000000000004,
+ "bitirdi": true,
+ "sure_sn": 72.5,
+ "gizli": {
+  "gecti": true,
+  "gecen": 17,
+  "toplam": 17,
+  "cikti": ".................                                                        [100%]\r\n17 passed in 3.16s\r\n"
+ }
+}

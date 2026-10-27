@@ -1,0 +1,23 @@
+{
+ "id": "g34",
+ "kip": "b",
+ "kategori": "dosya ve komut satırı (CSV/JSON okuma, rapor yazdırma, argümanlar, hata mesajları)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "kutuphane.py içinde KutuphaneKayit sınıfı yazıldı: YYYY-AA-GG regex+datetime.date doğrulama, strip sonrası boşluk kontrolü, Decimal*5.00 ROUND_HALF_UP ceza, eksik dosyada boş başlama / oduncler yoksa ValueError, vade+kitap_id sıralı gecikenler, utf-8 indent-2 atomik yazma. test_kutuphane.py ile 9 testin tamamı geçiyor.",
+ "adim": 6,
+ "yurutucu_token": {
+  "girdi": 27000,
+  "cikti": 14811
+ },
+ "yurutucu_usd": 0.0056622,
+ "bitirdi": true,
+ "sure_sn": 149.0,
+ "gizli": {
+  "gecti": true,
+  "gecen": 17,
+  "toplam": 17,
+  "cikti": ".................                                                        [100%]\r\n17 passed in 0.12s\r\n"
+ }
+}

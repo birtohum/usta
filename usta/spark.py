@@ -78,7 +78,14 @@ def sohbet(messages: list, model: str = MODEL, max_tokens: int = 4096, temperatu
             time.sleep(2 ** i * 3)
             continue
         r.raise_for_status()
-        veri = r.json()
+        try:
+            veri = r.json()
+        except ValueError:
+            # Nadiren gövdesi boş/JSON olmayan 200 yanıtı geliyor: tekrar dene.
+            if i == tekrar - 1:
+                raise
+            time.sleep(2 ** i * 3)
+            continue
         mesaj = veri["choices"][0]["message"]
         mesaj["tool_calls"] = mesaj.get("tool_calls") or []
         mesaj["_finish"] = veri["choices"][0].get("finish_reason")

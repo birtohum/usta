@@ -1,0 +1,23 @@
+{
+ "id": "g01",
+ "kip": "a",
+ "kategori": "Türkçe metin işleme (Türkçe harfler, büyük/küçük harf, hece, ek, sıralama, sayı/yazı)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "heceleyici.py içinde Heceleyici sınıfı yazıldı: hecele tek ünsüzde yeni heceye başlatma, çift ünsüzde bölme kuralıyla her hecede tek ünlü olacak şekilde böler; q/w/x, rakam ve diğer geçersiz karakterlerde ValueError, str-dışı girdide TypeError verir, 1-30 karakter ve kesme eki son heceye ekleme kurallarını uygular. toplu_hecele boşluklara böler, noktalamaları atar, orijinal durumu korur ve boş metinde boş liste döndürür.",
+ "adim": 5,
+ "yurutucu_token": {
+  "girdi": 9379,
+  "cikti": 33412
+ },
+ "yurutucu_usd": 0.007620300000000002,
+ "bitirdi": true,
+ "sure_sn": 281.8,
+ "gizli": {
+  "gecti": false,
+  "gecen": 18,
+  "toplam": 19,
+  "cikti": ".......F...........                                                      [100%]\r\n================================== FAILURES ===================================\r\n_________________________ test_kesme_isaretli_kelime __________________________\r\n\r\n    def test_kesme_isaretli_kelime():\r\n        h = Heceleyici()\r\n        r = h.hecele(\"Ankara'ya\")\r\n        assert isinstance(r, list)\r\n        assert all(isinstance(x, str) for x in r)\r\n        assert \"\".join(r) == \"Ankara'ya\"\r\n>       assert len(r) == 4\r\nE       assert 3 == 4\r\nE        +  where 3 = len(['An', 'ka', \"ra'ya\"])\r\n\r\n.gizli\\test_gizli.py:50: AssertionError\r\n=========================== short test summary info ===========================\r\nFAILED .gizli/test_gizli.py::test_kesme_isaretli_kelime - assert 3 == 4\r\n1 failed, 18 passed in 0.20s\r\n"
+ }
+}

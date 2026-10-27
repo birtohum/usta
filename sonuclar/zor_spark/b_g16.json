@@ -1,0 +1,23 @@
+{
+ "id": "g16",
+ "kip": "b",
+ "kategori": "dosya ve komut satırı (CSV/JSON okuma, rapor yazdırma, argümanlar, hata mesajları)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "aidat.py içinde AidatDefteri sınıfı yazıldı: YYYY-AA ay doğrulaması, Decimal tutar kontrolü, mükerrer ödeme hatası, json.load yükleme ve eksik anahtar kontrolü, ROUND_HALF_UP ile borc_hesapla, sıralı aylik_ozet ve utf-8/indent-2 atomik kayıt. 7 pytest testi geçiyor.",
+ "adim": 9,
+ "yurutucu_token": {
+  "girdi": 47660,
+  "cikti": 19736
+ },
+ "yurutucu_usd": 0.008713199999999999,
+ "bitirdi": true,
+ "sure_sn": 161.2,
+ "gizli": {
+  "gecti": true,
+  "gecen": 17,
+  "toplam": 17,
+  "cikti": ".................                                                        [100%]\r\n17 passed in 0.11s\r\n"
+ }
+}

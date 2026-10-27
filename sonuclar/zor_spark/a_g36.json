@@ -1,0 +1,23 @@
+{
+ "id": "g36",
+ "kip": "a",
+ "kategori": "veri yapıları ve algoritmalar (kuyruk, önbellek, arama, gruplama, birleştirme, durum makinesi)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "hiz_sinir.py içinde TokenBucket sınıfı yazıldı: Fraction ile tam kesirli jeton hesabı, kapasite/dolum_hizi/miktar/simdi doğrulamaları, monoton zaman kontrolü, cap ve 1e-9 toleransı, floor ile 2 ondalık kalan. Sistem saati kullanılmıyor.",
+ "adim": 5,
+ "yurutucu_token": {
+  "girdi": 17457,
+  "cikti": 9383
+ },
+ "yurutucu_usd": 0.0036223,
+ "bitirdi": true,
+ "sure_sn": 81.2,
+ "gizli": {
+  "gecti": true,
+  "gecen": 16,
+  "toplam": 16,
+  "cikti": "................                                                         [100%]\r\n16 passed in 0.04s\r\n"
+ }
+}

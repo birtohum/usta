@@ -1,6 +1,6 @@
 # Neden (c) Usta, (a) Glimmer-tek-başına'yı geçemedi? — 34 zor görev (g07–g40), Glimmer yürütücü
 
-Kaynak: `sonuclar/zor/{a,c}_gNN.json`. Her kip görev başına 1 koşu.
+Kaynak: `sonuclar/zor_glimmer/{a,c}_gNN.json`. Her kip görev başına 1 koşu.
 (c)'nin kaldığı 16 görev aşağıdaki gibi sınıflandırıldı. (a)'nın kalıp (c)'nin geçtiği görev yok.
 
 | Sınıf | Görev sayısı | Görevler | Ne oldu |
@@ -24,6 +24,14 @@ fazlasını yapamıyor; üstelik ek koşu sayısı oynaklığı artırıyor. İl
 
 1. **Gereksinim bazlı kabul testleri:** Spark önce görevdeki gereksinimleri tek tek listeler, her gereksinim için en az bir test
    yazar (12–20 test). Gizli test yazarıyla aynı model, ama ayrı çağrı ve birbirini görmeden.
-2. **Gerileme koruması:** Her düzeltme turundan önce çalışma alanının anlık görüntüsü alınır. Tur sonunda kabul testlerinde
-   geçen sayı düşerse ya da ajanın kendi testlerinden önceden geçenler kalırsa dosyalar geri alınır.
-3. g22 tipi kesintiler için: boş yanıtlar ve istek hataları rapora "ajan bitiremedi" olarak yazılır (yöntemin başarısı sayılmaz).
+2. **Gerileme koruması:** Her düzeltme turundan önce çalışma alanının anlık görüntüsü alınır. Tur sonunda önceki turda
+   geçen bir kabul testi kalırsa dosyalar geri alınır ve döngü durur. Sınır: g25'teki gibi kabul testlerinin hiç
+   denemediği bir kısım bozulursa bu koruma da görmez.
+3. g22 tipi kesintiler için: raporda `bitirdi` alanı var (ajan Done çağırmadan durduysa false).
+
+## Sonraki ölçüm (Spark yürütücü, düzeltmeler uygulanmış hâlde)
+
+Aynı 34 görev, yerel çalıştırıcı: a 30/34, b 28/34, c 29/34. c'nin 34 koşusunun hepsinde kabul testleri (17–19 test)
+ilk turda tam geçti; düzeltme döngüsü ve gerileme koruması hiç tetiklenmedi. Gizli testler 5 koşuda yine kaldı
+(g16, g25, g26, g30, g33). Yani gereksinim bazlı testler kapsama boşluğunu kapatmadı; Spark yürütücünün kodu, aynı
+model ailesinden gelen kabul testleriyle aynı yorumu paylaşıyor. Kayıtlar: `sonuclar/zor_spark/`.

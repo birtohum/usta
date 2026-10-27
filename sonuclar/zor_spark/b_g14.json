@@ -1,0 +1,23 @@
+{
+ "id": "g14",
+ "kip": "b",
+ "kategori": "küçük işletme hesapları (KDV, fatura, taksit, indirim, stok, kur dönüşümü, yuvarlama)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "stok.py içinde StokTakip sınıfını oluşturdum: ürün kodları büyük harfe normalize edilip regex ile doğrulanıyor, giriş/çıkış adet ve Decimal maliyet sınırları ValueError ile, tip hataları TypeError ile karşılanıyor. Ağırlıklı ortalama toplam/adet olarak yuvarlamasız tutuluyor; yalnızca envanter birim maliyeti ve çıkış toplamı ROUND_HALF_UP ile iki basamağa yuvarlanıyor. Stok sıfırlanınca kayıt silinip sonraki giriş yeni ortalama başlatıyor, envanter kodları büyük-küçük harf duyarsız sıralı döndürüyor. 11 pytest testi yazıldı ve hepsi geçti.",
+ "adim": 9,
+ "yurutucu_token": {
+  "girdi": 54099,
+  "cikti": 30994
+ },
+ "yurutucu_usd": 0.0116087,
+ "bitirdi": true,
+ "sure_sn": 253.3,
+ "gizli": {
+  "gecti": false,
+  "gecen": 16,
+  "toplam": 17,
+  "cikti": ".............F...                                                        [100%]\r\n================================== FAILURES ===================================\r\n________________ test_sifira_dusunce_sifirlanma_ve_yeni_giris _________________\r\n\r\n    def test_sifira_dusunce_sifirlanma_ve_yeni_giris():\r\n        s = StokTakip()\r\n        s.giris('SIFIR-01', 5, Decimal('10.00'))\r\n        t = s.cikis('SIFIR-01', 5)\r\n        assert t == Decimal('50.00')\r\n        env = s.envanter()\r\n>       assert env[0][1] == 0\r\nE       IndexError: list index out of range\r\n\r\n.gizli\\test_gizli.py:159: IndexError\r\n=========================== short test summary info ===========================\r\nFAILED .gizli/test_gizli.py::test_sifira_dusunce_sifirlanma_ve_yeni_giris - I...\r\n1 failed, 16 passed in 0.21s\r\n"
+ }
+}

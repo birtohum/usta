@@ -1,0 +1,23 @@
+{
+ "id": "g24",
+ "kip": "b",
+ "kategori": "veri yapıları ve algoritmalar (kuyruk, önbellek, arama, gruplama, birleştirme, durum makinesi)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "log_birlestir.py yazıldı: --girdi/--cikti/--bicim(jsonl|csv)/--sirala zaman bayrakları, ISO zaman + tire ayrımı, geçersiz satırları atlayıp stderr'e ATLANAN: N, sıralıda (zaman, dosya adı, satır no) kararlı sıralama yoksa girdi sırası, jsonl {zaman,kaynak,mesaj} / csv başlıklı standart kaçış, kayıp dosyada kod 2, boş girdide kod 3, başarıda 0, boş dosya ve üst dizin oluşturma desteklenir. 9 pytest testi geçiyor.",
+ "adim": 9,
+ "yurutucu_token": {
+  "girdi": 41672,
+  "cikti": 31906
+ },
+ "yurutucu_usd": 0.0105484,
+ "bitirdi": true,
+ "sure_sn": 281.6,
+ "gizli": {
+  "gecti": true,
+  "gecen": 17,
+  "toplam": 17,
+  "cikti": ".................                                                        [100%]\r\n17 passed in 2.33s\r\n"
+ }
+}

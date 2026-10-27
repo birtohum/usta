@@ -1,0 +1,23 @@
+{
+ "id": "g22",
+ "kip": "a",
+ "kategori": "dosya ve komut satırı (CSV/JSON okuma, rapor yazdırma, argümanlar, hata mesajları)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "adisyon.py modülü hazırlandı: utf-8-sig okuma, başlık kontrolü, Decimal doğrulama, birebir ürün birleştirme, KDV'li rapor ve sıralı çıktı tüm gereksinimlere uygun uygulandı ve test edildi.",
+ "adim": 4,
+ "yurutucu_token": {
+  "girdi": 21099,
+  "cikti": 14267
+ },
+ "yurutucu_usd": 0.0049633,
+ "bitirdi": true,
+ "sure_sn": 105.7,
+ "gizli": {
+  "gecti": true,
+  "gecen": 16,
+  "toplam": 16,
+  "cikti": "................                                                         [100%]\r\n16 passed in 0.09s\r\n"
+ }
+}

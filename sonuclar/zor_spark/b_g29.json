@@ -1,0 +1,23 @@
+{
+ "id": "g29",
+ "kip": "b",
+ "kategori": "doğrulama ve ayrıştırma (TC kimlik, IBAN, telefon, plaka, e-posta, adres biçimi)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "vergi.py içinde VergiDogrulayici sınıfını yazdım: VKN için 10 ASCII rakam, ilk hane sıfır değil ve ağırlıklı toplam/mod kontrol hanesi doğrulaması; MERSİS için 16 ASCII rakam, ilk 10 hanesi geçerli VKN ve son 6 hanesi 000001-999999 aralığında. str olmayan girdide TypeError, sayaçlar her çağrıda artıyor, ozet dört anahtarı döndürüyor. pytest ile 9 test geçti.",
+ "adim": 5,
+ "yurutucu_token": {
+  "girdi": 15660,
+  "cikti": 11025
+ },
+ "yurutucu_usd": 0.003771,
+ "bitirdi": true,
+ "sure_sn": 95.5,
+ "gizli": {
+  "gecti": true,
+  "gecen": 17,
+  "toplam": 17,
+  "cikti": ".................                                                        [100%]\r\n17 passed in 0.04s\r\n"
+ }
+}

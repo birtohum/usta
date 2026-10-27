@@ -1,0 +1,34 @@
+{
+ "id": "g26",
+ "kip": "c",
+ "kategori": "küçük işletme hesapları (KDV, fatura, taksit, indirim, stok, kur dönüşümü, yuvarlama)",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 19,
+   "basarili": 19
+  }
+ ],
+ "spark_usd": 0.0024018999999999998,
+ "arayuz": "",
+ "hakem": [],
+ "geri_alma": 0,
+ "iptal_edilen_test": [],
+ "kabul_gecti": true,
+ "ozet": "cari.py içinde CariHesap sınıfı yazıldı: hareket/bakiye/ekstre metotları, ad/tutar/tarih doğrulamaları, Decimal + ROUND_HALF_UP yuvarlama, sıralı ekstre ve case-insensitive cari eşleşmesi. 14 pytest testi geçiyor.",
+ "adim": 7,
+ "yurutucu_token": {
+  "girdi": 34414,
+  "cikti": 14852
+ },
+ "yurutucu_usd": 0.0064118000000000005,
+ "bitirdi": true,
+ "sure_sn": 135.5,
+ "gizli": {
+  "gecti": false,
+  "gecen": 16,
+  "toplam": 17,
+  "cikti": ".F...............                                                        [100%]\r\n================================== FAILURES ===================================\r\n_____________________ test_ad_bosluk_ve_case_insensitive ______________________\r\n\r\n    def test_ad_bosluk_ve_case_insensitive():\r\n        c = CariHesap()\r\n        c.hareket('  Mehmet Demir  ', Decimal('50.00'), '2024-02-01')\r\n        assert c.bakiye('mehmet demir') == Decimal('50.00')\r\n>       assert c.bakiye('  MEHMET DEMIR ') == Decimal('50.00')\r\nE       AssertionError: assert Decimal('0.00') == Decimal('50.00')\r\nE        +  where Decimal('0.00') = bakiye('  MEHMET DEMIR ')\r\nE        +    where bakiye = <cari.CariHesap object at 0x000001CA59762C30>.bakiye\r\nE        +  and   Decimal('50.00') = Decimal('50.00')\r\n\r\n.gizli\\test_gizli.py:16: AssertionError\r\n=========================== short test summary info ===========================\r\nFAILED .gizli/test_gizli.py::test_ad_bosluk_ve_case_insensitive - AssertionEr...\r\n1 failed, 16 passed in 0.20s\r\n"
+ }
+}

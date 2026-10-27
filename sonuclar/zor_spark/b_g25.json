@@ -1,0 +1,23 @@
+{
+ "id": "g25",
+ "kip": "b",
+ "kategori": "Türkçe metin işleme (Türkçe harfler, büyük/küçük harf, hece, ek, sıralama, sayı/yazı)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "adres.py içinde AdresDuzenleyici sınıfı yazıldı: Türkçe'ye uygun baş-harf büyütme (i→İ, ı→I), uzunluk/tür/rakam doğrulamaları (ValueError/TypeError), \"Mahalle: X, Cadde: Y, No: Z\" çıktısı, 5-rakam posta kodu doğrulaması ve Türkçe duyarsız eşitlik + mahalle/cadde/bina_no sıralaması. pytest ile 10 test geçti.",
+ "adim": 5,
+ "yurutucu_token": {
+  "girdi": 14642,
+  "cikti": 13770
+ },
+ "yurutucu_usd": 0.0042182,
+ "bitirdi": true,
+ "sure_sn": 109.5,
+ "gizli": {
+  "gecti": false,
+  "gecen": 12,
+  "toplam": 17,
+  "cikti": "danı, Cumhuriyet Caddesi, No: 100'\r\nE       AssertionError: assert 'Mahalle: Kız...desi, No: 100' == 'Kızılay Meyd...desi, No: 100'\r\nE         \r\nE         - Kızılay Meydanı, Cumhuriyet Caddesi, No: 100\r\nE         + Mahalle: Kızılay Meydanı, Cadde: Cumhuriyet Caddesi, No: 100\r\nE         ? +++++++++                +++++++\r\n\r\n.gizli\\test_gizli.py:26: AssertionError\r\n__________________________ test_duzenle_fazla_bosluk __________________________\r\n\r\n    def test_duzenle_fazla_bosluk():\r\n        a = AdresDuzenleyici()\r\n        r = a.duzenle('  kızılay   meydanı  ', '  atatürk   caddesi  ', 7)\r\n>       assert r == 'Kızılay Meydanı, Atatürk Caddesi, No: 7'\r\nE       AssertionError: assert 'Mahalle: Kız...addesi, No: 7' == 'Kızılay Meyd...addesi, No: 7'\r\nE         \r\nE         - Kızılay Meydanı, Atatürk Caddesi, No: 7\r\nE         + Mahalle: Kızılay Meydanı, Cadde: Atatürk Caddesi, No: 7\r\nE         ? +++++++++                 +++++++\r\n\r\n.gizli\\test_gizli.py:31: AssertionError\r\n=========================== short test summary info ===========================\r\nFAILED .gizli/test_gizli.py::test_duzenle_basic_format - AssertionError: asse...\r\nFAILED .gizli/test_gizli.py::test_duzenle_i_harfi - AssertionError: assert 'M...\r\nFAILED .gizli/test_gizli.py::test_duzenle_noktasiz_i - AssertionError: assert...\r\nFAILED .gizli/test_gizli.py::test_duzenle_cok_kelimeli_buyuk_harf - Assertion...\r\nFAILED .gizli/test_gizli.py::test_duzenle_fazla_bosluk - AssertionError: asse...\r\n5 failed, 12 passed in 0.21s\r\n"
+ }
+}

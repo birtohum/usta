@@ -1,0 +1,23 @@
+{
+ "id": "g02",
+ "kip": "b",
+ "kategori": "küçük işletme hesapları (KDV, fatura, taksit, indirim, stok, kur dönüşümü, yuvarlama)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "fatura.py implemente edildi: FaturaKalemi dataclass, KdvHesaplayici (oran 0-40 kontrolü, ekle doğrulamaları, Decimal ile yuvarlamasız ara hesap + ROUND_HALF_UP satır/genel yuvarlama, ozet sözlüğü, kararlı dokum sıralaması) ve TR-YYYY-NNNN doğrulayan dogrula (hatalı girdide ValueError). 10 pytest testi yazıldı ve geçti.",
+ "adim": 9,
+ "yurutucu_token": {
+  "girdi": 56853,
+  "cikti": 37585
+ },
+ "yurutucu_usd": 0.013202300000000002,
+ "bitirdi": true,
+ "sure_sn": 299.8,
+ "gizli": {
+  "gecti": true,
+  "gecen": 18,
+  "toplam": 18,
+  "cikti": "..................                                                       [100%]\r\n18 passed in 0.03s\r\n"
+ }
+}

@@ -1,0 +1,23 @@
+{
+ "id": "g07",
+ "kip": "a",
+ "kategori": "Türkçe metin işleme (Türkçe harfler, büyük/küçük harf, hece, ek, sıralama, sayı/yazı)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "ekler.py içinde Ekleyici sınıfı yazıldı: büyük ünlü uyumu (a/e, ı/i dönüşümü), ünsüz yumuşaması (p-ç-t-k→b-c-d-ğ) ve benzeşmesi (c-d-g→ç-t-k), kök doğrulama (1-40 Türkçe harf, q/w/x yabancı, boş için ValueError, str dışı için TypeError), cogul_yap (lar/ler, kuralsız) ve özel isimde ekin ilk harfini kökle eşleştirme (kesmesiz) uygulandı.",
+ "adim": 3,
+ "yurutucu_token": {
+  "girdi": 8553,
+  "cikti": 12809
+ },
+ "yurutucu_usd": 0.0034171,
+ "bitirdi": true,
+ "sure_sn": 102.5,
+ "gizli": {
+  "gecti": true,
+  "gecen": 19,
+  "toplam": 19,
+  "cikti": "...................                                                      [100%]\r\n19 passed in 0.03s\r\n"
+ }
+}

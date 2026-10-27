@@ -1,0 +1,23 @@
+{
+ "id": "g30",
+ "kip": "b",
+ "kategori": "veri yapıları ve algoritmalar (kuyruk, önbellek, arama, gruplama, birleştirme, durum makinesi)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "siparis_durum.py içinde SiparisDurumMakinesi sınıfı yazıldı: kurucu doğrulamaları, izinli geçiş haritası, odeme_yap/ilerlet/durum/gecmis yöntemleri, sayaç tabanlı zaman ve terminal durum koruması eklendi. 14 pytest testi yazıldı ve hepsi geçti.",
+ "adim": 6,
+ "yurutucu_token": {
+  "girdi": 20913,
+  "cikti": 8432
+ },
+ "yurutucu_usd": 0.0037777,
+ "bitirdi": true,
+ "sure_sn": 76.7,
+ "gizli": {
+  "gecti": true,
+  "gecen": 17,
+  "toplam": 17,
+  "cikti": ".................                                                        [100%]\r\n17 passed in 0.03s\r\n"
+ }
+}

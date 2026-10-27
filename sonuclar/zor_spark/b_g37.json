@@ -1,0 +1,23 @@
+{
+ "id": "g37",
+ "kip": "b",
+ "kategori": "Türkçe metin işleme (Türkçe harfler, büyük/küçük harf, hece, ek, sıralama, sayı/yazı)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "istatistik.py içinde MetinAnalizci sınıfı yazıldı: Türkçe küçük harf dönüşümü (I→ı, İ→i), yalnızca 29 Türkçe harfi sayan ve Türkçe alfabe sırasına dizen harf_say, boşlukla bölüp harf içeren parçaları sayan ve noktalamayı bölmeyen kelime_say (0-20000 aralığında), iki ondalığa yuvarlayan harf_yuzde, Türkçe eşitlik (__eq__), TypeError/ValueError kontrolleri. test_istatistik.py ile 13 test yazıldı ve pytest ile hepsi geçti.",
+ "adim": 12,
+ "yurutucu_token": {
+  "girdi": 65915,
+  "cikti": 23998
+ },
+ "yurutucu_usd": 0.0113911,
+ "bitirdi": true,
+ "sure_sn": 197.0,
+ "gizli": {
+  "gecti": true,
+  "gecen": 17,
+  "toplam": 17,
+  "cikti": ".................                                                        [100%]\r\n17 passed in 0.05s\r\n"
+ }
+}

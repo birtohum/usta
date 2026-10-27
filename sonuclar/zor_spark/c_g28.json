@@ -1,0 +1,36 @@
+{
+ "id": "g28",
+ "kip": "c",
+ "kategori": "dosya ve komut satırı (CSV/JSON okuma, rapor yazdırma, argümanlar, hata mesajları)",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 17,
+   "basarili": 17
+  }
+ ],
+ "spark_usd": 0.0025089,
+ "arayuz": "",
+ "hakem": [],
+ "geri_alma": 0,
+ "iptal_edilen_test": [
+  "test_cikti_devamsizlik_azalan_sirali"
+ ],
+ "kabul_gecti": true,
+ "ozet": "yoklama.py yazıldı: başlık/durum/limit/dosya kontrolleri, tarih ve mükerrer uyarıları, G/H sayımı ve sıralı JSON raporu. pytest ile 16 test geçti.",
+ "adim": 6,
+ "yurutucu_token": {
+  "girdi": 27596,
+  "cikti": 11167
+ },
+ "yurutucu_usd": 0.004993,
+ "bitirdi": true,
+ "sure_sn": 112.2,
+ "gizli": {
+  "gecti": true,
+  "gecen": 19,
+  "toplam": 19,
+  "cikti": "...................                                                      [100%]\r\n19 passed in 2.80s\r\n"
+ }
+}

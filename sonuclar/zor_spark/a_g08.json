@@ -1,0 +1,23 @@
+{
+ "id": "g08",
+ "kip": "a",
+ "kategori": "küçük işletme hesapları (KDV, fatura, taksit, indirim, stok, kur dönüşümü, yuvarlama)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "taksit.py içinde taksit_plani fonksiyonu yazıldı: tip kontrolleri (TypeError), aralık kontrolleri (ValueError), toplam = anapara*(1+oran*n) formülü, ROUND_HALF_UP ile aylık yuvarlama ve farkın son taksite yansıtılması, 2 basamaklı Decimal tutarlar, n=1 ve 0.01 kuruş desteği, sıralı liste. Testlerle doğrulandı.",
+ "adim": 6,
+ "yurutucu_token": {
+  "girdi": 22393,
+  "cikti": 10394
+ },
+ "yurutucu_usd": 0.0043181,
+ "bitirdi": true,
+ "sure_sn": 82.0,
+ "gizli": {
+  "gecti": true,
+  "gecen": 17,
+  "toplam": 17,
+  "cikti": ".................                                                        [100%]\r\n17 passed in 0.04s\r\n"
+ }
+}

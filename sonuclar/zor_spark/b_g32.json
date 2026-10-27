@@ -1,0 +1,23 @@
+{
+ "id": "g32",
+ "kip": "b",
+ "kategori": "küçük işletme hesapları (KDV, fatura, taksit, indirim, stok, kur dönüşümü, yuvarlama)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "pos.py yazıldı: net_tutar brüt×(1-oran/100) formülü, haftasonu %0,5 ek kesinti, ara yuvarlamasız ROUND_HALF_UP 2 basamak, sınır ve tip kontrolleri; komisyon_raporu toplamlar, sayı ve brüte göre azalan stabil sıralı liste döndürür. 17 pytest testi geçti.",
+ "adim": 4,
+ "yurutucu_token": {
+  "girdi": 13282,
+  "cikti": 14810
+ },
+ "yurutucu_usd": 0.004290200000000001,
+ "bitirdi": true,
+ "sure_sn": 123.9,
+ "gizli": {
+  "gecti": true,
+  "gecen": 17,
+  "toplam": 17,
+  "cikti": ".................                                                        [100%]\r\n17 passed in 0.03s\r\n"
+ }
+}

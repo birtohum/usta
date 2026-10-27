@@ -1,0 +1,34 @@
+{
+ "id": "g17",
+ "kip": "c",
+ "kategori": "doğrulama ve ayrıştırma (TC kimlik, IBAN, telefon, plaka, e-posta, adres biçimi)",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 19,
+   "basarili": 19
+  }
+ ],
+ "spark_usd": 0.0028733,
+ "arayuz": "",
+ "hakem": [],
+ "geri_alma": 0,
+ "iptal_edilen_test": [],
+ "kabul_gecti": true,
+ "ozet": "plaka.py içinde PlakaKayit sınıfı yazıldı: strip+upper normalizasyon, çift boşluk ve biçim kontrolleri (01-81 il kodu, 1-3 ASCII harf, 2-4 ASCII rakam), TypeError/ValueError ayrımı, normalize metne göre __eq__/__hash__, (il-int, harf, sayı-int) anahtarıyla sirali_liste ve __lt__. test_plaka.py ile 14 pytest testi geçiyor.",
+ "adim": 8,
+ "yurutucu_token": {
+  "girdi": 31730,
+  "cikti": 24019
+ },
+ "yurutucu_usd": 0.007976800000000001,
+ "bitirdi": true,
+ "sure_sn": 210.7,
+ "gizli": {
+  "gecti": true,
+  "gecen": 18,
+  "toplam": 18,
+  "cikti": "..................                                                       [100%]\r\n18 passed in 0.03s\r\n"
+ }
+}

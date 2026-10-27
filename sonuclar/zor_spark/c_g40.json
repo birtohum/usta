@@ -1,0 +1,34 @@
+{
+ "id": "g40",
+ "kip": "c",
+ "kategori": "dosya ve komut satırı (CSV/JSON okuma, rapor yazdırma, argümanlar, hata mesajları)",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 16,
+   "basarili": 16
+  }
+ ],
+ "spark_usd": 0.0025565,
+ "arayuz": "",
+ "hakem": [],
+ "geri_alma": 0,
+ "iptal_edilen_test": [],
+ "kabul_gecti": true,
+ "ozet": "kdv_ozet.py hazırlandı: başlık kontrolü (exit 2), Decimal tutar ayrıştırma + UYARI atlama + fis_no dedup, oran tablosu doğrulama (0/1/10/20, exit 3), ROUND_HALF_UP KDV hesabı + bilinmeyen kod UYARI, alfabetik sıralı iki-ondalıklı string JSON çıktı, --para kontrolü (exit 2) ve eksik dosya kontrolü (exit 4). test_kdv.py ile 18 test yazıldı, `python -m pytest -q` hepsi geçti.",
+ "adim": 4,
+ "yurutucu_token": {
+  "girdi": 18546,
+  "cikti": 10541
+ },
+ "yurutucu_usd": 0.003962800000000001,
+ "bitirdi": true,
+ "sure_sn": 102.8,
+ "gizli": {
+  "gecti": true,
+  "gecen": 17,
+  "toplam": 17,
+  "cikti": ".................                                                        [100%]\r\n17 passed in 2.41s\r\n"
+ }
+}

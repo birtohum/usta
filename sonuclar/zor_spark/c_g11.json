@@ -1,0 +1,34 @@
+{
+ "id": "g11",
+ "kip": "c",
+ "kategori": "doğrulama ve ayrıştırma (TC kimlik, IBAN, telefon, plaka, e-posta, adres biçimi)",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 19,
+   "basarili": 19
+  }
+ ],
+ "spark_usd": 0.0017161000000000001,
+ "arayuz": "",
+ "hakem": [],
+ "geri_alma": 0,
+ "iptal_edilen_test": [],
+ "kabul_gecti": true,
+ "ozet": "telefon.py yazıldı: normalize_et boşlukları kırpıp yalnızca rakam/+/-/boşluk/paranteze izin verir, parantezleri en baştaki 0/alan kodu etrafında tek ve dengeli olacak şekilde denetler, 10/11/12/13 haneli kuralları uygulayıp her zaman +90'lı E.164 döndürür; operator_bul normalize edip 530-539 Turkcell, 540-549 Vodafone, 500-529/550-599 Türk Telekom, diğerine Bilinmiyor döndürür. 14 pytest testi geçti.",
+ "adim": 5,
+ "yurutucu_token": {
+  "girdi": 12501,
+  "cikti": 20997
+ },
+ "yurutucu_usd": 0.005449500000000001,
+ "bitirdi": true,
+ "sure_sn": 189.8,
+ "gizli": {
+  "gecti": true,
+  "gecen": 19,
+  "toplam": 19,
+  "cikti": "...................                                                      [100%]\r\n19 passed in 0.03s\r\n"
+ }
+}

@@ -1,0 +1,23 @@
+{
+ "id": "g39",
+ "kip": "b",
+ "kategori": "tarih ve saat (iş günü, resmî tatil listesi parametre olarak verilir, süre hesabı, biçim dönüşümü)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "kidem.py içinde kidem_hesapla yazıldı: YYYY-MM-DD doğrulama (TypeError/ValueError), ters tarih ValueError, eşit tarihte sıfır sonuç, klasik ödünç almalı yıl-ay-gün farkı, toplam_gun (dahil-hariç) ve toplam_ay_asagi (yıl*12+ay). Testler 9/9 geçti.",
+ "adim": 4,
+ "yurutucu_token": {
+  "girdi": 10887,
+  "cikti": 6852
+ },
+ "yurutucu_usd": 0.0024591,
+ "bitirdi": true,
+ "sure_sn": 55.9,
+ "gizli": {
+  "gecti": true,
+  "gecen": 18,
+  "toplam": 18,
+  "cikti": "..................                                                       [100%]\r\n18 passed in 0.03s\r\n"
+ }
+}

@@ -1,0 +1,23 @@
+{
+ "id": "g19",
+ "kip": "a",
+ "kategori": "Türkçe metin işleme (Türkçe harfler, büyük/küçük harf, hece, ek, sıralama, sayı/yazı)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "slug.py içinde SlugUretici sınıfı yazıldı: Türkçe küçük harf (I→ı→i, İ→i), çğöşü→cgiosu dönüşümü, ayraç gruplarını tek tireye çevirme, trim ve 60 karakter kesme, ValueError/TypeError kontrolleri, -2'den başlayan sayaçla benzersizlik ve üretim sırasına göre kayitlari_listele sağlandı; 250 tekrarda benzersizlik doğrulandı.",
+ "adim": 7,
+ "yurutucu_token": {
+  "girdi": 26455,
+  "cikti": 14675
+ },
+ "yurutucu_usd": 0.0055805,
+ "bitirdi": true,
+ "sure_sn": 117.2,
+ "gizli": {
+  "gecti": true,
+  "gecen": 16,
+  "toplam": 16,
+  "cikti": "................                                                         [100%]\r\n16 passed in 0.03s\r\n"
+ }
+}

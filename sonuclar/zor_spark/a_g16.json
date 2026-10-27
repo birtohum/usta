@@ -1,0 +1,23 @@
+{
+ "id": "g16",
+ "kip": "a",
+ "kategori": "dosya ve komut satırı (CSV/JSON okuma, rapor yazdırma, argümanlar, hata mesajları)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "aidat.py içinde AidatDefteri sınıfı yazıldı: istenen 4 imza, YYYY-AA ay doğrulaması (\"gecersiz ay biçimi\"), Decimal tutar ayrıştırma (2 ondalık ve pozitiflik kontrolü), mükerrer ödeme hatası (\"mükerrer ödeme\"), eksik anahtarlarda ValueError, ROUND_HALF_UP ile iki ondalıklı borc_hesapla, daire_no sıralı aylik_ozet ve utf-8/indent=2 atomik kayıt (geçici dosya + os.replace).",
+ "adim": 8,
+ "yurutucu_token": {
+  "girdi": 50269,
+  "cikti": 18327
+ },
+ "yurutucu_usd": 0.0086923,
+ "bitirdi": true,
+ "sure_sn": 132.6,
+ "gizli": {
+  "gecti": false,
+  "gecen": 16,
+  "toplam": 17,
+  "cikti": "...............F.                                                        [100%]\r\n================================== FAILURES ===================================\r\n_______________________ test_kalici_yazim_utf8_indent2 ________________________\r\n\r\ntmp_path = WindowsPath('C:/Users/PURNACI/AppData/Local/Temp/usta_uyz5ikq9/.tmp/pytest-of-unknown/pytest-0/test_kalici_yazim_utf8_indent20')\r\n\r\n    def test_kalici_yazim_utf8_indent2(tmp_path):\r\n        yol = str(tmp_path / \"v.json\")\r\n        d = AidatDefteri(yol)\r\n        d.odeme_ekle(1, \"2024-01\", \"10.00\")\r\n        text = pathlib.Path(yol).read_text(encoding=\"utf-8\")\r\n        data = json.loads(text)\r\n>       assert isinstance(data, dict)\r\nE       AssertionError: assert False\r\nE        +  where False = isinstance([{'ay': '2024-01', 'daire_no': 1, 'tutar': '10.00'}], dict)\r\n\r\n.gizli\\test_gizli.py:116: AssertionError\r\n=========================== short test summary info ===========================\r\nFAILED .gizli/test_gizli.py::test_kalici_yazim_utf8_indent2 - AssertionError:...\r\n1 failed, 16 passed in 0.26s\r\n"
+ }
+}

@@ -1,0 +1,23 @@
+{
+ "id": "g12",
+ "kip": "b",
+ "kategori": "veri yapıları ve algoritmalar (kuyruk, önbellek, arama, gruplama, birleştirme, durum makinesi)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "kargo_kuyruk.py içinde OncelikliKargoKuyrugu sınıfını yazdım: kapasite ve takip_no/oncelik doğrulamaları, KeyError/OverflowError/IndexError kuralları, öncelik+sıra_no sıralı cikar/iptal_et/listele davranışları. 14 pytest testi yazıp hepsini geçirdim.",
+ "adim": 5,
+ "yurutucu_token": {
+  "girdi": 13682,
+  "cikti": 5513
+ },
+ "yurutucu_usd": 0.0024708000000000004,
+ "bitirdi": true,
+ "sure_sn": 44.6,
+ "gizli": {
+  "gecti": true,
+  "gecen": 18,
+  "toplam": 18,
+  "cikti": "..................                                                       [100%]\r\n18 passed in 0.04s\r\n"
+ }
+}

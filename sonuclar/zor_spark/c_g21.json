@@ -1,0 +1,34 @@
+{
+ "id": "g21",
+ "kip": "c",
+ "kategori": "tarih ve saat (iş günü, resmî tatil listesi parametre olarak verilir, süre hesabı, biçim dönüşümü)",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 18,
+   "basarili": 18
+  }
+ ],
+ "spark_usd": 0.0020953,
+ "arayuz": "",
+ "hakem": [],
+ "geri_alma": 0,
+ "iptal_edilen_test": [],
+ "kabul_gecti": true,
+ "ozet": "vade.py yazıldı: 5 zorunlu bayrak, vade-gun 0-365 tam sayı kontrolü (ondalıklı/geçersizde stderr+çıkış 2), tatiller boş/sırasız/yinelenen kabulü ve bozuk tarihte çıkış 2, ileri/geri öteleme zincir çözümü, YYYY-MM-DD/DD-MM-YYYY çıktısı tek satır. 27 pytest testi geçti.",
+ "adim": 5,
+ "yurutucu_token": {
+  "girdi": 16763,
+  "cikti": 9419
+ },
+ "yurutucu_usd": 0.0035601,
+ "bitirdi": true,
+ "sure_sn": 90.0,
+ "gizli": {
+  "gecti": true,
+  "gecen": 19,
+  "toplam": 19,
+  "cikti": "...................                                                      [100%]\r\n19 passed in 3.11s\r\n"
+ }
+}

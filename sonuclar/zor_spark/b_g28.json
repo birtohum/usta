@@ -1,0 +1,23 @@
+{
+ "id": "g28",
+ "kip": "b",
+ "kategori": "dosya ve komut satırı (CSV/JSON okuma, rapor yazdırma, argümanlar, hata mesajları)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "yoklama.py yazıldı: başlık/durum/limit/dosya kontrolleri, tarih ve mükerrer uyarıları, G/H sayımı, limit üstü JSON raporu ve sıralama kuralları uygulandı; pytest ile 15 test geçti.",
+ "adim": 4,
+ "yurutucu_token": {
+  "girdi": 17417,
+  "cikti": 11014
+ },
+ "yurutucu_usd": 0.0039445,
+ "bitirdi": true,
+ "sure_sn": 93.2,
+ "gizli": {
+  "gecti": false,
+  "gecen": 18,
+  "toplam": 19,
+  "cikti": "..F................                                                      [100%]\r\n================================== FAILURES ===================================\r\n_____________________________ test_header_invalid _____________________________\r\n\r\ntmp_path = WindowsPath('C:/Users/PURNACI/AppData/Local/Temp/usta_hrn5c06j/.tmp/pytest-of-unknown/pytest-1/test_header_invalid0')\r\n\r\n    def test_header_invalid(tmp_path):\r\n        csv_p = tmp_path / \"y.csv\"\r\n        out_p = tmp_path / \"r.json\"\r\n        write_csv(csv_p, \"ogrenci_no,ad_soyad,tarih\\n101,Ali Veli,2024-09-01\\n\")\r\n        r = run_yoklama(csv_p, out_p, 1)\r\n        assert r.returncode == 2\r\n>       assert \"HATA: durum kodu geçersiz\" in r.stderr\r\nE       AssertionError: assert 'HATA: durum kodu geçersiz' in 'HATA: başlık geçersiz\\n'\r\nE        +  where 'HATA: başlık geçersiz\\n' = CompletedProcess(args=['C:\\\\Users\\\\PURNACI\\\\tohumenv\\\\Scripts\\\\python.exe', 'yoklama.py', '--yoklama', 'C:\\\\Users\\\\PUR...n\\\\pytest-1\\\\test_header_invalid0\\\\r.json', '--limit', '1'], returncode=2, stdout='', stderr='HATA: başlık geçersiz\\n').stderr\r\n\r\n.gizli\\test_gizli.py:46: AssertionError\r\n=========================== short test summary info ===========================\r\nFAILED .gizli/test_gizli.py::test_header_invalid - AssertionError: assert 'HA...\r\n1 failed, 18 passed in 2.96s\r\n"
+ }
+}

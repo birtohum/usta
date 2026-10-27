@@ -1,0 +1,23 @@
+{
+ "id": "g18",
+ "kip": "b",
+ "kategori": "veri yapıları ve algoritmalar (kuyruk, önbellek, arama, gruplama, birleştirme, durum makinesi)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "urun_arama.py içinde normalize, build_index ve ara fonksiyonları yazıldı: Türkçe I/İ dönüşümü, noktalama temizliği, ters indeks, VE mantığı ile frekans+id sıralaması, TypeError/ValueError kontrolleri. 15 pytest testi yazıldı ve hepsi geçti.",
+ "adim": 4,
+ "yurutucu_token": {
+  "girdi": 11991,
+  "cikti": 10539
+ },
+ "yurutucu_usd": 0.0033068999999999998,
+ "bitirdi": true,
+ "sure_sn": 81.8,
+ "gizli": {
+  "gecti": true,
+  "gecen": 16,
+  "toplam": 16,
+  "cikti": "................                                                         [100%]\r\n16 passed in 0.03s\r\n"
+ }
+}

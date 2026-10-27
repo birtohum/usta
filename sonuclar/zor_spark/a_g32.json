@@ -1,0 +1,23 @@
+{
+ "id": "g32",
+ "kip": "a",
+ "kategori": "küçük işletme hesapları (KDV, fatura, taksit, indirim, stok, kur dönüşümü, yuvarlama)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "pos.py yazıldı: net_tutar brüt (0.01–1000000) ve komisyon (%0–10) aralık kontrolüyle ValueError, gun için yalnızca 'haftaici'/'haftasonu' kabulü, haftasonu ek %0.5 kesinti, ara yuvarlamasız tek ROUND_HALF_UP 2-basamak yuvarlama ve negatif koruması uygular; komisyon_raporu brut/gun zorunluluğunda KeyError, yanlış tipte TypeError verir, toplam_brut/toplam_net/islem_sayisi ve brüte göre azalan stabil sıralı islemler listesi döndürür. Yalnızca standart kütüphane, deterministik.",
+ "adim": 3,
+ "yurutucu_token": {
+  "girdi": 7473,
+  "cikti": 10687
+ },
+ "yurutucu_usd": 0.0028847000000000005,
+ "bitirdi": true,
+ "sure_sn": 85.1,
+ "gizli": {
+  "gecti": true,
+  "gecen": 17,
+  "toplam": 17,
+  "cikti": ".................                                                        [100%]\r\n17 passed in 0.05s\r\n"
+ }
+}

@@ -1,0 +1,23 @@
+{
+ "id": "g23",
+ "kip": "b",
+ "kategori": "doğrulama ve ayrıştırma (TC kimlik, IBAN, telefon, plaka, e-posta, adres biçimi)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "eposta.py içinde eposta_dogrula ve alan_ayikla yazıldı: boşluk kırpılmadan geçersiz sayma, 254 toplam / 64 yerel uzunluk sınırı, yerel nokta ve karakter kuralları, alan adı etiket ve son-etiket kuralları, küçük harfe çevirme ve TypeError/ValueError/False ayrımı uygulandı. test_eposta.py ile 19 pytest testi yazıldı ve hepsi geçti.",
+ "adim": 6,
+ "yurutucu_token": {
+  "girdi": 25464,
+  "cikti": 8107
+ },
+ "yurutucu_usd": 0.0041678,
+ "bitirdi": true,
+ "sure_sn": 62.2,
+ "gizli": {
+  "gecti": true,
+  "gecen": 18,
+  "toplam": 18,
+  "cikti": "..................                                                       [100%]\r\n18 passed in 0.04s\r\n"
+ }
+}

@@ -1,0 +1,23 @@
+{
+ "id": "g15",
+ "kip": "a",
+ "kategori": "tarih ve saat (iş günü, resmî tatil listesi parametre olarak verilir, süre hesabı, biçim dönüşümü)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "`izin.py` içinde `YillikIzinTakvimi` sınıfı yazıldı: tatiller listesi doğrulanıp kümede tutuldu, personel adları strip+Türkçe duyarsız (İ/I) casefold ile eşleştirildi, tarihler YYYY-MM-DD regex+date ile doğrulandı, hafta sonu/tatil düşülerek iş günü sayıldı, yarım gün tek iş günü zorunluluğuyla 0.5 sayıldı, kayıtlar ayrı tutulup kalan hesabında gün bazında tekilleştirildi, Decimal ile 0.5 adımlarında kalan döndürüldü.",
+ "adim": 16,
+ "yurutucu_token": {
+  "girdi": 119370,
+  "cikti": 30828
+ },
+ "yurutucu_usd": 0.0181026,
+ "bitirdi": true,
+ "sure_sn": 271.2,
+ "gizli": {
+  "gecti": true,
+  "gecen": 18,
+  "toplam": 18,
+  "cikti": "..................                                                       [100%]\r\n18 passed in 0.03s\r\n"
+ }
+}

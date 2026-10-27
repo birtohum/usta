@@ -1,0 +1,23 @@
+{
+ "id": "g04",
+ "kip": "b",
+ "kategori": "dosya ve komut satırı (CSV/JSON okuma, rapor yazdırma, argümanlar, hata mesajları)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "iade_raporu.py hazırlandı: utf-8-sig CSV okuma ve başlık kontrolü (çıkış 2), JSON liste/yapı kontrolü (çıkış 3), Decimal+ROUND_HALF_UP toplama ve --min-tutar dahil filtre, bulunamayan siparişlerde stderr uyarısı, tutar/tarih sıralama kuralları, TOPLAM_IADE ve ID|MUSTERI|TUTAR|TARIH çıktısı, eksik dosya kontrolü (çıkış 4). test_iade.py ile 12 pytest testi yazıldı ve `python -m pytest -q` ile hepsi geçti.",
+ "adim": 8,
+ "yurutucu_token": {
+  "girdi": 46321,
+  "cikti": 22841
+ },
+ "yurutucu_usd": 0.009200300000000002,
+ "bitirdi": true,
+ "sure_sn": 193.4,
+ "gizli": {
+  "gecti": true,
+  "gecen": 16,
+  "toplam": 16,
+  "cikti": "................                                                         [100%]\r\n16 passed in 2.31s\r\n"
+ }
+}

@@ -1,0 +1,23 @@
+{
+ "id": "g40",
+ "kip": "a",
+ "kategori": "dosya ve komut satırı (CSV/JSON okuma, rapor yazdırma, argümanlar, hata mesajları)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "kdv_ozet.py hazırlandı ve tüm gereksinimler test edildi: başlık kontrolü (kod 2), Decimal tutar ayrıştırma + tekrar fis_no, oran tablosu doğrulama (kod 3), ROUND_HALF_UP KDV hesabı, sıralı JSON çıktı, para ve eksik dosya kontrolleri (kod 2/4).",
+ "adim": 6,
+ "yurutucu_token": {
+  "girdi": 23752,
+  "cikti": 9288
+ },
+ "yurutucu_usd": 0.0042328,
+ "bitirdi": true,
+ "sure_sn": 79.4,
+ "gizli": {
+  "gecti": true,
+  "gecen": 17,
+  "toplam": 17,
+  "cikti": ".................                                                        [100%]\r\n17 passed in 2.50s\r\n"
+ }
+}

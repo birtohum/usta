@@ -1,0 +1,34 @@
+{
+ "id": "g20",
+ "kip": "c",
+ "kategori": "küçük işletme hesapları (KDV, fatura, taksit, indirim, stok, kur dönüşümü, yuvarlama)",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 19,
+   "basarili": 19
+  }
+ ],
+ "spark_usd": 0.0017583000000000002,
+ "arayuz": "",
+ "hakem": [],
+ "geri_alma": 0,
+ "iptal_edilen_test": [],
+ "kabul_gecti": true,
+ "ozet": "indirim.py içinde sira_indirim ve kupon_uygula fonksiyonları yazıldı: sıralı indirimler ara yuvarlamasız uygulanıp ROUND_HALF_UP ile 2 basamağa yuvarlanıyor, kupon %10 indirim verip 500 altı sepette uygulanmıyor, tüm tip/değer kontrolleri TypeError/ValueError ile yapılıyor. 17 pytest testi yazıldı ve hepsi geçti.",
+ "adim": 4,
+ "yurutucu_token": {
+  "girdi": 11500,
+  "cikti": 6750
+ },
+ "yurutucu_usd": 0.0025,
+ "bitirdi": true,
+ "sure_sn": 58.8,
+ "gizli": {
+  "gecti": true,
+  "gecen": 18,
+  "toplam": 18,
+  "cikti": "..................                                                       [100%]\r\n18 passed in 0.03s\r\n"
+ }
+}

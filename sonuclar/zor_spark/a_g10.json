@@ -1,0 +1,23 @@
+{
+ "id": "g10",
+ "kip": "a",
+ "kategori": "dosya ve komut satırı (CSV/JSON okuma, rapor yazdırma, argümanlar, hata mesajları)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "stok.py içinde StokDefteri sınıfı tüm gereksinimlere uygun geliştirildi: yoksa boş başlama/utf-8 JSON yükleme ve bozuk JSON'da tam ValueError, barkod strip ve negatif kontrolü ile üzerine yazma, CSV başlık zorunluluğu ve hatalı satır sayacı (sayilamayan_satir + sayac), fark=sayilan-kayitli ve tolerans filtresi, BOS/sıralı CSV çıktısı, toplam_urun/raporlanan/toplam_fark dönüşü ve tempfile+os.replace ile atomik yazma.",
+ "adim": 12,
+ "yurutucu_token": {
+  "girdi": 65748,
+  "cikti": 19845
+ },
+ "yurutucu_usd": 0.0105438,
+ "bitirdi": true,
+ "sure_sn": 161.9,
+ "gizli": {
+  "gecti": true,
+  "gecen": 16,
+  "toplam": 16,
+  "cikti": "................                                                         [100%]\r\n16 passed in 0.14s\r\n"
+ }
+}

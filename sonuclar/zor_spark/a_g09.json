@@ -1,0 +1,23 @@
+{
+ "id": "g09",
+ "kip": "a",
+ "kategori": "tarih ve saat (iş günü, resmî tatil listesi parametre olarak verilir, süre hesabı, biçim dönüşümü)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "vardiya.py içinde VardiyaHesaplayici sınıfı yazıldı: HH:MM doğrulama (hatalı biçimde ValueError, None/boş/non-str için TypeError), gece başlangıcı 20:00-23:59 kontrolü, ertesi güne sarkma ve eşitse 0 dakika mantığı, dakika dakika gece/gündüz ayrımı (gece başlangıcı dahil, gündüz başlangıcı hariç).",
+ "adim": 3,
+ "yurutucu_token": {
+  "girdi": 6579,
+  "cikti": 6718
+ },
+ "yurutucu_usd": 0.0020015,
+ "bitirdi": true,
+ "sure_sn": 50.6,
+ "gizli": {
+  "gecti": true,
+  "gecen": 16,
+  "toplam": 16,
+  "cikti": "................                                                         [100%]\r\n16 passed in 0.04s\r\n"
+ }
+}
