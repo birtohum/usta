@@ -1,0 +1,35 @@
+{
+ "id": "h084",
+ "kip": "c",
+ "kategori": "veri yapıları ve algoritmalar (kuyruk, önbellek, arama, gruplama, birleştirme, durum makinesi)",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 19,
+   "basarili": 19
+  }
+ ],
+ "spark_usd": 0.0022771,
+ "arayuz": "",
+ "hakem": [],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [],
+ "kabul_gecti": true,
+ "ozet": "`muzayede_kuyrugu.py` içinde `MuzayedeKuyrugu` sınıfı yazıldı: organik öncelikli + seq FIFO sıralama, artan seq, Decimal ROUND_HALF_UP kilo yuvarlama, uretici strip, ValueError/KeyError/OverflowError/IndexError kuralları ve kopya döndüren listeleme. 17 pytest testi yazıldı ve hepsi geçti.",
+ "adim": 4,
+ "yurutucu_token": {
+  "girdi": 14302,
+  "cikti": 9304
+ },
+ "yurutucu_usd": 0.0032910000000000005,
+ "bitirdi": true,
+ "sure_sn": 154.3,
+ "gizli": {
+  "gecti": true,
+  "gecen": 18,
+  "toplam": 18,
+  "cikti": "..................                                                       [100%]\n18 passed in 0.02s\n"
+ }
+}

@@ -1,0 +1,44 @@
+{
+ "id": "h073",
+ "kip": "c",
+ "kategori": "Türkçe metin işleme (Türkçe harfler, büyük/küçük harf, hece, ek, sıralama, sayı/yazı)",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 16,
+   "basarili": 16
+  }
+ ],
+ "spark_usd": 0.0063019999999999994,
+ "arayuz": "",
+ "hakem": [
+  {
+   "test": "test_buyuk_harf_duzeni_korunur",
+   "karar": "belirsiz",
+   "gerekce": "Görev metni büyük harfe çevirmede Türkçe İ/I ayrımını açıkça tanımlamıyor.",
+   "tur": 1
+  }
+ ],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [
+  "test_buyuk_harf_duzeni_korunur"
+ ],
+ "kabul_gecti": true,
+ "ozet": null,
+ "adim": 20,
+ "yurutucu_token": {
+  "girdi": 191450,
+  "cikti": 46737
+ },
+ "yurutucu_usd": 0.0284924,
+ "bitirdi": false,
+ "sure_sn": 477.0,
+ "gizli": {
+  "gecti": false,
+  "gecen": 15,
+  "toplam": 16,
+  "cikti": "....F...........                                                         [100%]\n=================================== FAILURES ===================================\n____________________________ test_suffix_preserved _____________________________\n\n    def test_suffix_preserved():\n        import tempfile\n        with tempfile.TemporaryDirectory() as td:\n            td = pathlib.Path(td)\n            gi = td / \"in.txt\"; ci = td / \"out.txt\"; so = td / \"d.json\"; ra = td / \"r.json\"\n            write(gi, \"hellos\")\n            write(so, json.dumps({\"hello\": \"merhaba\"}, ensure_ascii=False))\n            r = run_prog(gi, ci, so, ra)\n            assert r.returncode == 0\n            out = ci.read_text(encoding=\"utf-8\")\n>           assert out == \"merhabas\"\nE           AssertionError: assert 'hellos' == 'merhabas'\nE             - merhabas\nE             + hellos\n\n.gizli/test_gizli.py:77: AssertionError\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_suffix_preserved - AssertionError: assert '...\n1 failed, 15 passed in 0.81s\n"
+ }
+}

@@ -1,0 +1,23 @@
+{
+ "id": "h144",
+ "kip": "b",
+ "kategori": "küçük işletme hesapları (KDV, fatura, taksit, indirim, stok, kur dönüşümü, yuvarlama)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "DovizliBorcDefteri sınıfı dovizli_borc.py içinde yazıldı: Decimal ile kur/tutar saklama, HALF_UP yuvarlama, FIFO mahsup, kur farkı lehte/aleyhte ayrımı, belge_no/tarih/bakiye kontrolleri ve TypeError/ValueError ayrımı. pytest ile 6 test geçti.",
+ "adim": 13,
+ "yurutucu_token": {
+  "girdi": 74166,
+  "cikti": 64985
+ },
+ "yurutucu_usd": 0.020413600000000007,
+ "bitirdi": true,
+ "sure_sn": 569.2,
+ "gizli": {
+  "gecti": false,
+  "gecen": 14,
+  "toplam": 16,
+  "cikti": "     acik = [r for r in self._borclar.values() if r[\"kalan_eur\"] > Decimal(\"0\")]\n        if not acik:\n            raise ValueError(\"bakiye\")\n        # her açık belgenin tarihi ödeme tarihinden sonra olamaz kontrolü:\n        # ödeme tarihi en eski açık borçtan önce olamaz; genel kural olarak\n        # ödeme tarihi, mahsup edilecek borçların tarihinden önce olamaz.\n        # FIFO gereği en eski açık borcun tarihi baz alınır; eğer ödeme tarihi\n        # herhangi bir açık borcun tarihinden önceyse ve FIFO ile o borca\n        # mahsup edilecekse hata. En güvenli: ödeme tarihi, açık borçların\n        # en eski tarihinden önce olamaz.\n        acik_sorted = sorted(acik, key=lambda r: (r[\"tarih\"], r[\"belge_no\"]))\n        if trh < acik_sorted[0][\"tarih\"]:\n            raise ValueError(\"tarih\")\n        toplam_kalan_eur = sum((r[\"kalan_eur\"] for r in acik), Decimal(\"0\"))\n        kapat_toplam_eur = tutar_d / kur_od\n        if kapat_toplam_eur - toplam_kalan_eur > Decimal(\"0.000001\"):\n            # kuruş hassasiyeti: TL karşılığı bakiyeyi aşıyorsa hata.\n            # Daha sağlam kontrol: kapat eur > toplam kalan eur ise hata.\n>           raise ValueError(\"bakiye\")\nE           ValueError: bakiye\n\ndovizli_borc.py:147: ValueError\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_03_kur_dort_ondalik_decimal - assert False\nFAILED .gizli/test_gizli.py::test_16_kur_farki_yuvarlama_half_up - ValueError...\n2 failed, 14 passed in 0.04s\n"
+ }
+}

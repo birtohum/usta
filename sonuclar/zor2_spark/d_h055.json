@@ -1,0 +1,38 @@
+{
+ "id": "h055",
+ "kip": "d",
+ "kategori": "Türkçe metin işleme (Türkçe harfler, büyük/küçük harf, hece, ek, sıralama, sayı/yazı)",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 19,
+   "basarili": 19
+  }
+ ],
+ "spark_usd": 0.0050249000000000005,
+ "arayuz": "uyum_denetcisi.py içinde UyumDenetcisi; __init__(self, sozluk=None); denetle(self, kelime) anahtarlar: buyuk_unlu_uyumu, kucuk_unlu_uyumu, uyum_skoru; raporla(self) anahtarlar: kelime, uyum_skoru",
+ "hakem": [],
+ "geri_alma": 0,
+ "inceleme": {
+  "yazilan": 0,
+  "kanitli": []
+ },
+ "iptal_edilen_test": [],
+ "kabul_gecti": true,
+ "ozet": "uyum_denetcisi.py içinde UyumDenetcisi sınıfını yazdım: büyük ünlü uyumu (kalın/ince karışımı ihlal), küçük ünlü uyumu (düz-dar/yuvarlak-dar/geniş kuralları), sözlük istisnaları, yarım-yukarı yuvarlanan uyum_skoru, küçük harfe çevrilmiş durum kaydı ve skora göre azalan kararlı raporla. Hata kontrolleri (boş/None/tip/50+ karakter) eklendi; 19 pytest testi geçiyor.",
+ "adim": 6,
+ "yurutucu_token": {
+  "girdi": 23521,
+  "cikti": 11060
+ },
+ "yurutucu_usd": 0.0045641,
+ "bitirdi": true,
+ "sure_sn": 366.2,
+ "gizli": {
+  "gecti": false,
+  "gecen": 8,
+  "toplam": 17,
+  "cikti": ".gizli/test_gizli.py:49: KeyError\n______________________ test_yabanci_istisna_uyumlu_kabul _______________________\n\n    def test_yabanci_istisna_uyumlu_kabul():\n        d = UyumDenetcisi(sozluk=[\"otel\"])\n        r = d.denetle(\"otel\")\n>       assert r[\"buyuk_uyum\"] is True\nE       KeyError: 'buyuk_uyum'\n\n.gizli/test_gizli.py:56: KeyError\n______________________ test_istisna_olmadan_otel_uyumsuz _______________________\n\n    def test_istisna_olmadan_otel_uyumsuz():\n        d = UyumDenetcisi()\n        r = d.denetle(\"otel\")\n>       assert r[\"buyuk_uyum\"] is False\nE       KeyError: 'buyuk_uyum'\n\n.gizli/test_gizli.py:63: KeyError\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_buyuk_kalin_uyumlu - KeyError: 'buyuk_uyum'\nFAILED .gizli/test_gizli.py::test_buyuk_ince_uyumlu - KeyError: 'buyuk_uyum'\nFAILED .gizli/test_gizli.py::test_buyuk_uyum_ihlali_iki_kural_bozuk - KeyErro...\nFAILED .gizli/test_gizli.py::test_kucuk_uyum_ihlali_yarim_puan - KeyError: 'b...\nFAILED .gizli/test_gizli.py::test_yuvarlak_dar_kural_uyumlu - KeyError: 'buyu...\nFAILED .gizli/test_gizli.py::test_yuvarlak_genis_kural_uyumlu - KeyError: 'bu...\nFAILED .gizli/test_gizli.py::test_duz_dar_kural_uyumlu - KeyError: 'buyuk_uyum'\nFAILED .gizli/test_gizli.py::test_yabanci_istisna_uyumlu_kabul - KeyError: 'b...\nFAILED .gizli/test_gizli.py::test_istisna_olmadan_otel_uyumsuz - KeyError: 'b...\n9 failed, 8 passed in 0.05s\n"
+ }
+}

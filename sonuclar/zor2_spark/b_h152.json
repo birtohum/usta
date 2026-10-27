@@ -1,0 +1,23 @@
+{
+ "id": "h152",
+ "kip": "b",
+ "kategori": "tarih ve saat (iş günü, resmî tatil listesi parametre olarak verilir, süre hesabı, biçim dönüşümü)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "kurye_sla.py içinde normalize_et, teslim_suresi_dk ve sla_gecti_mi yazıldı: 3 tarih biçimi kabul ediliyor, çıktı YYYY-MM-DD HH:MM, hafta sonu ve tatil günleri (00:00-23:59) süre dışı bırakılıyor, saniyeler üst dakikaya yuvarlanıyor, limite eşit süre False dönüyor, Şubat 29 artık-yıl kontrolü ve tüm ValueError kuralları uygulanıyor. pytest ile 11 test geçti.",
+ "adim": 11,
+ "yurutucu_token": {
+  "girdi": 86360,
+  "cikti": 23614
+ },
+ "yurutucu_usd": 0.0133588,
+ "bitirdi": true,
+ "sure_sn": 210.6,
+ "gizli": {
+  "gecti": true,
+  "gecen": 18,
+  "toplam": 18,
+  "cikti": "..................                                                       [100%]\n18 passed in 0.02s\n"
+ }
+}

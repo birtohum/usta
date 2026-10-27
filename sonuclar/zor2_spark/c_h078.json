@@ -1,0 +1,35 @@
+{
+ "id": "h078",
+ "kip": "c",
+ "kategori": "veri yapıları ve algoritmalar (kuyruk, önbellek, arama, gruplama, birleştirme, durum makinesi)",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 17,
+   "basarili": 17
+  }
+ ],
+ "spark_usd": 0.0019969000000000002,
+ "arayuz": "",
+ "hakem": [],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [],
+ "kabul_gecti": true,
+ "ozet": "`baharat_cli.py` yazıldı: argparse ile 4 zorunlu bayrak, esik doğrulaması (tam sayı, 0-10000, değilse çıkış 2), CSV başlık kontrolü ve okunamaz dosyada çıkış 2, gramaj/stok tam sayı değilse çıkış 1, negatif gramajda çıkış 2, `stok < esik` filtresi, ada göre artan / stoğa göre azalan+ada göre artan sıralama ve JSON çıktısı. Yalnızca standart kütüphane kullanıldı. 15 pytest testi yazıldı ve `python -m pytest -q` ile hepsi geçti.",
+ "adim": 5,
+ "yurutucu_token": {
+  "girdi": 16432,
+  "cikti": 11497
+ },
+ "yurutucu_usd": 0.0039426,
+ "bitirdi": true,
+ "sure_sn": 211.0,
+ "gizli": {
+  "gecti": true,
+  "gecen": 17,
+  "toplam": 17,
+  "cikti": ".................                                                        [100%]\n17 passed in 0.45s\n"
+ }
+}

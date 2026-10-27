@@ -1,0 +1,23 @@
+{
+ "id": "h022",
+ "kip": "a",
+ "kategori": "dosya ve komut satırı (CSV/JSON okuma, rapor yazdırma, argümanlar, hata mesajları)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "kargo.py oluşturuldu: desi_hesapla ölçü doğrulama ve ham desi hesabı, ucret_hesapla bölge katsayılı yarım-yukarı Decimal hesabı, toplu_fiyatlandir hatasız Decimal(-1) kurallı toplu işlem yapıyor.",
+ "adim": 5,
+ "yurutucu_token": {
+  "girdi": 16867,
+  "cikti": 11219
+ },
+ "yurutucu_usd": 0.0039305,
+ "bitirdi": true,
+ "sure_sn": 104.6,
+ "gizli": {
+  "gecti": true,
+  "gecen": 18,
+  "toplam": 18,
+  "cikti": "..................                                                       [100%]\n18 passed in 0.03s\n"
+ }
+}

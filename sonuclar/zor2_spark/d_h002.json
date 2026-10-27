@@ -1,0 +1,40 @@
+{
+ "id": "h002",
+ "kip": "d",
+ "kategori": "küçük işletme hesapları (KDV, fatura, taksit, indirim, stok, kur dönüşümü, yuvarlama)",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 17,
+   "basarili": 17
+  }
+ ],
+ "spark_usd": 0.0059085000000000006,
+ "arayuz": "",
+ "hakem": [],
+ "geri_alma": 0,
+ "inceleme": {
+  "yazilan": 0,
+  "kanitli": []
+ },
+ "iptal_edilen_test": [
+  "test_genel_toplam_ara_arti_kdv"
+ ],
+ "kabul_gecti": true,
+ "ozet": "fatura.py içinde KdvliFatura sınıfını implemente ettim: KDV oranı (1/10/20), negatif fiyat, adet<1 ve boş açıklama için ValueError; tip dışı girdi için TypeError; Decimal ile ROUND_HALF_UP ve satır bazında KDV yuvarlama; ara/kdv/genel toplam ilişkisi; Türkçe alfabeye duyarsız sıralı sabit genişlikli fatura_dökümü; boş faturada 0.0. 11 pytest testi yazıldı ve hepsi geçti.",
+ "adim": 8,
+ "yurutucu_token": {
+  "girdi": 34844,
+  "cikti": 23926
+ },
+ "yurutucu_usd": 0.0082696,
+ "bitirdi": true,
+ "sure_sn": 323.1,
+ "gizli": {
+  "gecti": true,
+  "gecen": 16,
+  "toplam": 16,
+  "cikti": "................                                                         [100%]\n16 passed in 0.03s\n"
+ }
+}

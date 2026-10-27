@@ -1,0 +1,23 @@
+{
+ "id": "h054",
+ "kip": "b",
+ "kategori": "veri yapıları ve algoritmalar (kuyruk, önbellek, arama, gruplama, birleştirme, durum makinesi)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "`ucus_guvenlik.py` içinde `UcusDurumMakinesi` sınıfı yazıldı: HAZIRLIK başlangıçlı, 8 izinli geçişli, hatalı geçişte ValueError, str olmayan olayda TypeError, kopya liste döndüren `gecmis`. pytest ile 10 test geçti.",
+ "adim": 4,
+ "yurutucu_token": {
+  "girdi": 10731,
+  "cikti": 2959
+ },
+ "yurutucu_usd": 0.0016649000000000002,
+ "bitirdi": true,
+ "sure_sn": 23.9,
+ "gizli": {
+  "gecti": true,
+  "gecen": 16,
+  "toplam": 16,
+  "cikti": "................                                                         [100%]\n16 passed in 0.02s\n"
+ }
+}

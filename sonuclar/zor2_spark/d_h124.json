@@ -1,0 +1,38 @@
+{
+ "id": "h124",
+ "kip": "d",
+ "kategori": "dosya ve komut satırı (CSV/JSON okuma, rapor yazdırma, argümanlar, hata mesajları)",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 17,
+   "basarili": 17
+  }
+ ],
+ "spark_usd": 0.0053069,
+ "arayuz": "",
+ "hakem": [],
+ "geri_alma": 0,
+ "inceleme": {
+  "yazilan": 0,
+  "kanitli": []
+ },
+ "iptal_edilen_test": [],
+ "kabul_gecti": true,
+ "ozet": "servis.py yazıldı: bakimlar.json + parcalar.csv okuyup plaka bazında işçilik+parça toplamına KDV ekleyip maliyet.csv üretir; geçersiz kayıtlar stderr uyarısıyla atlanır, geçersiz JSON/eksik başlıkta çıkış 2, boş sonuçta yalnız başlıkla çıkış 0. 12 pytest testi geçiyor.",
+ "adim": 6,
+ "yurutucu_token": {
+  "girdi": 28971,
+  "cikti": 12525
+ },
+ "yurutucu_usd": 0.005402100000000001,
+ "bitirdi": true,
+ "sure_sn": 316.2,
+ "gizli": {
+  "gecti": true,
+  "gecen": 16,
+  "toplam": 16,
+  "cikti": "................                                                         [100%]\n16 passed in 0.49s\n"
+ }
+}

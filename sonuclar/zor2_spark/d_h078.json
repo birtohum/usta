@@ -1,0 +1,38 @@
+{
+ "id": "h078",
+ "kip": "d",
+ "kategori": "veri yapıları ve algoritmalar (kuyruk, önbellek, arama, gruplama, birleştirme, durum makinesi)",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 19,
+   "basarili": 19
+  }
+ ],
+ "spark_usd": 0.0043156,
+ "arayuz": "",
+ "hakem": [],
+ "geri_alma": 0,
+ "inceleme": {
+  "yazilan": 0,
+  "kanitli": []
+ },
+ "iptal_edilen_test": [],
+ "kabul_gecti": true,
+ "ozet": "baharat_cli.py yazıldı: CSV okuma, esik filtreleme (stok<esik), ad/stok sıralama, JSON çıktı; hata kodları (1/2) ve stderr mesajları spec'e uygun. 14 pytest testi geçti.",
+ "adim": 6,
+ "yurutucu_token": {
+  "girdi": 20816,
+  "cikti": 10044
+ },
+ "yurutucu_usd": 0.0040904,
+ "bitirdi": true,
+ "sure_sn": 301.6,
+ "gizli": {
+  "gecti": true,
+  "gecen": 17,
+  "toplam": 17,
+  "cikti": ".................                                                        [100%]\n17 passed in 0.50s\n"
+ }
+}

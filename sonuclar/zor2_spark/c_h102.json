@@ -1,0 +1,35 @@
+{
+ "id": "h102",
+ "kip": "c",
+ "kategori": "veri yapıları ve algoritmalar (kuyruk, önbellek, arama, gruplama, birleştirme, durum makinesi)",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 18,
+   "basarili": 18
+  }
+ ],
+ "spark_usd": 0.0022272000000000004,
+ "arayuz": "Dosya mezat_gruplama.py; lotlari_grupla(lotlar: list[dict]) -> dict anahtar (tur_norm, boy) demeti değer {tur, toplam_kilo, lot_sayisi}; grup_ozeti(gruplar: dict) -> list[dict] öğe {tur, boy, toplam_kilo, lot_sayisi}; boy değerleri küçük, orta, büyük.",
+ "hakem": [],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [],
+ "kabul_gecti": true,
+ "ozet": "mezat_gruplama.py yazıldı: lotlari_grupla Türkçe küçük harf normalleştirmesi, boy kategorisi, aralık kontrolleri (ValueError), yinelenen lot_id (KeyError), Decimal ROUND_HALF_UP yuvarlama; grup_ozeti kilo azalan/tür alfabetik/boy (küçük<orta<büyük) sıralı sorted listesi. 10 pytest testi geçti.",
+ "adim": 6,
+ "yurutucu_token": {
+  "girdi": 31529,
+  "cikti": 14532
+ },
+ "yurutucu_usd": 0.0060593,
+ "bitirdi": true,
+ "sure_sn": 149.6,
+ "gizli": {
+  "gecti": true,
+  "gecen": 16,
+  "toplam": 16,
+  "cikti": "................                                                         [100%]\n16 passed in 0.03s\n"
+ }
+}

@@ -1,0 +1,23 @@
+{
+ "id": "h136",
+ "kip": "b",
+ "kategori": "dosya ve komut satırı (CSV/JSON okuma, rapor yazdırma, argümanlar, hata mesajları)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "yag_verim.py yazıldı: belirtilen CLI, doğrulama/UYARI kuralları, Decimal ROUND_HALF_UP hesapları, sınıflandırma, filtreleme/sıralama, UTF-8-SIG noktalı virgüllü rapor ve hata kodları uygulandı. 11 pytest testi geçiyor.",
+ "adim": 6,
+ "yurutucu_token": {
+  "girdi": 34405,
+  "cikti": 15483
+ },
+ "yurutucu_usd": 0.0065371000000000005,
+ "bitirdi": true,
+ "sure_sn": 127.2,
+ "gizli": {
+  "gecti": true,
+  "gecen": 17,
+  "toplam": 17,
+  "cikti": ".................                                                        [100%]\n17 passed in 0.62s\n"
+ }
+}

@@ -1,0 +1,35 @@
+{
+ "id": "h150",
+ "kip": "c",
+ "kategori": "dosya ve komut satırı (CSV/JSON okuma, rapor yazdırma, argümanlar, hata mesajları)",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 18,
+   "basarili": 18
+  }
+ ],
+ "spark_usd": 0.0022985,
+ "arayuz": "",
+ "hakem": [],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [],
+ "kabul_gecti": true,
+ "ozet": "kereste.py modülü (hacim_hesapla, tolerans_disi_mi, rapor_uret) ve CLI (`--giris/--cikis/--tolerans`) yazıldı; hacim Decimal ROUND_HALF_UP ile 4 basamak, tolerans/ölçü/duplikat/başlık/dosya kuralları ve sıralı rapor uygulandı. pytest ile 11 test geçti.",
+ "adim": 5,
+ "yurutucu_token": {
+  "girdi": 22449,
+  "cikti": 13107
+ },
+ "yurutucu_usd": 0.0048663,
+ "bitirdi": true,
+ "sure_sn": 298.5,
+ "gizli": {
+  "gecti": true,
+  "gecen": 16,
+  "toplam": 16,
+  "cikti": "................                                                         [100%]\n16 passed in 0.17s\n"
+ }
+}

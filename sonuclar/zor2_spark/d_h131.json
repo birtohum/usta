@@ -1,0 +1,61 @@
+{
+ "id": "h131",
+ "kip": "d",
+ "kategori": "doğrulama ve ayrıştırma (TC kimlik, IBAN, telefon, plaka, e-posta, adres biçimi)",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 16,
+   "basarili": 16
+  }
+ ],
+ "spark_usd": 0.007548600000000001,
+ "arayuz": "",
+ "hakem": [
+  {
+   "test": "test_oran_iki_ondalik_yuvarlama",
+   "karar": "belirsiz",
+   "gerekce": "Görev metni toplu kayıt için bayrakların tekrarlanabileceğini açıkça belirtmiyor, girdi biçimi tek anlamlı değil.",
+   "tur": 1
+  },
+  {
+   "test": "test_toplu_plaka_esitken_tcye_gore",
+   "karar": "belirsiz",
+   "gerekce": "Görev metni çoklu tc/plaka girişinin tekrarlı bayraklarla verileceğini açıkça şart koşmuyor.",
+   "tur": 1
+  },
+  {
+   "test": "test_toplu_plakaya_gore_sirali",
+   "karar": "belirsiz",
+   "gerekce": "Sıralama kuralı açık olsa da çoklu girdinin tekrarlı bayraklarla aktarılacağı görev metninde açıkça yazmıyor.",
+   "tur": 1
+  }
+ ],
+ "geri_alma": 0,
+ "inceleme": {
+  "yazilan": 0,
+  "kanitli": []
+ },
+ "iptal_edilen_test": [
+  "test_oran_iki_ondalik_yuvarlama",
+  "test_toplu_plaka_esitken_tcye_gore",
+  "test_toplu_plakaya_gore_sirali"
+ ],
+ "kabul_gecti": true,
+ "ozet": null,
+ "adim": 20,
+ "yurutucu_token": {
+  "girdi": 279791,
+  "cikti": 54084
+ },
+ "yurutucu_usd": 0.03879590000000001,
+ "bitirdi": false,
+ "sure_sn": 677.2,
+ "gizli": {
+  "gecti": false,
+  "gecen": 13,
+  "toplam": 17,
+  "cikti": "n', '/home/usta/is/949b33aceff6/kiralama_dogrula.py', '--tc', '10000000146', '--..._oran_rounding0/s.json'], returncode=2, stdout='', stderr=\"hata: geçersiz tc: '10000000146,11111111110,20000000046'\\n\").returncode\n\n.gizli/test_gizli.py:128: AssertionError\n_______________________ test_15_plaka_length_boundaries ________________________\n\ntmp_path = PosixPath('/home/usta/is/949b33aceff6/.tmp/pytest-of-usta/pytest-2/test_15_plaka_length_boundarie0')\n\n    def test_15_plaka_length_boundaries(tmp_path):\n        out = str(tmp_path / \"s.json\")\n        # 7 karakter ve 9 karakter geçerli\n        r = run([\"--tc\", TC1, \"--plaka\", \"34 A 123\", \"--telefon\", TEL1, \"--tc\", TC2, \"--plaka\", \"34 AB 123\", \"--telefon\", TEL2, \"--cikti\", out])\n>       assert r.returncode == 0\nE       assert 2 == 0\nE        +  where 2 = CompletedProcess(args=['/usr/bin/python', '/home/usta/is/949b33aceff6/kiralama_dogrula.py', '--tc', '10000000146', '--..._15_plaka_length_boundarie0/s.json'], returncode=2, stdout='', stderr=\"hata: geçersiz tc: '10000000146,11111111110'\\n\").returncode\n\n.gizli/test_gizli.py:138: AssertionError\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_12_sorting_by_plaka - assert 2 == 0\nFAILED .gizli/test_gizli.py::test_13_plaka_equality_tc_sort - assert 2 == 0\nFAILED .gizli/test_gizli.py::test_14_oran_rounding - assert 2 == 0\nFAILED .gizli/test_gizli.py::test_15_plaka_length_boundaries - assert 2 == 0\n4 failed, 13 passed in 0.53s\n"
+ }
+}

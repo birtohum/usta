@@ -1,0 +1,23 @@
+{
+ "id": "h038",
+ "kip": "a",
+ "kategori": "küçük işletme hesapları (KDV, fatura, taksit, indirim, stok, kur dönüşümü, yuvarlama)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "tevkifat.py içinde TevkifatliFatura sınıfı oluşturuldu: TR-YYYY-XXXXXX format kontrolü, ad/matrah/KDV/payda doğrulamaları (TypeError/ValueError ayrımıyla), Decimal+ROUND_HALF_UP ile iki ondalık hesaplar (tevkifat=KDV/payda, ödenecek KDV, genel toplam), kuruş farkının en yüksek matrahlı kaleme yansıtılması, matrah-azalan/ad-artan sıralama, float iki ondalıklı dönüş (kalemler + ara_toplam/kdv_toplam/tevkifat/odenecek_kdv/genel_toplam) ve fatura_no tabanlı __eq__/__hash__ tanımlandı. Yalnızca re ve decimal kullanıldı.",
+ "adim": 6,
+ "yurutucu_token": {
+  "girdi": 26375,
+  "cikti": 21802
+ },
+ "yurutucu_usd": 0.0069979000000000005,
+ "bitirdi": true,
+ "sure_sn": 184.3,
+ "gizli": {
+  "gecti": true,
+  "gecen": 17,
+  "toplam": 17,
+  "cikti": ".................                                                        [100%]\n17 passed in 0.03s\n"
+ }
+}

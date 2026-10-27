@@ -1,0 +1,35 @@
+{
+ "id": "h074",
+ "kip": "c",
+ "kategori": "küçük işletme hesapları (KDV, fatura, taksit, indirim, stok, kur dönüşümü, yuvarlama)",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 18,
+   "basarili": 18
+  }
+ ],
+ "spark_usd": 0.0015509000000000002,
+ "arayuz": "",
+ "hakem": [],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [],
+ "kabul_gecti": true,
+ "ozet": "tarti.py içinde TartiliSatis sınıfı oluşturuldu: barkod/gram/fiyat doğrulamaları, Decimal ile ROUND_HALF_UP tutar hesabı, aynı barkodda gram toplama ve fiyat farkında ValueError, sıralı fiş özeti ve KeyError davranışı. pytest ile 11 test yazıldı ve hepsi geçti.",
+ "adim": 6,
+ "yurutucu_token": {
+  "girdi": 19596,
+  "cikti": 7554
+ },
+ "yurutucu_usd": 0.0034704000000000002,
+ "bitirdi": true,
+ "sure_sn": 187.1,
+ "gizli": {
+  "gecti": true,
+  "gecen": 16,
+  "toplam": 16,
+  "cikti": "................                                                         [100%]\n16 passed in 0.02s\n"
+ }
+}

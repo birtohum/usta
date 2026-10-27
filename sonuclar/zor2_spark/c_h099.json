@@ -1,0 +1,35 @@
+{
+ "id": "h099",
+ "kip": "c",
+ "kategori": "tarih ve saat (iş günü, resmî tatil listesi parametre olarak verilir, süre hesabı, biçim dönüşümü)",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 19,
+   "basarili": 19
+  }
+ ],
+ "spark_usd": 0.0023892999999999996,
+ "arayuz": "",
+ "hakem": [],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [],
+ "kabul_gecti": true,
+ "ozet": "depo_rezervasyon.py içinde DepoRezervasyon sınıfını yazdım: tarih/saat biçimi ve 30 dk hizalama, süre (30dk–8sa), Pazar/resmi tatil kapalılık, Cumartesi 08:00–12:00 kısıtı, çakışma kontrolü (uç uca serbest), artan rezerv_id, iptal ve Decimal ROUND_HALF_UP ile günlük kazanç hesabı eklendi. Tip hatalarında TypeError, kural/biçim hatalarında ValueError yükseltilir. test_depo.py ile 13 pytest testi yazıp `python -m pytest -q` ile hepsini geçirdim.",
+ "adim": 5,
+ "yurutucu_token": {
+  "girdi": 16750,
+  "cikti": 10577
+ },
+ "yurutucu_usd": 0.0037903999999999998,
+ "bitirdi": true,
+ "sure_sn": 181.0,
+ "gizli": {
+  "gecti": true,
+  "gecen": 18,
+  "toplam": 18,
+  "cikti": "..................                                                       [100%]\n18 passed in 0.03s\n"
+ }
+}

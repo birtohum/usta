@@ -1,0 +1,38 @@
+{
+ "id": "h146",
+ "kip": "d",
+ "kategori": "dosya ve komut satırı (CSV/JSON okuma, rapor yazdırma, argümanlar, hata mesajları)",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 18,
+   "basarili": 18
+  }
+ ],
+ "spark_usd": 0.0057584,
+ "arayuz": "",
+ "hakem": [],
+ "geri_alma": 0,
+ "inceleme": {
+  "yazilan": 0,
+  "kanitli": []
+ },
+ "iptal_edilen_test": [],
+ "kabul_gecti": true,
+ "ozet": "`depo.py` içinde `SogukHavaDeposu` sınıfı yazıldı: FIFO çıkış, tarih/KG/fire doğrulamaları, Decimal ROUND_HALF_UP yuvarlamalı stok raporu, UTF-8 JSON kaydet/yükle, ağ/zaman/rastgelelik yok. `test_depo.py` ile 8 pytest testi geçiyor.",
+ "adim": 10,
+ "yurutucu_token": {
+  "girdi": 68265,
+  "cikti": 39116
+ },
+ "yurutucu_usd": 0.014649700000000002,
+ "bitirdi": true,
+ "sure_sn": 423.4,
+ "gizli": {
+  "gecti": true,
+  "gecen": 18,
+  "toplam": 18,
+  "cikti": "..................                                                       [100%]\n18 passed in 0.03s\n"
+ }
+}

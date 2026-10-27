@@ -1,0 +1,47 @@
+{
+ "id": "h061",
+ "kip": "d",
+ "kategori": "Türkçe metin işleme (Türkçe harfler, büyük/küçük harf, hece, ek, sıralama, sayı/yazı)",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": false,
+   "toplam": 22,
+   "basarili": 19
+  },
+  {
+   "gecti": true,
+   "toplam": 22,
+   "basarili": 22
+  }
+ ],
+ "spark_usd": 0.006288000000000001,
+ "arayuz": "kisaltma_coz.py içinde kisaltmayi_ac(metin: str, sozluk: dict | None = None) -> str, kesme_denetle(cumle: str) -> list[dict] bulgu anahtarları hata_turu, baslangic, oneri, toplu_isle(metinler: list[str]) -> list[str], duzeltme_orani(onceki: str, sonraki: str) -> str",
+ "hakem": [],
+ "geri_alma": 0,
+ "inceleme": {
+  "yazilan": 5,
+  "kanitli": [
+   "test_inceleme_kesme_301_valueerror",
+   "test_inceleme_yalin_ankara_hatasiz",
+   "test_inceleme_yalin_ayse_hatasiz"
+  ]
+ },
+ "iptal_edilen_test": [],
+ "kabul_gecti": true,
+ "ozet": "3 kabul hatası düzeltildi: kesme_denetle artık >300 kelimede ValueError veriyor; tek harfli ekler (e/a/i) aday listesinden çıkarılarak Ankara/Ayşe gibi yalın adlarda yanlış pozitif giderildi; n-kaynaştırmalı ekler (nde/nda/nden/ndan) ünsüzle biten gövdede normal ek (de/da/den/dan) olarak öneriliyor (Mersin'de). Görev metniyle çelişki yok. Tüm testler geçti (kabul 22/22, kendi testlerim 12/12).",
+ "adim": 23,
+ "yurutucu_token": {
+  "girdi": 183010,
+  "cikti": 87605
+ },
+ "yurutucu_usd": 0.035822,
+ "bitirdi": true,
+ "sure_sn": 933.6,
+ "gizli": {
+  "gecti": false,
+  "gecen": 15,
+  "toplam": 17,
+  "cikti": "    def duzeltme_orani(onceki: str, sonraki: str) -> str:\n        if onceki is None or sonraki is None:\n            raise TypeError(\"girdiler None olamaz\")\n        if not isinstance(onceki, str) or not isinstance(sonraki, str):\n>           raise TypeError(\"girdiler str olmalidir\")\nE           TypeError: girdiler str olmalidir\n\nkisaltma_coz.py:154: TypeError\n____________________________ test_oran_yuzde_bicim _____________________________\n\n    def test_oran_yuzde_bicim():\n>       s = duzeltme_orani(1, 4)\n\n.gizli/test_gizli.py:83: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nonceki = 1, sonraki = 4\n\n    def duzeltme_orani(onceki: str, sonraki: str) -> str:\n        if onceki is None or sonraki is None:\n            raise TypeError(\"girdiler None olamaz\")\n        if not isinstance(onceki, str) or not isinstance(sonraki, str):\n>           raise TypeError(\"girdiler str olmalidir\")\nE           TypeError: girdiler str olmalidir\n\nkisaltma_coz.py:154: TypeError\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_oran_yarim_yukari - TypeError: girdiler str...\nFAILED .gizli/test_gizli.py::test_oran_yuzde_bicim - TypeError: girdiler str ...\n2 failed, 15 passed in 0.04s\n"
+ }
+}

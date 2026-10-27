@@ -1,0 +1,23 @@
+{
+ "id": "h049",
+ "kip": "a",
+ "kategori": "Türkçe metin işleme (Türkçe harfler, büyük/küçük harf, hece, ek, sıralama, sayı/yazı)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "sms_hazirla.py yazıldı: ASCII Türkçe düzeltme (c/g/i/o/s/u bağlamsal + özel sözlük öncelikli, büyük harf korumalı), GSM 7-bit birim hesabı (ç/ğ/ı/ş/İ 2 birim, 160/153 sınır), boş girdi 0 parça, >1000 ValueError, yok girdi FileNotFoundError, eksik/yanlış bayrak çıkış 2, JSON çıktısı ve --parca-bilgisini-goster desteği.",
+ "adim": 19,
+ "yurutucu_token": {
+  "girdi": 163227,
+  "cikti": 77105
+ },
+ "yurutucu_usd": 0.03174370000000001,
+ "bitirdi": true,
+ "sure_sn": 709.4,
+ "gizli": {
+  "gecti": true,
+  "gecen": 18,
+  "toplam": 18,
+  "cikti": "..................                                                       [100%]\n18 passed in 0.73s\n"
+ }
+}

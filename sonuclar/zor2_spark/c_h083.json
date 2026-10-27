@@ -1,0 +1,44 @@
+{
+ "id": "h083",
+ "kip": "c",
+ "kategori": "doğrulama ve ayrıştırma (TC kimlik, IBAN, telefon, plaka, e-posta, adres biçimi)",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 18,
+   "basarili": 18
+  }
+ ],
+ "spark_usd": 0.003063,
+ "arayuz": "adres.py içinde AdresHatasi(ValueError) tanımlı; adres_parcala(adres: str) -> dict, sözlük anahtarları mahalle, cadde, bina, daire, posta_kodu.",
+ "hakem": [
+  {
+   "test": "test_daire_bolu_harf_kabul",
+   "karar": "belirsiz",
+   "gerekce": "Görev metni 'tamsayı bölü harf' ifadesinin '/' işareti mi yoksa 'bölü' sözcüğü mü olduğunu açıkça tanımlamıyor.",
+   "tur": 1
+  }
+ ],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [
+  "test_daire_bolu_harf_kabul"
+ ],
+ "kabul_gecti": true,
+ "ozet": "adres.py içinde AdresHatasi(ValueError) ve adres_parcala fonksiyonu yazıldı: 5 parçalı split kontrolü, trim, mahallede rakam yasağı, caddede en az 3 harf, bina için 12/12A/12 bölü 3 desenleri, daire için boş/pozitif tamsayı/sayı-harf, posta kodu için 5 ASCII rakam + 01000-81999 aralığı ve None için TypeError uygulandı. pytest ile 15 test geçti.",
+ "adim": 4,
+ "yurutucu_token": {
+  "girdi": 11982,
+  "cikti": 10774
+ },
+ "yurutucu_usd": 0.003353,
+ "bitirdi": true,
+ "sure_sn": 206.6,
+ "gizli": {
+  "gecti": true,
+  "gecen": 17,
+  "toplam": 17,
+  "cikti": ".................                                                        [100%]\n17 passed in 0.02s\n"
+ }
+}

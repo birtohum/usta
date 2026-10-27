@@ -1,0 +1,23 @@
+{
+ "id": "h099",
+ "kip": "a",
+ "kategori": "tarih ve saat (iş günü, resmî tatil listesi parametre olarak verilir, süre hesabı, biçim dönüşümü)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "depo_rezervasyon.py içinde DepoRezervasyon sınıfını yazdım: tarih/saat biçimi doğrulama (ValueError), Pazar ve resmi tatil kapalılığı, Cumartesi 08:00-12:00 kısıtı, 30 dk hizalama, 30 dk-8 saat süre ve çakışma kontrolü, artan rezerv_id, Decimal ROUND_HALF_UP ile günlük kazanç, iptal mantığı ve tip kontrolleri (TypeError) ile negatif ücret kontrolü (ValueError) uygulandı; yalnızca standart kütüphane kullanıldı ve davranış testlerle doğrulandı.",
+ "adim": 4,
+ "yurutucu_token": {
+  "girdi": 11717,
+  "cikti": 11453
+ },
+ "yurutucu_usd": 0.0034623000000000006,
+ "bitirdi": true,
+ "sure_sn": 91.6,
+ "gizli": {
+  "gecti": true,
+  "gecen": 18,
+  "toplam": 18,
+  "cikti": "..................                                                       [100%]\n18 passed in 0.02s\n"
+ }
+}

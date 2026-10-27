@@ -1,0 +1,35 @@
+{
+ "id": "h117",
+ "kip": "c",
+ "kategori": "tarih ve saat (iş günü, resmî tatil listesi parametre olarak verilir, süre hesabı, biçim dönüşümü)",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 20,
+   "basarili": 20
+  }
+ ],
+ "spark_usd": 0.0017089000000000002,
+ "arayuz": "",
+ "hakem": [],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [],
+ "kabul_gecti": true,
+ "ozet": "bakim_penceresi.py içinde BakimPlanlayici sınıfı yazıldı: tatiller set olarak tutuldu (sırasız/tekrarlı destekler), sonraki_is_gunu iş günü ise aynısını değilse sonraki ilk iş gününü döndürür, pencere_suresi_dk yalnızca iş günlerine denk gelen dakikaları toplayıp 15'in katına yukarı yuvarlar (hafta sonu/tatil sıfır, başlangıç>bitiş ve bozuk biçimde ValueError), planla artan sırada N iş günü listeler (<=0 boş liste). 17 pytest testi yazıldı ve hepsi geçti.",
+ "adim": 5,
+ "yurutucu_token": {
+  "girdi": 17133,
+  "cikti": 10809
+ },
+ "yurutucu_usd": 0.0038751000000000002,
+ "bitirdi": true,
+ "sure_sn": 265.9,
+ "gizli": {
+  "gecti": true,
+  "gecen": 18,
+  "toplam": 18,
+  "cikti": "..................                                                       [100%]\n18 passed in 0.02s\n"
+ }
+}

@@ -1,0 +1,38 @@
+{
+ "id": "h155",
+ "kip": "d",
+ "kategori": "dosya ve komut satırı (CSV/JSON okuma, rapor yazdırma, argümanlar, hata mesajları)",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 19,
+   "basarili": 19
+  }
+ ],
+ "spark_usd": 0.0057708,
+ "arayuz": "",
+ "hakem": [],
+ "geri_alma": 0,
+ "inceleme": {
+  "yazilan": 0,
+  "kanitli": []
+ },
+ "iptal_edilen_test": [],
+ "kabul_gecti": true,
+ "ozet": "`mermer_verim.py` yazıldı: semicolon + UTF-8-SIG CSV okuma/yazma, Decimal ROUND_HALF_UP ile 3 basamak hacim/verim hesabı, A>B>C kalite filtresi, verim azalan + blok_id artan sıralama, geçersiz/duplicate satırlarda stderr uyarısı, başlık/dosya/min-kalite hata kodları ve stdout OK mesajı. 11 pytest testi yazıldı ve `python -m pytest -q` ile hepsi geçti.",
+ "adim": 4,
+ "yurutucu_token": {
+  "girdi": 17587,
+  "cikti": 16530
+ },
+ "yurutucu_usd": 0.0050647,
+ "bitirdi": true,
+ "sure_sn": 417.4,
+ "gizli": {
+  "gecti": true,
+  "gecen": 16,
+  "toplam": 16,
+  "cikti": "................                                                         [100%]\n16 passed in 0.45s\n"
+ }
+}

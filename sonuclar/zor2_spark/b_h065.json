@@ -1,0 +1,23 @@
+{
+ "id": "h065",
+ "kip": "b",
+ "kategori": "doğrulama ve ayrıştırma (TC kimlik, IBAN, telefon, plaka, e-posta, adres biçimi)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "TelefonKasasi sınıfı telefon_kasasi.py içinde yazıldı: ekle boşluk/tire/parantez/nokta temizler, +90/90/0 öneklerini ayıklar, 10 hane ve 5XX + ikinci hane 0-6 kurallarını uygular (ValueError/OperatorHatasi/TypeError), +90 (5XX) XXX XX XX biçiminde saklar, tekrarları eşit sayar, listele sayısal sıralar, maskeli_getir son iki hane hariç yıldızlar. pytest ile 11 test geçti.",
+ "adim": 4,
+ "yurutucu_token": {
+  "girdi": 10958,
+  "cikti": 13854
+ },
+ "yurutucu_usd": 0.0038666000000000004,
+ "bitirdi": true,
+ "sure_sn": 114.3,
+ "gizli": {
+  "gecti": true,
+  "gecen": 18,
+  "toplam": 18,
+  "cikti": "..................                                                       [100%]\n18 passed in 0.04s\n"
+ }
+}

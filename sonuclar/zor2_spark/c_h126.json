@@ -1,0 +1,35 @@
+{
+ "id": "h126",
+ "kip": "c",
+ "kategori": "veri yapıları ve algoritmalar (kuyruk, önbellek, arama, gruplama, birleştirme, durum makinesi)",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 18,
+   "basarili": 18
+  }
+ ],
+ "spark_usd": 0.0023122,
+ "arayuz": "nem_penceresi.py: NemPenceresi; ortalama() -> {'nem': Decimal, 'sicaklik': Decimal}; en_dusuk_en_yuksek() -> {'en_dusuk_nem': float, 'en_yuksek_nem': float, 'en_dusuk_sicaklik': float, 'en_yuksek_sicaklik': float}; pencereyi_listele() -> [{'nem': float, 'sicaklik': float}]",
+ "hakem": [],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [],
+ "kabul_gecti": true,
+ "ozet": "`nem_penceresi.py` içinde `NemPenceresi` sınıfı yazıldı: `collections.deque(maxlen=pencere)` ile FIFO pencere, aralık ve `bool`/`TypeError` doğrulamaları, `Decimal` + `ROUND_HALF_UP` ile iki ondalık ortalama, min/max ve kopya liste. 22 pytest testi yazıldı ve `python -m pytest -q` ile hepsi geçti.",
+ "adim": 5,
+ "yurutucu_token": {
+  "girdi": 17357,
+  "cikti": 9231
+ },
+ "yurutucu_usd": 0.0035819000000000003,
+ "bitirdi": true,
+ "sure_sn": 220.6,
+ "gizli": {
+  "gecti": false,
+  "gecen": 18,
+  "toplam": 19,
+  "cikti": "...........F.......                                                      [100%]\n=================================== FAILURES ===================================\n____________________________ test_ortalama_half_up _____________________________\n\n    def test_ortalama_half_up():\n        w = NemPenceresi(5)\n        w.olcum_ekle(2.345, 1.005)\n        s = w.ortalama()\n>       assert sorted(s.values()) == sorted([2.35, 1.01])\nE       AssertionError: assert [Decimal('1.0...cimal('2.35')] == [1.01, 2.35]\nE         At index 0 diff: Decimal('1.01') != 1.01\nE         Use -v to get more diff\n\n.gizli/test_gizli.py:97: AssertionError\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_ortalama_half_up - AssertionError: assert [...\n1 failed, 18 passed in 0.03s\n"
+ }
+}

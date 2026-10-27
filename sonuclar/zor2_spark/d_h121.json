@@ -1,0 +1,43 @@
+{
+ "id": "h121",
+ "kip": "d",
+ "kategori": "Türkçe metin işleme (Türkçe harfler, büyük/küçük harf, hece, ek, sıralama, sayı/yazı)",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": false,
+   "toplam": 2,
+   "basarili": 0
+  },
+  {
+   "gecti": true,
+   "toplam": 17,
+   "basarili": 17
+  }
+ ],
+ "spark_usd": 0.005855900000000001,
+ "arayuz": "",
+ "hakem": [],
+ "geri_alma": 0,
+ "inceleme": {
+  "yazilan": 0,
+  "kanitli": []
+ },
+ "iptal_edilen_test": [],
+ "kabul_gecti": true,
+ "ozet": "kesme.py oluşturuldu: KesmeDenetleyici sınıfı kontrol_et/onar/dogruluk yöntemleriyle; bitişik özel ad+ek bulguları, kurum/birleşik yer/unvan istisnaları, Türkçe harf eşitliği, sıralı bulgular, boş/uzun/tip kontrolleri ve 0-100 yuvarlanmış doğruluk. Kabul testleri 17/17 geçti.",
+ "adim": 9,
+ "yurutucu_token": {
+  "girdi": 24986,
+  "cikti": 69721
+ },
+ "yurutucu_usd": 0.0164428,
+ "bitirdi": true,
+ "sure_sn": 744.5,
+ "gizli": {
+  "gecti": false,
+  "gecen": 16,
+  "toplam": 18,
+  "cikti": "        d = KesmeDenetleyici()\n        metin = \"Ahmet Bey'e verdim\"\n        bul = d.kontrol_et(metin)\n>       assert len(bul) == 1\nE       assert 0 == 1\nE        +  where 0 = len([])\n\n.gizli/test_gizli.py:86: AssertionError\n__________________________ test_turkce_harf_esitligi ___________________________\n\n    def test_turkce_harf_esitligi():\n        d = KesmeDenetleyici()\n        bul_s = d.kontrol_et(\"Samsunda g\\u00f6rd\\u00fcm\")\n        assert len(bul_s) == 1\n        assert bul_s[0][\"oneri\"] == \"Samsun'da\"\n        bul_s2 = d.kontrol_et(\"\\u015eamsunda g\\u00f6rd\\u00fcm\")\n        assert bul_s2 == []\n        bul_c = d.kontrol_et(\"Can\\u0131n kitab\\u0131\")\n        assert len(bul_c) == 1\n        bul_c2 = d.kontrol_et(\"\\u00c7an\\u0131n kitab\\u0131\")\n>       assert bul_c2 == []\nE       assert [{'baslangic'...eksik_kesme'}] == []\nE         Left contains one more item: {'baslangic': 0, 'bitis': 5, 'oneri': \"Çan'ın\", 'tur': 'eksik_kesme'}\nE         Use -v to get more diff\n\n.gizli/test_gizli.py:109: AssertionError\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_unvan_gereksiz_kesme - assert 0 == 1\nFAILED .gizli/test_gizli.py::test_turkce_harf_esitligi - assert [{'baslangic'...\n2 failed, 16 passed in 0.04s\n"
+ }
+}

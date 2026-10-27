@@ -1,0 +1,38 @@
+{
+ "id": "h018",
+ "kip": "d",
+ "kategori": "veri yapıları ve algoritmalar (kuyruk, önbellek, arama, gruplama, birleştirme, durum makinesi)",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 18,
+   "basarili": 18
+  }
+ ],
+ "spark_usd": 0.004373800000000001,
+ "arayuz": "",
+ "hakem": [],
+ "geri_alma": 0,
+ "inceleme": {
+  "yazilan": 0,
+  "kanitli": []
+ },
+ "iptal_edilen_test": [],
+ "kabul_gecti": true,
+ "ozet": "kargo.py içinde seferleri_birlestir ve toplam_kapsama işlevleri yazıldı: yarım açık aralık kabulüyle temas edenler birleştirilmez, çakışanlar en küçük başlangıç/en büyük bitişle birleştirilir, sıralama başlangıca (eşitlikte küçük bitişe) göredir, geçersiz girdide ValueError verilir, toplam_kapsama iki ondalığa yuvarlanmış float döner. Yalnızca math modülü kullanıldı. pytest ile 17 test geçti.",
+ "adim": 5,
+ "yurutucu_token": {
+  "girdi": 13832,
+  "cikti": 6077
+ },
+ "yurutucu_usd": 0.0025986,
+ "bitirdi": true,
+ "sure_sn": 179.0,
+ "gizli": {
+  "gecti": true,
+  "gecen": 17,
+  "toplam": 17,
+  "cikti": ".................                                                        [100%]\n17 passed in 0.02s\n"
+ }
+}

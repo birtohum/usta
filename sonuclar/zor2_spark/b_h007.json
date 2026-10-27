@@ -1,0 +1,23 @@
+{
+ "id": "h007",
+ "kip": "b",
+ "kategori": "Türkçe metin işleme (Türkçe harfler, büyük/küçük harf, hece, ek, sıralama, sayı/yazı)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "siralama.py dosyasında turkce_sirala fonksiyonunu yazdım: gerçek Türk alfabesi sırasına göre ağırlıklandırma (c<ç<d, g<ğ<h, h<ı<i<j, o<ö<p, s<ş<t, u<ü<v), Türkçe'ye uygun küçük harf çevirme (I→ı, İ→i), küçük-harf-önce eşitlik bozma, boş dizenin en başa gelmesi, rakamla başlayanların önce gelmesi, girdiyi değiştirmeme, ters=True'da tam ters sıra ve TypeError/ValueError kontrolleri. Hiçbir import yok (yalnızca standart dil özellikleri). pytest ile 19 testin tamamı geçti.",
+ "adim": 5,
+ "yurutucu_token": {
+  "girdi": 12916,
+  "cikti": 20837
+ },
+ "yurutucu_usd": 0.005459,
+ "bitirdi": true,
+ "sure_sn": 167.3,
+ "gizli": {
+  "gecti": true,
+  "gecen": 16,
+  "toplam": 16,
+  "cikti": "................                                                         [100%]\n16 passed in 0.02s\n"
+ }
+}

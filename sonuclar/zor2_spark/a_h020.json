@@ -1,0 +1,23 @@
+{
+ "id": "h020",
+ "kip": "a",
+ "kategori": "küçük işletme hesapları (KDV, fatura, taksit, indirim, stok, kur dönüşümü, yuvarlama)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "cari_hesap.py içinde CariHesap sınıfı implemente edildi: borc_ekle (1'den başlayan artan fiş no, müşteri bazında borç/ödeme listeleri), odeme_al (fazla ödemede ValueError, kayıtsız müşteride KeyError), bakiye (Decimal yarım-yukarı 2 basamak, kalan=borç-ödeme, günlük %0,05 faizle gecikmeli_kalan). Validasyonlar (boş isim/tutar≤0/vade 0-365 → ValueError, tip hatası → TypeError), case-insensitive sıralı müşteri listesi ve tekrar kullanılmayan fiş numaraları sağlandı; yalnızca decimal kullanıldı, time/datetime yok.",
+ "adim": 9,
+ "yurutucu_token": {
+  "girdi": 33497,
+  "cikti": 42329
+ },
+ "yurutucu_usd": 0.0118155,
+ "bitirdi": true,
+ "sure_sn": 421.8,
+ "gizli": {
+  "gecti": true,
+  "gecen": 17,
+  "toplam": 17,
+  "cikti": ".................                                                        [100%]\n17 passed in 0.02s\n"
+ }
+}

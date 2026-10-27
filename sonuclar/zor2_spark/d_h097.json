@@ -1,0 +1,55 @@
+{
+ "id": "h097",
+ "kip": "d",
+ "kategori": "Türkçe metin işleme (Türkçe harfler, büyük/küçük harf, hece, ek, sıralama, sayı/yazı)",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 15,
+   "basarili": 15
+  }
+ ],
+ "spark_usd": 0.0063395000000000005,
+ "arayuz": "",
+ "hakem": [
+  {
+   "test": "test_I_İ_ayrimi_gozetilmez",
+   "karar": "belirsiz",
+   "gerekce": "Görev hem Türkçe kuralla çevirmeyi hem I İ ayrımının gözetilmemesini istediğinden KIR ile KİR'in birleşmesi belirsizdir.",
+   "tur": 1
+  },
+  {
+   "test": "test_buyuk_kucuk_harf_duyarsiz",
+   "karar": "belirsiz",
+   "gerekce": "Görev hem Türkçe kuralla çevirmeyi hem ayrımın gözetilmemesini istediğinden HARIKA'nın harika ile birleşmesi belirsizdir.",
+   "tur": 1
+  }
+ ],
+ "geri_alma": 0,
+ "inceleme": {
+  "yazilan": 0,
+  "kanitli": []
+ },
+ "iptal_edilen_test": [
+  "test_ozel_durma_kumesi_gecerli",
+  "test_I_İ_ayrimi_gozetilmez",
+  "test_buyuk_kucuk_harf_duyarsiz"
+ ],
+ "kabul_gecti": true,
+ "ozet": "yorum.py içinde YorumAnalizci sınıfını oluşturdum: Türkçe kuralıyla küçük harfe çevirme (I→ı, İ→i), harf-dışı ayraçlarla belirteçleme, en az 3 harfli ve yalnızca harflerden oluşan sözcükleri sayma, varsayılan durma kümesi, büyük/küçük harf duyarsız birleştirme, azalan sıklık + ilk görülme sırasına göre sıralama, hatalı n için ValueError, str olmayan yorum için TypeError, boş/durma yorumları yok sayma, temizle() sıfırlama ve boşken en_sik'ten boş liste. 15 pytest testi yazıp hepsini geçirdim.",
+ "adim": 5,
+ "yurutucu_token": {
+  "girdi": 13398,
+  "cikti": 15072
+ },
+ "yurutucu_usd": 0.0043542,
+ "bitirdi": true,
+ "sure_sn": 346.5,
+ "gizli": {
+  "gecti": true,
+  "gecen": 17,
+  "toplam": 17,
+  "cikti": ".................                                                        [100%]\n17 passed in 0.02s\n"
+ }
+}

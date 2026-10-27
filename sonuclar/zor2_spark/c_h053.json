@@ -1,0 +1,35 @@
+{
+ "id": "h053",
+ "kip": "c",
+ "kategori": "doğrulama ve ayrıştırma (TC kimlik, IBAN, telefon, plaka, e-posta, adres biçimi)",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 17,
+   "basarili": 17
+  }
+ ],
+ "spark_usd": 0.0022775,
+ "arayuz": "",
+ "hakem": [],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [],
+ "kabul_gecti": true,
+ "ozet": "kimlik.py içinde KimlikDogrulayici sınıfı yazıldı: strip+ASCII format kontrolü, ilk-hane-0, TC/yabancı checksum kuralları, duplicate koruması, sayısal sıralı liste ve boş/None için format-hatası. 11 pytest testi geçti.",
+ "adim": 6,
+ "yurutucu_token": {
+  "girdi": 14530,
+  "cikti": 19564
+ },
+ "yurutucu_usd": 0.0053658,
+ "bitirdi": true,
+ "sure_sn": 271.9,
+ "gizli": {
+  "gecti": true,
+  "gecen": 16,
+  "toplam": 16,
+  "cikti": "................                                                         [100%]\n16 passed in 0.04s\n"
+ }
+}

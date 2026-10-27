@@ -1,0 +1,38 @@
+{
+ "id": "h013",
+ "kip": "d",
+ "kategori": "Türkçe metin işleme (Türkçe harfler, büyük/küçük harf, hece, ek, sıralama, sayı/yazı)",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 20,
+   "basarili": 20
+  }
+ ],
+ "spark_usd": 0.0060239000000000004,
+ "arayuz": "",
+ "hakem": [],
+ "geri_alma": 0,
+ "inceleme": {
+  "yazilan": 0,
+  "kanitli": []
+ },
+ "iptal_edilen_test": [],
+ "kabul_gecti": true,
+ "ozet": "sayi_yazi.py içinde tutari_yaziya_cevir(tutar, birim='TL') fonksiyonu yazıldı: Decimal ile yarım-yukarı yuvarlama, eksi-sıfır düzeltmesi, 0–999999999 aralığı, TL/Euro/Dolar denetimi, Eksi öneki, bir-yüz→yüz kuralı, tek-boşluk çıktısı, TypeError/ValueError kuralları uygulandı. 12 pytest testi yazıldı ve hepsi geçti.",
+ "adim": 6,
+ "yurutucu_token": {
+  "girdi": 20038,
+  "cikti": 10186
+ },
+ "yurutucu_usd": 0.004041,
+ "bitirdi": true,
+ "sure_sn": 329.4,
+ "gizli": {
+  "gecti": true,
+  "gecen": 17,
+  "toplam": 17,
+  "cikti": ".................                                                        [100%]\n17 passed in 0.02s\n"
+ }
+}

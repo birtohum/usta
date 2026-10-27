@@ -1,0 +1,23 @@
+{
+ "id": "h039",
+ "kip": "a",
+ "kategori": "tarih ve saat (iş günü, resmî tatil listesi parametre olarak verilir, süre hesabı, biçim dönüşümü)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "sulama.py içinde SulamaPlanlayici sınıfı yazıldı: tarih doğrulama (biçim hatasında ValueError, string olmayan girdide TypeError), 1-15 aralık kontrolü, 0.5-500 hisse kontrolü, hafta sonu/tatil atlama ve başlangıç kaydırma, günlük 8x90dk slotların hisseye orantılı yuvarlama+min1 ve öncelik sıralamasıyla dağıtımı, aralıklı gün üretimi ve tarih/saat sıralı sonuç. Yalnızca datetime/math/re kullanıldı, deterministik.",
+ "adim": 5,
+ "yurutucu_token": {
+  "girdi": 27337,
+  "cikti": 13460
+ },
+ "yurutucu_usd": 0.0054257,
+ "bitirdi": true,
+ "sure_sn": 115.8,
+ "gizli": {
+  "gecti": true,
+  "gecen": 19,
+  "toplam": 19,
+  "cikti": "...................                                                      [100%]\n19 passed in 0.02s\n"
+ }
+}

@@ -1,0 +1,23 @@
+{
+ "id": "h027",
+ "kip": "b",
+ "kategori": "tarih ve saat (iş günü, resmî tatil listesi parametre olarak verilir, süre hesabı, biçim dönüşümü)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "toplanti.py içinde cakisan_toplantilari_bul ve bosluklari_bul yazıldı; sıkı biçim/süre/gece-yarısı doğrulamaları, sıralı sonuçlar ve HH:MM boşluklar uygulandı. pytest ile 16 test geçti.",
+ "adim": 6,
+ "yurutucu_token": {
+  "girdi": 25906,
+  "cikti": 16115
+ },
+ "yurutucu_usd": 0.0058136,
+ "bitirdi": true,
+ "sure_sn": 138.7,
+ "gizli": {
+  "gecti": true,
+  "gecen": 19,
+  "toplam": 19,
+  "cikti": "...................                                                      [100%]\n19 passed in 0.02s\n"
+ }
+}

@@ -1,0 +1,23 @@
+{
+ "id": "h041",
+ "kip": "a",
+ "kategori": "doğrulama ve ayrıştırma (TC kimlik, IBAN, telefon, plaka, e-posta, adres biçimi)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "vergi.py içinde VergiSicil sınıfı gerçeklendi: VKN için 10 ASCII rakam, ilk hane sıfır değil ve ağırlıklı toplam mod10 sağlama kuralı; TCKN için 11 hane, ilk hane sıfır değil ve 10./11. hane toplam kuralları; str dışı girdide TypeError, sağlama/uzunluk hatasında ValueError, bilinmeyen türde ValueError; kayıtlar \"tur:no\" anahtarıyla saklanıyor, yinelemede ValueError, liste tür ve sayısal numara sırasına göre sıralı dönüyor; eşitlik saklanan küme eşitliğine göre; kurumsal pay yüzdesi iki basamağa yuvarlanıyor, kayıtsızken 0.0; yalnızca standart kütüphane kullanıldı.",
+ "adim": 10,
+ "yurutucu_token": {
+  "girdi": 31429,
+  "cikti": 27314
+ },
+ "yurutucu_usd": 0.0086057,
+ "bitirdi": true,
+ "sure_sn": 237.1,
+ "gizli": {
+  "gecti": false,
+  "gecen": 16,
+  "toplam": 18,
+  "cikti": "\n    def test_mukellef_ekle_tur_dogrulama():\n        s = VergiSicil()\n        r1 = s.mukellef_ekle('bireysel', TCKN1)\n        assert isinstance(r1, str)\n>       assert r1 == TCKN1\nE       AssertionError: assert 'bireysel:10000000146' == '10000000146'\nE         - 10000000146\nE         + bireysel:10000000146\n\n.gizli/test_gizli.py:70: AssertionError\n__________________________ test_kayit_listesi_sirali ___________________________\n\n    def test_kayit_listesi_sirali():\n        s = VergiSicil()\n        s.mukellef_ekle('kurumsal', VKN1)\n        s.mukellef_ekle('kurumsal', VKN2)\n        s.mukellef_ekle('bireysel', TCKN2)\n        s.mukellef_ekle('bireysel', TCKN1)\n        lst = s.kayitlari_listele()\n>       assert lst == [('bireysel', TCKN1), ('bireysel', TCKN2), ('kurumsal', VKN2), ('kurumsal', VKN1)]\nE       AssertionError: assert ['bireysel:10...l:1234567890'] == [('bireysel',...'1234567890')]\nE         At index 0 diff: 'bireysel:10000000146' != ('bireysel', '10000000146')\nE         Use -v to get more diff\n\n.gizli/test_gizli.py:117: AssertionError\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_mukellef_ekle_tur_dogrulama - AssertionErro...\nFAILED .gizli/test_gizli.py::test_kayit_listesi_sirali - AssertionError: asse...\n2 failed, 16 passed in 0.03s\n"
+ }
+}

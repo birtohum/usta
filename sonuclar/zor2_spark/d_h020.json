@@ -1,0 +1,38 @@
+{
+ "id": "h020",
+ "kip": "d",
+ "kategori": "küçük işletme hesapları (KDV, fatura, taksit, indirim, stok, kur dönüşümü, yuvarlama)",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 17,
+   "basarili": 17
+  }
+ ],
+ "spark_usd": 0.0051175000000000005,
+ "arayuz": "",
+ "hakem": [],
+ "geri_alma": 0,
+ "inceleme": {
+  "yazilan": 0,
+  "kanitli": []
+ },
+ "iptal_edilen_test": [],
+ "kabul_gecti": true,
+ "ozet": "cari_hesap.py içinde CariHesap sınıfı implemente edildi: 1'den başlayan artan fiş numaralı borc_ekle, fazla ödemeyi engelleyen odeme_al, Decimal yarım-yukarı 2 basamak yuvarlamalı ve günlük %0,05 faizli bakiye, casefold sıralı müşteri listesi; yalnızca decimal kullanıldı, tip hatalarında TypeError veriliyor. 13 pytest testi yazıldı ve hepsi geçti.",
+ "adim": 11,
+ "yurutucu_token": {
+  "girdi": 60378,
+  "cikti": 43418
+ },
+ "yurutucu_usd": 0.014721400000000003,
+ "bitirdi": true,
+ "sure_sn": 557.3,
+ "gizli": {
+  "gecti": true,
+  "gecen": 17,
+  "toplam": 17,
+  "cikti": ".................                                                        [100%]\n17 passed in 0.02s\n"
+ }
+}

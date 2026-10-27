@@ -1,0 +1,47 @@
+{
+ "id": "h115",
+ "kip": "d",
+ "kategori": "Türkçe metin işleme (Türkçe harfler, büyük/küçük harf, hece, ek, sıralama, sayı/yazı)",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 16,
+   "basarili": 16
+  }
+ ],
+ "spark_usd": 0.004682400000000001,
+ "arayuz": "",
+ "hakem": [
+  {
+   "test": "test_birlestirme_bos_liste_valueerror",
+   "karar": "belirsiz",
+   "gerekce": "Görev metni boş listenin dış girdi listesi mi yoksa sayfa listesi mi olduğunu açıkça ayırmıyor ve boş sayfa listesi kuralıyla çelişiyor.",
+   "tur": 1
+  }
+ ],
+ "geri_alma": 0,
+ "inceleme": {
+  "yazilan": 0,
+  "kanitli": []
+ },
+ "iptal_edilen_test": [
+  "test_birlestirme_bos_liste_valueerror"
+ ],
+ "kabul_gecti": true,
+ "ozet": "dizin.py modülü yazıldı: sayfalari_sikistir (doğrulama, tekilleştirme, sıralama, 3+ aralık, 2'li virgül, boş→\"\") ve dizin_birlestir (casefold birleştirme, ilk yazım, sıralı çıktı). 20 pytest testi geçiyor.",
+ "adim": 7,
+ "yurutucu_token": {
+  "girdi": 27016,
+  "cikti": 10265
+ },
+ "yurutucu_usd": 0.0047546,
+ "bitirdi": true,
+ "sure_sn": 389.4,
+ "gizli": {
+  "gecti": false,
+  "gecen": 16,
+  "toplam": 17,
+  "cikti": "..............F..                                                        [100%]\n=================================== FAILURES ===================================\n________________________ test_birlestir_bos_girdi_hata _________________________\n\n    def test_birlestir_bos_girdi_hata():\n>       with pytest.raises(ValueError):\nE       Failed: DID NOT RAISE <class 'ValueError'>\n\n.gizli/test_gizli.py:64: Failed\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_birlestir_bos_girdi_hata - Failed: DID NOT ...\n1 failed, 16 passed in 0.04s\n"
+ }
+}

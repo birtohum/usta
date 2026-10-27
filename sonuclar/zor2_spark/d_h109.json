@@ -1,0 +1,38 @@
+{
+ "id": "h109",
+ "kip": "d",
+ "kategori": "Türkçe metin işleme (Türkçe harfler, büyük/küçük harf, hece, ek, sıralama, sayı/yazı)",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 23,
+   "basarili": 23
+  }
+ ],
+ "spark_usd": 0.006179799999999999,
+ "arayuz": "",
+ "hakem": [],
+ "geri_alma": 0,
+ "inceleme": {
+  "yazilan": 0,
+  "kanitli": []
+ },
+ "iptal_edilen_test": [],
+ "kabul_gecti": true,
+ "ozet": "menu.py içinde etiketle() yazıldı: Türkçe küçük harf + sözcük tokenleme, tam eşleşme, -sız/-siz/-suz/-süz muafiyeti, -lı/-li/-lu/-lü hayvansal sayımı, vegan→vejetaryen kuralı ve gluten kontrolü. ValueError/TypeError ve uzun metin kuralları uygulandı; 15 pytest testi geçiyor.",
+ "adim": 7,
+ "yurutucu_token": {
+  "girdi": 21135,
+  "cikti": 27792
+ },
+ "yurutucu_usd": 0.0076719,
+ "bitirdi": true,
+ "sure_sn": 371.7,
+ "gizli": {
+  "gecti": false,
+  "gecen": 16,
+  "toplam": 17,
+  "cikti": "................F                                                        [100%]\n=================================== FAILURES ===================================\n_______________________________ test_cogul_etler _______________________________\n\n    def test_cogul_etler():\n        r = menu.etiketle(\"Etler tezgahta.\")\n>       assert r[\"vejetaryen\"] is False\nE       assert True is False\n\n.gizli/test_gizli.py:111: AssertionError\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_cogul_etler - assert True is False\n1 failed, 16 passed in 0.04s\n"
+ }
+}

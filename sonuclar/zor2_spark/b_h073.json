@@ -1,0 +1,23 @@
+{
+ "id": "h073",
+ "kip": "b",
+ "kategori": "Türkçe metin işleme (Türkçe harfler, büyük/küçük harf, hece, ek, sıralama, sayı/yazı)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "sadelestir.py yazıldı: kelime sınırında, Türkçe büyük/küçük harf düzenini koruyan, ekli biçimlerde gövde+ek korumalı değişim; noktalama korunur; rapor half-up 2 ondalık oran içerir; hata kodları (FileNotFoundError, ValueError, exit 2, 10k sınırı, boş girdi) uygulandı. pytest ile 9 test geçti.",
+ "adim": 12,
+ "yurutucu_token": {
+  "girdi": 61152,
+  "cikti": 42701
+ },
+ "yurutucu_usd": 0.014655400000000002,
+ "bitirdi": true,
+ "sure_sn": 408.6,
+ "gizli": {
+  "gecti": true,
+  "gecen": 16,
+  "toplam": 16,
+  "cikti": "................                                                         [100%]\n16 passed in 0.67s\n"
+ }
+}

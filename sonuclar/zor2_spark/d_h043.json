@@ -1,0 +1,38 @@
+{
+ "id": "h043",
+ "kip": "d",
+ "kategori": "Türkçe metin işleme (Türkçe harfler, büyük/küçük harf, hece, ek, sıralama, sayı/yazı)",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 20,
+   "basarili": 20
+  }
+ ],
+ "spark_usd": 0.0038182000000000003,
+ "arayuz": "",
+ "hakem": [],
+ "geri_alma": 0,
+ "inceleme": {
+  "yazilan": 0,
+  "kanitli": []
+ },
+ "iptal_edilen_test": [],
+ "kabul_gecti": true,
+ "ozet": "anonimlestir.py oluşturuldu: maskele_isim, maskele_telefon, maskele_tc Türkçe kurallara uygun maskeleme yapıyor, hata durumlarında TypeError/ValueError yükseltiyor, yalnızca standart kütüphane (importsuz) kullanıyor. 15 pytest testi geçiyor.",
+ "adim": 6,
+ "yurutucu_token": {
+  "girdi": 22217,
+  "cikti": 9434
+ },
+ "yurutucu_usd": 0.004108499999999999,
+ "bitirdi": true,
+ "sure_sn": 247.7,
+ "gizli": {
+  "gecti": true,
+  "gecen": 17,
+  "toplam": 17,
+  "cikti": ".................                                                        [100%]\n17 passed in 0.03s\n"
+ }
+}

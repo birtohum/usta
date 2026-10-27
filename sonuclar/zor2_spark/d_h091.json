@@ -1,0 +1,38 @@
+{
+ "id": "h091",
+ "kip": "d",
+ "kategori": "Türkçe metin işleme (Türkçe harfler, büyük/küçük harf, hece, ek, sıralama, sayı/yazı)",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 18,
+   "basarili": 18
+  }
+ ],
+ "spark_usd": 0.005393800000000001,
+ "arayuz": "",
+ "hakem": [],
+ "geri_alma": 0,
+ "inceleme": {
+  "yazilan": 0,
+  "kanitli": []
+ },
+ "iptal_edilen_test": [],
+ "kabul_gecti": true,
+ "ozet": "tarih.py modülü yazıldı: sayidan_yaziya (GG/AA/YYYY -> Gün AyAdı YYYY) ve yazidan_sayiya (tersi) işlevleri; sıkı biçim, 1900-2100 yıl aralığı, artık yıl dahil gün-ay denetimi, Türkçe büyük/küçük harf ve I/İ/ı/i duyarsız ay çözümleme, TypeError/ValueError ayrımı. test_tarih.py ile 12 pytest testi geçti.",
+ "adim": 5,
+ "yurutucu_token": {
+  "girdi": 18088,
+  "cikti": 13777
+ },
+ "yurutucu_usd": 0.004564200000000001,
+ "bitirdi": true,
+ "sure_sn": 261.4,
+ "gizli": {
+  "gecti": true,
+  "gecen": 19,
+  "toplam": 19,
+  "cikti": "...................                                                      [100%]\n19 passed in 0.02s\n"
+ }
+}

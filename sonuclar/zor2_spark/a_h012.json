@@ -1,0 +1,23 @@
+{
+ "id": "h012",
+ "kip": "a",
+ "kategori": "veri yapıları ve algoritmalar (kuyruk, önbellek, arama, gruplama, birleştirme, durum makinesi)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "onbellek.py içinde LRUCache sınıfı hazırlandı: OrderedDict tabanlı LRU (MRU en sonda, taşmada LRU sessizce atılır, get/put güncelleme MRU'ya taşır), kapasite doğrulaması (pozitif int, yoksa ValueError), anahtar/değer doğrulaması (boş olmayan str, yoksa ValueError), bulunamayan anahtarda KeyError, istatistik() ile isabet/ıskalama sayıları ve iki ondalığa yuvarlanmış float oran. Yalnızca standart kütüphane (collections) kullanıldı.",
+ "adim": 19,
+ "yurutucu_token": {
+  "girdi": 138185,
+  "cikti": 19570
+ },
+ "yurutucu_usd": 0.017732499999999998,
+ "bitirdi": true,
+ "sure_sn": 185.9,
+ "gizli": {
+  "gecti": true,
+  "gecen": 16,
+  "toplam": 16,
+  "cikti": "................                                                         [100%]\n16 passed in 0.02s\n"
+ }
+}

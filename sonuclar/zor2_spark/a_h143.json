@@ -1,0 +1,23 @@
+{
+ "id": "h143",
+ "kip": "a",
+ "kategori": "veri yapıları ve algoritmalar (kuyruk, önbellek, arama, gruplama, birleştirme, durum makinesi)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "feribot_rezervasyon.py içinde RezervasyonMakinesi yazıldı; durum makinesi ve tüm doğrulama/geçiş kuralları uygulandı.",
+ "adim": 3,
+ "yurutucu_token": {
+  "girdi": 5518,
+  "cikti": 17862
+ },
+ "yurutucu_usd": 0.004124200000000001,
+ "bitirdi": true,
+ "sure_sn": 136.6,
+ "gizli": {
+  "gecti": true,
+  "gecen": 18,
+  "toplam": 18,
+  "cikti": "..................                                                       [100%]\n18 passed in 0.02s\n"
+ }
+}

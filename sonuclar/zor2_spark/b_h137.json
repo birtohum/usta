@@ -1,0 +1,23 @@
+{
+ "id": "h137",
+ "kip": "b",
+ "kategori": "doğrulama ve ayrıştırma (TC kimlik, IBAN, telefon, plaka, e-posta, adres biçimi)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "abonelik_dogrulama.py yazıldı: iban_temizle (boşluk silme, TR+26, mod97), eposta_dogrula (tek @, 3-254, boşluk/Türkçe yasak, küçük harf), adres_cozumle (mahalle/sokak/bina_no/daire_no, bina 1-200, eksikte KeyError), ozet_rapor (Decimal HALF_UP, toplam 0→0.0) ve liste birleştirme/sıralama (eposta case-insensitive, IBAN boşluksuz, eposta+IBAN artan). TypeError/ValueError/KeyError kuralları uygulandı, yalnızca standart kütüphane kullanıldı. test_abonelik.py ile 8 test geçti.",
+ "adim": 19,
+ "yurutucu_token": {
+  "girdi": 180234,
+  "cikti": 44389
+ },
+ "yurutucu_usd": 0.0269012,
+ "bitirdi": true,
+ "sure_sn": 391.6,
+ "gizli": {
+  "gecti": true,
+  "gecen": 20,
+  "toplam": 20,
+  "cikti": "....................                                                     [100%]\n20 passed in 0.02s\n"
+ }
+}

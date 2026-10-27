@@ -1,0 +1,23 @@
+{
+ "id": "h068",
+ "kip": "b",
+ "kategori": "küçük işletme hesapları (KDV, fatura, taksit, indirim, stok, kur dönüşümü, yuvarlama)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "avans.py içinde SiparisAvansi sınıfı oluşturuldu: kod/tarih format doğrulama, aralık ve tip kontrolleri, Decimal ROUND_HALF_UP yuvarlama, %20 ilk kapora kuralı, sıralı kapora listesi, kalan borç ve iptal hesabı, kod tabanlı eq/hash. pytest ile 13 test geçti.",
+ "adim": 4,
+ "yurutucu_token": {
+  "girdi": 19109,
+  "cikti": 18597
+ },
+ "yurutucu_usd": 0.0056303,
+ "bitirdi": true,
+ "sure_sn": 155.6,
+ "gizli": {
+  "gecti": true,
+  "gecen": 16,
+  "toplam": 16,
+  "cikti": "................                                                         [100%]\n16 passed in 0.02s\n"
+ }
+}

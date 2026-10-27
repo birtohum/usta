@@ -1,0 +1,35 @@
+{
+ "id": "h001",
+ "kip": "c",
+ "kategori": "Türkçe metin işleme (Türkçe harfler, büyük/küçük harf, hece, ek, sıralama, sayı/yazı)",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 20,
+   "basarili": 20
+  }
+ ],
+ "spark_usd": 0.0018725,
+ "arayuz": "",
+ "hakem": [],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [],
+ "kabul_gecti": true,
+ "ozet": "ek_uyumu.py içinde EkUygulayici sınıfı oluşturuldu: büyük ünlü uyumu (son ünlüye göre), de/den için ünsüz benzeşmesi (f,s,t,k,ç,ş,h,p → t), ünlüyle biten kökte y kaynaştırması, özel kelime sözlüğü, ek_tipi doğrulaması ve boş/sayılı kök kontrolü uygulandı. 13 pytest testi yazıldı ve hepsi geçti.",
+ "adim": 7,
+ "yurutucu_token": {
+  "girdi": 28526,
+  "cikti": 11932
+ },
+ "yurutucu_usd": 0.005239000000000001,
+ "bitirdi": true,
+ "sure_sn": 104.8,
+ "gizli": {
+  "gecti": true,
+  "gecen": 18,
+  "toplam": 18,
+  "cikti": "..................                                                       [100%]\n18 passed in 0.02s\n"
+ }
+}

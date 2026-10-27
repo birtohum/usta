@@ -1,0 +1,23 @@
+{
+ "id": "h083",
+ "kip": "b",
+ "kategori": "doğrulama ve ayrıştırma (TC kimlik, IBAN, telefon, plaka, e-posta, adres biçimi)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "`adres.py` içinde `adres_parcala` fonksiyonu ve `AdresHatasi(ValueError)` sınıfı yazıldı: girdi `;` ile tam 5 parçaya ayrılır (aksi halde AdresHatasi), None/str-dışı TypeError verir, parçalar strip edilir; mahalle boş/rakamlı olamaz, cadde en az 3 harf içermeli, bina 12/12A/12 bölü 3 (ve 12/3) desenlerine, daire boş/pozitif tamsayı/tamsayı-bölü-harf desenlerine uymalı, posta kodu 5 ASCII rakam ve 01000–81999 aralığında olmalı. Sonuç dict alt sınıfı hem `posta_kodu` hem `posta kodu` erişimini destekler. 7 pytest testi yazıldı ve hepsi geçti.",
+ "adim": 6,
+ "yurutucu_token": {
+  "girdi": 20844,
+  "cikti": 19729
+ },
+ "yurutucu_usd": 0.0060302,
+ "bitirdi": true,
+ "sure_sn": 179.4,
+ "gizli": {
+  "gecti": true,
+  "gecen": 17,
+  "toplam": 17,
+  "cikti": ".................                                                        [100%]\n17 passed in 0.02s\n"
+ }
+}

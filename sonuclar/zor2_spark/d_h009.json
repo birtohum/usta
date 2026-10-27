@@ -1,0 +1,50 @@
+{
+ "id": "h009",
+ "kip": "d",
+ "kategori": "tarih ve saat (iş günü, resmî tatil listesi parametre olarak verilir, süre hesabı, biçim dönüşümü)",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": false,
+   "toplam": 17,
+   "basarili": 16
+  },
+  {
+   "gecti": true,
+   "toplam": 17,
+   "basarili": 17
+  }
+ ],
+ "spark_usd": 0.006428800000000001,
+ "arayuz": "",
+ "hakem": [
+  {
+   "test": "test_tampon_araligina_giren_slot_elenir",
+   "karar": "gerekli",
+   "gerekce": "Görev metni kesişme veya tampon aralığına giren slotun elenmesini ve tamponun blok adımına eklenmesini açıkça istiyor.",
+   "tur": 1
+  }
+ ],
+ "geri_alma": 0,
+ "inceleme": {
+  "yazilan": 0,
+  "kanitli": []
+ },
+ "iptal_edilen_test": [],
+ "kabul_gecti": true,
+ "ozet": "Tampon kuralını düzelttim: çakışma kontrolü artık mevcut randevuyu tampon kadar iki yöne genişletilmiş `[başlangıç-tampon, bitiş+tampon)` aralığıyla yapıyor; böylece tampon=0 iken bitiş=başlangıç eşitliği elenmiyor, tampon>0 iken tampon boşluğuna giren slot eleniyor. Kabul testleri 17/17, kendi testlerim 13/13 geçiyor.",
+ "adim": 8,
+ "yurutucu_token": {
+  "girdi": 49787,
+  "cikti": 21756
+ },
+ "yurutucu_usd": 0.009329900000000002,
+ "bitirdi": true,
+ "sure_sn": 369.1,
+ "gizli": {
+  "gecti": true,
+  "gecen": 17,
+  "toplam": 17,
+  "cikti": ".................                                                        [100%]\n17 passed in 0.02s\n"
+ }
+}

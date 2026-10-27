@@ -1,0 +1,23 @@
+{
+ "id": "h120",
+ "kip": "b",
+ "kategori": "veri yapıları ve algoritmalar (kuyruk, önbellek, arama, gruplama, birleştirme, durum makinesi)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": null,
+ "adim": 20,
+ "yurutucu_token": {
+  "girdi": 210392,
+  "cikti": 41612
+ },
+ "yurutucu_usd": 0.029361600000000005,
+ "bitirdi": false,
+ "sure_sn": 390.0,
+ "gizli": {
+  "gecti": false,
+  "gecen": 6,
+  "toplam": 16,
+  "cikti": "a/pytest-4/test_10_strip_case_sensitive0')\n\n    def test_10_strip_case_sensitive(tmp_path):\n        g = csv_yaz(tmp_path, [[\"1\", \"a\", \"Aqua\", \"5\", \"x\"],[\"2\", \"b\", \" Aqua \", \"7\", \"x\"],[\"3\", \"c\", \"aqua\", \"3\", \"x\"]])\n        r = calistir(\"--giris\", g, \"--grup\", \"marka\", \"--siralama\", \"adet\", \"--format\", \"json\")\n>       assert r.returncode == 0\nE       assert 1 == 0\nE        +  where 1 = CompletedProcess(args=['/usr/bin/python', '/home/usta/is/3d92095f1da0/dalis_cli.py', '--giris', '/home/usta/is/3d92095...\"id\", \"marka\"]:\\n       ^^^^^^^^^^^^^\\nTypeError: \\'<\\' not supported between instances of \\'str\\' and \\'NoneType\\'\\n').returncode\n\n.gizli/test_gizli.py:91: AssertionError\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_01_json_marka_adet_artan - assert 1 == 0\nFAILED .gizli/test_gizli.py::test_02_json_marka_adet_ters - assert 1 == 0\nFAILED .gizli/test_gizli.py::test_03_csv_cikti - assert 1 == 0\nFAILED .gizli/test_gizli.py::test_04_grup_durum - assert 1 == 0\nFAILED .gizli/test_gizli.py::test_05_siralama_cesit_ikinci_anahtar - assert 1...\nFAILED .gizli/test_gizli.py::test_06_limit - assert 1 == 0\nFAILED .gizli/test_gizli.py::test_07_adet_aralik_disi_atlanir - assert 1 == 0\nFAILED .gizli/test_gizli.py::test_08_bos_kimlik_atlanir - assert 1 == 0\nFAILED .gizli/test_gizli.py::test_09_yinelenen_kimlik - assert 1 == 0\nFAILED .gizli/test_gizli.py::test_10_strip_case_sensitive - assert 1 == 0\n10 failed, 6 passed in 1.42s\n"
+ }
+}

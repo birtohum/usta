@@ -1,0 +1,35 @@
+{
+ "id": "h076",
+ "kip": "c",
+ "kategori": "dosya ve komut satırı (CSV/JSON okuma, rapor yazdırma, argümanlar, hata mesajları)",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 19,
+   "basarili": 19
+  }
+ ],
+ "spark_usd": 0.0019433000000000002,
+ "arayuz": "",
+ "hakem": [],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [],
+ "kabul_gecti": true,
+ "ozet": "`otel.py` içinde `OverlapError` ve `RezervasyonDefteri` sınıfı yazıldı: yarı-açık `[giris,cikis)` çakışma kontrolü, `gecersiz aralik`/`oda yok`/`bos musteri`/`gecersiz tarih`/`bozuk kayit` hataları, `ROUND_HALF_UP` ile doluluk oranı, UTF-8 JSON kaydet/yükle ve `son_id` devamlılığı sağlandı. `test_otel.py` ile 10 pytest testi geçiyor.",
+ "adim": 4,
+ "yurutucu_token": {
+  "girdi": 16774,
+  "cikti": 11140
+ },
+ "yurutucu_usd": 0.0039054,
+ "bitirdi": true,
+ "sure_sn": 191.9,
+ "gizli": {
+  "gecti": true,
+  "gecen": 18,
+  "toplam": 18,
+  "cikti": "..................                                                       [100%]\n18 passed in 0.03s\n"
+ }
+}

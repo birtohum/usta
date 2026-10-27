@@ -1,0 +1,38 @@
+{
+ "id": "h079",
+ "kip": "d",
+ "kategori": "Türkçe metin işleme (Türkçe harfler, büyük/küçük harf, hece, ek, sıralama, sayı/yazı)",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 18,
+   "basarili": 18
+  }
+ ],
+ "spark_usd": 0.0055757,
+ "arayuz": "",
+ "hakem": [],
+ "geri_alma": 0,
+ "inceleme": {
+  "yazilan": 0,
+  "kanitli": []
+ },
+ "iptal_edilen_test": [],
+ "kabul_gecti": true,
+ "ozet": "etiket.py içinde SlugUretici sınıfı yazıldı: Türkçe kuralıyla küçültme (I→ı, İ→i), karakter dönüşümleri, tire daraltma/temizliği, kelime sınırında kısaltma, ValueError/TypeError kontrolleri, sayaçlı özgünlük ve listele(). pytest ile 13 test geçti.",
+ "adim": 4,
+ "yurutucu_token": {
+  "girdi": 10399,
+  "cikti": 10255
+ },
+ "yurutucu_usd": 0.0030909000000000006,
+ "bitirdi": true,
+ "sure_sn": 334.5,
+ "gizli": {
+  "gecti": true,
+  "gecen": 16,
+  "toplam": 16,
+  "cikti": "................                                                         [100%]\n16 passed in 0.03s\n"
+ }
+}

@@ -1,0 +1,23 @@
+{
+ "id": "h019",
+ "kip": "a",
+ "kategori": "Türkçe metin işleme (Türkçe harfler, büyük/küçük harf, hece, ek, sıralama, sayı/yazı)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "hece.py dosyasında Heceliyici sınıfı oluşturuldu: Türkçe küçük harf dönüşümü, V-CV / VC-CV / VCC-CV kuralları, istisna sözlüğü (kopyalayarak saklama ve döndürme), tire silme, hata kontrolleri (ValueError/TypeError) ve importsuz yapı ile gereksinimler karşılandı.",
+ "adim": 4,
+ "yurutucu_token": {
+  "girdi": 9645,
+  "cikti": 18127
+ },
+ "yurutucu_usd": 0.0045899,
+ "bitirdi": true,
+ "sure_sn": 176.3,
+ "gizli": {
+  "gecti": true,
+  "gecen": 17,
+  "toplam": 17,
+  "cikti": ".................                                                        [100%]\n17 passed in 0.02s\n"
+ }
+}

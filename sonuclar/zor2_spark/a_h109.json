@@ -1,0 +1,23 @@
+{
+ "id": "h109",
+ "kip": "a",
+ "kategori": "Türkçe metin işleme (Türkçe harfler, büyük/küçük harf, hece, ek, sıralama, sayı/yazı)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "menu.py yazıldı: etiketle() Türkçe case-insensitive tam-sözcük eşleşme, -sız hariç -lı hayvansal, vegan→vejetaryen kuralı, gluten kontrolü, hata tipleri ve 5000+ kesmesiz işleme içerir.",
+ "adim": 8,
+ "yurutucu_token": {
+  "girdi": 18675,
+  "cikti": 46809
+ },
+ "yurutucu_usd": 0.0112293,
+ "bitirdi": true,
+ "sure_sn": 411.5,
+ "gizli": {
+  "gecti": false,
+  "gecen": 16,
+  "toplam": 17,
+  "cikti": "................F                                                        [100%]\n=================================== FAILURES ===================================\n_______________________________ test_cogul_etler _______________________________\n\n    def test_cogul_etler():\n        r = menu.etiketle(\"Etler tezgahta.\")\n>       assert r[\"vejetaryen\"] is False\nE       assert True is False\n\n.gizli/test_gizli.py:111: AssertionError\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_cogul_etler - assert True is False\n1 failed, 16 passed in 0.04s\n"
+ }
+}

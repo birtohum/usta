@@ -1,0 +1,23 @@
+{
+ "id": "h079",
+ "kip": "b",
+ "kategori": "Türkçe metin işleme (Türkçe harfler, büyük/küçük harf, hece, ek, sıralama, sayı/yazı)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "etiket.py içinde SlugUretici sınıfını yazdım: Türkçe kuralıyla küçük harf çevirme (I→ı, İ→i, sonra lower + çğöşüı→cgosui), harf/rakam dışı dizileri tek tireye çevirme, kenar tire temizliği, maks_uzunlukta kelime sınırında kesme, boş sonuçta ValueError, str olmayan girdide TypeError, aralık dışı maks_uzunlukta ValueError ve sayaçlı benzersizlik (-2, -3…) ile listele() sırası. 14 pytest testi yazıp `python -m pytest -q` ile hepsini geçirdim.",
+ "adim": 7,
+ "yurutucu_token": {
+  "girdi": 20009,
+  "cikti": 25669
+ },
+ "yurutucu_usd": 0.007134700000000001,
+ "bitirdi": true,
+ "sure_sn": 225.0,
+ "gizli": {
+  "gecti": true,
+  "gecen": 16,
+  "toplam": 16,
+  "cikti": "................                                                         [100%]\n16 passed in 0.02s\n"
+ }
+}

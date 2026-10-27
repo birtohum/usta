@@ -1,0 +1,23 @@
+{
+ "id": "h050",
+ "kip": "a",
+ "kategori": "küçük işletme hesapları (KDV, fatura, taksit, indirim, stok, kur dönüşümü, yuvarlama)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "toptan.py içinde ToptanSepet sınıfı oluşturuldu: müşteri/ürün/kupon format doğrulama, adet 1-10000 ve fiyat 0.01-1M aralık kontrolü (TypeError/ValueError ayrımıyla), Decimal ROUND_HALF_UP yuvarlama, toplam adede göre %5/%12 kademeli indirim, birleşmeyen tek kupon (%10), ara toplama göre sıralı satırlar ve musteri_id+kod+adet karşılaştıran __eq__ ile boş sepette ValueError uygulandı.",
+ "adim": 5,
+ "yurutucu_token": {
+  "girdi": 23630,
+  "cikti": 19751
+ },
+ "yurutucu_usd": 0.006313200000000001,
+ "bitirdi": true,
+ "sure_sn": 169.7,
+ "gizli": {
+  "gecti": false,
+  "gecen": 15,
+  "toplam": 16,
+  "cikti": "F...............                                                         [100%]\n=================================== FAILURES ===================================\n___________________________ test_musteri_id_gecerli ____________________________\n\n    def test_musteri_id_gecerli():\n        s = ToptanSepet('ABC123')\n>       assert s.musteri_id == 'ABC123'\nE       AttributeError: 'ToptanSepet' object has no attribute 'musteri_id'. Did you mean: '_musteri_id'?\n\n.gizli/test_gizli.py:11: AttributeError\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_musteri_id_gecerli - AttributeError: 'Topta...\n1 failed, 15 passed in 0.03s\n"
+ }
+}

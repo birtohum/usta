@@ -1,0 +1,23 @@
+{
+ "id": "h112",
+ "kip": "b",
+ "kategori": "dosya ve komut satırı (CSV/JSON okuma, rapor yazdırma, argümanlar, hata mesajları)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "bilet.py modülü yazıldı: 4 işlev, doğrulama kodları, CSV yükleme, doluluk ve günlük özet. 10 pytest testi geçti.",
+ "adim": 7,
+ "yurutucu_token": {
+  "girdi": 21712,
+  "cikti": 24785
+ },
+ "yurutucu_usd": 0.0071282,
+ "bitirdi": true,
+ "sure_sn": 193.0,
+ "gizli": {
+  "gecti": false,
+  "gecen": 16,
+  "toplam": 18,
+  "cikti": "            {'yolcu_ad': 'Mehmet Kaya', 'tarih': '2024-05-01', 'seans': 'gun_batimi', 'koltuk_no': 1},\n        ]\n        sonuc = sefer_doluluk(satislar, 10)\n        assert isinstance(sonuc, dict)\n        assert sonuc['toplam_bilet'] == 3\n        assert 'seferler' in sonuc\n        assert len(sonuc['seferler']) == 2\n        g1 = sonuc['seferler']['2024-05-01_gun_dogumu']\n        g2 = sonuc['seferler']['2024-05-01_gun_batimi']\n>       assert g1['toplam_bilet'] == 2\nE       KeyError: 'toplam_bilet'\n\n.gizli/test_gizli.py:75: KeyError\n_______________________ test_sefer_doluluk_tekrar_koltuk _______________________\n\n    def test_sefer_doluluk_tekrar_koltuk():\n        satislar = [\n            {'yolcu_ad': 'Ali Veli', 'tarih': '2024-05-01', 'seans': 'gun_dogumu', 'koltuk_no': 1},\n            {'yolcu_ad': 'Ayse Yilmaz', 'tarih': '2024-05-01', 'seans': 'gun_dogumu', 'koltuk_no': 1},\n        ]\n        sonuc = sefer_doluluk(satislar, 10)\n        assert sonuc['toplam_bilet'] == 1\n>       assert sonuc['seferler']['2024-05-01_gun_dogumu']['toplam_bilet'] == 1\nE       KeyError: 'toplam_bilet'\n\n.gizli/test_gizli.py:98: KeyError\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_sefer_doluluk_gruplama - KeyError: 'toplam_...\nFAILED .gizli/test_gizli.py::test_sefer_doluluk_tekrar_koltuk - KeyError: 'to...\n2 failed, 16 passed in 0.05s\n"
+ }
+}

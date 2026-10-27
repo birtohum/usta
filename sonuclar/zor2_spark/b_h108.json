@@ -1,0 +1,23 @@
+{
+ "id": "h108",
+ "kip": "b",
+ "kategori": "veri yapıları ve algoritmalar (kuyruk, önbellek, arama, gruplama, birleştirme, durum makinesi)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "log_birlestir.py içinde sirali_loglari_birlestir yazıldı: heapq ile kararlı k-yollu birleştirme, zaman/kaynak/mesaj doğrulaması, tekilleştirme ve girdiyi değiştirmeme sağlandı; 13 pytest testi geçiyor.",
+ "adim": 8,
+ "yurutucu_token": {
+  "girdi": 35813,
+  "cikti": 9199
+ },
+ "yurutucu_usd": 0.0054211,
+ "bitirdi": true,
+ "sure_sn": 82.1,
+ "gizli": {
+  "gecti": true,
+  "gecen": 19,
+  "toplam": 19,
+  "cikti": "...................                                                      [100%]\n19 passed in 0.02s\n"
+ }
+}

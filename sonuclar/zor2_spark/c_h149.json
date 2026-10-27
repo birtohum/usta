@@ -1,0 +1,35 @@
+{
+ "id": "h149",
+ "kip": "c",
+ "kategori": "tarih ve saat (iş günü, resmî tatil listesi parametre olarak verilir, süre hesabı, biçim dönüşümü)",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 17,
+   "basarili": 17
+  }
+ ],
+ "spark_usd": 0.0022647,
+ "arayuz": "",
+ "hakem": [],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [],
+ "kabul_gecti": true,
+ "ozet": "kurutma_takip.py yazıldı: iş günü hesabı (hafta sonu+tatil atlama, başlangıç hariç), ISO/DETAY çıktı, çok parti sıralama, 30dk yuvarlama ve hata kodları eklendi; 16 pytest testi geçiyor.",
+ "adim": 9,
+ "yurutucu_token": {
+  "girdi": 72242,
+  "cikti": 27237
+ },
+ "yurutucu_usd": 0.0126716,
+ "bitirdi": true,
+ "sure_sn": 332.1,
+ "gizli": {
+  "gecti": true,
+  "gecen": 16,
+  "toplam": 16,
+  "cikti": "................                                                         [100%]\n16 passed in 0.37s\n"
+ }
+}

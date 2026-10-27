@@ -1,0 +1,23 @@
+{
+ "id": "h057",
+ "kip": "b",
+ "kategori": "tarih ve saat (iş günü, resmî tatil listesi parametre olarak verilir, süre hesabı, biçim dönüşümü)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "mezat.py içinde MezatTakvimi sınıfı yazıldı: sıkı YYYY-MM-DD/HH:MM doğrulaması (ValueError), yasak aralığı dahil ve tek-gün desteği, Pazar ve resmi tatil kontrolü, sabit pencereler sıralı döndürme, sonraki_mezat içinde pencere-içi sorguda o anın kendisi. pytest ile 19 test geçti.",
+ "adim": 5,
+ "yurutucu_token": {
+  "girdi": 16819,
+  "cikti": 13635
+ },
+ "yurutucu_usd": 0.0044089,
+ "bitirdi": true,
+ "sure_sn": 111.3,
+ "gizli": {
+  "gecti": true,
+  "gecen": 18,
+  "toplam": 18,
+  "cikti": "..................                                                       [100%]\n18 passed in 0.03s\n"
+ }
+}

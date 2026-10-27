@@ -1,0 +1,23 @@
+{
+ "id": "h119",
+ "kip": "a",
+ "kategori": "doğrulama ve ayrıştırma (TC kimlik, IBAN, telefon, plaka, e-posta, adres biçimi)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "abonelik.py yazıldı: AbonelikYoneticisi plaka/TC/adres doğrulama, tür ayrımı, ay hesabı, normalizasyon, sıralı liste ve doluluk oranı ile test edildi.",
+ "adim": 5,
+ "yurutucu_token": {
+  "girdi": 14606,
+  "cikti": 21938
+ },
+ "yurutucu_usd": 0.0058482000000000004,
+ "bitirdi": true,
+ "sure_sn": 191.5,
+ "gizli": {
+  "gecti": false,
+  "gecen": 14,
+  "toplam": 17,
+  "cikti": "        d = y.abonelik_uzat(\"19AB 123\", 3)\n>       assert d[\"plaka\"] == \"19AB123\"\nE       AssertionError: assert '19 AB 123' == '19AB123'\nE         - 19AB123\nE         + 19 AB 123\nE         ?   +  +\n\n.gizli/test_gizli.py:134: AssertionError\n___________________________ test_aktif_liste_sirali ____________________________\n\n    def test_aktif_liste_sirali():\n        y = AbonelikYoneticisi()\n        y.abone_ekle(\"34 AB 123\", TC1, adres())\n        y.abone_ekle(\"19 AB 123\", TC2, adres())\n        y.abone_ekle(\"06 AB 123\", TC3, adres())\n        lst = y.aktif_liste()\n        plakalar = [r[\"plaka\"] for r in lst]\n        assert plakalar == sorted(plakalar)\n>       assert plakalar[0] == \"06AB123\"\nE       AssertionError: assert '06 AB 123' == '06AB123'\nE         - 06AB123\nE         + 06 AB 123\nE         ?   +  +\n\n.gizli/test_gizli.py:147: AssertionError\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_bitis_tam_ay - TypeError: fromisoformat: ar...\nFAILED .gizli/test_gizli.py::test_plaka_esitligi_bosluk_tire - AssertionError...\nFAILED .gizli/test_gizli.py::test_aktif_liste_sirali - AssertionError: assert...\n3 failed, 14 passed in 0.04s\n"
+ }
+}

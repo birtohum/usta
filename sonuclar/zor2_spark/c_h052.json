@@ -1,0 +1,35 @@
+{
+ "id": "h052",
+ "kip": "c",
+ "kategori": "dosya ve komut satırı (CSV/JSON okuma, rapor yazdırma, argümanlar, hata mesajları)",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 18,
+   "basarili": 18
+  }
+ ],
+ "spark_usd": 0.005557900000000001,
+ "arayuz": "Dosya: cay_odeme.py; çağrı: python cay_odeme.py --girdi alimlar.csv --cikti odemeler.json --fiyat 19.35 --kesinti 2.5; çıktı JSON üst alanları: ureticiler, toplam_kg, toplam_odeme; ureticiler öğe alanları: ureticici_id, ad_soyad, toplam_kg, toplam_odeme.",
+ "hakem": [],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [],
+ "kabul_gecti": true,
+ "ozet": "cay_odeme.py yazıldı: UTF-8-SIG CSV okuma, geçersiz satırlarda stderr UYARI + atlama, case-insensitive id gruplama (ilk yazım korunur), Decimal ile ROUND_HALF_UP yuvarlama, ödeme/sıralama/JSON/stdout-hata kuralları ve eksik girdi/çıktı-dizini yönetimi uygulandı. 11 pytest testi yazıldı ve `python -m pytest -q` ile hepsi geçti.",
+ "adim": 6,
+ "yurutucu_token": {
+  "girdi": 36633,
+  "cikti": 18533
+ },
+ "yurutucu_usd": 0.0073698999999999995,
+ "bitirdi": true,
+ "sure_sn": 384.1,
+ "gizli": {
+  "gecti": true,
+  "gecen": 16,
+  "toplam": 16,
+  "cikti": "................                                                         [100%]\n16 passed in 0.55s\n"
+ }
+}

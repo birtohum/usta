@@ -1,0 +1,23 @@
+{
+ "id": "h034",
+ "kip": "a",
+ "kategori": "dosya ve komut satırı (CSV/JSON okuma, rapor yazdırma, argümanlar, hata mesajları)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "not_raporu.py yazıldı: CSV okuyup geçersiz satırları stderr'e bildirerek atlar, Decimal + ROUND_HALF_UP ile ortalama hesaplar, Gecti/Kaldı durumuyla sıralı JSON yazar; eşik hatasında stderr'e 'Hata: geçersiz eşik' yazıp kod 3 ile çıkar, başarıda 'İşlendi: N öğrenci, M satır atlandı' basar. Yalnızca standart kütüphane kullanıldı.",
+ "adim": 12,
+ "yurutucu_token": {
+  "girdi": 69797,
+  "cikti": 20467
+ },
+ "yurutucu_usd": 0.011073099999999999,
+ "bitirdi": true,
+ "sure_sn": 187.1,
+ "gizli": {
+  "gecti": true,
+  "gecen": 16,
+  "toplam": 16,
+  "cikti": "................                                                         [100%]\n16 passed in 0.45s\n"
+ }
+}

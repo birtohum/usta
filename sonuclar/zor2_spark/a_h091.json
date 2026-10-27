@@ -1,0 +1,23 @@
+{
+ "id": "h091",
+ "kip": "a",
+ "kategori": "Türkçe metin işleme (Türkçe harfler, büyük/küçük harf, hece, ek, sıralama, sayı/yazı)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "tarih.py modülü hazırlandı: sayidan_yaziya (GG/AA/YYYY → GG AyAdı YYYY) ve yazidan_sayiya (tersi) işlevleri eklendi. Ay adları yalnızca belirtilen yazımla üretiliyor, çözümlemede büyük/küçük harf ve I/İ/ı/i farkları gözetilmiyor. GG/AA iki basamak, YYYY 1900-2100 aralığı ve artık yıl dahil gün-ay denetimi yapılıyor; biçim hatalarında ValueError, str olmayan girdilerde TypeError veriliyor. Tek basamaklı gün ve kısaltılmış ay adı reddediliyor, sıfır dolgusu korunuyor. Yalnızca standart kütüphane kullanıldı.",
+ "adim": 11,
+ "yurutucu_token": {
+  "girdi": 53688,
+  "cikti": 17034
+ },
+ "yurutucu_usd": 0.0087756,
+ "bitirdi": true,
+ "sure_sn": 154.1,
+ "gizli": {
+  "gecti": true,
+  "gecen": 19,
+  "toplam": 19,
+  "cikti": "...................                                                      [100%]\n19 passed in 0.03s\n"
+ }
+}

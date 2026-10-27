@@ -1,0 +1,23 @@
+{
+ "id": "h044",
+ "kip": "a",
+ "kategori": "küçük işletme hesapları (KDV, fatura, taksit, indirim, stok, kur dönüşümü, yuvarlama)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "senet.py içinde SenetliSatis sınıfı oluşturuldu: YYYY-AA-GG tarih doğrulama (geçersiz gün ValueError, metin olmayan TypeError), taksit 2-24, peşinat 0-toplam (eşitken tek taksit), iskonto 0-30, Decimal ROUND_HALF_UP ile eşit bölme + son taksite kuruş farkı, vade+tutar sıralı taksit_tablosu, erken_kapatma (kalan_borc/iskonto/odenecek float) ve günlük %0.05 gecikme cezası; __eq__ dörtlü karşılaştırma yapar, farklı türde False döner. Yalnızca standart kütüphane kullanıldı.",
+ "adim": 6,
+ "yurutucu_token": {
+  "girdi": 22954,
+  "cikti": 17775
+ },
+ "yurutucu_usd": 0.0058504,
+ "bitirdi": true,
+ "sure_sn": 143.2,
+ "gizli": {
+  "gecti": false,
+  "gecen": 18,
+  "toplam": 19,
+  "cikti": "........F..........                                                      [100%]\n=================================== FAILURES ===================================\n___________________________ test_tarih_olmayan_metin ___________________________\n\n    def test_tarih_olmayan_metin():\n        with pytest.raises(TypeError):\n>           SenetliSatis(5000, 0, 4, \"merhaba\")\n\n.gizli/test_gizli.py:43: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \nsenet.py:63: in __init__\n    baslangic = _tarih_cozumle(baslangic_tarihi)\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nmetin = 'merhaba'\n\n    def _tarih_cozumle(metin):\n        if not isinstance(metin, str):\n            raise TypeError(\"tarih metin olmali\")\n        m = _TARIH_RE.match(metin)\n        if not m:\n>           raise ValueError(f\"gecersiz tarih: {metin}\")\nE           ValueError: gecersiz tarih: merhaba\n\nsenet.py:36: ValueError\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_tarih_olmayan_metin - ValueError: gecersiz ...\n1 failed, 18 passed in 0.03s\n"
+ }
+}

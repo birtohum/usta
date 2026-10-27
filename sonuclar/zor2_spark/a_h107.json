@@ -1,0 +1,23 @@
+{
+ "id": "h107",
+ "kip": "a",
+ "kategori": "doğrulama ve ayrıştırma (TC kimlik, IBAN, telefon, plaka, e-posta, adres biçimi)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "sms_listesi.py yazıldı: telefon_normalize (05XX/+90/90/boşluklu-tireli → 0XXX XXX XX XX, None/str-dışı TypeError, boş/harf/uzunluk ValueError), telefon_maskele (normalize forma 053****67), liste_temizle (normalize ile tekilleştirme, artan sıralama, toplam/benzersiz/geçersiz + 2 ondalık başarı oranı, O(n)). 5000 kayıtta ~0.01 sn doğrulandı.",
+ "adim": 3,
+ "yurutucu_token": {
+  "girdi": 7551,
+  "cikti": 9618
+ },
+ "yurutucu_usd": 0.0026787,
+ "bitirdi": true,
+ "sure_sn": 76.9,
+ "gizli": {
+  "gecti": true,
+  "gecen": 18,
+  "toplam": 18,
+  "cikti": "..................                                                       [100%]\n18 passed in 0.04s\n"
+ }
+}

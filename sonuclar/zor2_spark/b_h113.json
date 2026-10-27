@@ -1,0 +1,23 @@
+{
+ "id": "h113",
+ "kip": "b",
+ "kategori": "doğrulama ve ayrıştırma (TC kimlik, IBAN, telefon, plaka, e-posta, adres biçimi)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "filo_kayit.py içinde FiloKayitYoneticisi sınıfını yazdım: plaka normalizasyonu (büyük harf, boşluk/tire yoksayma), il kodu 01-81 ve harf/rakam blok kontrolü, G/T harfine göre gecici/ticari/sivil tür kodlama, TC 11-hane + checksum doğrulaması, telefon 10-haneye indirgeme ve 0XXX XXX XX XX biçimi, çift plaka reddi, sıralı kayıtlar ve iki ondalığa yuvarlanmış yüzdeli filo raporu. test_filo.py ile 9 test yazıp `python -m pytest -q` ile hepsini geçirdim.",
+ "adim": 11,
+ "yurutucu_token": {
+  "girdi": 86808,
+  "cikti": 44313
+ },
+ "yurutucu_usd": 0.0175434,
+ "bitirdi": true,
+ "sure_sn": 397.2,
+ "gizli": {
+  "gecti": false,
+  "gecen": 16,
+  "toplam": 17,
+  "cikti": "................F                                                        [100%]\n=================================== FAILURES ===================================\n_____________________________ test_kayitlar_sirali _____________________________\n\n    def test_kayitlar_sirali():\n        y = FiloKayitYoneticisi()\n        y.ekle('59ZZ100', TC1, '5321234567')\n        y.ekle('34AB100', TC2, '5331234567')\n        y.ekle('59AB100', TC1, '5341234567')\n        r = y.filo_raporu()\n        pls = _plakalar(r)\n>       assert pls == sorted(pls)\nE       TypeError: '<' not supported between instances of 'dict' and 'dict'\n\n.gizli/test_gizli.py:127: TypeError\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_kayitlar_sirali - TypeError: '<' not suppor...\n1 failed, 16 passed in 0.03s\n"
+ }
+}

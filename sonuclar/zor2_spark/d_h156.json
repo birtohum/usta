@@ -1,0 +1,38 @@
+{
+ "id": "h156",
+ "kip": "d",
+ "kategori": "dosya ve komut satırı (CSV/JSON okuma, rapor yazdırma, argümanlar, hata mesajları)",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 17,
+   "basarili": 17
+  }
+ ],
+ "spark_usd": 0.0043895,
+ "arayuz": "",
+ "hakem": [],
+ "geri_alma": 0,
+ "inceleme": {
+  "yazilan": 0,
+  "kanitli": []
+ },
+ "iptal_edilen_test": [],
+ "kabul_gecti": true,
+ "ozet": "`sera_hakedis.py` yazıldı: CSV başlık denetimi, tür/adet doğrulama, tutarsız satırda stderr uyarısı, Decimal+ROUND_HALF_UP ile hesaplama, üretici bazında toplama, sıralama ve UTF-8 rapor çıktısı ile belirtilen çıkış kodları/hata metinleri uygulandı. `test_sera.py` ile 9 pytest testi geçiyor.",
+ "adim": 5,
+ "yurutucu_token": {
+  "girdi": 26104,
+  "cikti": 13965
+ },
+ "yurutucu_usd": 0.005403400000000001,
+ "bitirdi": true,
+ "sure_sn": 362.2,
+ "gizli": {
+  "gecti": true,
+  "gecen": 15,
+  "toplam": 15,
+  "cikti": "...............                                                          [100%]\n15 passed in 0.44s\n"
+ }
+}

@@ -1,0 +1,23 @@
+{
+ "id": "h052",
+ "kip": "b",
+ "kategori": "dosya ve komut satırı (CSV/JSON okuma, rapor yazdırma, argümanlar, hata mesajları)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "`cay_odeme.py` yazıldı: UTF-8-SIG okuma, başlık kontrolü, geçersiz satır uyarıları, case-insensitive gruplama, ROUND_HALF_UP yuvarlama, sıralama, hata kodları ve stdout formatı şartnameye uygun. `test_cay.py` ile 9 pytest testi geçiyor.",
+ "adim": 4,
+ "yurutucu_token": {
+  "girdi": 18240,
+  "cikti": 12686
+ },
+ "yurutucu_usd": 0.0043612,
+ "bitirdi": true,
+ "sure_sn": 103.7,
+ "gizli": {
+  "gecti": true,
+  "gecen": 16,
+  "toplam": 16,
+  "cikti": "................                                                         [100%]\n16 passed in 0.51s\n"
+ }
+}

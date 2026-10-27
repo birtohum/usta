@@ -1,0 +1,23 @@
+{
+ "id": "h102",
+ "kip": "a",
+ "kategori": "veri yapıları ve algoritmalar (kuyruk, önbellek, arama, gruplama, birleştirme, durum makinesi)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "mezat_gruplama.py oluşturuldu: lotlari_grupla türü şeritleyip Türkçe küçük harfle anahtarlar, boyu küçük/orta/büyük kategorisine ayırır, aralık dışı boy/kilo/fiyat ve boş lot_id için ValueError, yinelenen lot_id için KeyError verir, toplam kiloyu Decimal+ROUND_HALF_UP ile 2 ondalığa yuvarlar; grup_ozeti toplam kilo azalan, tür alfabetik artan, boy artan sırayla kararlı sorted ile listeler ve girdileri değiştirmez.",
+ "adim": 12,
+ "yurutucu_token": {
+  "girdi": 88721,
+  "cikti": 28571
+ },
+ "yurutucu_usd": 0.014586300000000002,
+ "bitirdi": true,
+ "sure_sn": 237.6,
+ "gizli": {
+  "gecti": true,
+  "gecen": 16,
+  "toplam": 16,
+  "cikti": "................                                                         [100%]\n16 passed in 0.02s\n"
+ }
+}

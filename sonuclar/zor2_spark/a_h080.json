@@ -1,0 +1,23 @@
+{
+ "id": "h080",
+ "kip": "a",
+ "kategori": "küçük işletme hesapları (KDV, fatura, taksit, indirim, stok, kur dönüşümü, yuvarlama)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "mustahsil.py içinde MustahsilMakbuzu sınıfı oluşturuldu: belge_no (M-6 rakam), tc (11 hane, ilk hanesi sıfır değil), ad (trim + en az 3 harf), kg/birim_fiyat (string Decimal, 0.01-10000.00) doğrulamaları ValueError veriyor; brüt=kg*fiyat, stopaj %4 ve borsa %1 ayrı ayrı ROUND_HALF_UP ile 2 basamağa yuvarlanıp net=brüt-kesintiler olarak '0.00' formatında tutuluyor; mükerrer belge_no ValueError, bilinmeyen net_ode KeyError, dokum() belge_no sıralı {'belge_no','ad','net'} listesi döndürüyor.",
+ "adim": 4,
+ "yurutucu_token": {
+  "girdi": 9852,
+  "cikti": 21174
+ },
+ "yurutucu_usd": 0.00522,
+ "bitirdi": true,
+ "sure_sn": 175.2,
+ "gizli": {
+  "gecti": true,
+  "gecen": 16,
+  "toplam": 16,
+  "cikti": "................                                                         [100%]\n16 passed in 0.02s\n"
+ }
+}

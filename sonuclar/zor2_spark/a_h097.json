@@ -1,0 +1,23 @@
+{
+ "id": "h097",
+ "kip": "a",
+ "kategori": "Türkçe metin işleme (Türkçe harfler, büyük/küçük harf, hece, ek, sıralama, sayı/yazı)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "yorum.py içinde YorumAnalizci sınıfı oluşturuldu: Türkçe kuralıyla küçük harfe çevirme (I→ı, İ→i), harf-dışı ayraçlarla tokenleme, en az 3 harfli ve durma kelimesi dışı sayım, azalan sıklık + ilk görülme sıralı en_sik, TypeError/ValueError kontrolleri ve temizle yöntemi.",
+ "adim": 9,
+ "yurutucu_token": {
+  "girdi": 34270,
+  "cikti": 12180
+ },
+ "yurutucu_usd": 0.005863000000000001,
+ "bitirdi": true,
+ "sure_sn": 113.7,
+ "gizli": {
+  "gecti": true,
+  "gecen": 17,
+  "toplam": 17,
+  "cikti": ".................                                                        [100%]\n17 passed in 0.02s\n"
+ }
+}

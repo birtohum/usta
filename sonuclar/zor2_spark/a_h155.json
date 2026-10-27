@@ -1,0 +1,23 @@
+{
+ "id": "h155",
+ "kip": "a",
+ "kategori": "dosya ve komut satırı (CSV/JSON okuma, rapor yazdırma, argümanlar, hata mesajları)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "`mermer_verim.py` yazıldı: istenen CLI, `;` ayraçlı UTF-8-SIG çıktı, Decimal ROUND_HALF_UP ile 3 basamak hacim/verim hesabı, kalite eşiği ve sıralama, uyarı/hata mesajları ve çıkış kodları uygulandı; yalnızca standart kütüphane kullanıldı ve testlerle doğrulandı.",
+ "adim": 4,
+ "yurutucu_token": {
+  "girdi": 16069,
+  "cikti": 15555
+ },
+ "yurutucu_usd": 0.0047179,
+ "bitirdi": true,
+ "sure_sn": 125.9,
+ "gizli": {
+  "gecti": false,
+  "gecen": 15,
+  "toplam": 16,
+  "cikti": "......F.........                                                         [100%]\n=================================== FAILURES ===================================\n__________________________ test_07_yuvarlama_half_up ___________________________\n\n    def test_07_yuvarlama_half_up():\n        icerik = BASLIK + \"\\n\" + \"R1;2.001;1;0.5;1;2.0;A\\n\"\n        import tempfile\n        with tempfile.TemporaryDirectory() as td:\n            tp = pathlib.Path(td)\n            r, g, c = calistir(tp, icerik, \"A\")\n            assert r.returncode == 0\n            _, sat = cikisi_oku(c)\n            assert sat[0][\"blok_m3\"] == \"1.001\"\n>           assert sat[0][\"verim_m2_m3\"] == \"1.000\"\nE           AssertionError: assert '0.999' == '1.000'\nE             - 1.000\nE             + 0.999\n\n.gizli/test_gizli.py:106: AssertionError\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_07_yuvarlama_half_up - AssertionError: asse...\n1 failed, 15 passed in 0.54s\n"
+ }
+}

@@ -1,0 +1,35 @@
+{
+ "id": "h152",
+ "kip": "c",
+ "kategori": "tarih ve saat (iş günü, resmî tatil listesi parametre olarak verilir, süre hesabı, biçim dönüşümü)",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 20,
+   "basarili": 20
+  }
+ ],
+ "spark_usd": 0.0024317,
+ "arayuz": "",
+ "hakem": [],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [],
+ "kabul_gecti": true,
+ "ozet": "kurye_sla.py dosyasinda uc fonksiyon yazildi: normalize_et uc giris bicimini YYYY-MM-DD HH:MM'ye cevirir (saniye varsa ust dakikaya yuvarlar, Subat 29'u artik yil kontroluyle dogrular, bilinmeyen bicimde ValueError); teslim_suresi_dk Cumartesi/Pazar haric gun-gun is-saniyesi hesaplayip ust dakikaya yuvarlar (teslim<siparis ise ValueError); sla_gecti_mi ayni hesabi sirsiz/tekrarli tatil listesiyle yapar, limit 1-720 disinda ise ValueError verir ve limite esit surede False dondurur. 14 pytest testi yazildi ve hepsi gecti.",
+ "adim": 7,
+ "yurutucu_token": {
+  "girdi": 28033,
+  "cikti": 20203
+ },
+ "yurutucu_usd": 0.006843900000000001,
+ "bitirdi": true,
+ "sure_sn": 319.8,
+ "gizli": {
+  "gecti": true,
+  "gecen": 18,
+  "toplam": 18,
+  "cikti": "..................                                                       [100%]\n18 passed in 0.02s\n"
+ }
+}

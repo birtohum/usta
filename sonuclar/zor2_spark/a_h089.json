@@ -1,0 +1,23 @@
+{
+ "id": "h089",
+ "kip": "a",
+ "kategori": "doğrulama ve ayrıştırma (TC kimlik, IBAN, telefon, plaka, e-posta, adres biçimi)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "vergi.py içinde VknHatasi, TCileKaristiHatasi, CiftKayitHatasi (ValueError alt sınıfları) ve VknKayit sınıfı yazıldı: vkn_gecerli_mi boşluk temizler, 10 ASCII rakam ve ilk hane≠0 kontrolü yapar, belirtilen checksum algoritmasını uygular, TC checksum'una uyan 11 hanede TCileKaristiHatasi, diğer format bozukluğunda VknHatasi fırlatır; kaydet unvan/VKN strip eder, boşları ve geçersiz VKN'i reddeder, aynı VKN ve case-insensitive aynı unvanda CiftKayitHatasi verir; sirali_unvanlar unvan.lower() sözlük sırasına göre (unvan,vkn) listeler, None girişte TypeError verilir.",
+ "adim": 5,
+ "yurutucu_token": {
+  "girdi": 18381,
+  "cikti": 16645
+ },
+ "yurutucu_usd": 0.0051671,
+ "bitirdi": true,
+ "sure_sn": 126.7,
+ "gizli": {
+  "gecti": false,
+  "gecen": 19,
+  "toplam": 20,
+  "cikti": ".....F..............                                                     [100%]\n=================================== FAILURES ===================================\n_____________________________ test_ilk_hane_sifir ______________________________\n\n    def test_ilk_hane_sifir():\n        k = VknKayit()\n>       with pytest.raises(VknHatasi):\nE       Failed: DID NOT RAISE <class 'vergi.VknHatasi'>\n\n.gizli/test_gizli.py:33: Failed\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_ilk_hane_sifir - Failed: DID NOT RAISE <cla...\n1 failed, 19 passed in 0.03s\n"
+ }
+}

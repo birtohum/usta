@@ -1,0 +1,35 @@
+{
+ "id": "h120",
+ "kip": "c",
+ "kategori": "veri yapıları ve algoritmalar (kuyruk, önbellek, arama, gruplama, birleştirme, durum makinesi)",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 20,
+   "basarili": 20
+  }
+ ],
+ "spark_usd": 0.0024663000000000003,
+ "arayuz": "",
+ "hakem": [],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [],
+ "kabul_gecti": true,
+ "ozet": "dalis_cli.py yazıldı: argparse ile --giris/--grup/--siralama/--ters/--limit/--format destekler, başlık doğrulama, adet 0-500 kontrolü, boş/yinelenen kimlik eleme (stderr uyarı), marka/durum gruplama, adet/çeşit sıralama + grup adı tie-break, json/csv çıktı, hata kodları (2 argparse, 1 dosya/başlık). 15 pytest testi geçti.",
+ "adim": 6,
+ "yurutucu_token": {
+  "girdi": 24030,
+  "cikti": 13075
+ },
+ "yurutucu_usd": 0.005018,
+ "bitirdi": true,
+ "sure_sn": 248.2,
+ "gizli": {
+  "gecti": false,
+  "gecen": 6,
+  "toplam": 16,
+  "cikti": "a/pytest-0/test_10_strip_case_sensitive0')\n\n    def test_10_strip_case_sensitive(tmp_path):\n        g = csv_yaz(tmp_path, [[\"1\", \"a\", \"Aqua\", \"5\", \"x\"],[\"2\", \"b\", \" Aqua \", \"7\", \"x\"],[\"3\", \"c\", \"aqua\", \"3\", \"x\"]])\n        r = calistir(\"--giris\", g, \"--grup\", \"marka\", \"--siralama\", \"adet\", \"--format\", \"json\")\n>       assert r.returncode == 0\nE       assert 1 == 0\nE        +  where 1 = CompletedProcess(args=['/usr/bin/python', '/home/usta/is/999ef6df21fe/dalis_cli.py', '--giris', '/home/usta/is/999ef6d...şlık: ['ekipman_id', 'ad', 'marka', 'adet', 'durum'], beklenen: ['ekipman kimliği', 'ad', 'marka', 'adet', 'durum']\\n\").returncode\n\n.gizli/test_gizli.py:91: AssertionError\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_01_json_marka_adet_artan - assert 1 == 0\nFAILED .gizli/test_gizli.py::test_02_json_marka_adet_ters - assert 1 == 0\nFAILED .gizli/test_gizli.py::test_03_csv_cikti - assert 1 == 0\nFAILED .gizli/test_gizli.py::test_04_grup_durum - assert 1 == 0\nFAILED .gizli/test_gizli.py::test_05_siralama_cesit_ikinci_anahtar - assert 1...\nFAILED .gizli/test_gizli.py::test_06_limit - assert 1 == 0\nFAILED .gizli/test_gizli.py::test_07_adet_aralik_disi_atlanir - assert 1 == 0\nFAILED .gizli/test_gizli.py::test_08_bos_kimlik_atlanir - assert 1 == 0\nFAILED .gizli/test_gizli.py::test_09_yinelenen_kimlik - assert 1 == 0\nFAILED .gizli/test_gizli.py::test_10_strip_case_sensitive - assert 1 == 0\n10 failed, 6 passed in 0.49s\n"
+ }
+}

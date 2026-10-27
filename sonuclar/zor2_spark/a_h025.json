@@ -1,0 +1,23 @@
+{
+ "id": "h025",
+ "kip": "a",
+ "kategori": "Türkçe metin işleme (Türkçe harfler, büyük/küçük harf, hece, ek, sıralama, sayı/yazı)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "turkce_karakter.py oluşturuldu: turkce_buyut/turkce_kucult yalnızca harita ile dönüşüm yapar (i→İ, ı→I, I→ı, İ→i), lower/upper kullanılmaz, noktalama/rakam korunur, boş dize ve TypeError koşulları sağlanır, tutarlılık test edildi.",
+ "adim": 9,
+ "yurutucu_token": {
+  "girdi": 31200,
+  "cikti": 7283
+ },
+ "yurutucu_usd": 0.0045766,
+ "bitirdi": true,
+ "sure_sn": 74.8,
+ "gizli": {
+  "gecti": true,
+  "gecen": 17,
+  "toplam": 17,
+  "cikti": ".................                                                        [100%]\n17 passed in 0.02s\n"
+ }
+}

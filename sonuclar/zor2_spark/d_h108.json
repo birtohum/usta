@@ -1,0 +1,38 @@
+{
+ "id": "h108",
+ "kip": "d",
+ "kategori": "veri yapıları ve algoritmalar (kuyruk, önbellek, arama, gruplama, birleştirme, durum makinesi)",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 19,
+   "basarili": 19
+  }
+ ],
+ "spark_usd": 0.0034437,
+ "arayuz": "",
+ "hakem": [],
+ "geri_alma": 0,
+ "inceleme": {
+  "yazilan": 0,
+  "kanitli": []
+ },
+ "iptal_edilen_test": [],
+ "kabul_gecti": true,
+ "ozet": "`log_birlestir.py` içinde `sirali_loglari_birlestir` yazıldı: `heapq` ile k-yollu birleştirme, `datetime.strptime(%Y-%m-%d %H:%M:%S)` ile zaman doğrulama, boş/blank `kaynak_id` ve hatalı `zaman` için `ValueError`, `None`/non-str `mesaj` ve liste-dışı girdi için `TypeError`, `(datetime,kaynak,mesaj)` üçlüsüne göre dedup ve sıralama, girdileri değiştirmeme ve yeni sözlükler döndürme. pytest ile 12 test geçti.",
+ "adim": 4,
+ "yurutucu_token": {
+  "girdi": 11461,
+  "cikti": 7863
+ },
+ "yurutucu_usd": 0.0027187000000000005,
+ "bitirdi": true,
+ "sure_sn": 235.2,
+ "gizli": {
+  "gecti": true,
+  "gecen": 19,
+  "toplam": 19,
+  "cikti": "...................                                                      [100%]\n19 passed in 0.02s\n"
+ }
+}

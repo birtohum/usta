@@ -1,0 +1,38 @@
+{
+ "id": "h140",
+ "kip": "d",
+ "kategori": "tarih ve saat (iş günü, resmî tatil listesi parametre olarak verilir, süre hesabı, biçim dönüşümü)",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 20,
+   "basarili": 20
+  }
+ ],
+ "spark_usd": 0.002945,
+ "arayuz": "",
+ "hakem": [],
+ "geri_alma": 0,
+ "inceleme": {
+  "yazilan": 0,
+  "kanitli": []
+ },
+ "iptal_edilen_test": [],
+ "kabul_gecti": true,
+ "ozet": "kalip_bakim.py dosyasina sonraki_bakim ve calisma_suresi_dk fonksiyonlari yazildi: DD/MM/YYYY ve YYYY-MM-DD girdi kabulü, YYYY-MM-DD cikti, hafta sonu/tatil atlama, baslangic haric bitis dahil is gunu sayimi, 1-500 periyot kontrolu, gece yarisi bolunerek sure hesabi, 15 dakikaya yukari yuvarlama, Subat 29/artik yil ve bozuk bicim ValueError kontrolleri, tarih+periyot siralama yardimcisi. test_kalip_bakim.py ile 13 test yazildi, pytest ile hepsi gecti.",
+ "adim": 9,
+ "yurutucu_token": {
+  "girdi": 51798,
+  "cikti": 15308
+ },
+ "yurutucu_usd": 0.0082414,
+ "bitirdi": true,
+ "sure_sn": 298.9,
+ "gizli": {
+  "gecti": true,
+  "gecen": 18,
+  "toplam": 18,
+  "cikti": "..................                                                       [100%]\n18 passed in 0.02s\n"
+ }
+}

@@ -1,0 +1,23 @@
+{
+ "id": "h147",
+ "kip": "b",
+ "kategori": "doğrulama ve ayrıştırma (TC kimlik, IBAN, telefon, plaka, e-posta, adres biçimi)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "plaka_iban.py içinde plaka_normalize, yabanci_plaka_ayristir, iban_dogrula_tr ve rapor_orani fonksiyonları ile plaka/IBAN eşitlik ve sıralama yardımcıları yazıldı; 15 pytest testi geçiyor.",
+ "adim": 20,
+ "yurutucu_token": {
+  "girdi": 274603,
+  "cikti": 69733
+ },
+ "yurutucu_usd": 0.0414069,
+ "bitirdi": true,
+ "sure_sn": 626.6,
+ "gizli": {
+  "gecti": true,
+  "gecen": 18,
+  "toplam": 18,
+  "cikti": "..................                                                       [100%]\n18 passed in 0.02s\n"
+ }
+}

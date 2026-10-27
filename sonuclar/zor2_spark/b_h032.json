@@ -1,0 +1,23 @@
+{
+ "id": "h032",
+ "kip": "b",
+ "kategori": "küçük işletme hesapları (KDV, fatura, taksit, indirim, stok, kur dönüşümü, yuvarlama)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "pazar_yeri.py içinde komisyon_hesapla, kargo_paylas ve net_kazanc fonksiyonları Decimal yarım-yukarı yuvarlama ile yazıldı; kategori/sınır doğrulamaları, kargo paylaşım ve iade kuralları uygulandı. 17 pytest testi yazıldı ve hepsi geçti.",
+ "adim": 4,
+ "yurutucu_token": {
+  "girdi": 14368,
+  "cikti": 7931
+ },
+ "yurutucu_usd": 0.003023,
+ "bitirdi": true,
+ "sure_sn": 63.8,
+ "gizli": {
+  "gecti": true,
+  "gecen": 17,
+  "toplam": 17,
+  "cikti": ".................                                                        [100%]\n17 passed in 0.03s\n"
+ }
+}

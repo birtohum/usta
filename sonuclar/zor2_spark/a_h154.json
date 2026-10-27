@@ -1,0 +1,23 @@
+{
+ "id": "h154",
+ "kip": "a",
+ "kategori": "doğrulama ve ayrıştırma (TC kimlik, IBAN, telefon, plaka, e-posta, adres biçimi)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "rezervasyon_dogrulama.py içinde durum tutan RezervasyonDogrulayici sınıfı yazıldı: ekle() plaka/telefon/eposta normalizasyonu ve doğrulaması yapıp id döndürüyor, yinelenen plakada ValueError, string-dışı girdide TypeError yükseltiyor; listele() plakaya sonra epostaya göre sıralı kayıt döndürüyor; doluluk_orani() kapasite 0 ise 0.0, aksi halde matematiksel yuvarlamayla 2 basamaklı yüzde veriyor.",
+ "adim": 5,
+ "yurutucu_token": {
+  "girdi": 17450,
+  "cikti": 21503
+ },
+ "yurutucu_usd": 0.0060456,
+ "bitirdi": true,
+ "sure_sn": 188.9,
+ "gizli": {
+  "gecti": true,
+  "gecen": 16,
+  "toplam": 16,
+  "cikti": "................                                                         [100%]\n16 passed in 0.02s\n"
+ }
+}

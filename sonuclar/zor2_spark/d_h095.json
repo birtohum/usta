@@ -1,0 +1,38 @@
+{
+ "id": "h095",
+ "kip": "d",
+ "kategori": "doğrulama ve ayrıştırma (TC kimlik, IBAN, telefon, plaka, e-posta, adres biçimi)",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 18,
+   "basarili": 18
+  }
+ ],
+ "spark_usd": 0.006595800000000001,
+ "arayuz": "",
+ "hakem": [],
+ "geri_alma": 0,
+ "inceleme": {
+  "yazilan": 0,
+  "kanitli": []
+ },
+ "iptal_edilen_test": [],
+ "kabul_gecti": true,
+ "ozet": "`yardim_denetle.py` yazıldı: `--girdi/--cikti/--hata-log` CLI ile CSV okuyup TC checksum, IBAN TR-26 mod97, telefon 0/+90 5XX, tek-@ e-posta, normalize plaka 01-81 ve posta kodu 01000-81999 doğrulaması yapar; 6 alan yoksa alan-sayisi-hatasi, tekrar TC'de tekrar-tc-hatasi üretir, boş satırları atlar, rapor.json ve hatalar.log'u belirtilen biçimde yazar, eksik dosyada FileNotFoundError fırlatır. 8 pytest testi geçti.",
+ "adim": 12,
+ "yurutucu_token": {
+  "girdi": 82734,
+  "cikti": 29808
+ },
+ "yurutucu_usd": 0.014235000000000001,
+ "bitirdi": true,
+ "sure_sn": 400.0,
+ "gizli": {
+  "gecti": true,
+  "gecen": 16,
+  "toplam": 16,
+  "cikti": "................                                                         [100%]\n16 passed in 0.55s\n"
+ }
+}

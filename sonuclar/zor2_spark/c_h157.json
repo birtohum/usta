@@ -1,0 +1,35 @@
+{
+ "id": "h157",
+ "kip": "c",
+ "kategori": "dosya ve komut satırı (CSV/JSON okuma, rapor yazdırma, argümanlar, hata mesajları)",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 19,
+   "basarili": 19
+  }
+ ],
+ "spark_usd": 0.0022377,
+ "arayuz": "",
+ "hakem": [],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [],
+ "kabul_gecti": true,
+ "ozet": "SeramikFirini sınıfı seramik.py içinde yazıldı: kapasite/ürün/parti doğrulamaları, Decimal ROUND_HALF_UP ile 4 basamak fire oranı, tarih biçimi denetimi, fire_raporu sıralaması, UTF-8 JSON kaydet/yükle ve istenen hata mesajları uygulandı. pytest ile 9 test geçti.",
+ "adim": 8,
+ "yurutucu_token": {
+  "girdi": 50633,
+  "cikti": 19788
+ },
+ "yurutucu_usd": 0.0090209,
+ "bitirdi": true,
+ "sure_sn": 271.4,
+ "gizli": {
+  "gecti": true,
+  "gecen": 17,
+  "toplam": 17,
+  "cikti": ".................                                                        [100%]\n17 passed in 0.02s\n"
+ }
+}

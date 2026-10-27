@@ -1,0 +1,23 @@
+{
+ "id": "h144",
+ "kip": "a",
+ "kategori": "küçük işletme hesapları (KDV, fatura, taksit, indirim, stok, kur dönüşümü, yuvarlama)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "dovizli_borc.py yazıldı: DovizliBorcDefteri sınıfı Decimal HALF_UP yuvarlama, YYYY-XXXXXX format kontrolü, FIFO mahsup, lehte/aleyhte kur farkı ve ValueError/TypeError ayrımıyla borc_ekle/odeme_yap/durum metotlarını sunar.",
+ "adim": 6,
+ "yurutucu_token": {
+  "girdi": 17798,
+  "cikti": 28044
+ },
+ "yurutucu_usd": 0.007388600000000001,
+ "bitirdi": true,
+ "sure_sn": 245.2,
+ "gizli": {
+  "gecti": false,
+  "gecen": 11,
+  "toplam": 16,
+  "cikti": ".gizli/test_gizli.py:153: Failed\n__________________________ test_13_tarih_sirasi_bozuk __________________________\n\n    def test_13_tarih_sirasi_bozuk():\n        d = DovizliBorcDefteri()\n        d.borc_ekle(\"2026-000001\", 10.0, 10.0, date(2026, 3, 10))\n>       with pytest.raises(ValueError):\nE       Failed: DID NOT RAISE <class 'ValueError'>\n\n.gizli/test_gizli.py:167: Failed\n_____________________ test_16_kur_farki_yuvarlama_half_up ______________________\n\n    def test_16_kur_farki_yuvarlama_half_up():\n        d = DovizliBorcDefteri()\n        d.borc_ekle(\"2026-000001\", 1.0, 10.0, date(2026, 1, 1))\n        # fark (10.0055-10)*1 = 0.0055 -> 0.01 HALF_UP aleyhte\n        r = d.odeme_yap(\"2026-000002\", 10.01, 10.0055, date(2026, 1, 2))\n        lehe, aleyhe = _lehe_aleyhe(r)\n>       assert aleyhe == Decimal(\"0.01\")\nE       AssertionError: assert None == Decimal('0.01')\nE        +  where Decimal('0.01') = Decimal('0.01')\n\n.gizli/test_gizli.py:203: AssertionError\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_05_kur_farki_aleyhte - AssertionError: asse...\nFAILED .gizli/test_gizli.py::test_06_kur_farki_lehte - AssertionError: assert...\nFAILED .gizli/test_gizli.py::test_11_bakiyeyi_asan_odeme - Failed: DID NOT RA...\nFAILED .gizli/test_gizli.py::test_13_tarih_sirasi_bozuk - Failed: DID NOT RAI...\nFAILED .gizli/test_gizli.py::test_16_kur_farki_yuvarlama_half_up - AssertionE...\n5 failed, 11 passed in 0.04s\n"
+ }
+}

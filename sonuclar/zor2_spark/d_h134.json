@@ -1,0 +1,38 @@
+{
+ "id": "h134",
+ "kip": "d",
+ "kategori": "küçük işletme hesapları (KDV, fatura, taksit, indirim, stok, kur dönüşümü, yuvarlama)",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 17,
+   "basarili": 17
+  }
+ ],
+ "spark_usd": 0.0046412,
+ "arayuz": "",
+ "hakem": [],
+ "geri_alma": 0,
+ "inceleme": {
+  "yazilan": 0,
+  "kanitli": []
+ },
+ "iptal_edilen_test": [],
+ "kabul_gecti": true,
+ "ozet": "pos.py içinde PosNetlestirme sınıfı yazıldı: peşin/taksit komisyon doğrulama, Decimal HALF_UP ile net/brüt hesaplama, satis_ekle/net_hesapla/ozet metotları, TypeError/ValueError ayrımı ve net-azalan ozet sıralaması. test_pos.py ile 13 pytest testi geçti.",
+ "adim": 8,
+ "yurutucu_token": {
+  "girdi": 35678,
+  "cikti": 18900
+ },
+ "yurutucu_usd": 0.007347800000000001,
+ "bitirdi": true,
+ "sure_sn": 435.7,
+ "gizli": {
+  "gecti": true,
+  "gecen": 17,
+  "toplam": 17,
+  "cikti": ".................                                                        [100%]\n17 passed in 0.03s\n"
+ }
+}

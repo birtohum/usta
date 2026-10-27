@@ -1,0 +1,23 @@
+{
+ "id": "h052",
+ "kip": "a",
+ "kategori": "dosya ve komut satırı (CSV/JSON okuma, rapor yazdırma, argümanlar, hata mesajları)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "`cay_odeme.py` yazıldı: UTF-8-SIG CSV okuma, satır doğrulama (uyarılar stderr'e), case-insensitive id gruplama, Decimal ile ROUND_HALF_UP yuvarlama, ödeme sıralaması, hata kodları (2) ve `OK` çıktısı, otomatik çıktı dizini oluşturma. Testlerle doğrulandı.",
+ "adim": 10,
+ "yurutucu_token": {
+  "girdi": 79858,
+  "cikti": 22617
+ },
+ "yurutucu_usd": 0.012509200000000002,
+ "bitirdi": true,
+ "sure_sn": 197.5,
+ "gizli": {
+  "gecti": true,
+  "gecen": 16,
+  "toplam": 16,
+  "cikti": "................                                                         [100%]\n16 passed in 0.55s\n"
+ }
+}

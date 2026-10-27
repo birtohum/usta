@@ -1,0 +1,23 @@
+{
+ "id": "h125",
+ "kip": "b",
+ "kategori": "doğrulama ve ayrıştırma (TC kimlik, IBAN, telefon, plaka, e-posta, adres biçimi)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "YardimBasvuruDenetleyici sinifi yardim_kaydi.py dosyasina yazildi; TC checksum, GSM ve IBAN mod97 dogrulamalari, 4 parcali adres ayrimi, Hatay disi isaretleme, yinelenen tespiti, sirali saklama ve ozet rapor eklendi. 11 pytest testi geciyor.",
+ "adim": 10,
+ "yurutucu_token": {
+  "girdi": 34659,
+  "cikti": 36004
+ },
+ "yurutucu_usd": 0.010666700000000003,
+ "bitirdi": true,
+ "sure_sn": 279.5,
+ "gizli": {
+  "gecti": false,
+  "gecen": 14,
+  "toplam": 18,
+  "cikti": "        ibann = iban.strip()\n        # bos dizeyi gecersiz say -> ValueError\n        if tcn == \"\" or teln == \"\" or adrn == \"\" or ibann == \"\":\n            self._toplam += 1\n            self._hatali += 1\n            raise ValueError(\"bos dize gecersiz\")\n        # yinelenen: ayni TC ikinci kez\n        if tcn in self._kayitlar:\n            self._toplam += 1\n            self._yinelenen += 1\n            return {\"durum\": \"yinelenen\", \"kod\": \"YINELENEN\", \"tc\": tcn, \"gecerli\": False, \"hatali\": False, \"yinelenen\": True}\n        # TC kontrol: 11 hane + checksum\n        if len(tcn) != 11 or not tcn.isdigit() or not self._tc_gecerli_mi(tcn):\n            self._toplam += 1\n            self._hatali += 1\n            raise ValueError(\"TC gecersiz\")\n        # telefon kontrol\n        if not self._telefon_gecerli_mi(telefon):\n            self._toplam += 1\n            self._hatali += 1\n>           raise ValueError(\"telefon gecersiz\")\nE           ValueError: telefon gecersiz\n\nyardim_kaydi.py:111: ValueError\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_gecerli_hatay - AssertionError: assert 'GEC...\nFAILED .gizli/test_gizli.py::test_kayitlar_tc_artan_sira - AttributeError: 'Y...\nFAILED .gizli/test_gizli.py::test_ozet_rapor_sayi_ve_oran - assert 0.5 == 50.0\nFAILED .gizli/test_gizli.py::test_sinir_10hane_tel_26hane_iban_gecerli - Valu...\n4 failed, 14 passed in 0.05s\n"
+ }
+}

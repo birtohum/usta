@@ -1,0 +1,47 @@
+{
+ "id": "h024",
+ "kip": "c",
+ "kategori": "veri yapıları ve algoritmalar (kuyruk, önbellek, arama, gruplama, birleştirme, durum makinesi)",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": false,
+   "toplam": 18,
+   "basarili": 17
+  },
+  {
+   "gecti": true,
+   "toplam": 18,
+   "basarili": 18
+  }
+ ],
+ "spark_usd": 0.0025278,
+ "arayuz": "",
+ "hakem": [
+  {
+   "test": "test_turkce_karakter_duyarsizligi",
+   "karar": "gerekli",
+   "gerekce": "Görev metni eşitlikte büyük küçük harf ve Türkçe karakter farkının gözetilmemesini açıkça istiyor.",
+   "tur": 1
+  }
+ ],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [],
+ "kabul_gecti": true,
+ "ozet": "Türkçe karakter duyarsızlığı düzeltildi: normalize() çıktısı aynen korunurken benzerlik hesabında tokenlar ç->c, ğ->g, ı->i, ö->o, ş->s, ü->u katlamasıyla karşılaştırılıyor; böylece \"çocuk kitabı\"/\"cocuk kitabi\" Jaccard puanı 1.0 oluyor. Kendi testlerim (4) ve kabul testleri (18/18) geçiyor.",
+ "adim": 13,
+ "yurutucu_token": {
+  "girdi": 64898,
+  "cikti": 32457
+ },
+ "yurutucu_usd": 0.012981200000000002,
+ "bitirdi": true,
+ "sure_sn": 346.5,
+ "gizli": {
+  "gecti": true,
+  "gecen": 16,
+  "toplam": 16,
+  "cikti": "................                                                         [100%]\n16 passed in 0.02s\n"
+ }
+}

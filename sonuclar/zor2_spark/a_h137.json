@@ -1,0 +1,23 @@
+{
+ "id": "h137",
+ "kip": "a",
+ "kategori": "doğrulama ve ayrıştırma (TC kimlik, IBAN, telefon, plaka, e-posta, adres biçimi)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "abonelik_dogrulama.py yazıldı: iban_temizle, eposta_dogrula, adres_cozumle, ozet_rapor ve liste tekilleştirme/sıralama işlevleri eklendi, hızlı testler geçti.",
+ "adim": 6,
+ "yurutucu_token": {
+  "girdi": 15802,
+  "cikti": 20875
+ },
+ "yurutucu_usd": 0.0057552,
+ "bitirdi": true,
+ "sure_sn": 176.7,
+ "gizli": {
+  "gecti": false,
+  "gecen": 18,
+  "toplam": 20,
+  "cikti": "............F....F..                                                     [100%]\n=================================== FAILURES ===================================\n_________________________ test_adres_cozumle_basarili __________________________\n\n    def test_adres_cozumle_basarili():\n        m = \"Mahalle: Cumhuriyet, Sokak: Atatürk, Bina No: 12, Daire No: 5\"\n>       assert adres_cozumle(m) == {\"mahalle\": \"Cumhuriyet\", \"sokak\": \"Atatürk\", \"bina_no\": 12, \"daire_no\": \"5\"}\nE       AssertionError: assert {'bina_no': 1...k': 'Atatürk'} == {'bina_no': 1...k': 'Atatürk'}\nE         Omitting 3 identical items, use -vv to show\nE         Differing items:\nE         {'daire_no': 5} != {'daire_no': '5'}\nE         Use -v to get more diff\n\n.gizli/test_gizli.py:94: AssertionError\n_______________________ test_ozet_matematiksel_yuvarlama _______________________\n\n    def test_ozet_matematiksel_yuvarlama():\n>       assert ozet_rapor(201, 20000) == 1.01\nE       assert 1.0 == 1.01\nE        +  where 1.0 = ozet_rapor(201, 20000)\n\n.gizli/test_gizli.py:125: AssertionError\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_adres_cozumle_basarili - AssertionError: as...\nFAILED .gizli/test_gizli.py::test_ozet_matematiksel_yuvarlama - assert 1.0 ==...\n2 failed, 18 passed in 0.03s\n"
+ }
+}

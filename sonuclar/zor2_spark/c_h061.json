@@ -1,0 +1,35 @@
+{
+ "id": "h061",
+ "kip": "c",
+ "kategori": "Türkçe metin işleme (Türkçe harfler, büyük/küçük harf, hece, ek, sıralama, sayı/yazı)",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 17,
+   "basarili": 17
+  }
+ ],
+ "spark_usd": 0.0030830000000000002,
+ "arayuz": "Dosya kisaltma_coz.py. kisaltmayi_ac, kesme_denetle, toplu_isle görevdeki imzalarıyla kullanılır. kesme_denetle bulgu sözlüğü anahtarları: hata_turu, baslangic_konumu, oneri. Düzeltme oranı için: duzeltme_orani(onceki: str, sonraki: str) -> str.",
+ "hakem": [],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [],
+ "kabul_gecti": true,
+ "ozet": "kisaltma_coz.py modülü yazıldı: kisaltmayi_ac, kesme_denetle, toplu_isle ve duzeltme_orani işlevleri görevdeki imza ve kurallara uygun uygulandı; 14 pytest testi geçti.",
+ "adim": 5,
+ "yurutucu_token": {
+  "girdi": 22339,
+  "cikti": 23582
+ },
+ "yurutucu_usd": 0.0069503,
+ "bitirdi": true,
+ "sure_sn": 217.6,
+ "gizli": {
+  "gecti": false,
+  "gecen": 14,
+  "toplam": 17,
+  "cikti": "            raise TypeError(\"onceki ve sonraki str olmalidir.\")\n        if not isinstance(onceki, str) or not isinstance(sonraki, str):\n>           raise TypeError(\"onceki ve sonraki str olmalidir.\")\nE           TypeError: onceki ve sonraki str olmalidir.\n\nkisaltma_coz.py:307: TypeError\n____________________________ test_oran_yuzde_bicim _____________________________\n\n    def test_oran_yuzde_bicim():\n>       s = duzeltme_orani(1, 4)\n\n.gizli/test_gizli.py:83: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nonceki = 1, sonraki = 4\n\n    def duzeltme_orani(onceki: str, sonraki: str) -> str:\n        \"\"\"Degistirilen karakter / toplam karakter oranini yuzde bicimde raporla.\"\"\"\n        if onceki is None or sonraki is None:\n            raise TypeError(\"onceki ve sonraki str olmalidir.\")\n        if not isinstance(onceki, str) or not isinstance(sonraki, str):\n>           raise TypeError(\"onceki ve sonraki str olmalidir.\")\nE           TypeError: onceki ve sonraki str olmalidir.\n\nkisaltma_coz.py:307: TypeError\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_kesme_alanlar - assert (False)\nFAILED .gizli/test_gizli.py::test_oran_yarim_yukari - TypeError: onceki ve so...\nFAILED .gizli/test_gizli.py::test_oran_yuzde_bicim - TypeError: onceki ve son...\n3 failed, 14 passed in 0.06s\n"
+ }
+}

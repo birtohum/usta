@@ -1,0 +1,23 @@
+{
+ "id": "h116",
+ "kip": "b",
+ "kategori": "küçük işletme hesapları (KDV, fatura, taksit, indirim, stok, kur dönüşümü, yuvarlama)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "konsinye.py içinde KonsinyeHesap sınıfı yazıldı: komisyon 0-0.50, kod regex, fiyat ve adet aralık kontrolleri, Decimal HALF_UP yuvarlama, brüt/komisyon/net/%20 KDV hesabı, stok ve kümülatif iade kontrolleri, koda göre sıralı hakediş listesi. pytest ile 5 test geçti.",
+ "adim": 5,
+ "yurutucu_token": {
+  "girdi": 15330,
+  "cikti": 20974
+ },
+ "yurutucu_usd": 0.005727800000000001,
+ "bitirdi": true,
+ "sure_sn": 165.7,
+ "gizli": {
+  "gecti": false,
+  "gecen": 13,
+  "toplam": 17,
+  "cikti": "        assert u[\"brut\"] == Decimal(\"120.00\")\n        assert u[\"komisyon\"] == Decimal(\"0.00\")\n>       assert u[\"net\"] == Decimal(\"100.00\")\nE       AssertionError: assert Decimal('120.00') == Decimal('100.00')\nE        +  where Decimal('100.00') = Decimal('100.00')\n\n.gizli/test_gizli.py:155: AssertionError\n_____________________ test_iade_normal_ve_hakedise_yansima _____________________\n\n    def test_iade_normal_ve_hakedise_yansima():\n        h = KonsinyeHesap(0.10)\n        h.emanet_ekle(\"AB-1234\", 10, 100.00)\n        h.satis_kaydet(\"AB-1234\", 5)\n        h.iade_kaydet(\"AB-1234\", 2)\n        s = h.hakedis_hesapla()\n        u = s[\"urunler\"][0]\n        assert u[\"adet\"] == 3\n        assert u[\"brut\"] == Decimal(\"300.00\")\n        assert u[\"komisyon\"] == Decimal(\"30.00\")\n>       assert u[\"net\"] == Decimal(\"225.00\")\nE       AssertionError: assert Decimal('270.00') == Decimal('225.00')\nE        +  where Decimal('225.00') = Decimal('225.00')\n\n.gizli/test_gizli.py:184: AssertionError\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_hakedis_temel_hesap - AssertionError: asser...\nFAILED .gizli/test_gizli.py::test_hakedis_half_up_yuvarlama - AssertionError:...\nFAILED .gizli/test_gizli.py::test_hakedis_sifir_komisyon - AssertionError: as...\nFAILED .gizli/test_gizli.py::test_iade_normal_ve_hakedise_yansima - Assertion...\n4 failed, 13 passed in 0.04s\n"
+ }
+}

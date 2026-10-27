@@ -1,0 +1,35 @@
+{
+ "id": "h069",
+ "kip": "c",
+ "kategori": "tarih ve saat (iş günü, resmî tatil listesi parametre olarak verilir, süre hesabı, biçim dönüşümü)",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 16,
+   "basarili": 16
+  }
+ ],
+ "spark_usd": 0.0015659000000000003,
+ "arayuz": "",
+ "hakem": [],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [],
+ "kabul_gecti": true,
+ "ozet": "kidem_gun.py içinde KidemHesaplayici sınıfı yazıldı: YYYY-MM-DD doğrulama, 1900 öncesi ve ters tarih ValueError, dahil gün sayımı, çakışan/bitişik aralık birleştirme, tatillerin düşülmeden işaretlenmesi ve sıralı rapor. 17 pytest testi yazıldı ve hepsi geçti.",
+ "adim": 4,
+ "yurutucu_token": {
+  "girdi": 12895,
+  "cikti": 4226
+ },
+ "yurutucu_usd": 0.0021347,
+ "bitirdi": true,
+ "sure_sn": 230.6,
+ "gizli": {
+  "gecti": true,
+  "gecen": 17,
+  "toplam": 17,
+  "cikti": ".................                                                        [100%]\n17 passed in 0.02s\n"
+ }
+}

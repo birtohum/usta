@@ -1,0 +1,35 @@
+{
+ "id": "h153",
+ "kip": "c",
+ "kategori": "dosya ve komut satırı (CSV/JSON okuma, rapor yazdırma, argümanlar, hata mesajları)",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 19,
+   "basarili": 19
+  }
+ ],
+ "spark_usd": 0.0030355,
+ "arayuz": "",
+ "hakem": [],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [],
+ "kabul_gecti": true,
+ "ozet": "`baharat_kontrol.py` yazıldı: JSON parti listesini doğrulayıp SKT/kalan_gün hesaplar, durumu belirler, kalan_gün+parti_id sıralı UTF-8 CSV yazar; hatalı kayıtları stderr uyarısıyla atlar, yinelenen parti_id'de ilki korur, hata kodlarını ve stdout özetini spec'e uygun üretir. 9 pytest testi geçiyor.",
+ "adim": 7,
+ "yurutucu_token": {
+  "girdi": 37202,
+  "cikti": 11874
+ },
+ "yurutucu_usd": 0.006095,
+ "bitirdi": true,
+ "sure_sn": 326.7,
+ "gizli": {
+  "gecti": true,
+  "gecen": 17,
+  "toplam": 17,
+  "cikti": ".................                                                        [100%]\n17 passed in 0.50s\n"
+ }
+}

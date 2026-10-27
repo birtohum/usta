@@ -1,0 +1,23 @@
+{
+ "id": "h098",
+ "kip": "b",
+ "kategori": "küçük işletme hesapları (KDV, fatura, taksit, indirim, stok, kur dönüşümü, yuvarlama)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "rezervasyon.py içinde IptalliRezervasyon sınıfı yazıldı: kod regex, kişi 1-20, tarih strptime doğrulaması, ücret Decimal aralık kontrolü, gün farkına göre %10/%30/0 iade kademesi ROUND_HALF_UP ile, duplicate ValueError, bilinmeyen kod KeyError, liste sıralı. pytest ile 6 test geçti.",
+ "adim": 9,
+ "yurutucu_token": {
+  "girdi": 34931,
+  "cikti": 10339
+ },
+ "yurutucu_usd": 0.0055609000000000006,
+ "bitirdi": true,
+ "sure_sn": 100.1,
+ "gizli": {
+  "gecti": true,
+  "gecen": 16,
+  "toplam": 16,
+  "cikti": "................                                                         [100%]\n16 passed in 0.02s\n"
+ }
+}

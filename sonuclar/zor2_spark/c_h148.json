@@ -1,0 +1,35 @@
+{
+ "id": "h148",
+ "kip": "c",
+ "kategori": "veri yapıları ve algoritmalar (kuyruk, önbellek, arama, gruplama, birleştirme, durum makinesi)",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 18,
+   "basarili": 18
+  }
+ ],
+ "spark_usd": 0.0026546,
+ "arayuz": "ozet() dönüş sözlüğü anahtarları: 'sayi', 'en_kucuk', 'en_buyuk', 'ortalama', 'medyan'",
+ "hakem": [],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [],
+ "kabul_gecti": true,
+ "ozet": "`nem_penceresi.py` içinde `NemPenceresi` sınıfı yazıldı: pencere boyutu 3-1000 tam sayı kontrolü, değer 0-100 sonlu sayı kontrolü (NaN/sonsuz/bool reddi), `deque(maxlen)` ile kayan pencere, `__len__`, boş pencerede `ValueError` fırlatan `ozet()`, kırpılmış ortalama (n≥5 ise bir min+bir max dışlama), sıralı medyan ve Decimal ROUND_HALF_UP ile 2 basamak yuvarlama. `test_nem.py` ile 20 pytest testi yazıldı ve hepsi geçti.",
+ "adim": 5,
+ "yurutucu_token": {
+  "girdi": 15227,
+  "cikti": 8468
+ },
+ "yurutucu_usd": 0.0032163,
+ "bitirdi": true,
+ "sure_sn": 335.7,
+ "gizli": {
+  "gecti": true,
+  "gecen": 17,
+  "toplam": 17,
+  "cikti": ".................                                                        [100%]\n17 passed in 0.03s\n"
+ }
+}

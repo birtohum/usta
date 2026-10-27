@@ -1,0 +1,38 @@
+{
+ "id": "h117",
+ "kip": "d",
+ "kategori": "tarih ve saat (iş günü, resmî tatil listesi parametre olarak verilir, süre hesabı, biçim dönüşümü)",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 19,
+   "basarili": 19
+  }
+ ],
+ "spark_usd": 0.0034125000000000006,
+ "arayuz": "",
+ "hakem": [],
+ "geri_alma": 0,
+ "inceleme": {
+  "yazilan": 0,
+  "kanitli": []
+ },
+ "iptal_edilen_test": [],
+ "kabul_gecti": true,
+ "ozet": "bakim_penceresi.py icinde BakimPlanlayici sinifini yazdim: tatil listesini sirsiz/tekrarsiz hale getirip Cumartesi-Pazar ile birlikte calisma disi saydim; sonraki_is_gunu, pencere_suresi_dk (is gunlerine denk gelen dakika toplami, 15'e yukari yuvarlama, bozuk bicim ve baslangic>bitis icin ValueError) ve planla (artan sirali is gunleri, sifir/negatifte bos liste) metotlarini ekledim. test_bakim.py ile 19 pytest testi yazip hepsini gecirdim.",
+ "adim": 4,
+ "yurutucu_token": {
+  "girdi": 14084,
+  "cikti": 10665
+ },
+ "yurutucu_usd": 0.0035414,
+ "bitirdi": true,
+ "sure_sn": 322.0,
+ "gizli": {
+  "gecti": true,
+  "gecen": 18,
+  "toplam": 18,
+  "cikti": "..................                                                       [100%]\n18 passed in 0.03s\n"
+ }
+}

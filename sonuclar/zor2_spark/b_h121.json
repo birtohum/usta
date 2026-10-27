@@ -1,0 +1,23 @@
+{
+ "id": "h121",
+ "kip": "b",
+ "kategori": "Türkçe metin işleme (Türkçe harfler, büyük/küçük harf, hece, ek, sıralama, sayı/yazı)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "kesme.py içinde KesmeDenetleyici sınıfı yazıldı; eksik kesme, gereksiz kesme (kurum/unvan), onar, doğruluk, boş/uzun/hatalı tip kontrolleri ve Türkçe harf eşitliği sağlandı. pytest ile 8 test geçti.",
+ "adim": 11,
+ "yurutucu_token": {
+  "girdi": 52967,
+  "cikti": 56015
+ },
+ "yurutucu_usd": 0.016499700000000006,
+ "bitirdi": true,
+ "sure_sn": 514.8,
+ "gizli": {
+  "gecti": false,
+  "gecen": 16,
+  "toplam": 18,
+  "cikti": "...........FF.....                                                       [100%]\n=================================== FAILURES ===================================\n__________________________ test_unvan_gereksiz_kesme ___________________________\n\n    def test_unvan_gereksiz_kesme():\n        d = KesmeDenetleyici()\n        metin = \"Ahmet Bey'e verdim\"\n        bul = d.kontrol_et(metin)\n>       assert len(bul) == 1\nE       assert 0 == 1\nE        +  where 0 = len([])\n\n.gizli/test_gizli.py:86: AssertionError\n___________________________ test_harf_duzeni_korunur ___________________________\n\n    def test_harf_duzeni_korunur():\n        d = KesmeDenetleyici()\n        bul = d.kontrol_et(\"ahmetin kitab\\u0131\")\n>       assert len(bul) == 1\nE       assert 0 == 1\nE        +  where 0 = len([])\n\n.gizli/test_gizli.py:93: AssertionError\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_unvan_gereksiz_kesme - assert 0 == 1\nFAILED .gizli/test_gizli.py::test_harf_duzeni_korunur - assert 0 == 1\n2 failed, 16 passed in 0.05s\n"
+ }
+}

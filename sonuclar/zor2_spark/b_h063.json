@@ -1,0 +1,23 @@
+{
+ "id": "h063",
+ "kip": "b",
+ "kategori": "tarih ve saat (iş günü, resmî tatil listesi parametre olarak verilir, süre hesabı, biçim dönüşümü)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "cagri_mesai.py içinde vardiya_suresi, gece_gunduz_ayir ve primli_ucret fonksiyonlarını yazdım: 24 saat ve sıra kontrolleriyle ValueError, 22:00-06:00 gece dilimi, 6 saati aşan vardiyada 60 dk mola (önce geceden 30, sonra gündüzden 30, toplam 60 altına inmez), başlangıç tarihine göre 2x tatil ücreti (sıralı tekilleştirme), saniye atma/aşağı yuvarlama ve Decimal ile yarım-yukarı kuruş yuvarlama uyguladım. test_cagri.py ile 15 test yazıp python -m pytest -q ile hepsini geçirdim.",
+ "adim": 8,
+ "yurutucu_token": {
+  "girdi": 45774,
+  "cikti": 17975
+ },
+ "yurutucu_usd": 0.008172400000000002,
+ "bitirdi": true,
+ "sure_sn": 163.3,
+ "gizli": {
+  "gecti": true,
+  "gecen": 18,
+  "toplam": 18,
+  "cikti": "..................                                                       [100%]\n18 passed in 0.04s\n"
+ }
+}

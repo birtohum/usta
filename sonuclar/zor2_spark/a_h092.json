@@ -1,0 +1,23 @@
+{
+ "id": "h092",
+ "kip": "a",
+ "kategori": "küçük işletme hesapları (KDV, fatura, taksit, indirim, stok, kur dönüşümü, yuvarlama)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "abonelik.py içinde AbonelikDefteri sınıfı oluşturuldu: plaka normalizasyon/doğrulama, paket (5/10/20), ücret Decimal aralığı, tarih geçerliliği, hak bitmeden yeni paket yasağı, string tarih sıralaması, KeyError/ValueError kuralları ve ROUND_HALF_UP birim hesabı ile 'kalan:N,birim:X.XX' formatı uygulandı.",
+ "adim": 9,
+ "yurutucu_token": {
+  "girdi": 43159,
+  "cikti": 12000
+ },
+ "yurutucu_usd": 0.0067159,
+ "bitirdi": true,
+ "sure_sn": 104.7,
+ "gizli": {
+  "gecti": true,
+  "gecen": 16,
+  "toplam": 16,
+  "cikti": "................                                                         [100%]\n16 passed in 0.02s\n"
+ }
+}

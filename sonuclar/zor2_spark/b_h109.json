@@ -1,0 +1,23 @@
+{
+ "id": "h109",
+ "kip": "b",
+ "kategori": "Türkçe metin işleme (Türkçe harfler, büyük/küçük harf, hece, ek, sıralama, sayı/yazı)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "menu.py içinde etiketle işlevi yazıldı: Türkçe case-insensitive tam sözcük eşleşmesi, çoğul/durum ekleri hayvansal sayılır, sız/siz/suz/süz hariç tutulur, vegan→vejetaryen kuralı ve gluten kontrolü uygulanır; pytest ile 12 test geçti.",
+ "adim": 9,
+ "yurutucu_token": {
+  "girdi": 27649,
+  "cikti": 37932
+ },
+ "yurutucu_usd": 0.0103513,
+ "bitirdi": true,
+ "sure_sn": 322.7,
+ "gizli": {
+  "gecti": true,
+  "gecen": 17,
+  "toplam": 17,
+  "cikti": ".................                                                        [100%]\n17 passed in 0.09s\n"
+ }
+}

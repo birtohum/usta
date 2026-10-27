@@ -1,0 +1,23 @@
+{
+ "id": "h132",
+ "kip": "a",
+ "kategori": "veri yapıları ve algoritmalar (kuyruk, önbellek, arama, gruplama, birleştirme, durum makinesi)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "erteleme_kuyrugu.py içinde GecikmeliKuyruk sınıfı implemente edildi: ekle, hazir_olanlari_al, yeniden_planla, iptal ve __len__ metotları; is_id strip+1-64 kontrolü, yuk dict kontrolü, zaman sonluluk/negatif kontrolü, gecikme 0-86400 ve limit 1-100 kontrolü, hazır-zaman+sıra sayaçlı sıralama, limit kesmesi ve KeyError/ValueError kuralları sağlandı. Yalnızca math kullanıldı, duvar saati/rastgelelik yok.",
+ "adim": 7,
+ "yurutucu_token": {
+  "girdi": 28546,
+  "cikti": 11404
+ },
+ "yurutucu_usd": 0.0051354,
+ "bitirdi": true,
+ "sure_sn": 97.0,
+ "gizli": {
+  "gecti": true,
+  "gecen": 17,
+  "toplam": 17,
+  "cikti": ".................                                                        [100%]\n17 passed in 0.02s\n"
+ }
+}

@@ -1,0 +1,23 @@
+{
+ "id": "h120",
+ "kip": "a",
+ "kategori": "veri yapıları ve algoritmalar (kuyruk, önbellek, arama, gruplama, birleştirme, durum makinesi)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "dalis_cli.py yazıldı: argparse ile --giris/--grup/--siralama/--ters/--limit/--format destekler, başlık ve değer doğrulama, uyarılar stderr'e, JSON/CSV sıralı çıktı, yalnızca stdlib ve utf-8.",
+ "adim": 8,
+ "yurutucu_token": {
+  "girdi": 42662,
+  "cikti": 19526
+ },
+ "yurutucu_usd": 0.0081714,
+ "bitirdi": true,
+ "sure_sn": 196.9,
+ "gizli": {
+  "gecti": false,
+  "gecen": 6,
+  "toplam": 16,
+  "cikti": "_yaz(tmp_path, [[\"1\", \"a\", \"Aqua\", \"5\", \"x\"],[\"2\", \"b\", \" Aqua \", \"7\", \"x\"],[\"3\", \"c\", \"aqua\", \"3\", \"x\"]])\n        r = calistir(\"--giris\", g, \"--grup\", \"marka\", \"--siralama\", \"adet\", \"--format\", \"json\")\n>       assert r.returncode == 0\nE       AssertionError: assert 1 == 0\nE        +  where 1 = CompletedProcess(args=['/usr/bin/python', '/home/usta/is/c8e7a832f2a6/dalis_cli.py', '--giris', '/home/usta/is/c8e7a83...on'], returncode=1, stdout='', stderr='hata: başlıklar tam olarak ekipman kimliği, ad, marka, adet, durum olmalıdır\\n').returncode\n\n.gizli/test_gizli.py:91: AssertionError\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_01_json_marka_adet_artan - AssertionError: ...\nFAILED .gizli/test_gizli.py::test_02_json_marka_adet_ters - AssertionError: a...\nFAILED .gizli/test_gizli.py::test_03_csv_cikti - AssertionError: assert 1 == 0\nFAILED .gizli/test_gizli.py::test_04_grup_durum - AssertionError: assert 1 == 0\nFAILED .gizli/test_gizli.py::test_05_siralama_cesit_ikinci_anahtar - Assertio...\nFAILED .gizli/test_gizli.py::test_06_limit - AssertionError: assert 1 == 0\nFAILED .gizli/test_gizli.py::test_07_adet_aralik_disi_atlanir - AssertionErro...\nFAILED .gizli/test_gizli.py::test_08_bos_kimlik_atlanir - AssertionError: ass...\nFAILED .gizli/test_gizli.py::test_09_yinelenen_kimlik - AssertionError: asser...\nFAILED .gizli/test_gizli.py::test_10_strip_case_sensitive - AssertionError: a...\n10 failed, 6 passed in 0.68s\n"
+ }
+}

@@ -1,0 +1,35 @@
+{
+ "id": "h138",
+ "kip": "c",
+ "kategori": "veri yapıları ve algoritmalar (kuyruk, önbellek, arama, gruplama, birleştirme, durum makinesi)",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 19,
+   "basarili": 19
+  }
+ ],
+ "spark_usd": 0.0035918000000000005,
+ "arayuz": "koli_gruplama.py içinde kolileri_grupla(bitkiler, koli_kapasitesi); girdi sözlük anahtarları: kimlik, adet, soguk; çıktı sözlük anahtarları: koli_no, soguk, icerik, doluluk_orani; içerik öğe anahtarları: kimlik, adet",
+ "hakem": [],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [],
+ "kabul_gecti": true,
+ "ozet": "koli_gruplama.py içinde kolileri_grupla yazıldı: girdi doğrulama (kapasite/adet/kimlik için ValueError, soguk türü için TypeError), soğuk ayrımı, kapasite aşan adetleri parçalama, azalan adet + artan kimlik sırasıyla ilk-sığan-koliye yerleştirme, içerikleri kimlik sırasına dizme, Decimal ile yarım-yukarı 1 basamak doluluk oranı, 1'den başlayan koli_no ve girdiyi değiştirmeme. test_koli.py ile 17 pytest testi yazıldı ve hepsi geçti.",
+ "adim": 4,
+ "yurutucu_token": {
+  "girdi": 14594,
+  "cikti": 13625
+ },
+ "yurutucu_usd": 0.0041844000000000004,
+ "bitirdi": true,
+ "sure_sn": 280.2,
+ "gizli": {
+  "gecti": true,
+  "gecen": 19,
+  "toplam": 19,
+  "cikti": "...................                                                      [100%]\n19 passed in 0.03s\n"
+ }
+}

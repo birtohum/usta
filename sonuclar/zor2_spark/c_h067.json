@@ -1,0 +1,35 @@
+{
+ "id": "h067",
+ "kip": "c",
+ "kategori": "Türkçe metin işleme (Türkçe harfler, büyük/küçük harf, hece, ek, sıralama, sayı/yazı)",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 19,
+   "basarili": 19
+  }
+ ],
+ "spark_usd": 0.0028472000000000003,
+ "arayuz": "adres_norm.py içinde eslesme_orani(dogru: int, toplam: int) -> float",
+ "hakem": [],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [],
+ "kabul_gecti": true,
+ "ozet": "adres_norm.py yazıldı: normalize_adres (kısaltma genişletme, Türkçe başlıklandırma, bağlaç küçük, boşluk tekleme), posta_dogrula (5 hane zorunlu, plaka eşleşmesi, True/ValueError), toplu_normalize (uzunluk + Türkçe alfabetik + stabil sıralama), eslesme_orani (yarım-yukarı 2 ondalık, sıfır-bölmede 0.0). Hata kuralları (TypeError/ValueError) uygulandı, 14 pytest testi geçti.",
+ "adim": 5,
+ "yurutucu_token": {
+  "girdi": 16686,
+  "cikti": 26405
+ },
+ "yurutucu_usd": 0.0069496,
+ "bitirdi": true,
+ "sure_sn": 249.7,
+ "gizli": {
+  "gecti": false,
+  "gecen": 14,
+  "toplam": 18,
+  "cikti": "E         + Atatürk Bulvar Numara 10\nE         ?                 ^^^^^\n\n.gizli/test_gizli.py:9: AssertionError\n______________________________ test_toplu_uzunluk ______________________________\n\n    def test_toplu_uzunluk():\n        girdi = [\"A Sokak No 10\", \"Z Sokak\", \"B Sokak\"]\n>       assert toplu_normalize(girdi) == [\"B Sokak\", \"Z Sokak\", \"A Sokak No 10\"]\nE       AssertionError: assert ['B Sokak', '...ak Numara 10'] == ['B Sokak', '... Sokak No 10']\nE         At index 2 diff: 'A Sokak Numara 10' != 'A Sokak No 10'\nE         Use -v to get more diff\n\n.gizli/test_gizli.py:59: AssertionError\n______________________________ test_toplu_kararli ______________________________\n\n    def test_toplu_kararli():\n        girdi = [\"Çay Sokak\", \"Cay Sokak\"]\n>       assert toplu_normalize(girdi) == [\"Çay Sokak\", \"Cay Sokak\"]\nE       AssertionError: assert ['Cay Sokak', 'Çay Sokak'] == ['Çay Sokak', 'Cay Sokak']\nE         At index 0 diff: 'Cay Sokak' != 'Çay Sokak'\nE         Use -v to get more diff\n\n.gizli/test_gizli.py:66: AssertionError\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_normalize_kisaltma - AssertionError: assert...\nFAILED .gizli/test_gizli.py::test_normalize_bosluk - AssertionError: assert '...\nFAILED .gizli/test_gizli.py::test_toplu_uzunluk - AssertionError: assert ['B ...\nFAILED .gizli/test_gizli.py::test_toplu_kararli - AssertionError: assert ['Ca...\n4 failed, 14 passed in 0.04s\n"
+ }
+}

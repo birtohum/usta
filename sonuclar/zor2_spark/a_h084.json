@@ -1,0 +1,23 @@
+{
+ "id": "h084",
+ "kip": "a",
+ "kategori": "veri yapıları ve algoritmalar (kuyruk, önbellek, arama, gruplama, birleştirme, durum makinesi)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "muzayede_kuyrugu.py içinde MuzayedeKuyrugu sınıfı yazıldı: organik öncelikli + seq FIFO sıralama, Decimal ROUND_HALF_UP kilo yuvarlama, strip'lenmiş üretici, artan seq ve istenen hata türleri (ValueError/KeyError/OverflowError/IndexError) uygulandı, testlerle doğrulandı.",
+ "adim": 5,
+ "yurutucu_token": {
+  "girdi": 15969,
+  "cikti": 10095
+ },
+ "yurutucu_usd": 0.0036159,
+ "bitirdi": true,
+ "sure_sn": 78.3,
+ "gizli": {
+  "gecti": true,
+  "gecen": 18,
+  "toplam": 18,
+  "cikti": "..................                                                       [100%]\n18 passed in 0.03s\n"
+ }
+}

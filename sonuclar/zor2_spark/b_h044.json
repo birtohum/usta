@@ -1,0 +1,23 @@
+{
+ "id": "h044",
+ "kip": "b",
+ "kategori": "küçük işletme hesapları (KDV, fatura, taksit, indirim, stok, kur dönüşümü, yuvarlama)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "senet.py içinde SenetliSatis sınıfı kuruldu: Decimal ROUND_HALF_UP ile taksit tablosu (eşit bölme + kuruş farkı son taksitte, vade/sıralama), erken kapatma (kalan_borc/iskonto/odenecek float), günlük %0.05 gecikme cezası, tarih/tip/değer hata kuralları ve 4 alanlı __eq__ uygulandı; 13 pytest testi geçti.",
+ "adim": 4,
+ "yurutucu_token": {
+  "girdi": 16735,
+  "cikti": 11938
+ },
+ "yurutucu_usd": 0.004061100000000001,
+ "bitirdi": true,
+ "sure_sn": 91.6,
+ "gizli": {
+  "gecti": true,
+  "gecen": 19,
+  "toplam": 19,
+  "cikti": "...................                                                      [100%]\n19 passed in 0.03s\n"
+ }
+}

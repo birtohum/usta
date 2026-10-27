@@ -1,0 +1,23 @@
+{
+ "id": "h071",
+ "kip": "a",
+ "kategori": "doğrulama ve ayrıştırma (TC kimlik, IBAN, telefon, plaka, e-posta, adres biçimi)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "plaka.py oluşturuldu: PlakaFormatHatasi ve PlakaIlHatasi (ValueError alt sınıfları), normalize_plaka (büyük harf + Türkçe karakter dönüşümü + boşluk/tire silme + desen ve il kontrolü), il_kodu ve cekici_dorse_eslesir_mi (normalize üzerinden eşitlik) fonksiyonları yazıldı ve temel senaryolarla doğrulandı.",
+ "adim": 3,
+ "yurutucu_token": {
+  "girdi": 5948,
+  "cikti": 14922
+ },
+ "yurutucu_usd": 0.0035792000000000003,
+ "bitirdi": true,
+ "sure_sn": 132.7,
+ "gizli": {
+  "gecti": false,
+  "gecen": 15,
+  "toplam": 17,
+  "cikti": ".............FF..                                                        [100%]\n=================================== FAILURES ===================================\n_______________________ test_eslesir_ikisi_gecerli_true ________________________\n\n    def test_eslesir_ikisi_gecerli_true():\n>       assert cekici_dorse_eslesir_mi(\"34AB123\", \"34CD456\") is True\nE       AssertionError: assert False is True\nE        +  where False = cekici_dorse_eslesir_mi('34AB123', '34CD456')\n\n.gizli/test_gizli.py:64: AssertionError\n___________________ test_eslesir_normalize_uzerinden_esitlik ___________________\n\n    def test_eslesir_normalize_uzerinden_esitlik():\n        assert normalize_plaka(\"34 ab-123\") == normalize_plaka(\"34AB123\")\n>       assert cekici_dorse_eslesir_mi(\"34 ab-123\", \"34CD456\") is True\nE       AssertionError: assert False is True\nE        +  where False = cekici_dorse_eslesir_mi('34 ab-123', '34CD456')\n\n.gizli/test_gizli.py:68: AssertionError\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_eslesir_ikisi_gecerli_true - AssertionError...\nFAILED .gizli/test_gizli.py::test_eslesir_normalize_uzerinden_esitlik - Asser...\n2 failed, 15 passed in 0.03s\n"
+ }
+}

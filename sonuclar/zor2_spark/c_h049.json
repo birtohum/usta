@@ -1,0 +1,35 @@
+{
+ "id": "h049",
+ "kip": "c",
+ "kategori": "Türkçe metin işleme (Türkçe harfler, büyük/küçük harf, hece, ek, sıralama, sayı/yazı)",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 18,
+   "basarili": 18
+  }
+ ],
+ "spark_usd": 0.0064134,
+ "arayuz": "",
+ "hakem": [],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [],
+ "kabul_gecti": true,
+ "ozet": "sms_hazirla.py yazıldı: ASCII düzeltme, özel sözlük önceliği, GSM parça hesabı, hata kodları. pytest ile 10 test geçti.",
+ "adim": 12,
+ "yurutucu_token": {
+  "girdi": 73088,
+  "cikti": 68878
+ },
+ "yurutucu_usd": 0.0210844,
+ "bitirdi": true,
+ "sure_sn": 644.1,
+ "gizli": {
+  "gecti": true,
+  "gecen": 18,
+  "toplam": 18,
+  "cikti": "..................                                                       [100%]\n18 passed in 0.67s\n"
+ }
+}

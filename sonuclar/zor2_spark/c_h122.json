@@ -1,0 +1,35 @@
+{
+ "id": "h122",
+ "kip": "c",
+ "kategori": "küçük işletme hesapları (KDV, fatura, taksit, indirim, stok, kur dönüşümü, yuvarlama)",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 18,
+   "basarili": 18
+  }
+ ],
+ "spark_usd": 0.009927700000000001,
+ "arayuz": "",
+ "hakem": [],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [],
+ "kabul_gecti": true,
+ "ozet": "tahsilat.py içinde VadeliTahsilat sınıfı oluşturuldu: erken ödeme iskontosu (%5/%3/%1), basit faizli gecikme cezası, Decimal HALF_UP yuvarlama, önce cezaya sonra anaparaya mahsup, sıralı ekstre, 365 gün ValueError ve tip TypeError kontrolleri. pytest ile 15 test geçti.",
+ "adim": 6,
+ "yurutucu_token": {
+  "girdi": 34786,
+  "cikti": 22073
+ },
+ "yurutucu_usd": 0.0078932,
+ "bitirdi": true,
+ "sure_sn": 574.0,
+ "gizli": {
+  "gecti": true,
+  "gecen": 16,
+  "toplam": 16,
+  "cikti": "................                                                         [100%]\n16 passed in 0.03s\n"
+ }
+}

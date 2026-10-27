@@ -1,0 +1,38 @@
+{
+ "id": "h132",
+ "kip": "d",
+ "kategori": "veri yapıları ve algoritmalar (kuyruk, önbellek, arama, gruplama, birleştirme, durum makinesi)",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 18,
+   "basarili": 18
+  }
+ ],
+ "spark_usd": 0.0042109999999999995,
+ "arayuz": "",
+ "hakem": [],
+ "geri_alma": 0,
+ "inceleme": {
+  "yazilan": 0,
+  "kanitli": []
+ },
+ "iptal_edilen_test": [],
+ "kabul_gecti": true,
+ "ozet": "`erteleme_kuyrugu.py` içinde `GecikmeliKuyruk` implemente edildi: strip-normalize is_id doğrulama (1-64), yuk dict kontrolü, sonlu-negatif-olmayan zaman kontrolü, 0-86400 gecikme ve 1-100 int limit kontrolü, monoton sayaçla hazır-zaman+eklenme-sırası sıralama, hazır olanları silerek döndürme, yeniden_planla/iptal KeyError mantığı ve `__len__`. Duvar saati/rastgelelik yok, sadece `math` kullanıldı. 14 pytest testi yazıldı ve geçti.",
+ "adim": 4,
+ "yurutucu_token": {
+  "girdi": 14413,
+  "cikti": 10939
+ },
+ "yurutucu_usd": 0.0036291,
+ "bitirdi": true,
+ "sure_sn": 385.8,
+ "gizli": {
+  "gecti": true,
+  "gecen": 17,
+  "toplam": 17,
+  "cikti": ".................                                                        [100%]\n17 passed in 0.02s\n"
+ }
+}

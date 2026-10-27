@@ -1,0 +1,50 @@
+{
+ "id": "h139",
+ "kip": "d",
+ "kategori": "küçük işletme hesapları (KDV, fatura, taksit, indirim, stok, kur dönüşümü, yuvarlama)",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": false,
+   "toplam": 17,
+   "basarili": 16
+  },
+  {
+   "gecti": true,
+   "toplam": 17,
+   "basarili": 17
+  }
+ ],
+ "spark_usd": 0.0052029,
+ "arayuz": "Dosya: abonelik.py; Sınıf: AbonelikHesabi(aylik_ucret: float); Metotlar: abone_ekle(abone_id: str, baslangic: date, gun_sayisi: int), dondur(abone_id: str, baslangic: date, bitis: date), ucret_hesapla(abone_id: str, donem_yil: int, donem_ay: int) -> dict; ucret_hesapla anahtarları: kullanilan_gun, dondurulan_gun, odenecek_tutar, birim_ucret; Liste: abone_listele(self) -> list[str]",
+ "hakem": [
+  {
+   "test": "test_decimal_half_up_yuvarlama",
+   "karar": "gerekli",
+   "gerekce": "Görev metni tüm tutarların Decimal ile HALF_UP yuvarlanacağını açıkça belirttiği için Decimal türü beklentisi zorunludur.",
+   "tur": 1
+  }
+ ],
+ "geri_alma": 0,
+ "inceleme": {
+  "yazilan": 0,
+  "kanitli": []
+ },
+ "iptal_edilen_test": [],
+ "kabul_gecti": true,
+ "ozet": null,
+ "adim": 16,
+ "yurutucu_token": {
+  "girdi": 179499,
+  "cikti": 19436
+ },
+ "yurutucu_usd": 0.021837099999999998,
+ "bitirdi": false,
+ "sure_sn": 384.5,
+ "gizli": {
+  "gecti": true,
+  "gecen": 17,
+  "toplam": 17,
+  "cikti": ".................                                                        [100%]\n17 passed in 0.03s\n"
+ }
+}

@@ -1,0 +1,59 @@
+{
+ "id": "h035",
+ "kip": "c",
+ "kategori": "doğrulama ve ayrıştırma (TC kimlik, IBAN, telefon, plaka, e-posta, adres biçimi)",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": false,
+   "toplam": 19,
+   "basarili": 16
+  },
+  {
+   "gecti": true,
+   "toplam": 19,
+   "basarili": 19
+  }
+ ],
+ "spark_usd": 0.0043442,
+ "arayuz": "adres.py içinde adres_ayristir(metin: str) -> dict, adres_dogrula(kayit: dict) -> bool, defter_ozeti(kayitlar: list[dict]) -> dict; kayıt anahtarları: mahalle, cadde, bina_no, daire_no, ilce, il, posta_kodu; özet anahtarları: sirali_kayitlar, gecersiz_dizinler, butunluk_puani",
+ "hakem": [
+  {
+   "test": "test_ayristir_gecerli_metin_yedi_alan_dondurur",
+   "karar": "gerekli",
+   "gerekce": "Görev yedi alan üretilmesini açıkça istiyor ve test metni tüm bilgileri içeriyor.",
+   "tur": 1
+  },
+  {
+   "test": "test_bina_no_bir_basamak_gecerli",
+   "karar": "gerekli",
+   "gerekce": "Görev bina numarasının bir ile üç basamaklı olabileceğini açıkça belirtiyor.",
+   "tur": 1
+  },
+  {
+   "test": "test_bina_no_uc_basamak_harf_eki_gecerli",
+   "karar": "gerekli",
+   "gerekce": "Görev üç basamak artı isteğe bağlı tek harf ekini açıkça geçerli sayıyor.",
+   "tur": 1
+  }
+ ],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [],
+ "kabul_gecti": true,
+ "ozet": "Etiketli 'Mahalle: X, Cadde: Y, Bina No: ..., Daire No: ..., İlçe: ..., İl: ..., Posta Kodu: ...' biçimi için özel ayrıştırma yolu eklendi; daire regex'i 'Daire No: 5' kalıbını yakalayamıyordu, etiketli kipte doğrudan yakalanıyor. Kabul testlerindeki 3 hata giderildi, kendi 13 pytest testim de geçiyor. Görev metniyle çelişki yok.",
+ "adim": 29,
+ "yurutucu_token": {
+  "girdi": 371354,
+  "cikti": 68710
+ },
+ "yurutucu_usd": 0.0508774,
+ "bitirdi": true,
+ "sure_sn": 643.6,
+ "gizli": {
+  "gecti": false,
+  "gecen": 16,
+  "toplam": 18,
+  "cikti": "        for k in (r\"(?i)\\bbina\\b[^0-9]{0,12}(\\d{1,3})([A-Za-z])?(?![A-Za-z0-9])\",\n                  r\"(?i)\\bno\\b[^0-9]{0,6}(\\d{1,3})([A-Za-z])?(?![A-Za-z0-9])\",\n                  r\"(?i)\\bnumara[^0-9]{0,12}(\\d{1,3})([A-Za-z])?(?![A-Za-z0-9])\"):\n            m = re.search(k, ham)\n            if m:\n                bina = m.group(1) + (m.group(2) or \"\")\n                break\n        if bina is None or not _BINA_RE.match(bina):\n>           raise ValueError(\"bina numarasi bulunamadi veya gecersiz\")\nE           ValueError: bina numarasi bulunamadi veya gecersiz\n\nadres.py:135: ValueError\n_________________________ test_valueerror_eksik_bozuk __________________________\n\n    def test_valueerror_eksik_bozuk():\n        import pytest\n        with pytest.raises(ValueError):\n            _m.adres_ayristir(\"\")\n        with pytest.raises(ValueError):\n            _m.adres_ayristir(\"Mahalle: Ataturk, Cadde: X\")\n        eksik = _kayit()\n        del eksik[\"il\"]\n>       with pytest.raises(ValueError):\nE       Failed: DID NOT RAISE <class 'ValueError'>\n\n.gizli/test_gizli.py:81: Failed\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_ayristir_konumsuz_yedi_alan - ValueError: b...\nFAILED .gizli/test_gizli.py::test_valueerror_eksik_bozuk - Failed: DID NOT RA...\n2 failed, 16 passed in 0.05s\n"
+ }
+}

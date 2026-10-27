@@ -1,0 +1,23 @@
+{
+ "id": "h131",
+ "kip": "b",
+ "kategori": "doğrulama ve ayrıştırma (TC kimlik, IBAN, telefon, plaka, e-posta, adres biçimi)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "kiralama_dogrula.py yazıldı: TC 11-hane + ilk hane + 10/11 sağlama (ihlal exit 2), plaka büyük harf/tek boşluk normalizasyonu + 01-81 il kodu + 7-9 uzunluk, telefon rakam arındırma + 05 ile 11 hane (uzunluk hatası exit 1, eksik bayrak/bulunamayan dosya exit 3), plaka kanonik eşitlik ve plaka+tc sıralama, oran matematiksel yuvarlama, JSON toplam/gecerli/oran. 13 pytest testi geçti.",
+ "adim": 9,
+ "yurutucu_token": {
+  "girdi": 42035,
+  "cikti": 31128
+ },
+ "yurutucu_usd": 0.0104291,
+ "bitirdi": true,
+ "sure_sn": 279.8,
+ "gizli": {
+  "gecti": true,
+  "gecen": 17,
+  "toplam": 17,
+  "cikti": ".................                                                        [100%]\n17 passed in 0.53s\n"
+ }
+}

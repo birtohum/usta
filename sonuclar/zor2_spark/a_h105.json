@@ -1,0 +1,23 @@
+{
+ "id": "h105",
+ "kip": "a",
+ "kategori": "tarih ve saat (iş günü, resmî tatil listesi parametre olarak verilir, süre hesabı, biçim dönüşümü)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "vagon_bekleme.py yazıldı: bekleme_ucreti (24s ücretsiz, iş-günü dakikası, 15dk yukarı yuvarlama, HALF_UP ücret), is_gunu_farki (başlangıç hariç bitiş dahil iş günü sayımı), vagon_ozeti (VAGONID|dakika|ucret, ücrete azalan + ID artan sıralı). Hafta sonu/tatil hariç, çifte düşme yok; biçim hatası ValueError, tip hatası TypeError, geçersiz ceza ValueError. Yalnızca standart kütüphane.",
+ "adim": 7,
+ "yurutucu_token": {
+  "girdi": 31087,
+  "cikti": 34866
+ },
+ "yurutucu_usd": 0.010081900000000001,
+ "bitirdi": true,
+ "sure_sn": 271.8,
+ "gizli": {
+  "gecti": true,
+  "gecen": 18,
+  "toplam": 18,
+  "cikti": "..................                                                       [100%]\n18 passed in 0.02s\n"
+ }
+}

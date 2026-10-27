@@ -1,0 +1,38 @@
+{
+ "id": "h120",
+ "kip": "d",
+ "kategori": "veri yapıları ve algoritmalar (kuyruk, önbellek, arama, gruplama, birleştirme, durum makinesi)",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 20,
+   "basarili": 20
+  }
+ ],
+ "spark_usd": 0.005292600000000001,
+ "arayuz": "Dosya: dalis_cli.py; çağrı: python dalis_cli.py --giris CSV [--grup marka|durum] [--siralama adet|çeşit] [--ters] [--limit N] [--format json|csv]; giriş başlıkları: ekipman kimliği,ad,marka,adet,durum; json/csv alanlar: grup,çeşit,toplam_adet",
+ "hakem": [],
+ "geri_alma": 0,
+ "inceleme": {
+  "yazilan": 0,
+  "kanitli": []
+ },
+ "iptal_edilen_test": [],
+ "kabul_gecti": true,
+ "ozet": "dalis_cli.py yazıldı: argparse ile --giris/--grup/--siralama/--ters/--limit/--format destekler, utf-8 CSV okur, başlıkları doğrular, adet 0-500 ve kimlik boş/yinelenen satırları stderr uyarısıyla atlar, marka/durum gruplaması yapıp adet/çeşit sıralaması ve limit uygular, json/csv çıktı verir; dosya yoksa çıkış 1, geçersiz seçimlerde argparse çıkış 2. 13 pytest testi geçti.",
+ "adim": 4,
+ "yurutucu_token": {
+  "girdi": 16234,
+  "cikti": 8998
+ },
+ "yurutucu_usd": 0.0034230000000000003,
+ "bitirdi": true,
+ "sure_sn": 332.5,
+ "gizli": {
+  "gecti": false,
+  "gecen": 6,
+  "toplam": 16,
+  "cikti": "a/pytest-2/test_10_strip_case_sensitive0')\n\n    def test_10_strip_case_sensitive(tmp_path):\n        g = csv_yaz(tmp_path, [[\"1\", \"a\", \"Aqua\", \"5\", \"x\"],[\"2\", \"b\", \" Aqua \", \"7\", \"x\"],[\"3\", \"c\", \"aqua\", \"3\", \"x\"]])\n        r = calistir(\"--giris\", g, \"--grup\", \"marka\", \"--siralama\", \"adet\", \"--format\", \"json\")\n>       assert r.returncode == 0\nE       assert 1 == 0\nE        +  where 1 = CompletedProcess(args=['/usr/bin/python', '/home/usta/is/efca254b76f2/dalis_cli.py', '--giris', '/home/usta/is/efca254...klar: ['ekipman_id', 'ad', 'marka', 'adet', 'durum'], beklenen: ['ekipman kimliği', 'ad', 'marka', 'adet', 'durum']\\n\").returncode\n\n.gizli/test_gizli.py:91: AssertionError\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_01_json_marka_adet_artan - assert 1 == 0\nFAILED .gizli/test_gizli.py::test_02_json_marka_adet_ters - assert 1 == 0\nFAILED .gizli/test_gizli.py::test_03_csv_cikti - assert 1 == 0\nFAILED .gizli/test_gizli.py::test_04_grup_durum - assert 1 == 0\nFAILED .gizli/test_gizli.py::test_05_siralama_cesit_ikinci_anahtar - assert 1...\nFAILED .gizli/test_gizli.py::test_06_limit - assert 1 == 0\nFAILED .gizli/test_gizli.py::test_07_adet_aralik_disi_atlanir - assert 1 == 0\nFAILED .gizli/test_gizli.py::test_08_bos_kimlik_atlanir - assert 1 == 0\nFAILED .gizli/test_gizli.py::test_09_yinelenen_kimlik - assert 1 == 0\nFAILED .gizli/test_gizli.py::test_10_strip_case_sensitive - assert 1 == 0\n10 failed, 6 passed in 0.50s\n"
+ }
+}

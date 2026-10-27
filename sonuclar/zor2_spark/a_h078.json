@@ -1,0 +1,23 @@
+{
+ "id": "h078",
+ "kip": "a",
+ "kategori": "veri yapıları ve algoritmalar (kuyruk, önbellek, arama, gruplama, birleştirme, durum makinesi)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "baharat_cli.py yazıldı: --girdi/--cikti/--sirala/--esik bayraklarını işler, eksik bayrak ve bilinmeyen --sirala değerinde stderr + çıkış 2 verir; okunamaz dosya/eksik başlıkta stderr + 2, gramaj_g/stok tam sayı değilse çıkış 1, negatif gramajda stderr + 2, esik 0-10000 dışı ya da tam sayı değilse çıkış 2 verir; stok<esik filtreleyip ad artan veya stok azalan+ad artan sıralı JSON listesi yazar. Yalnızca csv/json/sys kullanıldı.",
+ "adim": 6,
+ "yurutucu_token": {
+  "girdi": 23688,
+  "cikti": 8285
+ },
+ "yurutucu_usd": 0.0040257999999999995,
+ "bitirdi": true,
+ "sure_sn": 81.2,
+ "gizli": {
+  "gecti": true,
+  "gecen": 17,
+  "toplam": 17,
+  "cikti": ".................                                                        [100%]\n17 passed in 0.40s\n"
+ }
+}

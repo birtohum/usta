@@ -1,0 +1,23 @@
+{
+ "id": "h139",
+ "kip": "a",
+ "kategori": "küçük işletme hesapları (KDV, fatura, taksit, indirim, stok, kur dönüşümü, yuvarlama)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "abonelik.py yazıldı: AbonelikHesabi sınıfı prorata (aylık/30), dondurma indirimi, Decimal HALF_UP yuvarlama, ABN format ve aralık kontrolleri, ValueError/TypeError ayrımı, calendar ile ay uzunluğu ve dahil dondurma sayımı ile ucret_hesapla sözlüğü ve sıralı liste desteği sağlar.",
+ "adim": 6,
+ "yurutucu_token": {
+  "girdi": 14450,
+  "cikti": 22933
+ },
+ "yurutucu_usd": 0.006031600000000001,
+ "bitirdi": true,
+ "sure_sn": 183.7,
+ "gizli": {
+  "gecti": false,
+  "gecen": 16,
+  "toplam": 17,
+  "cikti": ".....F...........                                                        [100%]\n=================================== FAILURES ===================================\n_____________________________ test_decimal_half_up _____________________________\n\n    def test_decimal_half_up():\n        h = AbonelikHesabi(100.00)\n        h.abone_ekle(\"ABN-0020\", date(2024, 5, 1), 60)\n        r = h.ucret_hesapla(\"ABN-0020\", 2024, 5)\n        assert _birim(r) == Decimal(\"3.33\")\n        assert _odenecek(r) == (Decimal(\"3.33\") * 31).quantize(Decimal(\"0.01\"), rounding=ROUND_HALF_UP)\n>       assert isinstance(_odenecek(r), Decimal)\nE       AssertionError: assert False\nE        +  where False = isinstance(103.23, Decimal)\nE        +    where 103.23 = _odenecek({'kullanilan_gun': 31, 'dondurulan_gun': 0, 'odenecek_tutar': 103.23, 'birim_ucret': 3.33})\n\n.gizli/test_gizli.py:108: AssertionError\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_decimal_half_up - AssertionError: assert False\n1 failed, 16 passed in 0.04s\n"
+ }
+}

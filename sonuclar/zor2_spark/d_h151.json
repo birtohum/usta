@@ -1,0 +1,38 @@
+{
+ "id": "h151",
+ "kip": "d",
+ "kategori": "doğrulama ve ayrıştırma (TC kimlik, IBAN, telefon, plaka, e-posta, adres biçimi)",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 18,
+   "basarili": 18
+  }
+ ],
+ "spark_usd": 0.009711500000000001,
+ "arayuz": "",
+ "hakem": [],
+ "geri_alma": 0,
+ "inceleme": {
+  "yazilan": 3,
+  "kanitli": []
+ },
+ "iptal_edilen_test": [],
+ "kabul_gecti": true,
+ "ozet": "ekmek_abonelik.py hazır: TC sağlama, 05 normalize, adres 10-200, TC/eposta yinelenen eleme, tc+telefon sıralama, rapor yüzdeli; çıkış kodları 1/2/3. pytest 4 test geçti.",
+ "adim": 9,
+ "yurutucu_token": {
+  "girdi": 54083,
+  "cikti": 24610
+ },
+ "yurutucu_usd": 0.0103303,
+ "bitirdi": true,
+ "sure_sn": 593.5,
+ "gizli": {
+  "gecti": true,
+  "gecen": 16,
+  "toplam": 16,
+  "cikti": "................                                                         [100%]\n16 passed in 0.47s\n"
+ }
+}

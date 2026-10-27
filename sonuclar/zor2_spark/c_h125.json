@@ -1,0 +1,72 @@
+{
+ "id": "h125",
+ "kip": "c",
+ "kategori": "doğrulama ve ayrıştırma (TC kimlik, IBAN, telefon, plaka, e-posta, adres biçimi)",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 13,
+   "basarili": 13
+  }
+ ],
+ "spark_usd": 0.0042983,
+ "arayuz": "",
+ "hakem": [
+  {
+   "test": "test_adres_tek_karakter_gecersiz",
+   "karar": "belirsiz",
+   "gerekce": "Görev tek karakterli parçayı geçersiz say diyor, eksik parçadaki gibi ValueError şartı açıkça yok.",
+   "tur": 1
+  },
+  {
+   "test": "test_bos_dize_gecersiz",
+   "karar": "belirsiz",
+   "gerekce": "Görev boş dizeyi geçersiz say diyor ama geçersiz saymanın ValueError fırlatmak olduğunu açıkça belirtmiyor.",
+   "tur": 1
+  },
+  {
+   "test": "test_iban_kisa_red",
+   "karar": "belirsiz",
+   "gerekce": "Görev kısa IBAN'ı reddet diyor ama bunun ValueError ile olacağını açıkça yazmıyor.",
+   "tur": 1
+  },
+  {
+   "test": "test_tc_kisa_hatali",
+   "karar": "belirsiz",
+   "gerekce": "Görev 11 hane kuralını istiyor ama kısa TC için ValueError fırlatmayı açıkça şart koşmuyor.",
+   "tur": 1
+  },
+  {
+   "test": "test_telefon_11_haneden_uzun_red",
+   "karar": "belirsiz",
+   "gerekce": "Görev uzun telefonu reddet diyor ama reddetmenin ValueError fırlatmak olduğunu açıkça belirtmiyor.",
+   "tur": 1
+  }
+ ],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [
+  "test_adres_tek_karakter_gecersiz",
+  "test_bos_dize_gecersiz",
+  "test_iban_kisa_red",
+  "test_tc_kisa_hatali",
+  "test_telefon_11_haneden_uzun_red"
+ ],
+ "kabul_gecti": true,
+ "ozet": "yardim_kaydi.py içinde YardimBasvuruDenetleyici yazıldı: TC checksum, GSM formatı, IBAN mod97, 4 parçalı adres ve Hatay-dışı kodlama uygulandı; yinelenen/hatalı takibi, TC sıralı saklama ve yuvarlanmış özet rapor eklendi. 15 pytest testi geçiyor.",
+ "adim": 7,
+ "yurutucu_token": {
+  "girdi": 34137,
+  "cikti": 26197
+ },
+ "yurutucu_usd": 0.0086531,
+ "bitirdi": true,
+ "sure_sn": 241.0,
+ "gizli": {
+  "gecti": false,
+  "gecen": 10,
+  "toplam": 18,
+  "cikti": "        assert oz[\"hatali\"] == 1\n        assert oz[\"yinelenen\"] == 1\n>       assert oz[\"gecerli_oran\"] == round(2/4*100, 2)\nE       assert 0.5 == 50.0\nE        +  where 50.0 = round(((2 / 4) * 100), 2)\n\n.gizli/test_gizli.py:124: AssertionError\n__________________ test_sinir_10hane_tel_26hane_iban_gecerli ___________________\n\n    def test_sinir_10hane_tel_26hane_iban_gecerli():\n        d = YardimBasvuruDenetleyici()\n        assert len(\"\".join(TEL10.split())) == 10\n        assert len(IBAN) == 26\n        r = d.basvuru_ekle(TC1, TEL10, ADRES_HATAY, IBAN)\n>       assert r[\"durum\"] == \"gecerli\"\nE       AssertionError: assert 'hatali' == 'gecerli'\nE         - gecerli\nE         + hatali\n\n.gizli/test_gizli.py:131: AssertionError\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_tc_kisa_valueerror - Failed: DID NOT RAISE ...\nFAILED .gizli/test_gizli.py::test_telefon_11den_uzun_reddet - Failed: DID NOT...\nFAILED .gizli/test_gizli.py::test_telefon_gsm_kurali - Failed: DID NOT RAISE ...\nFAILED .gizli/test_gizli.py::test_iban_kisa_reddet - Failed: DID NOT RAISE <c...\nFAILED .gizli/test_gizli.py::test_adres_tek_karakter_gecersiz - Failed: DID N...\nFAILED .gizli/test_gizli.py::test_bos_dize_gecersiz - Failed: DID NOT RAISE <...\nFAILED .gizli/test_gizli.py::test_ozet_rapor_sayi_ve_oran - assert 0.5 == 50.0\nFAILED .gizli/test_gizli.py::test_sinir_10hane_tel_26hane_iban_gecerli - Asse...\n8 failed, 10 passed in 0.04s\n"
+ }
+}

@@ -1,0 +1,23 @@
+{
+ "id": "h047",
+ "kip": "b",
+ "kategori": "doğrulama ve ayrıştırma (TC kimlik, IBAN, telefon, plaka, e-posta, adres biçimi)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "toplu_dogrula.py aracı yazıldı: tckn/iban/plaka/eposta doğrulama (TCKN sağlama, IBAN mod-97, plaka kalıbı, e-posta biçimi), boş satır atlama + trim, normalize, --sirala (case-insensitive sıralama), --ozet (toplam/sayılar/yinelenen/iki basamaklı oran, boş girdide 0), hata kodları (bilinmeyen tür=2, kayıp girdi=1), 100 bin satır sınırı, yalnızca standart kütüphane. pytest ile 8 test geçti.",
+ "adim": 4,
+ "yurutucu_token": {
+  "girdi": 16662,
+  "cikti": 13579
+ },
+ "yurutucu_usd": 0.0043820000000000005,
+ "bitirdi": true,
+ "sure_sn": 114.7,
+ "gizli": {
+  "gecti": true,
+  "gecen": 18,
+  "toplam": 18,
+  "cikti": "..................                                                       [100%]\n18 passed in 0.59s\n"
+ }
+}

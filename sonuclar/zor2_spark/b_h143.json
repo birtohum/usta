@@ -1,0 +1,23 @@
+{
+ "id": "h143",
+ "kip": "b",
+ "kategori": "veri yapıları ve algoritmalar (kuyruk, önbellek, arama, gruplama, birleştirme, durum makinesi)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "feribot_rezervasyon.py içinde RezervasyonMakinesi yazıldı: TASLAK→ON_ODEME_BEKLIYOR→KESIN→BINDE→TAMAMLANDI akışı, IPTAL geçişleri, plaka/gün/tutar/neden doğrulamaları ve gecmis/durum metotları. 15 pytest testi geçti.",
+ "adim": 11,
+ "yurutucu_token": {
+  "girdi": 48496,
+  "cikti": 29073
+ },
+ "yurutucu_usd": 0.0106642,
+ "bitirdi": true,
+ "sure_sn": 246.5,
+ "gizli": {
+  "gecti": true,
+  "gecen": 18,
+  "toplam": 18,
+  "cikti": "..................                                                       [100%]\n18 passed in 0.02s\n"
+ }
+}

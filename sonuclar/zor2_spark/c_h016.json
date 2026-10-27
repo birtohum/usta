@@ -1,0 +1,35 @@
+{
+ "id": "h016",
+ "kip": "c",
+ "kategori": "dosya ve komut satırı (CSV/JSON okuma, rapor yazdırma, argümanlar, hata mesajları)",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 17,
+   "basarili": 17
+  }
+ ],
+ "spark_usd": 0.0024985,
+ "arayuz": "",
+ "hakem": [],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [],
+ "kabul_gecti": true,
+ "ozet": "puantaj.py yazıldı: CSV okuyup 15 dk aşağı yuvarlama, 45 saat eşiğiyle fazla mesai, Decimal yarım-yukarı kuruş yuvarlama, genel_toplam azalan + personel_id artan sıralı JSON çıktısı, hatalı satırlarda stderr uyarısı ve geçersiz parametrede kod 3. 8 pytest testi geçti.",
+ "adim": 14,
+ "yurutucu_token": {
+  "girdi": 109531,
+  "cikti": 24605
+ },
+ "yurutucu_usd": 0.015874100000000002,
+ "bitirdi": true,
+ "sure_sn": 263.9,
+ "gizli": {
+  "gecti": true,
+  "gecen": 17,
+  "toplam": 17,
+  "cikti": ".................                                                        [100%]\n17 passed in 0.67s\n"
+ }
+}

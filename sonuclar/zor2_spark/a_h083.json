@@ -1,0 +1,23 @@
+{
+ "id": "h083",
+ "kip": "a",
+ "kategori": "doğrulama ve ayrıştırma (TC kimlik, IBAN, telefon, plaka, e-posta, adres biçimi)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "`adres.py` yazıldı: `AdresHatasi(ValueError)` ve `adres_parcala` fonksiyonu tüm kuralları uyguluyor (5 parça kontrolü, strip, mahallede rakam yasağı, caddede en az 3 harf, bina için `12`/`12A`/`12 bölü 3` desenleri, daire için boş/pozitif tamsayı/`sayı/harf`/`sayı bölü harf`, 5 ASCII rakam ve `01000`–`81999` posta kodu aralığı, `None` için `TypeError`). Sonuç `mahalle, cadde, bina, daire, posta kodu` anahtarlı, arındırılmış string değerli sözlük dönüyor.",
+ "adim": 12,
+ "yurutucu_token": {
+  "girdi": 59579,
+  "cikti": 27512
+ },
+ "yurutucu_usd": 0.0114603,
+ "bitirdi": true,
+ "sure_sn": 257.4,
+ "gizli": {
+  "gecti": true,
+  "gecen": 17,
+  "toplam": 17,
+  "cikti": ".................                                                        [100%]\n17 passed in 0.02s\n"
+ }
+}

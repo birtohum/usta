@@ -1,0 +1,23 @@
+{
+ "id": "h085",
+ "kip": "b",
+ "kategori": "Türkçe metin işleme (Türkçe harfler, büyük/küçük harf, hece, ek, sıralama, sayı/yazı)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "fiyat.py modülü yazıldı: bicimlendir ve kdv_ekle işlevleri Decimal ile ROUND_HALF_UP yuvarlama, nokta binlik / virgül ondalık biçimi ve ' TL' eki uygular; negatifte eksi başa konur, sıfır '0,00 TL' olur. kdv_ekle oran olarak yalnız 1/10/20 kabul eder, negatif tutarda ve KDV'li sonuç 5000000'i aşınca ValueError, yanlış türlerde TypeError verir. 15 pytest testi yazıldı ve hepsi geçti.",
+ "adim": 6,
+ "yurutucu_token": {
+  "girdi": 18823,
+  "cikti": 16234
+ },
+ "yurutucu_usd": 0.0051291,
+ "bitirdi": true,
+ "sure_sn": 135.4,
+ "gizli": {
+  "gecti": true,
+  "gecen": 16,
+  "toplam": 16,
+  "cikti": "................                                                         [100%]\n16 passed in 0.02s\n"
+ }
+}

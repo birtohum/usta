@@ -1,0 +1,35 @@
+{
+ "id": "h109",
+ "kip": "c",
+ "kategori": "Türkçe metin işleme (Türkçe harfler, büyük/küçük harf, hece, ek, sıralama, sayı/yazı)",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 19,
+   "basarili": 19
+  }
+ ],
+ "spark_usd": 0.0029117,
+ "arayuz": "",
+ "hakem": [],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [],
+ "kabul_gecti": true,
+ "ozet": "menu.py içinde etiketle() işlevi yazıldı: Türkçe küçük harf, sözcük sınırlı kök+eşleşme, sız/siz/suz/süz muafiyeti, vegan→vejetaryen kuralı ve glutensiz kontrolü uygulandı; pytest ile 16 test geçti.",
+ "adim": 8,
+ "yurutucu_token": {
+  "girdi": 21956,
+  "cikti": 39760
+ },
+ "yurutucu_usd": 0.010147600000000001,
+ "bitirdi": true,
+ "sure_sn": 342.1,
+ "gizli": {
+  "gecti": true,
+  "gecen": 17,
+  "toplam": 17,
+  "cikti": ".................                                                        [100%]\n17 passed in 0.03s\n"
+ }
+}

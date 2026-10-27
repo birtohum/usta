@@ -1,0 +1,23 @@
+{
+ "id": "h061",
+ "kip": "b",
+ "kategori": "Türkçe metin işleme (Türkçe harfler, büyük/küçük harf, hece, ek, sıralama, sayı/yazı)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "kisaltma_coz.py modülü yazıldı: kisaltmayi_ac (noktalı büyük harf kısaltmaları sözlükle açar, düzeni korur), kesme_denetle (eksik kesme/küçük harf hataları, başlangıç konumu ve öneri), toplu_isle (sıralı, tekilleştirmeden, uzunluğa göre stabil sıralama), düzeltme oranı yarım-yukarı % formatında; boş liste/None/300 kelime kuralları uygulandı. 14 pytest testi geçiyor.",
+ "adim": 9,
+ "yurutucu_token": {
+  "girdi": 51015,
+  "cikti": 32718
+ },
+ "yurutucu_usd": 0.0116451,
+ "bitirdi": true,
+ "sure_sn": 275.8,
+ "gizli": {
+  "gecti": true,
+  "gecen": 17,
+  "toplam": 17,
+  "cikti": ".................                                                        [100%]\n17 passed in 0.02s\n"
+ }
+}

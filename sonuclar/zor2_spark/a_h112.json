@@ -1,0 +1,23 @@
+{
+ "id": "h112",
+ "kip": "a",
+ "kategori": "dosya ve komut satırı (CSV/JSON okuma, rapor yazdırma, argümanlar, hata mesajları)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "bilet.py modülü yazıldı: bileti_dogrula, satis_yukle, sefer_doluluk, gunluk_ozet işlevleri; doğrulama, CSV yükleme/sıralama, kopya koltuk eleme, doluluk oranı ve hata yönetimi standart kütüphane ile gerçeklendi ve test edildi.",
+ "adim": 5,
+ "yurutucu_token": {
+  "girdi": 18583,
+  "cikti": 23400
+ },
+ "yurutucu_usd": 0.0065382999999999995,
+ "bitirdi": true,
+ "sure_sn": 180.1,
+ "gizli": {
+  "gecti": false,
+  "gecen": 15,
+  "toplam": 18,
+  "cikti": "E       KeyError: '2024-05-01_gun_dogumu'\n\n.gizli/test_gizli.py:73: KeyError\n_________________________ test_sefer_doluluk_yuvarlama _________________________\n\n    def test_sefer_doluluk_yuvarlama():\n        satislar = [{'yolcu_ad': 'Ali Veli', 'tarih': '2024-05-01', 'seans': 'gun_dogumu', 'koltuk_no': 1}]\n        sonuc = sefer_doluluk(satislar, 6)\n>       g = sonuc['seferler']['2024-05-01_gun_dogumu']\nE       KeyError: '2024-05-01_gun_dogumu'\n\n.gizli/test_gizli.py:82: KeyError\n_______________________ test_sefer_doluluk_tekrar_koltuk _______________________\n\n    def test_sefer_doluluk_tekrar_koltuk():\n        satislar = [\n            {'yolcu_ad': 'Ali Veli', 'tarih': '2024-05-01', 'seans': 'gun_dogumu', 'koltuk_no': 1},\n            {'yolcu_ad': 'Ayse Yilmaz', 'tarih': '2024-05-01', 'seans': 'gun_dogumu', 'koltuk_no': 1},\n        ]\n        sonuc = sefer_doluluk(satislar, 10)\n        assert sonuc['toplam_bilet'] == 1\n>       assert sonuc['seferler']['2024-05-01_gun_dogumu']['toplam_bilet'] == 1\nE       KeyError: '2024-05-01_gun_dogumu'\n\n.gizli/test_gizli.py:98: KeyError\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_sefer_doluluk_gruplama - KeyError: '2024-05...\nFAILED .gizli/test_gizli.py::test_sefer_doluluk_yuvarlama - KeyError: '2024-0...\nFAILED .gizli/test_gizli.py::test_sefer_doluluk_tekrar_koltuk - KeyError: '20...\n3 failed, 15 passed in 0.05s\n"
+ }
+}

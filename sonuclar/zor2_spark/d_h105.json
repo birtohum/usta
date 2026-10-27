@@ -1,0 +1,25 @@
+{
+ "id": "h105",
+ "kip": "d",
+ "kategori": "tarih ve saat (iş günü, resmî tatil listesi parametre olarak verilir, süre hesabı, biçim dönüşümü)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.00018820000000000002,
+ "arayuz": "",
+ "kabul_gecti": false,
+ "dogrulanamadi": true,
+ "ozet": "vagon_bekleme.py yazıldı: ilk 24 saat ücretsiz, iş günü dakikaları 15 dk yukarı yuvarlama + yarım-yukarı ücret, is_gunu_farki ve ücrete göre sıralı vagon_ozeti. 7 pytest geçti.",
+ "adim": 17,
+ "yurutucu_token": {
+  "girdi": 125819,
+  "cikti": 60375
+ },
+ "yurutucu_usd": 0.024656899999999995,
+ "sure_sn": 511.8,
+ "gizli": {
+  "gecti": true,
+  "gecen": 18,
+  "toplam": 18,
+  "cikti": "..................                                                       [100%]\n18 passed in 0.02s\n"
+ }
+}

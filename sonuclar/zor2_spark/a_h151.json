@@ -1,0 +1,23 @@
+{
+ "id": "h151",
+ "kip": "a",
+ "kategori": "doğrulama ve ayrıştırma (TC kimlik, IBAN, telefon, plaka, e-posta, adres biçimi)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "ekmek_abonelik.py yazıldı: TC algoritmik doğrulama, telefon normalizasyonu (05... 11 hane), adres 10-200 kontrolü (sınır dışıysa uyarı+exit 1), yinelenen TC ve case-insensitive e-posta eleme, tc/telefon sıralı CSV çıktısı, toplam/gecerli/hatali ve matematiksel yuvarlamalı yüzde raporu, girdi yoksa exit 3, hatalı bayrakta exit 2. Yalnızca standart kütüphane.",
+ "adim": 9,
+ "yurutucu_token": {
+  "girdi": 35623,
+  "cikti": 26253
+ },
+ "yurutucu_usd": 0.0088129,
+ "bitirdi": true,
+ "sure_sn": 230.4,
+ "gizli": {
+  "gecti": true,
+  "gecen": 16,
+  "toplam": 16,
+  "cikti": "................                                                         [100%]\n16 passed in 0.57s\n"
+ }
+}

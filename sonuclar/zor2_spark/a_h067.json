@@ -1,0 +1,23 @@
+{
+ "id": "h067",
+ "kip": "a",
+ "kategori": "Türkçe metin işleme (Türkçe harfler, büyük/küçük harf, hece, ek, sıralama, sayı/yazı)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "adres_norm.py yazıldı: normalize_adres (unvan genişletme, Türkçe başlıklandırma, bağlaç küçük, boşluk tekleme, ıiğşüöç koruma, TypeError/ValueError kontrolleri), posta_dogrula (5 basamak zorunluluğu, plaka eşleşmesi, hatada ValueError), toplu_normalize (uzunluk+Türkçe alfabetik+kararlı sıralama) ve esleşme_oranı (yarım yukarı, sıfır bölmede 0) tanımlandı.",
+ "adim": 8,
+ "yurutucu_token": {
+  "girdi": 34941,
+  "cikti": 27866
+ },
+ "yurutucu_usd": 0.009067300000000002,
+ "bitirdi": true,
+ "sure_sn": 246.2,
+ "gizli": {
+  "gecti": false,
+  "gecen": 11,
+  "toplam": 18,
+  "cikti": "u_turkce _______________________________\n\n    def test_toplu_turkce():\n>       assert toplu_normalize([\"Çal Sokak\", \"Bal Sokak\"]) == [\"Bal Sokak\", \"Çal Sokak\"]\nE       AssertionError: assert ['Bal Sokağı', 'Çal Sokağı'] == ['Bal Sokak', 'Çal Sokak']\nE         At index 0 diff: 'Bal Sokağı' != 'Bal Sokak'\nE         Use -v to get more diff\n\n.gizli/test_gizli.py:62: AssertionError\n______________________________ test_toplu_kararli ______________________________\n\n    def test_toplu_kararli():\n        girdi = [\"Çay Sokak\", \"Cay Sokak\"]\n>       assert toplu_normalize(girdi) == [\"Çay Sokak\", \"Cay Sokak\"]\nE       AssertionError: assert ['Cay Sokağı', 'Çay Sokağı'] == ['Çay Sokak', 'Cay Sokak']\nE         At index 0 diff: 'Cay Sokağı' != 'Çay Sokak'\nE         Use -v to get more diff\n\n.gizli/test_gizli.py:66: AssertionError\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_normalize_kisaltma - AssertionError: assert...\nFAILED .gizli/test_gizli.py::test_normalize_bosluk - AssertionError: assert '...\nFAILED .gizli/test_gizli.py::test_normalize_turkce - AssertionError: assert '...\nFAILED .gizli/test_gizli.py::test_normalize_baglac - AssertionError: assert '...\nFAILED .gizli/test_gizli.py::test_toplu_uzunluk - AssertionError: assert ['B ...\nFAILED .gizli/test_gizli.py::test_toplu_turkce - AssertionError: assert ['Bal...\nFAILED .gizli/test_gizli.py::test_toplu_kararli - AssertionError: assert ['Ca...\n7 failed, 11 passed in 0.04s\n"
+ }
+}

@@ -1,0 +1,35 @@
+{
+ "id": "h047",
+ "kip": "c",
+ "kategori": "doğrulama ve ayrıştırma (TC kimlik, IBAN, telefon, plaka, e-posta, adres biçimi)",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 18,
+   "basarili": 18
+  }
+ ],
+ "spark_usd": 0.0027533000000000006,
+ "arayuz": "Dosya: toplu_dogrula.py. Çağrı: python toplu_dogrula.py --girdi IN --tur TUR --cikti OUT [--sirala] [--ozet]. Çıktı JSON sözlük: gecerli liste, gecersiz liste, atlanan sayı. --ozet varsa ek anahtar ozet sözlük: toplam, gecerli_sayisi, gecersiz_sayisi, atlanan, gecerlilik_orani.",
+ "hakem": [],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [],
+ "kabul_gecti": true,
+ "ozet": "toplu_dogrula.py yazıldı: tckn/iban/plaka/eposta doğrulama, boş satır atlama, sıralama ve özet desteği, doğru çıkış kodları. pytest ile 6 test geçti.",
+ "adim": 5,
+ "yurutucu_token": {
+  "girdi": 15321,
+  "cikti": 20586
+ },
+ "yurutucu_usd": 0.0056493,
+ "bitirdi": true,
+ "sure_sn": 187.7,
+ "gizli": {
+  "gecti": false,
+  "gecen": 14,
+  "toplam": 18,
+  "cikti": "        c = tmp_path / \"out.json\"\n        yaz(g, [\"Test@Example.com\", \"test@example.com\", \"baska@example.com\"])\n        r = calistir(g, \"eposta\", c, ozet=True)\n        assert r.returncode == 0\n        d = oku(c)\n>       assert d[\"ozet\"][\"yinelenen_sayisi\"] == 1\nE       KeyError: 'yinelenen_sayisi'\n\n.gizli/test_gizli.py:174: KeyError\n________________________ test_yinelenen_farkliysa_sifir ________________________\n\ntmp_path = PosixPath('/home/usta/is/d0befa5b2a59/.tmp/pytest-of-usta/pytest-1/test_yinelenen_farkliysa_sifir0')\n\n    def test_yinelenen_farkliysa_sifir(tmp_path):\n        g = tmp_path / \"in.txt\"\n        c = tmp_path / \"out.json\"\n        yaz(g, [\"a@example.com\", \"b@example.com\"])\n        r = calistir(g, \"eposta\", c, ozet=True)\n        assert r.returncode == 0\n        d = oku(c)\n>       assert d[\"ozet\"][\"yinelenen_sayisi\"] == 0\nE       KeyError: 'yinelenen_sayisi'\n\n.gizli/test_gizli.py:183: KeyError\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_ozet_istatistik_ve_oran - assert 0.67 == 66.67\nFAILED .gizli/test_gizli.py::test_ozet_oran_iki_ondalik - assert 0.33 == 33.33\nFAILED .gizli/test_gizli.py::test_yinelenen_normalize_ayniysa - KeyError: 'yi...\nFAILED .gizli/test_gizli.py::test_yinelenen_farkliysa_sifir - KeyError: 'yine...\n4 failed, 14 passed in 0.50s\n"
+ }
+}

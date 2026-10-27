@@ -1,0 +1,23 @@
+{
+ "id": "h154",
+ "kip": "b",
+ "kategori": "doğrulama ve ayrıştırma (TC kimlik, IBAN, telefon, plaka, e-posta, adres biçimi)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "RezervasyonDogrulayici sınıfı yazıldı: plaka normalizasyonu, il kodu, telefon, eposta kontrolleri, yinelenen plaka engeli, sıralı listeleme ve matematiksel yuvarlamalı doluluk_orani eklendi; pytest ile 8 test geçti.",
+ "adim": 5,
+ "yurutucu_token": {
+  "girdi": 15378,
+  "cikti": 24051
+ },
+ "yurutucu_usd": 0.006348000000000001,
+ "bitirdi": true,
+ "sure_sn": 212.4,
+ "gizli": {
+  "gecti": true,
+  "gecen": 16,
+  "toplam": 16,
+  "cikti": "................                                                         [100%]\n16 passed in 0.02s\n"
+ }
+}

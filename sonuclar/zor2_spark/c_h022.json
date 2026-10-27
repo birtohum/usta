@@ -1,0 +1,51 @@
+{
+ "id": "h022",
+ "kip": "c",
+ "kategori": "dosya ve komut satırı (CSV/JSON okuma, rapor yazdırma, argümanlar, hata mesajları)",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 18,
+   "basarili": 18
+  }
+ ],
+ "spark_usd": 0.0026838,
+ "arayuz": "",
+ "hakem": [
+  {
+   "test": "test_ucret_anadolu_desi_buyukken",
+   "karar": "belirsiz",
+   "gerekce": "Katsayının taban ücrete de uygulanıp uygulanmadığı metinden tek anlamlı çıkarılamıyor.",
+   "tur": 1
+  },
+  {
+   "test": "test_ucret_diger_katsayi",
+   "karar": "belirsiz",
+   "gerekce": "Katsayının taban ücrete de uygulanıp uygulanmadığı metinden tek anlamlı çıkarılamıyor.",
+   "tur": 1
+  }
+ ],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [
+  "test_ucret_anadolu_desi_buyukken",
+  "test_ucret_diger_katsayi"
+ ],
+ "kabul_gecti": true,
+ "ozet": "kargo.py modülü yazıldı: desi_hesapla ölçü kontrolü (0,200] ve \"Geçersiz ölçü\" hatası ile ham desi hesabı yapar; ucret_hesapla bölge katsayıları (1/1.2/1.5) ve yarım-yukarı 2 ondalık Decimal yuvarlama uygular; toplu_fiyatlandir eksik/geçersiz girişte Decimal(-1) döndürür, boş listede boş liste verir, kilo aralığını 0-200 olarak denetler. Yalnızca decimal+math kullanıldı. 29 pytest testi geçti.",
+ "adim": 6,
+ "yurutucu_token": {
+  "girdi": 26087,
+  "cikti": 9890
+ },
+ "yurutucu_usd": 0.0045867,
+ "bitirdi": true,
+ "sure_sn": 193.6,
+ "gizli": {
+  "gecti": true,
+  "gecen": 18,
+  "toplam": 18,
+  "cikti": "..................                                                       [100%]\n18 passed in 0.03s\n"
+ }
+}

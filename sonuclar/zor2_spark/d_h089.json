@@ -1,0 +1,40 @@
+{
+ "id": "h089",
+ "kip": "d",
+ "kategori": "doğrulama ve ayrıştırma (TC kimlik, IBAN, telefon, plaka, e-posta, adres biçimi)",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 17,
+   "basarili": 17
+  }
+ ],
+ "spark_usd": 0.0055551,
+ "arayuz": "vergi.py dosyasında VknKayit sınıfı; __init__(self), vkn_gecerli_mi(self, vkn: str) -> bool örnek yöntemi, kaydet(self, unvan: str, vkn: str) -> None, sirali_unvanlar(self) -> list[tuple[str, str]]; TCileKaristiHatasi, VknHatasi, CiftKayitHatasi sınıfları vergi.py içinde ValueError alt sınıfı.",
+ "hakem": [],
+ "geri_alma": 0,
+ "inceleme": {
+  "yazilan": 0,
+  "kanitli": []
+ },
+ "iptal_edilen_test": [
+  "test_sirali_unvanlar_kucuk_harf_sirasi"
+ ],
+ "kabul_gecti": true,
+ "ozet": "vergi.py içinde VknHatasi, TCileKaristiHatasi, CiftKayitHatasi (ValueError alt sınıfları) ve VknKayit sınıfı yazıldı. vkn_gecerli_mi boşluk temizler, 11 hane TC-checksum uyarsa TCileKaristiHatasi, diğer format bozukluklarında VknHatasi verir, ilk hanesi 0 veya checksum tutmazsa False döner; VKN algoritması spec'e uygun uygulandı. kaydet unvan/VKN strip eder, boşları reddeder, geçersiz VKN'yi kayda almaz, yinelenen VKN ve case-insensitive yinelenen unvanda CiftKayitHatasi verir, None girişte TypeError fırlatır. sirali_unvanlar lower() anahtarıyla sıralar. pytest ile 15 test geçirildi.",
+ "adim": 9,
+ "yurutucu_token": {
+  "girdi": 39943,
+  "cikti": 28299
+ },
+ "yurutucu_usd": 0.0096541,
+ "bitirdi": true,
+ "sure_sn": 339.8,
+ "gizli": {
+  "gecti": false,
+  "gecen": 19,
+  "toplam": 20,
+  "cikti": ".....F..............                                                     [100%]\n=================================== FAILURES ===================================\n_____________________________ test_ilk_hane_sifir ______________________________\n\n    def test_ilk_hane_sifir():\n        k = VknKayit()\n>       with pytest.raises(VknHatasi):\nE       Failed: DID NOT RAISE <class 'vergi.VknHatasi'>\n\n.gizli/test_gizli.py:33: Failed\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_ilk_hane_sifir - Failed: DID NOT RAISE <cla...\n1 failed, 19 passed in 0.03s\n"
+ }
+}

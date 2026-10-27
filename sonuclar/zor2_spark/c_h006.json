@@ -1,0 +1,35 @@
+{
+ "id": "h006",
+ "kip": "c",
+ "kategori": "veri yapıları ve algoritmalar (kuyruk, önbellek, arama, gruplama, birleştirme, durum makinesi)",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 19,
+   "basarili": 19
+  }
+ ],
+ "spark_usd": 0.0020828,
+ "arayuz": "Dosya: cagri_kuyrugu.py, Sınıf: CagriKuyrugu, kurucu: CagriKuyrugu(). Metotlar: ekle(musteri_id: str, oncelik: int) -> int, siradaki() -> dict, bekleyen_sayisi() -> int, ortalama_bekleme_suresi() -> float.",
+ "hakem": [],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [],
+ "kabul_gecti": true,
+ "ozet": "cagri_kuyrugu.py içinde CagriKuyrugu sınıfını heap tabanlı öncelik kuyruğu olarak yazdım: ekle doğrulama + sira_no döndürür, siradaki önceliğe/FIFO'ya göre dict döner, bekleyen_sayisi ve ortalama_bekleme_suresi (dakika, 2 ondalık) eklendi. Kapasite 100, hata tipleri spec'e uygun. 12 pytest testi yazıldı ve hepsi geçti.",
+ "adim": 4,
+ "yurutucu_token": {
+  "girdi": 11138,
+  "cikti": 7252
+ },
+ "yurutucu_usd": 0.0025642,
+ "bitirdi": true,
+ "sure_sn": 127.5,
+ "gizli": {
+  "gecti": true,
+  "gecen": 16,
+  "toplam": 16,
+  "cikti": "................                                                         [100%]\n16 passed in 0.02s\n"
+ }
+}

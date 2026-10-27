@@ -1,0 +1,38 @@
+{
+ "id": "h080",
+ "kip": "d",
+ "kategori": "küçük işletme hesapları (KDV, fatura, taksit, indirim, stok, kur dönüşümü, yuvarlama)",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 17,
+   "basarili": 17
+  }
+ ],
+ "spark_usd": 0.0046967,
+ "arayuz": "",
+ "hakem": [],
+ "geri_alma": 0,
+ "inceleme": {
+  "yazilan": 0,
+  "kanitli": []
+ },
+ "iptal_edilen_test": [],
+ "kabul_gecti": true,
+ "ozet": "mustahsil.py içinde MustahsilMakbuzu sınıfı yazıldı: belge_no/tc/ad/kg/fiyat doğrulamaları, Decimal ile %4 stopaj + %1 borsa kesintisi (ROUND_HALF_UP), net hesaplama, dokum() sıralı liste. 11 pytest testi geçiyor.",
+ "adim": 6,
+ "yurutucu_token": {
+  "girdi": 27049,
+  "cikti": 10591
+ },
+ "yurutucu_usd": 0.0048231,
+ "bitirdi": true,
+ "sure_sn": 293.3,
+ "gizli": {
+  "gecti": true,
+  "gecen": 16,
+  "toplam": 16,
+  "cikti": "................                                                         [100%]\n16 passed in 0.02s\n"
+ }
+}

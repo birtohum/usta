@@ -1,0 +1,35 @@
+{
+ "id": "h044",
+ "kip": "c",
+ "kategori": "küçük işletme hesapları (KDV, fatura, taksit, indirim, stok, kur dönüşümü, yuvarlama)",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 18,
+   "basarili": 18
+  }
+ ],
+ "spark_usd": 0.0020721,
+ "arayuz": "",
+ "hakem": [],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [],
+ "kabul_gecti": true,
+ "ozet": "senet.py içinde SenetliSatis sınıfı yazıldı: Decimal ROUND_HALF_UP ile taksit bölme (kuruş farkı son taksitte), vade+tutar sıralı taksit_tablosu, erken_kapatma ve günlük %0.05 gecikme cezası; tarih format hatası TypeError, geçersiz gün ValueError, tip/aralık kontrolleri ve dörtlü __eq__ eklendi. pytest ile 12 test geçti.",
+ "adim": 6,
+ "yurutucu_token": {
+  "girdi": 35636,
+  "cikti": 21768
+ },
+ "yurutucu_usd": 0.0079172,
+ "bitirdi": true,
+ "sure_sn": 183.2,
+ "gizli": {
+  "gecti": true,
+  "gecen": 19,
+  "toplam": 19,
+  "cikti": "...................                                                      [100%]\n19 passed in 0.03s\n"
+ }
+}

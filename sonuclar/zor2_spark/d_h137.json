@@ -1,0 +1,38 @@
+{
+ "id": "h137",
+ "kip": "d",
+ "kategori": "doğrulama ve ayrıştırma (TC kimlik, IBAN, telefon, plaka, e-posta, adres biçimi)",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 19,
+   "basarili": 19
+  }
+ ],
+ "spark_usd": 0.0067888,
+ "arayuz": "Dosya: abonelik_dogrulama.py. Hazır imzalar: iban_temizle(ham: str) -> str, eposta_dogrula(eposta: str) -> str, adres_cozumle(metin: str) -> dict, ozet_rapor(gecerli: int, toplam: int) -> float. Ek: listeyi_sirala(liste: list) -> list; liste eposta ve IBAN içeren sözlüklerden oluşur.",
+ "hakem": [],
+ "geri_alma": 0,
+ "inceleme": {
+  "yazilan": 0,
+  "kanitli": []
+ },
+ "iptal_edilen_test": [],
+ "kabul_gecti": true,
+ "ozet": "abonelik_dogrulama.py içinde iban_temizle, eposta_dogrula, adres_cozumle, ozet_rapor ve listeyi_sirala fonksiyonları yazıldı; IBAN mod97, e-posta kuralları, adres ayrıştırma, sıralama ve yüzde yuvarlama uygulandı. test_abonelik.py ile 26 test yazıldı ve python -m pytest -q ile hepsi geçti.",
+ "adim": 11,
+ "yurutucu_token": {
+  "girdi": 101816,
+  "cikti": 34687
+ },
+ "yurutucu_usd": 0.017119,
+ "bitirdi": true,
+ "sure_sn": 467.1,
+ "gizli": {
+  "gecti": false,
+  "gecen": 19,
+  "toplam": 20,
+  "cikti": "............F.......                                                     [100%]\n=================================== FAILURES ===================================\n_________________________ test_adres_cozumle_basarili __________________________\n\n    def test_adres_cozumle_basarili():\n        m = \"Mahalle: Cumhuriyet, Sokak: Atatürk, Bina No: 12, Daire No: 5\"\n>       assert adres_cozumle(m) == {\"mahalle\": \"Cumhuriyet\", \"sokak\": \"Atatürk\", \"bina_no\": 12, \"daire_no\": \"5\"}\nE       AssertionError: assert {'bina_no': 1...k': 'Atatürk'} == {'bina_no': 1...k': 'Atatürk'}\nE         Omitting 3 identical items, use -vv to show\nE         Differing items:\nE         {'daire_no': 5} != {'daire_no': '5'}\nE         Use -v to get more diff\n\n.gizli/test_gizli.py:94: AssertionError\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_adres_cozumle_basarili - AssertionError: as...\n1 failed, 19 passed in 0.03s\n"
+ }
+}

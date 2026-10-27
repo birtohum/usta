@@ -1,0 +1,23 @@
+{
+ "id": "h124",
+ "kip": "b",
+ "kategori": "dosya ve komut satırı (CSV/JSON okuma, rapor yazdırma, argümanlar, hata mesajları)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "servis.py programını yazdım: bakimlar.json + parcalar.csv okuyup plaka bazında işçilik+parça toplamına KDV ekleyip maliyet.csv üretir; hatalı tarih/negatif işçilik/bilinmeyen parça kayıtlarını stderr uyarısıyla atlar, geçersiz JSON/eksik başlık ve 0-30 dışı KDV'de çıkış kodu 2 verir, geçerli kayıt yoksa yalnızca başlık yazar. 11 pytest testi yazıp `python -m pytest -q` ile hepsini geçirdim.",
+ "adim": 9,
+ "yurutucu_token": {
+  "girdi": 71935,
+  "cikti": 15308
+ },
+ "yurutucu_usd": 0.010255100000000001,
+ "bitirdi": true,
+ "sure_sn": 134.0,
+ "gizli": {
+  "gecti": true,
+  "gecen": 16,
+  "toplam": 16,
+  "cikti": "................                                                         [100%]\n16 passed in 0.48s\n"
+ }
+}

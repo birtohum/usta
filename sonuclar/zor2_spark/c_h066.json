@@ -1,0 +1,35 @@
+{
+ "id": "h066",
+ "kip": "c",
+ "kategori": "veri yapıları ve algoritmalar (kuyruk, önbellek, arama, gruplama, birleştirme, durum makinesi)",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 19,
+   "basarili": 19
+  }
+ ],
+ "spark_usd": 0.0028244999999999998,
+ "arayuz": "",
+ "hakem": [],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [],
+ "kabul_gecti": true,
+ "ozet": "kesim_plan.py içinde gruplara_ayir (azalan genişlik + artan id sıralı first-fit, grup içi id sıralı) ve fire_orani (Decimal ROUND_HALF_UP 4 ondalık) yazıldı; tip/değer doğrulamaları eklendi. test_kesim.py ile 11 pytest testi geçti.",
+ "adim": 7,
+ "yurutucu_token": {
+  "girdi": 30633,
+  "cikti": 8796
+ },
+ "yurutucu_usd": 0.0048224999999999995,
+ "bitirdi": true,
+ "sure_sn": 258.4,
+ "gizli": {
+  "gecti": true,
+  "gecen": 18,
+  "toplam": 18,
+  "cikti": "..................                                                       [100%]\n18 passed in 0.02s\n"
+ }
+}

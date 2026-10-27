@@ -1,0 +1,23 @@
+{
+ "id": "h040",
+ "kip": "a",
+ "kategori": "dosya ve komut satırı (CSV/JSON okuma, rapor yazdırma, argümanlar, hata mesajları)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "randevu.py yazıldı: ConflictError(Exception) ve RandevuDefteri(ekle/iptal/gun_listesi) tüm gereksinimlere uygun; doğrulama, çakışma kontrolü, artan kimlik, sıralı JSON kalıcılık ve bozuk-dosya kontrolü test edildi.",
+ "adim": 3,
+ "yurutucu_token": {
+  "girdi": 9121,
+  "cikti": 5985
+ },
+ "yurutucu_usd": 0.0021091000000000005,
+ "bitirdi": true,
+ "sure_sn": 49.2,
+ "gizli": {
+  "gecti": true,
+  "gecen": 19,
+  "toplam": 19,
+  "cikti": "...................                                                      [100%]\n19 passed in 0.05s\n"
+ }
+}

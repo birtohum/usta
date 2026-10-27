@@ -1,0 +1,38 @@
+{
+ "id": "h083",
+ "kip": "d",
+ "kategori": "doğrulama ve ayrıştırma (TC kimlik, IBAN, telefon, plaka, e-posta, adres biçimi)",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 18,
+   "basarili": 18
+  }
+ ],
+ "spark_usd": 0.0047887,
+ "arayuz": "adres.py içinde adres_parcala(adres: str) -> dict; AdresHatasi adres.py içinde ValueError alt sınıfı; dönüş sözlük anahtarları: mahalle, cadde, bina, daire, posta_kodu",
+ "hakem": [],
+ "geri_alma": 0,
+ "inceleme": {
+  "yazilan": 0,
+  "kanitli": []
+ },
+ "iptal_edilen_test": [],
+ "kabul_gecti": true,
+ "ozet": "adres.py içinde AdresHatasi (ValueError alt sınıfı) ve adres_parcala fonksiyonu yazıldı: 5 parçaya ayırma, trim, mahallede rakam yasağı, caddede en az 3 harf, bina (12/12A/12 bölü 3), daire (boş/pozitif tamsayı/sayı-harf), posta kodu (5 ASCII rakam, 01000-81999) kuralları uygulandı; None için TypeError. pytest ile 17 test geçti.",
+ "adim": 4,
+ "yurutucu_token": {
+  "girdi": 11831,
+  "cikti": 10831
+ },
+ "yurutucu_usd": 0.0033493000000000004,
+ "bitirdi": true,
+ "sure_sn": 259.5,
+ "gizli": {
+  "gecti": true,
+  "gecen": 17,
+  "toplam": 17,
+  "cikti": ".................                                                        [100%]\n17 passed in 0.02s\n"
+ }
+}

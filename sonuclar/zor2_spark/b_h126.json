@@ -1,0 +1,23 @@
+{
+ "id": "h126",
+ "kip": "b",
+ "kategori": "veri yapıları ve algoritmalar (kuyruk, önbellek, arama, gruplama, birleştirme, durum makinesi)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "`nem_penceresi.py` içinde `NemPenceresi` sınıfı `collections.deque(maxlen=pencere)` ile yazıldı: kurucu aralık dışı pencerede ValueError, ölçüm aralığı dışında ValueError, bool girişte TypeError, FIFO taşma, Decimal+ROUND_HALF_UP ile 2 ondalık ortalama, min/maks ve kopya liste. `test_nem.py` ile 15 pytest testi geçiyor.",
+ "adim": 9,
+ "yurutucu_token": {
+  "girdi": 34123,
+  "cikti": 24073
+ },
+ "yurutucu_usd": 0.0082269,
+ "bitirdi": true,
+ "sure_sn": 190.4,
+ "gizli": {
+  "gecti": true,
+  "gecen": 19,
+  "toplam": 19,
+  "cikti": "...................                                                      [100%]\n19 passed in 0.02s\n"
+ }
+}

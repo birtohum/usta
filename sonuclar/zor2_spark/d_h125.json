@@ -1,0 +1,55 @@
+{
+ "id": "h125",
+ "kip": "d",
+ "kategori": "doğrulama ve ayrıştırma (TC kimlik, IBAN, telefon, plaka, e-posta, adres biçimi)",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 9,
+   "basarili": 9
+  }
+ ],
+ "spark_usd": 0.0108941,
+ "arayuz": "",
+ "hakem": [
+  {
+   "test": "test_iban_26_karakterden_kisa_reddedilir",
+   "karar": "belirsiz",
+   "gerekce": "Görev kısa IBAN için reddet diyor ama ValueError fırlatmayı açıkça şart koşmuyor.",
+   "tur": 1
+  }
+ ],
+ "geri_alma": 0,
+ "inceleme": {
+  "yazilan": 0,
+  "kanitli": []
+ },
+ "iptal_edilen_test": [
+  "test_ayni_tc_ikinci_basvuru_yinelenen",
+  "test_esitlikte_bosluk_ve_buyuk_harf_yoksayilir",
+  "test_hatay_disi_ayri_kodla_isaretlenir",
+  "test_iban_26_karakter_gecerli",
+  "test_kayitlar_tc_artan_sirada_saklanir",
+  "test_ozet_rapor_sayilar_ve_oran_yuvarlama",
+  "test_tc_11_hane_gecerli_kabul",
+  "test_telefon_10_hane_alt_sinir_gecerli",
+  "test_iban_26_karakterden_kisa_reddedilir"
+ ],
+ "kabul_gecti": true,
+ "ozet": null,
+ "adim": 20,
+ "yurutucu_token": {
+  "girdi": 194731,
+  "cikti": 69111
+ },
+ "yurutucu_usd": 0.0332953,
+ "bitirdi": false,
+ "sure_sn": 762.5,
+ "gizli": {
+  "gecti": false,
+  "gecen": 10,
+  "toplam": 18,
+  "cikti": ">       with pytest.raises(ValueError):\nE       Failed: DID NOT RAISE <class 'ValueError'>\n\n.gizli/test_gizli.py:51: Failed\n_______________________ test_adres_tek_karakter_gecersiz _______________________\n\n    def test_adres_tek_karakter_gecersiz():\n        d = YardimBasvuruDenetleyici()\n>       with pytest.raises(ValueError):\nE       Failed: DID NOT RAISE <class 'ValueError'>\n\n.gizli/test_gizli.py:66: Failed\n____________________________ test_bos_dize_gecersiz ____________________________\n\n    def test_bos_dize_gecersiz():\n        d = YardimBasvuruDenetleyici()\n>       with pytest.raises(ValueError):\nE       Failed: DID NOT RAISE <class 'ValueError'>\n\n.gizli/test_gizli.py:71: Failed\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_gecerli_hatay - KeyError: 'kod'\nFAILED .gizli/test_gizli.py::test_hatay_disi_ayri_kod - KeyError: 'kod'\nFAILED .gizli/test_gizli.py::test_tc_kisa_valueerror - Failed: DID NOT RAISE ...\nFAILED .gizli/test_gizli.py::test_telefon_11den_uzun_reddet - Failed: DID NOT...\nFAILED .gizli/test_gizli.py::test_telefon_gsm_kurali - Failed: DID NOT RAISE ...\nFAILED .gizli/test_gizli.py::test_iban_kisa_reddet - Failed: DID NOT RAISE <c...\nFAILED .gizli/test_gizli.py::test_adres_tek_karakter_gecersiz - Failed: DID N...\nFAILED .gizli/test_gizli.py::test_bos_dize_gecersiz - Failed: DID NOT RAISE <...\n8 failed, 10 passed in 0.04s\n"
+ }
+}

@@ -1,0 +1,58 @@
+{
+ "id": "h147",
+ "kip": "d",
+ "kategori": "doğrulama ve ayrıştırma (TC kimlik, IBAN, telefon, plaka, e-posta, adres biçimi)",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": false,
+   "toplam": 15,
+   "basarili": 14
+  },
+  {
+   "gecti": true,
+   "toplam": 15,
+   "basarili": 15
+  }
+ ],
+ "spark_usd": 0.0066369,
+ "arayuz": "plaka_iban.py: plaka_normalize(plaka: str) -> str, yabanci_plaka_ayristir(plaka: str) -> dict, iban_dogrula_tr(iban: str) -> str, rapor_orani(gecerli: int, toplam: int) -> float, plaka_esit(a: str, b: str) -> bool, iban_esit(a: str, b: str) -> bool, plaka_sirala(plakalar: list) -> list",
+ "hakem": [
+  {
+   "test": "test_yabanci_plaka_gecerli_donus",
+   "karar": "gerekli",
+   "gerekce": "Görev metni dönüş anahtarlarını açıkça ülke_kodu ve kalan_numara olarak belirtiyor.",
+   "tur": 1
+  },
+  {
+   "test": "test_yabanci_plaka_uzunluk_sinirlari",
+   "karar": "belirsiz",
+   "gerekce": "Görev metni boşluk içermeyen plakanın ülke koduna nasıl ayrılacağını tanımlamıyor.",
+   "tur": 1
+  }
+ ],
+ "geri_alma": 0,
+ "inceleme": {
+  "yazilan": 0,
+  "kanitli": []
+ },
+ "iptal_edilen_test": [
+  "test_yabanci_plaka_uzunluk_sinirlari"
+ ],
+ "kabul_gecti": true,
+ "ozet": null,
+ "adim": 20,
+ "yurutucu_token": {
+  "girdi": 170932,
+  "cikti": 31820
+ },
+ "yurutucu_usd": 0.0234572,
+ "bitirdi": false,
+ "sure_sn": 572.8,
+ "gizli": {
+  "gecti": true,
+  "gecen": 18,
+  "toplam": 18,
+  "cikti": "..................                                                       [100%]\n18 passed in 0.02s\n"
+ }
+}

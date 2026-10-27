@@ -1,0 +1,23 @@
+{
+ "id": "h094",
+ "kip": "b",
+ "kategori": "dosya ve komut satırı (CSV/JSON okuma, rapor yazdırma, argümanlar, hata mesajları)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": null,
+ "adim": 20,
+ "yurutucu_token": {
+  "girdi": 251643,
+  "cikti": 41122
+ },
+ "yurutucu_usd": 0.0333887,
+ "bitirdi": false,
+ "sure_sn": 391.4,
+ "gizli": {
+  "gecti": true,
+  "gecen": 15,
+  "toplam": 15,
+  "cikti": "...............                                                          [100%]\n15 passed in 0.60s\n"
+ }
+}

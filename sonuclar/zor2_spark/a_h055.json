@@ -1,0 +1,23 @@
+{
+ "id": "h055",
+ "kip": "a",
+ "kategori": "Türkçe metin işleme (Türkçe harfler, büyük/küçük harf, hece, ek, sıralama, sayı/yazı)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "uyum_denetcisi.py içinde UyumDenetcisi sınıfı oluşturuldu: büyük ünlü uyumu (kalın/ince karışımı) ve küçük ünlü uyumu (TDK izin tablosu) denetleniyor, sözlükteki yabancı kelimeler uyumlu sayılıyor, skor (uyumlu kural/2) Decimal ile yarım-yukarı 2 basamak yuvarlanıyor, denetle girdileri doğrulayıp küçük harfe çevirerek saklıyor, raporla ilk skorla tekilleştirip skora göre azalan ve kararlı sıralıyor.",
+ "adim": 10,
+ "yurutucu_token": {
+  "girdi": 39854,
+  "cikti": 17725
+ },
+ "yurutucu_usd": 0.007530400000000001,
+ "bitirdi": true,
+ "sure_sn": 154.6,
+ "gizli": {
+  "gecti": true,
+  "gecen": 17,
+  "toplam": 17,
+  "cikti": ".................                                                        [100%]\n17 passed in 0.02s\n"
+ }
+}

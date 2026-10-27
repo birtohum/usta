@@ -1,0 +1,23 @@
+{
+ "id": "h063",
+ "kip": "a",
+ "kategori": "tarih ve saat (iş günü, resmî tatil listesi parametre olarak verilir, süre hesabı, biçim dönüşümü)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "cagri_mesai.py yazıldı: vardiya_suresi, gece_gunduz_ayir, primli_ucret + Vardiya eşitlik/sıralama desteği. Gece 22:00-06:00, >6 saatte 60dk mola (30 gece+30 gündüz, min 60dk), tatil başlangıç tarihine göre 2x, saniye atılır, ücret ROUND_HALF_UP, 24 saat ve ters aralık ValueError.",
+ "adim": 6,
+ "yurutucu_token": {
+  "girdi": 15380,
+  "cikti": 22997
+ },
+ "yurutucu_usd": 0.006137400000000001,
+ "bitirdi": true,
+ "sure_sn": 191.7,
+ "gizli": {
+  "gecti": false,
+  "gecen": 15,
+  "toplam": 18,
+  "cikti": "=================================== FAILURES ===================================\n___________________________ test_vardiya_8_saat_mola ___________________________\n\n    def test_vardiya_8_saat_mola():\n>       assert vardiya_suresi(\"2024-05-01 09:00\", \"2024-05-01 17:00\") == 420\nE       AssertionError: assert 450 == 420\nE        +  where 450 = vardiya_suresi('2024-05-01 09:00', '2024-05-01 17:00')\n\n.gizli/test_gizli.py:12: AssertionError\n__________________________ test_vardiya_6saat1dk_mola __________________________\n\n    def test_vardiya_6saat1dk_mola():\n>       assert vardiya_suresi(\"2024-05-01 09:00\", \"2024-05-01 15:01\") == 301\nE       AssertionError: assert 331 == 301\nE        +  where 331 = vardiya_suresi('2024-05-01 09:00', '2024-05-01 15:01')\n\n.gizli/test_gizli.py:15: AssertionError\n________________ test_gece_gunduz_gunduz_mola_tamami_gunduzden _________________\n\n    def test_gece_gunduz_gunduz_mola_tamami_gunduzden():\n        d = gece_gunduz_ayir(\"2024-05-01 07:00\", \"2024-05-01 15:00\")\n>       assert d[\"gece\"] == 0 and d[\"gunduz\"] == 420\nE       assert (0 == 0 and 450 == 420)\n\n.gizli/test_gizli.py:51: AssertionError\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_vardiya_8_saat_mola - AssertionError: asser...\nFAILED .gizli/test_gizli.py::test_vardiya_6saat1dk_mola - AssertionError: ass...\nFAILED .gizli/test_gizli.py::test_gece_gunduz_gunduz_mola_tamami_gunduzden - ...\n3 failed, 15 passed in 0.03s\n"
+ }
+}

@@ -1,0 +1,35 @@
+{
+ "id": "h028",
+ "kip": "c",
+ "kategori": "dosya ve komut satırı (CSV/JSON okuma, rapor yazdırma, argümanlar, hata mesajları)",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 17,
+   "basarili": 17
+  }
+ ],
+ "spark_usd": 0.0025434999999999998,
+ "arayuz": "",
+ "hakem": [],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [],
+ "kabul_gecti": true,
+ "ozet": "fis_dogrula.py yazıldı: Decimal ile ham toplayıp sonda yarım-yukarı yuvarlama, adet/birim_fiyat denetimi ve stderr uyarısı, tolerans aşımında CSV (fark azalan + fis_no sözlüksel, iki ondalık nokta), eksik girdi kod 2 / bozuk JSON kod 4. 12 pytest testi geçti.",
+ "adim": 4,
+ "yurutucu_token": {
+  "girdi": 15780,
+  "cikti": 9913
+ },
+ "yurutucu_usd": 0.0035606000000000006,
+ "bitirdi": true,
+ "sure_sn": 126.1,
+ "gizli": {
+  "gecti": true,
+  "gecen": 18,
+  "toplam": 18,
+  "cikti": "..................                                                       [100%]\n18 passed in 0.53s\n"
+ }
+}

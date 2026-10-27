@@ -1,0 +1,50 @@
+{
+ "id": "h023",
+ "kip": "d",
+ "kategori": "doğrulama ve ayrıştırma (TC kimlik, IBAN, telefon, plaka, e-posta, adres biçimi)",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": false,
+   "toplam": 19,
+   "basarili": 18
+  },
+  {
+   "gecti": true,
+   "toplam": 19,
+   "basarili": 19
+  }
+ ],
+ "spark_usd": 0.006855000000000001,
+ "arayuz": "",
+ "hakem": [
+  {
+   "test": "test_il_dagilim_yuzde_yuvarlama",
+   "karar": "gerekli",
+   "gerekce": "Görev metni il dağılım yüzdelerinin iki ondalığa yuvarlanmasını açıkça istiyor.",
+   "tur": 1
+  }
+ ],
+ "geri_alma": 0,
+ "inceleme": {
+  "yazilan": 0,
+  "kanitli": []
+ },
+ "iptal_edilen_test": [],
+ "kabul_gecti": true,
+ "ozet": null,
+ "adim": 29,
+ "yurutucu_token": {
+  "girdi": 459646,
+  "cikti": 57947
+ },
+ "yurutucu_usd": 0.05755400000000001,
+ "bitirdi": false,
+ "sure_sn": 718.7,
+ "gizli": {
+  "gecti": false,
+  "gecen": 15,
+  "toplam": 17,
+  "cikti": "....F.........F..                                                        [100%]\n=================================== FAILURES ===================================\n___________________________ test_dogrula_harf_grubu ____________________________\n\n    def test_dogrula_harf_grubu():\n        assert plaka_dogrula(\"34 A 12\") is True\n        assert plaka_dogrula(\"34 ABC 12\") is True\n        assert plaka_dogrula(\"34 ABCD 12\") is False\n>       assert plaka_dogrula(\"34 QW 12\") is False\nE       AssertionError: assert True is False\nE        +  where True = plaka_dogrula('34 QW 12')\n\n.gizli/test_gizli.py:33: AssertionError\n___________________________ test_filo_ozeti_yuzdeler ___________________________\n\n    def test_filo_ozeti_yuzdeler():\n        giris = [\"34 AB 12\", \"34 AC 12\", \"16 AB 12\"]\n        oz = filo_ozeti(giris)\n>       assert oz[\"il_dagilimi\"] == {34: 2, 16: 1}\nE       assert {16: 33.33, 34: 66.67} == {16: 1, 34: 2}\nE         Differing items:\nE         {16: 33.33} != {16: 1}\nE         {34: 66.67} != {34: 2}\nE         Use -v to get more diff\n\n.gizli/test_gizli.py:114: AssertionError\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_dogrula_harf_grubu - AssertionError: assert...\nFAILED .gizli/test_gizli.py::test_filo_ozeti_yuzdeler - assert {16: 33.33, 34...\n2 failed, 15 passed in 0.04s\n"
+ }
+}

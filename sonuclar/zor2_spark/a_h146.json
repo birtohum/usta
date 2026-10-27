@@ -1,0 +1,23 @@
+{
+ "id": "h146",
+ "kip": "a",
+ "kategori": "dosya ve komut satırı (CSV/JSON okuma, rapor yazdırma, argümanlar, hata mesajları)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "depo.py içinde SogukHavaDeposu sınıfı yazıldı: FIFO çıkış, fire yalnızca stok_raporu'nda, Decimal ROUND_HALF_UP yuvarlama, JSON kaydet/yükle ve istenen hata mesajları uygulandı.",
+ "adim": 5,
+ "yurutucu_token": {
+  "girdi": 16529,
+  "cikti": 28151
+ },
+ "yurutucu_usd": 0.007283100000000001,
+ "bitirdi": true,
+ "sure_sn": 238.2,
+ "gizli": {
+  "gecti": false,
+  "gecen": 17,
+  "toplam": 18,
+  "cikti": ".................F                                                       [100%]\n=================================== FAILURES ===================================\n__________________________ test_kaydet_yukle_birlikte __________________________\n\ntmp_path = PosixPath('/home/usta/is/deb7bfa785cb/.tmp/pytest-of-usta/pytest-0/test_kaydet_yukle_birlikte0')\n\n    def test_kaydet_yukle_birlikte(tmp_path):\n        d = SogukHavaDeposu(0.01)\n        d.giris_ekle(\"P1\", 100, \"2024-01-01\")\n        d.giris_ekle(\"P2\", 50, \"2024-02-01\")\n        d.cikis_yap(30, \"2024-03-01\")\n        yol = tmp_path / \"depo.json\"\n        d.kaydet(str(yol))\n        d2 = SogukHavaDeposu.yukle(str(yol), 0.01)\n>       assert d.stok_raporu() == d2.stok_raporu()\nE       AssertionError: assert [{'kalan_kg':...ti_id': 'P2'}] == [{'kalan_kg':...ti_id': 'P2'}]\nE         At index 0 diff: {'parti_id': 'P1', 'kalan_kg': 38.3} != {'parti_id': 'P1', 'kalan_kg': 70.0}\nE         Use -v to get more diff\n\n.gizli/test_gizli.py:157: AssertionError\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_kaydet_yukle_birlikte - AssertionError: ass...\n1 failed, 17 passed in 0.04s\n"
+ }
+}

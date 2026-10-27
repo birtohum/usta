@@ -1,0 +1,23 @@
+{
+ "id": "h104",
+ "kip": "a",
+ "kategori": "küçük işletme hesapları (KDV, fatura, taksit, indirim, stok, kur dönüşümü, yuvarlama)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "randiman.py içinde RandimanliAlim sınıfı oluşturuldu: baz fiyat aralığı, fiş/üretici/kg/randıman/nem doğrulamaları, randıman düzeltmesi + %10 üstü nem kesintisi (her adımda ROUND_HALF_UP), tutar hesabı, mükerrer fişte ValueError, bilinmeyen fişte KeyError, tutara göre azalan özet sıralaması; tüm hesaplar Decimal ile, float yok.",
+ "adim": 5,
+ "yurutucu_token": {
+  "girdi": 17531,
+  "cikti": 8821
+ },
+ "yurutucu_usd": 0.0035172999999999997,
+ "bitirdi": true,
+ "sure_sn": 80.3,
+ "gizli": {
+  "gecti": true,
+  "gecen": 18,
+  "toplam": 18,
+  "cikti": "..................                                                       [100%]\n18 passed in 0.02s\n"
+ }
+}

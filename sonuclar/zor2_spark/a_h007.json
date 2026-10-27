@@ -1,0 +1,23 @@
+{
+ "id": "h007",
+ "kip": "a",
+ "kategori": "Türkçe metin işleme (Türkçe harfler, büyük/küçük harf, hece, ek, sıralama, sayı/yazı)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "siralama.py dosyası oluşturuldu; turkce_sirala fonksiyonu Türk alfabesi sırasına göre (ç,ğ,ı,ö,ş,ü doğru konumda), Türkçe I/İ dönüşümlü küçük harf anahtarı, küçük-harfe öncelik veren ikincil anahtar, boş dize en başa ve rakam-harften önce kategorileri, girdiyi değiştirmeyen sorted + reverse mantığı ve TypeError/ValueError kontrolleriyle tüm gereksinimleri karşılar.",
+ "adim": 11,
+ "yurutucu_token": {
+  "girdi": 45787,
+  "cikti": 19366
+ },
+ "yurutucu_usd": 0.0084519,
+ "bitirdi": true,
+ "sure_sn": 166.4,
+ "gizli": {
+  "gecti": true,
+  "gecen": 16,
+  "toplam": 16,
+  "cikti": "................                                                         [100%]\n16 passed in 0.02s\n"
+ }
+}

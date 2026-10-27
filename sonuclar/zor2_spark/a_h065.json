@@ -1,0 +1,23 @@
+{
+ "id": "h065",
+ "kip": "a",
+ "kategori": "doğrulama ve ayrıştırma (TC kimlik, IBAN, telefon, plaka, e-posta, adres biçimi)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "telefon_kasasi.py içinde OperatorHatasi (ValueError alt sınıfı) ve TelefonKasasi sınıfı yazıldı. ekle; boşluk/tire/parantez/nokta siler, +90/90/0 öneklerini ayıklar, 10 hane + 5XX ve ikinci hane 0-6 kuralını uygular, normalize +90 (5XX) XXX XX XX biçiminde saklar, tekrar eklemede aynı değeri döner. maskeli_getir son iki haneyi açık bırakıp yıldızlar, listele sayısal sıralı döner. Hata durumları (ValueError/OperatorHatasi/TypeError/KeyError) ve çift sıfır önekleri ele alındı, dosyaya yazım yok.",
+ "adim": 15,
+ "yurutucu_token": {
+  "girdi": 76624,
+  "cikti": 22297
+ },
+ "yurutucu_usd": 0.0121218,
+ "bitirdi": true,
+ "sure_sn": 209.1,
+ "gizli": {
+  "gecti": true,
+  "gecen": 18,
+  "toplam": 18,
+  "cikti": "..................                                                       [100%]\n18 passed in 0.02s\n"
+ }
+}

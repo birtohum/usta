@@ -1,0 +1,23 @@
+{
+ "id": "h049",
+ "kip": "b",
+ "kategori": "Türkçe metin işleme (Türkçe harfler, büyük/küçük harf, hece, ek, sıralama, sayı/yazı)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": null,
+ "adim": 5,
+ "yurutucu_token": {
+  "girdi": 8436,
+  "cikti": 48352
+ },
+ "yurutucu_usd": 0.010514,
+ "bitirdi": false,
+ "sure_sn": 452.4,
+ "gizli": {
+  "gecti": false,
+  "gecen": 2,
+  "toplam": 18,
+  "cikti": "tedProcess(args=['/usr/bin/python', '/home/usta/is/2bac9ca253f7/sms_hazirla.py', '--girdi', '/home/usta/is/2bac9...=\"/usr/bin/python: can't open file '/home/usta/is/2bac9ca253f7/sms_hazirla.py': [Errno 2] No such file or directory\\n\").returncode\n\n.gizli/test_gizli.py:201: AssertionError\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_json_alanlari - assert 2 == 0\nFAILED .gizli/test_gizli.py::test_duzeltme_temel - assert 2 == 0\nFAILED .gizli/test_gizli.py::test_buyuk_harf_koruma - assert 2 == 0\nFAILED .gizli/test_gizli.py::test_yalnizca_cgiosu_degisir - assert 2 == 0\nFAILED .gizli/test_gizli.py::test_ozel_sozluk_oncelikli - assert 2 == 0\nFAILED .gizli/test_gizli.py::test_gsm_tek_birim - assert 2 == 0\nFAILED .gizli/test_gizli.py::test_gsm_cift_birim - assert 2 == 0\nFAILED .gizli/test_gizli.py::test_gsm_gis_duble - assert 2 == 0\nFAILED .gizli/test_gizli.py::test_parca_siniri_160 - assert 2 == 0\nFAILED .gizli/test_gizli.py::test_parca_siniri_161 - assert 2 == 0\nFAILED .gizli/test_gizli.py::test_parca_313_314 - assert 2 == 0\nFAILED .gizli/test_gizli.py::test_bos_girdi - assert 2 == 0\nFAILED .gizli/test_gizli.py::test_bin_karakter_valueerror - assert 'ValueErro...\nFAILED .gizli/test_gizli.py::test_varolmayan_girdi_filenotfound - assert 'Fil...\nFAILED .gizli/test_gizli.py::test_esit_parca_sira_koruma - assert 2 == 0\nFAILED .gizli/test_gizli.py::test_parca_bilgisini_goster - assert 2 == 0\n16 failed, 2 passed in 0.35s\n"
+ }
+}

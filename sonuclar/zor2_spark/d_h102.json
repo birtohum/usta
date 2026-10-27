@@ -1,0 +1,38 @@
+{
+ "id": "h102",
+ "kip": "d",
+ "kategori": "veri yapıları ve algoritmalar (kuyruk, önbellek, arama, gruplama, birleştirme, durum makinesi)",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 19,
+   "basarili": 19
+  }
+ ],
+ "spark_usd": 0.0056468,
+ "arayuz": "Dosya: mezat_gruplama.py; lotlari_grupla(lotlar: list[dict]) -> dict, grup_ozeti(gruplar: dict) -> list[dict]. Grup anahtarı (norm_tur: str, boy: str) demeti, boy değeri 'küçük'/'orta'/'büyük'. lotlari_grupla değeri sözlük anahtarları: 'tur', 'toplam_kilo', 'lot_sayisi'. grup_ozeti öğesi sözlük anahtarları: 'tur', 'boy', 'toplam_kilo', 'lot_sayisi'. toplam_kilo float, lot_sayisi int.",
+ "hakem": [],
+ "geri_alma": 0,
+ "inceleme": {
+  "yazilan": 0,
+  "kanitli": []
+ },
+ "iptal_edilen_test": [],
+ "kabul_gecti": true,
+ "ozet": "mezat_gruplama.py yazıldı: lotlari_grupla türü şeritleyip Türkçe küçük harfe çevirerek (I→ı, İ→i) boy kategorisiyle (küçük/orta/büyük) gruplar, aralık dışı boy/kilo/fiyat ve boş lot_id için ValueError, yinelenen lot_id için KeyError verir; toplam kiloyu Decimal+ROUND_HALF_UP ile 2 ondalığa yuvarlar. grup_ozeti kilo azalan, tür artan, boy artan sırayla sorted kullanır; girdiler değiştirilmez. 9 pytest testi geçiyor.",
+ "adim": 11,
+ "yurutucu_token": {
+  "girdi": 63143,
+  "cikti": 17900
+ },
+ "yurutucu_usd": 0.0098943,
+ "bitirdi": true,
+ "sure_sn": 293.1,
+ "gizli": {
+  "gecti": true,
+  "gecen": 16,
+  "toplam": 16,
+  "cikti": "................                                                         [100%]\n16 passed in 0.02s\n"
+ }
+}

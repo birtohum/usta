@@ -1,0 +1,35 @@
+{
+ "id": "h027",
+ "kip": "c",
+ "kategori": "tarih ve saat (iş günü, resmî tatil listesi parametre olarak verilir, süre hesabı, biçim dönüşümü)",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 20,
+   "basarili": 20
+  }
+ ],
+ "spark_usd": 0.0027409,
+ "arayuz": "",
+ "hakem": [],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [],
+ "kabul_gecti": true,
+ "ozet": "`toplanti.py` içinde `cakisan_toplantilari_bul` ve `bosluklari_bul` yazıldı: sıkı `YYYY-AA-GGTHH:MM` / `YYYY-AA-GG` doğrulaması, 5-480 dk süre, gece yarısı yasağı, bitiş==başlangıç çakışmasızlığı, sıralı sonuçlar, `HH:MM` sıfır dolgulu boşluklar, TypeError/ValueError ayrımı ve farklı günleri yok sayma kuralları uygulandı. 18 pytest testi geçiyor.",
+ "adim": 7,
+ "yurutucu_token": {
+  "girdi": 41835,
+  "cikti": 25428
+ },
+ "yurutucu_usd": 0.009269100000000002,
+ "bitirdi": true,
+ "sure_sn": 219.9,
+ "gizli": {
+  "gecti": false,
+  "gecen": 14,
+  "toplam": 19,
+  "cikti": "E           ValueError: Gecersiz zaman bicimi: '09:00'\n\ntoplanti.py:12: ValueError\n__________________________ test_bosluk_sifir_dolgulu ___________________________\n\n    def test_bosluk_sifir_dolgulu():\n>       res = toplanti.bosluklari_bul([], \"2025-03-10\", \"09:00\", \"17:00\")\n\n.gizli/test_gizli.py:96: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \ntoplanti.py:104: in bosluklari_bul\n    work_start = _parse_full(calisma_baslangic) if isinstance(calisma_baslangic, str) else (_parse_full(str(calisma_baslangic)))\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\ns = '09:00'\n\n    def _parse_full(s: str) -> datetime:\n        m = _FULL_RE.match(s) if isinstance(s, str) else None\n        if not m:\n>           raise ValueError(f\"Gecersiz zaman bicimi: {s!r}\")\nE           ValueError: Gecersiz zaman bicimi: '09:00'\n\ntoplanti.py:12: ValueError\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_bosluk_temel - ValueError: Gecersiz zaman b...\nFAILED .gizli/test_gizli.py::test_bosluk_bos_liste - ValueError: Gecersiz zam...\nFAILED .gizli/test_gizli.py::test_bosluk_farkli_gun_yoksay - ValueError: Gece...\nFAILED .gizli/test_gizli.py::test_kisa_bosluk_elenir_ve_format - ValueError: ...\nFAILED .gizli/test_gizli.py::test_bosluk_sifir_dolgulu - ValueError: Gecersiz...\n5 failed, 14 passed in 0.05s\n"
+ }
+}

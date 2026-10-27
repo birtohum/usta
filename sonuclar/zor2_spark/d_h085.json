@@ -1,0 +1,38 @@
+{
+ "id": "h085",
+ "kip": "d",
+ "kategori": "Türkçe metin işleme (Türkçe harfler, büyük/küçük harf, hece, ek, sıralama, sayı/yazı)",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 19,
+   "basarili": 19
+  }
+ ],
+ "spark_usd": 0.005107700000000001,
+ "arayuz": "",
+ "hakem": [],
+ "geri_alma": 0,
+ "inceleme": {
+  "yazilan": 0,
+  "kanitli": []
+ },
+ "iptal_edilen_test": [],
+ "kabul_gecti": true,
+ "ozet": "fiyat.py modülü oluşturuldu: bicimlendir ve kdv_ekle işlevleri Decimal ROUND_HALF_UP yuvarlama, nokta binlik/virgül ondalık formatı ve TL ekiyle; negatiflerde başa eksi, sıfırda 0,00 TL, KDV'de oran denetimi (1/10/20), negatif tutar ve 5000000 taşma ValueError, hatalı türlerde TypeError. test_fiyat.py ile 12 test `python -m pytest -q` altında geçti.",
+ "adim": 11,
+ "yurutucu_token": {
+  "girdi": 45712,
+  "cikti": 23446
+ },
+ "yurutucu_usd": 0.0092604,
+ "bitirdi": true,
+ "sure_sn": 319.3,
+ "gizli": {
+  "gecti": true,
+  "gecen": 16,
+  "toplam": 16,
+  "cikti": "................                                                         [100%]\n16 passed in 0.02s\n"
+ }
+}

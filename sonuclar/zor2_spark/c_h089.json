@@ -1,0 +1,35 @@
+{
+ "id": "h089",
+ "kip": "c",
+ "kategori": "doğrulama ve ayrıştırma (TC kimlik, IBAN, telefon, plaka, e-posta, adres biçimi)",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 19,
+   "basarili": 19
+  }
+ ],
+ "spark_usd": 0.0021259,
+ "arayuz": "vergi.py içinde VknKayit sınıfı: __init__(self), statik vkn_gecerli_mi(vkn: str) -> bool, kaydet(self, unvan: str, vkn: str) -> None, sirali_unvanlar(self) -> list[tuple[str, str]]; ValueError alt sınıfları VknHatasi, TCileKaristiHatasi ve CiftKayitHatasi aynı dosyada tanımlı.",
+ "hakem": [],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [],
+ "kabul_gecti": true,
+ "ozet": "vergi.py içinde VknHatasi, TCileKaristiHatasi, CiftKayitHatasi (ValueError alt sınıfları) ve VknKayit sınıfı yazıldı: vkn_gecerli_mi boşluk temizler, 10 ASCII rakam ister, ilk hanesi 0 ise False döner, tarif edilen VKN checksum algoritmasını uygular, geçerli TC checksum'lı 11 hanede TCileKaristiHatasi, diğer bozukluklarda VknHatasi fırlatır; kaydet unvanı strip eder, boşları reddeder, çift VKN/çift unvan (case-insensitive) durumunda CiftKayitHatasi verir, None girişte TypeError; sirali_unvanlar lower'a göre sıralar. 14 pytest testi yazıldı ve hepsi geçti.",
+ "adim": 10,
+ "yurutucu_token": {
+  "girdi": 41281,
+  "cikti": 29712
+ },
+ "yurutucu_usd": 0.0100705,
+ "bitirdi": true,
+ "sure_sn": 241.7,
+ "gizli": {
+  "gecti": false,
+  "gecen": 19,
+  "toplam": 20,
+  "cikti": ".....F..............                                                     [100%]\n=================================== FAILURES ===================================\n_____________________________ test_ilk_hane_sifir ______________________________\n\n    def test_ilk_hane_sifir():\n        k = VknKayit()\n>       with pytest.raises(VknHatasi):\nE       Failed: DID NOT RAISE <class 'vergi.VknHatasi'>\n\n.gizli/test_gizli.py:33: Failed\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_ilk_hane_sifir - Failed: DID NOT RAISE <cla...\n1 failed, 19 passed in 0.02s\n"
+ }
+}

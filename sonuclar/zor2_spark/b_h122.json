@@ -1,0 +1,23 @@
+{
+ "id": "h122",
+ "kip": "b",
+ "kategori": "küçük işletme hesapları (KDV, fatura, taksit, indirim, stok, kur dönüşümü, yuvarlama)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "tahsilat.py içinde VadeliTahsilat sınıfı yazıldı: erken iskonto kademeleri (%5/%3/%1), ana para üzerinden basit faizli gecikme cezası, Decimal HALF_UP kuruş yuvarlama, önce cezaya sonra anaparaya mahsup, tarih artan/tutar azalan ekstre sıralaması, 365 gün ValueError ve tip TypeError kontrolleri uygulandı. 8 pytest testi geçti.",
+ "adim": 11,
+ "yurutucu_token": {
+  "girdi": 112014,
+  "cikti": 38465
+ },
+ "yurutucu_usd": 0.018894400000000002,
+ "bitirdi": true,
+ "sure_sn": 311.5,
+ "gizli": {
+  "gecti": true,
+  "gecen": 16,
+  "toplam": 16,
+  "cikti": "................                                                         [100%]\n16 passed in 0.03s\n"
+ }
+}

@@ -1,0 +1,35 @@
+{
+ "id": "h011",
+ "kip": "c",
+ "kategori": "doğrulama ve ayrıştırma (TC kimlik, IBAN, telefon, plaka, e-posta, adres biçimi)",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 20,
+   "basarili": 20
+  }
+ ],
+ "spark_usd": 0.0032313000000000008,
+ "arayuz": "iban.py içinde: iban_dogrula(iban: str)->bool, iban_ayristir(iban: str)->dict, banka_ozeti(ibanlar: list[str])->dict. iban_ayristir sözlük anahtarları: ulke_kodu, kontrol_basamaklari, banka_kodu, sube_rezervi, hesap_numarasi. banka_ozeti sözlük anahtarları: toplam, gecerli_sayisi, gecerlilik_yuzdesi, bankalar; bankalar banka_kodu->iban listesi eşlemesidir.",
+ "hakem": [],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [],
+ "kabul_gecti": true,
+ "ozet": "iban.py oluşturuldu: normalize (whitespace silme + upper), TR/26 kontrolü, ASCII rakam kontrolleri, MOD97==1 doğrulaması; hatalarda TypeError/ayrı mesajlı ValueError; iban_ayristir sözlüğü ve banka koduna+normalize IBAN'a göre sıralı banka_ozeti ile yuvarlanmış yüzde. test_iban.py ile 16 test `python -m pytest -q` altında geçti.",
+ "adim": 5,
+ "yurutucu_token": {
+  "girdi": 18500,
+  "cikti": 17657
+ },
+ "yurutucu_usd": 0.005381400000000001,
+ "bitirdi": true,
+ "sure_sn": 160.6,
+ "gizli": {
+  "gecti": true,
+  "gecen": 16,
+  "toplam": 16,
+  "cikti": "................                                                         [100%]\n16 passed in 0.03s\n"
+ }
+}

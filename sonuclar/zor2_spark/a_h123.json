@@ -1,0 +1,23 @@
+{
+ "id": "h123",
+ "kip": "a",
+ "kategori": "tarih ve saat (iş günü, resmî tatil listesi parametre olarak verilir, süre hesabı, biçim dönüşümü)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "findik_randevu.py oluşturuldu: slot_uret hafta sonu/tatilde boş liste, bitis<=baslangic ve 10-120 dışı slot ile bozuk tarih/saat için ValueError, tam bölünmeyen aralıkta taşmayan slotlar; uygun_slot_bul bozuk biçimde ValueError, 5 dakikaya aşağı yuvarlama, yuvarlama sonrası bitis<=baslangic, hafta sonu/tatil eleme ve (tarih, baslangic, bitis) sıralaması uygulandı.",
+ "adim": 4,
+ "yurutucu_token": {
+  "girdi": 10638,
+  "cikti": 16059
+ },
+ "yurutucu_usd": 0.0042756,
+ "bitirdi": true,
+ "sure_sn": 131.7,
+ "gizli": {
+  "gecti": false,
+  "gecen": 14,
+  "toplam": 19,
+  "cikti": ".gizli/test_gizli.py:73: AssertionError\n___________________________ test_uygun_tasan_elenir ____________________________\n\n    def test_uygun_tasan_elenir():\n        res = uygun_slot_bul([(\"2026-10-26\", \"09:00\", \"09:03\"), (\"2026-10-26\", \"10:00\", \"10:30\")], [])\n        assert len(res) == 1\n>       assert res[0][1] == \"2026-10-26 10:00\"\nE       AssertionError: assert '10:00' == '2026-10-26 10:00'\nE         - 2026-10-26 10:00\nE         + 10:00\n\n.gizli/test_gizli.py:78: AssertionError\n________________________ test_uygun_gece_yarisi_elenir _________________________\n\n    def test_uygun_gece_yarisi_elenir():\n        res = uygun_slot_bul([(\"2026-10-26\", \"23:50\", \"00:10\"), (\"2026-10-26\", \"10:00\", \"10:30\")], [])\n        assert len(res) == 1\n>       assert res[0][1] == \"2026-10-26 10:00\"\nE       AssertionError: assert '10:00' == '2026-10-26 10:00'\nE         - 2026-10-26 10:00\nE         + 10:00\n\n.gizli/test_gizli.py:83: AssertionError\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_uygun_siralama - AssertionError: assert '09...\nFAILED .gizli/test_gizli.py::test_uygun_ayni_baslangic_erken_bitis_once - Ass...\nFAILED .gizli/test_gizli.py::test_uygun_asagi_yuvarlama - AssertionError: ass...\nFAILED .gizli/test_gizli.py::test_uygun_tasan_elenir - AssertionError: assert...\nFAILED .gizli/test_gizli.py::test_uygun_gece_yarisi_elenir - AssertionError: ...\n5 failed, 14 passed in 0.04s\n"
+ }
+}

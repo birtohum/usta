@@ -1,0 +1,23 @@
+{
+ "id": "h100",
+ "kip": "b",
+ "kategori": "dosya ve komut satırı (CSV/JSON okuma, rapor yazdırma, argümanlar, hata mesajları)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "hali_yikama.py içinde HaliYikamaTakip sınıfı yazıldı: sipariş ekleme doğrulamaları, sıralı durum geçişleri, birim fiyat + %10 indirimli ücret hesabı, sıralı JSON kaydet/yükle ve istenen hata türleri uygulandı. 16 pytest testi yazıldı ve hepsi geçti.",
+ "adim": 4,
+ "yurutucu_token": {
+  "girdi": 14675,
+  "cikti": 7476
+ },
+ "yurutucu_usd": 0.0029627000000000004,
+ "bitirdi": true,
+ "sure_sn": 66.4,
+ "gizli": {
+  "gecti": true,
+  "gecen": 19,
+  "toplam": 19,
+  "cikti": "...................                                                      [100%]\n19 passed in 0.03s\n"
+ }
+}

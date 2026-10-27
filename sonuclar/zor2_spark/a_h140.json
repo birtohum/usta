@@ -1,0 +1,23 @@
+{
+ "id": "h140",
+ "kip": "a",
+ "kategori": "tarih ve saat (iş günü, resmî tatil listesi parametre olarak verilir, süre hesabı, biçim dönüşümü)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "kalip_bakim.py oluşturuldu: sonraki_bakim (DD/MM/YYYY veya YYYY-MM-DD kabul, YYYY-MM-DD çıktı, başlangıç günü hariç iş günü sayımı, Cmt-Paz ve tatil atlama, periyot 1-500 kontrolü) ve calisma_suresi_dk (YYYY-MM-DD HH:MM, eşitse 0, önceyse ValueError, gece yarısı bölünerek hesap, 15 dakikaya yukarı yuvarlama, Şubat 29 artık yıl kontrolü) yazıldı ve test edildi.",
+ "adim": 3,
+ "yurutucu_token": {
+  "girdi": 8084,
+  "cikti": 4917
+ },
+ "yurutucu_usd": 0.0017918,
+ "bitirdi": true,
+ "sure_sn": 39.7,
+ "gizli": {
+  "gecti": true,
+  "gecen": 18,
+  "toplam": 18,
+  "cikti": "..................                                                       [100%]\n18 passed in 0.02s\n"
+ }
+}

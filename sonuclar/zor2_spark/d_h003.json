@@ -1,0 +1,46 @@
+{
+ "id": "h003",
+ "kip": "d",
+ "kategori": "tarih ve saat (iş günü, resmî tatil listesi parametre olarak verilir, süre hesabı, biçim dönüşümü)",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": false,
+   "toplam": 20,
+   "basarili": 18
+  },
+  {
+   "gecti": true,
+   "toplam": 20,
+   "basarili": 20
+  }
+ ],
+ "spark_usd": 0.0037192000000000006,
+ "arayuz": "",
+ "hakem": [],
+ "geri_alma": 0,
+ "inceleme": {
+  "yazilan": 2,
+  "kanitli": [
+   "test_inceleme_cikis_trailing_newline_ValueError",
+   "test_inceleme_giris_trailing_newline_ValueError"
+  ]
+ },
+ "iptal_edilen_test": [],
+ "kabul_gecti": true,
+ "ozet": "Saat doğrulamadaki regex `^...$` kalıbında `$` Python'da sondaki newline'dan önce de eşleştiği için \"17:00\\n\" geçerli sayılıyordu. `match` yerine `fullmatch` kullanılarak düzeltildi; görev metniyle çelişki yok. Tüm testler (15 kendi + 20 kabul) geçiyor.",
+ "adim": 9,
+ "yurutucu_token": {
+  "girdi": 42406,
+  "cikti": 6718
+ },
+ "yurutucu_usd": 0.005584200000000001,
+ "bitirdi": true,
+ "sure_sn": 145.8,
+ "gizli": {
+  "gecti": true,
+  "gecen": 17,
+  "toplam": 17,
+  "cikti": ".................                                                        [100%]\n17 passed in 0.02s\n"
+ }
+}

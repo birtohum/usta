@@ -1,0 +1,46 @@
+{
+ "id": "h149",
+ "kip": "d",
+ "kategori": "tarih ve saat (iş günü, resmî tatil listesi parametre olarak verilir, süre hesabı, biçim dönüşümü)",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": false,
+   "toplam": 18,
+   "basarili": 16
+  },
+  {
+   "gecti": true,
+   "toplam": 18,
+   "basarili": 18
+  }
+ ],
+ "spark_usd": 0.004865700000000001,
+ "arayuz": "",
+ "hakem": [],
+ "geri_alma": 0,
+ "inceleme": {
+  "yazilan": 2,
+  "kanitli": [
+   "test_inceleme_baslangic_virgullu_deger_hata",
+   "test_inceleme_suregun_virgullu_deger_hata"
+  ]
+ },
+ "iptal_edilen_test": [],
+ "kabul_gecti": true,
+ "ozet": "Virgüllü tekil bayrak değerleri artık hata veriyor: --baslangic ve --sure-gun değerleri içinde virgül kabul edilmiyor (parse aşamasında geçersiz sayılıyor, stderr + sıfır-dışı kod). Çoklu parti yalnızca bayrağın tekrarlanmasıyla destekleniyor. Kendi testlerime 2 yeni hata testi eklendi; 21/21 kendi testleri ve 18/18 kabul testleri geçiyor.",
+ "adim": 21,
+ "yurutucu_token": {
+  "girdi": 225495,
+  "cikti": 41541
+ },
+ "yurutucu_usd": 0.0308577,
+ "bitirdi": true,
+ "sure_sn": 475.9,
+ "gizli": {
+  "gecti": true,
+  "gecen": 16,
+  "toplam": 16,
+  "cikti": "................                                                         [100%]\n16 passed in 0.34s\n"
+ }
+}

@@ -1,0 +1,35 @@
+{
+ "id": "h055",
+ "kip": "c",
+ "kategori": "Türkçe metin işleme (Türkçe harfler, büyük/küçük harf, hece, ek, sıralama, sayı/yazı)",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 18,
+   "basarili": 18
+  }
+ ],
+ "spark_usd": 0.0022597,
+ "arayuz": "",
+ "hakem": [],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [],
+ "kabul_gecti": true,
+ "ozet": "UyumDenetcisi sınıfı uyum_denetcisi.py içinde 구현 edildi: büyük/küçük ünlü uyumu denetimi, istisna sözlüğü, yarım-yukarı skor, durum tutma ve sıralı raporlama; hata kontrolleri ve 18 pytest testi geçiyor.",
+ "adim": 4,
+ "yurutucu_token": {
+  "girdi": 13028,
+  "cikti": 13757
+ },
+ "yurutucu_usd": 0.0040542,
+ "bitirdi": true,
+ "sure_sn": 272.5,
+ "gizli": {
+  "gecti": true,
+  "gecen": 17,
+  "toplam": 17,
+  "cikti": ".................                                                        [100%]\n17 passed in 0.02s\n"
+ }
+}

@@ -1,0 +1,38 @@
+{
+ "id": "h076",
+ "kip": "d",
+ "kategori": "dosya ve komut satırı (CSV/JSON okuma, rapor yazdırma, argümanlar, hata mesajları)",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 20,
+   "basarili": 20
+  }
+ ],
+ "spark_usd": 0.0061705,
+ "arayuz": "OverlapError otel.py içinde tanımlı Exception alt sınıfı; from otel import RezervasyonDefteri, OverlapError",
+ "hakem": [],
+ "geri_alma": 0,
+ "inceleme": {
+  "yazilan": 0,
+  "kanitli": []
+ },
+ "iptal_edilen_test": [],
+ "kabul_gecti": true,
+ "ozet": "otel.py içinde OverlapError ve RezervasyonDefteri yazıldı: yarı-açık aralık çakışma kontrolü, mesajlara uygun hatalar, ROUND_HALF_UP doluluk oranı, UTF-8 JSON kaydet/yükle ve son_id devamı. test_otel.py ile 10 test geçiyor.",
+ "adim": 8,
+ "yurutucu_token": {
+  "girdi": 44623,
+  "cikti": 15159
+ },
+ "yurutucu_usd": 0.007494100000000001,
+ "bitirdi": true,
+ "sure_sn": 346.5,
+ "gizli": {
+  "gecti": true,
+  "gecen": 18,
+  "toplam": 18,
+  "cikti": "..................                                                       [100%]\n18 passed in 0.04s\n"
+ }
+}

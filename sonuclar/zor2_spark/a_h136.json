@@ -1,0 +1,23 @@
+{
+ "id": "h136",
+ "kip": "a",
+ "kategori": "dosya ve komut satırı (CSV/JSON okuma, rapor yazdırma, argümanlar, hata mesajları)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "yag_verim.py yazıldı: istenen CLI, GG.AA.YYYY + soguk/sicak + pozitif sayısal doğrulama ve stderr UYARI satırları, Decimal ROUND_HALF_UP ile 3 basamak verim/asitlik, asitlik sınıf eşikleri, min-verim filtresi ve sıralama, UTF-8-SIG noktalı virgüllü rapor, hata kodları (1 bulunamadı, 2 başlık/min-verim) ve stdout OK mesajı uygulandı; yalnızca standart kütüphane kullanıldı ve testlerle doğrulandı.",
+ "adim": 8,
+ "yurutucu_token": {
+  "girdi": 42441,
+  "cikti": 14602
+ },
+ "yurutucu_usd": 0.007164500000000001,
+ "bitirdi": true,
+ "sure_sn": 134.6,
+ "gizli": {
+  "gecti": true,
+  "gecen": 17,
+  "toplam": 17,
+  "cikti": ".................                                                        [100%]\n17 passed in 0.53s\n"
+ }
+}

@@ -1,0 +1,23 @@
+{
+ "id": "h125",
+ "kip": "a",
+ "kategori": "doğrulama ve ayrıştırma (TC kimlik, IBAN, telefon, plaka, e-posta, adres biçimi)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "yardim_kaydi.py dosyası yazıldı: YardimBasvuruDenetleyici sınıfı TC (11 hane + checksum), telefon (10 hane GSM, 0XXX XXX XX XX), IBAN (TR + 26 karakter + mod97) ve 4 parçalı adres doğrulaması yapar; TypeError/ValueError kuralları, yinelenen TC takibi, TC sıralı saklama ve iki ondalıklı özet raporu içerir.",
+ "adim": 10,
+ "yurutucu_token": {
+  "girdi": 54350,
+  "cikti": 40287
+ },
+ "yurutucu_usd": 0.0134924,
+ "bitirdi": true,
+ "sure_sn": 334.0,
+ "gizli": {
+  "gecti": false,
+  "gecen": 9,
+  "toplam": 18,
+  "cikti": "assert oz[\"yinelenen\"] == 1\n>       assert oz[\"gecerli_oran\"] == round(2/4*100, 2)\nE       assert 0.5 == 50.0\nE        +  where 50.0 = round(((2 / 4) * 100), 2)\n\n.gizli/test_gizli.py:124: AssertionError\n__________________ test_sinir_10hane_tel_26hane_iban_gecerli ___________________\n\n    def test_sinir_10hane_tel_26hane_iban_gecerli():\n        d = YardimBasvuruDenetleyici()\n        assert len(\"\".join(TEL10.split())) == 10\n        assert len(IBAN) == 26\n        r = d.basvuru_ekle(TC1, TEL10, ADRES_HATAY, IBAN)\n>       assert r[\"durum\"] == \"gecerli\"\nE       AssertionError: assert 'hatali' == 'gecerli'\nE         - gecerli\nE         + hatali\n\n.gizli/test_gizli.py:131: AssertionError\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_gecerli_hatay - KeyError: 'kod'\nFAILED .gizli/test_gizli.py::test_hatay_disi_ayri_kod - KeyError: 'kod'\nFAILED .gizli/test_gizli.py::test_telefon_11den_uzun_reddet - Failed: DID NOT...\nFAILED .gizli/test_gizli.py::test_telefon_gsm_kurali - Failed: DID NOT RAISE ...\nFAILED .gizli/test_gizli.py::test_iban_kisa_reddet - Failed: DID NOT RAISE <c...\nFAILED .gizli/test_gizli.py::test_adres_tek_karakter_gecersiz - Failed: DID N...\nFAILED .gizli/test_gizli.py::test_bos_dize_gecersiz - Failed: DID NOT RAISE <...\nFAILED .gizli/test_gizli.py::test_ozet_rapor_sayi_ve_oran - assert 0.5 == 50.0\nFAILED .gizli/test_gizli.py::test_sinir_10hane_tel_26hane_iban_gecerli - Asse...\n9 failed, 9 passed in 0.04s\n"
+ }
+}

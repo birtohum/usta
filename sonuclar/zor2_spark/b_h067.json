@@ -1,0 +1,23 @@
+{
+ "id": "h067",
+ "kip": "b",
+ "kategori": "Türkçe metin işleme (Türkçe harfler, büyük/küçük harf, hece, ek, sıralama, sayı/yazı)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "adres_norm.py yazıldı: normalize_adres (Türkçe title-case, kısaltma genişletme, bağlaç küçük, boşluk tekleme), posta_dogrula (5 hane ASCII, plaka eşleşmesi, ValueError/TypeError), toplu_normalize (uzunluk + Türkçe alfabetik + stabil sıralama), eslesme_orani (yarım yukarı 2 ondalık, sıfır bölmede 0.0). 9 pytest testi geçti.",
+ "adim": 6,
+ "yurutucu_token": {
+  "girdi": 19172,
+  "cikti": 24110
+ },
+ "yurutucu_usd": 0.0067392,
+ "bitirdi": true,
+ "sure_sn": 209.1,
+ "gizli": {
+  "gecti": false,
+  "gecen": 17,
+  "toplam": 18,
+  "cikti": "..............F...                                                       [100%]\n=================================== FAILURES ===================================\n______________________________ test_toplu_kararli ______________________________\n\n    def test_toplu_kararli():\n        girdi = [\"Çay Sokak\", \"Cay Sokak\"]\n>       assert toplu_normalize(girdi) == [\"Çay Sokak\", \"Cay Sokak\"]\nE       AssertionError: assert ['Cay Sokak', 'Çay Sokak'] == ['Çay Sokak', 'Cay Sokak']\nE         At index 0 diff: 'Cay Sokak' != 'Çay Sokak'\nE         Use -v to get more diff\n\n.gizli/test_gizli.py:66: AssertionError\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_toplu_kararli - AssertionError: assert ['Ca...\n1 failed, 17 passed in 0.03s\n"
+ }
+}

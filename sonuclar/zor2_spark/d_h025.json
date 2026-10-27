@@ -1,0 +1,40 @@
+{
+ "id": "h025",
+ "kip": "d",
+ "kategori": "Türkçe metin işleme (Türkçe harfler, büyük/küçük harf, hece, ek, sıralama, sayı/yazı)",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 24,
+   "basarili": 24
+  }
+ ],
+ "spark_usd": 0.0030658,
+ "arayuz": "",
+ "hakem": [],
+ "geri_alma": 0,
+ "inceleme": {
+  "yazilan": 0,
+  "kanitli": []
+ },
+ "iptal_edilen_test": [
+  "test_buyut_ingilizce_harfler"
+ ],
+ "kabul_gecti": true,
+ "ozet": "turkce_karakter.py oluşturuldu: turkce_buyut (i→İ, ı→I dahil harita ile büyütme) ve turkce_kucult (I→ı, İ→i dahil harita ile küçültme). lower/upper kullanılmadan sözlük dönüşümü, noktalama/rakam/boşluk koruma, boş dizede boş dize, str değilse TypeError, orijinali değiştirmeme ve art arda tutarlılık sağlandı. test_turkce.py ile 11 pytest testi geçti.",
+ "adim": 6,
+ "yurutucu_token": {
+  "girdi": 17138,
+  "cikti": 8470
+ },
+ "yurutucu_usd": 0.0034078000000000008,
+ "bitirdi": true,
+ "sure_sn": 197.0,
+ "gizli": {
+  "gecti": true,
+  "gecen": 17,
+  "toplam": 17,
+  "cikti": ".................                                                        [100%]\n17 passed in 0.03s\n"
+ }
+}

@@ -1,0 +1,35 @@
+{
+ "id": "h075",
+ "kip": "c",
+ "kategori": "tarih ve saat (iş günü, resmî tatil listesi parametre olarak verilir, süre hesabı, biçim dönüşümü)",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 19,
+   "basarili": 19
+  }
+ ],
+ "spark_usd": 0.0021428999999999997,
+ "arayuz": "",
+ "hakem": [],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [],
+ "kabul_gecti": true,
+ "ozet": "kutuphane.py içinde tatil_mi, odunc_ver ve ceza_hesapla fonksiyonlarını yazdım: normal 14 / öğrenci 21 gün süre, Pazar ve resmi tatil ötelenmesi, günde 7 / 3,5 lira ceza ve 60 gün tavan, katı YYYY-MM-DD ve üye tipi doğrulaması. test_kutuphane.py ile 20 test yazıp python -m pytest -q ile hepsini geçirdim.",
+ "adim": 5,
+ "yurutucu_token": {
+  "girdi": 23565,
+  "cikti": 12425
+ },
+ "yurutucu_usd": 0.0048415,
+ "bitirdi": true,
+ "sure_sn": 224.4,
+ "gizli": {
+  "gecti": true,
+  "gecen": 19,
+  "toplam": 19,
+  "cikti": "...................                                                      [100%]\n19 passed in 0.03s\n"
+ }
+}

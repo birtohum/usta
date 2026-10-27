@@ -1,0 +1,35 @@
+{
+ "id": "h029",
+ "kip": "c",
+ "kategori": "doğrulama ve ayrıştırma (TC kimlik, IBAN, telefon, plaka, e-posta, adres biçimi)",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 18,
+   "basarili": 18
+  }
+ ],
+ "spark_usd": 0.0028054,
+ "arayuz": "eposta.py içinde EpostaTemizleyici() parametresiz kurulur. dogrula(self, eposta: str) -> bool, normalize_et(self, eposta: str) -> str geçerliyse küçük harfli hali saklar ve döndürür, alan_istatistigi(self) -> dict {alan: {'adet': int, 'yuzde': float}} sayı azalan eşitlikte alfabetik dizilir.",
+ "hakem": [],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [],
+ "kabul_gecti": true,
+ "ozet": "eposta.py içinde EpostaTemizleyici sınıfı gerçeklendi: dogrula tek @, 64/254 uzunluk, nokta konumu, alan adı nokta/etiket/tire/ASCII kurallarını denetler; str dışı TypeError verir. normalize_et geçerliyse küçük harfli hali saklayıp döndürür, geçersizde ValueError fırlatır. alan_istatistigi küçük harfli alanlara göre sayım/yüzde (2 basamak yuvarlama) verir, azalan adet ve alfabetik sıralıdır, kayıtsızken boş sözlük döndürür. pytest ile 9 test geçti.",
+ "adim": 5,
+ "yurutucu_token": {
+  "girdi": 15804,
+  "cikti": 13904
+ },
+ "yurutucu_usd": 0.0043612,
+ "bitirdi": true,
+ "sure_sn": 136.6,
+ "gizli": {
+  "gecti": false,
+  "gecen": 14,
+  "toplam": 18,
+  "cikti": "\n    def test_istatistik_siralama_alfabetik():\n        t = EpostaTemizleyici()\n        for e in ['x@b.com', 'y@b.com', 'z@a.com', 'w@a.com', 'v@c.com']:\n            assert t.dogrula(e) is True\n        s = t.alan_istatistigi()\n>       assert list(s.keys()) == ['a.com', 'b.com', 'c.com']\nE       AssertionError: assert [] == ['a.com', 'b.com', 'c.com']\nE         Right contains 3 more items, first extra item: 'a.com'\nE         Use -v to get more diff\n\n.gizli/test_gizli.py:138: AssertionError\n_______________________ test_istatistik_yuzde_yuvarlama ________________________\n\n    def test_istatistik_yuzde_yuvarlama():\n        t = EpostaTemizleyici()\n        assert t.dogrula('a@example.com') is True\n        assert t.dogrula('b@example.com') is True\n        assert t.dogrula('c@test.com') is True\n        s = t.alan_istatistigi()\n>       assert list(s.keys())[0] == 'example.com'\nE       IndexError: list index out of range\n\n.gizli/test_gizli.py:149: IndexError\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_nokta_farklari_ayri - KeyError: 'example.com'\nFAILED .gizli/test_gizli.py::test_harf_duyarsiz_esitlik - KeyError: 'example....\nFAILED .gizli/test_gizli.py::test_istatistik_siralama_alfabetik - AssertionEr...\nFAILED .gizli/test_gizli.py::test_istatistik_yuzde_yuvarlama - IndexError: li...\n4 failed, 14 passed in 0.05s\n"
+ }
+}

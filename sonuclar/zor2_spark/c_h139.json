@@ -1,0 +1,35 @@
+{
+ "id": "h139",
+ "kip": "c",
+ "kategori": "küçük işletme hesapları (KDV, fatura, taksit, indirim, stok, kur dönüşümü, yuvarlama)",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 19,
+   "basarili": 19
+  }
+ ],
+ "spark_usd": 0.0026825,
+ "arayuz": "Dosya: abonelik.py. Sınıf: AbonelikHesabi(aylik_ucret: float). Metotlar: abone_ekle(abone_id: str, baslangic: date, gun_sayisi: int) -> None, dondur(abone_id: str, baslangic: date, bitis: date) -> None, ucret_hesapla(abone_id: str, donem_yil: int, donem_ay: int) -> dict, abone_listele(self) -> list[str]. ucret_hesapla sözlük anahtarları: kullanilan_gun, dondurulan_gun, odenecek_tutar, birim_ucret.",
+ "hakem": [],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [],
+ "kabul_gecti": true,
+ "ozet": "abonelik.py içinde AbonelikHesabi sınıfı yazıldı: 30 güne bölerek prorata, Decimal HALF_UP yuvarlama, calendar ile ay uzunluğu, iki uç dahil dondurma, tüm aralık/format/tip doğrulamaları ve sıralı abone_listele. pytest ile 10 test geçti.",
+ "adim": 5,
+ "yurutucu_token": {
+  "girdi": 25877,
+  "cikti": 15837
+ },
+ "yurutucu_usd": 0.0057551,
+ "bitirdi": true,
+ "sure_sn": 259.4,
+ "gizli": {
+  "gecti": false,
+  "gecen": 16,
+  "toplam": 17,
+  "cikti": ".....F...........                                                        [100%]\n=================================== FAILURES ===================================\n_____________________________ test_decimal_half_up _____________________________\n\n    def test_decimal_half_up():\n        h = AbonelikHesabi(100.00)\n        h.abone_ekle(\"ABN-0020\", date(2024, 5, 1), 60)\n        r = h.ucret_hesapla(\"ABN-0020\", 2024, 5)\n>       assert _birim(r) == Decimal(\"3.33\")\nE       AssertionError: assert 3.33 == Decimal('3.33')\nE        +  where 3.33 = _birim({'birim_ucret': 3.33, 'dondurulan_gun': 0, 'kullanilan_gun': 31, 'odenecek_tutar': 103.33})\nE        +  and   Decimal('3.33') = Decimal('3.33')\n\n.gizli/test_gizli.py:106: AssertionError\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_decimal_half_up - AssertionError: assert 3....\n1 failed, 16 passed in 0.04s\n"
+ }
+}

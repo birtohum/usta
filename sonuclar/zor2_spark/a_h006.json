@@ -1,0 +1,23 @@
+{
+ "id": "h006",
+ "kip": "a",
+ "kategori": "veri yapıları ve algoritmalar (kuyruk, önbellek, arama, gruplama, birleştirme, durum makinesi)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "cagri_kuyrugu.py içinde CagriKuyrugu sınıfı yazıldı: ekle (doğrulama + sira_no döner, doluyken OverflowError), siradaki (öncelik + FIFO, boşken IndexError, 3 anahtarlı dict), bekleyen_sayisi (int) ve ortalama_bekleme_suresi (dakika, 2 ondalık float). Tüm kurallar test edildi.",
+ "adim": 5,
+ "yurutucu_token": {
+  "girdi": 11128,
+  "cikti": 9533
+ },
+ "yurutucu_usd": 0.0030194000000000006,
+ "bitirdi": true,
+ "sure_sn": 79.5,
+ "gizli": {
+  "gecti": true,
+  "gecen": 16,
+  "toplam": 16,
+  "cikti": "................                                                         [100%]\n16 passed in 0.02s\n"
+ }
+}

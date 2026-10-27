@@ -1,0 +1,23 @@
+{
+ "id": "h142",
+ "kip": "b",
+ "kategori": "doğrulama ve ayrıştırma (TC kimlik, IBAN, telefon, plaka, e-posta, adres biçimi)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "uretici_adres.py yazıldı: telefon normalizasyonu, adres ayrıştırma/doğrulama, yinelenen kontrolü, sıralı listeleme ve matematiksel yuvarlamalı başarı yüzdesi eklendi; pytest ile 8 test geçti.",
+ "adim": 6,
+ "yurutucu_token": {
+  "girdi": 16647,
+  "cikti": 20481
+ },
+ "yurutucu_usd": 0.005760900000000001,
+ "bitirdi": true,
+ "sure_sn": 172.2,
+ "gizli": {
+  "gecti": true,
+  "gecen": 18,
+  "toplam": 18,
+  "cikti": "..................                                                       [100%]\n18 passed in 0.02s\n"
+ }
+}

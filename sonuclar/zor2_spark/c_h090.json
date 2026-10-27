@@ -1,0 +1,44 @@
+{
+ "id": "h090",
+ "kip": "c",
+ "kategori": "veri yapıları ve algoritmalar (kuyruk, önbellek, arama, gruplama, birleştirme, durum makinesi)",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 15,
+   "basarili": 15
+  }
+ ],
+ "spark_usd": 0.003257,
+ "arayuz": "",
+ "hakem": [
+  {
+   "test": "test_ayni_parti_id_farkli_parametre_uzerine_yazar",
+   "karar": "belirsiz",
+   "gerekce": "Görev metni bir cümlede parti_id eşleşmesini koşulsuz isabet sayarken başka cümlede farklı parametrelerde üzerine yazmayı istiyor, bu çelişki tek anlamlı yorum vermiyor.",
+   "tur": 1
+  }
+ ],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [
+  "test_ayni_parti_id_farkli_parametre_uzerine_yazar"
+ ],
+ "kabul_gecti": true,
+ "ozet": "damitim_onbellegi.py yazıldı: OrderedDict tabanlı ağırlıklı LRU, ROUND_HALF_UP 3 ondalık, ağırlık=len(id)+gul_kilo/10 (min 1), LRU tahliye, ValueError/TypeError doğrulamaları, gecersiz_kil ve istatistik. 6 pytest testi geçiyor.",
+ "adim": 7,
+ "yurutucu_token": {
+  "girdi": 23326,
+  "cikti": 24575
+ },
+ "yurutucu_usd": 0.0072476,
+ "bitirdi": true,
+ "sure_sn": 241.0,
+ "gizli": {
+  "gecti": false,
+  "gecen": 16,
+  "toplam": 17,
+  "cikti": "..............F..                                                        [100%]\n=================================== FAILURES ===================================\n__________________ test_ayni_id_farkli_gul_agirlik_guncelleme __________________\n\n    def test_ayni_id_farkli_gul_agirlik_guncelleme():\n        c = DamitimOnbellegi(max_agirlik=1000)\n        v1 = c.hesapla_veya_getir(\"X\", 10.0, 10.0, lambda: 1.0)\n        assert v1 == pytest.approx(1.0)\n        v2 = c.hesapla_veya_getir(\"X\", 20.0, 10.0, lambda: 99.0)\n        # ayni parti_id: kayit sayisi artmaz, agirlik farki dusulur\n        assert c.istatistik()[\"kayit_sayisi\"] == 1\n>       assert c.istatistik()[\"toplam_agirlik\"] == pytest.approx(agirlik(\"X\", 20.0))\nE       assert 2 == 3.0 ± 3.0e-06\nE         comparison failed\nE         Obtained: 2\nE         Expected: 3.0 ± 3.0e-06\n\n.gizli/test_gizli.py:148: AssertionError\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_ayni_id_farkli_gul_agirlik_guncelleme - ass...\n1 failed, 16 passed in 0.04s\n"
+ }
+}

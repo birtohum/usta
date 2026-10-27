@@ -1,0 +1,23 @@
+{
+ "id": "h026",
+ "kip": "a",
+ "kategori": "küçük işletme hesapları (KDV, fatura, taksit, indirim, stok, kur dönüşümü, yuvarlama)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "rapor_cli.py yazıldı: zorunlu --girdi/--cikti, --kdv-dahil, --sirala (urun/tutar), --para-birimi (TL/USD/EUR); Decimal ROUND_HALF_UP yuvarlama, satır KDV ayrı yuvarlanıp toplanır, negatif/boş/kdv kontrolü exit 3, dosya yok/geçersiz seçim exit 2, ürün birleştirme ve sıralama kuralları, boş girdide 0.0 toplamlar, yalnızca standart kütüphane, başarıda exit 0. Tüm senaryolar test edildi.",
+ "adim": 9,
+ "yurutucu_token": {
+  "girdi": 70002,
+  "cikti": 18666
+ },
+ "yurutucu_usd": 0.0107334,
+ "bitirdi": true,
+ "sure_sn": 179.3,
+ "gizli": {
+  "gecti": true,
+  "gecen": 18,
+  "toplam": 18,
+  "cikti": "..................                                                       [100%]\n18 passed in 0.63s\n"
+ }
+}

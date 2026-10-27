@@ -1,0 +1,59 @@
+{
+ "id": "h035",
+ "kip": "d",
+ "kategori": "doğrulama ve ayrıştırma (TC kimlik, IBAN, telefon, plaka, e-posta, adres biçimi)",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": false,
+   "toplam": 18,
+   "basarili": 17
+  },
+  {
+   "gecti": true,
+   "toplam": 18,
+   "basarili": 18
+  }
+ ],
+ "spark_usd": 0.0105581,
+ "arayuz": "",
+ "hakem": [
+  {
+   "test": "test_butunluk_puani_oran_yuvarlama",
+   "karar": "belirsiz",
+   "gerekce": "Bütünlük puanının paydasının tüm dönen anahtarlar mı yoksa yedi standart alan mı olduğu ve geçersiz kayıtların dahilliği görevde tanımlanmamış.",
+   "tur": 1
+  },
+  {
+   "test": "test_eksik_alan_gecersiz",
+   "karar": "gerekli",
+   "gerekce": "Görev eksik zorunlu alanlı kaydın geçersiz sayılacağını ve eksik kayda ValueError verileceğini açıkça istiyor, test iki sonucu da kabul ediyor.",
+   "tur": 1
+  }
+ ],
+ "geri_alma": 0,
+ "inceleme": {
+  "yazilan": 2,
+  "kanitli": []
+ },
+ "iptal_edilen_test": [
+  "test_esitlik_normalizasyon",
+  "test_butunluk_puani_oran_yuvarlama"
+ ],
+ "kabul_gecti": true,
+ "ozet": "İki düzeltme yapıldı: (1) adres_ayristir artık yalnızca 7 standart alan döndürüyor; daha önce eklenen bina_numarasi/daire_numarasi/postakodu/posta takma adları, bir anahtar silinince bile adres_dogrula'nın True dönmesine yol açıyordu. (2) İsim temizliğinde \"İ\" harfi \"I\"ya normalize edildi; böylece Python lower() davranışındaki noktalı-İ farkı nedeniyle büyük/küçük harf varyantları eşit sayılıyor. Kabul testleri 20/20, kendi testlerim 9/9 geçti.",
+ "adim": 23,
+ "yurutucu_token": {
+  "girdi": 235390,
+  "cikti": 52528
+ },
+ "yurutucu_usd": 0.0340446,
+ "bitirdi": true,
+ "sure_sn": 629.8,
+ "gizli": {
+  "gecti": false,
+  "gecen": 14,
+  "toplam": 18,
+  "cikti": "                once = tmp[-2].strip().split()\n                if once:\n                    ilce = _temizle_isim(once[-1])\n            elif len(son) == 1:\n                il = _temizle_isim(son[-1])\n        if not il or not ilce:\n>           raise ValueError(\"il/ilce bulunamadi\")\nE           ValueError: il/ilce bulunamadi\n\nadres.py:174: ValueError\n_________________________ test_valueerror_eksik_bozuk __________________________\n\n    def test_valueerror_eksik_bozuk():\n        import pytest\n        with pytest.raises(ValueError):\n            _m.adres_ayristir(\"\")\n        with pytest.raises(ValueError):\n            _m.adres_ayristir(\"Mahalle: Ataturk, Cadde: X\")\n        eksik = _kayit()\n        del eksik[\"il\"]\n>       with pytest.raises(ValueError):\nE       Failed: DID NOT RAISE <class 'ValueError'>\n\n.gizli/test_gizli.py:81: Failed\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_ayristir_etiketli_normal - ValueError: maha...\nFAILED .gizli/test_gizli.py::test_ayristir_bina_harf_eki - ValueError: mahall...\nFAILED .gizli/test_gizli.py::test_ayristir_konumsuz_yedi_alan - ValueError: i...\nFAILED .gizli/test_gizli.py::test_valueerror_eksik_bozuk - Failed: DID NOT RA...\n4 failed, 14 passed in 0.09s\n"
+ }
+}

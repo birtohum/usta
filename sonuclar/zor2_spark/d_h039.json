@@ -1,0 +1,38 @@
+{
+ "id": "h039",
+ "kip": "d",
+ "kategori": "tarih ve saat (iş günü, resmî tatil listesi parametre olarak verilir, süre hesabı, biçim dönüşümü)",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 18,
+   "basarili": 18
+  }
+ ],
+ "spark_usd": 0.005504200000000001,
+ "arayuz": "",
+ "hakem": [],
+ "geri_alma": 0,
+ "inceleme": {
+  "yazilan": 0,
+  "kanitli": []
+ },
+ "iptal_edilen_test": [],
+ "kabul_gecti": true,
+ "ozet": "sulama.py içinde SulamaPlanlayici sınıfını yazdım: tarih doğrulama (biçim hatasında ValueError, string olmayan tipte TypeError), aralık 1-15 kontrolü, hisse 0.5-500 kontrolü, hafta sonu/tatil atlama ve başlangıcı sonraki iş gününe kaydırma, aralık gün adımıyla sulama günleri, hisse-orantılı half-up yuvarlama ve en az 1 slot garantisiyle 8 slot dağıtımı (06:00'dan 90'ar dakika), öncelik hisse-azalan/id-artan, tarih+saat sıralı sonuç. 16 pytest testi yazıp `python -m pytest -q` ile hepsini geçirdim.",
+ "adim": 4,
+ "yurutucu_token": {
+  "girdi": 15332,
+  "cikti": 17922
+ },
+ "yurutucu_usd": 0.0051176,
+ "bitirdi": true,
+ "sure_sn": 305.7,
+ "gizli": {
+  "gecti": true,
+  "gecen": 19,
+  "toplam": 19,
+  "cikti": "...................                                                      [100%]\n19 passed in 0.02s\n"
+ }
+}

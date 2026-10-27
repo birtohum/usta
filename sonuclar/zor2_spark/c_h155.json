@@ -1,0 +1,35 @@
+{
+ "id": "h155",
+ "kip": "c",
+ "kategori": "dosya ve komut satırı (CSV/JSON okuma, rapor yazdırma, argümanlar, hata mesajları)",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 19,
+   "basarili": 19
+  }
+ ],
+ "spark_usd": 0.0027795000000000003,
+ "arayuz": "",
+ "hakem": [],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [],
+ "kabul_gecti": true,
+ "ozet": "`mermer_verim.py` yazıldı: semicolon UTF-8-SIG giriş/çıkış, Decimal ROUND_HALF_UP 3 basamak hacim/verim hesabı, A>B>C eşik filtresi, verim azalan+blok_id artan sıralama, geçersiz/duplicate satırlarda stderr uyarısı, başlık/dosya/min-kalite hata kodları ve stdout OK mesajı. `test_mermer.py` ile 10 pytest testi hazırlandı ve `python -m pytest -q` ile hepsi geçti.",
+ "adim": 4,
+ "yurutucu_token": {
+  "girdi": 17564,
+  "cikti": 17066
+ },
+ "yurutucu_usd": 0.0051696,
+ "bitirdi": true,
+ "sure_sn": 308.9,
+ "gizli": {
+  "gecti": false,
+  "gecen": 15,
+  "toplam": 16,
+  "cikti": "......F.........                                                         [100%]\n=================================== FAILURES ===================================\n__________________________ test_07_yuvarlama_half_up ___________________________\n\n    def test_07_yuvarlama_half_up():\n        icerik = BASLIK + \"\\n\" + \"R1;2.001;1;0.5;1;2.0;A\\n\"\n        import tempfile\n        with tempfile.TemporaryDirectory() as td:\n            tp = pathlib.Path(td)\n            r, g, c = calistir(tp, icerik, \"A\")\n            assert r.returncode == 0\n            _, sat = cikisi_oku(c)\n            assert sat[0][\"blok_m3\"] == \"1.001\"\n>           assert sat[0][\"verim_m2_m3\"] == \"1.000\"\nE           AssertionError: assert '0.999' == '1.000'\nE             - 1.000\nE             + 0.999\n\n.gizli/test_gizli.py:106: AssertionError\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_07_yuvarlama_half_up - AssertionError: asse...\n1 failed, 15 passed in 0.53s\n"
+ }
+}

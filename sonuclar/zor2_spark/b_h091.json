@@ -1,0 +1,23 @@
+{
+ "id": "h091",
+ "kip": "b",
+ "kategori": "Türkçe metin işleme (Türkçe harfler, büyük/küçük harf, hece, ek, sıralama, sayı/yazı)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "tarih.py modülü yazıldı: sayidan_yaziya ve yazidan_sayiya çift yönlü dönüşüm yapar, GG/AA/YYYY ve GG AyAdı YYYY biçimlerini sıkı doğrular (2 basamak gün/ay, 4 basamak yıl, 1900-2100 aralığı, artık yıl dahil gün-ay denetimi, sabit boşluk/eğik çizgi, ASCII rakam, TypeError/ValueError ayrımı), ay adı çözümlemede I/İ/ı/i ve büyük-küçük harf duyarsızdır, çıktılar sıfır dolgulu ve ilk harfi büyük ay adıyla üretilir. 14 pytest testi geçiyor.",
+ "adim": 6,
+ "yurutucu_token": {
+  "girdi": 28626,
+  "cikti": 15920
+ },
+ "yurutucu_usd": 0.006046600000000001,
+ "bitirdi": true,
+ "sure_sn": 125.4,
+ "gizli": {
+  "gecti": true,
+  "gecen": 19,
+  "toplam": 19,
+  "cikti": "...................                                                      [100%]\n19 passed in 0.02s\n"
+ }
+}

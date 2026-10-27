@@ -1,0 +1,35 @@
+{
+ "id": "h002",
+ "kip": "c",
+ "kategori": "küçük işletme hesapları (KDV, fatura, taksit, indirim, stok, kur dönüşümü, yuvarlama)",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 18,
+   "basarili": 18
+  }
+ ],
+ "spark_usd": 0.0025347,
+ "arayuz": "",
+ "hakem": [],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [],
+ "kabul_gecti": true,
+ "ozet": "fatura.py içinde KdvliFatura sınıfını implemente ettim: Decimal + ROUND_HALF_UP ile satır bazlı yuvarlama, 1/10/20 KDV kontrolü, değer/type kontrolleri, Türkçe alfabeye duyarsız sıralı sabit genişlikli döküm. pytest ile 13 test yazıp hepsini geçirdim.",
+ "adim": 4,
+ "yurutucu_token": {
+  "girdi": 14840,
+  "cikti": 17539
+ },
+ "yurutucu_usd": 0.0049918,
+ "bitirdi": true,
+ "sure_sn": 140.9,
+ "gizli": {
+  "gecti": true,
+  "gecen": 16,
+  "toplam": 16,
+  "cikti": "................                                                         [100%]\n16 passed in 0.04s\n"
+ }
+}

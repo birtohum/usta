@@ -1,0 +1,23 @@
+{
+ "id": "h155",
+ "kip": "b",
+ "kategori": "dosya ve komut satırı (CSV/JSON okuma, rapor yazdırma, argümanlar, hata mesajları)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "mermer_verim.py yazıldı: Decimal+ROUND_HALF_UP ile 3 basamak yuvarlama, A>B>C filtreleme, verim azalan/blok_id artan sıralama, `;` ayraçlı UTF-8-SIG çıktı, uyarı/hata mesajları ve çıkış kodları spec'e uygun. test_mermer.py ile 12 pytest testi geçiyor.",
+ "adim": 6,
+ "yurutucu_token": {
+  "girdi": 32114,
+  "cikti": 16432
+ },
+ "yurutucu_usd": 0.0064978000000000015,
+ "bitirdi": true,
+ "sure_sn": 136.0,
+ "gizli": {
+  "gecti": true,
+  "gecen": 16,
+  "toplam": 16,
+  "cikti": "................                                                         [100%]\n16 passed in 0.44s\n"
+ }
+}

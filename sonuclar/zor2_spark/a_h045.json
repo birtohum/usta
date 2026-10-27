@@ -1,0 +1,23 @@
+{
+ "id": "h045",
+ "kip": "a",
+ "kategori": "tarih ve saat (iş günü, resmî tatil listesi parametre olarak verilir, süre hesabı, biçim dönüşümü)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "`dava_sure.py` oluşturuldu: `is_gunu_ekle` tebliğ ertesi günden başlayıp hafta sonu ve tekilleştirilmiş resmi tatilleri atlayarak 1-60 gün ileri gider; `kalan_is_gunu` iki tarih dahil aralığındaki iş günlerini sayar (başlangıç>bitiş ise ValueError); `son_gun_saat_kontrol` 17:00 sınırına göre HH:MM ve HH:MM:SS (saniye alta yuvarlanır) kontrolü yapar. Tüm tarih/saat biçim hatalarında ValueError, tür hatalarında TypeError verilir; tatiller sözlük sırasına göre sıralanıp tekilleştirilir; adli tatil normal gün sayılır; yalnızca datetime+re kullanıldı.",
+ "adim": 7,
+ "yurutucu_token": {
+  "girdi": 30903,
+  "cikti": 13657
+ },
+ "yurutucu_usd": 0.0058217,
+ "bitirdi": true,
+ "sure_sn": 110.3,
+ "gizli": {
+  "gecti": true,
+  "gecen": 18,
+  "toplam": 18,
+  "cikti": "..................                                                       [100%]\n18 passed in 0.02s\n"
+ }
+}

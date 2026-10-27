@@ -1,0 +1,47 @@
+{
+ "id": "h097",
+ "kip": "c",
+ "kategori": "Türkçe metin işleme (Türkçe harfler, büyük/küçük harf, hece, ek, sıralama, sayı/yazı)",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": false,
+   "toplam": 29,
+   "basarili": 28
+  },
+  {
+   "gecti": true,
+   "toplam": 29,
+   "basarili": 29
+  }
+ ],
+ "spark_usd": 0.0024214,
+ "arayuz": "",
+ "hakem": [
+  {
+   "test": "test_turkce_I_i_ayrimi_gozetilmez",
+   "karar": "gerekli",
+   "gerekce": "Görev metni sayımda büyük küçük harf ve I İ ayrımının gözetilmemesini açıkça istiyor.",
+   "tur": 1
+  }
+ ],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [],
+ "kabul_gecti": true,
+ "ozet": "Kabul testindeki I/İ beklentisine uyum için _tr_lower düzeltildi: Türkçe küçültmeden (I→ı, İ→i) sonra ı→i katlaması eklendi, böylece ISPARTA/ısparta/İSPARTA/isparta tek anahtarda birleşiyor. Kendi test dosyamdaki eski ışık beklentisi işik olarak güncellendi. Tüm testler geçiyor (kabul 29/29, yerel 22/22). Görev metniyle çelişki yok; metindeki \"I İ ayrımı gözetilmez\" ifadesi bu katlamayı gerektiriyordu.",
+ "adim": 10,
+ "yurutucu_token": {
+  "girdi": 56417,
+  "cikti": 14087
+ },
+ "yurutucu_usd": 0.0084591,
+ "bitirdi": true,
+ "sure_sn": 244.7,
+ "gizli": {
+  "gecti": false,
+  "gecen": 16,
+  "toplam": 17,
+  "cikti": ".....F...........                                                        [100%]\n=================================== FAILURES ===================================\n____________________________ test_turkce_I_kucultme ____________________________\n\n    def test_turkce_I_kucultme():\n        a = YorumAnalizci()\n        a.ekle(\"ISIK\")\n        a.ekle(\"ısık\")\n>       assert a.en_sik(1) == [(\"ısık\", 2)]\nE       AssertionError: assert [('isik', 2)] == [('ısık', 2)]\nE         At index 0 diff: ('isik', 2) != ('ısık', 2)\nE         Use -v to get more diff\n\n.gizli/test_gizli.py:37: AssertionError\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_turkce_I_kucultme - AssertionError: assert ...\n1 failed, 16 passed in 0.04s\n"
+ }
+}

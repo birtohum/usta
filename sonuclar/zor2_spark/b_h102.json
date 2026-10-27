@@ -1,0 +1,23 @@
+{
+ "id": "h102",
+ "kip": "b",
+ "kategori": "veri yapıları ve algoritmalar (kuyruk, önbellek, arama, gruplama, birleştirme, durum makinesi)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "mezat_gruplama.py yazıldı: lotlari_grupla Türkçe küçük harf normalleştirmesiyle gruplar, aralık dışı değerlerde ValueError, yinelenen lot_id'de KeyError verir, toplam kiloyu Decimal ROUND_HALF_UP ile 2 ondalığa yuvarlar; grup_ozeti kilo azalan/tür artan/boy artan sıralı özet listesi döndürür. 13 pytest testi geçiyor.",
+ "adim": 8,
+ "yurutucu_token": {
+  "girdi": 55797,
+  "cikti": 25007
+ },
+ "yurutucu_usd": 0.0105811,
+ "bitirdi": true,
+ "sure_sn": 210.7,
+ "gizli": {
+  "gecti": true,
+  "gecen": 16,
+  "toplam": 16,
+  "cikti": "................                                                         [100%]\n16 passed in 0.03s\n"
+ }
+}

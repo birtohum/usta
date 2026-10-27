@@ -1,0 +1,35 @@
+{
+ "id": "h045",
+ "kip": "c",
+ "kategori": "tarih ve saat (iş günü, resmî tatil listesi parametre olarak verilir, süre hesabı, biçim dönüşümü)",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 18,
+   "basarili": 18
+  }
+ ],
+ "spark_usd": 0.0046065,
+ "arayuz": "",
+ "hakem": [],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [],
+ "kabul_gecti": true,
+ "ozet": "dava_sure.py içinde üç fonksiyon yazıldı: tebliğ günü hariç hafta sonu/tatil atlayarak süre ekleme, aralıkta iş günü sayma ve 17:00 sınırıyla saat kontrolü (saniye alta yuvarlanır). Tip/biçim hatalarında TypeError/ValueError, sure_gun 1-60 kontrolü ve tatil listesi sıralama+tekilleştirme uygulandı. 16 pytest testi geçiyor.",
+ "adim": 6,
+ "yurutucu_token": {
+  "girdi": 27543,
+  "cikti": 8350
+ },
+ "yurutucu_usd": 0.0044243,
+ "bitirdi": true,
+ "sure_sn": 296.2,
+ "gizli": {
+  "gecti": true,
+  "gecen": 18,
+  "toplam": 18,
+  "cikti": "..................                                                       [100%]\n18 passed in 0.02s\n"
+ }
+}

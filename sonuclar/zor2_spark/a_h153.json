@@ -1,0 +1,23 @@
+{
+ "id": "h153",
+ "kip": "a",
+ "kategori": "dosya ve komut satırı (CSV/JSON okuma, rapor yazdırma, argümanlar, hata mesajları)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "`baharat_kontrol.py` yazıldı: istenen CLI biçimi, SKT/kalan_gün hesabı, durum sınıflandırması, sıralama, CSV başlığı, stderr uyarı/hata mesajları ve çıkış kodları ile stdout özeti kurallara uygun uygulandı; yalnızca standart kütüphane kullanıldı ve testlerle doğrulandı.",
+ "adim": 7,
+ "yurutucu_token": {
+  "girdi": 44110,
+  "cikti": 10979
+ },
+ "yurutucu_usd": 0.006606800000000001,
+ "bitirdi": true,
+ "sure_sn": 82.4,
+ "gizli": {
+  "gecti": true,
+  "gecen": 17,
+  "toplam": 17,
+  "cikti": ".................                                                        [100%]\n17 passed in 0.51s\n"
+ }
+}

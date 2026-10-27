@@ -1,0 +1,38 @@
+{
+ "id": "h045",
+ "kip": "d",
+ "kategori": "tarih ve saat (iş günü, resmî tatil listesi parametre olarak verilir, süre hesabı, biçim dönüşümü)",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 18,
+   "basarili": 18
+  }
+ ],
+ "spark_usd": 0.004943100000000001,
+ "arayuz": "",
+ "hakem": [],
+ "geri_alma": 0,
+ "inceleme": {
+  "yazilan": 4,
+  "kanitli": []
+ },
+ "iptal_edilen_test": [],
+ "kabul_gecti": true,
+ "ozet": "`dava_sure.py` içinde üç fonksiyon yazıldı: `is_gunu_ekle` tebliğ ertesi günden başlayıp hafta sonu ve tatilleri atlayarak 1-60 gün ekler, `kalan_is_gunu` iki tarih arası iş günü sayar (başlangıç bitisten sonra ise ValueError), `son_gun_saat_kontrol` 17:00 sınırına göre (saniyeyi alta yuvarlayarak) süresinde/geç kararı verir. Biçim hatalarında ValueError, tür hatalarında TypeError yükseltilir; tatiller sıralanıp tekilleştirilir, adli tatil normal gün sayılır. 17 pytest testi yazıldı ve `python -m pytest -q` ile hepsi geçti.",
+ "adim": 4,
+ "yurutucu_token": {
+  "girdi": 14654,
+  "cikti": 8803
+ },
+ "yurutucu_usd": 0.003226,
+ "bitirdi": true,
+ "sure_sn": 302.7,
+ "gizli": {
+  "gecti": true,
+  "gecen": 18,
+  "toplam": 18,
+  "cikti": "..................                                                       [100%]\n18 passed in 0.02s\n"
+ }
+}

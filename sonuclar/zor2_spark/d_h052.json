@@ -1,0 +1,38 @@
+{
+ "id": "h052",
+ "kip": "d",
+ "kategori": "dosya ve komut satırı (CSV/JSON okuma, rapor yazdırma, argümanlar, hata mesajları)",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 19,
+   "basarili": 19
+  }
+ ],
+ "spark_usd": 0.0051453,
+ "arayuz": "",
+ "hakem": [],
+ "geri_alma": 0,
+ "inceleme": {
+  "yazilan": 0,
+  "kanitli": []
+ },
+ "iptal_edilen_test": [],
+ "kabul_gecti": true,
+ "ozet": "`cay_odeme.py` yazıldı: UTF-8-SIG CSV okuma, satır doğrulama + stderr uyarıları, case-insensitive gruplama, ROUND_HALF_UP ödeme hesabı, sıralı JSON çıktısı, hata kodları ve stdout formatı spec'e uygun. pytest ile 10 test geçti.",
+ "adim": 4,
+ "yurutucu_token": {
+  "girdi": 17980,
+  "cikti": 15795
+ },
+ "yurutucu_usd": 0.0049570000000000005,
+ "bitirdi": true,
+ "sure_sn": 383.9,
+ "gizli": {
+  "gecti": false,
+  "gecen": 15,
+  "toplam": 16,
+  "cikti": "..............F.                                                         [100%]\n=================================== FAILURES ===================================\n________________________________ test_stdout_ok ________________________________\n\n    def test_stdout_ok():\n        import tempfile\n        with tempfile.TemporaryDirectory() as td:\n            td = pathlib.Path(td)\n            g = td / \"a.csv\"\n            c = td / \"o.json\"\n            csv_yaz(g, [\"u1,Ali,10,2024-05-01\", \"u2,Veli,20.5,2024-05-02\"])\n            r = calistir(g, c, \"10\", \"0\")\n            assert r.returncode == 0\n>           assert r.stdout.strip() == \"OK: 2 uretici, 30.50 kg\"\nE           AssertionError: assert 'OK: 2 uretici, 30.5 kg' == 'OK: 2 uretici, 30.50 kg'\nE             - OK: 2 uretici, 30.50 kg\nE             ?                    -\nE             + OK: 2 uretici, 30.5 kg\n\n.gizli/test_gizli.py:220: AssertionError\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_stdout_ok - AssertionError: assert 'OK: 2 u...\n1 failed, 15 passed in 0.55s\n"
+ }
+}

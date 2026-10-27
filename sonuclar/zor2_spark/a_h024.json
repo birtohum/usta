@@ -1,0 +1,23 @@
+{
+ "id": "h024",
+ "kip": "a",
+ "kategori": "veri yapıları ve algoritmalar (kuyruk, önbellek, arama, gruplama, birleştirme, durum makinesi)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "arama.py yazıldı: normalize (Türkçe küçük harf + noktalamayı tek boşluğa indirgeme), indeksle (id/baslik doğrulamalı, katlanmış token kümeleri), ara (Jaccard benzerliği, eşik kontrolü, puana göre azalan + id artan sıralama, 2 ondalık puan).",
+ "adim": 5,
+ "yurutucu_token": {
+  "girdi": 10273,
+  "cikti": 19205
+ },
+ "yurutucu_usd": 0.004868300000000001,
+ "bitirdi": true,
+ "sure_sn": 186.5,
+ "gizli": {
+  "gecti": true,
+  "gecen": 16,
+  "toplam": 16,
+  "cikti": "................                                                         [100%]\n16 passed in 0.03s\n"
+ }
+}

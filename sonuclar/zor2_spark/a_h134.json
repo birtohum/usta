@@ -1,0 +1,23 @@
+{
+ "id": "h134",
+ "kip": "a",
+ "kategori": "küçük işletme hesapları (KDV, fatura, taksit, indirim, stok, kur dönüşümü, yuvarlama)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "pos.py içinde PosNetlestirme sınıfı oluşturuldu: Decimal ile HALF_UP yuvarlamalı net/brüt hesapları, tip ve aralık doğrulamaları (TypeError/ValueError), tanımsız taksitte hata ve nete göre azalan özet sıralaması sağlandı.",
+ "adim": 5,
+ "yurutucu_token": {
+  "girdi": 19621,
+  "cikti": 10615
+ },
+ "yurutucu_usd": 0.0040851,
+ "bitirdi": true,
+ "sure_sn": 89.6,
+ "gizli": {
+  "gecti": true,
+  "gecen": 17,
+  "toplam": 17,
+  "cikti": ".................                                                        [100%]\n17 passed in 0.02s\n"
+ }
+}

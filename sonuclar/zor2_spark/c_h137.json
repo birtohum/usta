@@ -1,0 +1,35 @@
+{
+ "id": "h137",
+ "kip": "c",
+ "kategori": "doğrulama ve ayrıştırma (TC kimlik, IBAN, telefon, plaka, e-posta, adres biçimi)",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 18,
+   "basarili": 18
+  }
+ ],
+ "spark_usd": 0.0098543,
+ "arayuz": "Dosya: abonelik_dogrulama.py. ozet_rapor(gecerli: int, toplam: int) -> float aynı dosyadadır. Ek fonksiyon: sirala(liste: list) -> list",
+ "hakem": [],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [],
+ "kabul_gecti": true,
+ "ozet": "abonelik_dogrulama.py oluşturuldu: iban_temizle (boşluk silme, büyük harf, TR+26 karakter, mod97), eposta_dogrula (tek @, 3-254 uzunluk, boşluk/Türkçe karakter yasağı, küçük harf), adres_cozumle (mahalle/sokak/bina_no/daire_no ayrıştırma, bina 1-200, eksikte KeyError), ozet_rapor (half-up yüzde, toplam 0 ise 0.0), sirala (eposta case-insensitive + IBAN boşluksuz sıralama). String-dışı girdilerde TypeError. 17 pytest testi geçiyor.",
+ "adim": 8,
+ "yurutucu_token": {
+  "girdi": 50106,
+  "cikti": 19977
+ },
+ "yurutucu_usd": 0.009006,
+ "bitirdi": true,
+ "sure_sn": 619.3,
+ "gizli": {
+  "gecti": true,
+  "gecen": 20,
+  "toplam": 20,
+  "cikti": "....................                                                     [100%]\n20 passed in 0.02s\n"
+ }
+}

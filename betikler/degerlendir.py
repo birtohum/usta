@@ -86,7 +86,7 @@ def _tablo(sonuclar: list, baslik: str) -> list:
     satirlar = [f"**{baslik}**", "",
                 "| Kip | Görev | Tamamen geçen | %95 GA | Gizli test oranı | Ort. adım | Ort. yürütücü token | Meta API $ | Hata |",
                 "|---|---|---|---|---|---|---|---|---|"]
-    for kip in "abc":
+    for kip in "abcd":
         rs = [r for r in sonuclar if r["kip"] == kip]
         if not rs:
             continue
@@ -102,16 +102,16 @@ def _tablo(sonuclar: list, baslik: str) -> list:
         satirlar.append(f"| {kip} | {n} | {tam}/{n} (%{100 * tam / n:.0f}) | %{100 * alt:.0f}–{100 * ust:.0f} | "
                         f"%{100 * gecen / toplam:.0f} | {adim:.1f} | "
                         f"{tok:,.0f} | {usd:.3f} | {hata} |")
-    # Eşleştirilmiş: aynı görevde c ile a/b'nin farklı sonuçlandığı durumlar
+    # Eşleştirilmiş: aynı görevde iki kipin farklı sonuçlandığı durumlar
     gecti = {(r["kip"], r["id"]): r["gizli"]["gecti"] for r in sonuclar}
-    for diger in "ab":
-        ortak = [i for (k, i) in gecti if k == "c" and (diger, i) in gecti]
+    for bu, diger in (("c", "a"), ("c", "b"), ("d", "a"), ("d", "c")):
+        ortak = [i for (k, i) in gecti if k == bu and (diger, i) in gecti]
         if ortak:
-            arti = sum(gecti[("c", i)] and not gecti[(diger, i)] for i in ortak)
-            eksi = sum(gecti[(diger, i)] and not gecti[("c", i)] for i in ortak)
-            fark, alt, ust = eslesmis_fark([gecti[("c", i)] for i in ortak], [gecti[(diger, i)] for i in ortak])
-            satirlar.append(f"\nc vs {diger} ({len(ortak)} ortak görev): yalnızca c geçti {arti}, yalnızca {diger} geçti {eksi}; "
-                            f"fark {100 * fark:+.1f} puan (%95 bootstrap GA {100 * alt:+.1f} … {100 * ust:+.1f})")
+            arti = sum(gecti[(bu, i)] and not gecti[(diger, i)] for i in ortak)
+            eksi = sum(gecti[(diger, i)] and not gecti[(bu, i)] for i in ortak)
+            fark, alt, ust = eslesmis_fark([gecti[(bu, i)] for i in ortak], [gecti[(diger, i)] for i in ortak])
+            satirlar.append(f"\n{bu} vs {diger} ({len(ortak)} ortak görev): yalnızca {bu} geçti {arti}, yalnızca {diger} geçti "
+                            f"{eksi}; fark {100 * fark:+.1f} puan (%95 bootstrap GA {100 * alt:+.1f} … {100 * ust:+.1f})")
     satirlar.append("")
     return satirlar
 

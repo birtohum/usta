@@ -1,0 +1,35 @@
+{
+ "id": "h151",
+ "kip": "c",
+ "kategori": "doğrulama ve ayrıştırma (TC kimlik, IBAN, telefon, plaka, e-posta, adres biçimi)",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 17,
+   "basarili": 17
+  }
+ ],
+ "spark_usd": 0.0059966,
+ "arayuz": "",
+ "hakem": [],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [],
+ "kabul_gecti": true,
+ "ozet": "ekmek_abonelik.py yazıldı: TC sağlama (11 hane, ilk hane≠0, 10./11. hane), telefon normalizasyonu (05...11 hane), adres 10-200 kontrolü (uyarı+kod 1), TC yinelenen ve eposta case-insensitive eleme, tc+telefon sıralı CSV çıktı, toplam/gecerli/hatali+yüzde (ROUND_HALF_UP) raporu, kayıp girdi kod 3, hatalı bayrak kod 2. pytest 7 test geçti.",
+ "adim": 9,
+ "yurutucu_token": {
+  "girdi": 46385,
+  "cikti": 24879
+ },
+ "yurutucu_usd": 0.009614300000000001,
+ "bitirdi": true,
+ "sure_sn": 458.7,
+ "gizli": {
+  "gecti": true,
+  "gecen": 16,
+  "toplam": 16,
+  "cikti": "................                                                         [100%]\n16 passed in 0.50s\n"
+ }
+}

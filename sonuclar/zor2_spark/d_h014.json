@@ -1,0 +1,38 @@
+{
+ "id": "h014",
+ "kip": "d",
+ "kategori": "küçük işletme hesapları (KDV, fatura, taksit, indirim, stok, kur dönüşümü, yuvarlama)",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 19,
+   "basarili": 19
+  }
+ ],
+ "spark_usd": 0.0058124000000000006,
+ "arayuz": "",
+ "hakem": [],
+ "geri_alma": 0,
+ "inceleme": {
+  "yazilan": 0,
+  "kanitli": []
+ },
+ "iptal_edilen_test": [],
+ "kabul_gecti": true,
+ "ozet": "indirim.py içinde sepet_hesapla fonksiyonu yazıldı: Decimal + ROUND_HALF_UP ile 2 basamak yuvarlama, IND10/IND20 kuralları, puan indirimi (100 puan=10 TL, %30 tavan), sıralı indirim, katkıya göre azalan + eşitlikte yüksek birim fiyat önce sıralama, ValueError/TypeError ayrımı ve tuple+dict uyumlu ayrinti. pytest ile 17 test geçti.",
+ "adim": 9,
+ "yurutucu_token": {
+  "girdi": 56084,
+  "cikti": 25683
+ },
+ "yurutucu_usd": 0.010745000000000001,
+ "bitirdi": true,
+ "sure_sn": 395.8,
+ "gizli": {
+  "gecti": false,
+  "gecen": 17,
+  "toplam": 19,
+  "cikti": ".............FF....                                                      [100%]\n=================================== FAILURES ===================================\n__________________________ test_puan_korunur_stepwise __________________________\n\n    def test_puan_korunur_stepwise():\n        s = sepet_hesapla([(\"a\", 85.0, 1)], None, 1000)\n>       assert s[\"puan_kullanimi\"] == pytest.approx(20.0)\nE       assert 25.5 == 20.0 ± 2.0e-05\nE         comparison failed\nE         Obtained: 25.5\nE         Expected: 20.0 ± 2.0e-05\n\n.gizli/test_gizli.py:90: AssertionError\n_____________________________ test_sirali_indirim ______________________________\n\n    def test_sirali_indirim():\n        s = sepet_hesapla([(\"mont\", 300.0, 2)], \"IND20\", 2000)\n        assert s[\"ara_toplam\"] == pytest.approx(600.0)\n        assert s[\"indirim\"] == pytest.approx(120.0)\n>       assert s[\"puan_kullanimi\"] == pytest.approx(140.0)\nE       assert 144.0 == 140.0 ± 1.4e-04\nE         comparison failed\nE         Obtained: 144.0\nE         Expected: 140.0 ± 1.4e-04\n\n.gizli/test_gizli.py:97: AssertionError\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_puan_korunur_stepwise - assert 25.5 == 20.0...\nFAILED .gizli/test_gizli.py::test_sirali_indirim - assert 144.0 == 140.0 ± 1....\n2 failed, 17 passed in 0.05s\n"
+ }
+}

@@ -1,0 +1,23 @@
+{
+ "id": "h075",
+ "kip": "b",
+ "kategori": "tarih ve saat (iş günü, resmî tatil listesi parametre olarak verilir, süre hesabı, biçim dönüşümü)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "kutuphane.py yazıldı: tatil_mi, odunc_ver (normal 14 / öğrenci 21 gün, Pazar+resmi tatil ötelenir, alım günü sayılmaz), ceza_hesapla (7 / 3,5 TL, aynı gün 0, kısmi gün yukarı yuvarlanır, 60 gün tavan) ve sıralı ceza_listesi_hesapla. Hatalı tarih/üye tipinde ValueError, tatil listesi sıralı+tekilleştirilmiş, yalnızca stdlib ve deterministik. 20 pytest testi geçiyor.",
+ "adim": 12,
+ "yurutucu_token": {
+  "girdi": 71614,
+  "cikti": 32412
+ },
+ "yurutucu_usd": 0.013643800000000001,
+ "bitirdi": true,
+ "sure_sn": 287.3,
+ "gizli": {
+  "gecti": true,
+  "gecen": 19,
+  "toplam": 19,
+  "cikti": "...................                                                      [100%]\n19 passed in 0.03s\n"
+ }
+}

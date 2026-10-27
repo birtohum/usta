@@ -1,0 +1,23 @@
+{
+ "id": "h004",
+ "kip": "a",
+ "kategori": "dosya ve komut satırı (CSV/JSON okuma, rapor yazdırma, argümanlar, hata mesajları)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "fatura_raporu.py yazıldı: CSV okuyup yıl filtresi, Decimal ile yarım-yukarı KDV hesabı (kdv-dahil geri hesabı dahil), geçersiz satır uyarıları, sıralı müşteri özeti ve JSON çıktısı; girdi yoksa kod 2, başarıda rapor satırı. Yalnızca standart kütüphane, ağ/zaman/rastgelelik yok. Testlerle doğrulandı.",
+ "adim": 11,
+ "yurutucu_token": {
+  "girdi": 61697,
+  "cikti": 16204
+ },
+ "yurutucu_usd": 0.0094105,
+ "bitirdi": true,
+ "sure_sn": 139.9,
+ "gizli": {
+  "gecti": false,
+  "gecen": 10,
+  "toplam": 15,
+  "cikti": "        data = json.loads(c.read_text(encoding=\"utf-8\"))\n>       assert abs(data[\"toplam_brut\"] - 240.00) < 0.001\nE       assert 40.0 < 0.001\nE        +  where 40.0 = abs((200.0 - 240.0))\n\n.gizli/test_gizli.py:82: AssertionError\n_________________________ test_yuvarlama_yarim_yukari __________________________\n\ntmp_path = PosixPath('/home/usta/is/b789c9bdacd6/.tmp/pytest-of-usta/pytest-0/test_yuvarlama_yarim_yukari0')\n\n    def test_yuvarlama_yarim_yukari(tmp_path):\n        g = tmp_path / \"f.csv\"\n        c = tmp_path / \"r.json\"\n        csv_yaz(g, [\"1,Ali,10.05,10,2024-01-01\"])\n        r = calistir(g, c, 2024)\n        assert r.returncode == 0\n        data = json.loads(c.read_text(encoding=\"utf-8\"))\n        assert abs(data[\"toplam_kdv\"] - 1.01) < 0.001\n>       assert abs(data[\"toplam_brut\"] - 11.06) < 0.001\nE       assert 1.0099999999999998 < 0.001\nE        +  where 1.0099999999999998 = abs((10.05 - 11.06))\n\n.gizli/test_gizli.py:113: AssertionError\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_temel_haric_toplamlar - assert 50.0 < 0.001\nFAILED .gizli/test_gizli.py::test_yil_filtre_sessiz - assert 10.0 < 0.001\nFAILED .gizli/test_gizli.py::test_gecersiz_oran_atlama - assert 10.0 < 0.001\nFAILED .gizli/test_gizli.py::test_negatif_tutar_atlama - assert 40.0 < 0.001\nFAILED .gizli/test_gizli.py::test_yuvarlama_yarim_yukari - assert 1.009999999...\n5 failed, 10 passed in 0.49s\n"
+ }
+}

@@ -1,0 +1,23 @@
+{
+ "id": "h060",
+ "kip": "a",
+ "kategori": "veri yapıları ve algoritmalar (kuyruk, önbellek, arama, gruplama, birleştirme, durum makinesi)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "manifest.py içinde manifestleri_birlestir yazıldı: kayıt doğrulama (TypeError/ValueError), alt liste sıralılık kontrolü, konimento_no tekilleme (erken varis, eşitlikte küçük liman_kodu), sonuç sıralaması (varis, konimento_no, liman_kodu); boş girdiler işlendi, yalnızca standart kütüphane kullanıldı.",
+ "adim": 6,
+ "yurutucu_token": {
+  "girdi": 21693,
+  "cikti": 10276
+ },
+ "yurutucu_usd": 0.0042245,
+ "bitirdi": true,
+ "sure_sn": 83.9,
+ "gizli": {
+  "gecti": true,
+  "gecen": 18,
+  "toplam": 18,
+  "cikti": "..................                                                       [100%]\n18 passed in 0.02s\n"
+ }
+}

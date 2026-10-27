@@ -1,0 +1,23 @@
+{
+ "id": "h129",
+ "kip": "a",
+ "kategori": "tarih ve saat (iş günü, resmî tatil listesi parametre olarak verilir, süre hesabı, biçim dönüşümü)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "damitim_takip.py dosyasi olusturuldu: parti_bitis 08:00-18:00 is saatlerinde hafta sonu ve tatilleri atlayarak sure_saat kadar ilerler, is disi baslangici sonraki is gunu 08:00'e alir; is_gunu_farki (baslangic, bitis] araligindaki is dakikalarini toplayip 30 dakikayi asan kismi ust saate yuvarlar; uc tarih bicimi kabul edilir, cikti YYYY-MM-DD HH:MM, tatiller set ile sirsiz/tekrarsiz islenir, hatali sure/tarih/bitis<baslangic icin ValueError verilir, coklu parti siralama yardimcisi bitis sonra baslangica gore artan siralar.",
+ "adim": 6,
+ "yurutucu_token": {
+  "girdi": 25692,
+  "cikti": 21713
+ },
+ "yurutucu_usd": 0.006911800000000001,
+ "bitirdi": true,
+ "sure_sn": 188.0,
+ "gizli": {
+  "gecti": true,
+  "gecen": 16,
+  "toplam": 16,
+  "cikti": "................                                                         [100%]\n16 passed in 0.02s\n"
+ }
+}

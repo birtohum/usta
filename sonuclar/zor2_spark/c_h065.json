@@ -1,0 +1,35 @@
+{
+ "id": "h065",
+ "kip": "c",
+ "kategori": "doğrulama ve ayrıştırma (TC kimlik, IBAN, telefon, plaka, e-posta, adres biçimi)",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 21,
+   "basarili": 21
+  }
+ ],
+ "spark_usd": 0.0023457,
+ "arayuz": "telefon_kasasi.py dosyasında TelefonKasasi sınıfı ve ValueError alt sınıfı OperatorHatasi tanımlıdır; testler from telefon_kasasi import TelefonKasasi, OperatorHatasi ile bağlanır.",
+ "hakem": [],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [],
+ "kabul_gecti": true,
+ "ozet": "TelefonKasasi sınıfı telefon_kasasi.py içinde yazıldı: boşluk/tire/parantez/nokta silme, +90/90/0 önek ayıklama, 10 hane + 5 ile başlama + ikinci hane 0-6 kontrolü, ValueError/OperatorHatasi/TypeError ayrımı, +90 (5XX) XXX XX XX normalizasyonu, dedup ve sayısal sıralı listele, son iki hane açık maskeleme ve KeyError. pytest ile 12 test geçirildi.",
+ "adim": 5,
+ "yurutucu_token": {
+  "girdi": 14101,
+  "cikti": 15162
+ },
+ "yurutucu_usd": 0.0044425,
+ "bitirdi": true,
+ "sure_sn": 195.7,
+ "gizli": {
+  "gecti": true,
+  "gecen": 18,
+  "toplam": 18,
+  "cikti": "..................                                                       [100%]\n18 passed in 0.02s\n"
+ }
+}

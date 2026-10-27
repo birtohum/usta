@@ -1,0 +1,23 @@
+{
+ "id": "h058",
+ "kip": "a",
+ "kategori": "dosya ve komut satırı (CSV/JSON okuma, rapor yazdırma, argümanlar, hata mesajları)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "`sefer_raporu.py` yazıldı: UTF-8 JSON okuma, bozuk JSON'da `HATA: gecersiz JSON` (kod 3), geçersiz km/yakit kayıtlarında `UYARI: kayit <index> atlandi`, plaka normalizasyonu (whitespace sil + upper), min-km filtresi (ortalama ve sayıma dahil etmeme), ROUND_HALF_UP ile 2 ondalık tüketim/maliyet, toleranslı (0.005) sıralama, eksik girdi / negatif min-km hataları (kod 2), çıktı dizini oluşturma ve `OK:` mesajı. Testlerle doğrulandı.",
+ "adim": 6,
+ "yurutucu_token": {
+  "girdi": 26592,
+  "cikti": 15289
+ },
+ "yurutucu_usd": 0.005717000000000001,
+ "bitirdi": true,
+ "sure_sn": 126.5,
+ "gizli": {
+  "gecti": true,
+  "gecen": 15,
+  "toplam": 15,
+  "cikti": "...............                                                          [100%]\n15 passed in 0.43s\n"
+ }
+}

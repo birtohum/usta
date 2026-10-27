@@ -1,0 +1,23 @@
+{
+ "id": "h096",
+ "kip": "b",
+ "kategori": "veri yapıları ve algoritmalar (kuyruk, önbellek, arama, gruplama, birleştirme, durum makinesi)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "`oda_arama.py` içinde `oda_ara` işlevini yazdım: Türkçe normalleştirme (I→ı, İ→i sonra lower), strip sonrası boş sorguda metin filtresi yok, `datetime` ile tarih çözümleme ve yarı-açık `[giris, cikis)` çakışma kontrolü (sınırda biten çakışma sayılmaz), kisi 1-6 ve fiyat negatif kontrollerinde ValueError, fiyat→normalize ad→oda_id (case-sensitive) sıralaması, girdiyi değiştirmeyen sığ kopya sonuçlar. `test_oda.py` ile 12 pytest testi yazıp `python -m pytest -q` ile hepsinin geçtiğini doğruladım.",
+ "adim": 8,
+ "yurutucu_token": {
+  "girdi": 39416,
+  "cikti": 17982
+ },
+ "yurutucu_usd": 0.007538,
+ "bitirdi": true,
+ "sure_sn": 163.9,
+ "gizli": {
+  "gecti": true,
+  "gecen": 18,
+  "toplam": 18,
+  "cikti": "..................                                                       [100%]\n18 passed in 0.02s\n"
+ }
+}

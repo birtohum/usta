@@ -1,0 +1,25 @@
+{
+ "id": "h127",
+ "kip": "c",
+ "kategori": "Türkçe metin işleme (Türkçe harfler, büyük/küçük harf, hece, ek, sıralama, sayı/yazı)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0002048,
+ "arayuz": "",
+ "kabul_gecti": false,
+ "dogrulanamadi": true,
+ "ozet": "sayi_coz.py içinde durum tutan SayiCozucu sınıfı yazıldı: coz ve deger yöntemleri 0-999999999 aralığını, tek başına yüz/bin, buçuk/yarım/çeyrek kesirlerini, virgüllü ve iki basamağa yuvarlanmış biçimlendirmeyi, büyük/küçük ve ASCII duyarsız eşleşmeyi, sıra korumayı, boş string ve hatalı girdi kurallarını (TypeError/ValueError, 200 karakter sınırı) uygular. pytest ile 8 test geçti.",
+ "adim": 10,
+ "yurutucu_token": {
+  "girdi": 48782,
+  "cikti": 30102
+ },
+ "yurutucu_usd": 0.010898600000000001,
+ "sure_sn": 585.3,
+ "gizli": {
+  "gecti": true,
+  "gecen": 19,
+  "toplam": 19,
+  "cikti": "...................                                                      [100%]\n19 passed in 0.03s\n"
+ }
+}

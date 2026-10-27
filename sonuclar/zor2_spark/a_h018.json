@@ -1,0 +1,23 @@
+{
+ "id": "h018",
+ "kip": "a",
+ "kategori": "veri yapıları ve algoritmalar (kuyruk, önbellek, arama, gruplama, birleştirme, durum makinesi)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "kargo.py dosyasında seferleri_birlestir ve toplam_kapsama işlevleri yazıldı. Yarım açık aralık kuralı (bitiş==başlangıç birleşmez, her pozitif örtüşme birleşir), sıralama, doğrulama (ValueError) ve iki ondalığa yuvarlanmış float kapsama uygulandı; yalnızca standart kütüphanesiz saf Python kullanıldı ve testlerle doğrulandı.",
+ "adim": 9,
+ "yurutucu_token": {
+  "girdi": 29209,
+  "cikti": 7549
+ },
+ "yurutucu_usd": 0.004430700000000001,
+ "bitirdi": true,
+ "sure_sn": 81.9,
+ "gizli": {
+  "gecti": true,
+  "gecen": 17,
+  "toplam": 17,
+  "cikti": ".................                                                        [100%]\n17 passed in 0.03s\n"
+ }
+}

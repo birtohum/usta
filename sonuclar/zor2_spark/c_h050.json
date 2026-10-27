@@ -1,0 +1,35 @@
+{
+ "id": "h050",
+ "kip": "c",
+ "kategori": "küçük işletme hesapları (KDV, fatura, taksit, indirim, stok, kur dönüşümü, yuvarlama)",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 19,
+   "basarili": 19
+  }
+ ],
+ "spark_usd": 0.0031791000000000002,
+ "arayuz": "",
+ "hakem": [],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [],
+ "kabul_gecti": true,
+ "ozet": "toptan.py içinde ToptanSepet sınıfı yazıldı: regex ile musteri/ürün/kupon doğrulama, TypeError/ValueError ayrımı, Decimal ROUND_HALF_UP yuvarlama, toplam adede göre %5/%12 kademeli indirim, birleşmeyen en avantajlı tek kupon, ara toplama göre sıralı satırlar ve içerik tabanlı __eq__. test_toptan.py ile 14 pytest testi geçiyor.",
+ "adim": 4,
+ "yurutucu_token": {
+  "girdi": 15860,
+  "cikti": 13691
+ },
+ "yurutucu_usd": 0.0043242,
+ "bitirdi": true,
+ "sure_sn": 251.7,
+ "gizli": {
+  "gecti": true,
+  "gecen": 16,
+  "toplam": 16,
+  "cikti": "................                                                         [100%]\n16 passed in 0.02s\n"
+ }
+}

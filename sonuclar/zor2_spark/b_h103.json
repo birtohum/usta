@@ -1,0 +1,23 @@
+{
+ "id": "h103",
+ "kip": "b",
+ "kategori": "Türkçe metin işleme (Türkçe harfler, büyük/küçük harf, hece, ek, sıralama, sayı/yazı)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "kisaltma.py modülü yazıldı: akronim_uret (durma sözcükleri eleme, tireli kelime, sayı koruma, parantez temizleme, Türkçe büyük harf i→İ/ı→I, ValueError/TypeError) ve akronim_coz (büyük harf duyarsız eşleşme, KeyError/ValueError/TypeError). pytest ile 10 test geçti.",
+ "adim": 6,
+ "yurutucu_token": {
+  "girdi": 18725,
+  "cikti": 14439
+ },
+ "yurutucu_usd": 0.0047603,
+ "bitirdi": true,
+ "sure_sn": 132.4,
+ "gizli": {
+  "gecti": true,
+  "gecen": 17,
+  "toplam": 17,
+  "cikti": ".................                                                        [100%]\n17 passed in 0.03s\n"
+ }
+}

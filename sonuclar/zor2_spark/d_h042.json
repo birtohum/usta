@@ -1,0 +1,38 @@
+{
+ "id": "h042",
+ "kip": "d",
+ "kategori": "veri yapıları ve algoritmalar (kuyruk, önbellek, arama, gruplama, birleştirme, durum makinesi)",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 17,
+   "basarili": 17
+  }
+ ],
+ "spark_usd": 0.004342100000000001,
+ "arayuz": "",
+ "hakem": [],
+ "geri_alma": 0,
+ "inceleme": {
+  "yazilan": 0,
+  "kanitli": []
+ },
+ "iptal_edilen_test": [],
+ "kabul_gecti": true,
+ "ozet": "lojistik_cli.py geliştirildi: --girdi/--cikti/--sirala/--limit/--format argümanları, başlık ve sütun kontrolü, limit 0-1000 ve format json/csv doğrulaması (ValueError → stderr + çıkış 2), agirlik artan + id dizgesel case-sensitive sıralama, 2 boşluk girintili JSON ve başlıklı CSV çıktısı, son satırda 2 ondalığa yuvarlanmış float ortalama (boş girdide 0). 13 pytest testi yazıldı ve hepsi geçti.",
+ "adim": 8,
+ "yurutucu_token": {
+  "girdi": 35245,
+  "cikti": 21024
+ },
+ "yurutucu_usd": 0.007729300000000001,
+ "bitirdi": true,
+ "sure_sn": 271.8,
+ "gizli": {
+  "gecti": true,
+  "gecen": 17,
+  "toplam": 17,
+  "cikti": ".................                                                        [100%]\n17 passed in 0.49s\n"
+ }
+}

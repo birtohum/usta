@@ -1,0 +1,35 @@
+{
+ "id": "h118",
+ "kip": "c",
+ "kategori": "dosya ve komut satırı (CSV/JSON okuma, rapor yazdırma, argümanlar, hata mesajları)",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 18,
+   "basarili": 18
+  }
+ ],
+ "spark_usd": 0.0020173,
+ "arayuz": "",
+ "hakem": [],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [],
+ "kabul_gecti": true,
+ "ozet": "kayak.py içinde EkipmanEnvanteri sınıfı yazıldı: stok_ekle tür/adet kontrolü ve tekrar kodda ValueError, kirala stok/gün kontrolü ve günlük fiyat + %15 indirim (7+ gün) ile yuvarlama, iade_et/bakima_gonder havuz geçişleri, rapor_yaz sıralı CSV, kaydet/yukle JSON sözlük; FileNotFoundError ve JSONDecodeError yukarı taşınıyor. pytest ile 10 test geçti.",
+ "adim": 4,
+ "yurutucu_token": {
+  "girdi": 14054,
+  "cikti": 6222
+ },
+ "yurutucu_usd": 0.0026498,
+ "bitirdi": true,
+ "sure_sn": 241.1,
+ "gizli": {
+  "gecti": true,
+  "gecen": 17,
+  "toplam": 17,
+  "cikti": ".................                                                        [100%]\n17 passed in 0.05s\n"
+ }
+}

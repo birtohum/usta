@@ -1,0 +1,35 @@
+{
+ "id": "h154",
+ "kip": "c",
+ "kategori": "doğrulama ve ayrıştırma (TC kimlik, IBAN, telefon, plaka, e-posta, adres biçimi)",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 18,
+   "basarili": 18
+  }
+ ],
+ "spark_usd": 0.0035755,
+ "arayuz": "",
+ "hakem": [],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [],
+ "kabul_gecti": true,
+ "ozet": "RezervasyonDogrulayici yazıldı, 9 pytest testi geçti.",
+ "adim": 6,
+ "yurutucu_token": {
+  "girdi": 14489,
+  "cikti": 27964
+ },
+ "yurutucu_usd": 0.0070417000000000006,
+ "bitirdi": true,
+ "sure_sn": 334.8,
+ "gizli": {
+  "gecti": true,
+  "gecen": 16,
+  "toplam": 16,
+  "cikti": "................                                                         [100%]\n16 passed in 0.03s\n"
+ }
+}

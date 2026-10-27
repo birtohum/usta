@@ -1,0 +1,23 @@
+{
+ "id": "h047",
+ "kip": "a",
+ "kategori": "doğrulama ve ayrıştırma (TC kimlik, IBAN, telefon, plaka, e-posta, adres biçimi)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "toplu_dogrula.py yazıldı: tckn/iban/plaka/eposta doğrulama, 100k satır sınırı, boş satır atlama, çıkış kodları 1/2, gecerli/gecersiz/atlanan JSON çıktısı, --sirala (casefold sıralama) ve --ozet (oran 2 ondalık, yinelenen sayımı) desteklenir; yalnızca standart kütüphane.",
+ "adim": 5,
+ "yurutucu_token": {
+  "girdi": 17042,
+  "cikti": 22963
+ },
+ "yurutucu_usd": 0.0062968,
+ "bitirdi": true,
+ "sure_sn": 193.6,
+ "gizli": {
+  "gecti": false,
+  "gecen": 16,
+  "toplam": 18,
+  "cikti": "        yaz(g, [\"test@example.com\", \"bozuk\", \"diger@example.com\"])\n        r = calistir(g, \"eposta\", c, ozet=True)\n        assert r.returncode == 0\n        d = oku(c)\n        assert \"ozet\" in d\n        oran = d[\"ozet\"][\"gecerlilik_orani\"]\n>       assert oran == round(2 / 3 * 100, 2)\nE       assert 0.67 == 66.67\nE        +  where 66.67 = round(((2 / 3) * 100), 2)\n\n.gizli/test_gizli.py:134: AssertionError\n__________________________ test_ozet_oran_iki_ondalik __________________________\n\ntmp_path = PosixPath('/home/usta/is/a0d1a8c0dd35/.tmp/pytest-of-usta/pytest-0/test_ozet_oran_iki_ondalik0')\n\n    def test_ozet_oran_iki_ondalik(tmp_path):\n        g = tmp_path / \"in.txt\"\n        c = tmp_path / \"out.json\"\n        yaz(g, [\"test@example.com\", \"bozuk1\", \"bozuk2\"])\n        r = calistir(g, \"eposta\", c, ozet=True)\n        assert r.returncode == 0\n        d = oku(c)\n>       assert d[\"ozet\"][\"gecerlilik_orani\"] == 33.33\nE       assert 0.33 == 33.33\n\n.gizli/test_gizli.py:144: AssertionError\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_ozet_istatistik_ve_oran - assert 0.67 == 66.67\nFAILED .gizli/test_gizli.py::test_ozet_oran_iki_ondalik - assert 0.33 == 33.33\n2 failed, 16 passed in 0.54s\n"
+ }
+}

@@ -1,0 +1,23 @@
+{
+ "id": "h094",
+ "kip": "a",
+ "kategori": "dosya ve komut satırı (CSV/JSON okuma, rapor yazdırma, argümanlar, hata mesajları)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "carsi.py yazıldı: argparse ile istenen CLI biçimini uygular; YYYY-AA dönem doğrulaması yapar; eksik dosya/hatalı başlıkta stderr + çıkış 2 verir; tezgahlar.csv'de kira>0 kontrolü, tuketim.csv'de tarih/kwh doğrulaması ve dönem filtresi, odemeler.json'da tutar>0 kontrolü ve dönem filtresi uygular; geçersiz satırları stderr uyarısıyla atlayıp devam eder; elektrik payını sabit birim fiyat (5.00 TL/kWh) ile kwh oranlı dağıtır; kira/elektrik/ödenen/kalan tutarlarını kuruşa (ROUND_HALF_UP) yuvarlar; borclar.csv çıktısını kalan_borc azalan, tezgah_id artan sırada yazar. Hesap, sıralama, hata kodu ve uyarı davranışları testlerle doğrulandı.",
+ "adim": 8,
+ "yurutucu_token": {
+  "girdi": 38729,
+  "cikti": 15062
+ },
+ "yurutucu_usd": 0.0068853000000000004,
+ "bitirdi": true,
+ "sure_sn": 131.4,
+ "gizli": {
+  "gecti": true,
+  "gecen": 15,
+  "toplam": 15,
+  "cikti": "...............                                                          [100%]\n15 passed in 0.56s\n"
+ }
+}

@@ -1,0 +1,37 @@
+{
+ "id": "h010",
+ "kip": "c",
+ "kategori": "dosya ve komut satırı (CSV/JSON okuma, rapor yazdırma, argümanlar, hata mesajları)",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 15,
+   "basarili": 15
+  }
+ ],
+ "spark_usd": 0.0021625,
+ "arayuz": "",
+ "hakem": [],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [
+  "test_giris_satis_dosya_barkod_sirali_yazar"
+ ],
+ "kabul_gecti": true,
+ "ozet": "stok.py içinde InsufficientStockError ve StokYoneticisi sınıflarını yazdım: barkod/adet doğrulama, eksik dosyada boş başlama, bozuk JSON'da ValueError, sıralı JSON yazma, sıfır bakiyeyi silmeme, kritik_liste sıralaması ve hata durumunda yazmama kurallarını uyguladım. pytest ile 38 test geçti.",
+ "adim": 5,
+ "yurutucu_token": {
+  "girdi": 17702,
+  "cikti": 11131
+ },
+ "yurutucu_usd": 0.003996400000000001,
+ "bitirdi": true,
+ "sure_sn": 95.0,
+ "gizli": {
+  "gecti": true,
+  "gecen": 17,
+  "toplam": 17,
+  "cikti": ".................                                                        [100%]\n17 passed in 0.05s\n"
+ }
+}

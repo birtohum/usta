@@ -1,0 +1,23 @@
+{
+ "id": "h072",
+ "kip": "a",
+ "kategori": "veri yapıları ve algoritmalar (kuyruk, önbellek, arama, gruplama, birleştirme, durum makinesi)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "kovan_verim.py içinde KovanHesapOnbellegi sınıfı yazıldı: LFU çıkarma (eşitlikte en eski), getir isabette sıklık+1 ve isabet sayacı, ıskada None+iska sayacı, koy'da güncelleme sıklık+1 / yeni anahtar sıklık 1, kapasite 1-1000 kontrolü ve tip/aralık hata denetimleri, istatistik sözlüğü. Yalnızca standart kütüphanesiz saf Python kullanıldı.",
+ "adim": 10,
+ "yurutucu_token": {
+  "girdi": 47641,
+  "cikti": 9984
+ },
+ "yurutucu_usd": 0.006760900000000001,
+ "bitirdi": true,
+ "sure_sn": 93.6,
+ "gizli": {
+  "gecti": true,
+  "gecen": 16,
+  "toplam": 16,
+  "cikti": "................                                                         [100%]\n16 passed in 0.02s\n"
+ }
+}

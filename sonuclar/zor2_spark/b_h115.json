@@ -1,0 +1,23 @@
+{
+ "id": "h115",
+ "kip": "b",
+ "kategori": "Türkçe metin işleme (Türkçe harfler, büyük/küçük harf, hece, ek, sıralama, sayı/yazı)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "dizin.py modülü yazıldı: sayfalari_sikistir tekrarları silip sıralar, 3+ ardışıklığı tireli aralığa çevirir, 2'li ardışıklığı virgüllü yazar, boş listede boş dizge döndürür, hatalı türde TypeError ve aralık dışında ValueError verir; dizin_birlestir casefold ile birleştirip ilk yazımı korur, sayfaları yeniden sıkıştırır, \"Terim: liste\" çıktısını casefold sıralı üretir. Yalnızca standart kütüphane kullanıldı. test_dizin.py ile 25 test `python -m pytest -q` altında geçti.",
+ "adim": 9,
+ "yurutucu_token": {
+  "girdi": 36672,
+  "cikti": 15963
+ },
+ "yurutucu_usd": 0.006859800000000001,
+ "bitirdi": true,
+ "sure_sn": 131.4,
+ "gizli": {
+  "gecti": false,
+  "gecen": 16,
+  "toplam": 17,
+  "cikti": "..............F..                                                        [100%]\n=================================== FAILURES ===================================\n________________________ test_birlestir_bos_girdi_hata _________________________\n\n    def test_birlestir_bos_girdi_hata():\n>       with pytest.raises(ValueError):\nE       Failed: DID NOT RAISE <class 'ValueError'>\n\n.gizli/test_gizli.py:64: Failed\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_birlestir_bos_girdi_hata - Failed: DID NOT ...\n1 failed, 16 passed in 0.03s\n"
+ }
+}

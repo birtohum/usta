@@ -1,0 +1,23 @@
+{
+ "id": "h117",
+ "kip": "a",
+ "kategori": "tarih ve saat (iş günü, resmî tatil listesi parametre olarak verilir, süre hesabı, biçim dönüşümü)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "bakim_penceresi.py icinde BakimPlanlayici sinifi yazildi: tatiller set olarak tutulur (sirsiz/tekrarli desteklenir), sonraki_is_gunu is gunu ise aynisini yoksa sonraki ilk is gununu dondurur, pencere_suresi_dk yalnizca is gunlerine denk gelen dakikalari toplayip 15'e yukari yuvarlar (hafta sonu/tatil sifir), baslangic>bitis ve bozuk bicimlerde ValueError yukseltir, planla gun_sayisi kadar is gununu artan sirada dondurur (<=0 ise bos liste).",
+ "adim": 7,
+ "yurutucu_token": {
+  "girdi": 21122,
+  "cikti": 16541
+ },
+ "yurutucu_usd": 0.0054204000000000006,
+ "bitirdi": true,
+ "sure_sn": 150.7,
+ "gizli": {
+  "gecti": true,
+  "gecen": 18,
+  "toplam": 18,
+  "cikti": "..................                                                       [100%]\n18 passed in 0.02s\n"
+ }
+}

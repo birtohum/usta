@@ -1,0 +1,23 @@
+{
+ "id": "h011",
+ "kip": "b",
+ "kategori": "doğrulama ve ayrıştırma (TC kimlik, IBAN, telefon, plaka, e-posta, adres biçimi)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "iban.py yazıldı: iban_dogrula, iban_ayristir, banka_ozeti TR IBAN kurallarına (normalize, 26 uzunluk, TR, ASCII kontrol, MOD97) uygun çalışıyor; hata tipleri ve sıralama/yuvarlama sağlandı. pytest ile 4 test geçti.",
+ "adim": 13,
+ "yurutucu_token": {
+  "girdi": 51119,
+  "cikti": 31098
+ },
+ "yurutucu_usd": 0.011331500000000003,
+ "bitirdi": true,
+ "sure_sn": 308.1,
+ "gizli": {
+  "gecti": true,
+  "gecen": 16,
+  "toplam": 16,
+  "cikti": "................                                                         [100%]\n16 passed in 0.03s\n"
+ }
+}

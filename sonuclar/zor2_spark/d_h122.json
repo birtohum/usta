@@ -1,0 +1,25 @@
+{
+ "id": "h122",
+ "kip": "d",
+ "kategori": "küçük işletme hesapları (KDV, fatura, taksit, indirim, stok, kur dönüşümü, yuvarlama)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.00012780000000000002,
+ "arayuz": "",
+ "kabul_gecti": false,
+ "dogrulanamadi": true,
+ "ozet": "tahsilat.py içinde VadeliTahsilat sınıfı yazıldı: erken iskonto (%5/%3/%1), basit gecikme faizi, Decimal HALF_UP yuvarlama, önce cezaya mahsup, sıralı ekstre, 365 gün ve tip kontrolleri. 12 pytest testi geçti.",
+ "adim": 8,
+ "yurutucu_token": {
+  "girdi": 54069,
+  "cikti": 31350
+ },
+ "yurutucu_usd": 0.0116769,
+ "sure_sn": 583.4,
+ "gizli": {
+  "gecti": false,
+  "gecen": 15,
+  "toplam": 16,
+  "cikti": "........F.......                                                         [100%]\n=================================== FAILURES ===================================\n____________________________ test_kismi_once_cezaya ____________________________\n\n    def test_kismi_once_cezaya():\n        v = VadeliTahsilat(date(2026, 6, 20), 1000.00, 0.001)\n        r = v.odeme_yap(date(2026, 6, 25), 3.00)\n>       assert r[\"cezaya_mahsup\"] == pytest.approx(3.00)\nE       KeyError: 'cezaya_mahsup'\n\n.gizli/test_gizli.py:61: KeyError\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_kismi_once_cezaya - KeyError: 'cezaya_mahsup'\n1 failed, 15 passed in 0.04s\n"
+ }
+}

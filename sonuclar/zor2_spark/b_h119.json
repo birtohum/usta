@@ -1,0 +1,23 @@
+{
+ "id": "h119",
+ "kip": "b",
+ "kategori": "doğrulama ve ayrıştırma (TC kimlik, IBAN, telefon, plaka, e-posta, adres biçimi)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "abonelik.py içinde AbonelikYoneticisi yazıldı: plaka normalizasyonu ve tür ayrımı (CD/T), TC checksum + None/TypeError, 4 parçalı adres ve bina 1-500, 1-12 ay uzatma, sıralı aktif_liste ve yuvarlanmış doluluk oranı. pytest ile 8 test geçti.",
+ "adim": 12,
+ "yurutucu_token": {
+  "girdi": 73176,
+  "cikti": 36737
+ },
+ "yurutucu_usd": 0.014665000000000001,
+ "bitirdi": true,
+ "sure_sn": 321.7,
+ "gizli": {
+  "gecti": false,
+  "gecen": 10,
+  "toplam": 17,
+  "cikti": ">       assert plakalar[0] == \"06AB123\"\nE       AssertionError: assert '06 AB 123' == '06AB123'\nE         - 06AB123\nE         + 06 AB 123\nE         ?   +  +\n\n.gizli/test_gizli.py:147: AssertionError\n_________________________ test_doluluk_orani_yuvarlama _________________________\n\n    def test_doluluk_orani_yuvarlama():\n        y = AbonelikYoneticisi(kapasite=3)\n        y.abone_ekle(\"19 AB 123\", TC1, adres())\n        assert y.doluluk_orani() == round(1/3, 2)\n        assert y.doluluk_orani() == 0.33\n        y.abone_ekle(\"34 AB 123\", TC2, adres())\n        assert y.doluluk_orani() == round(2/3, 2)\n        sonuc = y.abonelik_uzat(\"19 AB 123\", 2)\n>       assert sonuc[\"doluluk_orani\"] == round(2/3, 2)\nE       KeyError: 'doluluk_orani'\n\n.gizli/test_gizli.py:157: KeyError\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_abone_ekle_normal - AssertionError: assert ...\nFAILED .gizli/test_gizli.py::test_plaka_kucuk_harf_normalize - AssertionError...\nFAILED .gizli/test_gizli.py::test_plaka_gecici_T - AssertionError: assert 'ge...\nFAILED .gizli/test_gizli.py::test_bitis_tam_ay - TypeError: fromisoformat: ar...\nFAILED .gizli/test_gizli.py::test_plaka_esitligi_bosluk_tire - AssertionError...\nFAILED .gizli/test_gizli.py::test_aktif_liste_sirali - AssertionError: assert...\nFAILED .gizli/test_gizli.py::test_doluluk_orani_yuvarlama - KeyError: 'dolulu...\n7 failed, 10 passed in 0.05s\n"
+ }
+}

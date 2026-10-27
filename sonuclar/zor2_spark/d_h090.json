@@ -1,0 +1,38 @@
+{
+ "id": "h090",
+ "kip": "d",
+ "kategori": "veri yapıları ve algoritmalar (kuyruk, önbellek, arama, gruplama, birleştirme, durum makinesi)",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 19,
+   "basarili": 19
+  }
+ ],
+ "spark_usd": 0.0062404,
+ "arayuz": "",
+ "hakem": [],
+ "geri_alma": 0,
+ "inceleme": {
+  "yazilan": 0,
+  "kanitli": []
+ },
+ "iptal_edilen_test": [],
+ "kabul_gecti": true,
+ "ozet": "`damitim_onbellegi.py` içinde ağırlıklı LRU `DamitimOnbellegi` sınıfını yazdım: hit'te `hesap_fn` çağrılmadan değer döndürülüp hit artar ve sıra yenilenir; miss'te `hesap_fn` bir kez çağrılıp sonuç ROUND_HALF_UP ile 3 ondalığa yuvarlanır, ağırlık `len(parti_id)+gul_kilo/10` (en az 1) hesaplanıp `max_agirlik` aşımında en eski kayıtlardan tahliye yapılır. Doğrulamalar (ValueError/TypeError), `gecersiz_kil`, `istatistik` ve üzerine yazma ağırlık düzeltmesi eklendi. 10 pytest testi yazıldı ve hepsi geçti.",
+ "adim": 7,
+ "yurutucu_token": {
+  "girdi": 33530,
+  "cikti": 19384
+ },
+ "yurutucu_usd": 0.007229800000000001,
+ "bitirdi": true,
+ "sure_sn": 303.3,
+ "gizli": {
+  "gecti": false,
+  "gecen": 16,
+  "toplam": 17,
+  "cikti": "..............F..                                                        [100%]\n=================================== FAILURES ===================================\n__________________ test_ayni_id_farkli_gul_agirlik_guncelleme __________________\n\n    def test_ayni_id_farkli_gul_agirlik_guncelleme():\n        c = DamitimOnbellegi(max_agirlik=1000)\n        v1 = c.hesapla_veya_getir(\"X\", 10.0, 10.0, lambda: 1.0)\n        assert v1 == pytest.approx(1.0)\n        v2 = c.hesapla_veya_getir(\"X\", 20.0, 10.0, lambda: 99.0)\n        # ayni parti_id: kayit sayisi artmaz, agirlik farki dusulur\n        assert c.istatistik()[\"kayit_sayisi\"] == 1\n        assert c.istatistik()[\"toplam_agirlik\"] == pytest.approx(agirlik(\"X\", 20.0))\n        # isabet oldugu icin eski deger doner\n>       assert v2 == pytest.approx(1.0)\nE       assert 99.0 == 1.0 ± 1.0e-06\nE         comparison failed\nE         Obtained: 99.0\nE         Expected: 1.0 ± 1.0e-06\n\n.gizli/test_gizli.py:150: AssertionError\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_ayni_id_farkli_gul_agirlik_guncelleme - ass...\n1 failed, 16 passed in 0.06s\n"
+ }
+}

@@ -1,0 +1,23 @@
+{
+ "id": "h014",
+ "kip": "a",
+ "kategori": "küçük işletme hesapları (KDV, fatura, taksit, indirim, stok, kur dönüşümü, yuvarlama)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "indirim.py içinde sepet_hesapla fonksiyonu yazıldı: boş sepet/negatif fiyat/adet<1/negatif puan için ValueError, geçersiz kod için ValueError (IND10 %10, IND20 yalnızca ara toplam ≥500 ise %20), önce kod indirimi sonra her 100 puan=10 lira ve %30 tavanlı puan indirimi, tüm ara hesaplar Decimal ROUND_HALF_UP ile 2 basamağa yuvarlanır, ödenecek en az 0.0, ayrıntı katkıya göre azalan (eşitlikte yüksek birim fiyat önce) sıralanır, tip hatalarında TypeError yükseltilir.",
+ "adim": 4,
+ "yurutucu_token": {
+  "girdi": 10805,
+  "cikti": 11048
+ },
+ "yurutucu_usd": 0.0032901000000000002,
+ "bitirdi": true,
+ "sure_sn": 105.4,
+ "gizli": {
+  "gecti": false,
+  "gecen": 17,
+  "toplam": 19,
+  "cikti": ".............FF....                                                      [100%]\n=================================== FAILURES ===================================\n__________________________ test_puan_korunur_stepwise __________________________\n\n    def test_puan_korunur_stepwise():\n        s = sepet_hesapla([(\"a\", 85.0, 1)], None, 1000)\n>       assert s[\"puan_kullanimi\"] == pytest.approx(20.0)\nE       assert 25.5 == 20.0 ± 2.0e-05\nE         comparison failed\nE         Obtained: 25.5\nE         Expected: 20.0 ± 2.0e-05\n\n.gizli/test_gizli.py:90: AssertionError\n_____________________________ test_sirali_indirim ______________________________\n\n    def test_sirali_indirim():\n        s = sepet_hesapla([(\"mont\", 300.0, 2)], \"IND20\", 2000)\n        assert s[\"ara_toplam\"] == pytest.approx(600.0)\n        assert s[\"indirim\"] == pytest.approx(120.0)\n>       assert s[\"puan_kullanimi\"] == pytest.approx(140.0)\nE       assert 144.0 == 140.0 ± 1.4e-04\nE         comparison failed\nE         Obtained: 144.0\nE         Expected: 140.0 ± 1.4e-04\n\n.gizli/test_gizli.py:97: AssertionError\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_puan_korunur_stepwise - assert 25.5 == 20.0...\nFAILED .gizli/test_gizli.py::test_sirali_indirim - assert 144.0 == 140.0 ± 1....\n2 failed, 17 passed in 0.06s\n"
+ }
+}

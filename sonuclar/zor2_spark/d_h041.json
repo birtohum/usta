@@ -1,0 +1,25 @@
+{
+ "id": "h041",
+ "kip": "d",
+ "kategori": "doğrulama ve ayrıştırma (TC kimlik, IBAN, telefon, plaka, e-posta, adres biçimi)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0004828000000000001,
+ "arayuz": "vergi.py dosyasında VergiSicil sınıfı; yöntemler: vkn_dogrula(self, vkn: str)->bool, tckn_dogrula(self, tckn: str)->bool, mukellef_ekle(self, tur: str, no: str)->str, kayıt listesi için kayitlari_listele(self)->list, kurumsal pay için kurumsal_pay(self)->float, eşitlik için __eq__(self, diger)->bool",
+ "kabul_gecti": false,
+ "dogrulanamadi": true,
+ "ozet": "vergi.py içinde VergiSicil sınıfı gerçeklendi: VKN için 10 ASCII rakam, ilk hane≠0 ve ağırlıklı toplam mod-10 sağlama; TCKN için 11 hane, ilk hane≠0 ve 10./11. hane kuralları; mukellef_ekle tür kontrolü (bireysel/kurumsal), TypeError/ValueError ayrımı, yinelenen kayıtta ValueError, kayıtlar set olarak saklanıp tür+sayısal numara sırasına göre listeleniyor, __eq__ küme eşitliği, kurumsal_pay iki basamağa yuvarlanıyor. pytest ile 15 test geçti.",
+ "adim": 5,
+ "yurutucu_token": {
+  "girdi": 16916,
+  "cikti": 20050
+ },
+ "yurutucu_usd": 0.0057016,
+ "sure_sn": 471.1,
+ "gizli": {
+  "gecti": false,
+  "gecen": 9,
+  "toplam": 18,
+  "cikti": "('10000000147')\nE           TypeError: VergiSicil.tckn_dogrula() missing 1 required positional argument: 'tckn'\n\n.gizli/test_gizli.py:54: TypeError\n_________________________ test_tckn_str_disi_typeerror _________________________\n\n    def test_tckn_str_disi_typeerror():\n        with pytest.raises(TypeError):\n            VergiSicil.tckn_dogrula(10000000146)\n        with pytest.raises(TypeError):\n            VergiSicil.tckn_dogrula(None)\n        with pytest.raises(ValueError):\n>           VergiSicil.tckn_dogrula('1000000014A')\nE           TypeError: VergiSicil.tckn_dogrula() missing 1 required positional argument: 'tckn'\n\n.gizli/test_gizli.py:65: TypeError\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_vkn_gecerli - TypeError: VergiSicil.vkn_dog...\nFAILED .gizli/test_gizli.py::test_vkn_uzunluk_hatasi - TypeError: VergiSicil....\nFAILED .gizli/test_gizli.py::test_vkn_ilk_hane_sifir - TypeError: VergiSicil....\nFAILED .gizli/test_gizli.py::test_vkn_saglama_hatasi - TypeError: VergiSicil....\nFAILED .gizli/test_gizli.py::test_vkn_str_disi_typeerror - TypeError: VergiSi...\nFAILED .gizli/test_gizli.py::test_tckn_gecerli - TypeError: VergiSicil.tckn_d...\nFAILED .gizli/test_gizli.py::test_tckn_uzunluk_hatasi - TypeError: VergiSicil...\nFAILED .gizli/test_gizli.py::test_tckn_saglama_hatasi - TypeError: VergiSicil...\nFAILED .gizli/test_gizli.py::test_tckn_str_disi_typeerror - TypeError: VergiS...\n9 failed, 9 passed in 0.06s\n"
+ }
+}

@@ -1,0 +1,38 @@
+{
+ "id": "h033",
+ "kip": "d",
+ "kategori": "tarih ve saat (iş günü, resmî tatil listesi parametre olarak verilir, süre hesabı, biçim dönüşümü)",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 19,
+   "basarili": 19
+  }
+ ],
+ "spark_usd": 0.0026664,
+ "arayuz": "",
+ "hakem": [],
+ "geri_alma": 0,
+ "inceleme": {
+  "yazilan": 0,
+  "kanitli": []
+ },
+ "iptal_edilen_test": [],
+ "kabul_gecti": true,
+ "ozet": "tarih_formatlayici.py içinde coklu_format_cozumle ve turkce_formatla yazıldı; üç biçim, sıfır dolgusu, 1900-2100 ve artık yıl kontrolleri, TypeError/ValueError kuralları uygulandı, 18 pytest testi geçti.",
+ "adim": 6,
+ "yurutucu_token": {
+  "girdi": 24062,
+  "cikti": 8484
+ },
+ "yurutucu_usd": 0.004103,
+ "bitirdi": true,
+ "sure_sn": 142.0,
+ "gizli": {
+  "gecti": true,
+  "gecen": 18,
+  "toplam": 18,
+  "cikti": "..................                                                       [100%]\n18 passed in 0.02s\n"
+ }
+}

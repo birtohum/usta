@@ -1,0 +1,23 @@
+{
+ "id": "h066",
+ "kip": "a",
+ "kategori": "veri yapıları ve algoritmalar (kuyruk, önbellek, arama, gruplama, birleştirme, durum makinesi)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "kesim_plan.py oluşturuldu: gruplara_ayir (genişlik azalan/id artan ön sıralama + ilk sığan gruba yerleştirme, grup içi id artan sıralama, oluşturulma sırası korunur) ve fire_orani (boş alan/toplam alan, ROUND_HALF_UP ile 4 ondalık, boşta 0.0). Doğrulamalar: tür hatasında TypeError, geçersiz genişlik/plaka aralığında ValueError. Yalnızca standart kütüphane (decimal) kullanıldı.",
+ "adim": 9,
+ "yurutucu_token": {
+  "girdi": 33842,
+  "cikti": 13035
+ },
+ "yurutucu_usd": 0.0059911999999999995,
+ "bitirdi": true,
+ "sure_sn": 111.0,
+ "gizli": {
+  "gecti": true,
+  "gecen": 18,
+  "toplam": 18,
+  "cikti": "..................                                                       [100%]\n18 passed in 0.02s\n"
+ }
+}

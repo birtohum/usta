@@ -1,0 +1,23 @@
+{
+ "id": "h010",
+ "kip": "b",
+ "kategori": "dosya ve komut satırı (CSV/JSON okuma, rapor yazdırma, argümanlar, hata mesajları)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "stok.py içinde StokYoneticisi ve InsufficientStockError(Exception) yazıldı: barkod/adet doğrulama (Geçersiz barkod/adet), kurucuda JSON okuma ve Bozuk stok dosyası hatası, giris/satis sonrası barkod sıralı JSON yazma, yetersiz stokta yazmadan hata, bakiye bilinmeyene 0, kritik_liste bakiye+barkod sıralı, esik negatifte ValueError ve adet non-intte TypeError, sıfır bakiyenin dosyada tutulup geri yüklenmesi. pytest ile 13 test geçti.",
+ "adim": 6,
+ "yurutucu_token": {
+  "girdi": 24263,
+  "cikti": 24093
+ },
+ "yurutucu_usd": 0.0072449,
+ "bitirdi": true,
+ "sure_sn": 197.8,
+ "gizli": {
+  "gecti": true,
+  "gecen": 17,
+  "toplam": 17,
+  "cikti": ".................                                                        [100%]\n17 passed in 0.05s\n"
+ }
+}

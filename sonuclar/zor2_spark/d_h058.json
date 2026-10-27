@@ -1,0 +1,38 @@
+{
+ "id": "h058",
+ "kip": "d",
+ "kategori": "dosya ve komut satırı (CSV/JSON okuma, rapor yazdırma, argümanlar, hata mesajları)",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 18,
+   "basarili": 18
+  }
+ ],
+ "spark_usd": 0.006294800000000001,
+ "arayuz": "",
+ "hakem": [],
+ "geri_alma": 0,
+ "inceleme": {
+  "yazilan": 0,
+  "kanitli": []
+ },
+ "iptal_edilen_test": [],
+ "kabul_gecti": true,
+ "ozet": "sefer_raporu.py yazıldı: plaka normalleştirme, min-km filtresi, ROUND_HALF_UP tüketim/maliyet, toleranslı sıralama, hata kodları ve CSV çıktısı uygulandı; pytest ile 10 test geçti.",
+ "adim": 10,
+ "yurutucu_token": {
+  "girdi": 81921,
+  "cikti": 28440
+ },
+ "yurutucu_usd": 0.013880100000000003,
+ "bitirdi": true,
+ "sure_sn": 392.7,
+ "gizli": {
+  "gecti": true,
+  "gecen": 15,
+  "toplam": 15,
+  "cikti": "...............                                                          [100%]\n15 passed in 0.50s\n"
+ }
+}

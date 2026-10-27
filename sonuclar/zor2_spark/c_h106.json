@@ -1,0 +1,35 @@
+{
+ "id": "h106",
+ "kip": "c",
+ "kategori": "dosya ve komut satırı (CSV/JSON okuma, rapor yazdırma, argümanlar, hata mesajları)",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 17,
+   "basarili": 17
+  }
+ ],
+ "spark_usd": 0.0018361000000000004,
+ "arayuz": "",
+ "hakem": [],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [],
+ "kabul_gecti": true,
+ "ozet": "sut.py programı yazıldı: çoklu CSV okuma, (hayvan,tarih) toplama, tarih/litre doğrulama (stderr uyarı), min-gun filtreleme, ortalama/tutar hesaplama ve sıralı rapor yazma; eksik dosya ve min-gun<1 durumlarında çıkış kodu 2. pytest ile 9 test geçti.",
+ "adim": 5,
+ "yurutucu_token": {
+  "girdi": 22642,
+  "cikti": 12933
+ },
+ "yurutucu_usd": 0.004850800000000001,
+ "bitirdi": true,
+ "sure_sn": 177.0,
+ "gizli": {
+  "gecti": true,
+  "gecen": 16,
+  "toplam": 16,
+  "cikti": "................                                                         [100%]\n16 passed in 0.53s\n"
+ }
+}

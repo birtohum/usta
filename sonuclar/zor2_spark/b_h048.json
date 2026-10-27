@@ -1,0 +1,23 @@
+{
+ "id": "h048",
+ "kip": "b",
+ "kategori": "veri yapıları ve algoritmalar (kuyruk, önbellek, arama, gruplama, birleştirme, durum makinesi)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "randevu.py içinde RandevuTakvimi yazıldı: ekle/iptal/gunluk + doluluk_orani; yarım-açık çakışma kontrolü ValueError, KeyError/ValueError doğrulamaları, sıralama ve 2 ondalık doluluk. pytest ile 4 test geçti.",
+ "adim": 5,
+ "yurutucu_token": {
+  "girdi": 15019,
+  "cikti": 21223
+ },
+ "yurutucu_usd": 0.005746500000000001,
+ "bitirdi": true,
+ "sure_sn": 174.9,
+ "gizli": {
+  "gecti": true,
+  "gecen": 16,
+  "toplam": 16,
+  "cikti": "................                                                         [100%]\n16 passed in 0.02s\n"
+ }
+}

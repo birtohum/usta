@@ -1,0 +1,23 @@
+{
+ "id": "h005",
+ "kip": "a",
+ "kategori": "doğrulama ve ayrıştırma (TC kimlik, IBAN, telefon, plaka, e-posta, adres biçimi)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "tckimlik.py içinde TCKimlikDogrulayici sınıfı gerçeklendi: 11 ASCII hane, ilk hane sıfır yasağı, son hane çift kuralı, 10. hane (7*tek-çift)%10 ve 11. hane ilk-10 toplam %10 kontrolleri; str değilse TypeError, biçim bozuksa hatalı haneyi belirten ValueError; sayaçlar, sıra korumalı toplu_dogrula, sayısal sıralı hatalı listesi, iki ondalık başarı oranı, toplam+başarıya göre eşitlik ve yalnızca standart kütüphane.",
+ "adim": 10,
+ "yurutucu_token": {
+  "girdi": 33399,
+  "cikti": 33953
+ },
+ "yurutucu_usd": 0.0101305,
+ "bitirdi": true,
+ "sure_sn": 364.0,
+ "gizli": {
+  "gecti": false,
+  "gecen": 15,
+  "toplam": 17,
+  "cikti": "        v = TCKimlikDogrulayici()\n        try:\n            v.dogrula(\"10000000148\")\n        except ValueError:\n            pass\n        try:\n            v.dogrula(\"123\")\n        except ValueError:\n            pass\n        toplam, basarili, basarisiz, oran, hatali = _istatistik_coz(v.istatistik())\n>       assert isinstance(hatali, list)\nE       assert False\nE        +  where False = isinstance(2, list)\n\n.gizli/test_gizli.py:150: AssertionError\n___________________ test_istatistik_sifir_deneme_oran_sifir ____________________\n\n    def test_istatistik_sifir_deneme_oran_sifir():\n        v = TCKimlikDogrulayici()\n        toplam, basarili, basarisiz, oran, hatali = _istatistik_coz(v.istatistik())\n        assert toplam == 0\n        assert oran == 0\n>       assert hatali == []\nE       assert 0 == []\n\n.gizli/test_gizli.py:173: AssertionError\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_istatistik_hatali_sayisal_sirali - assert F...\nFAILED .gizli/test_gizli.py::test_istatistik_sifir_deneme_oran_sifir - assert...\n2 failed, 15 passed in 0.05s\n"
+ }
+}

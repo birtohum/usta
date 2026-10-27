@@ -1,0 +1,35 @@
+{
+ "id": "h041",
+ "kip": "c",
+ "kategori": "doğrulama ve ayrıştırma (TC kimlik, IBAN, telefon, plaka, e-posta, adres biçimi)",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 19,
+   "basarili": 19
+  }
+ ],
+ "spark_usd": 0.010094899999999999,
+ "arayuz": "vergi.py: VergiSicil.vkn_dogrula(vkn:str)->bool, VergiSicil.tckn_dogrula(tckn:str)->bool, VergiSicil.mukellef_ekle(tur:str,no:str)->str, VergiSicil.mukellefleri_listele(self)->list, VergiSicil.kurumsal_pay(self)->float, VergiSicil.__eq__ ile eşitlik",
+ "hakem": [],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [],
+ "kabul_gecti": true,
+ "ozet": "vergi.py içinde VergiSicil sınıfı gerçeklendi: VKN (10 hane, ilk hane sıfır değil, ağırlıklı toplam mod10 sağlama), TCKN (11 hane, 10./11. hane kuralları) doğrulama, mukellef_ekle (tür kontrolü, TypeError/ValueError, yinelenen kayıtta ValueError), sayısal sıralı listeleme, yuvarlanmış kurumsal_pay ve küme eşitliği. pytest ile 11 test geçti.",
+ "adim": 8,
+ "yurutucu_token": {
+  "girdi": 27255,
+  "cikti": 24989
+ },
+ "yurutucu_usd": 0.0077233,
+ "bitirdi": true,
+ "sure_sn": 476.0,
+ "gizli": {
+  "gecti": false,
+  "gecen": 10,
+  "toplam": 18,
+  "cikti": "es(TypeError):\n            VergiSicil.tckn_dogrula(10000000146)\n        with pytest.raises(TypeError):\n            VergiSicil.tckn_dogrula(None)\n>       with pytest.raises(ValueError):\nE       Failed: DID NOT RAISE <class 'ValueError'>\n\n.gizli/test_gizli.py:64: Failed\n__________________________ test_kayit_listesi_sirali ___________________________\n\n    def test_kayit_listesi_sirali():\n        s = VergiSicil()\n        s.mukellef_ekle('kurumsal', VKN1)\n        s.mukellef_ekle('kurumsal', VKN2)\n        s.mukellef_ekle('bireysel', TCKN2)\n        s.mukellef_ekle('bireysel', TCKN1)\n>       lst = s.kayitlari_listele()\nE       AttributeError: 'VergiSicil' object has no attribute 'kayitlari_listele'\n\n.gizli/test_gizli.py:116: AttributeError\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_vkn_uzunluk_hatasi - Failed: DID NOT RAISE ...\nFAILED .gizli/test_gizli.py::test_vkn_ilk_hane_sifir - Failed: DID NOT RAISE ...\nFAILED .gizli/test_gizli.py::test_vkn_saglama_hatasi - Failed: DID NOT RAISE ...\nFAILED .gizli/test_gizli.py::test_vkn_str_disi_typeerror - Failed: DID NOT RA...\nFAILED .gizli/test_gizli.py::test_tckn_uzunluk_hatasi - Failed: DID NOT RAISE...\nFAILED .gizli/test_gizli.py::test_tckn_saglama_hatasi - Failed: DID NOT RAISE...\nFAILED .gizli/test_gizli.py::test_tckn_str_disi_typeerror - Failed: DID NOT R...\nFAILED .gizli/test_gizli.py::test_kayit_listesi_sirali - AttributeError: 'Ver...\n8 failed, 10 passed in 0.05s\n"
+ }
+}

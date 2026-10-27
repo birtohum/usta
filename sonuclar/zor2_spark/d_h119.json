@@ -1,0 +1,38 @@
+{
+ "id": "h119",
+ "kip": "d",
+ "kategori": "doğrulama ve ayrıştırma (TC kimlik, IBAN, telefon, plaka, e-posta, adres biçimi)",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 19,
+   "basarili": 19
+  }
+ ],
+ "spark_usd": 0.0065343,
+ "arayuz": "",
+ "hakem": [],
+ "geri_alma": 0,
+ "inceleme": {
+  "yazilan": 0,
+  "kanitli": []
+ },
+ "iptal_edilen_test": [],
+ "kabul_gecti": true,
+ "ozet": "abonelik.py'de AbonelikYoneticisi yazıldı; plaka/TC/adres doğrulama, tür ayrımı, ay hesabı, sıralı liste ve doluluk oranı eklendi. 7 pytest testi geçti.",
+ "adim": 8,
+ "yurutucu_token": {
+  "girdi": 22545,
+  "cikti": 44506
+ },
+ "yurutucu_usd": 0.011155700000000001,
+ "bitirdi": true,
+ "sure_sn": 502.7,
+ "gizli": {
+  "gecti": false,
+  "gecen": 13,
+  "toplam": 17,
+  "cikti": ">       assert d[\"plaka\"] == \"19AB123\"\nE       AssertionError: assert '19 AB 123' == '19AB123'\nE         - 19AB123\nE         + 19 AB 123\nE         ?   +  +\n\n.gizli/test_gizli.py:134: AssertionError\n___________________________ test_aktif_liste_sirali ____________________________\n\n    def test_aktif_liste_sirali():\n        y = AbonelikYoneticisi()\n        y.abone_ekle(\"34 AB 123\", TC1, adres())\n        y.abone_ekle(\"19 AB 123\", TC2, adres())\n        y.abone_ekle(\"06 AB 123\", TC3, adres())\n        lst = y.aktif_liste()\n        plakalar = [r[\"plaka\"] for r in lst]\n        assert plakalar == sorted(plakalar)\n>       assert plakalar[0] == \"06AB123\"\nE       AssertionError: assert '06 AB 123' == '06AB123'\nE         - 06AB123\nE         + 06 AB 123\nE         ?   +  +\n\n.gizli/test_gizli.py:147: AssertionError\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_abone_ekle_normal - AssertionError: assert ...\nFAILED .gizli/test_gizli.py::test_plaka_kucuk_harf_normalize - AssertionError...\nFAILED .gizli/test_gizli.py::test_plaka_esitligi_bosluk_tire - AssertionError...\nFAILED .gizli/test_gizli.py::test_aktif_liste_sirali - AssertionError: assert...\n4 failed, 13 passed in 0.04s\n"
+ }
+}

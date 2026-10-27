@@ -1,0 +1,47 @@
+{
+ "id": "h073",
+ "kip": "d",
+ "kategori": "Türkçe metin işleme (Türkçe harfler, büyük/küçük harf, hece, ek, sıralama, sayı/yazı)",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 16,
+   "basarili": 16
+  }
+ ],
+ "spark_usd": 0.0079736,
+ "arayuz": "",
+ "hakem": [
+  {
+   "test": "test_upper_case_korunur",
+   "karar": "belirsiz",
+   "gerekce": "Görev metni büyük harfe çevirmede Türkçe İ mi ASCII I mi kullanılacağını açıkça belirtmiyor.",
+   "tur": 1
+  }
+ ],
+ "geri_alma": 0,
+ "inceleme": {
+  "yazilan": 0,
+  "kanitli": []
+ },
+ "iptal_edilen_test": [
+  "test_upper_case_korunur"
+ ],
+ "kabul_gecti": true,
+ "ozet": "sadelestir.py yazıldı: kelime sınırında, Türkçe büyük/küçük harf düzenini koruyan, ekli gövde+ek eşleşen, noktalamaya dokunmayan değiştirme; yarım-yukarı 2 basamak oran, boş dosyada sıfır oran, 10000 kelime sınırı, FileNotFoundError/ValueError/exit-2 davranışları. pytest ile 9 test geçti.",
+ "adim": 5,
+ "yurutucu_token": {
+  "girdi": 14153,
+  "cikti": 20588
+ },
+ "yurutucu_usd": 0.0055329,
+ "bitirdi": true,
+ "sure_sn": 417.9,
+ "gizli": {
+  "gecti": true,
+  "gecen": 16,
+  "toplam": 16,
+  "cikti": "................                                                         [100%]\n16 passed in 0.66s\n"
+ }
+}

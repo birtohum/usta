@@ -1,0 +1,23 @@
+{
+ "id": "h032",
+ "kip": "a",
+ "kategori": "küçük işletme hesapları (KDV, fatura, taksit, indirim, stok, kur dönüşümü, yuvarlama)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "pazar_yeri.py içinde komisyon_hesapla, kargo_paylas ve net_kazanc fonksiyonları yazıldı. Decimal yarım-yukarı yuvarlama, %5/%12/%15 komisyonlar, 200 altı/üstü kargo paylaşımı (tek kuruş satıcıya), 20 TL iade kesintisi, sınır ve tip kontrolleri uygulandı.",
+ "adim": 5,
+ "yurutucu_token": {
+  "girdi": 17505,
+  "cikti": 8142
+ },
+ "yurutucu_usd": 0.0033789000000000002,
+ "bitirdi": true,
+ "sure_sn": 72.3,
+ "gizli": {
+  "gecti": true,
+  "gecen": 17,
+  "toplam": 17,
+  "cikti": ".................                                                        [100%]\n17 passed in 0.03s\n"
+ }
+}

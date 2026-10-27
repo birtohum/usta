@@ -1,0 +1,51 @@
+{
+ "id": "h131",
+ "kip": "c",
+ "kategori": "doğrulama ve ayrıştırma (TC kimlik, IBAN, telefon, plaka, e-posta, adres biçimi)",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 17,
+   "basarili": 17
+  }
+ ],
+ "spark_usd": 0.0038784000000000006,
+ "arayuz": "Dosya: kiralama_dogrula.py. Tekli: python kiralama_dogrula.py --tc TC --plaka PLAKA --telefon TELEFON --cikti SONUC. Toplu: python kiralama_dogrula.py --girdi GIRDI --cikti SONUC. Çıktı JSON anahtarları: toplam, gecerli, oran, sonuclar. Öğe alanları: tc, plaka, telefon, gecerli.",
+ "hakem": [
+  {
+   "test": "test_oran_yuvarlama_ve_json_anahtarlari",
+   "karar": "belirsiz",
+   "gerekce": "Görev metni oranın 0-1 oran mı yoksa 0-100 yüzde mi olacağını açıkça belirtmiyor.",
+   "tur": 1
+  },
+  {
+   "test": "test_tek_gecerli_kayit_oran_yuz",
+   "karar": "belirsiz",
+   "gerekce": "Görev metni oranın 0-1 oran mı yoksa 0-100 yüzde mi olacağını açıkça belirtmiyor.",
+   "tur": 1
+  }
+ ],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [
+  "test_oran_yuvarlama_ve_json_anahtarlari",
+  "test_tek_gecerli_kayit_oran_yuz"
+ ],
+ "kabul_gecti": true,
+ "ozet": "kiralama_dogrula.py hazır: tekli (--tc/--plaka/--telefon/--cikti) ve toplu (--girdi/--cikti) modlar, TC sağlama kontrolü (ihlal exit 2), plaka normalize+doğrulama (01-81, 7-9 karakter), telefon rakam-arındırma ve 05+11 hane kontrolü (uzunluk hatası exit 1, eksik bayrak/bulunamayan dosya exit 3), plaka+tc sıralaması, Decimal half-up oran, JSON toplam/gecerli/oran/sonuclar çıktısı. Yalnızca standart kütüphane. 23 pytest testi geçiyor.",
+ "adim": 7,
+ "yurutucu_token": {
+  "girdi": 43338,
+  "cikti": 21827
+ },
+ "yurutucu_usd": 0.0086992,
+ "bitirdi": true,
+ "sure_sn": 375.1,
+ "gizli": {
+  "gecti": false,
+  "gecen": 11,
+  "toplam": 17,
+  "cikti": " \"--telefon\", TEL1, \"--tc\", TC2, \"--plaka\", \"06 XY 99\", \"--telefon\", TEL2, \"--tc\", TC3, \"--plaka\", \"99 ZZ 999\", \"--telefon\", TEL3, \"--cikti\", out])\n        assert r.returncode == 0\n        d = read_json(out)\n>       assert d[\"toplam\"] == 3\nE       assert 1 == 3\n\n.gizli/test_gizli.py:130: AssertionError\n_______________________ test_15_plaka_length_boundaries ________________________\n\ntmp_path = PosixPath('/home/usta/is/207f64b9daf4/.tmp/pytest-of-usta/pytest-3/test_15_plaka_length_boundarie0')\n\n    def test_15_plaka_length_boundaries(tmp_path):\n        out = str(tmp_path / \"s.json\")\n        # 7 karakter ve 9 karakter geçerli\n        r = run([\"--tc\", TC1, \"--plaka\", \"34 A 123\", \"--telefon\", TEL1, \"--tc\", TC2, \"--plaka\", \"34 AB 123\", \"--telefon\", TEL2, \"--cikti\", out])\n        assert r.returncode == 0\n        d = read_json(out)\n>       assert d[\"toplam\"] == 2\nE       assert 1 == 2\n\n.gizli/test_gizli.py:140: AssertionError\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_01_valid_single - assert 1.0 == 100.0 ± 1.0...\nFAILED .gizli/test_gizli.py::test_11_file_not_found - AssertionError: assert ...\nFAILED .gizli/test_gizli.py::test_12_sorting_by_plaka - assert 1 == 3\nFAILED .gizli/test_gizli.py::test_13_plaka_equality_tc_sort - AssertionError:...\nFAILED .gizli/test_gizli.py::test_14_oran_rounding - assert 1 == 3\nFAILED .gizli/test_gizli.py::test_15_plaka_length_boundaries - assert 1 == 2\n6 failed, 11 passed in 0.46s\n"
+ }
+}

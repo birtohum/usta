@@ -1,0 +1,46 @@
+{
+ "id": "h145",
+ "kip": "d",
+ "kategori": "tarih ve saat (iş günü, resmî tatil listesi parametre olarak verilir, süre hesabı, biçim dönüşümü)",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": false,
+   "toplam": 21,
+   "basarili": 19
+  },
+  {
+   "gecti": true,
+   "toplam": 21,
+   "basarili": 21
+  }
+ ],
+ "spark_usd": 0.0059681,
+ "arayuz": "maden_vardiya.py dosyası, VardiyaHesaplayici sınıfı, VardiyaHesaplayici(tatiller: list[str], gece_primi_orani: float), vardiya_dk(baslangic: str, bitis: str) -> tuple[int, int], hesapla(vardiyalar: list[tuple[str, str]]) -> list[tuple[int, int]]",
+ "hakem": [],
+ "geri_alma": 0,
+ "inceleme": {
+  "yazilan": 2,
+  "kanitli": [
+   "test_inceleme_ertesi_gun_esit_sifir_donmeli",
+   "test_inceleme_siralama_bitis_ertesi_gun_duzeltilmis"
+  ]
+ },
+ "iptal_edilen_test": [],
+ "kabul_gecti": true,
+ "ozet": "İki kabul hatası düzeltildi: (1) bitiş başlangıçtan önceyse önce ertesi güne ötelenip sonra eşitlik kontrolü yapılıyor, böylece farklı günlerde aynı saate denk gelen vardiya (0,0) dönüyor; (2) hesapla sıralamasında bitiş zamanı ertesi-gün düzeltmesi uygulanmış gerçek bitişe göre sıralanıyor. Kendi 14 test + kabul 21 test hepsi geçiyor.",
+ "adim": 9,
+ "yurutucu_token": {
+  "girdi": 59920,
+  "cikti": 15580
+ },
+ "yurutucu_usd": 0.009108,
+ "bitirdi": true,
+ "sure_sn": 449.5,
+ "gizli": {
+  "gecti": false,
+  "gecen": 11,
+  "toplam": 17,
+  "cikti": "        h = VardiyaHesaplayici([], 1.5)\n        girdi = [\n            (\"2024-01-16 09:00\", \"2024-01-16 11:00\"),\n            (\"2024-01-15 09:00\", \"2024-01-15 10:00\"),\n            (\"2024-01-15 09:00\", \"2024-01-15 09:30\"),\n        ]\n>       sonuc = h.toplu_hesapla(girdi)\nE       AttributeError: 'VardiyaHesaplayici' object has no attribute 'toplu_hesapla'\n\n.gizli/test_gizli.py:97: AttributeError\n_________________________ test_toplu_primli_yuvarlama __________________________\n\n    def test_toplu_primli_yuvarlama():\n        h = VardiyaHesaplayici([], 2.0)\n        girdi = [\n            (\"2024-01-15 05:30\", \"2024-01-15 07:00\"),\n            (\"2024-01-15 09:00\", \"2024-01-15 10:00\"),\n        ]\n>       sonuc = h.toplu_hesapla(girdi)\nE       AttributeError: 'VardiyaHesaplayici' object has no attribute 'toplu_hesapla'\n\n.gizli/test_gizli.py:112: AttributeError\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_gunduz_normal_primsiz - assert (240, 240) =...\nFAILED .gizli/test_gizli.py::test_bitis_onceyse_ertesi_gun - assert (240, 360...\nFAILED .gizli/test_gizli.py::test_tam_16saat_gecerli - assert 960 == 0\nFAILED .gizli/test_gizli.py::test_haftasonu_ve_tatil_gunduz_normal_gece_primli\nFAILED .gizli/test_gizli.py::test_toplu_siralama_baslangic_ve_bitis - Attribu...\nFAILED .gizli/test_gizli.py::test_toplu_primli_yuvarlama - AttributeError: 'V...\n6 failed, 11 passed in 0.04s\n"
+ }
+}

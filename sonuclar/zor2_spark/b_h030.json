@@ -1,0 +1,23 @@
+{
+ "id": "h030",
+ "kip": "b",
+ "kategori": "veri yapıları ve algoritmalar (kuyruk, önbellek, arama, gruplama, birleştirme, durum makinesi)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "stok.py içinde stok_ozetle ve kategori_sirala işlevleri yazıldı; doğrulama, yinelenen birleştirme, kategori gruplama, yuvarlama ve sıralama kuralları uygulandı. 19 pytest testi geçiyor.",
+ "adim": 5,
+ "yurutucu_token": {
+  "girdi": 17645,
+  "cikti": 8968
+ },
+ "yurutucu_usd": 0.0035581000000000002,
+ "bitirdi": true,
+ "sure_sn": 70.5,
+ "gizli": {
+  "gecti": true,
+  "gecen": 17,
+  "toplam": 17,
+  "cikti": ".................                                                        [100%]\n17 passed in 0.02s\n"
+ }
+}

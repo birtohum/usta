@@ -1,0 +1,23 @@
+{
+ "id": "h150",
+ "kip": "b",
+ "kategori": "dosya ve komut satırı (CSV/JSON okuma, rapor yazdırma, argümanlar, hata mesajları)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "kereste.py modülü yazıldı: hacim_hesapla (Decimal ROUND_HALF_UP 4 basamak), tolerans_disi_mi, rapor_uret (UTF-8-SIG okuma, başlık/dosya/tolerans hata kodları, ölçü-dışı ve yinelenen uyarıları, hacim azalan + id artan sıralı rapor, {\"toplam\",\"red\",\"ok\"} dönüşü) ve CLI (--giris/--cikis/--tolerans). 14 pytest testi yazıldı ve `python -m pytest -q` ile hepsi geçti.",
+ "adim": 5,
+ "yurutucu_token": {
+  "girdi": 24081,
+  "cikti": 12171
+ },
+ "yurutucu_usd": 0.004842300000000001,
+ "bitirdi": true,
+ "sure_sn": 101.0,
+ "gizli": {
+  "gecti": true,
+  "gecen": 16,
+  "toplam": 16,
+  "cikti": "................                                                         [100%]\n16 passed in 0.17s\n"
+ }
+}

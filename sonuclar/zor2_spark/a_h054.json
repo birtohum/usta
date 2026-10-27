@@ -1,0 +1,23 @@
+{
+ "id": "h054",
+ "kip": "a",
+ "kategori": "veri yapıları ve algoritmalar (kuyruk, önbellek, arama, gruplama, birleştirme, durum makinesi)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "`ucus_guvenlik.py` içinde `UcusDurumMakinesi` sınıfı yazıldı ve tüm geçiş/kopya/hata kuralları test edilerek doğrulandı.",
+ "adim": 3,
+ "yurutucu_token": {
+  "girdi": 6086,
+  "cikti": 2908
+ },
+ "yurutucu_usd": 0.0011902000000000002,
+ "bitirdi": true,
+ "sure_sn": 22.5,
+ "gizli": {
+  "gecti": true,
+  "gecen": 16,
+  "toplam": 16,
+  "cikti": "................                                                         [100%]\n16 passed in 0.02s\n"
+ }
+}

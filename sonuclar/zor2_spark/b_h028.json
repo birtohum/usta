@@ -1,0 +1,23 @@
+{
+ "id": "h028",
+ "kip": "b",
+ "kategori": "dosya ve komut satırı (CSV/JSON okuma, rapor yazdırma, argümanlar, hata mesajları)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "fis_dogrula.py yazıldı: Decimal ile ham toplayıp sonda yarım-yukarı yuvarlama, tolerans karşılaştırması, uyumsuz CSV sıralaması, hatalı kalem stderr mesajları ve çıkış kodları (2/4) uygulandı. 9 pytest testi geçiyor.",
+ "adim": 6,
+ "yurutucu_token": {
+  "girdi": 28721,
+  "cikti": 11251
+ },
+ "yurutucu_usd": 0.005122300000000001,
+ "bitirdi": true,
+ "sure_sn": 97.9,
+ "gizli": {
+  "gecti": true,
+  "gecen": 18,
+  "toplam": 18,
+  "cikti": "..................                                                       [100%]\n18 passed in 0.56s\n"
+ }
+}

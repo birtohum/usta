@@ -1,0 +1,38 @@
+{
+ "id": "h017",
+ "kip": "d",
+ "kategori": "doğrulama ve ayrıştırma (TC kimlik, IBAN, telefon, plaka, e-posta, adres biçimi)",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 18,
+   "basarili": 18
+  }
+ ],
+ "spark_usd": 0.006032,
+ "arayuz": "telefon.py içinde TelefonRehberi sınıfı: ekle(self, ham: str) -> str, normalize_et(self, ham: str) -> str, dis_a_aktar(self) -> list[str], doluluk_raporu(self) -> dict",
+ "hakem": [],
+ "geri_alma": 0,
+ "inceleme": {
+  "yazilan": 0,
+  "kanitli": []
+ },
+ "iptal_edilen_test": [],
+ "kabul_gecti": true,
+ "ozet": "telefon.py içinde TelefonRehberi gerçeklendi: normalize_et boşluk/tire/parantez temizleyip +90/090/0 öneklerini atarak 10 hane ve 51-59 önek kontrolü yapar, hatalarda TypeError/ValueError fırlatır; ekle kümede tutup yinelemede ValueError verir; dis_a_aktar son 10 haneye göre sıralar; doluluk_raporu 2 basamak yuvarlanmış oran döner. pytest ile 5 test geçti.",
+ "adim": 13,
+ "yurutucu_token": {
+  "girdi": 44696,
+  "cikti": 42492
+ },
+ "yurutucu_usd": 0.012967999999999999,
+ "bitirdi": true,
+ "sure_sn": 562.2,
+ "gizli": {
+  "gecti": false,
+  "gecen": 10,
+  "toplam": 19,
+  "cikti": " r = TelefonRehberi()\n>       assert r.benzersizlik_orani() == 0\nE       AttributeError: 'TelefonRehberi' object has no attribute 'benzersizlik_orani'\n\n.gizli/test_gizli.py:116: AttributeError\n______________________ test_benzersizlik_orani_yuvarlama _______________________\n\n    def test_benzersizlik_orani_yuvarlama():\n        r = TelefonRehberi()\n        r.ekle(\"05321234567\")\n        r.ekle(\"05331234567\")\n        with pytest.raises(ValueError):\n            r.ekle(\"05321234567\")\n>       assert r.benzersizlik_orani() == round(2/3, 2)\nE       AttributeError: 'TelefonRehberi' object has no attribute 'benzersizlik_orani'\n\n.gizli/test_gizli.py:126: AttributeError\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_normalize_sade_on_hane - AssertionError: as...\nFAILED .gizli/test_gizli.py::test_normalize_bastaki_sifir_atilir - AssertionE...\nFAILED .gizli/test_gizli.py::test_normalize_arti_doksan_atilir - AssertionErr...\nFAILED .gizli/test_gizli.py::test_normalize_sifir_doksan_atilir - AssertionEr...\nFAILED .gizli/test_gizli.py::test_normalize_bosluk_tire_parantez_temizlenir\nFAILED .gizli/test_gizli.py::test_dis_a_aktar_sayisal_artan - AssertionError:...\nFAILED .gizli/test_gizli.py::test_rehber_esitlik_e164 - assert <telefon.Telef...\nFAILED .gizli/test_gizli.py::test_bos_rehber_oran_sifir - AttributeError: 'Te...\nFAILED .gizli/test_gizli.py::test_benzersizlik_orani_yuvarlama - AttributeErr...\n9 failed, 10 passed in 0.07s\n"
+ }
+}

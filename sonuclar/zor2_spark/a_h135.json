@@ -1,0 +1,23 @@
+{
+ "id": "h135",
+ "kip": "a",
+ "kategori": "tarih ve saat (iş günü, resmî tatil listesi parametre olarak verilir, süre hesabı, biçim dönüşümü)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "sut_toplama.py dosyasinda ToplamaRotasi sinifini yazdim: kurucu tatil listesini ve HH:MM gunluk pencereyi dogrular (bitis baslangictan sonra degilse veya bicim bozuksa ValueError); rota_suresi_dk hafta sonu/tatilde 0 dondurur, ham sureyi (ugrama*nokta) pencereye keser ve bir ust 10 dakikaya yuvarlar, aralik disi degerlerde ValueError yukseltir; siradaki_toplama_gunu verilen tarihten sonraki is gunlerini artan sirada dondurur (0 ise bos liste, negatifse ValueError). Esit sureli rotalarin tarih sirasina gore dizilmesi icin sure+ tarih sirali toplu siralama destegi de eklendi.",
+ "adim": 7,
+ "yurutucu_token": {
+  "girdi": 39984,
+  "cikti": 25432
+ },
+ "yurutucu_usd": 0.0090848,
+ "bitirdi": true,
+ "sure_sn": 219.7,
+ "gizli": {
+  "gecti": true,
+  "gecen": 17,
+  "toplam": 17,
+  "cikti": ".................                                                        [100%]\n17 passed in 0.02s\n"
+ }
+}

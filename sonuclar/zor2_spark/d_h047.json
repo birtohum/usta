@@ -1,0 +1,62 @@
+{
+ "id": "h047",
+ "kip": "d",
+ "kategori": "doğrulama ve ayrıştırma (TC kimlik, IBAN, telefon, plaka, e-posta, adres biçimi)",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 13,
+   "basarili": 13
+  }
+ ],
+ "spark_usd": 0.0101358,
+ "arayuz": "Dosya: toplu_dogrula.py. Çağrı: python toplu_dogrula.py --girdi IN --tur TUR --cikti OUT [--sirala] [--ozet]. Çıktı JSON: gecerli liste, gecersiz liste, atlanan sayı; --ozet varsa ek ozet sözlüğü (toplam, gecerli_sayisi, gecersiz_sayisi, atlanan, yinelenen, gecerlilik_orani).",
+ "hakem": [
+  {
+   "test": "test_oran_iki_ondalik_yuvarlama",
+   "karar": "belirsiz",
+   "gerekce": "Görev oran ölçeğini tanımlamadığı için 14.29 beklentisi tek anlamlı zorunluluk değildir.",
+   "tur": 1
+  },
+  {
+   "test": "test_ozet_bloku_ve_oran",
+   "karar": "belirsiz",
+   "gerekce": "Görev oranı iki ondalığa yuvarlamayı istiyor ama 0-100 yüzde mi 0-1 oran mı olduğunu açıkça belirtmiyor.",
+   "tur": 1
+  },
+  {
+   "test": "test_sirala_case_insensitive",
+   "karar": "belirsiz",
+   "gerekce": "Görev sıralamada harf durumunun yok sayılmasını istiyor ama çıktıda özgün durumun mu normalize halin mi saklanacağını açıkça tanımlamıyor.",
+   "tur": 1
+  }
+ ],
+ "geri_alma": 0,
+ "inceleme": {
+  "yazilan": 0,
+  "kanitli": []
+ },
+ "iptal_edilen_test": [
+  "test_gecersiz_kayit_durdurmaz",
+  "test_oran_iki_ondalik_yuvarlama",
+  "test_ozet_bloku_ve_oran",
+  "test_sirala_case_insensitive"
+ ],
+ "kabul_gecti": true,
+ "ozet": "toplu_dogrula.py yazıldı: tckn/iban/plaka/eposta doğrulama, normalize+casefold sıralama, yinelenen ve oranlı özet, hata kodları 1/2. 7 pytest testi geçiyor.",
+ "adim": 11,
+ "yurutucu_token": {
+  "girdi": 63721,
+  "cikti": 36135
+ },
+ "yurutucu_usd": 0.013599100000000001,
+ "bitirdi": true,
+ "sure_sn": 461.8,
+ "gizli": {
+  "gecti": false,
+  "gecen": 14,
+  "toplam": 18,
+  "cikti": "        c = tmp_path / \"out.json\"\n        yaz(g, [\"Test@Example.com\", \"test@example.com\", \"baska@example.com\"])\n        r = calistir(g, \"eposta\", c, ozet=True)\n        assert r.returncode == 0\n        d = oku(c)\n>       assert d[\"ozet\"][\"yinelenen_sayisi\"] == 1\nE       KeyError: 'yinelenen_sayisi'\n\n.gizli/test_gizli.py:174: KeyError\n________________________ test_yinelenen_farkliysa_sifir ________________________\n\ntmp_path = PosixPath('/home/usta/is/47919a059fa4/.tmp/pytest-of-usta/pytest-2/test_yinelenen_farkliysa_sifir0')\n\n    def test_yinelenen_farkliysa_sifir(tmp_path):\n        g = tmp_path / \"in.txt\"\n        c = tmp_path / \"out.json\"\n        yaz(g, [\"a@example.com\", \"b@example.com\"])\n        r = calistir(g, \"eposta\", c, ozet=True)\n        assert r.returncode == 0\n        d = oku(c)\n>       assert d[\"ozet\"][\"yinelenen_sayisi\"] == 0\nE       KeyError: 'yinelenen_sayisi'\n\n.gizli/test_gizli.py:183: KeyError\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_ozet_istatistik_ve_oran - assert 0.67 == 66.67\nFAILED .gizli/test_gizli.py::test_ozet_oran_iki_ondalik - assert 0.33 == 33.33\nFAILED .gizli/test_gizli.py::test_yinelenen_normalize_ayniysa - KeyError: 'yi...\nFAILED .gizli/test_gizli.py::test_yinelenen_farkliysa_sifir - KeyError: 'yine...\n4 failed, 14 passed in 0.50s\n"
+ }
+}

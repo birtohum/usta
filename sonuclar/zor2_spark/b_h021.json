@@ -1,0 +1,23 @@
+{
+ "id": "h021",
+ "kip": "b",
+ "kategori": "tarih ve saat (iş günü, resmî tatil listesi parametre olarak verilir, süre hesabı, biçim dönüşümü)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "kargo_tahmin.py içinde teslim_tarihi_hesapla ve gecikme_gunu yazıldı: 16:00 kesim (tam 16:00 aynı gün), Cumartesi 13:00 öncesi iş günü, Pazar/tatil asla teslim günü değil, tatiller set ile sırasız/yinelenen güvenli, ileri yönde arama, kesim sonrası tam gün yuvarlama, tip/biçim hatalarında TypeError-ValueError, gecikme başlangıç hariç bitiş dahil iş günü sayımı. test_kargo.py ile 18 test geçti.",
+ "adim": 6,
+ "yurutucu_token": {
+  "girdi": 24696,
+  "cikti": 15809
+ },
+ "yurutucu_usd": 0.0056314,
+ "bitirdi": true,
+ "sure_sn": 156.2,
+ "gizli": {
+  "gecti": false,
+  "gecen": 16,
+  "toplam": 17,
+  "cikti": ".....F...........                                                        [100%]\n=================================== FAILURES ===================================\n____________________________ test_cumartesi_tam_13 _____________________________\n\n    def test_cumartesi_tam_13():\n        a = teslim_tarihi_hesapla(date(2026, 10, 31), \"13:00\", [], 1)\n        b = teslim_tarihi_hesapla(date(2026, 10, 31), \"12:00\", [], 1)\n        c = teslim_tarihi_hesapla(date(2026, 10, 31), \"13:01\", [], 1)\n>       assert a == b == date(2026, 11, 2)\nE       assert datetime.date(2026, 11, 3) == datetime.date(2026, 11, 2)\n\n.gizli/test_gizli.py:34: AssertionError\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_cumartesi_tam_13 - assert datetime.date(202...\n1 failed, 16 passed in 0.04s\n"
+ }
+}

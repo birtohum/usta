@@ -1,0 +1,38 @@
+{
+ "id": "h059",
+ "kip": "d",
+ "kategori": "doğrulama ve ayrıştırma (TC kimlik, IBAN, telefon, plaka, e-posta, adres biçimi)",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 16,
+   "basarili": 16
+  }
+ ],
+ "spark_usd": 0.0050262,
+ "arayuz": "",
+ "hakem": [],
+ "geri_alma": 0,
+ "inceleme": {
+  "yazilan": 0,
+  "kanitli": []
+ },
+ "iptal_edilen_test": [],
+ "kabul_gecti": true,
+ "ozet": "`iban_ozet.py` yazıldı: satırları strip/iç-boşluk-sil/büyüt ile normalize eder, boş satırları atlar, TR ve 26-uzunluk kontrolleri ile mod97 doğrulaması yapar, hataları `satirNo:kategori:orijinal` formatında yazar, geçerli IBAN'ları 5-9 karakter banka koduna göre gruplayıp sıralı `ozet.json` üretir ve tekrarları tek sayar. 10 pytest testi tmp_path ile yazıldı, hepsi geçiyor.",
+ "adim": 10,
+ "yurutucu_token": {
+  "girdi": 52538,
+  "cikti": 14557
+ },
+ "yurutucu_usd": 0.008165200000000001,
+ "bitirdi": true,
+ "sure_sn": 364.1,
+ "gizli": {
+  "gecti": true,
+  "gecen": 16,
+  "toplam": 16,
+  "cikti": "................                                                         [100%]\n16 passed in 0.41s\n"
+ }
+}

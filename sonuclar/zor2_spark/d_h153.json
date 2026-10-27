@@ -1,0 +1,38 @@
+{
+ "id": "h153",
+ "kip": "d",
+ "kategori": "dosya ve komut satırı (CSV/JSON okuma, rapor yazdırma, argümanlar, hata mesajları)",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 19,
+   "basarili": 19
+  }
+ ],
+ "spark_usd": 0.006346600000000001,
+ "arayuz": "",
+ "hakem": [],
+ "geri_alma": 0,
+ "inceleme": {
+  "yazilan": 0,
+  "kanitli": []
+ },
+ "iptal_edilen_test": [],
+ "kabul_gecti": true,
+ "ozet": "baharat_kontrol.py yazıldı: istenen CLI, doğrulama, SKT/kalan_gun hesabı, sıralama, CSV ve stdout/stderr/exit davranışları uygulandı; 12 pytest testi geçiyor.",
+ "adim": 5,
+ "yurutucu_token": {
+  "girdi": 25828,
+  "cikti": 11875
+ },
+ "yurutucu_usd": 0.004957800000000001,
+ "bitirdi": true,
+ "sure_sn": 446.3,
+ "gizli": {
+  "gecti": true,
+  "gecen": 17,
+  "toplam": 17,
+  "cikti": ".................                                                        [100%]\n17 passed in 0.51s\n"
+ }
+}

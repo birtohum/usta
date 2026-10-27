@@ -1,0 +1,38 @@
+{
+ "id": "h051",
+ "kip": "d",
+ "kategori": "tarih ve saat (iş günü, resmî tatil listesi parametre olarak verilir, süre hesabı, biçim dönüşümü)",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 18,
+   "basarili": 18
+  }
+ ],
+ "spark_usd": 0.0028393,
+ "arayuz": "",
+ "hakem": [],
+ "geri_alma": 0,
+ "inceleme": {
+  "yazilan": 0,
+  "kanitli": []
+ },
+ "iptal_edilen_test": [],
+ "kabul_gecti": true,
+ "ozet": "konaklama.py içinde gece_sayisi ve ucret_hesapla fonksiyonlarını yazdım; tarih doğrulama, 1,5 tatil katsayısı, Decimal ile yarım-kuruş-yukarı yuvarlama uygulandı. 12 pytest testi geçiyor.",
+ "adim": 6,
+ "yurutucu_token": {
+  "girdi": 24013,
+  "cikti": 7427
+ },
+ "yurutucu_usd": 0.0038867000000000003,
+ "bitirdi": true,
+ "sure_sn": 283.2,
+ "gizli": {
+  "gecti": true,
+  "gecen": 20,
+  "toplam": 20,
+  "cikti": "....................                                                     [100%]\n20 passed in 0.02s\n"
+ }
+}

@@ -1,0 +1,38 @@
+{
+ "id": "h046",
+ "kip": "d",
+ "kategori": "dosya ve komut satırı (CSV/JSON okuma, rapor yazdırma, argümanlar, hata mesajları)",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 18,
+   "basarili": 18
+  }
+ ],
+ "spark_usd": 0.0032558000000000005,
+ "arayuz": "",
+ "hakem": [],
+ "geri_alma": 0,
+ "inceleme": {
+  "yazilan": 0,
+  "kanitli": []
+ },
+ "iptal_edilen_test": [],
+ "kabul_gecti": true,
+ "ozet": "bordro.py yazıldı: kademeli gelir vergisi (%15/%20/%27), Decimal ile yarım-yukarı kuruş yuvarlama, Geçersiz tutar / Geçersiz kayıt hataları, vergi-azalan sicil-artan CSV ve toplam_vergi/ortalama_net özeti. 16 pytest testi geçiyor.",
+ "adim": 8,
+ "yurutucu_token": {
+  "girdi": 40378,
+  "cikti": 17114
+ },
+ "yurutucu_usd": 0.0074606,
+ "bitirdi": true,
+ "sure_sn": 201.1,
+ "gizli": {
+  "gecti": true,
+  "gecen": 17,
+  "toplam": 17,
+  "cikti": ".................                                                        [100%]\n17 passed in 0.03s\n"
+ }
+}

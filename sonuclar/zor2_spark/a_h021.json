@@ -1,0 +1,23 @@
+{
+ "id": "h021",
+ "kip": "a",
+ "kategori": "tarih ve saat (iş günü, resmî tatil listesi parametre olarak verilir, süre hesabı, biçim dönüşümü)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "`kargo_tahmin.py` dosyasında `teslim_tarihi_hesapla` ve `gecikme_gunu` fonksiyonları yazıldı. Kesim saati (hafta içi 16:00, Cumartesi 13:00, eşitlik dahil), Pazar/tatil atlama, ileri yönlü arama, sırasız/yinelenen tatil temizliği, iş günü sayımı ve TypeError/ValueError kuralları uygulandı; tüm sınır değer testleri doğrulandı.",
+ "adim": 3,
+ "yurutucu_token": {
+  "girdi": 8567,
+  "cikti": 11294
+ },
+ "yurutucu_usd": 0.0031155,
+ "bitirdi": true,
+ "sure_sn": 106.3,
+ "gizli": {
+  "gecti": true,
+  "gecen": 17,
+  "toplam": 17,
+  "cikti": ".................                                                        [100%]\n17 passed in 0.03s\n"
+ }
+}

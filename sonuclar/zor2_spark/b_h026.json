@@ -1,0 +1,23 @@
+{
+ "id": "h026",
+ "kip": "b",
+ "kategori": "küçük işletme hesapları (KDV, fatura, taksit, indirim, stok, kur dönüşümü, yuvarlama)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "rapor_cli.py yazıldı: zorunlu --girdi/--cikti, --kdv-dahil, --sirala (urun/tutar), --para-birimi (TL/USD/EUR); Decimal yarım-yukarı 2 basamak, satır KDV ayrı yuvarlanıp toplanır, ürün birleştirme, sıralama kuralları, çıkış kodları 0/2/3 ve boş girdi 0.0. 18 pytest testi geçti.",
+ "adim": 12,
+ "yurutucu_token": {
+  "girdi": 87803,
+  "cikti": 27155
+ },
+ "yurutucu_usd": 0.014211300000000001,
+ "bitirdi": true,
+ "sure_sn": 245.3,
+ "gizli": {
+  "gecti": true,
+  "gecen": 18,
+  "toplam": 18,
+  "cikti": "..................                                                       [100%]\n18 passed in 0.59s\n"
+ }
+}

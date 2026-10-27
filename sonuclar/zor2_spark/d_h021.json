@@ -1,0 +1,54 @@
+{
+ "id": "h021",
+ "kip": "d",
+ "kategori": "tarih ve saat (iş günü, resmî tatil listesi parametre olarak verilir, süre hesabı, biçim dönüşümü)",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 18,
+   "basarili": 18
+  }
+ ],
+ "spark_usd": 0.007463,
+ "arayuz": "",
+ "hakem": [
+  {
+   "test": "test_cumartesi_ogleden_sonra_gecikmeli",
+   "karar": "belirsiz",
+   "gerekce": "Cumartesi 13:00 ayrımı açık ama 16:00 kesimiyle etkileşimi ve kargo günü sayım başlangıcı tanımlanmadığı için Salı tarihi tek anlamlı değildir.",
+   "tur": 1
+  },
+  {
+   "test": "test_teslim_her_zaman_ileri_yonde",
+   "karar": "belirsiz",
+   "gerekce": "Pazarın teslim günü olamayacağı açık ama Pazar siparişinde 1 kargo gününün Pazartesi mi Salı mı olduğu sayım kuralı belirtilmediği için belirsizdir.",
+   "tur": 1
+  }
+ ],
+ "geri_alma": 0,
+ "inceleme": {
+  "yazilan": 0,
+  "kanitli": []
+ },
+ "iptal_edilen_test": [
+  "test_cumartesi_ogleden_sonra_gecikmeli",
+  "test_teslim_her_zaman_ileri_yonde"
+ ],
+ "kabul_gecti": true,
+ "ozet": "kargo_tahmin.py yazıldı: 16:00 kesimi (16:00 dahil aynı gün), Cumartesi 13:00 kuralı, Pazar/tatil atlama, ileri yönlü kargo sayımı, başlangıç hariç-bitiş dahil gecikme sayımı, TypeError/ValueError kuralları uygulandı; 17 pytest testi geçti.",
+ "adim": 11,
+ "yurutucu_token": {
+  "girdi": 82288,
+  "cikti": 52493
+ },
+ "yurutucu_usd": 0.0187274,
+ "bitirdi": true,
+ "sure_sn": 631.1,
+ "gizli": {
+  "gecti": false,
+  "gecen": 15,
+  "toplam": 17,
+  "cikti": "                                  [100%]\n=================================== FAILURES ===================================\n_____________________________ test_cumartesi_kesim _____________________________\n\n    def test_cumartesi_kesim():\n        once = teslim_tarihi_hesapla(date(2026, 10, 31), \"12:00\", [], 1)\n        sonra = teslim_tarihi_hesapla(date(2026, 10, 31), \"14:00\", [], 1)\n        assert once == date(2026, 11, 2)\n>       assert sonra == date(2026, 11, 3)\nE       assert datetime.date(2026, 11, 2) == datetime.date(2026, 11, 3)\nE        +  where datetime.date(2026, 11, 3) = date(2026, 11, 3)\n\n.gizli/test_gizli.py:28: AssertionError\n____________________________ test_cumartesi_tam_13 _____________________________\n\n    def test_cumartesi_tam_13():\n        a = teslim_tarihi_hesapla(date(2026, 10, 31), \"13:00\", [], 1)\n        b = teslim_tarihi_hesapla(date(2026, 10, 31), \"12:00\", [], 1)\n        c = teslim_tarihi_hesapla(date(2026, 10, 31), \"13:01\", [], 1)\n        assert a == b == date(2026, 11, 2)\n>       assert c == date(2026, 11, 3)\nE       assert datetime.date(2026, 11, 2) == datetime.date(2026, 11, 3)\nE        +  where datetime.date(2026, 11, 3) = date(2026, 11, 3)\n\n.gizli/test_gizli.py:35: AssertionError\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_cumartesi_kesim - assert datetime.date(2026...\nFAILED .gizli/test_gizli.py::test_cumartesi_tam_13 - assert datetime.date(202...\n2 failed, 15 passed in 0.04s\n"
+ }
+}

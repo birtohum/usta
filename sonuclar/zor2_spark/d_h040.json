@@ -1,0 +1,38 @@
+{
+ "id": "h040",
+ "kip": "d",
+ "kategori": "dosya ve komut satırı (CSV/JSON okuma, rapor yazdırma, argümanlar, hata mesajları)",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 19,
+   "basarili": 19
+  }
+ ],
+ "spark_usd": 0.0036215,
+ "arayuz": "",
+ "hakem": [],
+ "geri_alma": 0,
+ "inceleme": {
+  "yazilan": 0,
+  "kanitli": []
+ },
+ "iptal_edilen_test": [],
+ "kabul_gecti": true,
+ "ozet": "randevu.py içinde ConflictError ve RandevuDefteri sınıflarını yazdım: tarih/saat doğrulama, 09:00-18:00 aralığı, uç-uca çakışmasızlık, artan id, sıralı JSON kalıcılık, iptal ve gün listesi tüm gereksinimlere uygun. pytest ile 14 test yazıp hepsini geçirdim.",
+ "adim": 4,
+ "yurutucu_token": {
+  "girdi": 15602,
+  "cikti": 8292
+ },
+ "yurutucu_usd": 0.0032186000000000003,
+ "bitirdi": true,
+ "sure_sn": 213.9,
+ "gizli": {
+  "gecti": true,
+  "gecen": 19,
+  "toplam": 19,
+  "cikti": "...................                                                      [100%]\n19 passed in 0.06s\n"
+ }
+}

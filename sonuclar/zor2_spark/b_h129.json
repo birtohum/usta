@@ -1,0 +1,23 @@
+{
+ "id": "h129",
+ "kip": "b",
+ "kategori": "tarih ve saat (iş günü, resmî tatil listesi parametre olarak verilir, süre hesabı, biçim dönüşümü)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "damitim_takip.py dosyasinda parti_bitis ve is_gunu_farki fonksiyonlarini yazdim: uc giris bicimi ayristirma, hafta sonu/tatil atlama (sirali tekrarsiz kume), 08:00-18:00 is saati ilerletme, mesai disi baslangici sonraki is gunu 08:00'e cekme, sure ve tarih dogrulamalarinda ValueError, toplam is dakikasinda 30 dakikayi asan kismi saatin yukari yuvarlanmasi. test_damitim.py ile 20 pytest testi yazdim, `python -m pytest -q` ile tamami gecti.",
+ "adim": 6,
+ "yurutucu_token": {
+  "girdi": 26455,
+  "cikti": 24236
+ },
+ "yurutucu_usd": 0.007492700000000001,
+ "bitirdi": true,
+ "sure_sn": 198.1,
+ "gizli": {
+  "gecti": true,
+  "gecen": 16,
+  "toplam": 16,
+  "cikti": "................                                                         [100%]\n16 passed in 0.02s\n"
+ }
+}

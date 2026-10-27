@@ -1,0 +1,23 @@
+{
+ "id": "h035",
+ "kip": "b",
+ "kategori": "doğrulama ve ayrıştırma (TC kimlik, IBAN, telefon, plaka, e-posta, adres biçimi)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": null,
+ "adim": 20,
+ "yurutucu_token": {
+  "girdi": 197238,
+  "cikti": 50350
+ },
+ "yurutucu_usd": 0.0297938,
+ "bitirdi": false,
+ "sure_sn": 436.0,
+ "gizli": {
+  "gecti": false,
+  "gecen": 17,
+  "toplam": 18,
+  "cikti": "..........F.......                                                       [100%]\n=================================== FAILURES ===================================\n_________________________ test_valueerror_eksik_bozuk __________________________\n\n    def test_valueerror_eksik_bozuk():\n        import pytest\n        with pytest.raises(ValueError):\n            _m.adres_ayristir(\"\")\n        with pytest.raises(ValueError):\n            _m.adres_ayristir(\"Mahalle: Ataturk, Cadde: X\")\n        eksik = _kayit()\n        del eksik[\"il\"]\n>       with pytest.raises(ValueError):\nE       Failed: DID NOT RAISE <class 'ValueError'>\n\n.gizli/test_gizli.py:81: Failed\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_valueerror_eksik_bozuk - Failed: DID NOT RA...\n1 failed, 17 passed in 0.05s\n"
+ }
+}

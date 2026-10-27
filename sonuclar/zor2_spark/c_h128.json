@@ -1,0 +1,71 @@
+{
+ "id": "h128",
+ "kip": "c",
+ "kategori": "küçük işletme hesapları (KDV, fatura, taksit, indirim, stok, kur dönüşümü, yuvarlama)",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": false,
+   "toplam": 18,
+   "basarili": 13
+  },
+  {
+   "gecti": true,
+   "toplam": 18,
+   "basarili": 18
+  }
+ ],
+ "spark_usd": 0.0043371,
+ "arayuz": "",
+ "hakem": [
+  {
+   "test": "test_esit_borcta_alfabetik",
+   "karar": "gerekli",
+   "gerekce": "Alfabetik sıra ve 2 çarpı 10,00 eşittir 20,00 hesabı görevde açıkça isteniyor.",
+   "tur": 1
+  },
+  {
+   "test": "test_iade_bakiyeyi_dusurur",
+   "karar": "gerekli",
+   "gerekce": "Bakiye iade edilmeyen adet çarpı birim olarak görevde açıkça tanımlıdır.",
+   "tur": 1
+  },
+  {
+   "test": "test_kayip_yaz_iade_sayilmaz",
+   "karar": "gerekli",
+   "gerekce": "Kayıp yazımın iade sayılmayıp borç bırakması görevde açıkça yazıyor.",
+   "tur": 1
+  },
+  {
+   "test": "test_teslim_ve_bakiye_temel_hesap",
+   "karar": "gerekli",
+   "gerekce": "3 adet çarpı 10,00 birim bedel 30,00 bakiye formülü görevde açıkça tanımlıdır.",
+   "tur": 1
+  },
+  {
+   "test": "test_yuvarlama_half_up",
+   "karar": "gerekli",
+   "gerekce": "Kuruşa Decimal HALF_UP yuvarlama görevde açıkça zorunludur.",
+   "tur": 1
+  }
+ ],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [],
+ "kabul_gecti": true,
+ "ozet": "Kabul testlerindeki 5 hata düzeltildi: bakiye artık iade edilmeyen (teslim-iade) adet üzerinden hesaplanıyor, kayıp borç olarak kalıyor; birim ücret önden kuruşa yuvarlanmıyor, yalnızca toplam HALF_UP yuvarlanıyor. Görev metnindeki `-> dict` imzasına rağmen liste döndürüldü çünkü metin ve kabul testleri liste istiyor.",
+ "adim": 18,
+ "yurutucu_token": {
+  "girdi": 124308,
+  "cikti": 43261
+ },
+ "yurutucu_usd": 0.021082999999999998,
+ "bitirdi": true,
+ "sure_sn": 436.8,
+ "gizli": {
+  "gecti": false,
+  "gecen": 11,
+  "toplam": 18,
+  "cikti": "ON\": Decimal(\"1.00\"), \"KASA\": Decimal(\"500.00\")})\n        s.teslim_et(\"M-00001\", \"BIDON\", 1)\n        s.teslim_et(\"M-00001\", \"KASA\", 500)\n        b = s.musteri_bakiye(\"M-00001\")\n>       assert b[\"toplam_borc\"] == Decimal(\"1.00\") + Decimal(\"250000.00\")\nE       TypeError: list indices must be integers or slices, not str\n\n.gizli/test_gizli.py:144: TypeError\n_________________________ test_coklu_musteri_bagimsiz __________________________\n\n    def test_coklu_musteri_bagimsiz():\n        s = _stok()\n        s.teslim_et(\"M-11111\", \"BIDON\", 5)\n        s.teslim_et(\"M-22222\", \"BIDON\", 2)\n        b1 = s.musteri_bakiye(\"M-11111\")\n        b2 = s.musteri_bakiye(\"M-22222\")\n>       assert b1[\"toplam_borc\"] == Decimal(\"50.00\")\nE       TypeError: list indices must be integers or slices, not str\n\n.gizli/test_gizli.py:152: TypeError\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_teslim_bakiye_basit - AssertionError: asser...\nFAILED .gizli/test_gizli.py::test_bakiye_half_up_yuvarlama - TypeError: ucret...\nFAILED .gizli/test_gizli.py::test_alfabetik_sira - TypeError: list indices mu...\nFAILED .gizli/test_gizli.py::test_iade_bakiyeyi_dusurur - TypeError: list ind...\nFAILED .gizli/test_gizli.py::test_kayip_iade_sayilmaz_borc_kapanir - TypeErro...\nFAILED .gizli/test_gizli.py::test_sinir_degerler_gecerli - TypeError: list in...\nFAILED .gizli/test_gizli.py::test_coklu_musteri_bagimsiz - TypeError: list in...\n7 failed, 11 passed in 0.06s\n"
+ }
+}

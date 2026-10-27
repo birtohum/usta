@@ -1,0 +1,35 @@
+{
+ "id": "h133",
+ "kip": "c",
+ "kategori": "Türkçe metin işleme (Türkçe harfler, büyük/küçük harf, hece, ek, sıralama, sayı/yazı)",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 15,
+   "basarili": 15
+  }
+ ],
+ "spark_usd": 0.0030738999999999996,
+ "arayuz": "",
+ "hakem": [],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [],
+ "kabul_gecti": true,
+ "ozet": "altyazi.py yazıldı: SRT doğrulama (hatalı damgada stderr+çıkış 2), başlangıca göre sıralama, çakışma giderme, sözcük bölmeden satır kaydırma, Türkçe büyük harf düzeltme, hız 25 cps aşımında süre uzatma, eksik girdi çıkış 1, parametre aralığı çıkış 3, iki ondalık yuvarlamalı JSON liste rapor. pytest ile 5 test geçti.",
+ "adim": 6,
+ "yurutucu_token": {
+  "girdi": 21149,
+  "cikti": 26114
+ },
+ "yurutucu_usd": 0.007337700000000001,
+ "bitirdi": true,
+ "sure_sn": 348.6,
+ "gizli": {
+  "gecti": true,
+  "gecen": 15,
+  "toplam": 15,
+  "cikti": "...............                                                          [100%]\n15 passed in 0.59s\n"
+ }
+}

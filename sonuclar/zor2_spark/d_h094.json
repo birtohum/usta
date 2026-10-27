@@ -1,0 +1,45 @@
+{
+ "id": "h094",
+ "kip": "d",
+ "kategori": "dosya ve komut satırı (CSV/JSON okuma, rapor yazdırma, argümanlar, hata mesajları)",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": false,
+   "toplam": 17,
+   "basarili": 16
+  },
+  {
+   "gecti": true,
+   "toplam": 17,
+   "basarili": 17
+  }
+ ],
+ "spark_usd": 0.0061944,
+ "arayuz": "",
+ "hakem": [],
+ "geri_alma": 0,
+ "inceleme": {
+  "yazilan": 3,
+  "kanitli": [
+   "test_inceleme_sabit_fiyat_envden_etkilenmez"
+  ]
+ },
+ "iptal_edilen_test": [],
+ "kabul_gecti": true,
+ "ozet": "Kabul testindeki tek hata düzeltildi: görev metnindeki \"sabit birim fiyat\" ifadesi gereği elektrik birim fiyatı artık hiçbir CLI bayrağı veya CARSI_BIRIM_FIYAT çevre değişkeninden etkilenmiyor; kodda sabit BIRIM_FIYAT kullanılıyor. Kendi eklediğim esneklik görev metniyle çeliştiği için kaldırıldı. Kabul testleri 17/17, kendi testlerim 9/9 geçiyor.",
+ "adim": 14,
+ "yurutucu_token": {
+  "girdi": 121386,
+  "cikti": 21610
+ },
+ "yurutucu_usd": 0.016460600000000002,
+ "bitirdi": true,
+ "sure_sn": 329.2,
+ "gizli": {
+  "gecti": true,
+  "gecen": 15,
+  "toplam": 15,
+  "cikti": "...............                                                          [100%]\n15 passed in 0.63s\n"
+ }
+}

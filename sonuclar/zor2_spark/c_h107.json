@@ -1,0 +1,35 @@
+{
+ "id": "h107",
+ "kip": "c",
+ "kategori": "doğrulama ve ayrıştırma (TC kimlik, IBAN, telefon, plaka, e-posta, adres biçimi)",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 17,
+   "basarili": 17
+  }
+ ],
+ "spark_usd": 0.0021483,
+ "arayuz": "",
+ "hakem": [],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [],
+ "kabul_gecti": true,
+ "ozet": "sms_listesi.py yazıldı: telefon_normalize (05XX/+90/90/boşluklu-tireli → 0XXX XXX XX XX, hatalarda ValueError/TypeError), telefon_maskele (ilk 3 + **** + son 2), liste_temizle (normalize ile tekilleştirme, sıralama, toplam/benzersiz/geçersiz + 2 ondalıklı başarı oranı, O(n)). pytest ile 12 test geçti.",
+ "adim": 4,
+ "yurutucu_token": {
+  "girdi": 11324,
+  "cikti": 14563
+ },
+ "yurutucu_usd": 0.004045,
+ "bitirdi": true,
+ "sure_sn": 189.1,
+ "gizli": {
+  "gecti": true,
+  "gecen": 18,
+  "toplam": 18,
+  "cikti": "..................                                                       [100%]\n18 passed in 0.05s\n"
+ }
+}

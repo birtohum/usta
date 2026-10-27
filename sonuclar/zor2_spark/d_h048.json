@@ -1,0 +1,38 @@
+{
+ "id": "h048",
+ "kip": "d",
+ "kategori": "veri yapıları ve algoritmalar (kuyruk, önbellek, arama, gruplama, birleştirme, durum makinesi)",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 18,
+   "basarili": 18
+  }
+ ],
+ "spark_usd": 0.005398200000000001,
+ "arayuz": "randevu.py içinde RandevuTakvimi; ekle(musteri: str, baslangic: int, bitis: int)->int, iptal(randevu_id: int)->None, gunluk(gun: str)->list, doluluk_orani(gun: str)->float; gunluk listesi dict öğeli: randevu_id, musteri, baslangic, bitis",
+ "hakem": [],
+ "geri_alma": 0,
+ "inceleme": {
+  "yazilan": 0,
+  "kanitli": []
+ },
+ "iptal_edilen_test": [],
+ "kabul_gecti": true,
+ "ozet": "randevu.py içinde RandevuTakvimi sınıfı yazıldı: ekle/iptal/gunluk/doluluk_orani istenen imzalara uygun; yarım açık aralık çakışma kontrolü ValueError ile, gün biçimi ve dakika doğrulamaları eklendi, gunluk sıralı dict listesi ve doluluk_orani yuvarlanmış float dönüyor. 14 pytest testi geçti.",
+ "adim": 8,
+ "yurutucu_token": {
+  "girdi": 42882,
+  "cikti": 22356
+ },
+ "yurutucu_usd": 0.008759399999999999,
+ "bitirdi": true,
+ "sure_sn": 297.0,
+ "gizli": {
+  "gecti": false,
+  "gecen": 15,
+  "toplam": 16,
+  "cikti": "..............F.                                                         [100%]\n=================================== FAILURES ===================================\n___________________________ test_farkli_gun_cakismaz ___________________________\n\n    def test_farkli_gun_cakismaz():\n        t = RandevuTakvimi()\n>       t.ekle(\"Ali\", 60, 120, GUN)\nE       TypeError: RandevuTakvimi.ekle() takes 4 positional arguments but 5 were given\n\n.gizli/test_gizli.py:152: TypeError\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_farkli_gun_cakismaz - TypeError: RandevuTak...\n1 failed, 15 passed in 0.03s\n"
+ }
+}

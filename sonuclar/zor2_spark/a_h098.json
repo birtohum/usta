@@ -1,0 +1,23 @@
+{
+ "id": "h098",
+ "kip": "a",
+ "kategori": "küçük işletme hesapları (KDV, fatura, taksit, indirim, stok, kur dönüşümü, yuvarlama)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "rezervasyon.py içinde IptalliRezervasyon sınıfı oluşturuldu: kod/kisi/tarih/ücret doğrulamaları (ValueError), çift kod engeli, bilinmeyen kodda KeyError, iptal>uçuşta ValueError, gün farkına göre %10/%30/0 iade kademesi (Decimal ROUND_HALF_UP, '0.00' format), uçuş+koda göre sıralı liste(). Kurallar testlerle doğrulandı.",
+ "adim": 4,
+ "yurutucu_token": {
+  "girdi": 9324,
+  "cikti": 8454
+ },
+ "yurutucu_usd": 0.0026232,
+ "bitirdi": true,
+ "sure_sn": 69.7,
+ "gizli": {
+  "gecti": true,
+  "gecen": 16,
+  "toplam": 16,
+  "cikti": "................                                                         [100%]\n16 passed in 0.02s\n"
+ }
+}

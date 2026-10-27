@@ -1,0 +1,23 @@
+{
+ "id": "h093",
+ "kip": "a",
+ "kategori": "tarih ve saat (iş günü, resmî tatil listesi parametre olarak verilir, süre hesabı, biçim dönüşümü)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "tur_programi.py dosyasında muze_acik_mi, tur_gunleri ve toplam_ziyaret_suresi işlevleri yazıldı. Pazartesi ve resmi tatil kapalılık kuralları, YYYY-MM-DD doğrulaması (ValueError), tip denetimleri (TypeError), gun_sayisi 1-14 aralığı, 60 gün kuralı, kapalı gün atlama, tekrarlı tarih tek sayımı ve 0-480 dakika aralığı kuralları uygulandı ve testlerle doğrulandı.",
+ "adim": 3,
+ "yurutucu_token": {
+  "girdi": 9242,
+  "cikti": 7695
+ },
+ "yurutucu_usd": 0.0024632000000000005,
+ "bitirdi": true,
+ "sure_sn": 58.6,
+ "gizli": {
+  "gecti": true,
+  "gecen": 18,
+  "toplam": 18,
+  "cikti": "..................                                                       [100%]\n18 passed in 0.03s\n"
+ }
+}

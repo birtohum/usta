@@ -1,0 +1,23 @@
+{
+ "id": "h075",
+ "kip": "a",
+ "kategori": "tarih ve saat (iş günü, resmî tatil listesi parametre olarak verilir, süre hesabı, biçim dönüşümü)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "kutuphane.py oluşturuldu: tatil_mi (Pazar + resmi tatil kontrolü), odunc_ver (normal 14 / öğrenci 21 gün, kapalı güne denk gelen son tarihi sonraki açık güne öteleme, alım günü kapalı olsa bile verilebilir) ve ceza_hesapla (normal 7 TL / öğrenci 3,5 TL günlük, aynı gün 0, kısmi gün yukarı yuvarlama, 60 gün tavan). Tarih biçimi ve uye_tipi doğrulamasında ValueError yükseltilir; tatil listesi sıralanıp tekilleştirilir. Yalnızca math/re/datetime kullanıldı, deterministik ve saat okumasız.",
+ "adim": 8,
+ "yurutucu_token": {
+  "girdi": 32667,
+  "cikti": 15358
+ },
+ "yurutucu_usd": 0.0063383,
+ "bitirdi": true,
+ "sure_sn": 137.8,
+ "gizli": {
+  "gecti": true,
+  "gecen": 19,
+  "toplam": 19,
+  "cikti": "...................                                                      [100%]\n19 passed in 0.03s\n"
+ }
+}

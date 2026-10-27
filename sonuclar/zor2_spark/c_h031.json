@@ -1,0 +1,35 @@
+{
+ "id": "h031",
+ "kip": "c",
+ "kategori": "Türkçe metin işleme (Türkçe harfler, büyük/küçük harf, hece, ek, sıralama, sayı/yazı)",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 17,
+   "basarili": 17
+  }
+ ],
+ "spark_usd": 0.0040202,
+ "arayuz": "",
+ "hakem": [],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [],
+ "kabul_gecti": true,
+ "ozet": "metin_duzelt.py yazıldı: --kucult (Türkçe I→ı, İ→i + lower), --noktalama (!!→!, ??→? yalnızca), --bosluk (strip + çoklu boşluğu teke) sırayla uygulanır; UTF-8 çıktı, boş girdide boş çıktı, stdout'a \"toplam değişen\" yazılır; eksik argümanda argparse kod 2, kayıp girdide FileNotFoundError. 13 pytest testi geçiyor.",
+ "adim": 6,
+ "yurutucu_token": {
+  "girdi": 20145,
+  "cikti": 7907
+ },
+ "yurutucu_usd": 0.0035959,
+ "bitirdi": true,
+ "sure_sn": 198.6,
+ "gizli": {
+  "gecti": true,
+  "gecen": 17,
+  "toplam": 17,
+  "cikti": ".................                                                        [100%]\n17 passed in 0.48s\n"
+ }
+}

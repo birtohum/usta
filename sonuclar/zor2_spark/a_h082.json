@@ -1,0 +1,23 @@
+{
+ "id": "h082",
+ "kip": "a",
+ "kategori": "dosya ve komut satırı (CSV/JSON okuma, rapor yazdırma, argümanlar, hata mesajları)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "manifest.py yazıldı: JSON UTF-8 okunur, bozuksa kod 3 + `HATA: gecersiz JSON`; sefer boşsa kod 2; konteynerler liste değilse kod 3; max-kg pozitif değilse ve girdi yoksa kod 2. id/tip/kg/liman kurallarına uymayanlar ve tekrar id'ler stderr'e `UYARI: konteyner <id|index> gecersiz` ile elenip `id,tip,kg,liman` başlıklı CSV'ye ASCII sıralı yazılır, çıktı dizini oluşturulur, başarıda `OK: <gecerli>/<toplam> konteyner yazildi` basılır. Tüm senaryolar test edildi.",
+ "adim": 11,
+ "yurutucu_token": {
+  "girdi": 60218,
+  "cikti": 17309
+ },
+ "yurutucu_usd": 0.0094836,
+ "bitirdi": true,
+ "sure_sn": 157.0,
+ "gizli": {
+  "gecti": true,
+  "gecen": 17,
+  "toplam": 17,
+  "cikti": ".................                                                        [100%]\n17 passed in 0.80s\n"
+ }
+}

@@ -1,0 +1,23 @@
+{
+ "id": "h070",
+ "kip": "b",
+ "kategori": "dosya ve komut satırı (CSV/JSON okuma, rapor yazdırma, argümanlar, hata mesajları)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "`mezat.py` yazıldı: UTF-8-SIG CSV okuma, başlık doğrulama, satır atlama uyarıları (satır numaralı), kasa gruplama (strip+upper), ROUND_HALF_UP paralar, net-azalan/toleranslı sıralama, TOPLAM özet satırı, komisyon aralığı ve girdi kontrolleri, çıktı dizini oluşturma ve OK mesajı. 12 pytest testi `python -m pytest -q` ile geçti.",
+ "adim": 4,
+ "yurutucu_token": {
+  "girdi": 17055,
+  "cikti": 9129
+ },
+ "yurutucu_usd": 0.0035313000000000007,
+ "bitirdi": true,
+ "sure_sn": 75.4,
+ "gizli": {
+  "gecti": true,
+  "gecen": 18,
+  "toplam": 18,
+  "cikti": "..................                                                       [100%]\n18 passed in 0.48s\n"
+ }
+}

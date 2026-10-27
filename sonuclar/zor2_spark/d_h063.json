@@ -1,0 +1,38 @@
+{
+ "id": "h063",
+ "kip": "d",
+ "kategori": "tarih ve saat (iş günü, resmî tatil listesi parametre olarak verilir, süre hesabı, biçim dönüşümü)",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 18,
+   "basarili": 18
+  }
+ ],
+ "spark_usd": 0.0055567,
+ "arayuz": "cagri_mesai.py içinde vardiya_suresi(baslangic: str, bitis: str) -> int ve primli_ucret(baslangic: str, bitis: str, saat_ucreti: float, resmi_tatiller: list[str]) -> float aynen kullanılır; gece_gunduz_ayir(baslangic: str, bitis: str) -> dict {'gece': int, 'gunduz': int} döndürür; class Vardiya(baslangic: str, bitis: str) .baslangic ve .bitis ile == ve < destekler, liste sorted ile sıralanır.",
+ "hakem": [],
+ "geri_alma": 0,
+ "inceleme": {
+  "yazilan": 0,
+  "kanitli": []
+ },
+ "iptal_edilen_test": [],
+ "kabul_gecti": true,
+ "ozet": "cagri_mesai.py yazıldı: vardiya_suresi, gece_gunduz_ayir, primli_ucret ve Vardiya sınıfı spec'e uygun; testler 13/13 geçti.",
+ "adim": 5,
+ "yurutucu_token": {
+  "girdi": 16270,
+  "cikti": 24995
+ },
+ "yurutucu_usd": 0.006626000000000002,
+ "bitirdi": true,
+ "sure_sn": 372.1,
+ "gizli": {
+  "gecti": true,
+  "gecen": 18,
+  "toplam": 18,
+  "cikti": "..................                                                       [100%]\n18 passed in 0.03s\n"
+ }
+}

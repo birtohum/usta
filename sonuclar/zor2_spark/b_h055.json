@@ -1,0 +1,23 @@
+{
+ "id": "h055",
+ "kip": "b",
+ "kategori": "Türkçe metin işleme (Türkçe harfler, büyük/küçük harf, hece, ek, sıralama, sayı/yazı)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "uyum_denetcisi.py içinde UyumDenetcisi sınıfı yazıldı: büyük ünlü (kalın/ince) ve küçük ünlü (izin tablosu) denetimi, sözlük istisnası, yarım-yukarı 2 basamak skor, küçük harfli durum tutma, skora göre azalan + ilk görülme sıralı rapor, ValueError/TypeError kontrolleri. 16 pytest testi yazıldı ve hepsi geçti.",
+ "adim": 10,
+ "yurutucu_token": {
+  "girdi": 44238,
+  "cikti": 21574
+ },
+ "yurutucu_usd": 0.008738600000000001,
+ "bitirdi": true,
+ "sure_sn": 177.8,
+ "gizli": {
+  "gecti": false,
+  "gecen": 8,
+  "toplam": 17,
+  "cikti": ".gizli/test_gizli.py:49: KeyError\n______________________ test_yabanci_istisna_uyumlu_kabul _______________________\n\n    def test_yabanci_istisna_uyumlu_kabul():\n        d = UyumDenetcisi(sozluk=[\"otel\"])\n        r = d.denetle(\"otel\")\n>       assert r[\"buyuk_uyum\"] is True\nE       KeyError: 'buyuk_uyum'\n\n.gizli/test_gizli.py:56: KeyError\n______________________ test_istisna_olmadan_otel_uyumsuz _______________________\n\n    def test_istisna_olmadan_otel_uyumsuz():\n        d = UyumDenetcisi()\n        r = d.denetle(\"otel\")\n>       assert r[\"buyuk_uyum\"] is False\nE       KeyError: 'buyuk_uyum'\n\n.gizli/test_gizli.py:63: KeyError\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_buyuk_kalin_uyumlu - KeyError: 'buyuk_uyum'\nFAILED .gizli/test_gizli.py::test_buyuk_ince_uyumlu - KeyError: 'buyuk_uyum'\nFAILED .gizli/test_gizli.py::test_buyuk_uyum_ihlali_iki_kural_bozuk - KeyErro...\nFAILED .gizli/test_gizli.py::test_kucuk_uyum_ihlali_yarim_puan - KeyError: 'b...\nFAILED .gizli/test_gizli.py::test_yuvarlak_dar_kural_uyumlu - KeyError: 'buyu...\nFAILED .gizli/test_gizli.py::test_yuvarlak_genis_kural_uyumlu - KeyError: 'bu...\nFAILED .gizli/test_gizli.py::test_duz_dar_kural_uyumlu - KeyError: 'buyuk_uyum'\nFAILED .gizli/test_gizli.py::test_yabanci_istisna_uyumlu_kabul - KeyError: 'b...\nFAILED .gizli/test_gizli.py::test_istisna_olmadan_otel_uyumsuz - KeyError: 'b...\n9 failed, 8 passed in 0.04s\n"
+ }
+}

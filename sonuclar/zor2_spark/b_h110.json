@@ -1,0 +1,23 @@
+{
+ "id": "h110",
+ "kip": "b",
+ "kategori": "küçük işletme hesapları (KDV, fatura, taksit, indirim, stok, kur dönüşümü, yuvarlama)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "salon.py içinde SalonRezervasyonu sınıfını yazdım: sıkı kod/tarih/kişi/para doğrulama, matrah üzerinden tek sefer %20 KDV ve %30 kapora (ROUND_HALF_UP), 30-gün cayma kuralı (kapora-500 iade / 0.00 / düğün sonrası ValueError), kod-tarih tekilliği, sıralı takvim ve KeyError/ValueError ayrımı. Yalnızca standart kütüphane kullanıldı. 63 pytest testi yazıldı ve hepsi geçti.",
+ "adim": 5,
+ "yurutucu_token": {
+  "girdi": 19053,
+  "cikti": 16952
+ },
+ "yurutucu_usd": 0.0052957,
+ "bitirdi": true,
+ "sure_sn": 131.4,
+ "gizli": {
+  "gecti": true,
+  "gecen": 18,
+  "toplam": 18,
+  "cikti": "..................                                                       [100%]\n18 passed in 0.02s\n"
+ }
+}

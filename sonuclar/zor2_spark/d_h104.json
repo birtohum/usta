@@ -1,0 +1,38 @@
+{
+ "id": "h104",
+ "kip": "d",
+ "kategori": "küçük işletme hesapları (KDV, fatura, taksit, indirim, stok, kur dönüşümü, yuvarlama)",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 20,
+   "basarili": 20
+  }
+ ],
+ "spark_usd": 0.006477999999999999,
+ "arayuz": "",
+ "hakem": [],
+ "geri_alma": 0,
+ "inceleme": {
+  "yazilan": 0,
+  "kanitli": []
+ },
+ "iptal_edilen_test": [],
+ "kabul_gecti": true,
+ "ozet": "randiman.py içinde RandimanliAlim sınıfı Decimal ile kuruldu: fis_no/üretici/aralık doğrulamaları ValueError, tekrar fis_no ValueError, bilinmeyen fis_no KeyError veriyor; birim fiyat baz*randıman/50 ROUND_HALF_UP, nem>10 ise %1/puan kesinti, tutar kg*birim adımlarıyla hesaplanıp '0.00' formatında döndürülüyor; ozet() tutara göre azalan fis_no'ya göre artan sıralı. pytest ile 9 test geçti, float kullanılmadı.",
+ "adim": 4,
+ "yurutucu_token": {
+  "girdi": 13018,
+  "cikti": 9911
+ },
+ "yurutucu_usd": 0.0032840000000000005,
+ "bitirdi": true,
+ "sure_sn": 336.9,
+ "gizli": {
+  "gecti": true,
+  "gecen": 18,
+  "toplam": 18,
+  "cikti": "..................                                                       [100%]\n18 passed in 0.02s\n"
+ }
+}

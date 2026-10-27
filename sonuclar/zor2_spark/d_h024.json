@@ -1,0 +1,38 @@
+{
+ "id": "h024",
+ "kip": "d",
+ "kategori": "veri yapıları ve algoritmalar (kuyruk, önbellek, arama, gruplama, birleştirme, durum makinesi)",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 18,
+   "basarili": 18
+  }
+ ],
+ "spark_usd": 0.0037350000000000005,
+ "arayuz": "arama.py içinde normalize(metin: str) -> str, indeksle(kayitlar: list) -> dict, ara(indeks: dict, sorgu: str, esik: float) -> list. indeksle id -> normalize edilmiş başlık sözlüğü döndürür. ara [(id, puan)] listesi döndürür.",
+ "hakem": [],
+ "geri_alma": 0,
+ "inceleme": {
+  "yazilan": 0,
+  "kanitli": []
+ },
+ "iptal_edilen_test": [],
+ "kabul_gecti": true,
+ "ozet": "arama.py modülünü yazdım: normalize (Türkçe I/İ dahil küçültme, noktalamayı tek boşluğa indirgeme), indeksle (id -> normalize başlık, eksik anahtar/boş başlıkta ValueError), ara (folding ile Jaccard benzerliği, esik doğrulama, boş sorguda [], puana göre azalan + küçük id önce sıralama, 2 ondalık float puan). Yalnızca standart kütüphane, ağ/rastgelelik/saat yok. 11 pytest testi yazıldı ve `python -m pytest -q` ile hepsi geçti.",
+ "adim": 4,
+ "yurutucu_token": {
+  "girdi": 13667,
+  "cikti": 10097
+ },
+ "yurutucu_usd": 0.0033861000000000004,
+ "bitirdi": true,
+ "sure_sn": 228.3,
+ "gizli": {
+  "gecti": true,
+  "gecen": 16,
+  "toplam": 16,
+  "cikti": "................                                                         [100%]\n16 passed in 0.02s\n"
+ }
+}

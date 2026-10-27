@@ -1,0 +1,23 @@
+{
+ "id": "h103",
+ "kip": "a",
+ "kategori": "Türkçe metin işleme (Türkçe harfler, büyük/küçük harf, hece, ek, sıralama, sayı/yazı)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "kisaltma.py modülü oluşturuldu: akronim_uret parantez içini atar, durma sözcüklerini (ve, ile, veya, bir, da, de) Türkçe küçük harf duyarsız eleser, tireli parçaların ilk harfini alır, sayıları aynen korur, Türkçe büyük harfe çevirir (i→İ, ı→I); tek kelime/boş/sadece durma sözcüğü durumlarında ValueError, str dışı girdide TypeError verir. akronim_coz büyük harf duyarsız eşleşir, küçük harfli/boş kısaltmada ValueError, bulunamazsa KeyError verir.",
+ "adim": 6,
+ "yurutucu_token": {
+  "girdi": 18764,
+  "cikti": 16829
+ },
+ "yurutucu_usd": 0.0052422,
+ "bitirdi": true,
+ "sure_sn": 145.9,
+ "gizli": {
+  "gecti": true,
+  "gecen": 17,
+  "toplam": 17,
+  "cikti": ".................                                                        [100%]\n17 passed in 0.02s\n"
+ }
+}

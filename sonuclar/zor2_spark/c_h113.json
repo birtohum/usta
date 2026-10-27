@@ -1,0 +1,35 @@
+{
+ "id": "h113",
+ "kip": "c",
+ "kategori": "doğrulama ve ayrıştırma (TC kimlik, IBAN, telefon, plaka, e-posta, adres biçimi)",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 19,
+   "basarili": 19
+  }
+ ],
+ "spark_usd": 0.0027206,
+ "arayuz": "filo_kayit.py dosyasında FiloKayitYoneticisi sınıfı; kurulum FiloKayitYoneticisi() parametresiz; metotlar ekle(plaka: str, tc: str, telefon: str) -> int, sorgula(plaka: str) -> dict, filo_raporu() -> dict",
+ "hakem": [],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [],
+ "kabul_gecti": true,
+ "ozet": "filo_kayit.py'de FiloKayitYoneticisi yazıldı: plaka normalizasyonu/doğrulaması (01-81, 1-3 harf, 2-4 rakam, sivil/ticari/geçici), TC checksum, telefon formatı, duplicate kontrolü, sıralı rapor ve yüzdeler. pytest ile 5 test geçti.",
+ "adim": 7,
+ "yurutucu_token": {
+  "girdi": 27994,
+  "cikti": 23522
+ },
+ "yurutucu_usd": 0.0075038000000000014,
+ "bitirdi": true,
+ "sure_sn": 266.0,
+ "gizli": {
+  "gecti": true,
+  "gecen": 17,
+  "toplam": 17,
+  "cikti": ".................                                                        [100%]\n17 passed in 0.02s\n"
+ }
+}

@@ -1,0 +1,47 @@
+{
+ "id": "h119",
+ "kip": "c",
+ "kategori": "doğrulama ve ayrıştırma (TC kimlik, IBAN, telefon, plaka, e-posta, adres biçimi)",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": false,
+   "toplam": 19,
+   "basarili": 18
+  },
+  {
+   "gecti": true,
+   "toplam": 19,
+   "basarili": 19
+  }
+ ],
+ "spark_usd": 0.007369100000000001,
+ "arayuz": "Dosya: abonelik.py; Sınıf: AbonelikYoneticisi.__init__(self); Metotlar: abone_ekle(plaka: str, tc: str, adres: str) -> str, abonelik_uzat(plaka: str, ay: int) -> dict, aktif_liste() -> list[dict]",
+ "hakem": [
+  {
+   "test": "test_bitis_ayi_tam_ay_eklenir",
+   "karar": "gerekli",
+   "gerekce": "Görev bitiş ayının tam ay eklenerek hesaplanmasını istiyor ve ekime bir ay eklenince kasım olması tek anlamlı sonuçtur.",
+   "tur": 1
+  }
+ ],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [],
+ "kabul_gecti": true,
+ "ozet": "Kabul testindeki tek hata düzeltildi: abone_ekle artık başlangıç bitişini bugüne eşitliyor, abonelik_uzat mevcut bitişe tam ay ekliyor (önceden ekleme +1 aydan başlayıp iki kat ekliyordu). Görev metni başlangıç süresini açıkça tanımlamadığından kabul testinin yorumuna uyuldu. 19/19 kabul + 8/8 yerel test geçiyor.",
+ "adim": 12,
+ "yurutucu_token": {
+  "girdi": 78099,
+  "cikti": 26675
+ },
+ "yurutucu_usd": 0.013144900000000001,
+ "bitirdi": true,
+ "sure_sn": 506.9,
+ "gizli": {
+  "gecti": false,
+  "gecen": 11,
+  "toplam": 17,
+  "cikti": "        assert plakalar == sorted(plakalar)\n>       assert plakalar[0] == \"06AB123\"\nE       AssertionError: assert '06 AB 123' == '06AB123'\nE         - 06AB123\nE         + 06 AB 123\nE         ?   +  +\n\n.gizli/test_gizli.py:147: AssertionError\n_________________________ test_doluluk_orani_yuvarlama _________________________\n\n    def test_doluluk_orani_yuvarlama():\n        y = AbonelikYoneticisi(kapasite=3)\n        y.abone_ekle(\"19 AB 123\", TC1, adres())\n        assert y.doluluk_orani() == round(1/3, 2)\n        assert y.doluluk_orani() == 0.33\n        y.abone_ekle(\"34 AB 123\", TC2, adres())\n        assert y.doluluk_orani() == round(2/3, 2)\n        sonuc = y.abonelik_uzat(\"19 AB 123\", 2)\n>       assert sonuc[\"doluluk_orani\"] == round(2/3, 2)\nE       KeyError: 'doluluk_orani'\n\n.gizli/test_gizli.py:157: KeyError\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_abone_ekle_normal - AssertionError: assert ...\nFAILED .gizli/test_gizli.py::test_plaka_kucuk_harf_normalize - AssertionError...\nFAILED .gizli/test_gizli.py::test_plaka_normal_tur - AssertionError: assert '...\nFAILED .gizli/test_gizli.py::test_plaka_esitligi_bosluk_tire - AssertionError...\nFAILED .gizli/test_gizli.py::test_aktif_liste_sirali - AssertionError: assert...\nFAILED .gizli/test_gizli.py::test_doluluk_orani_yuvarlama - KeyError: 'dolulu...\n6 failed, 11 passed in 0.07s\n"
+ }
+}

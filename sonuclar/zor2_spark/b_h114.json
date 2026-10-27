@@ -1,0 +1,23 @@
+{
+ "id": "h114",
+ "kip": "b",
+ "kategori": "veri yapıları ve algoritmalar (kuyruk, önbellek, arama, gruplama, birleştirme, durum makinesi)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "`restorasyon.py` içinde `RestorasyonIsi` durum makinesi yazıldı: varsayılan `TEKLIF`, 6 izinli durum, birebir eşleşme, ileri zincir + her durumdan `IPTAL`, bitmiş durumlardan `RuntimeError`, tanımsız hedefte `ValueError`, izinsiz geçişte `RuntimeError`, `KALITE_KONTROL→TESLIM` için `None` puanda `TypeError`, aralık dışında `ValueError`, 70 altında `RuntimeError` (durum korunur), başarılı geçişler `gecmis()` kopyasına eklenir. 13 pytest testi yazıldı ve hepsi geçti.",
+ "adim": 4,
+ "yurutucu_token": {
+  "girdi": 11710,
+  "cikti": 8253
+ },
+ "yurutucu_usd": 0.0028216000000000005,
+ "bitirdi": true,
+ "sure_sn": 66.3,
+ "gizli": {
+  "gecti": true,
+  "gecen": 16,
+  "toplam": 16,
+  "cikti": "................                                                         [100%]\n16 passed in 0.02s\n"
+ }
+}

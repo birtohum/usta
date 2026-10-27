@@ -1,0 +1,23 @@
+{
+ "id": "h128",
+ "kip": "b",
+ "kategori": "küçük işletme hesapları (KDV, fatura, taksit, indirim, stok, kur dönüşümü, yuvarlama)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "DepozitoluStok sınıfı depozito.py içinde yazıldı; teslim/iade/kayıp ve Decimal HALF_UP bakiye, doğrulama ve sıralama eklendi. 11 pytest testi geçti.",
+ "adim": 10,
+ "yurutucu_token": {
+  "girdi": 37150,
+  "cikti": 52407
+ },
+ "yurutucu_usd": 0.014196400000000001,
+ "bitirdi": true,
+ "sure_sn": 440.7,
+ "gizli": {
+  "gecti": true,
+  "gecen": 18,
+  "toplam": 18,
+  "cikti": "..................                                                       [100%]\n18 passed in 0.02s\n"
+ }
+}

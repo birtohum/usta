@@ -1,0 +1,23 @@
+{
+ "id": "h090",
+ "kip": "b",
+ "kategori": "veri yapıları ve algoritmalar (kuyruk, önbellek, arama, gruplama, birleştirme, durum makinesi)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "`damitim_onbellegi.py` içinde ağırlıklı LRU önbelleği `DamitimOnbellegi` yazıldı: tam eşleşmede hit+MRU güncelleme, miss'te `hesap_fn` tek çağrı + ROUND_HALF_UP 3 ondalık yuvarlama, ağırlık `len(pid)+gul/10` (min 1), kapasite aşımında en eskiden tahliye, aralık/boş-id/callable doğrulamaları, `gecersiz_kil` ve `istatistik` eklendi. `test_damitim.py` ile 11 test yazıldı, `pytest -q` hepsi geçti.",
+ "adim": 4,
+ "yurutucu_token": {
+  "girdi": 17974,
+  "cikti": 17388
+ },
+ "yurutucu_usd": 0.005275,
+ "bitirdi": true,
+ "sure_sn": 143.3,
+ "gizli": {
+  "gecti": true,
+  "gecen": 17,
+  "toplam": 17,
+  "cikti": ".................                                                        [100%]\n17 passed in 0.03s\n"
+ }
+}

@@ -1,0 +1,23 @@
+{
+ "id": "h009",
+ "kip": "a",
+ "kategori": "tarih ve saat (iş günü, resmî tatil listesi parametre olarak verilir, süre hesabı, biçim dönüşümü)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "`randevu.py` içinde `uygun_slotlari_uret` yazıldı: HH:MM doğrulaması (regex), slot 10–120 / tampon 0–60 aralık kontrolü, bitiş>başlangıç zorunluluğu (gece yarısı aşımı ValueError), slot bitişi==randevu başı çakışmasızlık, 1 dk kesişmede eleme, tamponun hem blok adımı hem mevcut randevu genişletmesi olarak uygulanması, tam bölünmeyen son parçanın atılması, sıralı-sonuç ve tüm TypeError/ValueError ayrımları uygulandı; testlerle doğrulandı.",
+ "adim": 8,
+ "yurutucu_token": {
+  "girdi": 37712,
+  "cikti": 33952
+ },
+ "yurutucu_usd": 0.010561600000000003,
+ "bitirdi": true,
+ "sure_sn": 328.7,
+ "gizli": {
+  "gecti": true,
+  "gecen": 17,
+  "toplam": 17,
+  "cikti": ".................                                                        [100%]\n17 passed in 0.02s\n"
+ }
+}

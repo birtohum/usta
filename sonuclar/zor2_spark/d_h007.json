@@ -1,0 +1,38 @@
+{
+ "id": "h007",
+ "kip": "d",
+ "kategori": "Türkçe metin işleme (Türkçe harfler, büyük/küçük harf, hece, ek, sıralama, sayı/yazı)",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 18,
+   "basarili": 18
+  }
+ ],
+ "spark_usd": 0.0055693,
+ "arayuz": "",
+ "hakem": [],
+ "geri_alma": 0,
+ "inceleme": {
+  "yazilan": 0,
+  "kanitli": []
+ },
+ "iptal_edilen_test": [],
+ "kabul_gecti": true,
+ "ozet": "siralama.py içinde turkce_sirala(kelimeler, ters=False) yazıldı: Türk alfabesi sırasına göre ağırlıklandırma, I->ı ve İ->i dönüşümlü Türkçe küçük harfleme, küçük-harfin-önce-gelmesi için tie-break, boş dize en başa + rakamla başlayanlar harflilerden önce kategorisi, girdiyi değiştirmeyen sorted+kopya, ters için reverse, hata kontrolleri (liste değilse TypeError, str olmayan/None elemanda ValueError, None girdide TypeError). Yalnızca standart dil özellikleri kullanıldı. test_siralama.py ile 14 test yazıldı ve `python -m pytest -q` ile hepsi geçti.",
+ "adim": 9,
+ "yurutucu_token": {
+  "girdi": 35711,
+  "cikti": 19162
+ },
+ "yurutucu_usd": 0.0074035,
+ "bitirdi": true,
+ "sure_sn": 258.5,
+ "gizli": {
+  "gecti": true,
+  "gecen": 16,
+  "toplam": 16,
+  "cikti": "................                                                         [100%]\n16 passed in 0.02s\n"
+ }
+}

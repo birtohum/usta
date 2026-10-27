@@ -1,0 +1,35 @@
+{
+ "id": "h108",
+ "kip": "c",
+ "kategori": "veri yapıları ve algoritmalar (kuyruk, önbellek, arama, gruplama, birleştirme, durum makinesi)",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 18,
+   "basarili": 18
+  }
+ ],
+ "spark_usd": 0.0015167000000000002,
+ "arayuz": "",
+ "hakem": [],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [],
+ "kabul_gecti": true,
+ "ozet": "`log_birlestir.py` içinde `sirali_loglari_birlestir` yazıldı: girdileri doğrulayıp (`zaman` datetime ile çözümlenemezse ValueError, `kaynak_id` boş/boşluksa ValueError, `mesaj` None ise TypeError, `log_listeleri` liste değilse TypeError), `heapq` ile k-yollu birleştirme yapar, (zaman, kaynak, mesaj) anahtarına göre sıralar, aynı üçlüyü tekler, girdileri değiştirmeden yeni sözlükler döndürür. 13 pytest testi yazıldı ve hepsi geçti.",
+ "adim": 4,
+ "yurutucu_token": {
+  "girdi": 12803,
+  "cikti": 7805
+ },
+ "yurutucu_usd": 0.0028413,
+ "bitirdi": true,
+ "sure_sn": 171.5,
+ "gizli": {
+  "gecti": true,
+  "gecen": 19,
+  "toplam": 19,
+  "cikti": "...................                                                      [100%]\n19 passed in 0.02s\n"
+ }
+}

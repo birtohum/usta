@@ -1,0 +1,23 @@
+{
+ "id": "h124",
+ "kip": "a",
+ "kategori": "dosya ve komut satırı (CSV/JSON okuma, rapor yazdırma, argümanlar, hata mesajları)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "servis.py yazıldı ve test edildi: bakımlar + parça fiyatları okunup KDV'li toplamlar plaka bazında gruplanıyor, sıralı CSV yazılıyor; eksik parça/tarih/ücret hataları uyarıyla atlanıyor, geçersiz JSON/başlık/KDV'de stderr + çıkış 2 veriliyor, boş sonuçta yalnızca başlık yazılıyor.",
+ "adim": 6,
+ "yurutucu_token": {
+  "girdi": 30763,
+  "cikti": 12268
+ },
+ "yurutucu_usd": 0.005529900000000001,
+ "bitirdi": true,
+ "sure_sn": 106.2,
+ "gizli": {
+  "gecti": false,
+  "gecen": 15,
+  "toplam": 16,
+  "cikti": "..............F.                                                         [100%]\n=================================== FAILURES ===================================\n_________________________ test_birim_fiyat_sifir_hata __________________________\n\ntmp_path = PosixPath('/home/usta/is/b182e778c34e/.tmp/pytest-of-usta/pytest-0/test_birim_fiyat_sifir_hata0')\n\n    def test_birim_fiyat_sifir_hata(tmp_path):\n        b = tmp_path / \"bakimlar.json\"\n        p = tmp_path / \"parcalar.csv\"\n        c = tmp_path / \"maliyet.csv\"\n        p.write_text(\"parca_kodu,birim_fiyat\\nP1,0\\n\", encoding=\"utf-8\")\n        bakim_yaz(b, [{\"plaka\": \"31ABC01\", \"tarih\": \"2024-01-01\", \"iscilik_ucreti\": 100, \"kullanilan_parcalar\": [\"P1\"]}])\n        r = calistir(b, p, c, 20)\n>       assert r.returncode == 2\nE       AssertionError: assert 0 == 2\nE        +  where 0 = CompletedProcess(args=['/usr/bin/python', '/home/usta/is/b182e778c34e/servis.py', '--bakimlar', '/home/usta/is/b182e77...lar.csv satır 2 atlandı (birim_fiyat sıfırdan büyük olmalı: 0)\\nUyarı: bakım kaydı 0 atlandı (parça bulunamadı: P1)\\n').returncode\n\n.gizli/test_gizli.py:216: AssertionError\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_birim_fiyat_sifir_hata - AssertionError: as...\n1 failed, 15 passed in 0.49s\n"
+ }
+}

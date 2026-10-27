@@ -1,0 +1,35 @@
+{
+ "id": "h094",
+ "kip": "c",
+ "kategori": "dosya ve komut satırı (CSV/JSON okuma, rapor yazdırma, argümanlar, hata mesajları)",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 17,
+   "basarili": 17
+  }
+ ],
+ "spark_usd": 0.0025821,
+ "arayuz": "",
+ "hakem": [],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [],
+ "kabul_gecti": true,
+ "ozet": "carsi.py programını yazdım: tezgahlar.csv, tuketim.csv ve odemeler.json dosyalarını okuyup YYYY-AA dönemine göre filtreliyor, elektriği sabit birim fiyat (5.0 TL/kWh) ile kWh oranlı dağıtıyor, kalan borcu kira+elektrik-ödenen olarak Decimal ile kuruşa yuvarlıyor ve borclar.csv dosyasına kalan_borc azalan / tezgah_id artan sırada yazıyor. Eksik dosya ve hatalı başlıkta stderr + çıkış kodu 2, geçersiz tarih/negatif kWh/sıfır-altı ödeme ve geçersiz kira satırlarında stderr uyarısı ile atlama uygulanıyor. 10 pytest testi yazıp `python -m pytest -q` ile hepsini geçirdim ve komut satırından uçtan uca doğruladım.",
+ "adim": 11,
+ "yurutucu_token": {
+  "girdi": 92974,
+  "cikti": 29065
+ },
+ "yurutucu_usd": 0.015110400000000003,
+ "bitirdi": true,
+ "sure_sn": 270.3,
+ "gizli": {
+  "gecti": true,
+  "gecen": 15,
+  "toplam": 15,
+  "cikti": "...............                                                          [100%]\n15 passed in 0.49s\n"
+ }
+}

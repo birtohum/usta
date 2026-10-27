@@ -1,0 +1,23 @@
+{
+ "id": "h115",
+ "kip": "a",
+ "kategori": "Türkçe metin işleme (Türkçe harfler, büyük/küçük harf, hece, ek, sıralama, sayı/yazı)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "dizin.py modülü oluşturuldu: sayfalari_sikistir tekrarları silip sıralar, 3+ dizileri tireli aralık yapar, 2'li ardışıklığı virgülle yazar, boş listede boş dizge döndürür, tür hatasında TypeError ve aralık dışında ValueError verir; dizin_birlestir casefold ile birleştirip ilk yazımı korur, sayfaları yeniden sıkıştırır, \"Terim: liste\" biçiminde casefold sıralı çıktı üretir. Yalnızca standart kütüphane kullanıldı, testler doğrulandı.",
+ "adim": 5,
+ "yurutucu_token": {
+  "girdi": 13340,
+  "cikti": 11049
+ },
+ "yurutucu_usd": 0.0035437999999999997,
+ "bitirdi": true,
+ "sure_sn": 89.1,
+ "gizli": {
+  "gecti": true,
+  "gecen": 17,
+  "toplam": 17,
+  "cikti": ".................                                                        [100%]\n17 passed in 0.02s\n"
+ }
+}

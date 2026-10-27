@@ -1,6 +1,7 @@
 """Muse Spark (Meta Model API) istemcisi — harcama sayacıyla.
 
-Her yanıtın `usage` alanından maliyet hesaplanır ve kayitlar/butce.json'a eklenir. Toplam SINIR_USD'ye ulaşınca
+Her yanıtın `usage` alanından maliyet hesaplanır ve kayitlar/butce.jsonl defterine bir satır olarak eklenir
+(salt-ekleme: aynı anda çalışan iş parçacıkları ve süreçler birbirinin kaydını ezmez). Toplam SINIR_USD'ye ulaşınca
 yeni istek atılmaz (ButceAsildi). Sayaç yalnızca bu depodan yapılan istekleri görür; hesabın başka harcamaları dahil değildir.
 
 Contributor modunda gönderilen içerik Meta'nın ürün geliştirmesinde kullanılabilir: kişisel veri gönderme.
@@ -20,7 +21,8 @@ FIYAT = {"muse-spark-1.3-contributor": (0.10, 0.20)}
 SINIR_USD = float(os.environ.get("USTA_BUTCE_SINIRI", "140"))
 
 KOK = Path(__file__).resolve().parent.parent
-BUTCE_DOSYASI = KOK / "kayitlar" / "butce.json"
+ESKI_DOSYA = KOK / "kayitlar" / "butce.json"     # 28 Eki'ye kadarki toplam (artık yazılmaz)
+DEFTER = KOK / "kayitlar" / "butce.jsonl"
 ANAHTAR_DOSYASI = Path.home() / ".pflow-anahtarlar.env"
 _kilit = threading.Lock()
 
@@ -38,10 +40,28 @@ def _anahtar() -> str:
     raise RuntimeError(f"META_MODEL_API_KEY bulunamadı ({ANAHTAR_DOSYASI})")
 
 
+BOS = {"toplam_usd": 0.0, "istek": 0, "girdi_token": 0, "cikti_token": 0}
+
+
 def butce() -> dict:
-    if BUTCE_DOSYASI.exists():
-        return json.loads(BUTCE_DOSYASI.read_text(encoding="utf-8"))
-    return {"toplam_usd": 0.0, "istek": 0, "girdi_token": 0, "cikti_token": 0}
+    """Defterdeki tüm satırların toplamı. Eski tek-dosya sayacı (butce.json) varsa başlangıç değeri olarak eklenir."""
+    b = dict(BOS)
+    if ESKI_DOSYA.exists():
+        try:
+            b.update(json.loads(ESKI_DOSYA.read_text(encoding="utf-8")))
+        except ValueError:
+            pass
+    if DEFTER.exists():
+        for satir in DEFTER.read_text(encoding="utf-8").splitlines():
+            try:
+                k = json.loads(satir)
+            except ValueError:
+                continue   # yazılmakta olan yarım satır
+            b["toplam_usd"] += k["usd"]
+            b["istek"] += 1
+            b["girdi_token"] += k["g"]
+            b["cikti_token"] += k["c"]
+    return b
 
 
 def _kaydet(model: str, usage: dict) -> float:
@@ -49,13 +69,9 @@ def _kaydet(model: str, usage: dict) -> float:
     g, c = usage.get("prompt_tokens", 0), usage.get("completion_tokens", 0)
     maliyet = g / 1e6 * gf + c / 1e6 * cf
     with _kilit:
-        b = butce()
-        b["toplam_usd"] += maliyet
-        b["istek"] += 1
-        b["girdi_token"] += g
-        b["cikti_token"] += c
-        BUTCE_DOSYASI.parent.mkdir(exist_ok=True)
-        BUTCE_DOSYASI.write_text(json.dumps(b, indent=1), encoding="utf-8")
+        DEFTER.parent.mkdir(exist_ok=True)
+        with DEFTER.open("a", encoding="utf-8") as f:
+            f.write(json.dumps({"usd": maliyet, "g": g, "c": c, "m": model, "t": round(time.time())}) + "\n")
     return maliyet
 
 

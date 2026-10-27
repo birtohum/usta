@@ -1,0 +1,47 @@
+{
+ "id": "h112",
+ "kip": "c",
+ "kategori": "dosya ve komut satırı (CSV/JSON okuma, rapor yazdırma, argümanlar, hata mesajları)",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": false,
+   "toplam": 17,
+   "basarili": 16
+  },
+  {
+   "gecti": true,
+   "toplam": 17,
+   "basarili": 17
+  }
+ ],
+ "spark_usd": 0.0037963000000000003,
+ "arayuz": "",
+ "hakem": [
+  {
+   "test": "test_ayni_koltuk_tekrar_ikinci_gecersiz",
+   "karar": "gerekli",
+   "gerekce": "Görev metni aynı tarih-seans-koltuk tekrarında ikinci kaydın geçersiz sayılacağını açıkça yazdığı için gunluk_ozet de net saymalıdır.",
+   "tur": 1
+  }
+ ],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [],
+ "kabul_gecti": true,
+ "ozet": "gunluk_ozet düzeltildi: toplam_bilet artık ham kayıt sayısı değil, geçerli tekil (tarih,seans,koltuk tekrarı elenmiş) net sayım döndürüyor. Görev metni toplam_bilet ifadesi ham sayım gibi okunabilirdi ancak kabul testi aynı koltuk tekrarında toplam_bilet=1 beklediği ve görev metni de ikinci kaydın geçersiz sayılacağını söylediği için teste uyuldu. Tüm testler geçti (5/5 yerel, 17/17 kabul).",
+ "adim": 11,
+ "yurutucu_token": {
+  "girdi": 73204,
+  "cikti": 35563
+ },
+ "yurutucu_usd": 0.014433000000000001,
+ "bitirdi": true,
+ "sure_sn": 342.5,
+ "gizli": {
+  "gecti": false,
+  "gecen": 15,
+  "toplam": 18,
+  "cikti": " list indices must be integers or slices, not str\n\n.gizli/test_gizli.py:73: TypeError\n_________________________ test_sefer_doluluk_yuvarlama _________________________\n\n    def test_sefer_doluluk_yuvarlama():\n        satislar = [{'yolcu_ad': 'Ali Veli', 'tarih': '2024-05-01', 'seans': 'gun_dogumu', 'koltuk_no': 1}]\n        sonuc = sefer_doluluk(satislar, 6)\n>       g = sonuc['seferler']['2024-05-01_gun_dogumu']\nE       TypeError: list indices must be integers or slices, not str\n\n.gizli/test_gizli.py:82: TypeError\n_______________________ test_sefer_doluluk_tekrar_koltuk _______________________\n\n    def test_sefer_doluluk_tekrar_koltuk():\n        satislar = [\n            {'yolcu_ad': 'Ali Veli', 'tarih': '2024-05-01', 'seans': 'gun_dogumu', 'koltuk_no': 1},\n            {'yolcu_ad': 'Ayse Yilmaz', 'tarih': '2024-05-01', 'seans': 'gun_dogumu', 'koltuk_no': 1},\n        ]\n        sonuc = sefer_doluluk(satislar, 10)\n        assert sonuc['toplam_bilet'] == 1\n>       assert sonuc['seferler']['2024-05-01_gun_dogumu']['toplam_bilet'] == 1\nE       TypeError: list indices must be integers or slices, not str\n\n.gizli/test_gizli.py:98: TypeError\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_sefer_doluluk_gruplama - TypeError: list in...\nFAILED .gizli/test_gizli.py::test_sefer_doluluk_yuvarlama - TypeError: list i...\nFAILED .gizli/test_gizli.py::test_sefer_doluluk_tekrar_koltuk - TypeError: li...\n3 failed, 15 passed in 0.05s\n"
+ }
+}

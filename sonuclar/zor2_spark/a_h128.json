@@ -1,0 +1,23 @@
+{
+ "id": "h128",
+ "kip": "a",
+ "kategori": "küçük işletme hesapları (KDV, fatura, taksit, indirim, stok, kur dönüşümü, yuvarlama)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "depozito.py yazıldı: DepozitoluStok sınıfı teslim_et/iade_al/kayip_yaz/musteri_bakiye ile doğrulama, Decimal HALF_UP ve alfabetik bakiye listesi sağlar.",
+ "adim": 8,
+ "yurutucu_token": {
+  "girdi": 18142,
+  "cikti": 60472
+ },
+ "yurutucu_usd": 0.013908600000000002,
+ "bitirdi": true,
+ "sure_sn": 509.6,
+ "gizli": {
+  "gecti": false,
+  "gecen": 11,
+  "toplam": 18,
+  "cikti": "111\", \"BIDON\", 5)\n        s.teslim_et(\"M-22222\", \"BIDON\", 2)\n        b1 = s.musteri_bakiye(\"M-11111\")\n        b2 = s.musteri_bakiye(\"M-22222\")\n>       assert b1[\"toplam_borc\"] == Decimal(\"50.00\")\n\n.gizli/test_gizli.py:152: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nself = [{'ambalaj': 'BIDON', 'teslim': 5, 'iade': 0, 'kayip': 0, 'kalan': 5, 'kalan_adet': 5, 'adet': 5, 'iade_edilmeyen': 5,...l('0.00'), 'kayip_tutari': Decimal('0.00'), 'kayip_adet': 0, 'toplam_borc': Decimal('50.00'), 'musteri_id': 'M-11111'}]\nidx = 'toplam_borc'\n\n    def __getitem__(self, idx):\n        if isinstance(idx, str):\n            for r in self:\n                if r.get(\"ambalaj\") == idx:\n                    return r\n>           raise KeyError(idx)\nE           KeyError: 'toplam_borc'\n\ndepozito.py:70: KeyError\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_teslim_bakiye_basit - AssertionError: asser...\nFAILED .gizli/test_gizli.py::test_bakiye_half_up_yuvarlama - KeyError: 'kalem...\nFAILED .gizli/test_gizli.py::test_alfabetik_sira - KeyError: 'kalemler'\nFAILED .gizli/test_gizli.py::test_iade_bakiyeyi_dusurur - KeyError: 'kalemler'\nFAILED .gizli/test_gizli.py::test_kayip_iade_sayilmaz_borc_kapanir - KeyError...\nFAILED .gizli/test_gizli.py::test_sinir_degerler_gecerli - KeyError: 'toplam_...\nFAILED .gizli/test_gizli.py::test_coklu_musteri_bagimsiz - KeyError: 'toplam_...\n7 failed, 11 passed in 0.07s\n"
+ }
+}

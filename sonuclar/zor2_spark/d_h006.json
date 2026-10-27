@@ -1,0 +1,38 @@
+{
+ "id": "h006",
+ "kip": "d",
+ "kategori": "veri yapıları ve algoritmalar (kuyruk, önbellek, arama, gruplama, birleştirme, durum makinesi)",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 19,
+   "basarili": 19
+  }
+ ],
+ "spark_usd": 0.0030216,
+ "arayuz": "cagri_kuyrugu.py içinde CagriKuyrugu.ortalama_bekleme_suresi(self) -> float",
+ "hakem": [],
+ "geri_alma": 0,
+ "inceleme": {
+  "yazilan": 0,
+  "kanitli": []
+ },
+ "iptal_edilen_test": [],
+ "kabul_gecti": true,
+ "ozet": "cagri_kuyrugu.py içinde CagriKuyrugu sınıfını yazdım: ekle (sıra_no döner, ID/oncelik doğrulama, 100 kapasitede OverflowError), siradaki (öncelik+FIFO sırasına göre dict döner, boşta IndexError), bekleyen_sayisi (int) ve ortalama_bekleme_suresi (5 dk hizmet varsayımıyla, 2 ondalığa yuvarlanmış float). 15 pytest testi yazıp hepsini geçirdim.",
+ "adim": 4,
+ "yurutucu_token": {
+  "girdi": 12313,
+  "cikti": 8289
+ },
+ "yurutucu_usd": 0.0028891000000000003,
+ "bitirdi": true,
+ "sure_sn": 133.5,
+ "gizli": {
+  "gecti": true,
+  "gecen": 16,
+  "toplam": 16,
+  "cikti": "................                                                         [100%]\n16 passed in 0.02s\n"
+ }
+}

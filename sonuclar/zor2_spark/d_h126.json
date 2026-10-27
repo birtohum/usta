@@ -1,0 +1,38 @@
+{
+ "id": "h126",
+ "kip": "d",
+ "kategori": "veri yapıları ve algoritmalar (kuyruk, önbellek, arama, gruplama, birleştirme, durum makinesi)",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 20,
+   "basarili": 20
+  }
+ ],
+ "spark_usd": 0.0053652000000000005,
+ "arayuz": "ortalama() -> {'nem': float, 'sicaklik': float}; en_dusuk_en_yuksek() -> {'en_dusuk_nem': float, 'en_yuksek_nem': float, 'en_dusuk_sicaklik': float, 'en_yuksek_sicaklik': float}; pencereyi_listele() -> [{'nem': float, 'sicaklik': float}]",
+ "hakem": [],
+ "geri_alma": 0,
+ "inceleme": {
+  "yazilan": 2,
+  "kanitli": []
+ },
+ "iptal_edilen_test": [],
+ "kabul_gecti": true,
+ "ozet": "`nem_penceresi.py` içinde `NemPenceresi` sınıfı yazıldı: `collections.deque(maxlen=pencere)` ile FIFO pencere, kurucu ve ölçüm doğrulamaları (bool→TypeError, aralık dışı→ValueError), `Decimal`+`ROUND_HALF_UP` ile iki ondalık ortalama, min/max ve kopya liste. 22 pytest testi yazıldı ve `python -m pytest -q` ile hepsi geçti.",
+ "adim": 4,
+ "yurutucu_token": {
+  "girdi": 14487,
+  "cikti": 6831
+ },
+ "yurutucu_usd": 0.0028148999999999995,
+ "bitirdi": true,
+ "sure_sn": 350.4,
+ "gizli": {
+  "gecti": true,
+  "gecen": 19,
+  "toplam": 19,
+  "cikti": "...................                                                      [100%]\n19 passed in 0.02s\n"
+ }
+}

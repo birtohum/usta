@@ -1,0 +1,23 @@
+{
+ "id": "h139",
+ "kip": "b",
+ "kategori": "küçük işletme hesapları (KDV, fatura, taksit, indirim, stok, kur dönüşümü, yuvarlama)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "abonelik.py içinde AbonelikHesabi sınıfı yazıldı: aylık ücret 30 güne bölünüp HALF_UP ile kuruşa yuvarlanıyor, kullanılan gün eksi dondurulan gün ile tutar hesaplanıyor, calendar ile ay uzunluğu, iki uç dahil dondurma, format/aralık kontrolleri ValueError ve tip kontrolleri TypeError ile yapılıyor, sonuç dict esnek anahtar ve toleranslı karşılaştırma destekliyor. pytest ile 5 test geçti.",
+ "adim": 18,
+ "yurutucu_token": {
+  "girdi": 100967,
+  "cikti": 57548
+ },
+ "yurutucu_usd": 0.021606300000000002,
+ "bitirdi": true,
+ "sure_sn": 498.4,
+ "gizli": {
+  "gecti": true,
+  "gecen": 17,
+  "toplam": 17,
+  "cikti": ".................                                                        [100%]\n17 passed in 0.03s\n"
+ }
+}

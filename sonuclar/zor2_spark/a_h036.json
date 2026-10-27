@@ -1,0 +1,23 @@
+{
+ "id": "h036",
+ "kip": "a",
+ "kategori": "veri yapıları ve algoritmalar (kuyruk, önbellek, arama, gruplama, birleştirme, durum makinesi)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "siparis.py oluşturuldu: SiparisDurumMakinesi (başlangıç alindi; alindi→hazirlaniyor→kargoda→teslim zinciri + her durumdan iptal; geçersiz ad ValueError, izinsiz geçiş RuntimeError, teslim/iptal terminal; durum()/gecmis() yöntemleri; threading.Lock ile eşzamanlı güvenlikte ilk çağrı kazanır ikincisi RuntimeError; büyük/küçük harf duyarlı; geçmiş en fazla 1000 öğe, aşımda en eski atılır) ve iptal_orani(iptal, toplam) işlevi (oranı iki ondalığa yuvarlanmış float döner, liste girdisini de destekler). Yalnızca standart kütüphane kullanıldı.",
+ "adim": 6,
+ "yurutucu_token": {
+  "girdi": 22353,
+  "cikti": 11079
+ },
+ "yurutucu_usd": 0.0044511,
+ "bitirdi": true,
+ "sure_sn": 101.1,
+ "gizli": {
+  "gecti": true,
+  "gecen": 18,
+  "toplam": 18,
+  "cikti": "..................                                                       [100%]\n18 passed in 0.02s\n"
+ }
+}

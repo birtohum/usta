@@ -1,0 +1,38 @@
+{
+ "id": "h027",
+ "kip": "d",
+ "kategori": "tarih ve saat (iş günü, resmî tatil listesi parametre olarak verilir, süre hesabı, biçim dönüşümü)",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 20,
+   "basarili": 20
+  }
+ ],
+ "spark_usd": 0.0064486000000000005,
+ "arayuz": "",
+ "hakem": [],
+ "geri_alma": 0,
+ "inceleme": {
+  "yazilan": 0,
+  "kanitli": []
+ },
+ "iptal_edilen_test": [],
+ "kabul_gecti": true,
+ "ozet": "`toplanti.py` içinde `cakisan_toplantilari_bul` ve `bosluklari_bul` yazıldı: sıkı biçim doğrulama (regex+strptime), süre 5-480 dk, gece yarısı yasağı, bitiş==başlangıç çakışma saymama, sıralı sonuçlar, 1 dk altı boşluk eleme, HH:MM sıfır dolgulu çıktı, TypeError/ValueError ayrımı ve farklı gün filtreleme. 21 pytest testi yazıldı ve hepsi geçti.",
+ "adim": 4,
+ "yurutucu_token": {
+  "girdi": 15757,
+  "cikti": 13335
+ },
+ "yurutucu_usd": 0.0042427,
+ "bitirdi": true,
+ "sure_sn": 299.5,
+ "gizli": {
+  "gecti": true,
+  "gecen": 19,
+  "toplam": 19,
+  "cikti": "...................                                                      [100%]\n19 passed in 0.03s\n"
+ }
+}

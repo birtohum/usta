@@ -1,0 +1,23 @@
+{
+ "id": "h004",
+ "kip": "b",
+ "kategori": "dosya ve komut satırı (CSV/JSON okuma, rapor yazdırma, argümanlar, hata mesajları)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "fatura_raporu.py yazıldı: CSV okuma, yıl filtresi, Decimal ile yarım-yukarı yuvarlama, KDV hariç/dahil hesap, brut azalan + müşteri adı artan sıralama, stderr uyarıları, eksik girdi kodu 2 ve stdout özeti. test_fatura.py ile 9 pytest testi geçti.",
+ "adim": 10,
+ "yurutucu_token": {
+  "girdi": 67632,
+  "cikti": 26797
+ },
+ "yurutucu_usd": 0.0121226,
+ "bitirdi": true,
+ "sure_sn": 223.4,
+ "gizli": {
+  "gecti": true,
+  "gecen": 15,
+  "toplam": 15,
+  "cikti": "...............                                                          [100%]\n15 passed in 0.54s\n"
+ }
+}

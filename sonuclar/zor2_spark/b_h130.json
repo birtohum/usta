@@ -1,0 +1,23 @@
+{
+ "id": "h130",
+ "kip": "b",
+ "kategori": "dosya ve komut satırı (CSV/JSON okuma, rapor yazdırma, argümanlar, hata mesajları)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "parca.py modülü yazıldı: iadeyi_degerlendir (tarih/durum doğrulama, fatura kontrolü, 30 gün dahil kabul, kullanılmış ret), garanti_kapsaminda_mi (tarih sırası ValueError, negatif km kontrolü, ay+km dahil sınır), aylik_ozet (YYYY-AA filtreleme, aynı gün+aynı fatura tekilleme, 2 ondalık kabul_oranı, boş liste sıfır sözlük) ve iade_csv_yukle (başlık kontrolü ValueError, fatura_no+tarih sıralama). 20 pytest testi yazıldı ve hepsi geçti.",
+ "adim": 5,
+ "yurutucu_token": {
+  "girdi": 20189,
+  "cikti": 16799
+ },
+ "yurutucu_usd": 0.005378699999999999,
+ "bitirdi": true,
+ "sure_sn": 125.3,
+ "gizli": {
+  "gecti": true,
+  "gecen": 19,
+  "toplam": 19,
+  "cikti": "...................                                                      [100%]\n19 passed in 0.04s\n"
+ }
+}

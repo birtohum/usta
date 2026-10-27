@@ -1,0 +1,83 @@
+{
+ "id": "h101",
+ "kip": "c",
+ "kategori": "doğrulama ve ayrıştırma (TC kimlik, IBAN, telefon, plaka, e-posta, adres biçimi)",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": false,
+   "toplam": 19,
+   "basarili": 12
+  },
+  {
+   "gecti": true,
+   "toplam": 19,
+   "basarili": 19
+  }
+ ],
+ "spark_usd": 0.0045031,
+ "arayuz": "Dosya hasta_kaydi.py, sınıf HastaKayitDogrulayici. __init__(self) parametresizdir ve self.kayitlar=[] başlatır. hasta_ekle(self, tc: str, telefon: str, eposta: str, adres: str) -> dict aynen korunur. rapor_yuzdesi(self) -> float parametresizdir. Posta kodu için ek parametre/metot yok, kontrol hasta_ekle içindedir. Sıralı ve tekil kayıtlar self.kayitlar listesinden okunur.",
+ "hakem": [
+  {
+   "test": "test_eposta_case_insensitive_tekillestirme",
+   "karar": "gerekli",
+   "gerekce": "Görev e-postada büyük küçük harf duyarsız tekilleştirmeyi açıkça istiyor.",
+   "tur": 1
+  },
+  {
+   "test": "test_eposta_kucukharf_ve_strip",
+   "karar": "gerekli",
+   "gerekce": "Görev e-postayı küçük harfe çevirmeyi ve boşlukları atmayı açıkça istiyor.",
+   "tur": 1
+  },
+  {
+   "test": "test_eposta_plus_etiketi_tekillestirme",
+   "karar": "gerekli",
+   "gerekce": "Görev plus etiketinin eşitlikte yoksayılmasını açıkça istiyor.",
+   "tur": 1
+  },
+  {
+   "test": "test_rapor_yuzdesi_yuvarlama",
+   "karar": "gerekli",
+   "gerekce": "Görev geçerli kayıt oranının iki ondalığa yuvarlanmasını açıkça istiyor.",
+   "tur": 1
+  },
+  {
+   "test": "test_siralama_tc_artan",
+   "karar": "gerekli",
+   "gerekce": "Görev kayıtların TC'ye göre artan sıralanmasını açıkça istiyor.",
+   "tur": 1
+  },
+  {
+   "test": "test_tc_gecerli_kabul",
+   "karar": "gerekli",
+   "gerekce": "Görev klasik checksum kurallarına uyan TC'nin kabulünü açıkça istiyor.",
+   "tur": 1
+  },
+  {
+   "test": "test_telefon_normalize",
+   "karar": "gerekli",
+   "gerekce": "Görev üç telefon biçiminin 0XXX XXX XX XX biçimine normalize edilmesini açıkça istiyor.",
+   "tur": 1
+  }
+ ],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [],
+ "kabul_gecti": true,
+ "ozet": "Adres çözümleme düzeltildi: 5 parçalı adresin son parçası 5 haneli posta kodu ise geçerli sayılıyor; 4. parçadaki sokak+kapı no ayrıştırılıp kapı numarası çıkarılıyor (örn. \"Atatürk Caddesi No:12\" → sokak + \"12\"). Ayrıca e-posta tekilleştirmesinde dönen mevcut kayıt da geçerli sayılarak rapor_yuzdesi doğru hesaplanıyor. Kabul testleri 19/19, kendi testlerim 9/9 geçiyor. Görev metniyle çelişen bir test yorumu olmadı.",
+ "adim": 16,
+ "yurutucu_token": {
+  "girdi": 120444,
+  "cikti": 29234
+ },
+ "yurutucu_usd": 0.0178912,
+ "bitirdi": true,
+ "sure_sn": 320.5,
+ "gizli": {
+  "gecti": false,
+  "gecen": 9,
+  "toplam": 18,
+  "cikti": ")\\s*$\", sokak_raw)\n                if m:\n                    kapi = m.group(1)\n                    tmp = sokak_raw[:m.start()].strip()\n                    tmp = re.sub(r\"\\s*(No:?|N:?|Kap[ıi]\\s*No:?)\\s*$\", \"\", tmp, flags=re.IGNORECASE).strip(\" ,:-\")\n                    sokak = tmp if tmp else sokak_raw\n                else:\n                    sokak = sokak_raw\n                    kapi = sokak_raw\n            else:\n                bulunan = re.findall(r\"\\b\\d{5}\\b\", adres)\n                if not bulunan:\n>                   raise ValueError(\"posta kodu 5 hane olmali\")\nE                   ValueError: posta kodu 5 hane olmali\n\nhasta_kaydi.py:108: ValueError\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_gecerli_kayit_dict_doner - ValueError: post...\nFAILED .gizli/test_gizli.py::test_telefon_plus90_normalize - ValueError: post...\nFAILED .gizli/test_gizli.py::test_telefon_sifirli_ve_onhane_normalize - Value...\nFAILED .gizli/test_gizli.py::test_eposta_normalize - ValueError: posta kodu 5...\nFAILED .gizli/test_gizli.py::test_eposta_plus_ve_case_tekillestirme - ValueEr...\nFAILED .gizli/test_gizli.py::test_adres_bes_parca - ValueError: posta kodu 5 ...\nFAILED .gizli/test_gizli.py::test_posta_kodu_dogrulama - AttributeError: 'Has...\nFAILED .gizli/test_gizli.py::test_tc_artan_siralama - ValueError: posta kodu ...\nFAILED .gizli/test_gizli.py::test_rapor_yuzdesi - ValueError: posta kodu 5 ha...\n9 failed, 9 passed in 0.08s\n"
+ }
+}

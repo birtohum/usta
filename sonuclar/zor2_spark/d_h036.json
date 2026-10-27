@@ -1,0 +1,38 @@
+{
+ "id": "h036",
+ "kip": "d",
+ "kategori": "veri yapıları ve algoritmalar (kuyruk, önbellek, arama, gruplama, birleştirme, durum makinesi)",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 18,
+   "basarili": 18
+  }
+ ],
+ "spark_usd": 0.0033681,
+ "arayuz": "siparis.py içinde SiparisDurumMakinesi(): gecis(yeni_durum: str) -> None, durum() -> str, gecmis() -> list; iptal_orani(iptal_sayisi: int, toplam_siparis: int) -> float",
+ "hakem": [],
+ "geri_alma": 0,
+ "inceleme": {
+  "yazilan": 0,
+  "kanitli": []
+ },
+ "iptal_edilen_test": [],
+ "kabul_gecti": true,
+ "ozet": "siparis.py içinde SiparisDurumMakinesi sınıfı (gecis/durum/gecmis) ve iptal_orani işlevi yazıldı; zincir geçişleri, ValueError/RuntimeError ayrımı, terminal yasakları, thread kilidiyle ilk-kazanır eşzamanlılık, case-sensitivity, 1000 öğelik geçmiş kapasitesi ve yuvarlama kuralları testlerle doğrulandı (10 test geçti).",
+ "adim": 4,
+ "yurutucu_token": {
+  "girdi": 10647,
+  "cikti": 4889
+ },
+ "yurutucu_usd": 0.0020425,
+ "bitirdi": true,
+ "sure_sn": 208.5,
+ "gizli": {
+  "gecti": true,
+  "gecen": 18,
+  "toplam": 18,
+  "cikti": "..................                                                       [100%]\n18 passed in 0.02s\n"
+ }
+}

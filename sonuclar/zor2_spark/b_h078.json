@@ -1,0 +1,23 @@
+{
+ "id": "h078",
+ "kip": "b",
+ "kategori": "veri yapıları ve algoritmalar (kuyruk, önbellek, arama, gruplama, birleştirme, durum makinesi)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "`baharat_cli.py` yazıldı: CSV okuma, başlık/dosya hatalarında çıkış 2, gramaj/stok tam-sayı değilse çıkış 1, negatif gramajda çıkış 2, --esik doğrulama (0-10000, çıkış 2), stok<esik filtresi ve ad/stok sıralaması ile JSON çıktısı. Yalnızca standart kütüphane kullanıldı. 15 pytest testi yazıldı ve hepsi geçti.",
+ "adim": 4,
+ "yurutucu_token": {
+  "girdi": 14524,
+  "cikti": 8035
+ },
+ "yurutucu_usd": 0.0030594,
+ "bitirdi": true,
+ "sure_sn": 68.8,
+ "gizli": {
+  "gecti": true,
+  "gecen": 17,
+  "toplam": 17,
+  "cikti": ".................                                                        [100%]\n17 passed in 0.55s\n"
+ }
+}

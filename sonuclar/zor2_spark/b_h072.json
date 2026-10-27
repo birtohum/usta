@@ -1,0 +1,23 @@
+{
+ "id": "h072",
+ "kip": "b",
+ "kategori": "veri yapıları ve algoritmalar (kuyruk, önbellek, arama, gruplama, birleştirme, durum makinesi)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "`kovan_verim.py` içinde LFU önbellek sınıfı `KovanHesapOnbellegi` yazıldı: kapasite kontrolü (1-1000, dışı ValueError), tip kontrolleri (TypeError), verim aralığı (0-1000.0, dışı ValueError), LFU çıkarma + eşitlikte en eski eklenen, `getir`/`koy` ile sıklık artışı, `istatistik` sözlüğü (`isabet`/`iski`/`boyut`). Yalnızca `numbers` modülü kullanıldı. 13 pytest testi yazıldı ve hepsi geçti.",
+ "adim": 5,
+ "yurutucu_token": {
+  "girdi": 15257,
+  "cikti": 11196
+ },
+ "yurutucu_usd": 0.0037649000000000007,
+ "bitirdi": true,
+ "sure_sn": 102.2,
+ "gizli": {
+  "gecti": true,
+  "gecen": 16,
+  "toplam": 16,
+  "cikti": "................                                                         [100%]\n16 passed in 0.02s\n"
+ }
+}

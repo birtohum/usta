@@ -1,0 +1,23 @@
+{
+ "id": "h114",
+ "kip": "a",
+ "kategori": "veri yapıları ve algoritmalar (kuyruk, önbellek, arama, gruplama, birleştirme, durum makinesi)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "restorasyon.py içinde RestorasyonIsi durum makinesi yazıldı: varsayılan TEKLIF, ileri zincir + her durumdan IPTAL, puan ve hata kuralları ile gecmis kaydı uygulandı ve testlerle doğrulandı.",
+ "adim": 10,
+ "yurutucu_token": {
+  "girdi": 39140,
+  "cikti": 16625
+ },
+ "yurutucu_usd": 0.007239,
+ "bitirdi": true,
+ "sure_sn": 147.9,
+ "gizli": {
+  "gecti": true,
+  "gecen": 16,
+  "toplam": 16,
+  "cikti": "................                                                         [100%]\n16 passed in 0.03s\n"
+ }
+}

@@ -1,0 +1,40 @@
+{
+ "id": "h133",
+ "kip": "d",
+ "kategori": "Türkçe metin işleme (Türkçe harfler, büyük/küçük harf, hece, ek, sıralama, sayı/yazı)",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 16,
+   "basarili": 16
+  }
+ ],
+ "spark_usd": 0.006218400000000001,
+ "arayuz": "",
+ "hakem": [],
+ "geri_alma": 0,
+ "inceleme": {
+  "yazilan": 0,
+  "kanitli": []
+ },
+ "iptal_edilen_test": [
+  "test_satir_bolme_sozcuk_bolunmez"
+ ],
+ "kabul_gecti": true,
+ "ozet": "altyazi.py ve testler yazıldı, pytest ile 5 test geçti.",
+ "adim": 5,
+ "yurutucu_token": {
+  "girdi": 20942,
+  "cikti": 23810
+ },
+ "yurutucu_usd": 0.0068562,
+ "bitirdi": true,
+ "sure_sn": 497.1,
+ "gizli": {
+  "gecti": true,
+  "gecen": 15,
+  "toplam": 15,
+  "cikti": "...............                                                          [100%]\n15 passed in 0.63s\n"
+ }
+}

@@ -1,0 +1,44 @@
+{
+ "id": "h135",
+ "kip": "c",
+ "kategori": "tarih ve saat (iş günü, resmî tatil listesi parametre olarak verilir, süre hesabı, biçim dönüşümü)",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 17,
+   "basarili": 17
+  }
+ ],
+ "spark_usd": 0.0026355,
+ "arayuz": "",
+ "hakem": [
+  {
+   "test": "test_rota_pencere_tasmasi_kesilir",
+   "karar": "hatali",
+   "gerekce": "7 dakikalık pencere için 10 beklemek yalnızca pencere içini sayma ve taşmayı kesme kuralıyla çelişir.",
+   "tur": 1
+  }
+ ],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [
+  "test_rota_pencere_tasmasi_kesilir"
+ ],
+ "kabul_gecti": true,
+ "ozet": "sut_toplama.py icinde ToplamaRotasi sinifi yazildi: kurucuda HH:MM/YYYY-MM-DD dogrulama ve bitis>baslangic kontrolu, hafta sonu+tatil gunlerinde 0 donduren ve ham sureyi ust 10 dakikaya yuvarlayip gunluk pencereye kesen rota_suresi_dk, verilen tarihten sonraki is gunlerini artan sirada donduren siradaki_toplama_gunu eklendi. pytest ile 8 test gecirildi.",
+ "adim": 4,
+ "yurutucu_token": {
+  "girdi": 12833,
+  "cikti": 9135
+ },
+ "yurutucu_usd": 0.0031103,
+ "bitirdi": true,
+ "sure_sn": 331.3,
+ "gizli": {
+  "gecti": true,
+  "gecen": 17,
+  "toplam": 17,
+  "cikti": ".................                                                        [100%]\n17 passed in 0.02s\n"
+ }
+}

@@ -1,0 +1,35 @@
+{
+ "id": "h019",
+ "kip": "c",
+ "kategori": "Türkçe metin işleme (Türkçe harfler, büyük/küçük harf, hece, ek, sıralama, sayı/yazı)",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 16,
+   "basarili": 16
+  }
+ ],
+ "spark_usd": 0.0019003000000000002,
+ "arayuz": "",
+ "hakem": [],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [],
+ "kabul_gecti": true,
+ "ozet": "hece.py içinde Heceliyici sınıfı yazıldı: ünlü aralıklarına göre 1 ünsüzü sonraki heceye geçirme, 2 ünsüzü bölme, 3 ünsüzde 1|2 ayırma, küçük harfe çevirme (I→ı, İ→i), tireyi silme, istisnaları aynen ve kopyalayarak döndürme, boş/rakam/noktalama için ValueError ve sözlük-dışı istisna için TypeError. pytest ile 8 test geçti.",
+ "adim": 5,
+ "yurutucu_token": {
+  "girdi": 14522,
+  "cikti": 17453
+ },
+ "yurutucu_usd": 0.0049428,
+ "bitirdi": true,
+ "sure_sn": 174.6,
+ "gizli": {
+  "gecti": true,
+  "gecen": 17,
+  "toplam": 17,
+  "cikti": ".................                                                        [100%]\n17 passed in 0.02s\n"
+ }
+}

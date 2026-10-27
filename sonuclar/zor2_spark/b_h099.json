@@ -1,0 +1,23 @@
+{
+ "id": "h099",
+ "kip": "b",
+ "kategori": "tarih ve saat (iş günü, resmî tatil listesi parametre olarak verilir, süre hesabı, biçim dönüşümü)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "depo_rezervasyon.py içinde DepoRezervasyon sınıfı yazıldı: kapalılık (Pazar/tatil/Cumartesi 08-12), 30 dk hizalama, 30 dk–8 saat süre, çakışma kontrolü, artan rezerv_id, Decimal ile yarım-yukarı kazanç, iptal mantığı ve tip/biçim doğrulamaları. 16 pytest testi geçiyor.",
+ "adim": 6,
+ "yurutucu_token": {
+  "girdi": 29771,
+  "cikti": 9535
+ },
+ "yurutucu_usd": 0.004884100000000001,
+ "bitirdi": true,
+ "sure_sn": 77.8,
+ "gizli": {
+  "gecti": true,
+  "gecen": 18,
+  "toplam": 18,
+  "cikti": "..................                                                       [100%]\n18 passed in 0.02s\n"
+ }
+}

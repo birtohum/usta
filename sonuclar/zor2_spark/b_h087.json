@@ -1,0 +1,23 @@
+{
+ "id": "h087",
+ "kip": "b",
+ "kategori": "tarih ve saat (iş günü, resmî tatil listesi parametre olarak verilir, süre hesabı, biçim dönüşümü)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "BalonTakvimi sınıfını balon_rezervasyon.py içinde yazdım: katı YYYY-MM-DD / YYYY-MM-DD HH:MM doğrulaması, bakım günü + resmi tatil kapalılığı, 30 gün ileriye ertele, 6 saate kadar gece yarısı aşan uçuş süresi, DD-MM-YYYY sıralı tekilleştiren program dönüşümü; TypeError/ValueError ayrımı standart kütüphane ile yapıldı. 26 pytest testi yazıldı ve hepsi geçti.",
+ "adim": 4,
+ "yurutucu_token": {
+  "girdi": 14557,
+  "cikti": 10652
+ },
+ "yurutucu_usd": 0.0035861,
+ "bitirdi": true,
+ "sure_sn": 85.0,
+ "gizli": {
+  "gecti": true,
+  "gecen": 18,
+  "toplam": 18,
+  "cikti": "..................                                                       [100%]\n18 passed in 0.02s\n"
+ }
+}

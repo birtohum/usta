@@ -1,0 +1,35 @@
+{
+ "id": "h012",
+ "kip": "c",
+ "kategori": "veri yapıları ve algoritmalar (kuyruk, önbellek, arama, gruplama, birleştirme, durum makinesi)",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 18,
+   "basarili": 18
+  }
+ ],
+ "spark_usd": 0.0017869000000000001,
+ "arayuz": "onbellek.py içinde LRUCache sınıfı; kurucu LRUCache(kapasite: int); metotlar get(anahtar: str) -> str, put(anahtar: str, deger: str) -> None, istatistik() -> dict; istatistik sözlüğü {\"isabet\": int, \"ıskalama\": int, \"oran\": float} anahtarlarını kullanır.",
+ "hakem": [],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [],
+ "kabul_gecti": true,
+ "ozet": "onbellek.py içinde OrderedDict tabanlı LRUCache sınıfı hazırlandı; kapasite/anahtar/değer doğrulamaları ValueError üretiyor, LRU tahliye ve get-taşıma davranışı ile isabet/ıskalama istatistikleri ve yuvarlanmış oran eklendi. 11 pytest testi geçti.",
+ "adim": 4,
+ "yurutucu_token": {
+  "girdi": 9960,
+  "cikti": 2505
+ },
+ "yurutucu_usd": 0.001497,
+ "bitirdi": true,
+ "sure_sn": 67.3,
+ "gizli": {
+  "gecti": true,
+  "gecen": 16,
+  "toplam": 16,
+  "cikti": "................                                                         [100%]\n16 passed in 0.02s\n"
+ }
+}

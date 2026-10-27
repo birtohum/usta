@@ -1,0 +1,35 @@
+{
+ "id": "h042",
+ "kip": "c",
+ "kategori": "veri yapıları ve algoritmalar (kuyruk, önbellek, arama, gruplama, birleştirme, durum makinesi)",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 16,
+   "basarili": 16
+  }
+ ],
+ "spark_usd": 0.0029475000000000005,
+ "arayuz": "",
+ "hakem": [],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [],
+ "kabul_gecti": true,
+ "ozet": "lojistik_cli.py yazıldı: CSV girdi okuma, başlık/eksik sütun ve limit(0-1000)/format(json-csv) doğrulamalarında stderr ValueError + çıkış 2, ağırlığa göre artan + id dizgesel sıralama, 2 boşluk girintili JSON / başlıklı CSV çıktı, son satırda 2 ondalıklı float ortalama (boş girdide 0.0). pytest ile 7 test geçti.",
+ "adim": 6,
+ "yurutucu_token": {
+  "girdi": 17571,
+  "cikti": 22030
+ },
+ "yurutucu_usd": 0.0061631,
+ "bitirdi": true,
+ "sure_sn": 211.3,
+ "gizli": {
+  "gecti": true,
+  "gecen": 17,
+  "toplam": 17,
+  "cikti": ".................                                                        [100%]\n17 passed in 0.47s\n"
+ }
+}

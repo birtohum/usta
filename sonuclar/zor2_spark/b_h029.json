@@ -1,0 +1,23 @@
+{
+ "id": "h029",
+ "kip": "b",
+ "kategori": "doğrulama ve ayrıştırma (TC kimlik, IBAN, telefon, plaka, e-posta, adres biçimi)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "eposta.py içinde EpostaTemizleyici sınıfı gerçeklendi: dogrula (TypeError/str dışı, False/bozuk), normalize_et (küçük harfe çevirip saklar, geçersizde ValueError), alan_istatistigi (sayıya göre azalan, eşitlikte alfabetik case-insensitive, yüzde round 2 ondalık, boşken {}). Kurallar: tek @, yerel ≤64, toplam ≤254, nokta başta/sonda/ardarda yasak, alan adında en az bir nokta, etiket 1-63 tire kontrolü, yalnızca ASCII harf/rakam/nokta/tire. pytest ile 13 test geçti.",
+ "adim": 4,
+ "yurutucu_token": {
+  "girdi": 12074,
+  "cikti": 14112
+ },
+ "yurutucu_usd": 0.0040298,
+ "bitirdi": true,
+ "sure_sn": 118.9,
+ "gizli": {
+  "gecti": false,
+  "gecen": 14,
+  "toplam": 18,
+  "cikti": "\n    def test_istatistik_siralama_alfabetik():\n        t = EpostaTemizleyici()\n        for e in ['x@b.com', 'y@b.com', 'z@a.com', 'w@a.com', 'v@c.com']:\n            assert t.dogrula(e) is True\n        s = t.alan_istatistigi()\n>       assert list(s.keys()) == ['a.com', 'b.com', 'c.com']\nE       AssertionError: assert [] == ['a.com', 'b.com', 'c.com']\nE         Right contains 3 more items, first extra item: 'a.com'\nE         Use -v to get more diff\n\n.gizli/test_gizli.py:138: AssertionError\n_______________________ test_istatistik_yuzde_yuvarlama ________________________\n\n    def test_istatistik_yuzde_yuvarlama():\n        t = EpostaTemizleyici()\n        assert t.dogrula('a@example.com') is True\n        assert t.dogrula('b@example.com') is True\n        assert t.dogrula('c@test.com') is True\n        s = t.alan_istatistigi()\n>       assert list(s.keys())[0] == 'example.com'\nE       IndexError: list index out of range\n\n.gizli/test_gizli.py:149: IndexError\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_nokta_farklari_ayri - KeyError: 'example.com'\nFAILED .gizli/test_gizli.py::test_harf_duyarsiz_esitlik - KeyError: 'example....\nFAILED .gizli/test_gizli.py::test_istatistik_siralama_alfabetik - AssertionEr...\nFAILED .gizli/test_gizli.py::test_istatistik_yuzde_yuvarlama - IndexError: li...\n4 failed, 14 passed in 0.07s\n"
+ }
+}

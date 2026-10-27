@@ -1,0 +1,35 @@
+{
+ "id": "h141",
+ "kip": "c",
+ "kategori": "dosya ve komut satırı (CSV/JSON okuma, rapor yazdırma, argümanlar, hata mesajları)",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 19,
+   "basarili": 19
+  }
+ ],
+ "spark_usd": 0.0030557,
+ "arayuz": "",
+ "hakem": [],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [],
+ "kabul_gecti": true,
+ "ozet": "`leblebi_fire.py` programı yazıldı: argparse ile `--giris/--cikis/--kwh-ucret` alır, kwh kontrolünü dosya okumadan yapar, Decimal+ROUND_HALF_UP ile fire (4 basamak) ve birim maliyet (2 basamak) hesaplar, doğal sıralı raporu `;` UTF-8 CSV olarak yazar, belirtilen stderr/stdout mesajları ve çıkış kodlarını (1/2/3) uygular. pytest ile 11 test geçirildi.",
+ "adim": 5,
+ "yurutucu_token": {
+  "girdi": 23356,
+  "cikti": 13893
+ },
+ "yurutucu_usd": 0.0051142,
+ "bitirdi": true,
+ "sure_sn": 304.5,
+ "gizli": {
+  "gecti": true,
+  "gecen": 17,
+  "toplam": 17,
+  "cikti": ".................                                                        [100%]\n17 passed in 0.52s\n"
+ }
+}

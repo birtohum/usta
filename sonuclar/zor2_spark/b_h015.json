@@ -1,0 +1,23 @@
+{
+ "id": "h015",
+ "kip": "b",
+ "kategori": "tarih ve saat (iş günü, resmî tatil listesi parametre olarak verilir, süre hesabı, biçim dönüşümü)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "`mesai_ozeti.py` yazıldı: HH:MM/YYYY-AA-GG doğrulaması, mola 0-600 aralığı, tatillerin sıralanıp tekilleştirilmesi, eşit çıkışta 24 saat / küçük çıkışta ertesi gün, mola≥ham ise 0, 15 dakikaya aşağı yuvarlama, hafta sonu/tatilde is_gunu:false, metin ve JSON çıktıları; tüm hatalarda stderr + çıkış kodu 2. 18 pytest testi geçiyor.",
+ "adim": 6,
+ "yurutucu_token": {
+  "girdi": 24924,
+  "cikti": 9798
+ },
+ "yurutucu_usd": 0.004452,
+ "bitirdi": true,
+ "sure_sn": 99.1,
+ "gizli": {
+  "gecti": true,
+  "gecen": 17,
+  "toplam": 17,
+  "cikti": ".................                                                        [100%]\n17 passed in 0.52s\n"
+ }
+}

@@ -1,0 +1,55 @@
+{
+ "id": "h063",
+ "kip": "c",
+ "kategori": "tarih ve saat (iş günü, resmî tatil listesi parametre olarak verilir, süre hesabı, biçim dönüşümü)",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": false,
+   "toplam": 18,
+   "basarili": 17
+  },
+  {
+   "gecti": true,
+   "toplam": 18,
+   "basarili": 18
+  }
+ ],
+ "spark_usd": 0.0043055,
+ "arayuz": "",
+ "hakem": [
+  {
+   "test": "test_saniye_asagi_yuvarlanir",
+   "karar": "belirsiz",
+   "gerekce": "Görev metni biçimi YYYY-MM-DD HH:MM olarak tanımlıyor ve saniyeli girdinin kabul edilip nasıl ayrıştırılacağını açıkça belirtmiyor.",
+   "tur": 1
+  },
+  {
+   "test": "test_vardiya_suresi_alti_saati_asinca_mola",
+   "karar": "gerekli",
+   "gerekce": "Görev metni altı saatten uzun vardiyadan 60 dakika mola düşülmesini açıkça istiyor, 361-60=301 olur.",
+   "tur": 1
+  }
+ ],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [
+  "test_saniye_asagi_yuvarlanir"
+ ],
+ "kabul_gecti": true,
+ "ozet": "Mola kuralı düzeltildi: 6 saati aşan vardiyada önce 30 dk geceden (yetmezse kalanı dahil) toplam 60 dk düşülüyor; örn. 09:00-15:01 gündüz vardiyası 301 dk. Görev metniyle çelişki yok, kabul testinin yorumu benimsendi. Tüm testler geçiyor (9/9 yerel, 19/19 kabul).",
+ "adim": 30,
+ "yurutucu_token": {
+  "girdi": 351708,
+  "cikti": 49797
+ },
+ "yurutucu_usd": 0.04513020000000001,
+ "bitirdi": true,
+ "sure_sn": 513.3,
+ "gizli": {
+  "gecti": true,
+  "gecen": 18,
+  "toplam": 18,
+  "cikti": "..................                                                       [100%]\n18 passed in 0.03s\n"
+ }
+}

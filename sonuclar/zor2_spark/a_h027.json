@@ -1,0 +1,23 @@
+{
+ "id": "h027",
+ "kip": "a",
+ "kategori": "tarih ve saat (iş günü, resmî tatil listesi parametre olarak verilir, süre hesabı, biçim dönüşümü)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "`toplanti.py` içinde `cakisan_toplantilari_bul` ve `bosluklari_bul` yazıldı: sıkı biçim/tarih doğrulama (ValueError), liste değilse TypeError, 3 öğeli olmayan demette ValueError, 5-480 dk süre, gece yarısı yasağı, bitiş=başlangıç çakışma sayılmaz ama sıfır süre geçersiz, sıralı sonuçlar, HH:MM sıfır dolgulu boşluklar, 1 dk altı elenir, boş listede boş çakışma/tam aralık, farklı günler yok sayılır.",
+ "adim": 4,
+ "yurutucu_token": {
+  "girdi": 15259,
+  "cikti": 16209
+ },
+ "yurutucu_usd": 0.004767700000000001,
+ "bitirdi": true,
+ "sure_sn": 137.0,
+ "gizli": {
+  "gecti": true,
+  "gecen": 19,
+  "toplam": 19,
+  "cikti": "...................                                                      [100%]\n19 passed in 0.02s\n"
+ }
+}

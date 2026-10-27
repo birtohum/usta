@@ -1,0 +1,35 @@
+{
+ "id": "h129",
+ "kip": "c",
+ "kategori": "tarih ve saat (iş günü, resmî tatil listesi parametre olarak verilir, süre hesabı, biçim dönüşümü)",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 20,
+   "basarili": 20
+  }
+ ],
+ "spark_usd": 0.0021625,
+ "arayuz": "",
+ "hakem": [],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [],
+ "kabul_gecti": true,
+ "ozet": "damitim_takip.py yazıldı: parti_bitis ve is_gunu_farki eklendi, 08:00-18:00 iş saatleri, hafta sonu/tatil atlama, 3 tarih formatı, ValueError kontrolleri ve yuvarlama uygulandı; pytest ile 14 test geçti.",
+ "adim": 5,
+ "yurutucu_token": {
+  "girdi": 13709,
+  "cikti": 24301
+ },
+ "yurutucu_usd": 0.006231100000000001,
+ "bitirdi": true,
+ "sure_sn": 348.4,
+ "gizli": {
+  "gecti": true,
+  "gecen": 16,
+  "toplam": 16,
+  "cikti": "................                                                         [100%]\n16 passed in 0.03s\n"
+ }
+}

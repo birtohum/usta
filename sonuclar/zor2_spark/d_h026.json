@@ -1,0 +1,38 @@
+{
+ "id": "h026",
+ "kip": "d",
+ "kategori": "küçük işletme hesapları (KDV, fatura, taksit, indirim, stok, kur dönüşümü, yuvarlama)",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 19,
+   "basarili": 19
+  }
+ ],
+ "spark_usd": 0.0062106,
+ "arayuz": "",
+ "hakem": [],
+ "geri_alma": 0,
+ "inceleme": {
+  "yazilan": 0,
+  "kanitli": []
+ },
+ "iptal_edilen_test": [],
+ "kabul_gecti": true,
+ "ozet": "rapor_cli.py yazıldı: zorunlu --girdi/--cikti, --kdv-dahil, --sirala (urun/tutar), --para-birimi (TL/USD/EUR); Decimal yarım-yukarı 2 basamak yuvarlama, satır KDV ayrı yuvarlanıp toplanır, negatif ve kdv_oranı/boş ürün kontrolleri (çıkış 3), ürün birleştirme, sıralama kuralları, boş girdide 0 toplamlar; yalnızca standart kütüphane. test_rapor.py ile 18 test `python -m pytest -q` altında geçti.",
+ "adim": 4,
+ "yurutucu_token": {
+  "girdi": 17281,
+  "cikti": 13996
+ },
+ "yurutucu_usd": 0.0045273,
+ "bitirdi": true,
+ "sure_sn": 309.9,
+ "gizli": {
+  "gecti": true,
+  "gecen": 18,
+  "toplam": 18,
+  "cikti": "..................                                                       [100%]\n18 passed in 0.66s\n"
+ }
+}

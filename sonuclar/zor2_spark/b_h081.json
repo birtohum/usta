@@ -1,0 +1,23 @@
+{
+ "id": "h081",
+ "kip": "b",
+ "kategori": "tarih ve saat (iş günü, resmî tatil listesi parametre olarak verilir, süre hesabı, biçim dönüşümü)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "liman_ardiye.py içinde ArdiyeHesaplayici sınıfı yazıldı: yalnızca datetime kullanıldı, Pzt–Cmt iş günü, Pazar+tatil hariç, ücretsiz periyot ve ücretli gün hesabı ile yarım-yukarı yuvarlama uygulandı; tip/biçim hataları için TypeError/ValueError ayrımı yapıldı. test_ardiye.py ile 19 pytest testi geçiyor.",
+ "adim": 4,
+ "yurutucu_token": {
+  "girdi": 17369,
+  "cikti": 15971
+ },
+ "yurutucu_usd": 0.004931100000000001,
+ "bitirdi": true,
+ "sure_sn": 129.8,
+ "gizli": {
+  "gecti": true,
+  "gecen": 16,
+  "toplam": 16,
+  "cikti": "................                                                         [100%]\n16 passed in 0.02s\n"
+ }
+}

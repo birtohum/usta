@@ -1,0 +1,23 @@
+{
+ "id": "h034",
+ "kip": "b",
+ "kategori": "dosya ve komut satırı (CSV/JSON okuma, rapor yazdırma, argümanlar, hata mesajları)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "not_raporu.py yazıldı: CSV okuma/doğrulama, stderr'e satır atlama mesajları, Decimal ile yarım-yukarı ortalama, Gecti/Kaldı durumu, sıralı JSON çıktısı, eşik hatasında kod 3 ve başarı mesajı. 10 pytest testi geçiyor.",
+ "adim": 7,
+ "yurutucu_token": {
+  "girdi": 35004,
+  "cikti": 13837
+ },
+ "yurutucu_usd": 0.0062678000000000005,
+ "bitirdi": true,
+ "sure_sn": 124.0,
+ "gizli": {
+  "gecti": true,
+  "gecen": 16,
+  "toplam": 16,
+  "cikti": "................                                                         [100%]\n16 passed in 0.51s\n"
+ }
+}

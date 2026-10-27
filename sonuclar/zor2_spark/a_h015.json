@@ -1,0 +1,23 @@
+{
+ "id": "h015",
+ "kip": "a",
+ "kategori": "tarih ve saat (iş günü, resmî tatil listesi parametre olarak verilir, süre hesabı, biçim dönüşümü)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "`mesai_ozeti.py` yazıldı ve tüm kurallar doğrulandı: HH:MM/YYYY-AA-GG biçim denetimi (hatada stderr + çıkış 2), mola 0-600 aralığı, tatillerin boş geçilebilmesi/sıralanıp tekilleştirilmesi/geçersiz günün çıkış 2 olması, eşit saatte 24s/erken çıkışta ertesi gün/mola≥ham ise 0, 15 dakikaya aşağı yuvarlama ve `H saat M dakika`, tatil/hafta sonu `is_gunu:false` ile net sürenin yine hesaplanması, metin/JSON tek satır çıktı, eksik bayrak ve yanlış formatta çıkış 2, başarıda çıkış 0.",
+ "adim": 6,
+ "yurutucu_token": {
+  "girdi": 25574,
+  "cikti": 7057
+ },
+ "yurutucu_usd": 0.0039688,
+ "bitirdi": true,
+ "sure_sn": 68.8,
+ "gizli": {
+  "gecti": true,
+  "gecen": 17,
+  "toplam": 17,
+  "cikti": ".................                                                        [100%]\n17 passed in 0.56s\n"
+ }
+}

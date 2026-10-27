@@ -1,0 +1,23 @@
+{
+ "id": "h059",
+ "kip": "a",
+ "kategori": "doğrulama ve ayrıştırma (TC kimlik, IBAN, telefon, plaka, e-posta, adres biçimi)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "`iban_ozet.py` yazıldı ve test edildi. Program: satırları strip edip iç boşlukları silerek ve büyüterek normalize eder; boş satırları atlar; `TR` ile başlamayanları `ulke-hatasi`, uzunluğu 26 olmayanları `uzunluk-hatasi`, mod97 (ilk 4 karakter sona taşınır, A=10 dönüşümü, mod 97 != 1) başarısızlarını `mod97-hatasi` olarak `satirNo:kategori:orijinalSatir` biçiminde hatalar dosyasına yazar. Geçerli IBAN'lardan 5–9. karakterler banka kodu alınıp gruplar, tekrarlar bir kez sayılır, `ozet.json` istenen formatta banka kodu ve IBAN sıralı yazılır. Yalnızca standart kütüphane (argparse, json, os) kullanıldı.",
+ "adim": 6,
+ "yurutucu_token": {
+  "girdi": 16490,
+  "cikti": 9734
+ },
+ "yurutucu_usd": 0.0035958,
+ "bitirdi": true,
+ "sure_sn": 88.3,
+ "gizli": {
+  "gecti": true,
+  "gecen": 16,
+  "toplam": 16,
+  "cikti": "................                                                         [100%]\n16 passed in 0.39s\n"
+ }
+}

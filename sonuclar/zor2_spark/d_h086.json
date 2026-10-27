@@ -1,0 +1,38 @@
+{
+ "id": "h086",
+ "kip": "d",
+ "kategori": "küçük işletme hesapları (KDV, fatura, taksit, indirim, stok, kur dönüşümü, yuvarlama)",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 19,
+   "basarili": 19
+  }
+ ],
+ "spark_usd": 0.005296800000000001,
+ "arayuz": "",
+ "hakem": [],
+ "geri_alma": 0,
+ "inceleme": {
+  "yazilan": 0,
+  "kanitli": []
+ },
+ "iptal_edilen_test": [],
+ "kabul_gecti": true,
+ "ozet": "konaklama.py içinde KonaklamaFaturasi sınıfı Decimal-only hesapla ve gunluk_dokum ile kuruldu; tüm doğrulama ve yuvarlama kuralları uygulandı, pytest ile 9 test geçti.",
+ "adim": 5,
+ "yurutucu_token": {
+  "girdi": 16394,
+  "cikti": 13427
+ },
+ "yurutucu_usd": 0.0043248,
+ "bitirdi": true,
+ "sure_sn": 271.9,
+ "gizli": {
+  "gecti": true,
+  "gecen": 17,
+  "toplam": 17,
+  "cikti": ".................                                                        [100%]\n17 passed in 0.03s\n"
+ }
+}

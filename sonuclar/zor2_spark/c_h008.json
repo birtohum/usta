@@ -1,0 +1,35 @@
+{
+ "id": "h008",
+ "kip": "c",
+ "kategori": "küçük işletme hesapları (KDV, fatura, taksit, indirim, stok, kur dönüşümü, yuvarlama)",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 17,
+   "basarili": 17
+  }
+ ],
+ "spark_usd": 0.0021285,
+ "arayuz": "",
+ "hakem": [],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [],
+ "kabul_gecti": true,
+ "ozet": "taksit.py içinde taksitlendir ve kalan_borc fonksiyonları yazıldı: Decimal ile yarım-yukarı yuvarlama, kuruş farkı son taksitte, değer aralık kontrolleri (ValueError) ve tip kontrolleri (TypeError). test_taksit.py ile 13 pytest testi yazıldı ve hepsi geçti.",
+ "adim": 4,
+ "yurutucu_token": {
+  "girdi": 13802,
+  "cikti": 6746
+ },
+ "yurutucu_usd": 0.0027294,
+ "bitirdi": true,
+ "sure_sn": 68.4,
+ "gizli": {
+  "gecti": true,
+  "gecen": 17,
+  "toplam": 17,
+  "cikti": ".................                                                        [100%]\n17 passed in 0.02s\n"
+ }
+}

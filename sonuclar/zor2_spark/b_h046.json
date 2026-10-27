@@ -1,0 +1,23 @@
+{
+ "id": "h046",
+ "kip": "b",
+ "kategori": "dosya ve komut satırı (CSV/JSON okuma, rapor yazdırma, argümanlar, hata mesajları)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "bordro.py modülü yazıldı: kademeli gelir vergisi (%15/%20/%27, Decimal HALF_UP kuruş yuvarlama), net maaş (brüt-kesinti-vergi, negatif aynen), bordro_olustur (eksik anahtarda Geçersiz kayıt, CSV başlık sicil_no,brut,vergi,net vergi azalan+sicil artan sıralı, toplam_vergi/ortalama_net dönüşü). Hata mesajları tam olarak Geçersiz tutar/Geçersiz kayıt. pytest ile 18 test geçti.",
+ "adim": 4,
+ "yurutucu_token": {
+  "girdi": 14131,
+  "cikti": 12141
+ },
+ "yurutucu_usd": 0.0038413000000000006,
+ "bitirdi": true,
+ "sure_sn": 95.8,
+ "gizli": {
+  "gecti": true,
+  "gecen": 17,
+  "toplam": 17,
+  "cikti": ".................                                                        [100%]\n17 passed in 0.05s\n"
+ }
+}

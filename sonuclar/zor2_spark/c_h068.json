@@ -1,0 +1,37 @@
+{
+ "id": "h068",
+ "kip": "c",
+ "kategori": "küçük işletme hesapları (KDV, fatura, taksit, indirim, stok, kur dönüşümü, yuvarlama)",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 17,
+   "basarili": 17
+  }
+ ],
+ "spark_usd": 0.0024945,
+ "arayuz": "",
+ "hakem": [],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [
+  "test_gram_fiyat_aralik_sinirlari"
+ ],
+ "kabul_gecti": true,
+ "ozet": "avans.py içinde SiparisAvansi sınıfı kuruldu: SIP-YYYY-XXXX kod ve YYYY-AA-GG tarih doğrulaması, Decimal ROUND_HALF_UP ile para (2) ve gram (3) yuvarlama, toplam=gram*gram_fiyat+işçilik, %20 ilk kapora kuralı, sıralı kaporalar, kalan_borc, iptal({odenen,kesinti,iade}), kod-tabanlı eq/hash. 17 pytest testi geçiyor.",
+ "adim": 9,
+ "yurutucu_token": {
+  "girdi": 68981,
+  "cikti": 23087
+ },
+ "yurutucu_usd": 0.011515499999999998,
+ "bitirdi": true,
+ "sure_sn": 224.4,
+ "gizli": {
+  "gecti": true,
+  "gecen": 16,
+  "toplam": 16,
+  "cikti": "................                                                         [100%]\n16 passed in 0.02s\n"
+ }
+}

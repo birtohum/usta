@@ -1,0 +1,23 @@
+{
+ "id": "h002",
+ "kip": "a",
+ "kategori": "küçük işletme hesapları (KDV, fatura, taksit, indirim, stok, kur dönüşümü, yuvarlama)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "fatura.py içinde KdvliFatura sınıfı implemente edildi: tip kontrollerinde TypeError, KDV oranı (1/10/20), negatif fiyat, adet<1 ve boş açıklama için ValueError; Decimal ile ROUND_HALF_UP 2 basamak yuvarlama ve satır bazında KDV yuvarlayıp toplama; ara/kdv/genel toplam ilişkisi; Türkçe duyarsız sıralı sabit genişlikli fatura_dokumu; boş faturada 0.0 ve yalnızca standart kütüphane kullanımı.",
+ "adim": 5,
+ "yurutucu_token": {
+  "girdi": 17793,
+  "cikti": 14358
+ },
+ "yurutucu_usd": 0.0046509,
+ "bitirdi": true,
+ "sure_sn": 118.9,
+ "gizli": {
+  "gecti": false,
+  "gecen": 15,
+  "toplam": 16,
+  "cikti": "..............F.                                                         [100%]\n=================================== FAILURES ===================================\n___________________ test_fatura_dokumu_kucuk_buyuk_duyarsiz ____________________\n\n    def test_fatura_dokumu_kucuk_buyuk_duyarsiz():\n        f = KdvliFatura()\n        f.satir_ekle('elma', 1.0, 1, 1)\n        f.satir_ekle('ELMA', 1.0, 1, 1)\n        f.satir_ekle('armut', 1.0, 1, 1)\n        d = f.fatura_dokumu()\n        satirlar = d.splitlines()\n>       assert len(satirlar) == 3\nE       AssertionError: assert 9 == 3\nE        +  where 9 = len(['Açıklama                        Adet  Birim Fiyat Satır Toplam', '--------------------------------------------------...                   1         1.00         1.01', '--------------------------------------------------------------', ...])\n\n.gizli/test_gizli.py:140: AssertionError\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_fatura_dokumu_kucuk_buyuk_duyarsiz - Assert...\n1 failed, 15 passed in 0.04s\n"
+ }
+}

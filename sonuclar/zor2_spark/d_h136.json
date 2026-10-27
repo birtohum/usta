@@ -1,0 +1,38 @@
+{
+ "id": "h136",
+ "kip": "d",
+ "kategori": "dosya ve komut satırı (CSV/JSON okuma, rapor yazdırma, argümanlar, hata mesajları)",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 18,
+   "basarili": 18
+  }
+ ],
+ "spark_usd": 0.0066728,
+ "arayuz": "",
+ "hakem": [],
+ "geri_alma": 0,
+ "inceleme": {
+  "yazilan": 0,
+  "kanitli": []
+ },
+ "iptal_edilen_test": [],
+ "kabul_gecti": true,
+ "ozet": "`yag_verim.py` yazıldı: noktalı virgüllü giriş CSV'sini doğrular (GG.AA.YYYY tarih, soguk/sicak sıkım tipi, pozitif sayılar, ondalık virgül yasağı), hatalı satırları `UYARI: satir <n> atlandi` ile atlar, Decimal+ROUND_HALF_UP ile 3 basamak yuvarlanmış verim/ağırlıklı asitlik hesaplar, sınıflandırır, min-verim filtresi ve sıralama uygular, UTF-8-SIG rapor yazar; hata kodları ve stdout/stderr mesajları spec'e uygun. 13 pytest testi geçiyor.",
+ "adim": 14,
+ "yurutucu_token": {
+  "girdi": 117364,
+  "cikti": 16166
+ },
+ "yurutucu_usd": 0.014969600000000001,
+ "bitirdi": true,
+ "sure_sn": 501.1,
+ "gizli": {
+  "gecti": true,
+  "gecen": 17,
+  "toplam": 17,
+  "cikti": ".................                                                        [100%]\n17 passed in 0.61s\n"
+ }
+}

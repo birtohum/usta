@@ -1,0 +1,23 @@
+{
+ "id": "h090",
+ "kip": "a",
+ "kategori": "veri yapıları ve algoritmalar (kuyruk, önbellek, arama, gruplama, birleştirme, durum makinesi)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "damitim_onbellegi.py yazıldı: ağırlıklı LRU önbellek, ROUND_HALF_UP yuvarlama, doğrulama ve istatistikler.",
+ "adim": 4,
+ "yurutucu_token": {
+  "girdi": 7529,
+  "cikti": 33097
+ },
+ "yurutucu_usd": 0.0073723,
+ "bitirdi": true,
+ "sure_sn": 273.0,
+ "gizli": {
+  "gecti": false,
+  "gecen": 16,
+  "toplam": 17,
+  "cikti": "..............F..                                                        [100%]\n=================================== FAILURES ===================================\n__________________ test_ayni_id_farkli_gul_agirlik_guncelleme __________________\n\n    def test_ayni_id_farkli_gul_agirlik_guncelleme():\n        c = DamitimOnbellegi(max_agirlik=1000)\n        v1 = c.hesapla_veya_getir(\"X\", 10.0, 10.0, lambda: 1.0)\n        assert v1 == pytest.approx(1.0)\n        v2 = c.hesapla_veya_getir(\"X\", 20.0, 10.0, lambda: 99.0)\n        # ayni parti_id: kayit sayisi artmaz, agirlik farki dusulur\n        assert c.istatistik()[\"kayit_sayisi\"] == 1\n        assert c.istatistik()[\"toplam_agirlik\"] == pytest.approx(agirlik(\"X\", 20.0))\n        # isabet oldugu icin eski deger doner\n>       assert v2 == pytest.approx(1.0)\nE       assert 99.0 == 1.0 ± 1.0e-06\nE         comparison failed\nE         Obtained: 99.0\nE         Expected: 1.0 ± 1.0e-06\n\n.gizli/test_gizli.py:150: AssertionError\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_ayni_id_farkli_gul_agirlik_guncelleme - ass...\n1 failed, 16 passed in 0.06s\n"
+ }
+}

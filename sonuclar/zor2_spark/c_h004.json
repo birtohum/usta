@@ -1,0 +1,86 @@
+{
+ "id": "h004",
+ "kip": "c",
+ "kategori": "dosya ve komut satırı (CSV/JSON okuma, rapor yazdırma, argümanlar, hata mesajları)",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 9,
+   "basarili": 9
+  }
+ ],
+ "spark_usd": 0.0037923,
+ "arayuz": "",
+ "hakem": [
+  {
+   "test": "test_gecerli_oranlar_kabul",
+   "karar": "belirsiz",
+   "gerekce": "Görev metni toplam_brut'un KDV dahil mi hariç mi olduğunu tanımlamıyor.",
+   "tur": 1
+  },
+  {
+   "test": "test_gecersiz_oran_atlanir",
+   "karar": "belirsiz",
+   "gerekce": "Görev metni toplam_brut'un KDV dahil mi hariç mi olduğunu tanımlamıyor.",
+   "tur": 1
+  },
+  {
+   "test": "test_negatif_tutar_atlanir",
+   "karar": "belirsiz",
+   "gerekce": "Görev metni toplam_brut'un KDV dahil mi hariç mi olduğunu tanımlamıyor.",
+   "tur": 1
+  },
+  {
+   "test": "test_temel_toplamlar_kdv_haric",
+   "karar": "belirsiz",
+   "gerekce": "Görev metni toplam_brut'un KDV dahil mi hariç mi olduğunu tanımlamıyor.",
+   "tur": 1
+  },
+  {
+   "test": "test_tutar_virgul_ayrac_gecersiz_sayilmaz",
+   "karar": "belirsiz",
+   "gerekce": "Görev metni toplam_brut'un KDV dahil mi hariç mi olduğunu tanımlamıyor.",
+   "tur": 1
+  },
+  {
+   "test": "test_yarim_yukari_yuvarlama",
+   "karar": "belirsiz",
+   "gerekce": "Görev metni toplam_brut'un KDV dahil mi hariç mi olduğunu tanımlamıyor.",
+   "tur": 1
+  },
+  {
+   "test": "test_yil_disi_satir_sessizce_atlanir",
+   "karar": "belirsiz",
+   "gerekce": "Görev metni toplam_brut'un KDV dahil mi hariç mi olduğunu tanımlamıyor.",
+   "tur": 1
+  }
+ ],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [
+  "test_gecerli_oranlar_kabul",
+  "test_gecersiz_oran_atlanir",
+  "test_negatif_tutar_atlanir",
+  "test_temel_toplamlar_kdv_haric",
+  "test_tutar_virgul_ayrac_gecersiz_sayilmaz",
+  "test_yarim_yukari_yuvarlama",
+  "test_yil_disi_satir_sessizce_atlanir"
+ ],
+ "kabul_gecti": true,
+ "ozet": "fatura_raporu.py komut satırı aracı yazıldı: CSV okuma, yıl filtresi, Decimal ile KDV/brüt hesabı (normal ve --kdv-dahil geri hesabı), yarım-yukarı kuruş yuvarlama, toplam_brut/toplam_kdv/musteri_ozet JSON çıktısı, brut-azalan + müşteri-adı-artan sıralama, stderr satır-atlama ve girdi-bulunamadı mesajları ile stdout rapor mesajı. test_rapor.py ile 11 pytest testi geçiyor.",
+ "adim": 9,
+ "yurutucu_token": {
+  "girdi": 55610,
+  "cikti": 18719
+ },
+ "yurutucu_usd": 0.0093048,
+ "bitirdi": true,
+ "sure_sn": 196.9,
+ "gizli": {
+  "gecti": true,
+  "gecen": 15,
+  "toplam": 15,
+  "cikti": "...............                                                          [100%]\n15 passed in 0.56s\n"
+ }
+}

@@ -1,0 +1,35 @@
+{
+ "id": "h056",
+ "kip": "c",
+ "kategori": "küçük işletme hesapları (KDV, fatura, taksit, indirim, stok, kur dönüşümü, yuvarlama)",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 17,
+   "basarili": 17
+  }
+ ],
+ "spark_usd": 0.0025289,
+ "arayuz": "",
+ "hakem": [],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [],
+ "kabul_gecti": true,
+ "ozet": "portfoy.py içinde CekPortfoyu sınıfı yazıldı: 6 haneli çek no, Decimal ROUND_HALF_UP yuvarlama, tarih/keşideci/tutar doğrulamaları, protesto, sıralı vadesi_gelenler, risk_toplami ve küme tabanlı __eq__. 14 pytest testi geçti.",
+ "adim": 6,
+ "yurutucu_token": {
+  "girdi": 28212,
+  "cikti": 12801
+ },
+ "yurutucu_usd": 0.005381400000000001,
+ "bitirdi": true,
+ "sure_sn": 272.8,
+ "gizli": {
+  "gecti": true,
+  "gecen": 16,
+  "toplam": 16,
+  "cikti": "................                                                         [100%]\n16 passed in 0.02s\n"
+ }
+}

@@ -1,0 +1,23 @@
+{
+ "id": "h111",
+ "kip": "a",
+ "kategori": "tarih ve saat (iş günü, resmî tatil listesi parametre olarak verilir, süre hesabı, biçim dönüşümü)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "termal_uyelik.py içinde UyelikTakvimi sınıfı yazıldı: Pazar ve resmi tatiller kapalı sayıldı, tatiller set ile sırasız desteklendi, dondur açık gün sayımı + 90 gün sınırı, kullanim_bitis açık gün sayarak bitiş tarihi, seans_ozeti YYYY-MM-DD|gun|seans biçiminde tam sayı çarpım; hatalı biçimde ValueError, yanlış tipte TypeError, yalnızca datetime/re kullanıldı.",
+ "adim": 3,
+ "yurutucu_token": {
+  "girdi": 7578,
+  "cikti": 11795
+ },
+ "yurutucu_usd": 0.0031168000000000003,
+ "bitirdi": true,
+ "sure_sn": 92.1,
+ "gizli": {
+  "gecti": true,
+  "gecen": 16,
+  "toplam": 16,
+  "cikti": "................                                                         [100%]\n16 passed in 0.02s\n"
+ }
+}

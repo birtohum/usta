@@ -1,0 +1,35 @@
+{
+ "id": "h082",
+ "kip": "c",
+ "kategori": "dosya ve komut satırı (CSV/JSON okuma, rapor yazdırma, argümanlar, hata mesajları)",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 16,
+   "basarili": 16
+  }
+ ],
+ "spark_usd": 0.0051589,
+ "arayuz": "",
+ "hakem": [],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [],
+ "kabul_gecti": true,
+ "ozet": "`manifest.py` yazıldı: UTF-8 JSON okuma, `sefer`/`konteynerler` kontrolleri, regex ile id/liman, tip kümesi, kg aralığı ve tekrarlı id denetimleri, stderr uyarı/hata mesajları ve çıkış kodları (2/3), `id` sıralı `id,tip,kg,liman` CSV çıktısı, çıktı dizini oluşturma ve `OK: x/y` stdout. 13 pytest testi yazıldı ve `python -m pytest -q` ile hepsi geçti.",
+ "adim": 7,
+ "yurutucu_token": {
+  "girdi": 36136,
+  "cikti": 17886
+ },
+ "yurutucu_usd": 0.0071908,
+ "bitirdi": true,
+ "sure_sn": 285.1,
+ "gizli": {
+  "gecti": true,
+  "gecen": 17,
+  "toplam": 17,
+  "cikti": ".................                                                        [100%]\n17 passed in 0.62s\n"
+ }
+}

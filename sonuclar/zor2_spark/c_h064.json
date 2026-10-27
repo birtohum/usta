@@ -1,0 +1,35 @@
+{
+ "id": "h064",
+ "kip": "c",
+ "kategori": "dosya ve komut satırı (CSV/JSON okuma, rapor yazdırma, argümanlar, hata mesajları)",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 20,
+   "basarili": 20
+  }
+ ],
+ "spark_usd": 0.0027519000000000003,
+ "arayuz": "",
+ "hakem": [],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [],
+ "kabul_gecti": true,
+ "ozet": "hal_fiyat.py modülü yazıldı: UTF-8-SIG okuma, başlık kontrolü, fiyat/tarih filtreleme, strip+casefold karşılaştırma ile ilk yazımı koruma, tarih/pazar/ürün sıralaması, Decimal ROUND_HALF_UP ortalama ve toleranslı medyan seçimi uygulandı. pytest ile 9 test geçti.",
+ "adim": 4,
+ "yurutucu_token": {
+  "girdi": 20816,
+  "cikti": 13661
+ },
+ "yurutucu_usd": 0.0048138,
+ "bitirdi": true,
+ "sure_sn": 254.2,
+ "gizli": {
+  "gecti": true,
+  "gecen": 17,
+  "toplam": 17,
+  "cikti": ".................                                                        [100%]\n17 passed in 0.05s\n"
+ }
+}

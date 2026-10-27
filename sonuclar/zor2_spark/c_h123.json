@@ -1,0 +1,35 @@
+{
+ "id": "h123",
+ "kip": "c",
+ "kategori": "tarih ve saat (iş günü, resmî tatil listesi parametre olarak verilir, süre hesabı, biçim dönüşümü)",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 18,
+   "basarili": 18
+  }
+ ],
+ "spark_usd": 0.0021155,
+ "arayuz": "",
+ "hakem": [],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [],
+ "kabul_gecti": true,
+ "ozet": null,
+ "adim": 20,
+ "yurutucu_token": {
+  "girdi": 209492,
+  "cikti": 83155
+ },
+ "yurutucu_usd": 0.0375802,
+ "bitirdi": false,
+ "sure_sn": 673.5,
+ "gizli": {
+  "gecti": false,
+  "gecen": 14,
+  "toplam": 19,
+  "cikti": ".gizli/test_gizli.py:73: AssertionError\n___________________________ test_uygun_tasan_elenir ____________________________\n\n    def test_uygun_tasan_elenir():\n        res = uygun_slot_bul([(\"2026-10-26\", \"09:00\", \"09:03\"), (\"2026-10-26\", \"10:00\", \"10:30\")], [])\n        assert len(res) == 1\n>       assert res[0][1] == \"2026-10-26 10:00\"\nE       AssertionError: assert '10:00' == '2026-10-26 10:00'\nE         - 2026-10-26 10:00\nE         + 10:00\n\n.gizli/test_gizli.py:78: AssertionError\n________________________ test_uygun_gece_yarisi_elenir _________________________\n\n    def test_uygun_gece_yarisi_elenir():\n        res = uygun_slot_bul([(\"2026-10-26\", \"23:50\", \"00:10\"), (\"2026-10-26\", \"10:00\", \"10:30\")], [])\n        assert len(res) == 1\n>       assert res[0][1] == \"2026-10-26 10:00\"\nE       AssertionError: assert '10:00' == '2026-10-26 10:00'\nE         - 2026-10-26 10:00\nE         + 10:00\n\n.gizli/test_gizli.py:83: AssertionError\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_uygun_siralama - AssertionError: assert '09...\nFAILED .gizli/test_gizli.py::test_uygun_ayni_baslangic_erken_bitis_once - Ass...\nFAILED .gizli/test_gizli.py::test_uygun_asagi_yuvarlama - AssertionError: ass...\nFAILED .gizli/test_gizli.py::test_uygun_tasan_elenir - AssertionError: assert...\nFAILED .gizli/test_gizli.py::test_uygun_gece_yarisi_elenir - AssertionError: ...\n5 failed, 14 passed in 0.04s\n"
+ }
+}

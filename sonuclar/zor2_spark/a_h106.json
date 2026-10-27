@@ -1,0 +1,23 @@
+{
+ "id": "h106",
+ "kip": "a",
+ "kategori": "dosya ve komut satırı (CSV/JSON okuma, rapor yazdırma, argümanlar, hata mesajları)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "sut.py yazıldı: çoklu CSV okur, aynı hayvan+tarih litrelerini toplar, geçersiz tarih/litre satırlarını stderr uyarısıyla atlar, min-gun filtresini uygular, toplam/ortalama (3 ondalık)/tutar (2 ondalık) hesaplar, ortalama azalan + id artan sıralı rapor yazar; dosya yoksa çıkış 2, min-gun<1 ise argparse hatası verir.",
+ "adim": 5,
+ "yurutucu_token": {
+  "girdi": 17706,
+  "cikti": 7533
+ },
+ "yurutucu_usd": 0.0032772,
+ "bitirdi": true,
+ "sure_sn": 70.0,
+ "gizli": {
+  "gecti": true,
+  "gecen": 16,
+  "toplam": 16,
+  "cikti": "................                                                         [100%]\n16 passed in 0.46s\n"
+ }
+}

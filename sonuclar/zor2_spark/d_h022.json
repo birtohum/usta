@@ -1,0 +1,54 @@
+{
+ "id": "h022",
+ "kip": "d",
+ "kategori": "dosya ve komut satırı (CSV/JSON okuma, rapor yazdırma, argümanlar, hata mesajları)",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 17,
+   "basarili": 17
+  }
+ ],
+ "spark_usd": 0.004480400000000001,
+ "arayuz": "",
+ "hakem": [
+  {
+   "test": "test_ucret_anadolu_desi_buyuk",
+   "karar": "belirsiz",
+   "gerekce": "Katsayının yalnızca kilo ücretine mi yoksa taban dahil toplama mı uygulanacağı metinden tek anlamlı çıkmıyor.",
+   "tur": 1
+  },
+  {
+   "test": "test_ucret_diger",
+   "karar": "belirsiz",
+   "gerekce": "Katsayının yalnızca kilo ücretine mi yoksa taban dahil toplama mı uygulanacağı metinden tek anlamlı çıkmıyor.",
+   "tur": 1
+  }
+ ],
+ "geri_alma": 0,
+ "inceleme": {
+  "yazilan": 0,
+  "kanitli": []
+ },
+ "iptal_edilen_test": [
+  "test_ucret_anadolu_desi_buyuk",
+  "test_ucret_diger"
+ ],
+ "kabul_gecti": true,
+ "ozet": "kargo.py modülü yazıldı: desi_hesapla ölçü kontrolü ve ham desi, ucret_hesapla bölge katsayılı yarım-yukarı Decimal ücret, toplu_fiyatlandir hatada Decimal(-1) kuralıyla. 15 pytest testi geçiyor.",
+ "adim": 6,
+ "yurutucu_token": {
+  "girdi": 23394,
+  "cikti": 9391
+ },
+ "yurutucu_usd": 0.0042176,
+ "bitirdi": true,
+ "sure_sn": 277.3,
+ "gizli": {
+  "gecti": true,
+  "gecen": 18,
+  "toplam": 18,
+  "cikti": "..................                                                       [100%]\n18 passed in 0.02s\n"
+ }
+}

@@ -1,0 +1,35 @@
+{
+ "id": "h072",
+ "kip": "c",
+ "kategori": "veri yapıları ve algoritmalar (kuyruk, önbellek, arama, gruplama, birleştirme, durum makinesi)",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 18,
+   "basarili": 18
+  }
+ ],
+ "spark_usd": 0.0020357,
+ "arayuz": "",
+ "hakem": [],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [],
+ "kabul_gecti": true,
+ "ozet": "`kovan_verim.py` içinde LFU önbellek sınıfı `KovanHesapOnbellegi` yazıldı: kapasite doğrulama (1-1000), tip/ aralık kontrolleri, sıklık takibi, eşitlikte FIFO çıkarma, isabet/ıskalama istatistikleri. `test_kovan.py` ile 9 pytest testi yazıldı ve hepsi geçti.",
+ "adim": 6,
+ "yurutucu_token": {
+  "girdi": 19213,
+  "cikti": 7468
+ },
+ "yurutucu_usd": 0.0034149000000000002,
+ "bitirdi": true,
+ "sure_sn": 227.8,
+ "gizli": {
+  "gecti": true,
+  "gecen": 16,
+  "toplam": 16,
+  "cikti": "................                                                         [100%]\n16 passed in 0.02s\n"
+ }
+}

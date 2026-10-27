@@ -1,0 +1,25 @@
+{
+ "id": "h144",
+ "kip": "d",
+ "kategori": "küçük işletme hesapları (KDV, fatura, taksit, indirim, stok, kur dönüşümü, yuvarlama)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.00026880000000000003,
+ "arayuz": "",
+ "kabul_gecti": false,
+ "dogrulanamadi": true,
+ "ozet": "DovizliBorcDefteri sınıfı dovizli_borc.py içinde yazıldı: borc_ekle, odeme_yap (FIFO mahsup, kur farkı lehte/aleyhte HALF_UP), durum (tarih+belge_no sıralı). Belge_no, kur/tutar aralıkları, Decimal duyarlılığı, ValueError/TypeError kuralları uygulandı. test_borc.py ile 4 pytest testi geçiyor.",
+ "adim": 11,
+ "yurutucu_token": {
+  "girdi": 61279,
+  "cikti": 47685
+ },
+ "yurutucu_usd": 0.0156649,
+ "sure_sn": 570.5,
+ "gizli": {
+  "gecti": false,
+  "gecen": 12,
+  "toplam": 16,
+  "cikti": "\n    def test_06_kur_farki_lehte():\n        d = DovizliBorcDefteri()\n        d.borc_ekle(\"2026-000001\", 100.0, 12.0, date(2026, 1, 1))\n        r = d.odeme_yap(\"2026-000002\", 1000.0, 10.0, date(2026, 1, 2))\n        lehe, aleyhe = _lehe_aleyhe(r)\n>       assert lehe == Decimal(\"200.00\")\nE       AssertionError: assert None == Decimal('200.00')\nE        +  where Decimal('200.00') = Decimal('200.00')\n\n.gizli/test_gizli.py:110: AssertionError\n_____________________ test_16_kur_farki_yuvarlama_half_up ______________________\n\n    def test_16_kur_farki_yuvarlama_half_up():\n        d = DovizliBorcDefteri()\n        d.borc_ekle(\"2026-000001\", 1.0, 10.0, date(2026, 1, 1))\n        # fark (10.0055-10)*1 = 0.0055 -> 0.01 HALF_UP aleyhte\n        r = d.odeme_yap(\"2026-000002\", 10.01, 10.0055, date(2026, 1, 2))\n        lehe, aleyhe = _lehe_aleyhe(r)\n>       assert aleyhe == Decimal(\"0.01\")\nE       AssertionError: assert None == Decimal('0.01')\nE        +  where Decimal('0.01') = Decimal('0.01')\n\n.gizli/test_gizli.py:203: AssertionError\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_03_kur_dort_ondalik_decimal - assert False\nFAILED .gizli/test_gizli.py::test_05_kur_farki_aleyhte - AssertionError: asse...\nFAILED .gizli/test_gizli.py::test_06_kur_farki_lehte - AssertionError: assert...\nFAILED .gizli/test_gizli.py::test_16_kur_farki_yuvarlama_half_up - AssertionE...\n4 failed, 12 passed in 0.05s\n"
+ }
+}

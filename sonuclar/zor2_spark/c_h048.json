@@ -1,0 +1,35 @@
+{
+ "id": "h048",
+ "kip": "c",
+ "kategori": "veri yapıları ve algoritmalar (kuyruk, önbellek, arama, gruplama, birleştirme, durum makinesi)",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 19,
+   "basarili": 19
+  }
+ ],
+ "spark_usd": 0.002808,
+ "arayuz": "randevu.py içinde RandevuTakvimi: ekle(gun: str, musteri: str, baslangic: int, bitis: int) -> int; iptal(randevu_id: int) -> None; gunluk(gun: str) -> list; doluluk(gun: str) -> float; gunluk listesi {randevu_id, musteri, baslangic, bitis} sözlüklerinden oluşur.",
+ "hakem": [],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [],
+ "kabul_gecti": true,
+ "ozet": "randevu.py içinde RandevuTakvimi sınıfı yazıldı: ekle(gun, musteri, baslangic, bitis)->int, iptal(randevu_id), gunluk(gun)->list, doluluk(gun)->float. Yarım-açık çakışma kontrolü, doğrulamalar ve sıralama kuralları uygulandı; 9 pytest testi geçti.",
+ "adim": 6,
+ "yurutucu_token": {
+  "girdi": 23475,
+  "cikti": 4047
+ },
+ "yurutucu_usd": 0.0031569000000000007,
+ "bitirdi": true,
+ "sure_sn": 186.2,
+ "gizli": {
+  "gecti": false,
+  "gecen": 2,
+  "toplam": 16,
+  "cikti": "_____________\n\n    def test_iptal_sonrasi_tekrar_eklenebilir():\n        t = RandevuTakvimi()\n>       rid = t.ekle(\"Ali\", 60, 120)\nE       TypeError: RandevuTakvimi.ekle() missing 1 required positional argument: 'bitis'\n\n.gizli/test_gizli.py:160: TypeError\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_ekle_donus_int - TypeError: RandevuTakvimi....\nFAILED .gizli/test_gizli.py::test_baslangic_bitis_esit_valueerror - TypeError...\nFAILED .gizli/test_gizli.py::test_baslangic_buyuk_valueerror - TypeError: Ran...\nFAILED .gizli/test_gizli.py::test_cakisma_valueerror - TypeError: RandevuTakv...\nFAILED .gizli/test_gizli.py::test_yarim_acik_cakismaz - TypeError: RandevuTak...\nFAILED .gizli/test_gizli.py::test_esit_aralik_cakisir - TypeError: RandevuTak...\nFAILED .gizli/test_gizli.py::test_iptal_kaldirir - TypeError: RandevuTakvimi....\nFAILED .gizli/test_gizli.py::test_gunluk_siralama - TypeError: RandevuTakvimi...\nFAILED .gizli/test_gizli.py::test_gunluk_esit_baslangic_id_sirasi - TypeError...\nFAILED .gizli/test_gizli.py::test_gun_bicim_hatasi - TypeError: RandevuTakvim...\nFAILED .gizli/test_gizli.py::test_doluluk_orani - AttributeError: 'RandevuTak...\nFAILED .gizli/test_gizli.py::test_doluluk_yuvarlama - TypeError: RandevuTakvi...\nFAILED .gizli/test_gizli.py::test_farkli_gun_cakismaz - ValueError: Geçersiz ...\nFAILED .gizli/test_gizli.py::test_iptal_sonrasi_tekrar_eklenebilir - TypeErro...\n14 failed, 2 passed in 0.05s\n"
+ }
+}

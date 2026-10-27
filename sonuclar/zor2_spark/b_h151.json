@@ -1,0 +1,23 @@
+{
+ "id": "h151",
+ "kip": "b",
+ "kategori": "doğrulama ve ayrıştırma (TC kimlik, IBAN, telefon, plaka, e-posta, adres biçimi)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "ekmek_abonelik.py hazır: TC 11-hane + ilk hane + 10/11 sağlama denetimi, telefon 05'li 11 haneye normalizasyon, adres 10-200 kontrolü (exit 1 + uyarı), yinelenen TC eleme, eposta küçük harfe çevirme, tc/telefon sıralı CSV çıktısı, toplam/gecerli/hatali + %xx.xx raporu, kayıp girdi exit 3, hatalı bayrak exit 2. 8 pytest testi geçiyor.",
+ "adim": 13,
+ "yurutucu_token": {
+  "girdi": 80810,
+  "cikti": 24060
+ },
+ "yurutucu_usd": 0.012893000000000002,
+ "bitirdi": true,
+ "sure_sn": 218.6,
+ "gizli": {
+  "gecti": false,
+  "gecen": 15,
+  "toplam": 16,
+  "cikti": "..........F.....                                                         [100%]\n=================================== FAILURES ===================================\n_______________________ test_11_eposta_case_insensitive ________________________\n\ntmp_path = PosixPath('/home/usta/is/d72eba05150a/.tmp/pytest-of-usta/pytest-0/test_11_eposta_case_insensitiv0')\n\n    def test_11_eposta_case_insensitive(tmp_path):\n        g = tmp_path / \"g.csv\"; c = tmp_path / \"c.csv\"; r = tmp_path / \"r.txt\"\n        girdi_yaz(g, [{\"tc\": \"10000000146\", \"telefon\": \"05321234567\", \"adres\": ADRES_OK, \"eposta\": \"Test@Example.com\"}, {\"tc\": \"10000000214\", \"telefon\": \"05321234568\", \"adres\": ADRES_OK, \"eposta\": \"test@example.com\"}])\n        p = calistir(g, c, r)\n        assert p.returncode == 0\n        rows, _ = cikti_oku(c)\n>       assert len(rows) == 1\nE       AssertionError: assert 2 == 1\nE        +  where 2 = len([{'adres': 'Ataturk Mahallesi 123. Sokak No:4 Sivas', 'eposta': 'test@example.com', 'tc': '10000000146', 'telefon': '0...Ataturk Mahallesi 123. Sokak No:4 Sivas', 'eposta': 'test@example.com', 'tc': '10000000214', 'telefon': '05321234568'}])\n\n.gizli/test_gizli.py:136: AssertionError\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_11_eposta_case_insensitive - AssertionError...\n1 failed, 15 passed in 0.58s\n"
+ }
+}

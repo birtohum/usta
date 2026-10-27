@@ -1,0 +1,23 @@
+{
+ "id": "h053",
+ "kip": "a",
+ "kategori": "doğrulama ve ayrıştırma (TC kimlik, IBAN, telefon, plaka, e-posta, adres biçimi)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "kimlik.py içinde durum tutan KimlikDogrulayici sınıfı yazıldı: strip sonrası 11 ASCII rakam kontrolü (format-hatasi), ilk hanesi 0 ise ilksifir-hatasi, 99 ile başlayan yabancı dahil tüm numaralar için aynı iki checksum kuralı (tutmayınca checksum-hatasi), tekrar eklemede False + ilk kayıt koruma, gecerli_hepsi sayısal sıralı string liste, None/boş string TypeError yerine format-hatasi.",
+ "adim": 7,
+ "yurutucu_token": {
+  "girdi": 23929,
+  "cikti": 19664
+ },
+ "yurutucu_usd": 0.006325700000000001,
+ "bitirdi": true,
+ "sure_sn": 163.1,
+ "gizli": {
+  "gecti": true,
+  "gecen": 16,
+  "toplam": 16,
+  "cikti": "................                                                         [100%]\n16 passed in 0.03s\n"
+ }
+}

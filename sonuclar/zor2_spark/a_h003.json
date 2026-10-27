@@ -1,0 +1,23 @@
+{
+ "id": "h003",
+ "kip": "a",
+ "kategori": "tarih ve saat (iş günü, resmî tatil listesi parametre olarak verilir, süre hesabı, biçim dönüşümü)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "vardiya.py dosyasında vardiya_suresi_hesapla ve haftalik_toplam fonksiyonları yazıldı: HH:MM doğrulaması (regex), gece vardiyası/24 saat kuralı, mola aralığı ve tür kontrolleri, mola>=ham ise 0, 15 dakikaya aşağı yuvarlama, haftalık toplam ve hata türleri uygulandı ve test edildi.",
+ "adim": 4,
+ "yurutucu_token": {
+  "girdi": 9444,
+  "cikti": 6528
+ },
+ "yurutucu_usd": 0.0022500000000000003,
+ "bitirdi": true,
+ "sure_sn": 52.6,
+ "gizli": {
+  "gecti": true,
+  "gecen": 17,
+  "toplam": 17,
+  "cikti": ".................                                                        [100%]\n17 passed in 0.02s\n"
+ }
+}

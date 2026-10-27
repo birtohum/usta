@@ -1,0 +1,23 @@
+{
+ "id": "h077",
+ "kip": "b",
+ "kategori": "doğrulama ve ayrıştırma (TC kimlik, IBAN, telefon, plaka, e-posta, adres biçimi)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "`eposta.py` yazıldı: `EpostaHatasi(ValueError)`, strip+`@` kontrolü, alan adında küçük harf/son nokta silme, ardışık nokta ve uzunluk (255/64) ile boş kısım kontrolleri, yerel kısımda `+` sonrası atma/nokta silme/küçük harf; `ayni_kutu_mu` normalize karşılaştırması; `tekillestir_ve_sirala` normalize biçimi saklayıp (alan, yerel) sırasına göre sıralar, None→TypeError, boş/geçersiz→EpostaHatasi. 13 pytest testi geçiyor.",
+ "adim": 4,
+ "yurutucu_token": {
+  "girdi": 11585,
+  "cikti": 7295
+ },
+ "yurutucu_usd": 0.0026175,
+ "bitirdi": true,
+ "sure_sn": 65.8,
+ "gizli": {
+  "gecti": true,
+  "gecen": 18,
+  "toplam": 18,
+  "cikti": "..................                                                       [100%]\n18 passed in 0.02s\n"
+ }
+}

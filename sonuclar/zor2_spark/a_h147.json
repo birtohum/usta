@@ -1,0 +1,23 @@
+{
+ "id": "h147",
+ "kip": "a",
+ "kategori": "doğrulama ve ayrıştırma (TC kimlik, IBAN, telefon, plaka, e-posta, adres biçimi)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "plaka_iban.py yazıldı: plaka_normalize, yabanci_plaka_ayristir, iban_dogrula_tr, rapor_orani ve plaka/IBAN eşitlik-sıralama yardımcıları eklendi; TypeError/ValueError kuralları uygulandı.",
+ "adim": 10,
+ "yurutucu_token": {
+  "girdi": 38875,
+  "cikti": 28347
+ },
+ "yurutucu_usd": 0.009556900000000002,
+ "bitirdi": true,
+ "sure_sn": 251.6,
+ "gizli": {
+  "gecti": true,
+  "gecen": 18,
+  "toplam": 18,
+  "cikti": "..................                                                       [100%]\n18 passed in 0.03s\n"
+ }
+}

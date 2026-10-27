@@ -1,0 +1,38 @@
+{
+ "id": "h067",
+ "kip": "d",
+ "kategori": "Türkçe metin işleme (Türkçe harfler, büyük/küçük harf, hece, ek, sıralama, sayı/yazı)",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 20,
+   "basarili": 20
+  }
+ ],
+ "spark_usd": 0.0069217,
+ "arayuz": "adres_norm.py içine eslesme_orani(dogru: int, toplam: int) -> float ekle",
+ "hakem": [],
+ "geri_alma": 0,
+ "inceleme": {
+  "yazilan": 0,
+  "kanitli": []
+ },
+ "iptal_edilen_test": [],
+ "kabul_gecti": true,
+ "ozet": "adres_norm.py yazıldı: normalize_adres, posta_dogrula, toplu_normalize, eslesme_orani. pytest ile 10 test geçti.",
+ "adim": 6,
+ "yurutucu_token": {
+  "girdi": 19205,
+  "cikti": 24435
+ },
+ "yurutucu_usd": 0.006807499999999999,
+ "bitirdi": true,
+ "sure_sn": 391.8,
+ "gizli": {
+  "gecti": false,
+  "gecen": 17,
+  "toplam": 18,
+  "cikti": "..............F...                                                       [100%]\n=================================== FAILURES ===================================\n______________________________ test_toplu_kararli ______________________________\n\n    def test_toplu_kararli():\n        girdi = [\"Çay Sokak\", \"Cay Sokak\"]\n>       assert toplu_normalize(girdi) == [\"Çay Sokak\", \"Cay Sokak\"]\nE       AssertionError: assert ['Cay Sokak', 'Çay Sokak'] == ['Çay Sokak', 'Cay Sokak']\nE         At index 0 diff: 'Cay Sokak' != 'Çay Sokak'\nE         Use -v to get more diff\n\n.gizli/test_gizli.py:66: AssertionError\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_toplu_kararli - AssertionError: assert ['Ca...\n1 failed, 17 passed in 0.03s\n"
+ }
+}

@@ -1,0 +1,44 @@
+{
+ "id": "h038",
+ "kip": "c",
+ "kategori": "küçük işletme hesapları (KDV, fatura, taksit, indirim, stok, kur dönüşümü, yuvarlama)",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 18,
+   "basarili": 18
+  }
+ ],
+ "spark_usd": 0.0038818999999999998,
+ "arayuz": "Dosya tevkifat.py, sınıf TevkifatliFatura(fatura_no, tevkifat_paydasi), metotlar ekle_kalem(ad, matrah, kdv_orani) ve hesapla()->dict; hesapla sözlüğü anahtarları ara_toplam, kdv_toplam, tevkifat, odenecek_kdv, genel_toplam ve sıralı kalem listesi için kalemler.",
+ "hakem": [
+  {
+   "test": "test_kurus_farki_tutarlilik",
+   "karar": "belirsiz",
+   "gerekce": "Görev metni KDV toplamının yuvarlanmış kalemler toplamı mı yoksa ham toplamın yuvarlanması mı olduğunu açıkça belirtmiyor.",
+   "tur": 1
+  }
+ ],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [
+  "test_kurus_farki_tutarlilik"
+ ],
+ "kabul_gecti": true,
+ "ozet": "tevkifat.py içinde TevkifatliFatura sınıfı yazıldı: TR-YYYY-XXXXXX doğrulama, ad/KDV/payda/matrah kuralları (TypeError/ValueError), Decimal ROUND_HALF_UP ile tevkifat/ödenecek/genel toplam hesabı, kuruş farkının en yüksek matrahlı (eşitlikte A-Z ilk) kaleme yansıtılması, matrah-azalan/ad-artan sıralı kalemler ve float iki-ondalık dönüş, fatura_no tabanlı __eq__/__hash__. 14 pytest testi yazıldı ve geçti.",
+ "adim": 8,
+ "yurutucu_token": {
+  "girdi": 46438,
+  "cikti": 24024
+ },
+ "yurutucu_usd": 0.009448600000000001,
+ "bitirdi": true,
+ "sure_sn": 234.0,
+ "gizli": {
+  "gecti": true,
+  "gecen": 17,
+  "toplam": 17,
+  "cikti": ".................                                                        [100%]\n17 passed in 0.03s\n"
+ }
+}

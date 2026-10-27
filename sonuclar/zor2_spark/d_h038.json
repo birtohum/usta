@@ -1,0 +1,48 @@
+{
+ "id": "h038",
+ "kip": "d",
+ "kategori": "küçük işletme hesapları (KDV, fatura, taksit, indirim, stok, kur dönüşümü, yuvarlama)",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 10,
+   "basarili": 10
+  }
+ ],
+ "spark_usd": 0.0065585,
+ "arayuz": "",
+ "hakem": [],
+ "geri_alma": 0,
+ "inceleme": {
+  "yazilan": 0,
+  "kanitli": []
+ },
+ "iptal_edilen_test": [
+  "test_basit_tevkifat_hesabi",
+  "test_float_tutar_ve_tutarlilik",
+  "test_half_up_yuvarlama",
+  "test_kalem_adi_sinir_gecerli",
+  "test_kdv_gecerli",
+  "test_kurus_farki_en_yuksek_matrah",
+  "test_matrah_alt_sinir_valueerror",
+  "test_matrah_sinir_dahil_ve_ust",
+  "test_siralama_matrah_ve_ad"
+ ],
+ "kabul_gecti": true,
+ "ozet": "tevkifat.py içinde TevkifatliFatura sınıfı oluşturuldu: fatura_no regex doğrulaması, payda/KDV kısıtları, ad ve matrah kontrolleri (TypeError/ValueError ayrımı), Decimal+ROUND_HALF_UP ile 2 ondalık hesaplar, tevkifat=KVD/payda dağılımında kuruş farkı en yüksek matrahlı kaleme yansıtıldı, kalemler matrah azalan/ad artan sıralı, sonuç float tutarlar ve eşitlik/hash fatura_no üzerinden. pytest ile 13 test geçti.",
+ "adim": 4,
+ "yurutucu_token": {
+  "girdi": 16566,
+  "cikti": 14638
+ },
+ "yurutucu_usd": 0.0045842,
+ "bitirdi": true,
+ "sure_sn": 296.1,
+ "gizli": {
+  "gecti": true,
+  "gecen": 17,
+  "toplam": 17,
+  "cikti": ".................                                                        [100%]\n17 passed in 0.03s\n"
+ }
+}

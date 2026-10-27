@@ -1,0 +1,38 @@
+{
+ "id": "h060",
+ "kip": "d",
+ "kategori": "veri yapıları ve algoritmalar (kuyruk, önbellek, arama, gruplama, birleştirme, durum makinesi)",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 18,
+   "basarili": 18
+  }
+ ],
+ "spark_usd": 0.0029989000000000005,
+ "arayuz": "",
+ "hakem": [],
+ "geri_alma": 0,
+ "inceleme": {
+  "yazilan": 0,
+  "kanitli": []
+ },
+ "iptal_edilen_test": [],
+ "kabul_gecti": true,
+ "ozet": "`manifest.py` içinde `manifestleri_birlestir` fonksiyonu yazıldı: kayıt doğrulama (TypeError/ValueError), alt liste sıralılık denetimi, aynı konimento_no için en erken varis (eşitlikte küçük liman_kodu) seçimi ve üç anahtarlı sıralama uygulandı. 18 pytest testi yazıldı ve hepsi geçti.",
+ "adim": 4,
+ "yurutucu_token": {
+  "girdi": 13546,
+  "cikti": 8009
+ },
+ "yurutucu_usd": 0.0029563999999999997,
+ "bitirdi": true,
+ "sure_sn": 265.7,
+ "gizli": {
+  "gecti": true,
+  "gecen": 18,
+  "toplam": 18,
+  "cikti": "..................                                                       [100%]\n18 passed in 0.02s\n"
+ }
+}

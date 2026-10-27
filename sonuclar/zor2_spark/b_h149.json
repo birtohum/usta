@@ -1,0 +1,23 @@
+{
+ "id": "h149",
+ "kip": "b",
+ "kategori": "tarih ve saat (iş günü, resmî tatil listesi parametre olarak verilir, süre hesabı, biçim dönüşümü)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "kurutma_takip.py yazıldı: başlangıç tarihini DD/MM/YYYY veya YYYY-MM-DD kabul eder, hafta sonu ve YYYY-MM-DD tatilleri atlayarak başlangıç hariç N iş günü sonrası bitişi hesaplar, ISO/DETAY çıktı verir, çoklu partileri bitiş+başlangıca göre sıralar; hatalı aralık/tarih/boş değerlerde stderr + sıfır-dışı kod döner. 16 pytest testi geçiyor.",
+ "adim": 8,
+ "yurutucu_token": {
+  "girdi": 50470,
+  "cikti": 27010
+ },
+ "yurutucu_usd": 0.010449,
+ "bitirdi": true,
+ "sure_sn": 247.6,
+ "gizli": {
+  "gecti": true,
+  "gecen": 16,
+  "toplam": 16,
+  "cikti": "................                                                         [100%]\n16 passed in 0.34s\n"
+ }
+}

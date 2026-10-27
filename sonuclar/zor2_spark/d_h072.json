@@ -1,0 +1,38 @@
+{
+ "id": "h072",
+ "kip": "d",
+ "kategori": "veri yapıları ve algoritmalar (kuyruk, önbellek, arama, gruplama, birleştirme, durum makinesi)",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 17,
+   "basarili": 17
+  }
+ ],
+ "spark_usd": 0.0031656,
+ "arayuz": "",
+ "hakem": [],
+ "geri_alma": 0,
+ "inceleme": {
+  "yazilan": 0,
+  "kanitli": []
+ },
+ "iptal_edilen_test": [],
+ "kabul_gecti": true,
+ "ozet": "kovan_verim.py içinde LFU önbellek sınıfı yazıldı, pytest ile 9 test geçirildi.",
+ "adim": 4,
+ "yurutucu_token": {
+  "girdi": 10774,
+  "cikti": 3570
+ },
+ "yurutucu_usd": 0.0017914,
+ "bitirdi": true,
+ "sure_sn": 261.9,
+ "gizli": {
+  "gecti": true,
+  "gecen": 16,
+  "toplam": 16,
+  "cikti": "................                                                         [100%]\n16 passed in 0.02s\n"
+ }
+}

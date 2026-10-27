@@ -1,0 +1,38 @@
+{
+ "id": "h098",
+ "kip": "d",
+ "kategori": "küçük işletme hesapları (KDV, fatura, taksit, indirim, stok, kur dönüşümü, yuvarlama)",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 20,
+   "basarili": 20
+  }
+ ],
+ "spark_usd": 0.0051532999999999995,
+ "arayuz": "",
+ "hakem": [],
+ "geri_alma": 0,
+ "inceleme": {
+  "yazilan": 0,
+  "kanitli": []
+ },
+ "iptal_edilen_test": [],
+ "kabul_gecti": true,
+ "ozet": "rezervasyon.py içinde IptalliRezervasyon sınıfı yazıldı: kod/kisi/tarih/ücret doğrulamaları, kademeli kesinti (%10/%30/sıfır iade), ROUND_HALF_UP iade hesabı, KeyError/ValueError kuralları ve sıralı liste() uygulandı. 15 pytest testi geçiyor.",
+ "adim": 4,
+ "yurutucu_token": {
+  "girdi": 13451,
+  "cikti": 6442
+ },
+ "yurutucu_usd": 0.0026335,
+ "bitirdi": true,
+ "sure_sn": 280.8,
+ "gizli": {
+  "gecti": true,
+  "gecen": 16,
+  "toplam": 16,
+  "cikti": "................                                                         [100%]\n16 passed in 0.02s\n"
+ }
+}

@@ -1,0 +1,23 @@
+{
+ "id": "h095",
+ "kip": "b",
+ "kategori": "doğrulama ve ayrıştırma (TC kimlik, IBAN, telefon, plaka, e-posta, adres biçimi)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "`yardim_denetle.py` yazıldı: TC checksum, IBAN TR-26 mod97, telefon 0/+90 5XX, tek-@ e-posta, normalize plaka il kodu 01-81, posta kodu 01000-81999 doğrulamaları; 6 alan kontrolü, boş satır atlama, tekrar-tc takibi, sayısal sıralı rapor.json ve satirNo:tc:kodlar hatalar.log üretimi, eksik dosyada FileNotFoundError ve CLI arayüzü eklendi. 13 pytest testi geçiyor.",
+ "adim": 11,
+ "yurutucu_token": {
+  "girdi": 66842,
+  "cikti": 22864
+ },
+ "yurutucu_usd": 0.011257000000000001,
+ "bitirdi": true,
+ "sure_sn": 207.2,
+ "gizli": {
+  "gecti": true,
+  "gecen": 16,
+  "toplam": 16,
+  "cikti": "................                                                         [100%]\n16 passed in 0.60s\n"
+ }
+}

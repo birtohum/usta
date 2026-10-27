@@ -1,0 +1,44 @@
+{
+ "id": "h059",
+ "kip": "c",
+ "kategori": "doğrulama ve ayrıştırma (TC kimlik, IBAN, telefon, plaka, e-posta, adres biçimi)",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 15,
+   "basarili": 15
+  }
+ ],
+ "spark_usd": 0.0031535,
+ "arayuz": "",
+ "hakem": [
+  {
+   "test": "test_bos_satirlar_atlanir",
+   "karar": "belirsiz",
+   "gerekce": "Görev metni satirNo'nun fiziksel dosya satır numarası mı yoksa boş satırlar hariç sıra numarası mı olduğunu açıkça tanımlamıyor.",
+   "tur": 1
+  }
+ ],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [
+  "test_bos_satirlar_atlanir"
+ ],
+ "kabul_gecti": true,
+ "ozet": "`iban_ozet.py` yazıldı: IBAN'ları arındırıp (strip, iç boşluk silme, büyük harf) TR/uzunluk/mod97 sırasıyla doğruluyor, hataları `satirNo:kategori:orijinalSatir` biçiminde yazıyor, boş satırları saymıyor, geçerli IBAN'ları 5-9 karakter banka koduna göre gruplayıp sıralı `ozet.json` üretiyor ve tekrarları tek sayıyor. 7 pytest testi geçiyor.",
+ "adim": 9,
+ "yurutucu_token": {
+  "girdi": 37943,
+  "cikti": 14196
+ },
+ "yurutucu_usd": 0.0066335000000000005,
+ "bitirdi": true,
+ "sure_sn": 272.6,
+ "gizli": {
+  "gecti": true,
+  "gecen": 16,
+  "toplam": 16,
+  "cikti": "................                                                         [100%]\n16 passed in 0.46s\n"
+ }
+}

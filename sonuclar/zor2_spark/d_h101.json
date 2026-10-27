@@ -1,0 +1,38 @@
+{
+ "id": "h101",
+ "kip": "d",
+ "kategori": "doğrulama ve ayrıştırma (TC kimlik, IBAN, telefon, plaka, e-posta, adres biçimi)",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 19,
+   "basarili": 19
+  }
+ ],
+ "spark_usd": 0.0115413,
+ "arayuz": "Dosya: hasta_kaydi.py, Sınıf: HastaKayitDogrulayici, __init__(self): self.kayitlar=[], hasta_ekle(self, tc: str, telefon: str, eposta: str, adres: str) -> dict, rapor_yuzdesi(self) -> float",
+ "hakem": [],
+ "geri_alma": 0,
+ "inceleme": {
+  "yazilan": 0,
+  "kanitli": []
+ },
+ "iptal_edilen_test": [],
+ "kabul_gecti": true,
+ "ozet": "hasta_kaydi.py içinde HastaKayitDogrulayici sınıfı yazıldı: TC 11 hane + checksum, telefon normalize (0XXX XXX XX XX) + ValueError/TypeError, e-posta lower/strip + tek @ + domain nokta + plus duyarsız tekilleştirme, adres 5 parça/6 parça posta kodu doğrulama, TC'ye göre sıralama ve rapor_yuzdesi() iki ondalık oran. pytest ile 17 test geçti.",
+ "adim": 4,
+ "yurutucu_token": {
+  "girdi": 15188,
+  "cikti": 16076
+ },
+ "yurutucu_usd": 0.004734,
+ "bitirdi": true,
+ "sure_sn": 525.8,
+ "gizli": {
+  "gecti": false,
+  "gecen": 16,
+  "toplam": 18,
+  "cikti": "............F..F..                                                       [100%]\n=================================== FAILURES ===================================\n____________________ test_eposta_plus_ve_case_tekillestirme ____________________\n\n    def test_eposta_plus_ve_case_tekillestirme():\n        n = HastaKayitDogrulayici()\n        n.hasta_ekle(TC1, \"05321234567\", \"test@example.com\", ADRES)\n>       with pytest.raises(ValueError):\nE       Failed: DID NOT RAISE <class 'ValueError'>\n\n.gizli/test_gizli.py:90: Failed\n__________________________ test_posta_kodu_dogrulama ___________________________\n\n    def test_posta_kodu_dogrulama():\n        n = HastaKayitDogrulayici()\n>       assert n.posta_kodu_dogrula(\"26000\") == \"26000\"\nE       AttributeError: 'HastaKayitDogrulayici' object has no attribute 'posta_kodu_dogrula'\n\n.gizli/test_gizli.py:111: AttributeError\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_eposta_plus_ve_case_tekillestirme - Failed:...\nFAILED .gizli/test_gizli.py::test_posta_kodu_dogrulama - AttributeError: 'Has...\n2 failed, 16 passed in 0.03s\n"
+ }
+}

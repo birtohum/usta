@@ -1,0 +1,35 @@
+{
+ "id": "h156",
+ "kip": "c",
+ "kategori": "dosya ve komut satırı (CSV/JSON okuma, rapor yazdırma, argümanlar, hata mesajları)",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 18,
+   "basarili": 18
+  }
+ ],
+ "spark_usd": 0.0023843000000000002,
+ "arayuz": "",
+ "hakem": [],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [],
+ "kabul_gecti": true,
+ "ozet": "sera_hakedis.py yazıldı: CSV doğrulama, tutarsız satır uyarısı, Decimal HALF_UP yuvarlama, sıralama ve istenen çıkış kodları uygulandı; pytest ile 8 test geçti.",
+ "adim": 5,
+ "yurutucu_token": {
+  "girdi": 22387,
+  "cikti": 11452
+ },
+ "yurutucu_usd": 0.0045291,
+ "bitirdi": true,
+ "sure_sn": 302.9,
+ "gizli": {
+  "gecti": true,
+  "gecen": 15,
+  "toplam": 15,
+  "cikti": "...............                                                          [100%]\n15 passed in 0.44s\n"
+ }
+}

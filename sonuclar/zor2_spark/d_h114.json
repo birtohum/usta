@@ -1,0 +1,38 @@
+{
+ "id": "h114",
+ "kip": "d",
+ "kategori": "veri yapıları ve algoritmalar (kuyruk, önbellek, arama, gruplama, birleştirme, durum makinesi)",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 18,
+   "basarili": 18
+  }
+ ],
+ "spark_usd": 0.0038309000000000004,
+ "arayuz": "Dosya restorasyon.py. Sınıf RestorasyonIsi, kurucu __init__(self, durum: str = \"TEKLIF\"), güncel durum durum özniteliğinde. Yöntem ilerlet(self, hedef: str, kontrol_puani: int | None = None) -> str. Yöntem gecmis(self) -> list[tuple] iç listenin kopyasını döndürür.",
+ "hakem": [],
+ "geri_alma": 0,
+ "inceleme": {
+  "yazilan": 0,
+  "kanitli": []
+ },
+ "iptal_edilen_test": [],
+ "kabul_gecti": true,
+ "ozet": "restorasyon.py içinde RestorasyonIsi durum makinesi yazıldı: varsayılan TEKLIF, birebir eşleşme kontrolü, ileri zincir + her durumdan IPTAL, bitmiş TESLIM/IPTAL durumlarından RuntimeError, tanımsız hedefte ValueError, KALITE_KONTROL->TESLIM için None'da TypeError, aralık dışında ValueError, 70 altında RuntimeError ve başarılı geçişlerde geçmiş kaydı. gecmis() kopya döndürür. 15 pytest testi yazıldı ve geçti.",
+ "adim": 8,
+ "yurutucu_token": {
+  "girdi": 30244,
+  "cikti": 14277
+ },
+ "yurutucu_usd": 0.0058798,
+ "bitirdi": true,
+ "sure_sn": 356.3,
+ "gizli": {
+  "gecti": true,
+  "gecen": 16,
+  "toplam": 16,
+  "cikti": "................                                                         [100%]\n16 passed in 0.05s\n"
+ }
+}

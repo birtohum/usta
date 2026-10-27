@@ -1,0 +1,23 @@
+{
+ "id": "h101",
+ "kip": "b",
+ "kategori": "doğrulama ve ayrıştırma (TC kimlik, IBAN, telefon, plaka, e-posta, adres biçimi)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "hasta_kaydi.py içinde HastaKayitDogrulayici sınıfı yazıldı: TC checksum doğrulama, telefon normalizasyonu (0XXX XXX XX XX), e-posta normalize + plus etiketi yoksayarak tekilleştirme, 5 parçalı adres ve 5 haneli posta kodu doğrulama, TC'ye göre sıralama ve iki ondalıklı rapor_yuzdesi() eklendi. pytest ile 10 test geçti.",
+ "adim": 6,
+ "yurutucu_token": {
+  "girdi": 30452,
+  "cikti": 13135
+ },
+ "yurutucu_usd": 0.0056722000000000005,
+ "bitirdi": true,
+ "sure_sn": 111.6,
+ "gizli": {
+  "gecti": false,
+  "gecen": 17,
+  "toplam": 18,
+  "cikti": "............F.....                                                       [100%]\n=================================== FAILURES ===================================\n____________________ test_eposta_plus_ve_case_tekillestirme ____________________\n\n    def test_eposta_plus_ve_case_tekillestirme():\n        n = HastaKayitDogrulayici()\n        n.hasta_ekle(TC1, \"05321234567\", \"test@example.com\", ADRES)\n>       with pytest.raises(ValueError):\nE       Failed: DID NOT RAISE <class 'ValueError'>\n\n.gizli/test_gizli.py:90: Failed\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_eposta_plus_ve_case_tekillestirme - Failed:...\n1 failed, 17 passed in 0.03s\n"
+ }
+}

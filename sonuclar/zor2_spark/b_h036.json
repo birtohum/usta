@@ -1,0 +1,23 @@
+{
+ "id": "h036",
+ "kip": "b",
+ "kategori": "veri yapıları ve algoritmalar (kuyruk, önbellek, arama, gruplama, birleştirme, durum makinesi)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "siparis.py içinde SiparisDurumMakinesi (gecis/durum/gecmis), thread-safe geçişler, terminal durumlar, 1000 öğelik geçmiş sınırı ve iki ondalığa yuvarlayan iptal_orani işlevi yazıldı; 11 pytest testi geçti.",
+ "adim": 4,
+ "yurutucu_token": {
+  "girdi": 11172,
+  "cikti": 5273
+ },
+ "yurutucu_usd": 0.0021718,
+ "bitirdi": true,
+ "sure_sn": 46.0,
+ "gizli": {
+  "gecti": true,
+  "gecen": 18,
+  "toplam": 18,
+  "cikti": "..................                                                       [100%]\n18 passed in 0.02s\n"
+ }
+}

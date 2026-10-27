@@ -1,0 +1,23 @@
+{
+ "id": "h156",
+ "kip": "a",
+ "kategori": "dosya ve komut satırı (CSV/JSON okuma, rapor yazdırma, argümanlar, hata mesajları)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "sera_hakedis.py yazıldı: CSV başlık/tür/adet doğrulama, tutarsız satırda stderr uyarısı, Decimal ROUND_HALF_UP ile 2 basamak yuvarlama, üretici bazında toplama, toplam_tl/net_adet/uretici_id sıralaması, net 0 ise 0.00, hata kodları (1 bulunamadı, 2 başlık/fiyat) ve OK özeti. Testlerle doğrulandı.",
+ "adim": 7,
+ "yurutucu_token": {
+  "girdi": 34208,
+  "cikti": 10783
+ },
+ "yurutucu_usd": 0.0055774000000000015,
+ "bitirdi": true,
+ "sure_sn": 96.2,
+ "gizli": {
+  "gecti": true,
+  "gecen": 15,
+  "toplam": 15,
+  "cikti": "...............                                                          [100%]\n15 passed in 0.50s\n"
+ }
+}

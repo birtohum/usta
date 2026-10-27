@@ -1,0 +1,38 @@
+{
+ "id": "h050",
+ "kip": "d",
+ "kategori": "küçük işletme hesapları (KDV, fatura, taksit, indirim, stok, kur dönüşümü, yuvarlama)",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 17,
+   "basarili": 17
+  }
+ ],
+ "spark_usd": 0.0048938,
+ "arayuz": "",
+ "hakem": [],
+ "geri_alma": 0,
+ "inceleme": {
+  "yazilan": 0,
+  "kanitli": []
+ },
+ "iptal_edilen_test": [],
+ "kabul_gecti": true,
+ "ozet": "toptan.py içinde ToptanSepet sınıfı yazıldı: müşteri/ürün/kupon doğrulama, Decimal ROUND_HALF_UP indirimler (100 adette %5, 500 adette %12, tek kupon %10), sıralı satırlar, __eq__ ve boş sepet hatası. 26 pytest testi geçiyor.",
+ "adim": 15,
+ "yurutucu_token": {
+  "girdi": 91319,
+  "cikti": 64518
+ },
+ "yurutucu_usd": 0.0220355,
+ "bitirdi": true,
+ "sure_sn": 687.0,
+ "gizli": {
+  "gecti": true,
+  "gecen": 16,
+  "toplam": 16,
+  "cikti": "................                                                         [100%]\n16 passed in 0.02s\n"
+ }
+}

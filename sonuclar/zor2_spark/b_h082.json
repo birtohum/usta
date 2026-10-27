@@ -1,0 +1,23 @@
+{
+ "id": "h082",
+ "kip": "b",
+ "kategori": "dosya ve komut satırı (CSV/JSON okuma, rapor yazdırma, argümanlar, hata mesajları)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "manifest.py yazıldı: JSON UTF-8 okuma, sefer/max-kg/girdi/konteynerler kontrolleri, regex ve kg doğrulama, duplicate id ve UYARI handling, ASCII sıralı CSV yazımı, çıktı dizini oluşturma ve OK çıktısı. 12 pytest testi geçiyor.",
+ "adim": 6,
+ "yurutucu_token": {
+  "girdi": 29403,
+  "cikti": 11366
+ },
+ "yurutucu_usd": 0.0052135,
+ "bitirdi": true,
+ "sure_sn": 102.5,
+ "gizli": {
+  "gecti": true,
+  "gecen": 17,
+  "toplam": 17,
+  "cikti": ".................                                                        [100%]\n17 passed in 0.58s\n"
+ }
+}

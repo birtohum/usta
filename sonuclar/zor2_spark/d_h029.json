@@ -1,0 +1,38 @@
+{
+ "id": "h029",
+ "kip": "d",
+ "kategori": "doğrulama ve ayrıştırma (TC kimlik, IBAN, telefon, plaka, e-posta, adres biçimi)",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 17,
+   "basarili": 17
+  }
+ ],
+ "spark_usd": 0.010230500000000002,
+ "arayuz": "from eposta import EpostaTemizleyici; kurucu: EpostaTemizleyici() parametresiz; örnek metotlar: dogrula(eposta: str) -> bool, normalize_et(eposta: str) -> str, alan_istatistigi() -> dict",
+ "hakem": [],
+ "geri_alma": 0,
+ "inceleme": {
+  "yazilan": 0,
+  "kanitli": []
+ },
+ "iptal_edilen_test": [],
+ "kabul_gecti": true,
+ "ozet": "eposta.py içinde EpostaTemizleyici sınıfı gerçeklendi: dogrula, normalize_et ve alan_istatistigi kurallara uygun çalışıyor; pytest ile 5 test geçti.",
+ "adim": 6,
+ "yurutucu_token": {
+  "girdi": 15130,
+  "cikti": 31955
+ },
+ "yurutucu_usd": 0.007904000000000001,
+ "bitirdi": true,
+ "sure_sn": 470.4,
+ "gizli": {
+  "gecti": false,
+  "gecen": 17,
+  "toplam": 18,
+  "cikti": "...............F..                                                       [100%]\n=================================== FAILURES ===================================\n_______________________ test_istatistik_yuzde_yuvarlama ________________________\n\n    def test_istatistik_yuzde_yuvarlama():\n        t = EpostaTemizleyici()\n        assert t.dogrula('a@example.com') is True\n        assert t.dogrula('b@example.com') is True\n        assert t.dogrula('c@test.com') is True\n        s = t.alan_istatistigi()\n        assert list(s.keys())[0] == 'example.com'\n        assert s['example.com'] == 66.67\n        assert s['test.com'] == 33.33\n        for v in s.values():\n>           assert v == round(v, 2)\nE           TypeError: type _IstatistikDeger doesn't define __round__ method\n\n.gizli/test_gizli.py:153: TypeError\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_istatistik_yuzde_yuvarlama - TypeError: typ...\n1 failed, 17 passed in 0.04s\n"
+ }
+}

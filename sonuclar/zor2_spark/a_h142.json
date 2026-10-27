@@ -1,0 +1,23 @@
+{
+ "id": "h142",
+ "kip": "a",
+ "kategori": "doğrulama ve ayrıştırma (TC kimlik, IBAN, telefon, plaka, e-posta, adres biçimi)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "uretici_adres.py içinde UreticiAdresYoneticisi sınıfı yazıldı: telefon normalizasyonu (05 ile başlayan 11 hane, 10/12 hanede ValueError, ayraç/boşluktan bağımsız yinelenen telefonda ValueError), adres ayrıştırma (mahalle/sokak/bina_no/posta_kodu, eksik parçada KeyError, posta kodu 5 hane, bina_no 1-500), artan id, mahalle+sokak sıralı listeleme (stabil), Decimal ile matematiksel yuvarlamalı basari_yuzdesi, string olmayan girdide TypeError; yalnızca standart kütüphane.",
+ "adim": 6,
+ "yurutucu_token": {
+  "girdi": 22224,
+  "cikti": 26295
+ },
+ "yurutucu_usd": 0.007481400000000001,
+ "bitirdi": true,
+ "sure_sn": 225.2,
+ "gizli": {
+  "gecti": true,
+  "gecen": 18,
+  "toplam": 18,
+  "cikti": "..................                                                       [100%]\n18 passed in 0.02s\n"
+ }
+}

@@ -1,0 +1,44 @@
+{
+ "id": "h017",
+ "kip": "c",
+ "kategori": "doğrulama ve ayrıştırma (TC kimlik, IBAN, telefon, plaka, e-posta, adres biçimi)",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 18,
+   "basarili": 18
+  }
+ ],
+ "spark_usd": 0.0039535,
+ "arayuz": "telefon.py içinde TelefonRehberi: ekle(ham:str)->str, normalize_et(ham:str)->str ve dis_a_aktar()->list[str] aynen; ek olarak e164_bicimi(ham:str)->str, __eq__(diger:object)->bool, __lt__(diger:object)->bool, doluluk_raporu(self)->dict",
+ "hakem": [
+  {
+   "test": "test_dis_a_aktar_sayisal_artan",
+   "karar": "belirsiz",
+   "gerekce": "Görev metni dis_a_aktar çıktısının on haneli mi yoksa E.164 biçimli mi olacağını açıkça belirtmiyor.",
+   "tur": 1
+  }
+ ],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [
+  "test_dis_a_aktar_sayisal_artan"
+ ],
+ "kabul_gecti": true,
+ "ozet": "telefon.py içinde TelefonRehberi gerçeklendi: normalize_et/ekle/e164_bicimi/dis_a_aktar/__eq__/__lt__/doluluk_raporu; 6 pytest testi geçti.",
+ "adim": 6,
+ "yurutucu_token": {
+  "girdi": 15463,
+  "cikti": 38444
+ },
+ "yurutucu_usd": 0.009235100000000001,
+ "bitirdi": true,
+ "sure_sn": 405.4,
+ "gizli": {
+  "gecti": false,
+  "gecen": 16,
+  "toplam": 19,
+  "cikti": "E       AssertionError: assert ['+9053212345...905551234567'] == ['5321234567'... '5551234567']\nE         At index 0 diff: '+905321234567' != '5321234567'\nE         Use -v to get more diff\n\n.gizli/test_gizli.py:94: AssertionError\n__________________________ test_bos_rehber_oran_sifir __________________________\n\n    def test_bos_rehber_oran_sifir():\n        r = TelefonRehberi()\n>       assert r.benzersizlik_orani() == 0\nE       AttributeError: 'TelefonRehberi' object has no attribute 'benzersizlik_orani'\n\n.gizli/test_gizli.py:116: AttributeError\n______________________ test_benzersizlik_orani_yuvarlama _______________________\n\n    def test_benzersizlik_orani_yuvarlama():\n        r = TelefonRehberi()\n        r.ekle(\"05321234567\")\n        r.ekle(\"05331234567\")\n        with pytest.raises(ValueError):\n            r.ekle(\"05321234567\")\n>       assert r.benzersizlik_orani() == round(2/3, 2)\nE       AttributeError: 'TelefonRehberi' object has no attribute 'benzersizlik_orani'\n\n.gizli/test_gizli.py:126: AttributeError\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_dis_a_aktar_sayisal_artan - AssertionError:...\nFAILED .gizli/test_gizli.py::test_bos_rehber_oran_sifir - AttributeError: 'Te...\nFAILED .gizli/test_gizli.py::test_benzersizlik_orani_yuvarlama - AttributeErr...\n3 failed, 16 passed in 0.03s\n"
+ }
+}

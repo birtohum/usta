@@ -1,0 +1,23 @@
+{
+ "id": "h051",
+ "kip": "b",
+ "kategori": "tarih ve saat (iş günü, resmî tatil listesi parametre olarak verilir, süre hesabı, biçim dönüşümü)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "konaklama.py içinde gece_sayisi ve ucret_hesapla yazıldı: YYYY-MM-DD doğrulama, gün farkı, 1 gece kuralı, 100-50000 fiyat aralığı, tatil gecelerine 1.5 katsayısı (sıralı+tekilleştirilmiş küme), Decimal HALF_UP ile kuruş yuvarlama. test_konaklama.py ile 13 testin tamamı geçti.",
+ "adim": 4,
+ "yurutucu_token": {
+  "girdi": 12676,
+  "cikti": 8491
+ },
+ "yurutucu_usd": 0.0029658,
+ "bitirdi": true,
+ "sure_sn": 75.7,
+ "gizli": {
+  "gecti": true,
+  "gecen": 20,
+  "toplam": 20,
+  "cikti": "....................                                                     [100%]\n20 passed in 0.02s\n"
+ }
+}
