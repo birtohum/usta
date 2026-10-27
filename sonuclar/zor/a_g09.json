@@ -1,0 +1,20 @@
+{
+ "id": "g09",
+ "kip": "a",
+ "kategori": "tarih ve saat (iş günü, resmî tatil listesi parametre olarak verilir, süre hesabı, biçim dönüşümü)",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "vardiya.py dosyası oluşturuldu. VardiyaHesaplayici sınıfı __init__ ile gündüz ve gece başlangıç saatlerini doğrular, gece başlangıcı 20:00-23:59 aralığında olmalı. hesapla metodu giriş/çıkış saatlerini HH:MM olarak doğrular, boş/None için TypeError, geçersiz biçim için ValueError fırlatır. Çıkış girişten küçük/eşitse ertesi güne sarkar, eşitse 0 dakika döner. Gece aralığı gece_baslangic dahil, gunduz_baslangic hariç hesaplanır ve toplam, gündüz, gece dakika sayıları tam olarak toplam_dakika, gunduz_dakika, gece_dakika anahtarlarıyla döndürülür. Sınıf birden çok vardiyada yeniden kullanılabilir.",
+ "adim": 14,
+ "glimmer_token": {
+  "girdi": 44313,
+  "cikti": 51906
+ },
+ "sure_sn": 1235.7,
+ "gizli": {
+  "gecti": false,
+  "gecen": 15,
+  "toplam": 16,
+  "cikti": "...............F                                                         [100%]\n=================================== FAILURES ===================================\n________________________ test_kurucu_araliklari_saklar _________________________\n\n    def test_kurucu_araliklari_saklar():\n        h = VardiyaHesaplayici(\"06:00\", \"22:00\")\n>       assert h.gunduz_baslangic == \"06:00\"\nE       AttributeError: 'VardiyaHesaplayici' object has no attribute 'gunduz_baslangic'\n\n.gizli/test_gizli.py:111: AttributeError\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_kurucu_araliklari_saklar - AttributeError: ...\n1 failed, 15 passed in 0.04s\n"
+ }
+}

@@ -1,0 +1,30 @@
+{
+ "id": "g02",
+ "kip": "c",
+ "kategori": "küçük işletme hesapları (KDV, fatura, taksit, indirim, stok, kur dönüşümü, yuvarlama)",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 14,
+   "basarili": 14
+  }
+ ],
+ "spark_usd": 0.0026631000000000003,
+ "arayuz": "fatura.py: FaturaKalemi(ad:str,miktar:int,birim_fiyat:Decimal,kdv_oran:int); KdvHesaplayici.__init__(self,varsayilan_oran:int); ekle(self,ad:str,miktar:int,birim_fiyat:Decimal,kdv_oran:int|None=None)->None; ozet(self)->dict; dokum(self)->str; dogrula(numara:str)->bool",
+ "hakem": [],
+ "iptal_edilen_test": [],
+ "kabul_gecti": true,
+ "ozet": "fatura.py dosyasında FaturaKalemi dataclass, KdvHesaplayici sınıfı (varsayılan KDV doğrulaması, ekle ile parametre kontrolleri, Decimal ile yuvarlamasız hesaplama ve ROUND_HALF_UP ile özet, KDV oranına göre sıralı dokum) ve TR-YYYY-NNNN formatını doğrulayan dogrula fonksiyonu implemente edildi. test_fatura.py ile 14 test çalıştırıldı ve tümü geçti.",
+ "adim": 5,
+ "glimmer_token": {
+  "girdi": 14861,
+  "cikti": 14826
+ },
+ "sure_sn": 350.0,
+ "gizli": {
+  "gecti": false,
+  "gecen": 13,
+  "toplam": 18,
+  "cikti": "E       AttributeError: 'str' object has no attribute 'ad'\n\n.gizli/test_gizli.py:107: AttributeError\n_____________________ test_dokum_esitlikte_eklenme_sirasi ______________________\n\n    def test_dokum_esitlikte_eklenme_sirasi():\n        h = KdvHesaplayici(10)\n        h.ekle('Kalem', 1, Decimal('1.00'), 10)\n        h.ekle('kalem', 2, Decimal('2.00'), 10)\n        h.ekle('KALEM', 3, Decimal('3.00'), 10)\n        d = h.dokum()\n>       assert [k.miktar for k in d] == [1, 2, 3]\nE       AttributeError: 'str' object has no attribute 'miktar'\n\n.gizli/test_gizli.py:116: AttributeError\n_____________________ test_dogrula_yil_araligi_valueerror ______________________\n\n    def test_dogrula_yil_araligi_valueerror():\n        fn = _dogrula_fn()\n>       with pytest.raises(ValueError):\nE       Failed: DID NOT RAISE <class 'ValueError'>\n\n.gizli/test_gizli.py:137: Failed\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_ekle_varsayilan_oran_kullanir - AttributeEr...\nFAILED .gizli/test_gizli.py::test_dokum_once_kdv_oranina_gore - AttributeErro...\nFAILED .gizli/test_gizli.py::test_dokum_ada_gore_case_insensitive - Attribute...\nFAILED .gizli/test_gizli.py::test_dokum_esitlikte_eklenme_sirasi - AttributeE...\nFAILED .gizli/test_gizli.py::test_dogrula_yil_araligi_valueerror - Failed: DI...\n5 failed, 13 passed in 0.06s\n"
+ }
+}

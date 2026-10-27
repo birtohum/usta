@@ -1,0 +1,20 @@
+{
+ "id": "g07",
+ "kip": "a",
+ "kategori": "Türkçe metin işleme (Türkçe harfler, büyük/küçük harf, hece, ek, sıralama, sayı/yazı)",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "ekler.py dosyası oluşturuldu ve Ekleyici sınıfı eklendi. isim_eki_ekle metodu büyük ünlü uyumu, ünsüz yumuşaması, ünsüz benzeşmesi, kök doğrulaması ve özel isim büyük harf eşleştirmesi yapar; cogul_yap metodu son ünlüye göre lar/ler ekler. Temel testler başarılı.",
+ "adim": 12,
+ "glimmer_token": {
+  "girdi": 46975,
+  "cikti": 32402
+ },
+ "sure_sn": 780.1,
+ "gizli": {
+  "gecti": false,
+  "gecen": 17,
+  "toplam": 19,
+  "cikti": "______________________________ test_ozel_isim_ek _______________________________\n\n    def test_ozel_isim_ek():\n        r = Ekleyici().isim_eki_ekle(\"Ankara\", \"a\")\n>       assert r == \"AnkaraA\"\nE       AssertionError: assert 'Ankaraa' == 'AnkaraA'\nE         \nE         - AnkaraA\nE         ?       ^\nE         + Ankaraa\nE         ?       ^\n\n.gizli/test_gizli.py:83: AssertionError\n_____________________________ test_ozel_isim_cogul _____________________________\n\n    def test_ozel_isim_cogul():\n        r = Ekleyici().cogul_yap(\"Ankara\")\n>       assert r == \"AnkaraLar\"\nE       AssertionError: assert 'Ankaralar' == 'AnkaraLar'\nE         \nE         - AnkaraLar\nE         ?       ^\nE         + Ankaralar\nE         ?       ^\n\n.gizli/test_gizli.py:88: AssertionError\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_ozel_isim_ek - AssertionError: assert 'Anka...\nFAILED .gizli/test_gizli.py::test_ozel_isim_cogul - AssertionError: assert 'A...\n2 failed, 17 passed in 0.08s\n"
+ }
+}

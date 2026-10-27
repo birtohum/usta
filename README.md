@@ -32,6 +32,9 @@ work independently and shows the evidence.
         ▼
  acceptance tests run ── pass → result screen with evidence
         │ fail
+        ▼
+ Muse Spark arbiter: does the task text clearly require this? ── unclear / faulty → not enforced, shown in report
+        │ clearly required
         └──► failing output goes back to Glimmer (up to 3 rounds)
 ```
 
@@ -58,8 +61,31 @@ work independently and shows the evidence.
 
 ## Measurement
 
-<!-- SONUÇLAR -->
-_Results are being collected; this section will contain the a/b/c table._
+**Result (hard set, 27–28 Oct 2026): the expected ordering (c) > (b) > (a) did not hold.** Glimmer alone was best.
+
+Tasks g07–g40 (34 tasks not looked at while tuning the method):
+
+| Mode | All hidden tests pass | Hidden tests passed | Avg. Glimmer steps | Avg. Glimmer tokens | Spark cost |
+|---|---|---|---|---|---|
+| (a) Glimmer alone | **20/34 (59%; 95% CI 42–74)** | 94% | 13.2 | 81k | – |
+| (b) Glimmer + own tests | 14/34 (41%; 26–58) | 89% | 8.5 | 58k | – |
+| (c) Usta | 18/34 (53%; 37–69) | 92% | 9.6 | 66k | $0.08 total |
+
+Paired, same task: c vs a — only c passed 0, only a passed 2 (difference −5.9 points, 95% task-bootstrap CI −14.7 … 0.0).
+c vs b — only c passed 5, only b passed 1 (+11.8 points, CI 0.0 … +26.5). Intervals are Wilson (single rates) and task-level bootstrap (paired).
+All 40 tasks: a 25/40, b 19/40, c 23/40. Raw per-run records: [`sonuclar/`](sonuclar/).
+
+What we read from this (single run per task and mode, so differences of 1–3 tasks are noise):
+- Asking Glimmer to write and pass its own tests (b) made it stop earlier (8.5 vs 13.2 steps) and pass fewer tasks.
+  Glimmer's own tests share its misreadings of the task, so "my tests pass" became a premature stop signal.
+- Usta's independent tests recovered most of that loss (c vs b: +5 / −1) but did not beat letting Glimmer work
+  without the testing instruction. The verification loop's value here is **evidence and catching premature
+  "done"**, not a higher pass rate than the strongest baseline.
+- Two failure modes we found and fixed during development, both visible in the history: (1) Spark's interface
+  contract invented behaviour rules not in the task, and the acceptance tests enforced them, so Glimmer broke correct
+  code — the contract is now naming-only; (2) when the task text admits two readings, the acceptance test and the
+  hidden test can pick different ones — a Spark **arbiter** now only enforces failing tests the task clearly requires.
+- Total Muse Spark spend for all of this (contracts, tests, arbiter, generating both task sets): **$0.38**.
 
 Setup: (a) Glimmer alone, (b) Glimmer instructed to write and pass its own tests, (c) Usta (independent Spark tests +
 repair loop). Every task runs in a fresh sandbox; afterwards **hidden tests** — never shown to the agent or to Usta's
@@ -71,7 +97,8 @@ Honest caveats:
   We therefore generated a harder set (≥6 explicit requirements per task, 12–20 hidden tests).
 - The hidden tests and Usta's acceptance tests are written by the same model (Spark), in separate calls without
   access to each other. Their errors may be correlated.
-- N=40 per set; differences of a few tasks are within noise.
+- N=40, one run per task and mode; differences of a few tasks are within noise.
+- g01–g06 were used while tuning the method (contract, arbiter); the headline table excludes them.
 
 ## Run it
 
@@ -111,5 +138,7 @@ are sent to Meta for transcription. Do not send personal data.
 | `usta/web.py`, `usta/statik/` | Web UI (live steps over SSE, test badges, files) |
 | `betikler/` | Evaluation-set generation, a/b/c evaluation, end-to-end check |
 | `veri/` | Generated evaluation sets (tasks + hidden tests) |
+| `sonuclar/` | Raw evaluation records and summary |
+| `DEMO.md` | 3-minute demo script |
 
 License: Apache 2.0.

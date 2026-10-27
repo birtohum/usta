@@ -1,0 +1,20 @@
+{
+ "id": "g24",
+ "kip": "b",
+ "kategori": "veri yapıları ve algoritmalar (kuyruk, önbellek, arama, gruplama, birleştirme, durum makinesi)",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "log_birlestir.py çok bayraklı CLI programı oluşturuldu. --girdi, --cikti, --bicim (jsonl/csv) ve isteğe bağlı --sirala bayraklarını destekler, geçersiz zaman damgalarını atlar ve ATLANAN sayısını stderr'e yazar, kararlı sıralama yapar, CSV için standart kaçış kullanır, eksik dosya için çıkış kodu 2, boş girdi için 3 döner ve çıktı dizinini otomatik oluşturur. test_log_birlestir.py ile 6 test geçti.",
+ "adim": 8,
+ "glimmer_token": {
+  "girdi": 27826,
+  "cikti": 15574
+ },
+ "sure_sn": 378.2,
+ "gizli": {
+  "gecti": false,
+  "gecen": 14,
+  "toplam": 17,
+  "cikti": "     assert r.returncode == 0\n>           assert 'ATLANAN: 0' in r.stderr\nE           AssertionError: assert 'ATLANAN: 0' in ''\nE            +  where '' = CompletedProcess(args=['/usr/local/bin/python', '/work/log_birlestir.py', '--girdi', '/tmp/tmp7rj97awk/a.log', '--cikti', '/tmp/tmp7rj97awk/out.jsonl', '--bicim', 'jsonl'], returncode=0, stdout='', stderr='').stderr\n\n.gizli/test_gizli.py:112: AssertionError\n___________________________ test_girdi_bossa_cikis_3 ___________________________\n\n    def test_girdi_bossa_cikis_3():\n        import tempfile\n        with tempfile.TemporaryDirectory() as td:\n            td = pathlib.Path(td)\n            out = td / 'out.jsonl'\n            r = run(['--girdi', '--cikti', str(out), '--bicim', 'jsonl'])\n>           assert r.returncode == 3\nE           AssertionError: assert 2 == 3\nE            +  where 2 = CompletedProcess(args=['/usr/local/bin/python', '/work/log_birlestir.py', '--girdi', '--cikti', '/tmp/tmpgr7d9vbd/out....         {jsonl,csv} [--sirala [SIRALA]]\\nlog_birlestir.py: error: argument --girdi: expected at least one argument\\n').returncode\n\n.gizli/test_gizli.py:176: AssertionError\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_jsonl_temel_sirasiz_dosya_sirasi - Assertio...\nFAILED .gizli/test_gizli.py::test_atlanan_sifirsa_bile_yazilir - AssertionErr...\nFAILED .gizli/test_gizli.py::test_girdi_bossa_cikis_3 - AssertionError: asser...\n3 failed, 14 passed in 0.47s\n"
+ }
+}

@@ -1,0 +1,30 @@
+{
+ "id": "g38",
+ "kip": "c",
+ "kategori": "küçük işletme hesapları (KDV, fatura, taksit, indirim, stok, kur dönüşümü, yuvarlama)",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 12,
+   "basarili": 12
+  }
+ ],
+ "spark_usd": 0.002328,
+ "arayuz": "",
+ "hakem": [],
+ "iptal_edilen_test": [],
+ "kabul_gecti": true,
+ "ozet": null,
+ "adim": 20,
+ "glimmer_token": {
+  "girdi": 154695,
+  "cikti": 21028
+ },
+ "sure_sn": 532.9,
+ "gizli": {
+  "gecti": false,
+  "gecen": 15,
+  "toplam": 16,
+  "cikti": "...............F                                                         [100%]\n=================================== FAILURES ===================================\n________________________ test_16_kurus_siniri_ve_karma _________________________\n\ntmp_path = PosixPath('/tmp/pytest-of-root/pytest-1/test_16_kurus_siniri_ve_karma0')\n\n    def test_16_kurus_siniri_ve_karma(tmp_path):\n        g = tmp_path / \"f.csv\"\n        c = tmp_path / \"r.json\"\n        csv_yaz(g, \"numara,tarih,tutar,para_birimi\", [\"AB2024000000001,2024-01-01,0.009,TL\", \"AB2024000000002,2024-01-01,0.01,TL\"])\n        r = calistir(g, c, \"TL\")\n        assert r.returncode == 0\n        rap = rapor_oku(c)\n>       assert rap[\"toplam_fatura\"] == 1\nE       assert 2 == 1\n\n.gizli/test_gizli.py:177: AssertionError\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_16_kurus_siniri_ve_karma - assert 2 == 1\n1 failed, 15 passed in 0.40s\n"
+ }
+}

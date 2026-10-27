@@ -1,0 +1,40 @@
+{
+ "id": "g22",
+ "kip": "c",
+ "kategori": "dosya ve komut satırı (CSV/JSON okuma, rapor yazdırma, argümanlar, hata mesajları)",
+ "turlar": [
+  {
+   "gecti": false,
+   "toplam": 2,
+   "basarili": 0
+  },
+  {
+   "gecti": false,
+   "toplam": 2,
+   "basarili": 0
+  },
+  {
+   "gecti": false,
+   "toplam": 2,
+   "basarili": 0
+  }
+ ],
+ "spark_usd": 0.0030700000000000002,
+ "arayuz": "",
+ "hakem": [],
+ "iptal_edilen_test": [],
+ "kabul_gecti": false,
+ "ozet": null,
+ "adim": 12,
+ "glimmer_token": {
+  "girdi": 21368,
+  "cikti": 36614
+ },
+ "sure_sn": 873.3,
+ "gizli": {
+  "gecti": false,
+  "gecen": 0,
+  "toplam": 2,
+  "cikti": "\n==================================== ERRORS ====================================\n____________________ ERROR collecting .gizli/test_gizli.py _____________________\nImportError while importing test module '/work/.gizli/test_gizli.py'.\nHint: make sure your test modules/packages have valid Python names.\nTraceback:\n/usr/local/lib/python3.12/importlib/__init__.py:90: in import_module\n    return _bootstrap._gcd_import(name[level:], package, level)\n.gizli/test_gizli.py:5: in <module>\n    from adisyon import adisyon_oku, adisyon_birlestir, gunluk_rapor\nE   ModuleNotFoundError: No module named 'adisyon'\n=========================== short test summary info ============================\nERROR .gizli/test_gizli.py\n!!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!\n1 error in 0.06s\n"
+ }
+}

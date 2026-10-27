@@ -1,0 +1,20 @@
+{
+ "id": "g08",
+ "kip": "a",
+ "kategori": "küçük işletme hesapları (KDV, fatura, taksit, indirim, stok, kur dönüşümü, yuvarlama)",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": null,
+ "adim": 20,
+ "glimmer_token": {
+  "girdi": 100701,
+  "cikti": 118374
+ },
+ "sure_sn": 2790.4,
+ "gizli": {
+  "gecti": true,
+  "gecen": 17,
+  "toplam": 17,
+  "cikti": ".................                                                        [100%]\n17 passed in 0.04s\n"
+ }
+}

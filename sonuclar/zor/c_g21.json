@@ -1,0 +1,84 @@
+{
+ "id": "g21",
+ "kip": "c",
+ "kategori": "tarih ve saat (iş günü, resmî tatil listesi parametre olarak verilir, süre hesabı, biçim dönüşümü)",
+ "turlar": [
+  {
+   "gecti": false,
+   "toplam": 14,
+   "basarili": 6
+  },
+  {
+   "gecti": true,
+   "toplam": 14,
+   "basarili": 14
+  }
+ ],
+ "spark_usd": 0.0023170000000000005,
+ "arayuz": "",
+ "hakem": [
+  {
+   "test": "test_cikti_dd_mm_yyyy",
+   "karar": "gerekli",
+   "gerekce": "5 gün sonrası hafta sonu ileriye ötelenince 08-01-2024 olur ve sondaki yeni satır açıkça istenir.",
+   "tur": 1
+  },
+  {
+   "test": "test_haftasonu_geri",
+   "karar": "gerekli",
+   "gerekce": "Cumartesiye denk gelen vade geriye ötelenince 2024-01-05 olur ve tek satır yeni satırla biter.",
+   "tur": 1
+  },
+  {
+   "test": "test_haftasonu_ileri",
+   "karar": "gerekli",
+   "gerekce": "Cumartesiye denk gelen vade ileriye ötelenince 2024-01-08 olur ve sondaki yeni satır istenir.",
+   "tur": 1
+  },
+  {
+   "test": "test_normal_haftaici",
+   "karar": "gerekli",
+   "gerekce": "10 gün sonrası hafta içi 2024-01-11'dir ve çıktının yeni satırla bitmesi açıkça belirtilir.",
+   "tur": 1
+  },
+  {
+   "test": "test_tatil_zincir_ileri",
+   "karar": "gerekli",
+   "gerekce": "Zincir tatillerin ileriye çözümü 2024-04-25'i verir ve sondaki yeni satır görevde yazılır.",
+   "tur": 1
+  },
+  {
+   "test": "test_tatiller_sirasiz_yinelenen_kabul",
+   "karar": "gerekli",
+   "gerekce": "Sırasız yinelenen tatiller kabul edilip ötelenince 2024-01-12 bulunur ve yeni satır gerekir.",
+   "tur": 1
+  },
+  {
+   "test": "test_vade_sifir_haftasonu_ileri",
+   "karar": "gerekli",
+   "gerekce": "Sıfır vadede bile öteleme uygulanacağı açıkça yazdığından 2024-01-08 ve yeni satır doğrudur.",
+   "tur": 1
+  },
+  {
+   "test": "test_vade_sifir_isgunu",
+   "karar": "gerekli",
+   "gerekce": "İş gününde sıfır vade aynen kalıp 2024-01-01 olur ve tek satır yeni satırla biter.",
+   "tur": 1
+  }
+ ],
+ "iptal_edilen_test": [],
+ "kabul_gecti": true,
+ "ozet": "vade.py çıktısına sondaki yeni satır eklendi. Testler beklediği gibi stdout == \"YYYY-MM-DD\\n\" formatını üretiyor. Bağımsız kabul testleri 14/14 geçti.",
+ "adim": 16,
+ "glimmer_token": {
+  "girdi": 85582,
+  "cikti": 22398
+ },
+ "sure_sn": 588.7,
+ "gizli": {
+  "gecti": true,
+  "gecen": 19,
+  "toplam": 19,
+  "cikti": "...................                                                      [100%]\n19 passed in 1.18s\n"
+ }
+}

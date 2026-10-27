@@ -1,0 +1,20 @@
+{
+ "id": "g01",
+ "kip": "a",
+ "kategori": "Türkçe metin işleme (Türkçe harfler, büyük/küçük harf, hece, ek, sıralama, sayı/yazı)",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "slug.py dosyası oluşturuldu. slug_yap fonksiyonu Türkçe karakterleri ASCII'ye çeviriyor, küçük harfe indiriyor, harf/rakam dışındaki dizileri tek tireye indiriyor, baştaki/sondaki tireleri temizliyor. Boş/yalnız işaret girdilerinde boş string döndürüyor, str olmayan girdide TypeError yükseltiyor. Örnek \"Çocuk Gömleği 2024!\" → \"cocuk-gomlegi-2024\" doğru çalışıyor.",
+ "adim": 6,
+ "glimmer_token": {
+  "girdi": 9512,
+  "cikti": 2758
+ },
+ "sure_sn": 74.2,
+ "gizli": {
+  "gecti": true,
+  "gecen": 10,
+  "toplam": 10,
+  "cikti": "..........                                                               [100%]\n10 passed in 0.02s\n"
+ }
+}

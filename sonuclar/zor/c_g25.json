@@ -1,0 +1,61 @@
+{
+ "id": "g25",
+ "kip": "c",
+ "kategori": "Türkçe metin işleme (Türkçe harfler, büyük/küçük harf, hece, ek, sıralama, sayı/yazı)",
+ "turlar": [
+  {
+   "gecti": false,
+   "toplam": 12,
+   "basarili": 11
+  },
+  {
+   "gecti": false,
+   "toplam": 12,
+   "basarili": 11
+  },
+  {
+   "gecti": true,
+   "toplam": 12,
+   "basarili": 12
+  }
+ ],
+ "spark_usd": 0.0039778999999999995,
+ "arayuz": "adres.py içinde sınıf AdresDuzenleyici için __init__(self, mahalle: str, cadde: str, bina_no: int), __eq__(self, other: object) -> bool ve __lt__(self, other: object) -> bool; alanlar mahalle, cadde, bina_no",
+ "hakem": [
+  {
+   "test": "test_duzenle_temel_bicim",
+   "karar": "belirsiz",
+   "gerekce": "Görev metni Mahalle ve Cadde sözcüklerinin çıktıdaki gerçek biçimini örnekle netleştirmiyor.",
+   "tur": 1
+  },
+  {
+   "test": "test_esitlik_turkce",
+   "karar": "gerekli",
+   "gerekce": "Görev metni eşitlikte Türkçe büyük küçük harf duyarsız karşılaştırma yapılmasını açıkça istiyor.",
+   "tur": 1
+  },
+  {
+   "test": "test_esitlik_turkce",
+   "karar": "gerekli",
+   "gerekce": "Görev metni eşitlikte Türkçe büyük-küçük harf duyarsız karşılaştırma yapılmasını açıkça istiyor.",
+   "tur": 2
+  }
+ ],
+ "iptal_edilen_test": [
+  "test_duzenle_temel_bicim"
+ ],
+ "kabul_gecti": true,
+ "ozet": null,
+ "adim": 31,
+ "glimmer_token": {
+  "girdi": 222524,
+  "cikti": 22909
+ },
+ "sure_sn": 673.4,
+ "gizli": {
+  "gecti": false,
+  "gecen": 3,
+  "toplam": 17,
+  "cikti": "_________________________\n\n    def test_posta_kodu_bosluk_false():\n>       a = AdresDuzenleyici()\nE       TypeError: AdresDuzenleyici.__init__() missing 3 required positional arguments: 'mahalle', 'cadde', and 'bina_no'\n\n.gizli/test_gizli.py:85: TypeError\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_duzenle_basic_format - TypeError: AdresDuze...\nFAILED .gizli/test_gizli.py::test_duzenle_i_harfi - TypeError: AdresDuzenleyi...\nFAILED .gizli/test_gizli.py::test_duzenle_noktasiz_i - TypeError: AdresDuzenl...\nFAILED .gizli/test_gizli.py::test_duzenle_cok_kelimeli_buyuk_harf - TypeError...\nFAILED .gizli/test_gizli.py::test_duzenle_fazla_bosluk - TypeError: AdresDuze...\nFAILED .gizli/test_gizli.py::test_mahalle_kisa_valueerror - TypeError: AdresD...\nFAILED .gizli/test_gizli.py::test_mahalle_uzun_valueerror - TypeError: AdresD...\nFAILED .gizli/test_gizli.py::test_cadde_kisa_valueerror - TypeError: AdresDuz...\nFAILED .gizli/test_gizli.py::test_rakam_iceren_valueerror - TypeError: AdresD...\nFAILED .gizli/test_gizli.py::test_yanlis_tur_typeerror - TypeError: AdresDuze...\nFAILED .gizli/test_gizli.py::test_bina_no_aralik_valueerror - TypeError: Adre...\nFAILED .gizli/test_gizli.py::test_posta_kodu_gecerli - TypeError: AdresDuzenl...\nFAILED .gizli/test_gizli.py::test_posta_kodu_gecersiz - TypeError: AdresDuzen...\nFAILED .gizli/test_gizli.py::test_posta_kodu_bosluk_false - TypeError: AdresD...\n14 failed, 3 passed in 0.05s\n"
+ }
+}

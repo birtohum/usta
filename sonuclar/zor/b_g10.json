@@ -1,0 +1,20 @@
+{
+ "id": "g10",
+ "kip": "b",
+ "kategori": "dosya ve komut satırı (CSV/JSON okuma, rapor yazdırma, argümanlar, hata mesajları)",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "stok.py içinde StokDefteri sınıfı oluşturuldu. __init__ JSON yükleme ve ValueError dönüşümü, urun_ekle barkod strip/validasyon ve üzerine yazma, sayim_yukle CSV başlık kontrolü ve sayılamayan satır sayacı, fark_raporu tolerans kontrolü, fark hesaplama, BOS işleme, fark azalan/barkod artan sıralama ve atomik CSV yazma ile toplam_urun/raporlanan/toplam_fark döndürme özellikleri eklendi. test_stok.py ile 11 test başarılı.",
+ "adim": 5,
+ "glimmer_token": {
+  "girdi": 17281,
+  "cikti": 16992
+ },
+ "sure_sn": 404.4,
+ "gizli": {
+  "gecti": false,
+  "gecen": 15,
+  "toplam": 16,
+  "cikti": "_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \nstok.py:108: in fark_raporu\n    fd, temp_path = tempfile.mkstemp(dir=dir_name, text=True)\n/usr/local/lib/python3.12/tempfile.py:357: in mkstemp\n    return _mkstemp_inner(dir, prefix, suffix, flags, output_type)\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\ndir = '/tmp/pytest-of-root/pytest-2/test_cikti_dosyasi_olustu0/alt', pre = 'tmp'\nsuf = '', flags = 131266, output_type = <class 'str'>\n\n    def _mkstemp_inner(dir, pre, suf, flags, output_type):\n        \"\"\"Code common to mkstemp, TemporaryFile, and NamedTemporaryFile.\"\"\"\n    \n        dir = _os.path.abspath(dir)\n        names = _get_candidate_names()\n        if output_type is bytes:\n            names = map(_os.fsencode, names)\n    \n        for seq in range(TMP_MAX):\n            name = next(names)\n            file = _os.path.join(dir, pre + name + suf)\n            _sys.audit(\"tempfile.mkstemp\", file)\n            try:\n>               fd = _os.open(file, flags, 0o600)\nE               FileNotFoundError: [Errno 2] No such file or directory: '/tmp/pytest-of-root/pytest-2/test_cikti_dosyasi_olustu0/alt/tmpsmexrguw'\n\n/usr/local/lib/python3.12/tempfile.py:256: FileNotFoundError\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_cikti_dosyasi_olustu - FileNotFoundError: [...\n1 failed, 15 passed in 0.07s\n"
+ }
+}

@@ -1,0 +1,20 @@
+{
+ "id": "g34",
+ "kip": "b",
+ "kategori": "dosya ve komut satırı (CSV/JSON okuma, rapor yazdırma, argümanlar, hata mesajları)",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "kutuphane.py içinde KutuphaneKayit sınıfı oluşturuldu. Tarih doğrulaması datetime.date ile yapılıyor, hatalı biçimde ValueError('tarih biçimi hatalı') fırlatılıyor. uye_id/kitap_id strip sonrası boşluk kontrolü ve kitap ödünçte kontrolü mesajı 'kitap ödünçte' ile yapılıyor. iade_al gecikme cezasını Decimal ile ROUND_HALF_UP kullanarak 5.00 TL/gün hesaplayıp iki ondalıklı string döndürüyor. __init__ dosya yoksa boş başlıyor, varsa JSON yüklüyor ve oduncler anahtarı yoksa ValueError veriyor. gecikenler vadesi geçmiş kayıtları vade artan, eşitlikte kitap_id artan şekilde döndürüyor. Yazmalar utf-8, indent 2 ve atomik tmp+replace ile yapılıyor. Tüm testler geçti.",
+ "adim": 4,
+ "glimmer_token": {
+  "girdi": 12730,
+  "cikti": 8090
+ },
+ "sure_sn": 193.5,
+ "gizli": {
+  "gecti": false,
+  "gecen": 16,
+  "toplam": 17,
+  "cikti": "..F..............                                                        [100%]\n=================================== FAILURES ===================================\n___________________________ test_donus_hatali_mesaj ____________________________\n\ntmp_path = PosixPath('/tmp/pytest-of-root/pytest-0/test_donus_hatali_mesaj0')\n\n    def test_donus_hatali_mesaj(tmp_path):\n        k = yeni(tmp_path)\n        k.odunc_ver(\"u1\", \"k1\", \"2024-01-10\")\n        with pytest.raises(ValueError) as e:\n            k.iade_al(\"k1\", \"10-01-2024\")\n        assert str(e.value) == \"tarih biçimi hatalı\"\n>       with pytest.raises(ValueError) as e2:\nE       Failed: DID NOT RAISE <class 'ValueError'>\n\n.gizli/test_gizli.py:32: Failed\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_donus_hatali_mesaj - Failed: DID NOT RAISE ...\n1 failed, 16 passed in 0.04s\n"
+ }
+}

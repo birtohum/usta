@@ -1,0 +1,20 @@
+{
+ "id": "g25",
+ "kip": "b",
+ "kategori": "Türkçe metin işleme (Türkçe harfler, büyük/küçük harf, hece, ek, sıralama, sayı/yazı)",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": null,
+ "adim": 20,
+ "glimmer_token": {
+  "girdi": 110714,
+  "cikti": 26431
+ },
+ "sure_sn": 666.3,
+ "gizli": {
+  "gecti": false,
+  "gecen": 9,
+  "toplam": 17,
+  "cikti": " TypeError: AdresDuzenleyici.__init__() takes 1 positional argument but 4 were given\n\n.gizli/test_gizli.py:91: TypeError\n__________________________ test_siralama_mahalle_once __________________________\n\n    def test_siralama_mahalle_once():\n>       a1 = AdresDuzenleyici('bursa', 'cumhuriyet caddesi', 1)\nE       TypeError: AdresDuzenleyici.__init__() takes 1 positional argument but 4 were given\n\n.gizli/test_gizli.py:100: TypeError\n________________________ test_siralama_cadde_sonra_bina ________________________\n\n    def test_siralama_cadde_sonra_bina():\n>       a1 = AdresDuzenleyici('ankara', 'b caddesi', 1)\nE       TypeError: AdresDuzenleyici.__init__() takes 1 positional argument but 4 were given\n\n.gizli/test_gizli.py:106: TypeError\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_duzenle_basic_format - AssertionError: asse...\nFAILED .gizli/test_gizli.py::test_duzenle_i_harfi - AssertionError: assert 'İ...\nFAILED .gizli/test_gizli.py::test_duzenle_noktasiz_i - AssertionError: assert...\nFAILED .gizli/test_gizli.py::test_duzenle_cok_kelimeli_buyuk_harf - Assertion...\nFAILED .gizli/test_gizli.py::test_duzenle_fazla_bosluk - AssertionError: asse...\nFAILED .gizli/test_gizli.py::test_esitlik_turkce_duyarsiz - TypeError: AdresD...\nFAILED .gizli/test_gizli.py::test_siralama_mahalle_once - TypeError: AdresDuz...\nFAILED .gizli/test_gizli.py::test_siralama_cadde_sonra_bina - TypeError: Adre...\n8 failed, 9 passed in 0.10s\n"
+ }
+}

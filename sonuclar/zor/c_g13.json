@@ -1,0 +1,30 @@
+{
+ "id": "g13",
+ "kip": "c",
+ "kategori": "Türkçe metin işleme (Türkçe harfler, büyük/küçük harf, hece, ek, sıralama, sayı/yazı)",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 13,
+   "basarili": 13
+  }
+ ],
+ "spark_usd": 0.0020882,
+ "arayuz": "",
+ "hakem": [],
+ "iptal_edilen_test": [],
+ "kabul_gecti": true,
+ "ozet": "tutar_yazi.py içinde TutarYazici sınıfı oluşturuldu; tamsayiyi_yaziya_cevir ve sayiyi_yaziya_cevir metotları 0-999999 ve 0-999999,99 aralığı için Türkçe yazıya çeviri, yuvarlama ve hata kontrolleri ile çalışıyor. test_tutar_yazi.py ile pytest testleri eklendi ve tüm testler geçti.",
+ "adim": 9,
+ "glimmer_token": {
+  "girdi": 27989,
+  "cikti": 18719
+ },
+ "sure_sn": 468.2,
+ "gizli": {
+  "gecti": true,
+  "gecen": 16,
+  "toplam": 16,
+  "cikti": "................                                                         [100%]\n16 passed in 0.01s\n"
+ }
+}

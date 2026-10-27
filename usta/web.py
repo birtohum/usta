@@ -10,6 +10,7 @@ import uuid
 from pathlib import Path
 
 from fastapi import FastAPI, HTTPException, Request, UploadFile
+from fastapi.middleware.trustedhost import TrustedHostMiddleware
 from fastapi.responses import FileResponse, StreamingResponse
 from pydantic import BaseModel
 
@@ -17,8 +18,11 @@ from usta import glimmer, ses, surec
 from usta.arac import calisma_ac
 
 app = FastAPI(title="Usta")
+app.add_middleware(TrustedHostMiddleware, allowed_hosts=["127.0.0.1", "localhost"])   # DNS yeniden bağlamaya karşı
 STATIK = Path(__file__).resolve().parent / "statik"
 ISLER: dict[str, queue.Queue] = {}
+AZAMI_ESZAMANLI = 2
+AKTIF = threading.BoundedSemaphore(AZAMI_ESZAMANLI)   # her görev bir Sandbox + GPU + Spark bütçesi harcar
 
 
 class Gorev(BaseModel):
@@ -57,9 +61,18 @@ def gorev_baslat(g: Gorev):
         raise HTTPException(400, "görev boş ya da çok uzun")
     if g.kip not in ("a", "b", "c"):
         raise HTTPException(400, "kip a, b ya da c olmalı")
+    if not AKTIF.acquire(blocking=False):
+        raise HTTPException(429, f"aynı anda en çok {AZAMI_ESZAMANLI} görev çalışabilir")
     is_id = uuid.uuid4().hex[:10]
     ISLER[is_id] = queue.Queue()
-    threading.Thread(target=_yurut, args=(is_id, g.gorev.strip(), g.kip), daemon=True).start()
+
+    def calis():
+        try:
+            _yurut(is_id, g.gorev.strip(), g.kip)
+        finally:
+            AKTIF.release()
+
+    threading.Thread(target=calis, daemon=True).start()
     return {"id": is_id}
 
 

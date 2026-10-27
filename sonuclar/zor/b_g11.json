@@ -1,0 +1,20 @@
+{
+ "id": "g11",
+ "kip": "b",
+ "kategori": "doğrulama ve ayrıştırma (TC kimlik, IBAN, telefon, plaka, e-posta, adres biçimi)",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "telefon.py dosyası normalize_et ve operator_bul fonksiyonlarıyla oluşturuldu. normalize_et boşlukları kırpar, parantez kurallarını kontrol eder, geçersiz karakterleri reddeder ve tüm girdileri +90 ile başlayan 13 karakterli E164 formatına dönüştürür. operator_bul normalize edilmiş numaradan 530-539 Turkcell, 540-549 Vodafone, 500-529 ve 550-599 Türk Telekom, diğerleri Bilinmiyor olarak döner. test_telefon.py ile 10 test geçti.",
+ "adim": 8,
+ "glimmer_token": {
+  "girdi": 31091,
+  "cikti": 34676
+ },
+ "sure_sn": 825.6,
+ "gizli": {
+  "gecti": false,
+  "gecen": 18,
+  "toplam": 19,
+  "cikti": "        open_count = s.count('(')\n        close_count = s.count(')')\n        if open_count != close_count:\n            raise ValueError(\"Parantezler dengeli değil\")\n    \n        if open_count > 0:\n            if s[0] != '(':\n                raise ValueError(\"Parantez yalnızca en başta olabilir\")\n            # ilk kapanış parantezini bul\n            try:\n                close_idx = s.index(')')\n            except ValueError:\n                raise ValueError(\"Kapanış parantezi bulunamadı\")\n            # iç kısımda parantez olmamalı\n            inner = s[1:close_idx]\n            if '(' in inner or ')' in inner:\n                raise ValueError(\"İç içe parantez\")\n            # kapanıştan sonra parantez olmamalı\n            if '(' in s[close_idx+1:] or ')' in s[close_idx+1:]:\n                raise ValueError(\"Parantez yalnızca başta olabilir\")\n            # iç kısım sıfır ile başlamalı ve sadece rakam/ayraç içermeli\n            inner_clean = ''.join(ch for ch in inner if ch.isdigit())\n            if not inner_clean.isdigit() or not inner_clean.startswith('0'):\n>               raise ValueError(\"Parantez içi geçersiz\")\nE               ValueError: Parantez içi geçersiz\n\ntelefon.py:44: ValueError\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_normalize_parantezli - ValueError: Parantez...\n1 failed, 18 passed in 0.06s\n"
+ }
+}

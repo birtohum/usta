@@ -42,9 +42,10 @@ app = modal.App("usta-glimmer")
     secrets=[modal.Secret.from_dict(_yerel_anahtar())],
     timeout=6 * 3600,
     scaledown_window=300,
-    max_containers=1,
+    # Büyük değerlendirmede USTA_GPU_SAYISI=3 ile birden çok H100 açılabilir (her biri ~4 $/sa).
+    max_containers=int(os.environ.get("USTA_GPU_SAYISI", "1")),
 )
-@modal.concurrent(max_inputs=32)
+@modal.concurrent(max_inputs=48)
 @modal.web_server(port=PORT, startup_timeout=2400)
 def glimmer():
     anahtar = os.environ.get("USTA_GLIMMER_TOKEN")

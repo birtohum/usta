@@ -1,0 +1,20 @@
+{
+ "id": "g36",
+ "kip": "a",
+ "kategori": "veri yapıları ve algoritmalar (kuyruk, önbellek, arama, gruplama, birleştirme, durum makinesi)",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "hiz_sinir.py dosyası oluşturuldu. TokenBucket sınıfı kapasite ve dolum_hizi doğrulaması, kesirli jeton takibi, zaman ilerlemesiyle dolum, kapasite sınırı, 1e-9 toleranslı eşitlik, tuket ve kalan yöntemleri ile gereksinimleri karşılıyor.",
+ "adim": 13,
+ "glimmer_token": {
+  "girdi": 41676,
+  "cikti": 34189
+ },
+ "sure_sn": 807.7,
+ "gizli": {
+  "gecti": true,
+  "gecen": 16,
+  "toplam": 16,
+  "cikti": "................                                                         [100%]\n16 passed in 0.14s\n"
+ }
+}

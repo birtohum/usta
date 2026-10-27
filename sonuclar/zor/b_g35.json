@@ -1,0 +1,20 @@
+{
+ "id": "g35",
+ "kip": "b",
+ "kategori": "doğrulama ve ayrıştırma (TC kimlik, IBAN, telefon, plaka, e-posta, adres biçimi)",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "toplu_kontrol.py komut satırı programı oluşturuldu. CSV girdisini UTF-8 ile okuyor, 'deger' başlığı kontrolü yapıyor, --tur (tc/iban/plaka/eposta) doğrulaması yapıyor, --hata-modu atla/dur davranışını uyguluyor, --siralama artan/azalan/yok desteği sağlıyor ve sonucu JSON olarak yazıyor. Standart kütüphane kullanıldı. test_toplu_kontrol.py ile 7 test geçti.",
+ "adim": 8,
+ "glimmer_token": {
+  "girdi": 33148,
+  "cikti": 8191
+ },
+ "sure_sn": 207.4,
+ "gizli": {
+  "gecti": false,
+  "gecen": 14,
+  "toplam": 16,
+  "cikti": "    def test_03_plaka_atla(tmp_path):\n        g = tmp_path / \"k.csv\"\n        c = tmp_path / \"s.json\"\n        csv_yaz(str(g), [\"34AB123\", \"gecersiz\", \"12345\"])\n        r = calistir(\"--girdi\", str(g), \"--tur\", \"plaka\", \"--cikti\", str(c), \"--hata-modu\", \"atla\")\n        assert r.returncode == 0\n        veri = json_oku(str(c))\n>       assert veri[0][\"gecerli\"] is True\nE       assert False is True\n\n.gizli/test_gizli.py:65: AssertionError\n______________________________ test_14_utf8_plaka ______________________________\n\ntmp_path = PosixPath('/tmp/pytest-of-root/pytest-0/test_14_utf8_plaka0')\n\n    def test_14_utf8_plaka(tmp_path):\n        g = tmp_path / \"k.csv\"\n        c = tmp_path / \"s.json\"\n        csv_yaz(str(g), [\"34AB123\", \"06ÇĞİ123\"])\n        r = calistir(\"--girdi\", str(g), \"--tur\", \"plaka\", \"--cikti\", str(c), \"--hata-modu\", \"atla\")\n        assert r.returncode == 0\n        veri = json_oku(str(c))\n>       assert veri[0][\"gecerli\"] is True\nE       assert False is True\n\n.gizli/test_gizli.py:173: AssertionError\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_03_plaka_atla - assert False is True\nFAILED .gizli/test_gizli.py::test_14_utf8_plaka - assert False is True\n2 failed, 14 passed in 0.59s\n"
+ }
+}

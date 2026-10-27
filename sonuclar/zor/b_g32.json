@@ -1,0 +1,20 @@
+{
+ "id": "g32",
+ "kip": "b",
+ "kategori": "küçük işletme hesapları (KDV, fatura, taksit, indirim, stok, kur dönüşümü, yuvarlama)",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "pos.py dosyasında net_tutar ve komisyon_raporu fonksiyonları Decimal ile güvenli aritmetik, ROUND_HALF_UP yuvarlama, haftaici/haftasonu kontrolü ve sınır değer doğrulamaları ile implemente edildi. net_tutar brüt 0.01-1.000.000, komisyon 0-10 aralığını kontrol eder, haftasonu için ek %0.5 kesinti uygular ve sonucu iki basamağa yuvarlar. komisyon_raporu işlemleri brüt azalan şekilde stable sort ile işler, eksik anahtar için KeyError, yanlış tip için TypeError fırlatır ve toplam_brut, toplam_net, islem_sayisi döndürür. test_pos.py ile 9 test başarılı.",
+ "adim": 7,
+ "glimmer_token": {
+  "girdi": 20873,
+  "cikti": 33430
+ },
+ "sure_sn": 788.3,
+ "gizli": {
+  "gecti": false,
+  "gecen": 15,
+  "toplam": 17,
+  "cikti": "_haftasonu_birlikte():\n        assert net_tutar(Decimal(\"200\"), Decimal(\"10\"), \"haftaici\") == Decimal(\"180.00\")\n>       assert net_tutar(Decimal(\"200\"), Decimal(\"10\"), \"haftasonu\") == Decimal(\"179.10\")\nE       AssertionError: assert Decimal('179.00') == Decimal('179.10')\nE        +  where Decimal('179.00') = net_tutar(Decimal('200'), Decimal('10'), 'haftasonu')\nE        +    where Decimal('200') = Decimal('200')\nE        +    and   Decimal('10') = Decimal('10')\nE        +  and   Decimal('179.10') = Decimal('179.10')\n\n.gizli/test_gizli.py:15: AssertionError\n__________________________ test_rapor_siralama_stabil __________________________\n\n    def test_rapor_siralama_stabil():\n        islemler = [\n            {\"brut\": Decimal(\"50\"), \"komisyon_oran\": Decimal(\"0\"), \"gun\": \"haftaici\"},\n            {\"brut\": Decimal(\"200\"), \"komisyon_oran\": Decimal(\"0\"), \"gun\": \"haftaici\"},\n            {\"brut\": Decimal(\"100\"), \"komisyon_oran\": Decimal(\"0\"), \"gun\": \"haftasonu\"},\n            {\"brut\": Decimal(\"100\"), \"komisyon_oran\": Decimal(\"5\"), \"gun\": \"haftaici\"},\n        ]\n        rapor = komisyon_raporu(islemler)\n>       brutlar = [x[\"brut\"] for x in rapor[\"islemler\"]]\nE       KeyError: 'islemler'\n\n.gizli/test_gizli.py:102: KeyError\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_net_komisyon_haftasonu_birlikte - Assertion...\nFAILED .gizli/test_gizli.py::test_rapor_siralama_stabil - KeyError: 'islemler'\n2 failed, 15 passed in 0.05s\n"
+ }
+}

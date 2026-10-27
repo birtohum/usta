@@ -1,0 +1,29 @@
+{
+ "id": "g05",
+ "kip": "c",
+ "kategori": "doğrulama ve ayrıştırma (TC kimlik, IBAN, telefon, plaka, e-posta, adres biçimi)",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 11,
+   "basarili": 11
+  }
+ ],
+ "spark_usd": 0.0010044000000000001,
+ "arayuz": "Dosya adı: validator.py\nFonksiyon: tc_dogrula(tc_no: str) -> bool\nAmaç: TC kimlik numarasının geçerli olup olmadığını doğrulamak.\nKurallar:\n- Girdi yalnızca 11 karakter uzunluğunda bir metin, tüm karakterleri '0'-'9' aralığında ve ilk karakteri '0' değilse adaydır.\n- Adayın 10. basamağı, ilk 9 basamaktaki tek sıradakilerin (1., 3., 5., 7., 9.) toplamının 7 katından çift sıradakilerin (2., 4., 6., 8.) toplamı çıkarılıp sonucun 10'a bölümünden kalana eşit olmalıdır.\n- Adayın 11. basamağı, ilk 10 basamağın toplamının 10'a bölümünden kalana eşit olmalıdır.\n- Bu üç koşulun tamamı sağlanıyorsa True döndürür.\n- Diğer her durumda (yanlış uzunluk, ilk basamağın sıfır olması, rakam dışı karakter, sağlama hatası, boş metin, None ya da str dışı türler dahil) istisna fırlatmadan False döndürür.\n- Dönüş türü her zaman bool olur.\n- Python 3.12 standart kütüphanesi dışında bağımlılık kullanılmaz.",
+ "iptal_edilen_test": [],
+ "kabul_gecti": true,
+ "ozet": "validator.py içinde tc_dogrula fonksiyonu oluşturuldu. Fonksiyon 11 basamaklı, ilk basamağı sıfır olmayan ve yalnızca rakam içeren girdiler için TC kimlik doğrulama kurallarını uygular: 10. basamak için tek/çift sıra toplamları üzerinden hesaplanan sağlama, 11. basamak için ilk on basamağın toplamının mod 10 kontrolü. Geçersiz girdilerde istisna fırlatmadan False döner. test_validator.py ile yazılan pytest testleri başarıyla geçti.",
+ "adim": 8,
+ "glimmer_token": {
+  "girdi": 26923,
+  "cikti": 5084
+ },
+ "sure_sn": 175.2,
+ "gizli": {
+  "gecti": true,
+  "gecen": 10,
+  "toplam": 10,
+  "cikti": "..........                                                               [100%]\n10 passed in 0.02s\n"
+ }
+}

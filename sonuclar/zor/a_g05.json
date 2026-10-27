@@ -1,0 +1,20 @@
+{
+ "id": "g05",
+ "kip": "a",
+ "kategori": "doğrulama ve ayrıştırma (TC kimlik, IBAN, telefon, plaka, e-posta, adres biçimi)",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "iban_arac.py dosyası oluşturuldu. iban_dogrula ve iban_coz fonksiyonları boşlukları yok sayıp büyük harfe çevirir, 26 karakter TR ile başlayan ve 24 rakam içeren formatı, kontrol basamağı 02-98 aralığını ve MOD97=1 kuralını kontrol eder. iban_dogrula biçim/MOD97 hatasında False döner, iban_coz ValueError fırlatır; tip hatasında her ikisi de TypeError fırlatır. Geçerli IBAN için banka_kodu, sube_kodu, hesap_no ve ulke_kodu içeren sözlük döner.",
+ "adim": 20,
+ "glimmer_token": {
+  "girdi": 74231,
+  "cikti": 22939
+ },
+ "sure_sn": 550.1,
+ "gizli": {
+  "gecti": true,
+  "gecen": 19,
+  "toplam": 19,
+  "cikti": "...................                                                      [100%]\n19 passed in 0.02s\n"
+ }
+}

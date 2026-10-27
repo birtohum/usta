@@ -1,0 +1,20 @@
+{
+ "id": "g06",
+ "kip": "a",
+ "kategori": "veri yapıları ve algoritmalar (kuyruk, önbellek, arama, gruplama, birleştirme, durum makinesi)",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "kuyruk.py dosyası oluşturuldu. SiparisKuyrugu sınıfı kapasite kontrolü, FIFO ekleme/çıkarma, boş/ dolu hataları ve boş sipariş numarası doğrulaması ile çalışıyor. Basit testler başarılı.",
+ "adim": 3,
+ "glimmer_token": {
+  "girdi": 4073,
+  "cikti": 1172
+ },
+ "sure_sn": 31.8,
+ "gizli": {
+  "gecti": true,
+  "gecen": 10,
+  "toplam": 10,
+  "cikti": "..........                                                               [100%]\n10 passed in 0.02s\n"
+ }
+}

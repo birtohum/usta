@@ -1,0 +1,20 @@
+{
+ "id": "g27",
+ "kip": "a",
+ "kategori": "tarih ve saat (iş günü, resmî tatil listesi parametre olarak verilir, süre hesabı, biçim dönüşümü)",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": null,
+ "adim": 20,
+ "glimmer_token": {
+  "girdi": 95839,
+  "cikti": 40560
+ },
+ "sure_sn": 980.8,
+ "gizli": {
+  "gecti": true,
+  "gecen": 18,
+  "toplam": 18,
+  "cikti": "..................                                                       [100%]\n18 passed in 0.02s\n"
+ }
+}

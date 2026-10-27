@@ -1,0 +1,20 @@
+{
+ "id": "g04",
+ "kip": "b",
+ "kategori": "dosya ve komut satırı (CSV/JSON okuma, rapor yazdırma, argümanlar, hata mesajları)",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "fatura.py içinde kdv_ekle fonksiyonu yazıldı. Tutar negatifse veya oran 1,10,20 dışındaysa ValueError fırlatıyor, Decimal ile ROUND_HALF_UP kullanarak iki ondalığa yuvarlıyor. test_fatura.py ile pytest testleri oluşturuldu ve tüm testler geçti.",
+ "adim": 6,
+ "glimmer_token": {
+  "girdi": 11267,
+  "cikti": 3492
+ },
+ "sure_sn": 89.5,
+ "gizli": {
+  "gecti": true,
+  "gecen": 10,
+  "toplam": 10,
+  "cikti": "..........                                                               [100%]\n10 passed in 0.01s\n"
+ }
+}

@@ -1,0 +1,20 @@
+{
+ "id": "g03",
+ "kip": "a",
+ "kategori": "tarih ve saat (iş günü, resmî tatil listesi parametre olarak verilir, süre hesabı, biçim dönüşümü)",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "isgunu.py dosyası oluşturuldu. is_gunu_ekle ve is_gunu_farki fonksiyonları YYYY-MM-DD doğrulaması, ValueError/TypeError kontrolleri, hafta sonu ve tatil işleme, pozitif/negatif/sıfır gün sayısı ve başlangıç dahil bitiş hariç fark mantığıyla çalışıyor. Temel testler başarılı.",
+ "adim": 6,
+ "glimmer_token": {
+  "girdi": 14648,
+  "cikti": 6545
+ },
+ "sure_sn": 157.2,
+ "gizli": {
+  "gecti": true,
+  "gecen": 19,
+  "toplam": 19,
+  "cikti": "...................                                                      [100%]\n19 passed in 0.02s\n"
+ }
+}

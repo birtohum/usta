@@ -1,0 +1,20 @@
+{
+ "id": "g17",
+ "kip": "b",
+ "kategori": "doğrulama ve ayrıştırma (TC kimlik, IBAN, telefon, plaka, e-posta, adres biçimi)",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": null,
+ "adim": 11,
+ "glimmer_token": {
+  "girdi": 31350,
+  "cikti": 71346
+ },
+ "sure_sn": 1669.9,
+ "gizli": {
+  "gecti": false,
+  "gecen": 16,
+  "toplam": 18,
+  "cikti": "......F.......F...                                                       [100%]\n=================================== FAILURES ===================================\n__________________________ test_cift_bosluk_gecersiz ___________________________\n\n    def test_cift_bosluk_gecersiz():\n>       with pytest.raises(ValueError):\nE       Failed: DID NOT RAISE <class 'ValueError'>\n\n.gizli/test_gizli.py:41: Failed\n___________________ test_kurucu_gecersizde_nesne_olusturmaz ____________________\n\n    def test_kurucu_gecersizde_nesne_olusturmaz():\n        with pytest.raises(ValueError):\n            PlakaKayit(\"00 AB 12\")\n>       with pytest.raises(ValueError):\nE       Failed: DID NOT RAISE <class 'ValueError'>\n\n.gizli/test_gizli.py:117: Failed\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_cift_bosluk_gecersiz - Failed: DID NOT RAIS...\nFAILED .gizli/test_gizli.py::test_kurucu_gecersizde_nesne_olusturmaz - Failed...\n2 failed, 16 passed in 0.04s\n"
+ }
+}

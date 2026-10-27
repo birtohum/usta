@@ -1,0 +1,29 @@
+{
+ "id": "g01",
+ "kip": "c",
+ "kategori": "Türkçe metin işleme (Türkçe harfler, büyük/küçük harf, hece, ek, sıralama, sayı/yazı)",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 10,
+   "basarili": 10
+  }
+ ],
+ "spark_usd": 0.0009211000000000001,
+ "arayuz": "Dosya: slug.py (çalışma klasöründe bulunur).\nFonksiyon: slug_yap(metin: str) -> str.\nDavranış: Türkçe harfleri ASCII karşılıklarına çevirir (ç/Ç→c, ğ/Ğ→g, ı/I→i, İ→i, ö/Ö→o, ş/Ş→s, ü/Ü→u), tümünü küçük harfe indirir, harf (a-z) ve rakam (0-9) dışındaki her karakter dizisini tek tireye (-) indirger ve baştaki ile sondaki tireleri siler.\nBoş girdi veya yalnızca harf ve rakam içermeyen girdi için boş string (\"\") döndürür.\nHata durumu: metin str türünde değilse TypeError yükseltir.\nBağımlılık: Python 3.12 standart kütüphanesi dışında bağımlılık yok.",
+ "iptal_edilen_test": [],
+ "kabul_gecti": true,
+ "ozet": "slug.py dosyasında slug_yap fonksiyonu oluşturuldu. Türkçe karakterler ASCII karşılıklarına çevriliyor, metin küçük harfe indiriliyor, harf/rakam dışındaki karakter dizileri tek tireye indirgeniyor ve baştaki/sondaki tireler temizleniyor. Boş veya yalnızca işaret içeren girdiler için boş string dönüyor, str dışı girdi için TypeError yükseltiyor. test_slug.py ile 11 test yazıldı ve tüm testler geçti.",
+ "adim": 8,
+ "glimmer_token": {
+  "girdi": 18127,
+  "cikti": 5203
+ },
+ "sure_sn": 173.2,
+ "gizli": {
+  "gecti": true,
+  "gecen": 10,
+  "toplam": 10,
+  "cikti": "..........                                                               [100%]\n10 passed in 0.01s\n"
+ }
+}

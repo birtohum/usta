@@ -1,0 +1,20 @@
+{
+ "id": "g04",
+ "kip": "a",
+ "kategori": "dosya ve komut satırı (CSV/JSON okuma, rapor yazdırma, argümanlar, hata mesajları)",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "fatura.py dosyası oluşturuldu ve kdv_ekle(tutar, oran) fonksiyonu eklendi. Fonksiyon tutarı kontrol ediyor, oran 1/10/20 dışındaysa ve tutar negatifse ValueError fırlatıyor, KDV'yi ekleyip sonucu iki ondalığa yuvarlayarak döndürüyor. Basit testlerle doğrulanmıştır.",
+ "adim": 4,
+ "glimmer_token": {
+  "girdi": 5418,
+  "cikti": 1621
+ },
+ "sure_sn": 44.5,
+ "gizli": {
+  "gecti": true,
+  "gecen": 10,
+  "toplam": 10,
+  "cikti": "..........                                                               [100%]\n10 passed in 0.01s\n"
+ }
+}

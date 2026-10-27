@@ -1,0 +1,20 @@
+{
+ "id": "g01",
+ "kip": "b",
+ "kategori": "Türkçe metin işleme (Türkçe harfler, büyük/küçük harf, hece, ek, sıralama, sayı/yazı)",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "heceleyici.py içinde Heceleyici sınıfı oluşturuldu. hecele metodu Türkçe harf ve kesme işareti içeren 1-30 karakterlik kelimeleri kabul eder, yabancı harf/q/w/x/rakam için ValueError, str dışı için TypeError yükseltir ve her hecede bir ünlü olacak şekilde iki ünlü arası tek ünsüz yeni heceye, iki ünsüz ise ilk ünsüz önceki hecede kalacak şekilde böler. toplu_hecele metni boşluklara göre ayırır, noktalamayı atar, büyük/küçük harf duyarsız çalışır ancak çıktıda orijinal harf durumunu korur, kesme işaretli kelimelerde ek kısmını ayrı hecelemeden işler. Boş metin için boş liste döner ve 100 kelimelik testte hece sayısı toplamı doğru hesaplanır. Tüm pytest testleri geçti.",
+ "adim": 13,
+ "glimmer_token": {
+  "girdi": 47896,
+  "cikti": 16763
+ },
+ "sure_sn": 397.2,
+ "gizli": {
+  "gecti": true,
+  "gecen": 19,
+  "toplam": 19,
+  "cikti": "...................                                                      [100%]\n19 passed in 0.04s\n"
+ }
+}

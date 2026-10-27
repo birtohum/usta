@@ -1,0 +1,20 @@
+{
+ "id": "g02",
+ "kip": "a",
+ "kategori": "küçük işletme hesapları (KDV, fatura, taksit, indirim, stok, kur dönüşümü, yuvarlama)",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "fatura.py dosyası oluşturuldu ve kdv_ekle(tutar, oran) fonksiyonu eklendi. Fonksiyon tutar negatifse veya oran 0,1,8,10,20 dışındaysa ValueError fırlatıyor, aksi halde tutar * (1 + oran/100) hesaplayıp round ile iki basamağa yuvarlıyor. Basit testlerle doğru çalıştığı doğrulandı.",
+ "adim": 6,
+ "glimmer_token": {
+  "girdi": 9281,
+  "cikti": 1627
+ },
+ "sure_sn": 47.1,
+ "gizli": {
+  "gecti": true,
+  "gecen": 10,
+  "toplam": 10,
+  "cikti": "..........                                                               [100%]\n10 passed in 0.01s\n"
+ }
+}

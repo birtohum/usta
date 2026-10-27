@@ -1,0 +1,20 @@
+{
+ "id": "g02",
+ "kip": "b",
+ "kategori": "küçük işletme hesapları (KDV, fatura, taksit, indirim, stok, kur dönüşümü, yuvarlama)",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "fatura.py içinde FaturaKalemi dataclass, KdvHesaplayici sınıfı (varsayılan KDV doğrulaması, ekle metodu ile giriş kontrolleri, Decimal ile yuvarlamasız hesap, ozet ve dokum metodları) ve TR-YYYY-NNNN formatını doğrulayan dogrula fonksiyonu implemente edildi. test_fatura.py ile 13 test yazıldı ve tüm testler geçti.",
+ "adim": 6,
+ "glimmer_token": {
+  "girdi": 20791,
+  "cikti": 17755
+ },
+ "sure_sn": 407.8,
+ "gizli": {
+  "gecti": false,
+  "gecen": 16,
+  "toplam": 18,
+  "cikti": "..F.............F.                                                       [100%]\n=================================== FAILURES ===================================\n______________________ test_ekle_varsayilan_oran_kullanir ______________________\n\n    def test_ekle_varsayilan_oran_kullanir():\n        h = KdvHesaplayici(18)\n        k = h.ekle('Defter', 2, Decimal('10.00'))\n>       assert k.kdv_oran == 18\nE       AttributeError: 'NoneType' object has no attribute 'kdv_oran'\n\n.gizli/test_gizli.py:29: AttributeError\n_____________________ test_dogrula_yil_araligi_valueerror ______________________\n\n    def test_dogrula_yil_araligi_valueerror():\n        fn = _dogrula_fn()\n>       with pytest.raises(ValueError):\nE       Failed: DID NOT RAISE <class 'ValueError'>\n\n.gizli/test_gizli.py:137: Failed\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_ekle_varsayilan_oran_kullanir - AttributeEr...\nFAILED .gizli/test_gizli.py::test_dogrula_yil_araligi_valueerror - Failed: DI...\n2 failed, 16 passed in 0.05s\n"
+ }
+}

@@ -1,0 +1,30 @@
+{
+ "id": "g09",
+ "kip": "c",
+ "kategori": "tarih ve saat (iş günü, resmî tatil listesi parametre olarak verilir, süre hesabı, biçim dönüşümü)",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 13,
+   "basarili": 13
+  }
+ ],
+ "spark_usd": 0.001288,
+ "arayuz": "",
+ "hakem": [],
+ "iptal_edilen_test": [],
+ "kabul_gecti": true,
+ "ozet": "vardiya.py dosyasında VardiyaHesaplayici sınıfı oluşturuldu. Saat doğrulaması regex ile yapılıyor, gece başlangıcı 20:00-23:59 aralığında kontrol ediliyor, giriş-çıkış süreleri hesaplanıp gece (gece_baslangic dahil, 06:00 hariç) ve gündüz dakikaları dakika bazında sayılıyor. Boş/None girdiler için TypeError, geçersiz biçim için ValueError fırlatılıyor. test_vardiya.py ile 15 test senaryosu yazıldı ve pytest ile tüm testler geçti.",
+ "adim": 6,
+ "glimmer_token": {
+  "girdi": 17495,
+  "cikti": 23234
+ },
+ "sure_sn": 559.7,
+ "gizli": {
+  "gecti": false,
+  "gecen": 15,
+  "toplam": 16,
+  "cikti": "...............F                                                         [100%]\n=================================== FAILURES ===================================\n________________________ test_kurucu_araliklari_saklar _________________________\n\n    def test_kurucu_araliklari_saklar():\n        h = VardiyaHesaplayici(\"06:00\", \"22:00\")\n        assert h.gunduz_baslangic == \"06:00\"\n>       assert h.gece_baslangic == \"22:00\"\nE       AttributeError: 'VardiyaHesaplayici' object has no attribute 'gece_baslangic'. Did you mean: 'gece_baslangic_str'?\n\n.gizli/test_gizli.py:112: AttributeError\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_kurucu_araliklari_saklar - AttributeError: ...\n1 failed, 15 passed in 0.04s\n"
+ }
+}

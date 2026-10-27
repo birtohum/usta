@@ -1,0 +1,20 @@
+{
+ "id": "g19",
+ "kip": "b",
+ "kategori": "Türkçe metin işleme (Türkçe harfler, büyük/küçük harf, hece, ek, sıralama, sayı/yazı)",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "slug.py içinde SlugUretici sınıfı oluşturuldu. __init__, slug_uret ve kayitlari_listele metotları Türkçe karakter dönüşümü, 60 karakter sınırı, boş/yanlış tip kontrolleri, tekrarlı slug için sayaçlı benzersizleştirme ve üretim sırasına göre liste döndürme sağlıyor. test_slug.py ile 12 test geçti.",
+ "adim": 11,
+ "glimmer_token": {
+  "girdi": 36861,
+  "cikti": 29055
+ },
+ "sure_sn": 694.8,
+ "gizli": {
+  "gecti": true,
+  "gecen": 16,
+  "toplam": 16,
+  "cikti": "................                                                         [100%]\n16 passed in 0.04s\n"
+ }
+}

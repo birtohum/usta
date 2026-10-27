@@ -1,0 +1,29 @@
+{
+ "id": "g03",
+ "kip": "c",
+ "kategori": "tarih ve saat (iş günü, resmî tatil listesi parametre olarak verilir, süre hesabı, biçim dönüşümü)",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 10,
+   "basarili": 10
+  }
+ ],
+ "spark_usd": 0.0010429000000000003,
+ "arayuz": "Dosya: kargo.py (çalışma klasörünün kök dizininde yer alır).\n\nFonksiyon: teslim_tarihi_hesapla(siparis_tarihi: str, is_gunu: int, tatiller: list[str]) -> str\n\nParametreler:\n- siparis_tarihi: YYYY-MM-DD biçiminde tarih metni. Örn. \"2024-05-06\".\n- is_gunu: Sıfır veya pozitif tam sayı. Sipariş tarihinden sonra sayılacak iş günü adedi.\n- tatiller: YYYY-MM-DD biçiminde tarih metinlerinden oluşan liste. Boş liste olabilir. Hafta sonuna denk gelen tatil ayrıca güne neden olmaz.\n\nDavranış:\n- is_gunu == 0 ise siparis_tarihi aynen YYYY-MM-DD olarak döndürülür.\n- is_gunu > 0 ise siparis_tarihinden sonraki takvim gününden başlayarak gün gün ilerlenir. Cumartesi, Pazar ve tatiller listesinde bulunan tarihler atlanır (sayılmaz). Sayılan is_gunu'ncu iş günü YYYY-MM-DD biçiminde döndürülür.\n\nHatalar:\n- siparis_tarihi veya tatiller içindeki herhangi bir tarih YYYY-MM-DD biçimine uymuyorsa veya geçersiz bir takvim tarihi ise ValueError yükseltilir.\n- is_gunu negatif bir sayı ise ValueError yükseltilir.\n\nKısıtlar:\n- Python 3.12 standart kütüphanesi dışında bağımlılık kullanılmaz.",
+ "iptal_edilen_test": [],
+ "kabul_gecti": true,
+ "ozet": "kargo.py dosyasında teslim_tarihi_hesapla fonksiyonu oluşturuldu. Tarihleri YYYY-MM-DD olarak doğrular, negatif is_gunu için ValueError yükseltir, hafta sonu ve tatilleri atlayarak iş günü sayar. test_kargo.py ile 10 test yazıldı ve pytest ile tüm testler geçti.",
+ "adim": 9,
+ "glimmer_token": {
+  "girdi": 29177,
+  "cikti": 4964
+ },
+ "sure_sn": 179.7,
+ "gizli": {
+  "gecti": true,
+  "gecen": 10,
+  "toplam": 10,
+  "cikti": "..........                                                               [100%]\n10 passed in 0.02s\n"
+ }
+}

@@ -1,0 +1,29 @@
+{
+ "id": "g04",
+ "kip": "c",
+ "kategori": "dosya ve komut satırı (CSV/JSON okuma, rapor yazdırma, argümanlar, hata mesajları)",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 10,
+   "basarili": 10
+  }
+ ],
+ "spark_usd": 0.0008243,
+ "arayuz": "Dosya: fatura.py (çalışma klasörü kökünde)\n\nFonksiyon: def kdv_ekle(tutar: float, oran: int) -> float\n\nDavranış: tutar üzerine oran kadar KDV ekler; yani tutar * (1 + oran / 100) değerini hesaplar ve iki ondalık basamağa yuvarlanmış (round(sonuç, 2)) float olarak döndürür.\n\nHata durumları: tutar negatif ise ValueError fırlatır. oran 1, 10 veya 20 değerlerinden biri değilse ValueError fırlatır.\n\nBağımlılık: Yalnızca Python 3.12 standart kütüphanesi kullanılır; üçüncü parti paket yoktur.",
+ "iptal_edilen_test": [],
+ "kabul_gecti": true,
+ "ozet": "fatura.py dosyasında kdv_ekle fonksiyonu oluşturuldu. Tutar negatifse veya oran 1,10,20 dışındaysa ValueError fırlatıyor, aksi halde tutar * (1 + oran/100) hesaplanıp round(...,2) ile döndürülüyor. test_fatura.py ile pytest testleri yazıldı ve 5 test başarıyla geçti.",
+ "adim": 4,
+ "glimmer_token": {
+  "girdi": 6352,
+  "cikti": 1682
+ },
+ "sure_sn": 82.0,
+ "gizli": {
+  "gecti": true,
+  "gecen": 10,
+  "toplam": 10,
+  "cikti": "..........                                                               [100%]\n10 passed in 0.01s\n"
+ }
+}

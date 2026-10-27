@@ -1,0 +1,20 @@
+{
+ "id": "g06",
+ "kip": "b",
+ "kategori": "veri yapıları ve algoritmalar (kuyruk, önbellek, arama, gruplama, birleştirme, durum makinesi)",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "kuyruk.py içinde SiparisKuyrugu sınıfı oluşturuldu: kapasite kontrolü, boş sipariş numarası doğrulaması, FIFO ekleme/çıkarma, dolu kuyrukta OverflowError, boş kuyrukta IndexError ve bekleyen_sayisi metodu eklendi. test_kuyruk.py ile 8 test yazıldı ve pytest ile tüm testler geçti.",
+ "adim": 4,
+ "glimmer_token": {
+  "girdi": 6603,
+  "cikti": 2434
+ },
+ "sure_sn": 60.9,
+ "gizli": {
+  "gecti": true,
+  "gecen": 10,
+  "toplam": 10,
+  "cikti": "..........                                                               [100%]\n10 passed in 0.01s\n"
+ }
+}

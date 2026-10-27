@@ -1,0 +1,20 @@
+{
+ "id": "g35",
+ "kip": "a",
+ "kategori": "doğrulama ve ayrıştırma (TC kimlik, IBAN, telefon, plaka, e-posta, adres biçimi)",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "toplu_kontrol.py komut satırı programı oluşturuldu. CSV'den 'deger' başlığını kontrol eder, --tur tc/iban/plaka/eposta için doğrulama yapar, --hata-modu atla/dur davranışını uygular, --siralama artan/azalan ile sıralar ve sonuç JSON'u yazar. Standart kütüphane kullanıldı, hata durumlarında belirtilen çıkış kodları döndürülür.",
+ "adim": 17,
+ "glimmer_token": {
+  "girdi": 72529,
+  "cikti": 22776
+ },
+ "sure_sn": 560.4,
+ "gizli": {
+  "gecti": true,
+  "gecen": 16,
+  "toplam": 16,
+  "cikti": "................                                                         [100%]\n16 passed in 0.43s\n"
+ }
+}

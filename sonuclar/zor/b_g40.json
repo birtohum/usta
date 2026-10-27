@@ -1,0 +1,20 @@
+{
+ "id": "g40",
+ "kip": "b",
+ "kategori": "dosya ve komut satırı (CSV/JSON okuma, rapor yazdırma, argümanlar, hata mesajları)",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "kdv_ozet.py dosyası oluşturuldu ve tüm gereksinimler karşılandı: başlık kontrolü, Decimal ile tutar ayrıştırma ve uyarılar, fis_no tekrarı, oran tablosu doğrulaması, KDV hesaplama ve yuvarlama, bilinmeyen kod uyarısı, alfabetik sıralı iki ondalıklı string çıktı, para birimi ve eksik dosya kontrolleri. test_kdv_ozet.py ile 7 test başarılı.",
+ "adim": 4,
+ "glimmer_token": {
+  "girdi": 13119,
+  "cikti": 9434
+ },
+ "sure_sn": 223.6,
+ "gizli": {
+  "gecti": false,
+  "gecen": 13,
+  "toplam": 17,
+  "cikti": "        import tempfile\n        with tempfile.TemporaryDirectory() as td:\n            td = pathlib.Path(td)\n            s = td / \"s.csv\"; o = td / \"o.json\"; c = td / \"out.json\"\n            csv_yaz(s, [[\"F1\", \"x\", \"100\", \"C\"], [\"F2\", \"y\", \"100\", \"A\"], [\"F3\", \"z\", \"100\", \"B\"]])\n            json_yaz(o, {\"C\": 10, \"A\": 10, \"B\": 10})\n            r = calistir(s, o, c)\n            assert r.returncode == 0\n            ham = pathlib.Path(c).read_text(encoding=\"utf-8\")\n            assert ham.index('\"A\"') < ham.index('\"B\"') < ham.index('\"C\"')\n            veri = json.loads(ham)\n>           assert \"kdv_toplam\" in veri and \"genel_toplam\" in veri and \"para\" in veri\nE           AssertionError: assert ('kdv_toplam' in {'genel_toplam': '30.00', 'kdv_toplam': {'A': '10.00', 'B': '10.00', 'C': '10.00'}, 'para_birimi': 'TL'} and 'genel_toplam' in {'genel_toplam': '30.00', 'kdv_toplam': {'A': '10.00', 'B': '10.00', 'C': '10.00'}, 'para_birimi': 'TL'} and 'para' in {'genel_toplam': '30.00', 'kdv_toplam': {'A': '10.00', 'B': '10.00', 'C': '10.00'}, 'para_birimi': 'TL'})\n\n.gizli/test_gizli.py:203: AssertionError\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_para_default_TL - KeyError: 'para'\nFAILED .gizli/test_gizli.py::test_para_USD_kabul - KeyError: 'para'\nFAILED .gizli/test_gizli.py::test_para_EUR_kabul - KeyError: 'para'\nFAILED .gizli/test_gizli.py::test_cikti_sirali_ve_format - AssertionError: as...\n4 failed, 13 passed in 0.50s\n"
+ }
+}

@@ -1,0 +1,30 @@
+{
+ "id": "g33",
+ "kip": "c",
+ "kategori": "tarih ve saat (iş günü, resmî tatil listesi parametre olarak verilir, süre hesabı, biçim dönüşümü)",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 13,
+   "basarili": 13
+  }
+ ],
+ "spark_usd": 0.0017576,
+ "arayuz": "",
+ "hakem": [],
+ "iptal_edilen_test": [],
+ "kabul_gecti": true,
+ "ozet": "zaman_damgasi.py dosyasında parse_tr_tarih ve gun_farki_iso fonksiyonları yazıldı. Parse fonksiyonu DD-MM-YYYY HH:MM, DD/MM/YYYY HH:MM ve YYYY-MM-DDTHH:MM biçimlerini sıfır dolgulu olarak doğrular, imkansız tarihleri reddeder ve her zaman YYYY-MM-DD HH:MM biçimine normalize eder. gun_farki_iso sadece normalize edilmiş çıktıları kabul eder, tam 24 saatlik dilimlerin taban değeriyle farkı hesaplar ve artık günleri doğru işler. TypeError ve ValueError kontrolleri eklendi. Testler pytest ile çalıştırıldı ve 11 test geçti.",
+ "adim": 6,
+ "glimmer_token": {
+  "girdi": 17625,
+  "cikti": 13342
+ },
+ "sure_sn": 325.0,
+ "gizli": {
+  "gecti": true,
+  "gecen": 18,
+  "toplam": 18,
+  "cikti": "..................                                                       [100%]\n18 passed in 0.02s\n"
+ }
+}

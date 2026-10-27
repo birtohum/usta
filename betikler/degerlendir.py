@@ -8,6 +8,8 @@ Sonuçlar kayitlar/degerlendirme/<kip>_<id>.json dosyalarına tek tek yazılır 
 """
 import argparse
 import json
+import math
+import random
 import re
 import sys
 import traceback
@@ -56,10 +58,32 @@ def tek(is_):
     return r
 
 
-def ozet():
-    sonuclar = [json.loads(p.read_text(encoding="utf-8")) for p in sorted(KAYIT.glob("*.json"))]
-    satirlar = ["| Kip | Görev | Tamamen geçen | Gizli test oranı | Ort. adım | Ort. Glimmer token | Spark $ | Hata |",
-                "|---|---|---|---|---|---|---|---|"]
+def wilson(k: int, n: int, z: float = 1.96) -> tuple[float, float]:
+    """Oran için %95 Wilson güven aralığı."""
+    if n == 0:
+        return 0.0, 0.0
+    p = k / n
+    merkez = (p + z * z / (2 * n)) / (1 + z * z / n)
+    yari = z * math.sqrt(p * (1 - p) / n + z * z / (4 * n * n)) / (1 + z * z / n)
+    return max(0.0, merkez - yari), min(1.0, merkez + yari)
+
+
+def eslesmis_fark(x: list, y: list, tekrar: int = 10000) -> tuple[float, float, float]:
+    """Aynı görevlerde başarı oranı farkı (x - y) ve görev düzeyinde bootstrap %95 aralığı."""
+    n = len(x)
+    farklar = [int(a) - int(b) for a, b in zip(x, y)]
+    rng = random.Random(0)
+    ornekler = sorted(sum(rng.choice(farklar) for _ in range(n)) / n for _ in range(tekrar))
+    return sum(farklar) / n, ornekler[int(0.025 * tekrar)], ornekler[int(0.975 * tekrar) - 1]
+
+
+GELISTIRME = {f"g{i:02d}" for i in range(1, 7)}  # yöntem ayarlanırken bakılan görevler; asıl sonuç bunların dışında
+
+
+def _tablo(sonuclar: list, baslik: str) -> list:
+    satirlar = [f"**{baslik}**", "",
+                "| Kip | Görev | Tamamen geçen | %95 GA | Gizli test oranı | Ort. adım | Ort. Glimmer token | Spark $ | Hata |",
+                "|---|---|---|---|---|---|---|---|---|"]
     for kip in "abc":
         rs = [r for r in sonuclar if r["kip"] == kip]
         if not rs:
@@ -72,8 +96,29 @@ def ozet():
         tok = sum(sum((r.get("glimmer_token") or {}).values()) for r in rs) / n
         usd = sum(r.get("spark_usd") or 0 for r in rs)
         hata = sum("hata" in r for r in rs)
-        satirlar.append(f"| {kip} | {n} | {tam}/{n} (%{100 * tam / n:.0f}) | %{100 * gecen / toplam:.0f} | {adim:.1f} | "
+        alt, ust = wilson(tam, n)
+        satirlar.append(f"| {kip} | {n} | {tam}/{n} (%{100 * tam / n:.0f}) | %{100 * alt:.0f}–{100 * ust:.0f} | "
+                        f"%{100 * gecen / toplam:.0f} | {adim:.1f} | "
                         f"{tok:,.0f} | {usd:.3f} | {hata} |")
+    # Eşleştirilmiş: aynı görevde c ile a/b'nin farklı sonuçlandığı durumlar
+    gecti = {(r["kip"], r["id"]): r["gizli"]["gecti"] for r in sonuclar}
+    for diger in "ab":
+        ortak = [i for (k, i) in gecti if k == "c" and (diger, i) in gecti]
+        if ortak:
+            arti = sum(gecti[("c", i)] and not gecti[(diger, i)] for i in ortak)
+            eksi = sum(gecti[(diger, i)] and not gecti[("c", i)] for i in ortak)
+            fark, alt, ust = eslesmis_fark([gecti[("c", i)] for i in ortak], [gecti[(diger, i)] for i in ortak])
+            satirlar.append(f"\nc vs {diger} ({len(ortak)} ortak görev): yalnızca c geçti {arti}, yalnızca {diger} geçti {eksi}; "
+                            f"fark {100 * fark:+.1f} puan (%95 bootstrap GA {100 * alt:+.1f} … {100 * ust:+.1f})")
+    satirlar.append("")
+    return satirlar
+
+
+def ozet():
+    sonuclar = [json.loads(p.read_text(encoding="utf-8")) for p in sorted(KAYIT.glob("*.json"))]
+    satirlar = _tablo([r for r in sonuclar if r["id"] not in GELISTIRME], "Değerlendirme görevleri (geliştirmede bakılmayan)")
+    satirlar += _tablo([r for r in sonuclar if r["id"] in GELISTIRME], "Geliştirme görevleri (g01–g06)")
+    satirlar += _tablo(sonuclar, "Tümü")
     print("\n".join(satirlar))
     return satirlar
 

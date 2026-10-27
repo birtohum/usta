@@ -9,6 +9,7 @@ Her iki arka uçta da: klasör dışına çıkan yollar reddedilir, ağ/yetki/y�
 komutlar zaman aşımıyla kesilir ve çıktı kırpılır.
 """
 import json
+import os
 import posixpath
 import re
 import shutil
@@ -18,6 +19,7 @@ from pathlib import Path
 
 CIKTI_SINIRI = 8000
 KOMUT_SURESI = 60
+DOSYA_SINIRI = 1_000_000   # Write içeriği için azami karakter
 
 ARACLAR = [
     {"type": "function", "function": {
@@ -63,7 +65,9 @@ YASAK_KALIPLAR = [
     r"\bpip3?\s+(install|download)\b", r"\b(apt|apt-get|yum|dnf|apk|brew|npm|yarn)\s+(install|add)\b",
     r"\brm\s+(-[a-zA-Z]*\s+)*(/|~|\.\.)",
     r"(^|[\s;&|<>=\"'])(/|~)(?!work\b|dev/null\b|tmp\b)",   # mutlak yol veya ev dizini (/work, /dev/null, /tmp dışında)
-    r"\.\.(/|\\|$|\s)",                                      # üst klasöre çıkış
+    r"(?<!\.)\.\.(?!\.)",                                     # üst klasöre çıkış ('cd ..;', '..)' dahil; '...' serbest)
+    r"\bpardir\b|\$\{?(HOME|PWD|OLDPWD|USERPROFILE|TEMP|TMP)\b",  # klasör dışını gösteren python/kabuk ifadeleri
+    r"(^|[;&|(\s])cd\s*($|[;&|)])|\bcd\s+-",                 # yalın 'cd' (ev dizinine gider) ve 'cd -'
     r"\b(socket|urllib|requests|http\.client|httpx|aiohttp)\b",
     r":\(\)\s*\{",                                            # fork bombası
 ]
@@ -117,6 +121,8 @@ class Calisma:
                     icerik = json.dumps(icerik, ensure_ascii=False, indent=2)  # model JSON dosyasını nesne olarak verdi
                 elif not isinstance(icerik, str):
                     raise AracHatasi("content metin olmalı")
+                if len(icerik) > DOSYA_SINIRI:
+                    raise AracHatasi(f"dosya çok büyük ({len(icerik)} karakter; sınır {DOSYA_SINIRI})")
                 self._yaz(yol, icerik)
                 return f"{yol} yazıldı ({len(icerik)} karakter)."
             if ad == "Read":
@@ -143,6 +149,10 @@ class Calisma:
             return f"HATA: eksik argüman {e}"
         except FileNotFoundError:
             return f"HATA: dosya bulunamadı: {arg.get('path')}"
+        except UnicodeDecodeError:
+            return f"HATA: {arg.get('path')} UTF-8 metin değil (ikili dosya okunamaz)"
+        except (OSError, ValueError) as e:   # klasörü okuma/yazma, NUL baytlı yol vb.
+            return f"HATA: {type(e).__name__}: {e}"
         except (TypeError, AttributeError) as e:
             return f"HATA: geçersiz argüman ({e})"
 
@@ -181,18 +191,35 @@ class YerelCalisma(Calisma):
     def _oku(self, yol):
         return self._tam(yol).read_text(encoding="utf-8")
 
+    def _ortam(self) -> dict:
+        """Alt süreç için en küçük ortam: API anahtarları ve kullanıcı klasörleri devredilmez."""
+        tut = ("PATH", "SYSTEMROOT", "WINDIR", "COMSPEC", "PATHEXT", "LANG", "LC_ALL", "TERM")
+        env = {k: v for k, v in os.environ.items() if k.upper() in tut}
+        tmp = self.kok / ".tmp"
+        tmp.mkdir(exist_ok=True)
+        env.update(HOME=str(self.kok), USERPROFILE=str(self.kok), TMP=str(tmp), TEMP=str(tmp), TMPDIR=str(tmp),
+                   PYTHONIOENCODING="utf-8", PYTHONDONTWRITEBYTECODE="1")
+        return env
+
     def _calistir(self, komut, sure):
         bash = shutil.which("bash") or "bash"
-        try:
-            r = subprocess.run([bash, "-c", komut], cwd=self.kok, capture_output=True, text=True,
-                               encoding="utf-8", errors="replace", timeout=sure)
-            return r.returncode, (r.stdout + r.stderr)
-        except subprocess.TimeoutExpired:
-            return 124, f"zaman aşımı: {sure} sn"
+        # Çıktı boru yerine dosyaya: arka plandaki alt süreçler boruyu açık tutup bizi bekletemez.
+        with tempfile.TemporaryFile() as cikti:
+            p = subprocess.Popen([bash, "-c", komut], cwd=self.kok, stdin=subprocess.DEVNULL, stdout=cikti,
+                                 stderr=subprocess.STDOUT, env=self._ortam(), start_new_session=os.name != "nt")
+            try:
+                kod = p.wait(timeout=sure)
+            except subprocess.TimeoutExpired:
+                _agaci_oldur(p)
+                kod = 124
+            cikti.seek(0)
+            metin = cikti.read(4 * 1024 * 1024).decode("utf-8", errors="replace")   # bellek sınırı
+        return kod, metin + (f"\nzaman aşımı: {sure} sn" if kod == 124 else "")
 
     def _listele(self):
         return sorted(str(p.relative_to(self.kok)).replace("\\", "/") for p in self.kok.rglob("*")
-                      if p.is_file() and "__pycache__" not in p.parts and ".pytest_cache" not in p.parts)
+                      if p.is_file() and not p.is_symlink() and p.stat().st_size < 200_000
+                      and not {"__pycache__", ".pytest_cache", ".tmp"} & set(p.relative_to(self.kok).parts))
 
     def kapat(self):
         shutil.rmtree(self.kok, ignore_errors=True)
@@ -244,6 +271,20 @@ class ModalCalisma(Calisma):
             self.sb.terminate()
         except Exception:
             pass
+
+
+def _agaci_oldur(p: subprocess.Popen) -> None:
+    """Zaman aşımında bash'le birlikte alt süreçlerini de öldürür."""
+    if os.name == "nt":
+        subprocess.run(["taskkill", "/F", "/T", "/PID", str(p.pid)], capture_output=True)
+    else:
+        import signal
+        try:
+            os.killpg(p.pid, signal.SIGKILL)
+        except ProcessLookupError:
+            pass
+    p.kill()
+    p.wait()
 
 
 def _tirnak(s: str) -> str:

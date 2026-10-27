@@ -1,0 +1,20 @@
+{
+ "id": "g03",
+ "kip": "a",
+ "kategori": "tarih ve saat (iş günü, resmî tatil listesi parametre olarak verilir, süre hesabı, biçim dönüşümü)",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "kargo.py dosyası oluşturuldu ve teslim_tarihi_hesapla fonksiyonu eklendi. Fonksiyon sipariş tarihini YYYY-MM-DD olarak doğrular, is_gunu negatifse ValueError yükseltir, tatilleri set'e çevirir ve Cumartesi/Pazar ile tatilleri atlayarak sipariş tarihinden sonraki iş günlerini sayar. Basit testlerle hafta sonu, tatil ve hata durumları doğrulandı.",
+ "adim": 6,
+ "glimmer_token": {
+  "girdi": 10812,
+  "cikti": 5155
+ },
+ "sure_sn": 128.6,
+ "gizli": {
+  "gecti": true,
+  "gecen": 10,
+  "toplam": 10,
+  "cikti": "..........                                                               [100%]\n10 passed in 0.01s\n"
+ }
+}
