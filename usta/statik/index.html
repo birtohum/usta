@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Usta</title>
+<style>
+:root{--bg:#f6f5f2;--kart:#fff;--yazi:#1d1d1b;--soluk:#6b6a66;--cizgi:#e3e1dc;--vurgu:#1f5f8b;--yesil:#1e7a46;--kirmizi:#b3261e;--sari:#9a6700;--kod:#f1efea}
+@media (prefers-color-scheme:dark){:root{--bg:#141414;--kart:#1e1e1e;--yazi:#ecebe8;--soluk:#9b9a96;--cizgi:#333;--vurgu:#6aa9d8;--yesil:#4cc282;--kirmizi:#ef6b62;--sari:#d9a63c;--kod:#262626}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--yazi);font:15px/1.5 system-ui,-apple-system,"Segoe UI",sans-serif}
+header{padding:20px 16px 8px;max-width:1200px;margin:auto}
+h1{margin:0;font-size:26px;letter-spacing:-.5px}
+header p{margin:4px 0 0;color:var(--soluk)}
+main{max-width:1200px;margin:auto;padding:8px 16px 40px;display:grid;gap:16px;grid-template-columns:1fr}
+@media(min-width:900px){main{grid-template-columns:5fr 4fr}}
+.kart{background:var(--kart);border:1px solid var(--cizgi);border-radius:10px;padding:14px}
+.kart h2{font-size:13px;text-transform:uppercase;letter-spacing:.6px;color:var(--soluk);margin:0 0 10px}
+textarea{width:100%;min-height:96px;resize:vertical;border:1px solid var(--cizgi);border-radius:8px;padding:10px;font:inherit;background:var(--bg);color:var(--yazi)}
+.satir{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-top:10px}
+button{font:inherit;border:1px solid var(--cizgi);background:var(--kart);color:var(--yazi);border-radius:8px;padding:8px 14px;cursor:pointer}
+button.ana{background:var(--vurgu);border-color:var(--vurgu);color:#fff;font-weight:600}
+button:disabled{opacity:.5;cursor:default}
+button.kayit{border-color:var(--kirmizi);color:var(--kirmizi)}
+select{font:inherit;padding:7px;border-radius:8px;border:1px solid var(--cizgi);background:var(--kart);color:var(--yazi)}
+.ornekler{display:flex;gap:6px;flex-wrap:wrap;margin-top:10px}
+.ornekler button{font-size:13px;padding:4px 10px;color:var(--soluk)}
+#adimlar{list-style:none;margin:0;padding:0;max-height:62vh;overflow:auto}
+#adimlar li{padding:7px 0;border-top:1px solid var(--cizgi);font-size:14px;overflow-wrap:anywhere}
+#adimlar li:first-child{border-top:0}
+.et{display:inline-block;min-width:74px;font-size:12px;font-weight:600;color:var(--soluk)}
+.et.asama{color:var(--vurgu)}.et.test{color:var(--sari)}
+pre{background:var(--kod);border-radius:6px;padding:8px;margin:6px 0 0;font:12.5px/1.45 ui-monospace,Consolas,monospace;white-space:pre-wrap;overflow-wrap:anywhere;max-height:280px;overflow:auto}
+details summary{cursor:pointer;color:var(--soluk);font-size:13px}
+.rozetler{display:flex;gap:8px;flex-wrap:wrap}
+.rozet{border-radius:999px;padding:4px 12px;font-size:13px;font-weight:600;border:1px solid}
+.rozet.gecti{color:var(--yesil);border-color:var(--yesil)}
+.rozet.kaldi{color:var(--kirmizi);border-color:var(--kirmizi)}
+.buyuk{font-size:20px;font-weight:700;margin:4px 0}
+.soluk{color:var(--soluk);font-size:13px}
+#sonuc,#sozlesmeKart,#dosyaKart{display:none}
+.sekmeler{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:6px}
+.sekmeler button{font-size:13px;padding:3px 10px}
+.sekmeler button.secili{border-color:var(--vurgu);color:var(--vurgu)}
+</style>
+</head>
+<body>
+<header>
+  <h1>Usta</h1>
+  <p>Türkçe görev ver; Usta yazar, bağımsız testlerle doğrulatır, kalan testleri düzeltir ve sonucu kanıtıyla gösterir.</p>
+</header>
+<main>
+  <section>
+    <div class="kart">
+      <h2>Görev</h2>
+      <textarea id="gorev" placeholder="Ör: fatura.py içinde kdv_ekle(tutar, oran) yaz; oran 1, 10 ya da 20 değilse ValueError versin."></textarea>
+      <div class="satir">
+        <button class="ana" id="baslat">Başlat</button>
+        <button id="mikrofon" title="Sesle görev ver (Muse Voice Transcribe)">🎤 Sesle söyle</button>
+        <select id="kip" title="Karşılaştırma kipi">
+          <option value="c">Usta (bağımsız testler + düzeltme)</option>
+          <option value="b">Yalnızca kendi testleri</option>
+          <option value="a">Tek başına</option>
+        </select>
+        <span id="durum" class="soluk"></span>
+      </div>
+      <div class="ornekler" id="ornekler"></div>
+    </div>
+    <div class="kart" style="margin-top:16px">
+      <h2>Canlı adımlar</h2>
+      <ul id="adimlar"><li class="soluk">Henüz görev yok.</li></ul>
+    </div>
+  </section>
+  <section>
+    <div class="kart" id="sonuc">
+      <h2>Sonuç</h2>
+      <div class="buyuk" id="sonucBaslik"></div>
+      <div class="rozetler" id="rozetler"></div>
+      <p id="ozet"></p>
+      <div class="soluk" id="olcum"></div>
+    </div>
+    <div class="kart" id="sozlesmeKart" style="margin-top:16px">
+      <h2>Arayüz sözleşmesi (Muse Spark)</h2>
+      <pre id="sozlesme"></pre>
+      <details style="margin-top:8px"><summary>Bağımsız kabul testleri</summary><pre id="kabulTest"></pre></details>
+    </div>
+    <div class="kart" id="dosyaKart" style="margin-top:16px">
+      <h2>Dosyalar</h2>
+      <div class="sekmeler" id="sekmeler"></div>
+      <pre id="dosyaIcerik"></pre>
+    </div>
+  </section>
+</main>
+<script>
+const $ = id => document.getElementById(id);
+const ORNEKLER = [
+  "fatura.py içinde kdv_ekle(tutar: float, oran: int) -> float yaz: oran 1, 10 ya da 20 olmalı, değilse ValueError; sonuç 2 ondalığa yuvarlansın.",
+  "yazi.py içinde sayiyi_yaziya(n: int) -> str yaz: 0-999999 arası sayıyı Türkçe yazıya çevirsin (1234 -> 'bin iki yüz otuz dört').",
+  "sirala.py içinde turkce_sirala(kelimeler: list[str]) -> list[str] yaz: Türk alfabesine göre, büyük/küçük harf duyarsız sıralasın.",
+];
+ORNEKLER.forEach(o => { const b = document.createElement("button"); b.textContent = o.split(" içinde")[0]; b.title = o;
+  b.onclick = () => $("gorev").value = o; $("ornekler").appendChild(b); });
+
+function kirp(s, n = 1200) { s = String(s ?? ""); return s.length > n ? s.slice(0, n) + " …" : s; }
+function ekle(et, metin, kod) {
+  const ul = $("adimlar"); if (ul.dataset.bos !== "0") { ul.innerHTML = ""; ul.dataset.bos = "0"; }
+  const li = document.createElement("li");
+  const e = document.createElement("span"); e.className = "et " + et.cls; e.textContent = et.ad; li.appendChild(e);
+  li.appendChild(document.createTextNode(" " + metin));
+  if (kod) { const d = document.createElement("details"); const s = document.createElement("summary"); s.textContent = "ayrıntı";
+    const p = document.createElement("pre"); p.textContent = kod; d.append(s, p); li.appendChild(d); }
+  ul.appendChild(li); ul.scrollTop = ul.scrollHeight;
+}
+function ozetSatir(c) {
+  const s = String(c).split("\n").map(x => x.trim()).filter(Boolean);
+  const kod = s[0] || ""; const son = s.length > 1 ? s.at(-1) : "";
+  return kirp(son && son !== kod ? `${kod} ${son}` : kod, 200);
+}
+function aracMetni(v) {
+  const a = v.arg || {};
+  if (v.ad === "Write") return [`${a.path} dosyasını yazıyor`, a.content];
+  if (v.ad === "Edit") return [`${a.path} dosyasını düzenliyor`, `- ${a.old_string}\n+ ${a.new_string}`];
+  if (v.ad === "Read") return [`${a.path} dosyasını okuyor`, null];
+  if (v.ad === "Bash") return [`$ ${a.command}`, null];
+  return [v.ad, JSON.stringify(a)];
+}
+
+let olayKaynagi = null;
+$("baslat").onclick = async () => {
+  const gorev = $("gorev").value.trim(); if (!gorev) return;
+  $("baslat").disabled = true; $("durum").textContent = "başlıyor…";
+  ["sonuc", "sozlesmeKart", "dosyaKart"].forEach(i => $(i).style.display = "none");
+  $("rozetler").innerHTML = ""; $("adimlar").dataset.bos = "1"; $("adimlar").innerHTML = "";
+  const r = await fetch("/api/gorev", {method: "POST", headers: {"Content-Type": "application/json"},
+    body: JSON.stringify({gorev, kip: $("kip").value})});
+  if (!r.ok) { $("durum").textContent = "hata: " + (await r.text()); $("baslat").disabled = false; return; }
+  const {id} = await r.json(); const bas = Date.now();
+  olayKaynagi = new EventSource("/api/olaylar/" + id);
+  olayKaynagi.onmessage = m => isle(JSON.parse(m.data));
+  olayKaynagi.addEventListener("son", () => { olayKaynagi.close(); $("baslat").disabled = false;
+    $("durum").textContent = `bitti (${Math.round((Date.now() - bas) / 1000)} sn)`; });
+};
+
+function isle(o) {
+  const v = o.veri;
+  if (o.tur === "asama") { ekle({ad: "AŞAMA", cls: "asama"}, v); $("durum").textContent = v; }
+  else if (o.tur === "sozlesme") { $("sozlesme").textContent = v; $("sozlesmeKart").style.display = "block";
+    ekle({ad: "SÖZLEŞME", cls: "asama"}, "Spark arayüz sözleşmesini yazdı", v); }
+  else if (o.tur === "dusunce") ekle({ad: "GLIMMER", cls: ""}, kirp(v, 400));
+  else if (o.tur === "arac") { const [m, k] = aracMetni(v); ekle({ad: v.ad.toUpperCase(), cls: ""}, m, k); }
+  else if (o.tur === "sonuc") { if (v.ad === "Bash" || String(v.cikti).startsWith("HATA"))
+    ekle({ad: "ÇIKTI", cls: ""}, ozetSatir(v.cikti), kirp(v.cikti, 3000)); }
+  else if (o.tur === "test") { const r = document.createElement("span");
+    r.className = "rozet " + (v.gecti ? "gecti" : "kaldi"); r.textContent = `Tur ${v.tur}: ${v.basarili}/${v.toplam}`;
+    $("rozetler").appendChild(r); $("sonuc").style.display = "block";
+    ekle({ad: "TEST", cls: "test"}, `Bağımsız kabul testleri: ${v.basarili}/${v.toplam} geçti`, kirp(v.cikti, 3000)); }
+  else if (o.tur === "rapor") rapor(v);
+  else if (o.tur === "hata") { ekle({ad: "HATA", cls: "test"}, v); $("durum").textContent = "hata"; }
+}
+
+function rapor(r) {
+  $("sonuc").style.display = "block";
+  const son = (r.turlar || []).at(-1);
+  $("sonucBaslik").textContent = r.kip !== "c" ? (r.ozet ? "Ajan bitirdiğini söylüyor (bağımsız doğrulama yok)" : "Ajan bitiremedi")
+    : son?.gecti ? `Bağımsız testlerin hepsi geçti (${r.turlar.length}. turda)` : `Testler tam geçmedi: ${son?.basarili}/${son?.toplam}`;
+  $("ozet").textContent = r.ozet || "";
+  const iptal = (r.iptal_edilen_test || []).length;
+  $("olcum").textContent = `${r.adim} Glimmer adımı · ${r.sure_sn} sn · Spark ${r.spark_usd.toFixed(4)} $` +
+    (iptal ? ` · ${iptal} hatalı test referans çözüme göre iptal edildi` : "");
+  if (r.kabul_testleri) $("kabulTest").textContent = r.kabul_testleri;
+  const dosyalar = r.dosyalar || {}; const adlar = Object.keys(dosyalar);
+  if (adlar.length) { $("dosyaKart").style.display = "block"; $("sekmeler").innerHTML = "";
+    adlar.forEach((a, i) => { const b = document.createElement("button"); b.textContent = a;
+      b.onclick = () => { [...$("sekmeler").children].forEach(x => x.classList.remove("secili")); b.classList.add("secili");
+        $("dosyaIcerik").textContent = dosyalar[a]; };
+      $("sekmeler").appendChild(b); if (i === 0) b.click(); }); }
+}
+
+// Ses: mikrofondan PCM alıp WAV olarak sunucuya gönderir (sunucu Muse Voice Transcribe'a akıtır).
+let kayit = null;
+$("mikrofon").onclick = async () => {
+  if (kayit) { const wav = await kayit.bitir(); kayit = null; $("mikrofon").classList.remove("kayit");
+    $("mikrofon").textContent = "🎤 Sesle söyle"; $("durum").textContent = "yazıya çevriliyor…";
+    const fd = new FormData(); fd.append("dosya", wav, "gorev.wav");
+    const r = await fetch("/api/ses", {method: "POST", body: fd});
+    if (r.ok) { $("gorev").value = (await r.json()).metin; $("durum").textContent = "sesli görev alındı — kontrol edip Başlat'a basın"; }
+    else $("durum").textContent = "ses hatası: " + (await r.text());
+    return; }
+  try { kayit = await kayitBaslat(); $("mikrofon").classList.add("kayit"); $("mikrofon").textContent = "⏹ Bitir";
+    $("durum").textContent = "dinliyorum…"; }
+  catch (e) { $("durum").textContent = "mikrofon açılamadı: " + e.message; }
+};
+async function kayitBaslat() {
+  const akis = await navigator.mediaDevices.getUserMedia({audio: {channelCount: 1}});
+  const ctx = new AudioContext({sampleRate: 24000}); const kaynak = ctx.createMediaStreamSource(akis);
+  const islemci = ctx.createScriptProcessor(4096, 1, 1); const parcalar = [];
+  islemci.onaudioprocess = e => parcalar.push(new Float32Array(e.inputBuffer.getChannelData(0)));
+  kaynak.connect(islemci); islemci.connect(ctx.destination);
+  return { async bitir() { islemci.disconnect(); kaynak.disconnect(); akis.getTracks().forEach(t => t.stop());
+    const hiz = ctx.sampleRate; await ctx.close(); return wavYap(parcalar, hiz); } };
+}
+function wavYap(parcalar, hiz) {
+  const n = parcalar.reduce((t, p) => t + p.length, 0); const buf = new ArrayBuffer(44 + n * 2); const v = new DataView(buf);
+  const s = (o, t) => [...t].forEach((c, i) => v.setUint8(o + i, c.charCodeAt(0)));
+  s(0, "RIFF"); v.setUint32(4, 36 + n * 2, true); s(8, "WAVE"); s(12, "fmt "); v.setUint32(16, 16, true); v.setUint16(20, 1, true);
+  v.setUint16(22, 1, true); v.setUint32(24, hiz, true); v.setUint32(28, hiz * 2, true); v.setUint16(32, 2, true); v.setUint16(34, 16, true);
+  s(36, "data"); v.setUint32(40, n * 2, true); let o = 44;
+  for (const p of parcalar) for (const x of p) { v.setInt16(o, Math.max(-1, Math.min(1, x)) * 0x7fff, true); o += 2; }
+  return new Blob([buf], {type: "audio/wav"});
+}
+</script>
+</body>
+</html>
