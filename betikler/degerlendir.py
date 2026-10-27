@@ -3,8 +3,8 @@
 Gizli testler ajanlara ve Usta'nın kabul testi yazarına hiç gösterilmez; ajan bitirdikten sonra çalışma alanına yazılır.
 Sonuçlar kayitlar/degerlendirme/<kip>_<id>.json dosyalarına tek tek yazılır (yarıda kalırsa kaldığı yerden sürer).
 
-    python betikler/degerlendir.py --kipler a b c --paralel 12
-    python betikler/degerlendir.py --ozet
+    python betikler/degerlendir.py --set zor --kipler a b c --paralel 12
+    python betikler/degerlendir.py --set zor --ozet
 """
 import argparse
 import json
@@ -19,8 +19,8 @@ from usta import glimmer, spark, surec  # noqa: E402
 from usta.arac import ModalCalisma  # noqa: E402
 
 KOK = Path(__file__).resolve().parent.parent
-SET = KOK / "veri" / "degerlendirme.jsonl"
-KAYIT = KOK / "kayitlar" / "degerlendirme"
+SETLER = {"kolay": KOK / "veri" / "degerlendirme.jsonl", "zor": KOK / "veri" / "zor.jsonl"}
+KAYIT = KOK / "kayitlar" / "degerlendirme"  # main() set adına göre alt klasör seçer
 GIZLI_DOSYA = ".gizli/test_gizli.py"
 
 
@@ -84,11 +84,14 @@ def main():
     ap.add_argument("--paralel", type=int, default=12)
     ap.add_argument("--sinir", type=int, default=0, help="yalnızca ilk N görev (deneme için)")
     ap.add_argument("--ozet", action="store_true")
+    ap.add_argument("--set", choices=list(SETLER), default="kolay")
     a = ap.parse_args()
+    global KAYIT
+    KAYIT = KAYIT / a.set
     if a.ozet:
         ozet()
         return
-    gorevler = [json.loads(s) for s in SET.read_text(encoding="utf-8").splitlines() if s.strip()]
+    gorevler = [json.loads(s) for s in SETLER[a.set].read_text(encoding="utf-8").splitlines() if s.strip()]
     if a.sinir:
         gorevler = gorevler[:a.sinir]
     KAYIT.mkdir(parents=True, exist_ok=True)

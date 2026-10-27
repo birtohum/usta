@@ -14,17 +14,26 @@ Kurallar:
 - Bitirdiğinde Done aracını kısa bir Türkçe özetle çağır."""
 
 
+BAGLAM = 32768
+
+
+def _cikti_siniri(mesajlar: list) -> int:
+    # Kaba tahmin (~3 karakter/token, araç tanımları ~1500 token): istem + çıktı bağlamı aşmasın.
+    istem = sum(len(json.dumps(m, ensure_ascii=False)) for m in mesajlar) // 3 + 1500
+    return max(1024, min(12000, BAGLAM - istem - 256))
+
+
 def calistir(gorev: str, calisma: Calisma, azami_adim: int = 20, gecmis: list | None = None,
              olay=lambda tur, veri: None, sistem: str = SISTEM) -> dict:
     """Görevi yürütür. gecmis verilirse (düzeltme turu) konuşma oradan sürer.
     olay(tur, veri): arayüz için canlı adım bildirimi ('dusunce', 'arac', 'sonuc', 'bitti')."""
     mesajlar = gecmis if gecmis is not None else [{"role": "system", "content": sistem},
                                                    {"role": "user", "content": gorev}]
-    ozet, adim, token = None, 0, {"girdi": 0, "cikti": 0}
+    ozet, adim, token, bos = None, 0, {"girdi": 0, "cikti": 0}, 0
     while adim < azami_adim:
         adim += 1
         try:
-            m = glimmer.sohbet(mesajlar, tools=ARACLAR)
+            m = glimmer.sohbet(mesajlar, tools=ARACLAR, max_tokens=_cikti_siniri(mesajlar))
         except requests.HTTPError as e:
             # 400 çoğunlukla bağlam sınırının (32k token) aşılmasıdır: görevi burada bırak.
             if e.response is not None and e.response.status_code == 400:
@@ -40,11 +49,18 @@ def calistir(gorev: str, calisma: Calisma, azami_adim: int = 20, gecmis: list | 
         if m.get("content"):
             olay("dusunce", m["content"])
         if not m["tool_calls"]:
-            # Araç çağırmadan durdu: bir kez hatırlat, yine durursa bitmiş say.
-            if mesajlar[-2].get("role") == "user" and "Done" in mesajlar[-2].get("content", ""):
+            # Araç çağırmadan durdu ya da akıl yürütmesi token sınırında kesildi: üç kez hatırlat, sonra bırak.
+            bos += 1
+            if bos > 3:
                 break
-            mesajlar.append({"role": "user", "content": "Devam et: araçları kullan, bitince Done çağır."})
+            if m["_finish"] == "length":
+                uyari = ("Yanıtın uzunluk sınırında kesildi ve hiçbir şey kaydedilmedi. Uzun düşünme: hemen Write ile "
+                         "dosyayı yaz, gerekirse sonra Edit ile düzelt.")
+            else:
+                uyari = "Devam et: araçları kullan, bitince Done çağır."
+            mesajlar.append({"role": "user", "content": uyari})
             continue
+        bos = 0
         bitti = False
         for c in m["tool_calls"]:
             ad = c["function"]["name"]

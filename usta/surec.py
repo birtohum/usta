@@ -5,8 +5,11 @@
   c — Usta: b + Spark'ın bağımsız kabul testleri; kalan test çıktısı Glimmer'a verilir, geçene ya da tur sınırına kadar.
 """
 import time
+from concurrent.futures import ThreadPoolExecutor
 
 from usta import ajan, dogrulayici
+
+_havuz = ThreadPoolExecutor(8)
 
 SISTEM_A = """Sen Türkçe konuşan bir yazılım ajanısın. Görevi bir çalışma klasöründe araçlarla yaparsın: Write, Read, Edit, Bash, Done.
 Yalnızca göreli yollar kullan. İnternet yok, paket kuramazsın (Python 3.12 standart kütüphanesi var).
@@ -33,15 +36,20 @@ def gorevi_yap(gorev: str, calisma, kip: str = "c", azami_tur: int = 3, azami_ad
     rapor = {"kip": kip, "turlar": [], "spark_usd": 0.0}
     gorev_metni = gorev
 
+    gelecek = None
     if kip == "c":
         if kabul is None:
-            olay("asama", "Spark arayüz sözleşmesi ve kabul testlerini yazıyor")
-            kabul = dogrulayici.kabul_testleri_yaz(gorev)
-            rapor["spark_usd"] += kabul["maliyet"]
-        rapor["arayuz"] = kabul["arayuz"]
-        rapor["iptal_edilen_test"] = kabul.get("iptal", [])
-        olay("sozlesme", kabul["arayuz"])
-        gorev_metni = f"{gorev}\n\nArayüz sözleşmesi (buna uy):\n{kabul['arayuz']}"
+            olay("asama", "Spark arayüz sözleşmesini yazıyor")
+            sozlesme = dogrulayici.sozlesme_yaz(gorev)
+            rapor["spark_usd"] += sozlesme["maliyet"]
+            arayuz = sozlesme["arayuz"]
+            # Testler ve referans süzgeci, Glimmer çalışırken paralelde hazırlanır (Glimmer testleri görmez).
+            gelecek = _havuz.submit(dogrulayici.kabul_testleri_yaz, gorev, arayuz)
+        else:
+            arayuz = kabul["arayuz"]
+        rapor["arayuz"] = arayuz
+        olay("sozlesme", arayuz)
+        gorev_metni = f"{gorev}\n\nArayüz sözleşmesi (buna uy):\n{arayuz}"
 
     sistem = {"a": SISTEM_A, "b": SISTEM_B, "c": SISTEM_B}[kip]
     olay("asama", "Glimmer görevi yürütüyor")
@@ -49,6 +57,19 @@ def gorevi_yap(gorev: str, calisma, kip: str = "c", azami_tur: int = 3, azami_ad
     toplam_adim, token = s["adim"], dict(s["token"])
 
     if kip == "c":
+        if gelecek is not None:
+            olay("asama", "Spark'ın bağımsız kabul testleri bekleniyor")
+            try:
+                kabul = {"arayuz": arayuz, **gelecek.result()}
+            except Exception as e:
+                # Doğrulayıcı test üretemezse sonuç "doğrulanamadı" olarak raporlanır; geçti sayılmaz.
+                olay("hata", f"Bağımsız testler üretilemedi: {e}")
+                rapor.update({"kabul_gecti": False, "dogrulanamadi": True, "ozet": s["ozet"], "adim": toplam_adim,
+                              "glimmer_token": token, "sure_sn": round(time.time() - bas, 1), "kabul": None})
+                return rapor
+            rapor["spark_usd"] += kabul["maliyet"]
+        rapor["iptal_edilen_test"] = kabul.get("iptal", [])
+        olay("kabul", {"testler": kabul["testler"], "iptal": kabul["iptal"]})
         for tur in range(1, azami_tur + 1):
             olay("asama", f"Kabul testleri çalışıyor (tur {tur})")
             sonuc = dogrulayici.kabul_testlerini_calistir(calisma, kabul["testler"], kabul.get("iptal"))

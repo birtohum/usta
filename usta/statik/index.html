@@ -146,6 +146,9 @@ function isle(o) {
   if (o.tur === "asama") { ekle({ad: "AŞAMA", cls: "asama"}, v); $("durum").textContent = v; }
   else if (o.tur === "sozlesme") { $("sozlesme").textContent = v; $("sozlesmeKart").style.display = "block";
     ekle({ad: "SÖZLEŞME", cls: "asama"}, "Spark arayüz sözleşmesini yazdı", v); }
+  else if (o.tur === "kabul") { $("kabulTest").textContent = v.testler;
+    ekle({ad: "SPARK", cls: "asama"}, `Bağımsız kabul testleri hazır` +
+      (v.iptal.length ? ` (${v.iptal.length} test, Spark'ın kendi referans çözümünü de geçemediği için iptal edildi)` : ""), v.testler); }
   else if (o.tur === "dusunce") ekle({ad: "GLIMMER", cls: ""}, kirp(v, 400));
   else if (o.tur === "arac") { const [m, k] = aracMetni(v); ekle({ad: v.ad.toUpperCase(), cls: ""}, m, k); }
   else if (o.tur === "sonuc") { if (v.ad === "Bash" || String(v.cikti).startsWith("HATA"))
