@@ -3,7 +3,7 @@ import json
 
 import requests
 
-from usta import glimmer
+from usta import glimmer, spark
 from usta.arac import ARACLAR, Calisma
 
 SISTEM = """Sen Usta'sın: Türkçe konuşan, dikkatli bir yazılım ajanı.
@@ -14,34 +14,45 @@ Kurallar:
 - Bitirdiğinde Done aracını kısa bir Türkçe özetle çağır."""
 
 
-BAGLAM = 32768
+BAGLAM = {"glimmer": 32768, "spark": 120000}
 
 
-def _cikti_siniri(mesajlar: list) -> int:
+def _cikti_siniri(mesajlar: list, yurutucu: str = "glimmer") -> int:
     # Kaba tahmin (~3 karakter/token, araç tanımları ~1500 token): istem + çıktı bağlamı aşmasın.
     istem = sum(len(json.dumps(m, ensure_ascii=False)) for m in mesajlar) // 3 + 1500
-    return max(1024, min(12000, BAGLAM - istem - 256))
+    return max(1024, min(12000, BAGLAM[yurutucu] - istem - 256))
+
+
+def _model_cagir(yurutucu: str, mesajlar: list) -> dict:
+    """Yürütücü modelden bir adım ister; dönen mesajda tool_calls (liste), _usage, _finish bulunur."""
+    if yurutucu == "glimmer":
+        return glimmer.sohbet(mesajlar, tools=ARACLAR, max_tokens=_cikti_siniri(mesajlar, "glimmer"))
+    if yurutucu == "spark":
+        return spark.sohbet(mesajlar, tools=ARACLAR, tool_choice="auto", max_tokens=_cikti_siniri(mesajlar, "spark"),
+                            reasoning_effort="medium")
+    raise ValueError(f"bilinmeyen yürütücü: {yurutucu}")
 
 
 def calistir(gorev: str, calisma: Calisma, azami_adim: int = 20, gecmis: list | None = None,
-             olay=lambda tur, veri: None, sistem: str = SISTEM) -> dict:
+             olay=lambda tur, veri: None, sistem: str = SISTEM, yurutucu: str = "glimmer") -> dict:
     """Görevi yürütür. gecmis verilirse (düzeltme turu) konuşma oradan sürer.
     olay(tur, veri): arayüz için canlı adım bildirimi ('dusunce', 'arac', 'sonuc', 'bitti')."""
     mesajlar = gecmis if gecmis is not None else [{"role": "system", "content": sistem},
                                                    {"role": "user", "content": gorev}]
-    ozet, adim, token, bos = None, 0, {"girdi": 0, "cikti": 0}, 0
+    ozet, adim, token, bos, usd = None, 0, {"girdi": 0, "cikti": 0}, 0, 0.0
     while adim < azami_adim:
         adim += 1
         try:
-            m = glimmer.sohbet(mesajlar, tools=ARACLAR, max_tokens=_cikti_siniri(mesajlar))
+            m = _model_cagir(yurutucu, mesajlar)
         except requests.HTTPError as e:
-            # 400 çoğunlukla bağlam sınırının (32k token) aşılmasıdır: görevi burada bırak.
+            # 400 çoğunlukla bağlam sınırının aşılmasıdır: görevi burada bırak.
             if e.response is not None and e.response.status_code == 400:
-                olay("dusunce", f"Glimmer isteği reddetti (bağlam sınırı olabilir): {e.response.text[:200]}")
+                olay("dusunce", f"Model isteği reddetti (bağlam sınırı olabilir): {e.response.text[:200]}")
                 break
             raise
         token["girdi"] += m["_usage"].get("prompt_tokens", 0)
         token["cikti"] += m["_usage"].get("completion_tokens", 0)
+        usd += m.get("_maliyet", 0.0)
         asistan = {"role": "assistant", "content": m.get("content") or ""}
         if m["tool_calls"]:
             asistan["tool_calls"] = [{"id": c["id"], "type": "function", "function": c["function"]} for c in m["tool_calls"]]
@@ -79,7 +90,7 @@ def calistir(gorev: str, calisma: Calisma, azami_adim: int = 20, gecmis: list | 
         if bitti:
             break
     olay("bitti", {"ozet": ozet, "adim": adim})
-    return {"ozet": ozet, "adim": adim, "bitti": ozet is not None, "mesajlar": mesajlar, "token": token}
+    return {"ozet": ozet, "adim": adim, "bitti": ozet is not None, "mesajlar": mesajlar, "token": token, "usd": usd}
 
 
 if __name__ == "__main__":
@@ -88,11 +99,12 @@ if __name__ == "__main__":
 
     gorev = sys.argv[1] if len(sys.argv) > 1 else "asal.py içinde asal_mi(n) fonksiyonu yaz ve birkaç örnekle dene."
     tur = sys.argv[2] if len(sys.argv) > 2 else "modal"
+    yurutucu = sys.argv[3] if len(sys.argv) > 3 else "spark"
 
     def yaz(t, v):
         print(f"[{t}]", json.dumps(v, ensure_ascii=False)[:400])
 
     with calisma_ac(tur) as c:
-        s = calistir(gorev, c, olay=yaz)
+        s = calistir(gorev, c, olay=yaz, yurutucu=yurutucu)
         print("\nDOSYALAR:", list(c.dosyalar()))
         print("ADIM:", s["adim"], "TOKEN:", s["token"], "BİTTİ:", s["bitti"])

@@ -48,3 +48,14 @@ def test_gecersiz_arguman_gorevi_cokertmez():
         assert c.arac_calistir("Write", {"path": 5, "content": ""}).startswith("HATA")
         assert c.arac_calistir("Edit", {"path": "a.json", "old_string": "", "new_string": "y"}).startswith("HATA")
         assert c.arac_calistir("Bash", {"command": ["ls"]}).startswith("HATA")
+
+
+def test_geri_alma_yeni_dosyayi_siler_eskileri_geri_yazar():
+    from usta.surec import _geri_al, _goruntu
+    with YerelCalisma() as c:
+        c.arac_calistir("Write", {"path": "a.py", "content": "x = 1\n"})
+        goruntu = _goruntu(c)
+        c.arac_calistir("Write", {"path": "a.py", "content": "x = 2\n"})
+        c.arac_calistir("Write", {"path": "b.py", "content": ""})
+        _geri_al(c, goruntu)
+        assert c.dosyalar() == {"a.py": "x = 1\n"}

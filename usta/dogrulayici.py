@@ -40,7 +40,9 @@ ADLANDIRMA SÖZLEŞMESİ (ajan buna uyacak; boşsa görevdeki adlar geçerlidir)
      import sys, pathlib; sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent.parent))
    - Yalnızca GÖREV metninde açıkça yazan davranışı test et. Sözleşme yalnızca adlar içindir; metinde olmayan bir
      ayrıntıyı (hata mesajı metni, belirtilmemiş biçim, varsayılan değer, dönüş türünün iç yapısı) test etme.
-   - Normal durumlar + görevde geçen uç durumlar; 6-14 test. Her test kısa ve tek şeyi denesin.
+   - Önce görev metnindeki gereksinimleri kendi içinde tek tek çıkar (biçim kuralları, sınır değerleri, hata türleri,
+     sıralama/eşitlik kuralları, yuvarlama, dosya/çıktı davranışı). HER gereksinim için en az bir test yaz; sınır
+     değerlerini iki taraftan dene. Toplam 12-20 test. Her test kısa ve tek şeyi denesin; test adı gereksinimi anlatsın.
    - Komut satırı programıysa subprocess ile sys.executable kullanarak çalıştır, cwd çalışma klasörü olsun; gereken
      girdi dosyalarını tmp_path'e oluştur.
    - Ağ, rastgelelik, zaman ya da dosya sistemi dışına bağımlılık yok.
@@ -106,8 +108,8 @@ def _pytest_komutu(iptal: list) -> str:
 
 def referansla_suz(testler: str, cozum: dict) -> tuple[list, int]:
     """Testleri Spark'ın referans çözümüne karşı ayrı bir sandbox'ta çalıştırır; kalan test adlarını ve toplamı döndürür."""
-    from usta.arac import ModalCalisma
-    with ModalCalisma(zaman_asimi=600) as c:
+    from usta.arac import calisma_ac
+    with calisma_ac() as c:
         for yol, icerik in cozum.items():
             c._yaz(guvenli_yol(yol), icerik)
         c._yaz(KABUL_DOSYASI, testler)

@@ -18,11 +18,12 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 from usta import glimmer, spark, surec  # noqa: E402
-from usta.arac import ModalCalisma  # noqa: E402
+from usta.arac import calisma_ac  # noqa: E402
 
 KOK = Path(__file__).resolve().parent.parent
 SETLER = {"kolay": KOK / "veri" / "degerlendirme.jsonl", "zor": KOK / "veri" / "zor.jsonl"}
-KAYIT = KOK / "kayitlar" / "degerlendirme"  # main() set adına göre alt klasör seçer
+KAYIT = KOK / "kayitlar" / "degerlendirme"  # main() set ve yürütücü adına göre alt klasör seçer
+YURUTUCU = "glimmer"
 GIZLI_DOSYA = ".gizli/test_gizli.py"
 
 
@@ -41,8 +42,8 @@ def tek(is_):
         return json.loads(yol.read_text(encoding="utf-8"))
     r = {"id": g["id"], "kip": kip, "kategori": g["kategori"]}
     try:
-        with ModalCalisma() as c:
-            rapor = surec.gorevi_yap(g["gorev"], c, kip=kip)
+        with calisma_ac() as c:
+            rapor = surec.gorevi_yap(g["gorev"], c, kip=kip, yurutucu=YURUTUCU)
             rapor.pop("kabul", None)
             r.update(rapor)
             r["gizli"] = gizli_testler(c, g["gizli_testler"])
@@ -82,7 +83,7 @@ GELISTIRME = {f"g{i:02d}" for i in range(1, 7)}  # yöntem ayarlanırken bakıla
 
 def _tablo(sonuclar: list, baslik: str) -> list:
     satirlar = [f"**{baslik}**", "",
-                "| Kip | Görev | Tamamen geçen | %95 GA | Gizli test oranı | Ort. adım | Ort. Glimmer token | Spark $ | Hata |",
+                "| Kip | Görev | Tamamen geçen | %95 GA | Gizli test oranı | Ort. adım | Ort. yürütücü token | Meta API $ | Hata |",
                 "|---|---|---|---|---|---|---|---|---|"]
     for kip in "abc":
         rs = [r for r in sonuclar if r["kip"] == kip]
@@ -93,8 +94,8 @@ def _tablo(sonuclar: list, baslik: str) -> list:
         gecen = sum(r["gizli"]["gecen"] for r in rs)
         toplam = sum(r["gizli"]["toplam"] for r in rs) or 1
         adim = sum(r.get("adim") or 0 for r in rs) / n
-        tok = sum(sum((r.get("glimmer_token") or {}).values()) for r in rs) / n
-        usd = sum(r.get("spark_usd") or 0 for r in rs)
+        tok = sum(sum((r.get("yurutucu_token") or r.get("glimmer_token") or {}).values()) for r in rs) / n
+        usd = sum((r.get("spark_usd") or 0) + (r.get("yurutucu_usd") or 0) for r in rs)
         hata = sum("hata" in r for r in rs)
         alt, ust = wilson(tam, n)
         satirlar.append(f"| {kip} | {n} | {tam}/{n} (%{100 * tam / n:.0f}) | %{100 * alt:.0f}–{100 * ust:.0f} | "
@@ -130,22 +131,29 @@ def main():
     ap.add_argument("--sinir", type=int, default=0, help="yalnızca ilk N görev (deneme için)")
     ap.add_argument("--ozet", action="store_true")
     ap.add_argument("--set", choices=list(SETLER), default="kolay")
+    ap.add_argument("--yurutucu", choices=["glimmer", "spark"], default="glimmer")
+    ap.add_argument("--aralik", default="", help="görev kimliği aralığı, ör. g07-g40")
     a = ap.parse_args()
-    global KAYIT
-    KAYIT = KAYIT / a.set
+    global KAYIT, YURUTUCU
+    YURUTUCU = a.yurutucu
+    KAYIT = KAYIT / (a.set if a.yurutucu == "glimmer" else f"{a.set}_{a.yurutucu}")
     if a.ozet:
         ozet()
         return
     gorevler = [json.loads(s) for s in SETLER[a.set].read_text(encoding="utf-8").splitlines() if s.strip()]
     if a.sinir:
         gorevler = gorevler[:a.sinir]
+    if a.aralik:
+        bas, son = a.aralik.split("-")
+        gorevler = [g for g in gorevler if bas <= g["id"] <= son]
     KAYIT.mkdir(parents=True, exist_ok=True)
-    glimmer.hazir_bekle()
+    if YURUTUCU == "glimmer":
+        glimmer.hazir_bekle()
     isler = [(k, g) for g in gorevler for k in a.kipler]
     with ThreadPoolExecutor(a.paralel) as ex:
         list(ex.map(tek, isler))
     ozet()
-    print(f"Spark toplam harcama (bu depo): {spark.butce()['toplam_usd']:.4f} $")
+    print(f"Meta API toplam harcama (bu depo): {spark.butce()['toplam_usd']:.4f} $")
 
 
 if __name__ == "__main__":
