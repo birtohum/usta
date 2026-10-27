@@ -17,8 +17,11 @@ python -m pytest -q tests/ -rxX
 B-1, B-2, B-4, B-5, B-6, B-7 ve B-8'in eşzamanlılık bölümü kapandı; bu bulgulara ait 23 testin xfail işareti
 kaldırıldı. Açık kalanlar: B-3 ve B-8'in sahipsiz iş bölümü.
 
-Düzeltme sonrası sonuç (Windows 11, Git Bash, Python 3.12): **136 geçti, 2 atlandı, 17 xfail** (16 tanesi B-3, 1
-tanesi B-8). Sonuç üç ardışık çalıştırmada aynı çıktı. Atlanan 2 test, dosyaya sembolik bağ kurmak için Geliştirici
+B-9 (WSL bash) main'de 17551c0 commit'iyle düzeltildi ve regresyon testleri eklendi. **B-10 açık ve şu an en
+önemli bulgu:** `calisma_ac()` varsayılanı artık "yerel" olduğundan web arayüzü de etkileniyor.
+
+Main a95c4ed ile sonuç (Windows 11, Git Bash, Python 3.12): **142 geçti, 2 atlandı, 18 xfail** (16 tanesi B-3,
+1 tanesi B-8, 1 tanesi B-10). Atlanan 2 test, dosyaya sembolik bağ kurmak için Geliştirici
 Modu gerektiriyor. Klasör bağı (junction) üzerinden yapılan saldırı testi geçiyor.
 
 Düzeltme öncesindeki sonuç 113 geçti, 2 atlandı, 40 xfail idi. Aşağıdaki "Bulgular" bölümü kodun düzeltme öncesi
@@ -31,6 +34,50 @@ halini anlatır.
 * **`python -m usta.ajan "..."` varsayılan olarak `yerel` kipte çalışır** (`ajan.py:90`). Bu kipte modelin yazdığı
   komutlar geliştiricinin bilgisayarında, geliştiricinin ortamı ve yetkileriyle çalışır. Kaçışları önleyen tek şey
   `komut_denetle` adlı kara listedir.
+
+## Sonradan eklenen bulgular
+
+### B-10 · YÜKSEK (açık) · Yerel kipte gizlenmiş mutlak yolla klasör dışındaki dosyalar okunabiliyor
+
+Main 5f75d83'ten beri `calisma_ac()` varsayılanı `USTA_CALISMA` değişkeninden geliyor ve verilmezse "yerel"
+kullanılıyor. Bu yüzden **web arayüzü de model komutlarını geliştirici bilgisayarında, aynı kullanıcı yetkisiyle**
+çalıştırıyor.
+
+Yol filtreleri yalnızca komut metnine bakıyor. Yolu `bytes.fromhex(...)`, `chr(92)` ya da base64 ile kuran bir
+komut hiçbir kalıba takılmıyor. Böylece `~/.pflow-anahtarlar.env` (Spark anahtarı) ve depo kökündeki `.env`
+(Glimmer anahtarı) okunabiliyor. B-2 düzeltmesi yalnızca ortam değişkenlerini kapatıyor, dosyaları değil.
+
+Yeniden üretme: `test_gizlenmis_mutlak_yol_ile_disari_okunamaz`. Test, nöbetçi değeri içeren geçici bir dosyayı okur;
+nöbetçi değerin okunduğu `--runxfail` ile doğrulandı.
+
+```python
+komut = "python -c \"print(open(bytes.fromhex('<mutlak yolun hex hali>').decode()).read())\""
+komut_denetle(komut)                              # geçer
+YerelCalisma().arac_calistir("Bash", {"command": komut})   # dosya içeriği döner
+```
+
+Düzeltme: düzenli ifadeyle çözülemez (B-3'le aynı kök neden). Seçenekler, önerilen sırayla:
+
+1. **Web arayüzü için varsayılanı "modal" yapmak.** Yerel kip açıkça istendiğinde arayüzde uyarı gösterilmeli.
+   ```diff
+   -    tur = tur or os.environ.get("USTA_CALISMA", "yerel")
+   +    tur = tur or os.environ.get("USTA_CALISMA", "modal")
+   ```
+2. Modal kapalı tutulacaksa yerel kip bir kapsayıcı içinde çalıştırılmalı:
+   `docker run --rm --network none -v <kok>:/work -w /work python:3.12-slim bash -c ...`.
+   Bunun için `YerelCalisma._calistir` çağrısını `docker`'a sarmak yeterli.
+3. En azından anahtar dosyaları ajanın çalıştığı kullanıcının okuyamayacağı bir yere taşınmalı. Sunucu ayrı bir
+   Windows kullanıcısıyla da çalıştırılabilir.
+
+### B-9 · YÜKSEK · Windows'ta `bash` WSL'e çözülüyordu (ana oturum buldu, 17551c0'da düzeltildi)
+
+`shutil.which("bash")` sonucu `WindowsApps\bash.exe` yani WSL oluyordu. Bu durumda komutlar çalışma klasöründe değil
+WSL'in Linux ev dizininde çalışıyordu. Düzeltmeyle Windows'ta yalnızca Git Bash kabul ediliyor ve açılışta `pwd`
+denetleniyor.
+
+Regresyon testleri: `test_path_yalnizca_wsl_iken_kabuk_calisma_klasorunde_acilir`,
+`test_usta_bash_wsl_gosterse_de_kullanilmaz`, `test_kabuk_baska_klasorde_acilirsa_calisma_reddedilir`. Bu testler WSL'i
+hiç başlatmıyor.
 
 ## Bulgular (önem sırasıyla)
 

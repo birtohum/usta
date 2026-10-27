@@ -298,7 +298,7 @@ def istemci(monkeypatch):
     serbest = threading.Event()
     baslayan = []
 
-    def sahte_yurut(is_id, gorev, kip):   # Modal/Glimmer açmadan görev yaşam döngüsünü taklit eder
+    def sahte_yurut(is_id, *_):   # Modal/Glimmer açmadan görev yaşam döngüsünü taklit eder
         baslayan.append(is_id)
         web.ISLER[is_id].put({"tur": "asama", "veri": "sahte"})
         serbest.wait(10)
@@ -383,3 +383,60 @@ def test_web_arayuzu_model_ciktisini_html_olarak_yorumlamaz():
     atamalar = re.findall(r"(innerHTML|outerHTML)\s*=\s*([^;]+);", html)
     assert all(deger.strip() in ('""', "''") for _, deger in atamalar), atamalar
     assert "insertAdjacentHTML" not in html and "document.write" not in html and "eval(" not in html
+
+
+# ---------------------------------------------------------------- 8. Yanlış kabuk (WSL) seçimi — B-9, main 17551c0'da düzeltildi
+# PATH'teki 'bash' Windows'ta çoğu zaman WindowsApps\bash.exe (WSL) olur; WSL komutları çalışma klasöründe değil
+# Linux ev dizininde çalıştırır. Bu testler WSL'i hiç başlatmaz.
+
+WSL_YOLLARI = [r"C:\Windows\System32\bash.exe",
+               str(Path(os.environ.get("LOCALAPPDATA", r"C:\Users\x\AppData\Local")) / "Microsoft" / "WindowsApps" / "bash.exe")]
+yalniz_windows = pytest.mark.skipif(os.name != "nt", reason="WSL bash seçimi yalnızca Windows'ta anlamlı")
+
+
+@yalniz_windows
+def test_path_yalnizca_wsl_iken_kabuk_calisma_klasorunde_acilir(monkeypatch):
+    """PATH'te yalnızca System32 ve WindowsApps varken ya Git Bash bulunur ve pwd çalışma klasörüdür, ya da açılış reddedilir."""
+    monkeypatch.setenv("PATH", os.pathsep.join(str(Path(y).parent) for y in WSL_YOLLARI))
+    monkeypatch.delenv("USTA_BASH", raising=False)
+    try:
+        c = YerelCalisma()
+    except RuntimeError:
+        return   # Git Bash bulunamadı: hiçbir komut çalışmadan reddedildi (kabul edilebilir)
+    with c:
+        assert not any(k in c.bash.lower() for k in ("system32", "windowsapps")), c.bash
+        assert c.arac_calistir("Bash", {"command": "pwd"}).strip().endswith(c.kok.name)
+
+
+@yalniz_windows
+@pytest.mark.parametrize("wsl", WSL_YOLLARI)
+def test_usta_bash_wsl_gosterse_de_kullanilmaz(monkeypatch, wsl):
+    monkeypatch.setenv("USTA_BASH", wsl)
+    try:
+        b = arac._bash_bul()
+    except RuntimeError:
+        return
+    assert b.lower() != wsl.lower() and "windowsapps" not in b.lower() and "system32" not in b.lower()
+
+
+def test_kabuk_baska_klasorde_acilirsa_calisma_reddedilir(monkeypatch, tmp_path):
+    """pwd çalışma klasörünü göstermiyorsa (WSL'deki /home/... gibi) YerelCalisma açılmamalı ve klasörü silmeli."""
+    monkeypatch.setattr(tempfile, "tempdir", str(tmp_path))
+    monkeypatch.setattr(YerelCalisma, "_calistir", lambda self, komut, sure: (0, "/home/kullanici\n"))
+    with pytest.raises(RuntimeError):
+        YerelCalisma()
+    assert not list(tmp_path.glob("usta_*")), "reddedilen çalışma klasörü silinmedi"
+
+
+# ---------------------------------------------------------------- 9. Mutlak yolu gizleyerek klasör dışı okuma — B-10
+# calisma_ac() varsayılanı "yerel" olduğundan (main 5f75d83) web arayüzü de bu kipte çalışır. Yol filtreleri yalnızca
+# komut metnine bakar; yol hex/chr ile kurulursa hiçbir kalıp eşleşmez.
+
+@bulgu("B-10", "yerel kipte mutlak yol hex ile gizlenince klasör dışındaki dosya (ör. ~/.pflow-anahtarlar.env) okunabiliyor")
+def test_gizlenmis_mutlak_yol_ile_disari_okunamaz(kafes):
+    c, dis = kafes
+    gizli = dis / "anahtarlar.env"
+    gizli.write_text(f"META_MODEL_API_KEY={NOBETCI}\n", encoding="utf-8")
+    komut = f"python -c \"print(open(bytes.fromhex('{str(gizli).encode().hex()}').decode()).read())\""
+    komut_denetle(komut)   # filtreden geçtiğini ayrıca göster
+    assert NOBETCI not in c.arac_calistir("Bash", {"command": komut})
