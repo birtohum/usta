@@ -17,12 +17,56 @@ python -m pytest -q tests/ -rxX
 B-1, B-2, B-4, B-5, B-6, B-7 ve B-8'in eşzamanlılık bölümü kapandı; bu bulgulara ait 23 testin xfail işareti
 kaldırıldı. Açık kalanlar: B-3 ve B-8'in sahipsiz iş bölümü.
 
-B-9 (WSL bash) main'de 17551c0 commit'iyle düzeltildi ve regresyon testleri eklendi. **B-10 açık ve şu an en
-önemli bulgu:** `calisma_ac()` varsayılanı artık "yerel" olduğundan web arayüzü de etkileniyor.
+B-9 (WSL bash) main'de 17551c0 commit'iyle düzeltildi ve regresyon testleri eklendi. **B-10, `WslCalisma` ile
+kapatıldı:** `calisma_ac()` varsayılanı artık "wsl". Ayrıntılar aşağıda, "WslCalisma: yalıtım ve sınırları"
+bölümünde.
 
-Main a95c4ed ile sonuç (Windows 11, Git Bash, Python 3.12): **142 geçti, 2 atlandı, 18 xfail** (16 tanesi B-3,
-1 tanesi B-8, 1 tanesi B-10). Atlanan 2 test, dosyaya sembolik bağ kurmak için Geliştirici
-Modu gerektiriyor. Klasör bağı (junction) üzerinden yapılan saldırı testi geçiyor.
+Sonuç (Windows 11, Python 3.12, `usta-kum` kurulu): **181 geçti, 2 atlandı, 18 xfail.**
+* Çalıştırıcı testlerinin çoğu hem `YerelCalisma` hem `WslCalisma` ile çalışıyor.
+* 18 xfail: 16 tanesi B-3, 1 tanesi B-8, 1 tanesi yerel kipteki B-10. Yerel kip yalnızca açıkça seçildiğinde
+  kullanıldığı için bu bulgu bilerek açık bırakıldı.
+* Atlanan 2 test, dosyaya sembolik bağ kurmak için Geliştirici Modu gerektiriyor. Klasör bağı (junction) üzerinden
+  yapılan saldırı testi geçiyor.
+
+## WslCalisma: yalıtım ve sınırları (B-10 düzeltmesi)
+
+Usta'ya özel `usta-kum` WSL2 dağıtımı (Ubuntu 24.04) kullanılıyor. İçinde python3, pytest ve `python-is-python3`
+kurulu. Mevcut `pflow` dağıtımına ve global `.wslconfig` dosyasına dokunulmadı.
+
+* **Windows dosyalarına erişim yok.** `/etc/wsl.conf` içinde `[automount] enabled=false, mountFsTab=false` var.
+  `/mnt/c` boş bir klasör. Tek Windows bağlantısı, salt okunur GPU sürücü klasörü `/usr/lib/wsl/drivers` (9p);
+  burada sır bulunmuyor.
+* **`.exe` çalıştırma yok.** `[interop] enabled=false, appendWindowsPath=false` ayarlı. `cmd.exe`, `powershell.exe`
+  ve `wsl.exe` bulunamıyor.
+* **Root olmayan kullanıcı.** Kod `usta` (uid 1000) kullanıcısıyla çalışıyor; bu kullanıcı sudo grubunda değil.
+* **Komutlarda ağ kapalı.** Her Bash komutu `unshare --net --map-current-user` ile yalnızca `lo` arayüzü olan bir
+  ad alanında çalışıyor. Dışarı bağlantı denemesi "Network unreachable" hatası veriyor. Dağıtımın kendisinde ağ açık;
+  `apt` için gerekli ve içeride sır yok.
+* **Çalışma klasörü dağıtımın içinde:** `/home/usta/is/<id>`. Dosyalar stdin üzerinden JSON ile aktarılıyor;
+  Windows yolu hiç kullanılmıyor. Sembolik bağlar `realpath` ile çözülüp klasör dışına çıkanlar reddediliyor.
+* **Zaman aşımı süreç grubunu öldürüyor** (`killpg`). Ortam en küçük haliyle aktarılıyor: `HOME` çalışma klasörü.
+
+Dürüst sınırlar:
+* WSL2 dağıtımları aynı hafif sanal makineyi ve çekirdeği paylaşıyor. Bu Modal Sandbox kadar güçlü bir sınır değil;
+  çekirdek açığı içeren bir saldırıya karşı koruma sağlamaz.
+* `/mnt/wsl` tüm dağıtımlar arasında paylaşılan bir tmpfs. `pflow` dağıtımı oraya bir şey koyarsa `usta-kum`
+  okuyabilir.
+* Aynı dağıtımdaki görevler aynı kullanıcıyla çalışıyor; bir görev, başka bir görevin `/home/usta/is/...` klasörünü
+  görebilir. İçlerinde sır yok.
+* Komut filtresi (B-3) hâlâ atlatılabilir, ama artık arkasında ulaşılabilecek sır yok.
+* `USTA_CALISMA=yerel` ile eski yalıtımsız kip açılabiliyor; açıldığında stderr'e uyarı basılıyor.
+
+Kurulum (bir kez):
+```
+wsl --install Ubuntu-24.04 --name usta-kum --no-launch
+wsl -d usta-kum -u root -- sh -c "apt-get update && apt-get install -y python3 python3-pytest python-is-python3 && useradd -m -s /bin/bash usta"
+```
+Ardından `/etc/wsl.conf` yukarıdaki ayarlarla yazılır (`[user] default=usta`) ve `wsl --terminate usta-kum`
+çalıştırılır.
+
+Testler: `test_gizlenmis_mutlak_yol_ile_disari_okunamaz_wsl`, `test_wsl_icinden_windows_ve_ag_erisilemez`,
+`test_wsl_sembolik_bag_ile_kacis_engellenir`, `test_calisma_ac_varsayilani_wsl_yerel_yalniz_acikca`. Bunlara ek
+olarak `kafes` fikstürü üzerinden önceki testlerin çoğu da WSL ile çalışıyor.
 
 Düzeltme öncesindeki sonuç 113 geçti, 2 atlandı, 40 xfail idi. Aşağıdaki "Bulgular" bölümü kodun düzeltme öncesi
 halini anlatır.
@@ -37,7 +81,7 @@ halini anlatır.
 
 ## Sonradan eklenen bulgular
 
-### B-10 · YÜKSEK (açık) · Yerel kipte gizlenmiş mutlak yolla klasör dışındaki dosyalar okunabiliyor
+### B-10 · YÜKSEK (WslCalisma ile kapandı; yerel kipte açık) · Gizlenmiş mutlak yolla klasör dışındaki dosyalar okunabiliyor
 
 Main 5f75d83'ten beri `calisma_ac()` varsayılanı `USTA_CALISMA` değişkeninden geliyor ve verilmezse "yerel"
 kullanılıyor. Bu yüzden **web arayüzü de model komutlarını geliştirici bilgisayarında, aynı kullanıcı yetkisiyle**
@@ -47,7 +91,7 @@ Yol filtreleri yalnızca komut metnine bakıyor. Yolu `bytes.fromhex(...)`, `chr
 komut hiçbir kalıba takılmıyor. Böylece `~/.pflow-anahtarlar.env` (Spark anahtarı) ve depo kökündeki `.env`
 (Glimmer anahtarı) okunabiliyor. B-2 düzeltmesi yalnızca ortam değişkenlerini kapatıyor, dosyaları değil.
 
-Yeniden üretme: `test_gizlenmis_mutlak_yol_ile_disari_okunamaz`. Test, nöbetçi değeri içeren geçici bir dosyayı okur;
+Yeniden üretme: `test_gizlenmis_mutlak_yol_ile_disari_okunamaz_yerel`. Test, nöbetçi değeri içeren geçici bir dosyayı okur;
 nöbetçi değerin okunduğu `--runxfail` ile doğrulandı.
 
 ```python
