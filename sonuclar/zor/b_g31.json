@@ -1,0 +1,20 @@
+{
+ "id": "g31",
+ "kip": "b",
+ "kategori": "Türkçe metin işleme (Türkçe harfler, büyük/küçük harf, hece, ek, sıralama, sayı/yazı)",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "siralama.py dosyasında turkce_karsilastir ve turkce_sirala fonksiyonları Türkçe alfabeye göre, büyük/küçük harf duyarsız, rakamlar önce, noktalama yok sayılan, kararlı sıralama ile implemente edildi. Uzunluk ve tip kontrolleri eklendi. test_siralama.py ile 16 test geçti.",
+ "adim": 5,
+ "glimmer_token": {
+  "girdi": 15067,
+  "cikti": 12150
+ },
+ "sure_sn": 289.9,
+ "gizli": {
+  "gecti": true,
+  "gecen": 16,
+  "toplam": 16,
+  "cikti": "................                                                         [100%]\n16 passed in 0.08s\n"
+ }
+}

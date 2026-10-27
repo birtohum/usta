@@ -1,0 +1,35 @@
+{
+ "id": "g17",
+ "kip": "c",
+ "kategori": "doğrulama ve ayrıştırma (TC kimlik, IBAN, telefon, plaka, e-posta, adres biçimi)",
+ "turlar": [
+  {
+   "gecti": false,
+   "toplam": 2,
+   "basarili": 0
+  },
+  {
+   "gecti": true,
+   "toplam": 12,
+   "basarili": 12
+  }
+ ],
+ "spark_usd": 0.0020944,
+ "arayuz": "",
+ "hakem": [],
+ "iptal_edilen_test": [],
+ "kabul_gecti": true,
+ "ozet": "plaka.py dosyası oluşturuldu. PlakaKayit sınıfı normalize, doğrulama, ekleme, sıralı liste, eşitlik, küçük ve hash davranışlarını sağlar. Kabul testleri 12/12 geçti.",
+ "adim": 12,
+ "glimmer_token": {
+  "girdi": 29124,
+  "cikti": 64710
+ },
+ "sure_sn": 1533.6,
+ "gizli": {
+  "gecti": true,
+  "gecen": 18,
+  "toplam": 18,
+  "cikti": "..................                                                       [100%]\n18 passed in 0.04s\n"
+ }
+}

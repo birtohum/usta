@@ -1,0 +1,20 @@
+{
+ "id": "g36",
+ "kip": "b",
+ "kategori": "veri yapıları ve algoritmalar (kuyruk, önbellek, arama, gruplama, birleştirme, durum makinesi)",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "hiz_sinir.py içinde TokenBucket sınıfı oluşturuldu. Kapasite ve dolum hızı doğrulaması, kesirli jeton takibi için Fraction kullanımı, zaman ilerlemesiyle jeton ekleme, kapasite sınırı, toleranslı eşitlik kontrolü, tuket ve kalan yöntemleri implemente edildi. test_hiz_sinir.py ile 12 test yazıldı ve pytest ile tüm testler geçti.",
+ "adim": 5,
+ "glimmer_token": {
+  "girdi": 12668,
+  "cikti": 15909
+ },
+ "sure_sn": 376.4,
+ "gizli": {
+  "gecti": true,
+  "gecen": 16,
+  "toplam": 16,
+  "cikti": "................                                                         [100%]\n16 passed in 0.16s\n"
+ }
+}

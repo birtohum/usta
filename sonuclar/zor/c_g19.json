@@ -1,0 +1,42 @@
+{
+ "id": "g19",
+ "kip": "c",
+ "kategori": "Türkçe metin işleme (Türkçe harfler, büyük/küçük harf, hece, ek, sıralama, sayı/yazı)",
+ "turlar": [
+  {
+   "gecti": false,
+   "toplam": 12,
+   "basarili": 11
+  },
+  {
+   "gecti": true,
+   "toplam": 12,
+   "basarili": 12
+  }
+ ],
+ "spark_usd": 0.0018118,
+ "arayuz": "",
+ "hakem": [
+  {
+   "test": "test_kayitlari_listele_sirasi",
+   "karar": "gerekli",
+   "gerekce": "Görev Türkçe küçük harf çevirisi istediği için İkinci başlığı ikinci olmalıdır.",
+   "tur": 1
+  }
+ ],
+ "iptal_edilen_test": [],
+ "kabul_gecti": true,
+ "ozet": "SlugUretici.slug_uret'te Türkçe karakter normalizasyonu düzeltildi: translate önce uygulanıp sonra lower yapıldı, böylece İ → i ve I → i doğru çalışıyor. Bu değişiklikle \"İkinci\" → \"ikinci\" ve \"Üçüncü\" → \"ucuncu\" üretiliyor. Kabul testleri 12/12 geçti, kendi testler de geçti.",
+ "adim": 18,
+ "glimmer_token": {
+  "girdi": 94922,
+  "cikti": 18969
+ },
+ "sure_sn": 501.1,
+ "gizli": {
+  "gecti": true,
+  "gecen": 16,
+  "toplam": 16,
+  "cikti": "................                                                         [100%]\n16 passed in 0.03s\n"
+ }
+}

@@ -1,0 +1,20 @@
+{
+ "id": "g04",
+ "kip": "a",
+ "kategori": "dosya ve komut satırı (CSV/JSON okuma, rapor yazdırma, argümanlar, hata mesajları)",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": null,
+ "adim": 20,
+ "glimmer_token": {
+  "girdi": 97422,
+  "cikti": 55652
+ },
+ "sure_sn": 1260.0,
+ "gizli": {
+  "gecti": true,
+  "gecen": 16,
+  "toplam": 16,
+  "cikti": "................                                                         [100%]\n16 passed in 0.64s\n"
+ }
+}

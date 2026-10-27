@@ -1,0 +1,29 @@
+{
+ "id": "g06",
+ "kip": "c",
+ "kategori": "veri yapıları ve algoritmalar (kuyruk, önbellek, arama, gruplama, birleştirme, durum makinesi)",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 11,
+   "basarili": 11
+  }
+ ],
+ "spark_usd": 0.0007458,
+ "arayuz": "Dosya: kuyruk.py\nSınıf: SiparisKuyrugu\n\nYöntemler:\n- __init__(self, kapasite: int) -> None: Kuyruğu verilen kapasite ile oluşturur. kapasite <= 0 ise ValueError yükseltir.\n- ekle(self, siparis_no: str) -> None: Siparişi FIFO kuyruğunun sonuna ekler. siparis_no boş string veya yalnızca boşluklardan oluşuyorsa ValueError yükseltir. Kuyruk doluysa (eleman sayısı kapasiteye eşitse) OverflowError yükseltir.\n- siradaki(self) -> str: En eski siparişi kuyruktan çıkarıp döndürür. Kuyruk boşsa IndexError yükseltir.\n- bekleyen_sayisi(self) -> int: Kuyrukta bekleyen eleman sayısını döndürür.\n\nNotlar:\n- FIFO sırası korunur.\n- Python 3.12 standart kütüphanesi dışında bağımlılık kullanılmaz.",
+ "iptal_edilen_test": [],
+ "kabul_gecti": true,
+ "ozet": "kuyruk.py içinde SiparisKuyrugu sınıfı oluşturuldu: kapasite kontrolü, boş sipariş numarası doğrulaması, FIFO ekleme/çıkarma, dolu kuyrukta OverflowError, boş kuyrukta IndexError ve bekleyen_sayisi metodu eklendi. test_kuyruk.py ile 8 test yazıldı ve pytest ile tüm testler geçti.",
+ "adim": 4,
+ "glimmer_token": {
+  "girdi": 7628,
+  "cikti": 1512
+ },
+ "sure_sn": 72.1,
+ "gizli": {
+  "gecti": true,
+  "gecen": 10,
+  "toplam": 10,
+  "cikti": "..........                                                               [100%]\n10 passed in 0.01s\n"
+ }
+}

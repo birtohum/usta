@@ -1,0 +1,30 @@
+{
+ "id": "g28",
+ "kip": "c",
+ "kategori": "dosya ve komut satırı (CSV/JSON okuma, rapor yazdırma, argümanlar, hata mesajları)",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 12,
+   "basarili": 12
+  }
+ ],
+ "spark_usd": 0.0025153999999999997,
+ "arayuz": "",
+ "hakem": [],
+ "iptal_edilen_test": [],
+ "kabul_gecti": true,
+ "ozet": "yoklama.py komut satırı programı oluşturuldu; CSV başlık, durum, tarih doğrulaması, boş satır atlama, mükerrer kayıt uyarısı, --devamsiz-say seçeneği, limit kontrolü ve JSON rapor üretimi implemente edildi. test_yoklama.py ile 9 test senaryosu yazıldı ve tüm testler geçti.",
+ "adim": 10,
+ "glimmer_token": {
+  "girdi": 55772,
+  "cikti": 27673
+ },
+ "sure_sn": 670.3,
+ "gizli": {
+  "gecti": false,
+  "gecen": 18,
+  "toplam": 19,
+  "cikti": "..F................                                                      [100%]\n=================================== FAILURES ===================================\n_____________________________ test_header_invalid ______________________________\n\ntmp_path = PosixPath('/tmp/pytest-of-root/pytest-1/test_header_invalid0')\n\n    def test_header_invalid(tmp_path):\n        csv_p = tmp_path / \"y.csv\"\n        out_p = tmp_path / \"r.json\"\n        write_csv(csv_p, \"ogrenci_no,ad_soyad,tarih\\n101,Ali Veli,2024-09-01\\n\")\n        r = run_yoklama(csv_p, out_p, 1)\n>       assert r.returncode == 2\nE       AssertionError: assert 0 == 2\nE        +  where 0 = CompletedProcess(args=['/usr/local/bin/python', 'yoklama.py', '--yoklama', '/tmp/pytest-of-root/pytest-1/test_header_i...ikti', '/tmp/pytest-of-root/pytest-1/test_header_invalid0/r.json', '--limit', '1'], returncode=0, stdout='', stderr='').returncode\n\n.gizli/test_gizli.py:45: AssertionError\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_header_invalid - AssertionError: assert 0 == 2\n1 failed, 18 passed in 0.51s\n"
+ }
+}

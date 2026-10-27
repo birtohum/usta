@@ -1,0 +1,30 @@
+{
+ "id": "g36",
+ "kip": "c",
+ "kategori": "veri yapıları ve algoritmalar (kuyruk, önbellek, arama, gruplama, birleştirme, durum makinesi)",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 13,
+   "basarili": 13
+  }
+ ],
+ "spark_usd": 0.002664,
+ "arayuz": "",
+ "hakem": [],
+ "iptal_edilen_test": [],
+ "kabul_gecti": true,
+ "ozet": "TokenBucket sınıfı hiz_sinir.py içinde Fraction ile kesirli tam hesaplama yapacak şekilde oluşturuldu. Kapasite ve dolum_hizi doğrulamaları, zaman azalma kontrolü, 1e-9 toleranslı kapasite ve tüketim kontrolleri, kalanın iki ondalığa aşağı yuvarlanması uygulandı. test_hiz_sinir.py ile 16 test başarılı.",
+ "adim": 13,
+ "glimmer_token": {
+  "girdi": 65508,
+  "cikti": 15649
+ },
+ "sure_sn": 396.7,
+ "gizli": {
+  "gecti": true,
+  "gecen": 16,
+  "toplam": 16,
+  "cikti": "................                                                         [100%]\n16 passed in 0.12s\n"
+ }
+}

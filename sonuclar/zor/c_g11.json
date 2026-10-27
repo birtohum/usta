@@ -1,0 +1,30 @@
+{
+ "id": "g11",
+ "kip": "c",
+ "kategori": "doğrulama ve ayrıştırma (TC kimlik, IBAN, telefon, plaka, e-posta, adres biçimi)",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 12,
+   "basarili": 12
+  }
+ ],
+ "spark_usd": 0.0023338,
+ "arayuz": "",
+ "hakem": [],
+ "iptal_edilen_test": [],
+ "kabul_gecti": true,
+ "ozet": "telefon.py dosyası normalize_et ve operator_bul fonksiyonlarıyla oluşturuldu. normalize_et boşlukları kırpar, parantez ve ayraç kurallarını kontrol eder, geçersiz girdilerde ValueError fırlatır ve her zaman +90 ile başlayan 13 karakterli E164 formatı döndürür. operator_bul normalize_et'i kullanıp 530-539 Turkcell, 540-549 Vodafone, 500-529 ve 550-599 Türk Telekom aralıklarını tanımlar, diğerleri için Bilinmiyor döner. test_telefon.py ile pytest testleri yazıldı ve tüm testler geçti.",
+ "adim": 7,
+ "glimmer_token": {
+  "girdi": 20717,
+  "cikti": 26666
+ },
+ "sure_sn": 640.6,
+ "gizli": {
+  "gecti": false,
+  "gecen": 18,
+  "toplam": 19,
+  "cikti": "_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \ntelefon.py:36: in normalize_et\n    _validate_parentheses(s)\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\ns = '(532) 123 45 67'\n\n    def _validate_parentheses(s: str):\n        if '(' in s or ')' in s:\n            if s.count('(') != 1 or s.count(')') != 1:\n                raise ValueError(\"Geçersiz parantez kullanımı\")\n            if s[0] != '(':\n                raise ValueError(\"Parantez yalnızca başta olabilir\")\n            close_idx = s.find(')')\n            if close_idx == -1:\n                raise ValueError(\"Parantez kapanmamış\")\n            # parantez içinde sadece rakam, boşluk, tire olabilir\n            inside = s[1:close_idx]\n            for ch in inside:\n                if not (ch.isdigit() or ch in ' -'):\n                    raise ValueError(\"Parantez içinde geçersiz karakter\")\n            inside_digits = ''.join(ch for ch in inside if ch.isdigit())\n            if not inside_digits.startswith('0'):\n>               raise ValueError(\"Parantez içinde sıfır ile başlamalı\")\nE               ValueError: Parantez içinde sıfır ile başlamalı\n\ntelefon.py:19: ValueError\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_normalize_parantezli - ValueError: Parantez...\n1 failed, 18 passed in 0.03s\n"
+ }
+}

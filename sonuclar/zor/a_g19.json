@@ -1,0 +1,20 @@
+{
+ "id": "g19",
+ "kip": "a",
+ "kategori": "Türkçe metin işleme (Türkçe harfler, büyük/küçük harf, hece, ek, sıralama, sayı/yazı)",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "slug.py dosyası oluşturuldu. SlugUretici sınıfı __init__, slug_uret ve kayitlari_listele metotlarını içeriyor. slug_uret Türkçe küçük harf dönüşümü, ç ğ ı ö ş ü → c g i o s u, I → ı üzerinden i, non-alnum gruplarını tek tireye çevirme, kırpma, boş/yanlış tip kontrolleri ve tekrarlı sluglar için sayaçlı benzersizleştirme yapıyor. kayitlari_listele üretim sırasına göre listeyi döndürüyor.",
+ "adim": 11,
+ "glimmer_token": {
+  "girdi": 31827,
+  "cikti": 30926
+ },
+ "sure_sn": 734.8,
+ "gizli": {
+  "gecti": true,
+  "gecen": 16,
+  "toplam": 16,
+  "cikti": "................                                                         [100%]\n16 passed in 0.02s\n"
+ }
+}

@@ -1,0 +1,20 @@
+{
+ "id": "g18",
+ "kip": "a",
+ "kategori": "veri yapıları ve algoritmalar (kuyruk, önbellek, arama, gruplama, birleştirme, durum makinesi)",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "urun_arama.py dosyası oluşturuldu. normalize Türkçe I/İ kurallarına göre küçük harfe çevirir, noktalamayı boşluğa çevirir ve boşlukları tekilleştirir. build_index ürün açıklamalarından ters indeks oluşturur ve kimlik/tür hatasında TypeError yükseltir. ara sorguyu normalize eder, VE mantığıyla eşleşen ürünleri bulur, toplam geçiş sıklığına göre azalan ve eşitlikte kimliğe göre artan şekilde sıralar; boş sorguda boş liste döner, indeks yapısı hatalıysa ValueError yükseltir.",
+ "adim": 8,
+ "glimmer_token": {
+  "girdi": 23030,
+  "cikti": 25641
+ },
+ "sure_sn": 605.6,
+ "gizli": {
+  "gecti": false,
+  "gecen": 15,
+  "toplam": 16,
+  "cikti": "..............F.                                                         [100%]\n=================================== FAILURES ===================================\n_______________________ test_ara_valueerror_bozuk_indeks _______________________\n\n    def test_ara_valueerror_bozuk_indeks():\n        urunler = {1: \"kolye\"}\n        with pytest.raises(ValueError):\n            ara(\"kolye\", {\"kolye\": [1, 2]}, urunler)\n        with pytest.raises(ValueError):\n            ara(\"kolye\", \"bozuk\", urunler)\n>       with pytest.raises(ValueError):\nE       Failed: DID NOT RAISE <class 'ValueError'>\n\n.gizli/test_gizli.py:83: Failed\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_ara_valueerror_bozuk_indeks - Failed: DID N...\n1 failed, 15 passed in 0.03s\n"
+ }
+}

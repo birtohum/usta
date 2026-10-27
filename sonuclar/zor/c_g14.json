@@ -1,0 +1,30 @@
+{
+ "id": "g14",
+ "kip": "c",
+ "kategori": "küçük işletme hesapları (KDV, fatura, taksit, indirim, stok, kur dönüşümü, yuvarlama)",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 12,
+   "basarili": 12
+  }
+ ],
+ "spark_usd": 0.0026668,
+ "arayuz": "stok.py: StokTakip, StokTakip(), giris(urun_kodu: str, adet: int, birim_maliyet: Decimal), cikis(urun_kodu: str, adet: int) -> Decimal, envanter() -> list[tuple[str, int, Decimal]]",
+ "hakem": [],
+ "iptal_edilen_test": [],
+ "kabul_gecti": true,
+ "ozet": "stok.py içinde StokTakip sınıfı oluşturuldu. Ürün kodu normalizasyonu, ağırlıklı ortalama maliyet takibi, giriş/çıkış doğrulamaları, ROUND_HALF_UP ile raporlama ve envanter sıralaması implemente edildi. test_stok.py ile 8 test başarılı.",
+ "adim": 7,
+ "glimmer_token": {
+  "girdi": 29416,
+  "cikti": 11205
+ },
+ "sure_sn": 291.1,
+ "gizli": {
+  "gecti": false,
+  "gecen": 15,
+  "toplam": 17,
+  "cikti": "stok.py:54: in giris\n    self._validate_birim_maliyet(birim_maliyet)\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nbirim_maliyet = Decimal('NaN')\n\n    @staticmethod\n    def _validate_birim_maliyet(birim_maliyet):\n        if not isinstance(birim_maliyet, Decimal):\n            raise TypeError(\"birim_maliyet Decimal olmalı\")\n>       if birim_maliyet <= 0:\nE       decimal.InvalidOperation: [<class 'decimal.InvalidOperation'>]\n\nstok.py:41: InvalidOperation\n_________________ test_sifira_dusunce_sifirlanma_ve_yeni_giris _________________\n\n    def test_sifira_dusunce_sifirlanma_ve_yeni_giris():\n        s = StokTakip()\n        s.giris('SIFIR-01', 5, Decimal('10.00'))\n        t = s.cikis('SIFIR-01', 5)\n        assert t == Decimal('50.00')\n        env = s.envanter()\n>       assert env[0][1] == 0\nE       IndexError: list index out of range\n\n.gizli/test_gizli.py:159: IndexError\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_birim_maliyet_aralik_ve_basamak - decimal.I...\nFAILED .gizli/test_gizli.py::test_sifira_dusunce_sifirlanma_ve_yeni_giris - I...\n2 failed, 15 passed in 0.04s\n"
+ }
+}

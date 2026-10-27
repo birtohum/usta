@@ -1,0 +1,30 @@
+{
+ "id": "g30",
+ "kip": "c",
+ "kategori": "veri yapıları ve algoritmalar (kuyruk, önbellek, arama, gruplama, birleştirme, durum makinesi)",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 13,
+   "basarili": 13
+  }
+ ],
+ "spark_usd": 0.0013538,
+ "arayuz": "",
+ "hakem": [],
+ "iptal_edilen_test": [],
+ "kabul_gecti": true,
+ "ozet": "SiparisDurumMakinesi sınıfı siparis_durum.py içinde oluşturuldu. Kurucu siparis_id ve toplam_tutar doğrulaması yapıyor, başlangıç durumu 'olusturuldu'. İzin verilen geçişler haritası ile odeme_yap ve ilerlet yöntemleri RuntimeError/KeyError/ValueError kurallarına uygun çalışıyor. Zaman sayacı kurucuda 0'dan başlıyor ve her başarılı geçişte artıyor. gecmis() kronolojik sözlük listesi döndürüyor. 14 pytest testi başarıyla geçti.",
+ "adim": 5,
+ "glimmer_token": {
+  "girdi": 12766,
+  "cikti": 10940
+ },
+ "sure_sn": 269.8,
+ "gizli": {
+  "gecti": false,
+  "gecen": 16,
+  "toplam": 17,
+  "cikti": ".............F...                                                        [100%]\n=================================== FAILURES ===================================\n_________________ test_terminal_iptalden_ilerlet_runtimeerror __________________\n\n    def test_terminal_iptalden_ilerlet_runtimeerror():\n        m = SiparisDurumMakinesi(\"S1\", 10.0)\n        m.ilerlet(\"iptal_edildi\")\n        with pytest.raises(RuntimeError):\n            m.ilerlet(\"odendi\")\n        with pytest.raises(RuntimeError):\n>           m.ilerlet(\"bilinmeyen_xyz\")\n\n.gizli/test_gizli.py:94: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nself = <siparis_durum.SiparisDurumMakinesi object at 0x2b730cc96ea0>\nhedef = 'bilinmeyen_xyz'\n\n    def ilerlet(self, hedef: str):\n        if hedef not in self._VALID_STATES:\n>           raise KeyError(hedef)\nE           KeyError: 'bilinmeyen_xyz'\n\nsiparis_durum.py:55: KeyError\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_terminal_iptalden_ilerlet_runtimeerror - Ke...\n1 failed, 16 passed in 0.04s\n"
+ }
+}

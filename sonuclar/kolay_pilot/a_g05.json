@@ -1,0 +1,20 @@
+{
+ "id": "g05",
+ "kip": "a",
+ "kategori": "doğrulama ve ayrıştırma (TC kimlik, IBAN, telefon, plaka, e-posta, adres biçimi)",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "validator.py dosyası oluşturuldu ve tc_dogrula fonksiyonu eklendi. Fonksiyon 11 basamaklı, ilk basamağı sıfır olmayan ve sadece rakamlardan oluşan girdiler için TC kimlik doğrulama algoritmasını uygular: 10. basamak (tek pozisyon toplamı*7 - çift pozisyon toplamı) %10, 11. basamak ilk 10 basamak toplamı %10 kontrolü yapılır. Geçersiz girdiler için istisna fırlatmadan False döner. Basit testlerle doğrulanmıştır.",
+ "adim": 6,
+ "glimmer_token": {
+  "girdi": 11432,
+  "cikti": 3777
+ },
+ "sure_sn": 97.0,
+ "gizli": {
+  "gecti": true,
+  "gecen": 10,
+  "toplam": 10,
+  "cikti": "..........                                                               [100%]\n10 passed in 0.01s\n"
+ }
+}

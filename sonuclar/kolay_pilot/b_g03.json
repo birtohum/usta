@@ -1,0 +1,20 @@
+{
+ "id": "g03",
+ "kip": "b",
+ "kategori": "tarih ve saat (iş günü, resmî tatil listesi parametre olarak verilir, süre hesabı, biçim dönüşümü)",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "kargo.py içinde teslim_tarihi_hesapla fonksiyonu yazıldı. Tarih doğrulaması, negatif iş günü kontrolü, hafta sonu ve tatil atlaması yapılarak sipariş tarihinden sonraki iş günleri hesaplanıyor. test_kargo.py ile 12 test senaryosu oluşturuldu ve pytest ile tüm testler başarıyla geçti.",
+ "adim": 4,
+ "glimmer_token": {
+  "girdi": 7160,
+  "cikti": 3306
+ },
+ "sure_sn": 82.4,
+ "gizli": {
+  "gecti": true,
+  "gecen": 10,
+  "toplam": 10,
+  "cikti": "..........                                                               [100%]\n10 passed in 0.02s\n"
+ }
+}

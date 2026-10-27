@@ -1,0 +1,20 @@
+{
+ "id": "g30",
+ "kip": "a",
+ "kategori": "veri yapıları ve algoritmalar (kuyruk, önbellek, arama, gruplama, birleştirme, durum makinesi)",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": null,
+ "adim": 20,
+ "glimmer_token": {
+  "girdi": 105511,
+  "cikti": 30823
+ },
+ "sure_sn": 764.5,
+ "gizli": {
+  "gecti": false,
+  "gecen": 16,
+  "toplam": 17,
+  "cikti": ".............F...                                                        [100%]\n=================================== FAILURES ===================================\n_________________ test_terminal_iptalden_ilerlet_runtimeerror __________________\n\n    def test_terminal_iptalden_ilerlet_runtimeerror():\n        m = SiparisDurumMakinesi(\"S1\", 10.0)\n        m.ilerlet(\"iptal_edildi\")\n        with pytest.raises(RuntimeError):\n            m.ilerlet(\"odendi\")\n        with pytest.raises(RuntimeError):\n>           m.ilerlet(\"bilinmeyen_xyz\")\n\n.gizli/test_gizli.py:94: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nself = <siparis_durum.SiparisDurumMakinesi object at 0x2ba711586bd0>\nhedef = 'bilinmeyen_xyz'\n\n    def ilerlet(self, hedef: str):\n        if hedef not in self._GEÇERLI_DURUMLAR:\n>           raise KeyError(f\"Bilinmeyen durum: {hedef}\")\nE           KeyError: 'Bilinmeyen durum: bilinmeyen_xyz'\n\nsiparis_durum.py:66: KeyError\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_terminal_iptalden_ilerlet_runtimeerror - Ke...\n1 failed, 16 passed in 0.04s\n"
+ }
+}

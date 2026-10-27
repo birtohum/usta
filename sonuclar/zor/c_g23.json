@@ -1,0 +1,30 @@
+{
+ "id": "g23",
+ "kip": "c",
+ "kategori": "doğrulama ve ayrıştırma (TC kimlik, IBAN, telefon, plaka, e-posta, adres biçimi)",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 12,
+   "basarili": 12
+  }
+ ],
+ "spark_usd": 0.001659,
+ "arayuz": "",
+ "hakem": [],
+ "iptal_edilen_test": [],
+ "kabul_gecti": true,
+ "ozet": "eposta.py dosyası içinde eposta_dogrula ve alan_ayikla fonksiyonları yazıldı. Doğrulama kuralları (boşluk, uzunluk, yerel bölüm 64 karakter, nokta kuralları, ASCII karakterler, alan adı etiket uzunlukları, tire kuralları, son etiket en az iki harf) uygulandı. eposta_dogrula geçersiz girdide False döndürürken alan_ayikla ValueError fırlatır; her ikisi de str dışı girdide TypeError fırlatır. alan_ayikla yerel bölümü olduğu gibi, alan adını küçük harfe çevirerek döndürür. Testler pytest ile çalıştırıldı ve 9 test geçti.",
+ "adim": 5,
+ "glimmer_token": {
+  "girdi": 13707,
+  "cikti": 21926
+ },
+ "sure_sn": 523.9,
+ "gizli": {
+  "gecti": true,
+  "gecen": 18,
+  "toplam": 18,
+  "cikti": "..................                                                       [100%]\n18 passed in 0.02s\n"
+ }
+}

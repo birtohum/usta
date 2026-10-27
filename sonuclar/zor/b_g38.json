@@ -1,0 +1,20 @@
+{
+ "id": "g38",
+ "kip": "b",
+ "kategori": "küçük işletme hesapları (KDV, fatura, taksit, indirim, stok, kur dönüşümü, yuvarlama)",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "efatura.py çok bayraklı komut satırı programı oluşturuldu. CSV başlık kontrolü, numara (2 harf + 4 rakam yıl + 9 rakam), tarih YYYY-AA-GG, tutar >=0.01, para birimi TL/USD/EUR doğrulamaları, tekrar eden numara tespiti, hata satırları stderr uyarısı ile atlanıyor. Dosya bulunamazsa çıkış kodu 3, başlık eksikse 2, --yardim 0. Sabit kurlar USD 32.5, EUR 35.2 TL tabanıyla çevrim yapılıyor, ara yuvarlama yok, fatura ve toplam ROUND_HALF_UP ile 2 basamağa yuvarlanıyor. Rapor JSON'da faturalar tarih sonra numara artan sıralı, toplam_fatura, toplam_tutar, hatali_satir_sayisi alanları var. Testler pytest ile geçti.",
+ "adim": 14,
+ "glimmer_token": {
+  "girdi": 97269,
+  "cikti": 22745
+ },
+ "sure_sn": 554.3,
+ "gizli": {
+  "gecti": true,
+  "gecen": 16,
+  "toplam": 16,
+  "cikti": "................                                                         [100%]\n16 passed in 0.71s\n"
+ }
+}

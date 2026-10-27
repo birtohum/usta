@@ -1,0 +1,20 @@
+{
+ "id": "g12",
+ "kip": "a",
+ "kategori": "veri yapıları ve algoritmalar (kuyruk, önbellek, arama, gruplama, birleştirme, durum makinesi)",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "kargo_kuyruk.py dosyası oluşturuldu. OncelikliKargoKuyrugu sınıfı kapasite kontrolü, takip numarası doğrulaması, öncelik aralığı (1-5), duplicate KeyError, kapasite dolu OverflowError, cikar() öncelik ve sira_no'ya göre seçim, iptal_et() güvenli silme ve listele() sıralı görünüm sağlıyor. Temel ve hata senaryoları test edildi.",
+ "adim": 4,
+ "glimmer_token": {
+  "girdi": 7025,
+  "cikti": 4416
+ },
+ "sure_sn": 107.4,
+ "gizli": {
+  "gecti": true,
+  "gecen": 18,
+  "toplam": 18,
+  "cikti": "..................                                                       [100%]\n18 passed in 0.01s\n"
+ }
+}

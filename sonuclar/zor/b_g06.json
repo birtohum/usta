@@ -1,0 +1,20 @@
+{
+ "id": "g06",
+ "kip": "b",
+ "kategori": "veri yapıları ve algoritmalar (kuyruk, önbellek, arama, gruplama, birleştirme, durum makinesi)",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "TTLCache sınıfı lru_cache.py içinde oluşturuldu. capacity ve ttl_saniye doğrulaması, monoton simdi parametresiyle çalışan get/set, TTL kontrolü (ttl=0 için anında geçersiz), kapasite dolduğunda süresi dolmuş kayıtların temizlenmesi ve LRU + eklenme sırası eşitlik kırıcı ile atma, mevcut anahtara set ile güncelleme ve kullanım sırası taşıma, tembel silme ve istatistik() yöntemi eklendi. test_ttl_cache.py ile 10 test yazıldı ve pytest ile tüm testler geçti.",
+ "adim": 6,
+ "glimmer_token": {
+  "girdi": 18201,
+  "cikti": 15382
+ },
+ "sure_sn": 359.6,
+ "gizli": {
+  "gecti": true,
+  "gecen": 18,
+  "toplam": 18,
+  "cikti": "..................                                                       [100%]\n18 passed in 0.05s\n"
+ }
+}

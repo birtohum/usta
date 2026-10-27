@@ -1,0 +1,20 @@
+{
+ "id": "g06",
+ "kip": "a",
+ "kategori": "veri yapıları ve algoritmalar (kuyruk, önbellek, arama, gruplama, birleştirme, durum makinesi)",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "lru_cache.py dosyası oluşturuldu. TTLCache sınıfı capacity ve ttl_saniye doğrulaması, simdi parametresiyle çalışan get/set, TTL kontrolü (ttl=0 anında geçersiz), kapasite dolduğunda süresi dolmuş kayıtların temizlenmesi ve LRU + eklenme sırası tie-break ile atma, set'te güncelleme ve kullanım sırası yenileme, tembel silme ve hit/miss/size döndüren istatistik() yöntemlerini içeriyor. Temel senaryolar test edildi.",
+ "adim": 10,
+ "glimmer_token": {
+  "girdi": 30595,
+  "cikti": 23461
+ },
+ "sure_sn": 549.0,
+ "gizli": {
+  "gecti": true,
+  "gecen": 18,
+  "toplam": 18,
+  "cikti": "..................                                                       [100%]\n18 passed in 0.03s\n"
+ }
+}

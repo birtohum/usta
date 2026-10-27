@@ -1,0 +1,60 @@
+{
+ "id": "g29",
+ "kip": "c",
+ "kategori": "doğrulama ve ayrıştırma (TC kimlik, IBAN, telefon, plaka, e-posta, adres biçimi)",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 9,
+   "basarili": 9
+  }
+ ],
+ "spark_usd": 0.0029428000000000006,
+ "arayuz": "",
+ "hakem": [
+  {
+   "test": "test_mersis_gecerli",
+   "karar": "belirsiz",
+   "gerekce": "MERSIS geçerliliği belirsiz VKN algoritmasına bağlı olduğundan bu örneğin geçerli olduğu çıkarılamaz.",
+   "tur": 1
+  },
+  {
+   "test": "test_ozet_sayaclar",
+   "karar": "belirsiz",
+   "gerekce": "Sayaç mantığı açık olsa da hangi örneklerin geçerli sayılacağı algoritma belirsizliği yüzünden çıkarılamaz.",
+   "tur": 1
+  },
+  {
+   "test": "test_vkn_gecerli",
+   "karar": "belirsiz",
+   "gerekce": "Görev ağırlık ve mod hesabını vermediğinden bu VKN'nin geçerli olması gerektiği çıkarılamaz.",
+   "tur": 1
+  },
+  {
+   "test": "test_vkn_gecerli_ikinci_ornek",
+   "karar": "belirsiz",
+   "gerekce": "Görev ağırlık ve mod hesabını vermediğinden bu VKN'nin geçerli olması gerektiği çıkarılamaz.",
+   "tur": 1
+  }
+ ],
+ "iptal_edilen_test": [
+  "test_mersis_gecerli",
+  "test_ozet_sayaclar",
+  "test_vkn_gecerli",
+  "test_vkn_gecerli_ikinci_ornek"
+ ],
+ "kabul_gecti": true,
+ "ozet": "vergi.py dosyasında VergiDogrulayici sınıfı oluşturuldu. __init__ sayaçları başlatıyor, dogrula_vkn 10 haneli VKN'yi ağırlıklı toplam mod 10 ile doğruluyor, dogrula_mersis 16 haneli MERSİS'i VKN kısmı ve 1-999999 arası sıra numarası ile kontrol ediyor. Tip hatası TypeError fırlatıyor, her çağrıda sorgu sayacı artıyor ve geçerli durumda gecerli sayacı artıyor. ozet dört sayacı döndürüyor. test_vergi.py ile 17 test geçti.",
+ "adim": 4,
+ "glimmer_token": {
+  "girdi": 9575,
+  "cikti": 13512
+ },
+ "sure_sn": 352.0,
+ "gizli": {
+  "gecti": false,
+  "gecen": 10,
+  "toplam": 17,
+  "cikti": "   v = VergiDogrulayici()\n        assert v.ozet() == {\"vkn_sorgu\": 0, \"mersis_sorgu\": 0, \"vkn_gecerli\": 0, \"mersis_gecerli\": 0}\n>       assert v.dogrula_vkn(\"1234567890\") is True\nE       AssertionError: assert False is True\nE        +  where False = dogrula_vkn('1234567890')\nE        +    where dogrula_vkn = <vergi.VergiDogrulayici object at 0x2ab6e60451f0>.dogrula_vkn\n\n.gizli/test_gizli.py:103: AssertionError\n______________________ test_sayaclar_birbirini_etkilemez _______________________\n\n    def test_sayaclar_birbirini_etkilemez():\n        v = VergiDogrulayici()\n        v.dogrula_mersis(\"1234567890000001\")\n        v.dogrula_mersis(\"1234567890000000\")\n        o = v.ozet()\n        assert o[\"mersis_sorgu\"] == 2\n>       assert o[\"mersis_gecerli\"] == 1\nE       assert 0 == 1\n\n.gizli/test_gizli.py:115: AssertionError\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_vkn_gecerli_1 - AssertionError: assert Fals...\nFAILED .gizli/test_gizli.py::test_vkn_gecerli_2 - AssertionError: assert Fals...\nFAILED .gizli/test_gizli.py::test_vkn_gecerli_3 - AssertionError: assert Fals...\nFAILED .gizli/test_gizli.py::test_mersis_gecerli - AssertionError: assert Fal...\nFAILED .gizli/test_gizli.py::test_mersis_gecerli_farkli - AssertionError: ass...\nFAILED .gizli/test_gizli.py::test_ozet_baslangic_ve_sayaclar - AssertionError...\nFAILED .gizli/test_gizli.py::test_sayaclar_birbirini_etkilemez - assert 0 == 1\n7 failed, 10 passed in 0.07s\n"
+ }
+}

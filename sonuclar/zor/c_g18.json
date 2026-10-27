@@ -1,0 +1,30 @@
+{
+ "id": "g18",
+ "kip": "c",
+ "kategori": "veri yapıları ve algoritmalar (kuyruk, önbellek, arama, gruplama, birleştirme, durum makinesi)",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 12,
+   "basarili": 12
+  }
+ ],
+ "spark_usd": 0.0014830000000000002,
+ "arayuz": "",
+ "hakem": [],
+ "iptal_edilen_test": [],
+ "kabul_gecti": true,
+ "ozet": "urun_arama.py dosyasında normalize, build_index ve ara fonksiyonları Türkçe karakter kurallarına uygun olarak implemente edildi. normalize büyük İ/i ve I/ı dönüşümlerini, noktalama temizliğini ve boşluk normalizasyonunu yapıyor. build_index ters indeks oluşturuyor ve tip hatalarında TypeError yükseltiyor. ara fonksiyonu VE mantığıyla arama yapıyor, boş sorguda boş liste döndürüyor, sıralama toplam geçiş sıklığına göre azalan ve eşitlikte kimlik artan şekilde. test_urun_arama.py ile 13 test başarılı.",
+ "adim": 5,
+ "glimmer_token": {
+  "girdi": 12514,
+  "cikti": 12143
+ },
+ "sure_sn": 296.8,
+ "gizli": {
+  "gecti": false,
+  "gecen": 15,
+  "toplam": 16,
+  "cikti": "..............F.                                                         [100%]\n=================================== FAILURES ===================================\n_______________________ test_ara_valueerror_bozuk_indeks _______________________\n\n    def test_ara_valueerror_bozuk_indeks():\n        urunler = {1: \"kolye\"}\n        with pytest.raises(ValueError):\n            ara(\"kolye\", {\"kolye\": [1, 2]}, urunler)\n        with pytest.raises(ValueError):\n            ara(\"kolye\", \"bozuk\", urunler)\n>       with pytest.raises(ValueError):\nE       Failed: DID NOT RAISE <class 'ValueError'>\n\n.gizli/test_gizli.py:83: Failed\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_ara_valueerror_bozuk_indeks - Failed: DID N...\n1 failed, 15 passed in 0.04s\n"
+ }
+}

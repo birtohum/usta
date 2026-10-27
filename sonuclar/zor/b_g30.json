@@ -1,0 +1,20 @@
+{
+ "id": "g30",
+ "kip": "b",
+ "kategori": "veri yapıları ve algoritmalar (kuyruk, önbellek, arama, gruplama, birleştirme, durum makinesi)",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "siparis_durum.py içinde SiparisDurumMakinesi sınıfı oluşturuldu. Kurucu kontrolleri, izin verilen durum geçişleri, odeme_yap ve ilerlet yöntemleri, durum() ve gecmis() metodları ile zaman sayacı mantığı uygulandı. test_siparis_durum.py ile 14 test yazıldı ve tüm testler geçti.",
+ "adim": 5,
+ "glimmer_token": {
+  "girdi": 12777,
+  "cikti": 9441
+ },
+ "sure_sn": 226.1,
+ "gizli": {
+  "gecti": false,
+  "gecen": 16,
+  "toplam": 17,
+  "cikti": ".............F...                                                        [100%]\n=================================== FAILURES ===================================\n_________________ test_terminal_iptalden_ilerlet_runtimeerror __________________\n\n    def test_terminal_iptalden_ilerlet_runtimeerror():\n        m = SiparisDurumMakinesi(\"S1\", 10.0)\n        m.ilerlet(\"iptal_edildi\")\n        with pytest.raises(RuntimeError):\n            m.ilerlet(\"odendi\")\n        with pytest.raises(RuntimeError):\n>           m.ilerlet(\"bilinmeyen_xyz\")\n\n.gizli/test_gizli.py:94: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nself = <siparis_durum.SiparisDurumMakinesi object at 0x2ba73bd82f60>\nhedef = 'bilinmeyen_xyz'\n\n    def ilerlet(self, hedef: str):\n        if hedef not in self._VALID_STATES:\n>           raise KeyError(f'Bilinmeyen durum: {hedef}')\nE           KeyError: 'Bilinmeyen durum: bilinmeyen_xyz'\n\nsiparis_durum.py:52: KeyError\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_terminal_iptalden_ilerlet_runtimeerror - Ke...\n1 failed, 16 passed in 0.03s\n"
+ }
+}

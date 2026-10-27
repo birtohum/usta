@@ -1,0 +1,30 @@
+{
+ "id": "g16",
+ "kip": "c",
+ "kategori": "dosya ve komut satırı (CSV/JSON okuma, rapor yazdırma, argümanlar, hata mesajları)",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 12,
+   "basarili": 12
+  }
+ ],
+ "spark_usd": 0.0015094,
+ "arayuz": "",
+ "hakem": [],
+ "iptal_edilen_test": [],
+ "kabul_gecti": true,
+ "ozet": "AidatDefteri sınıfı aidat.py içinde oluşturuldu. __init__ dosya yoksa boş sözlük başlatıyor, varsa JSON yükleyip anahtarları kontrol ediyor. odeme_ekle ay formatını YYYY-AA ile doğrular, tutarı Decimal ile ayrıştırır, iki ondalıktan fazla veya sıfır/negatifse ValueError verir, aynı daire-ay için mükerrer ödemede hata verir ve atomik utf-8 indent 2 ile kaydeder. borc_hesapla toplamı ROUND_HALF_UP ile iki ondalıklı string döndürür. aylik_ozet daire_no artan listesi verir. Testler pytest ile geçti.",
+ "adim": 6,
+ "glimmer_token": {
+  "girdi": 21852,
+  "cikti": 16843
+ },
+ "sure_sn": 405.5,
+ "gizli": {
+  "gecti": true,
+  "gecen": 17,
+  "toplam": 17,
+  "cikti": ".................                                                        [100%]\n17 passed in 0.03s\n"
+ }
+}

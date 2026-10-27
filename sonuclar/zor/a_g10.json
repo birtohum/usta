@@ -1,0 +1,20 @@
+{
+ "id": "g10",
+ "kip": "a",
+ "kategori": "dosya ve komut satırı (CSV/JSON okuma, rapor yazdırma, argümanlar, hata mesajları)",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "stok.py dosyası oluşturuldu. StokDefteri sınıfı __init__, urun_ekle, sayim_yukle ve fark_raporu imzalarıyla, JSON yükleme/ValueError, barkod strip/negatif kontrol, CSV başlık zorunluluğu, sayılamayan satır sayacı, tolerans kontrolü, fark = sayilan - kayitli, mutlak fark filtresi, BOS işleme, fark azalan/barkod artan sıralama, atomik yazma ve dönüş sözlüğü gereksinimlerini karşılayacak şekilde uygulandı.",
+ "adim": 10,
+ "glimmer_token": {
+  "girdi": 38585,
+  "cikti": 41562
+ },
+ "sure_sn": 987.7,
+ "gizli": {
+  "gecti": true,
+  "gecen": 16,
+  "toplam": 16,
+  "cikti": "................                                                         [100%]\n16 passed in 0.03s\n"
+ }
+}

@@ -1,0 +1,20 @@
+{
+ "id": "g26",
+ "kip": "b",
+ "kategori": "küçük işletme hesapları (KDV, fatura, taksit, indirim, stok, kur dönüşümü, yuvarlama)",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "cari.py içinde CariHesap sınıfı oluşturuldu. hareket, bakiye ve ekstre metotları Decimal ile çalışıyor, isim normalizasyonu, tarih ve tutar doğrulamaları, ROUND_HALF_UP yuvarlama ve sıralama kuralları uygulandı. test_cari.py ile 9 test geçti.",
+ "adim": 12,
+ "glimmer_token": {
+  "girdi": 64923,
+  "cikti": 15403
+ },
+ "sure_sn": 383.1,
+ "gizli": {
+  "gecti": false,
+  "gecen": 15,
+  "toplam": 17,
+  "cikti": "    def test_ad_kisa_uzun_ve_bos_valueerror():\n        c = CariHesap()\n        with pytest.raises(ValueError):\n            c.hareket('A', Decimal('10.00'), '2024-01-01')\n        with pytest.raises(ValueError):\n            c.hareket('X' * 51, Decimal('10.00'), '2024-01-01')\n        with pytest.raises(ValueError):\n            c.hareket('   ', Decimal('10.00'), '2024-01-01')\n>       with pytest.raises(ValueError):\nE       Failed: DID NOT RAISE <class 'ValueError'>\n\n.gizli/test_gizli.py:29: Failed\n_____________________ test_hareketler_liste_olarak_tutulur _____________________\n\n    def test_hareketler_liste_olarak_tutulur():\n        c = CariHesap()\n        bulundu = False\n        for v in vars(c).values():\n            if isinstance(v, list):\n                bulundu = True\n                ilk_len = len(v)\n                break\n>       assert bulundu\nE       assert False\n\n.gizli/test_gizli.py:165: AssertionError\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_ad_kisa_uzun_ve_bos_valueerror - Failed: DI...\nFAILED .gizli/test_gizli.py::test_hareketler_liste_olarak_tutulur - assert False\n2 failed, 15 passed in 0.06s\n"
+ }
+}

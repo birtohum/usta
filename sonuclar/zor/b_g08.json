@@ -1,0 +1,20 @@
+{
+ "id": "g08",
+ "kip": "b",
+ "kategori": "küçük işletme hesapları (KDV, fatura, taksit, indirim, stok, kur dönüşümü, yuvarlama)",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": null,
+ "adim": 20,
+ "glimmer_token": {
+  "girdi": 112649,
+  "cikti": 92464
+ },
+ "sure_sn": 2196.4,
+ "gizli": {
+  "gecti": false,
+  "gecen": 11,
+  "toplam": 17,
+  "cikti": "or_vade_farki():\n        with pytest.raises(ValueError):\n            taksit_plani(Decimal(\"100.00\"), 12, Decimal(\"-0.01\"))\n>       with pytest.raises(ValueError):\nE       Failed: DID NOT RAISE <class 'ValueError'>\n\n.gizli/test_gizli.py:98: Failed\n_____________________________ test_sinir_degerler ______________________________\n\n    def test_sinir_degerler():\n        r1 = taksit_plani(Decimal(\"100.00\"), 36, Decimal(\"0.05\"))\n        assert len(r1) == 36\n>       assert sum((x[\"taksit_tutari\"] for x in r1), Decimal(\"0.00\")) == Decimal(\"280.00\")\nE       AssertionError: assert Decimal('101.80') == Decimal('280.00')\nE        +  where Decimal('101.80') = sum(<generator object test_sinir_degerler.<locals>.<genexpr> at 0x2ba197935970>, Decimal('0.00'))\nE        +    where Decimal('0.00') = Decimal('0.00')\nE        +  and   Decimal('280.00') = Decimal('280.00')\n\n.gizli/test_gizli.py:119: AssertionError\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_faizli_toplam - AssertionError: assert Deci...\nFAILED .gizli/test_gizli.py::test_yuvarlama_son_taksit_duzeltme - AssertionEr...\nFAILED .gizli/test_gizli.py::test_toplam_esitligi_baska_durum - AssertionErro...\nFAILED .gizli/test_gizli.py::test_tek_taksit - AssertionError: assert Decimal...\nFAILED .gizli/test_gizli.py::test_valueerror_vade_farki - Failed: DID NOT RAI...\nFAILED .gizli/test_gizli.py::test_sinir_degerler - AssertionError: assert Dec...\n6 failed, 11 passed in 0.08s\n"
+ }
+}

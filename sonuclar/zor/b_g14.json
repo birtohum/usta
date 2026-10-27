@@ -1,0 +1,20 @@
+{
+ "id": "g14",
+ "kip": "b",
+ "kategori": "küçük işletme hesapları (KDV, fatura, taksit, indirim, stok, kur dönüşümü, yuvarlama)",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "StokTakip sınıfı stok.py içinde oluşturuldu. Ürün kodu normalizasyonu, ağırlıklı ortalama maliyet takibi, giriş/çıkış doğrulamaları, ROUND_HALF_UP ile raporlama ve envanter sıralaması implemente edildi. test_stok.py ile 17 test senaryosu yazıldı ve tüm testler geçti.",
+ "adim": 11,
+ "glimmer_token": {
+  "girdi": 69336,
+  "cikti": 15861
+ },
+ "sure_sn": 392.5,
+ "gizli": {
+  "gecti": false,
+  "gecen": 6,
+  "toplam": 17,
+  "cikti": "        env = s.envanter()\n>       assert isinstance(env[0][2], Decimal)\nE       KeyError: 2\n\n.gizli/test_gizli.py:195: KeyError\n___________________________ test_durum_sinif_icinde ____________________________\n\n    def test_durum_sinif_icinde():\n        a = StokTakip()\n        b = StokTakip()\n        a.giris('AYNI-01', 5, Decimal('1.00'))\n        assert len(b.envanter()) == 0\n        b.giris('AYNI-01', 2, Decimal('9.99'))\n>       assert a.envanter()[0][1] == 5\nE       KeyError: 1\n\n.gizli/test_gizli.py:207: KeyError\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_giris_ve_envanter_temel - AssertionError: a...\nFAILED .gizli/test_gizli.py::test_agirlikli_ortalama - KeyError: 1\nFAILED .gizli/test_gizli.py::test_cikis_toplami_dogrulugu - KeyError: 1\nFAILED .gizli/test_gizli.py::test_birim_maliyet_half_up_yuvarlama - KeyError: 2\nFAILED .gizli/test_gizli.py::test_ara_yuvarlama_yok - KeyError: 1\nFAILED .gizli/test_gizli.py::test_urun_kodu_kucuk_harf_normalizasyon - KeyErr...\nFAILED .gizli/test_gizli.py::test_envanter_siralama - AssertionError: assert ...\nFAILED .gizli/test_gizli.py::test_birim_maliyet_aralik_ve_basamak - decimal.I...\nFAILED .gizli/test_gizli.py::test_sifira_dusunce_sifirlanma_ve_yeni_giris - I...\nFAILED .gizli/test_gizli.py::test_decimal_tipleri_ve_quantize - KeyError: 2\nFAILED .gizli/test_gizli.py::test_durum_sinif_icinde - KeyError: 1\n11 failed, 6 passed in 0.09s\n"
+ }
+}

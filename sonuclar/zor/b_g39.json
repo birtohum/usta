@@ -1,0 +1,20 @@
+{
+ "id": "g39",
+ "kip": "b",
+ "kategori": "tarih ve saat (iş günü, resmî tatil listesi parametre olarak verilir, süre hesabı, biçim dönüşümü)",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "kidem.py içinde kidem_hesapla fonksiyonu yazıldı. Tarih doğrulaması, ValueError/TypeError kontrolleri, klasik yıl-ay-gün farkı mantığı, artık gün ve sınır değerler doğru işleniyor. Sonuç sözlüğü yil, ay, gun, toplam_gun, toplam_ay_asagi anahtarlarını içeriyor. test_kidem.py ile 10 test geçti.",
+ "adim": 12,
+ "glimmer_token": {
+  "girdi": 37883,
+  "cikti": 30495
+ },
+ "sure_sn": 710.6,
+ "gizli": {
+  "gecti": true,
+  "gecen": 18,
+  "toplam": 18,
+  "cikti": "..................                                                       [100%]\n18 passed in 0.03s\n"
+ }
+}

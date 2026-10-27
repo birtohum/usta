@@ -1,0 +1,20 @@
+{
+ "id": "g04",
+ "kip": "b",
+ "kategori": "dosya ve komut satırı (CSV/JSON okuma, rapor yazdırma, argümanlar, hata mesajları)",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "iade_raporu.py komut satırı aracı oluşturuldu. CSV utf-8-sig ile okunuyor, başlık kontrolü, JSON liste ve alan doğrulaması, Decimal ile ROUND_HALF_UP toplama, --min-tutar filtresi, bulunamayan sipariş uyarıları, varsayılan ve --sirala tarih sıralaması, çıktı formatı ve hata kodları (2,3,4) uygulandı. Testler pytest ile geçti.",
+ "adim": 7,
+ "glimmer_token": {
+  "girdi": 29881,
+  "cikti": 12283
+ },
+ "sure_sn": 282.2,
+ "gizli": {
+  "gecti": true,
+  "gecen": 16,
+  "toplam": 16,
+  "cikti": "................                                                         [100%]\n16 passed in 0.63s\n"
+ }
+}

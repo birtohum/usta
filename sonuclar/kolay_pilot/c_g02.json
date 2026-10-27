@@ -1,0 +1,29 @@
+{
+ "id": "g02",
+ "kip": "c",
+ "kategori": "küçük işletme hesapları (KDV, fatura, taksit, indirim, stok, kur dönüşümü, yuvarlama)",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 9,
+   "basarili": 9
+  }
+ ],
+ "spark_usd": 0.0008255,
+ "arayuz": "Arayüz sözleşmesi:\n- Dosya: fatura.py çalışma klasöründe bulunur.\n- Fonksiyon: kdv_ekle(tutar: float, oran: int) -> float\n- Davranış: KDV dahil tutarı tutar * (1 + oran / 100) formülüyle hesaplar ve round ile iki basamağa yuvarlayarak döndürür.\n- Hata durumları: tutar negatifse ValueError fırlatır; oran 0, 1, 8, 10, 20 değerlerinden biri değilse ValueError fırlatır.\n- Bağımlılık: Python 3.12 standart kütüphanesi dışında bağımlılık kullanılmaz.",
+ "iptal_edilen_test": [],
+ "kabul_gecti": true,
+ "ozet": "fatura.py içinde kdv_ekle fonksiyonu oluşturuldu. Tutar negatifse veya oran 0,1,8,10,20 dışındaysa ValueError fırlatıyor, aksi halde tutar*(1+oran/100) hesaplanıp round ile iki basamağa yuvarlanıyor. test_fatura.py ile 6 test yazıldı ve pytest ile tüm testler geçti.",
+ "adim": 4,
+ "glimmer_token": {
+  "girdi": 6227,
+  "cikti": 1559
+ },
+ "sure_sn": 80.6,
+ "gizli": {
+  "gecti": true,
+  "gecen": 10,
+  "toplam": 10,
+  "cikti": "..........                                                               [100%]\n10 passed in 0.01s\n"
+ }
+}

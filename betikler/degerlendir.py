@@ -56,9 +56,12 @@ def tek(is_):
     return r
 
 
-def ozet():
-    sonuclar = [json.loads(p.read_text(encoding="utf-8")) for p in sorted(KAYIT.glob("*.json"))]
-    satirlar = ["| Kip | Görev | Tamamen geçen | Gizli test oranı | Ort. adım | Ort. Glimmer token | Spark $ | Hata |",
+GELISTIRME = {f"g{i:02d}" for i in range(1, 7)}  # yöntem ayarlanırken bakılan görevler; asıl sonuç bunların dışında
+
+
+def _tablo(sonuclar: list, baslik: str) -> list:
+    satirlar = [f"**{baslik}**", "",
+                "| Kip | Görev | Tamamen geçen | Gizli test oranı | Ort. adım | Ort. Glimmer token | Spark $ | Hata |",
                 "|---|---|---|---|---|---|---|---|"]
     for kip in "abc":
         rs = [r for r in sonuclar if r["kip"] == kip]
@@ -74,6 +77,23 @@ def ozet():
         hata = sum("hata" in r for r in rs)
         satirlar.append(f"| {kip} | {n} | {tam}/{n} (%{100 * tam / n:.0f}) | %{100 * gecen / toplam:.0f} | {adim:.1f} | "
                         f"{tok:,.0f} | {usd:.3f} | {hata} |")
+    # Eşleştirilmiş: aynı görevde c ile a/b'nin farklı sonuçlandığı durumlar
+    gecti = {(r["kip"], r["id"]): r["gizli"]["gecti"] for r in sonuclar}
+    for diger in "ab":
+        ortak = [i for (k, i) in gecti if k == "c" and (diger, i) in gecti]
+        if ortak:
+            arti = sum(gecti[("c", i)] and not gecti[(diger, i)] for i in ortak)
+            eksi = sum(gecti[(diger, i)] and not gecti[("c", i)] for i in ortak)
+            satirlar.append(f"\nc vs {diger} ({len(ortak)} ortak görev): yalnızca c geçti {arti}, yalnızca {diger} geçti {eksi}")
+    satirlar.append("")
+    return satirlar
+
+
+def ozet():
+    sonuclar = [json.loads(p.read_text(encoding="utf-8")) for p in sorted(KAYIT.glob("*.json"))]
+    satirlar = _tablo([r for r in sonuclar if r["id"] not in GELISTIRME], "Değerlendirme görevleri (geliştirmede bakılmayan)")
+    satirlar += _tablo([r for r in sonuclar if r["id"] in GELISTIRME], "Geliştirme görevleri (g01–g06)")
+    satirlar += _tablo(sonuclar, "Tümü")
     print("\n".join(satirlar))
     return satirlar
 

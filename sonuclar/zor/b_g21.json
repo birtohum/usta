@@ -1,0 +1,20 @@
+{
+ "id": "g21",
+ "kip": "b",
+ "kategori": "tarih ve saat (iş günü, resmî tatil listesi parametre olarak verilir, süre hesabı, biçim dönüşümü)",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "vade.py çok bayraklı komut satırı programı oluşturuldu. Fatura tarihi, vade gün, tatiller, hafta sonu öteleme yönü ve çıktı formatı bayrakları zorunlu olarak işleniyor; geçersiz girişlerde stderr'e mesaj yazılıp çıkış kodu 2 dönüyor. Vade tarihi hafta sonu veya tatil ise seçilen yöne doğru en yakın iş gününe zincirleme taşınır. Testler pytest ile çalıştırıldı ve 14 test geçti.",
+ "adim": 9,
+ "glimmer_token": {
+  "girdi": 33996,
+  "cikti": 24035
+ },
+ "sure_sn": 576.1,
+ "gizli": {
+  "gecti": true,
+  "gecen": 19,
+  "toplam": 19,
+  "cikti": "...................                                                      [100%]\n19 passed in 0.80s\n"
+ }
+}

@@ -1,0 +1,20 @@
+{
+ "id": "g11",
+ "kip": "a",
+ "kategori": "doğrulama ve ayrıştırma (TC kimlik, IBAN, telefon, plaka, e-posta, adres biçimi)",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "telefon.py dosyası oluşturuldu. normalize_et ve operator_bul fonksiyonları, belirtilen parantez, boşluk, tire kuralları ve E164 dönüşümü ile çalışıyor. Testler başarılı.",
+ "adim": 9,
+ "glimmer_token": {
+  "girdi": 30134,
+  "cikti": 15119
+ },
+ "sure_sn": 368.2,
+ "gizli": {
+  "gecti": false,
+  "gecen": 17,
+  "toplam": 19,
+  "cikti": "            inner_clean = ''.join(ch for ch in inner if ch.isdigit())\n            if not inner_clean or not inner_clean.startswith('0'):\n                raise ValueError(\"Parantez sıfır ve alan kodu içermeli\")\n            # kapanıştan sonra parantez olmamalı\n            if ')' in s[idx_close + 1:]:\n                raise ValueError(\"Fazladan kapanış parantezi\")\n    \n        # ayraçları temizle\n        cleaned = ''.join(ch for ch in s if ch.isdigit() or ch == '+')\n        if not cleaned:\n            raise ValueError(\"Sadece ayraçlardan oluşan girdi\")\n    \n        # + işareti kontrolü\n        if '+' in cleaned:\n            if not cleaned.startswith('+') or cleaned.count('+') != 1:\n                raise ValueError(\"Geçersiz + kullanımı\")\n            if len(cleaned) != 13 or not cleaned.startswith('+90'):\n                raise ValueError(\"Geçersiz +90 formatı\")\n            if not cleaned[1:].isdigit():\n                raise ValueError(\"Geçersiz karakter\")\n            # mobil başlangıç kontrolü\n            if cleaned[3] != '5':\n>               raise ValueError(\"Türk mobil numarası 5 ile başlamalı\")\nE               ValueError: Türk mobil numarası 5 ile başlamalı\n\ntelefon.py:58: ValueError\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_normalize_parantezli - ValueError: Parantez...\nFAILED .gizli/test_gizli.py::test_operator_bilinmiyor - ValueError: Türk mobi...\n2 failed, 17 passed in 0.05s\n"
+ }
+}

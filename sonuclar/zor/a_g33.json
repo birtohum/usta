@@ -1,0 +1,20 @@
+{
+ "id": "g33",
+ "kip": "a",
+ "kategori": "tarih ve saat (iş günü, resmî tatil listesi parametre olarak verilir, süre hesabı, biçim dönüşümü)",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "zaman_damgasi.py dosyası oluşturuldu. parse_tr_tarih fonksiyonu DD-MM-YYYY HH:MM, DD/MM/YYYY HH:MM ve YYYY-MM-DDTHH:MM biçimlerini sıfır dolgulu kontrolle parse edip YYYY-MM-DD HH:MM formatına normalize eder, geçersiz tarih ve biçimlerde ValueError, dizge dışı girdide TypeError fırlatır. gun_farki_iso fonksiyonu yalnızca normalize edilmiş biçimleri kabul eder, a tarihi b’den sonra ise negatif, aynı an için sıfır döndürür ve farkı tam 24 saatlik dilimlere aşağı yuvarlayarak hesaplar. Artık yıl kontrolü ve tip kontrolleri test edildi.",
+ "adim": 8,
+ "glimmer_token": {
+  "girdi": 22265,
+  "cikti": 19735
+ },
+ "sure_sn": 473.7,
+ "gizli": {
+  "gecti": true,
+  "gecen": 18,
+  "toplam": 18,
+  "cikti": "..................                                                       [100%]\n18 passed in 0.02s\n"
+ }
+}

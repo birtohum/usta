@@ -1,0 +1,20 @@
+{
+ "id": "g33",
+ "kip": "b",
+ "kategori": "tarih ve saat (iş günü, resmî tatil listesi parametre olarak verilir, süre hesabı, biçim dönüşümü)",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "zaman_damgasi.py dosyası oluşturuldu. parse_tr_tarih üç kabul edilen biçimi sıfır dolgulu kontrolle doğrular, imkansız tarihleri reddeder ve YYYY-MM-DD HH:MM biçimine normalize eder. gun_farki_iso yalnızca normalize edilmiş biçimi kabul eder, TypeError/ValueError fırlatır ve farkı tam 24 saatlik dilimlere göre aşağı yuvarlayarak döndürür. Testler pytest ile geçti.",
+ "adim": 10,
+ "glimmer_token": {
+  "girdi": 33558,
+  "cikti": 27522
+ },
+ "sure_sn": 655.7,
+ "gizli": {
+  "gecti": true,
+  "gecen": 18,
+  "toplam": 18,
+  "cikti": "..................                                                       [100%]\n18 passed in 0.02s\n"
+ }
+}

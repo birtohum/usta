@@ -1,0 +1,30 @@
+{
+ "id": "g08",
+ "kip": "c",
+ "kategori": "küçük işletme hesapları (KDV, fatura, taksit, indirim, stok, kur dönüşümü, yuvarlama)",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 14,
+   "basarili": 14
+  }
+ ],
+ "spark_usd": 0.0019522,
+ "arayuz": "",
+ "hakem": [],
+ "iptal_edilen_test": [],
+ "kabul_gecti": true,
+ "ozet": "taksit.py içinde taksit_plani fonksiyonu yazıldı. Girdi tipleri ve değer aralıkları kontrol ediliyor, toplam geri ödeme anapara * (1 + vade_farki * n) formülüyle hesaplanıyor, aylık taksitler ROUND_HALF_UP ile iki basamağa yuvarlanıyor ve yuvarlama farkı son taksite eklenip/çıkarılıyor. Testler pytest ile çalıştırıldı ve 7 test geçti.",
+ "adim": 7,
+ "glimmer_token": {
+  "girdi": 20074,
+  "cikti": 36538
+ },
+ "sure_sn": 872.2,
+ "gizli": {
+  "gecti": true,
+  "gecen": 17,
+  "toplam": 17,
+  "cikti": ".................                                                        [100%]\n17 passed in 0.04s\n"
+ }
+}

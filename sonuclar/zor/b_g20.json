@@ -1,0 +1,20 @@
+{
+ "id": "g20",
+ "kip": "b",
+ "kategori": "küçük işletme hesapları (KDV, fatura, taksit, indirim, stok, kur dönüşümü, yuvarlama)",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "indirim.py dosyasında sira_indirim ve kupon_uygula fonksiyonları yazıldı. sira_indirim etiket fiyatına sırayla indirimleri uygular, ara yuvarlama yapmaz, sonuç ROUND_HALF_UP ile iki basamağa yuvarlanır; etiket ve indirim listesi için tip ve değer kontrolleri yapılır. kupon_uygula 8 karakterli (AA######) kupon formatını doğrular, sepet < 500 ise indirim uygulamaz, >=500 ise %10 indirim yapar ve sonuç iki basamaklı Decimal döner. test_indirim.py ile 9 test yazıldı ve tüm testler geçti.",
+ "adim": 7,
+ "glimmer_token": {
+  "girdi": 22483,
+  "cikti": 19570
+ },
+ "sure_sn": 464.6,
+ "gizli": {
+  "gecti": true,
+  "gecen": 18,
+  "toplam": 18,
+  "cikti": "..................                                                       [100%]\n18 passed in 0.02s\n"
+ }
+}

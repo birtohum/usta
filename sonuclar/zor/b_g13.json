@@ -1,0 +1,20 @@
+{
+ "id": "g13",
+ "kip": "b",
+ "kategori": "Türkçe metin işleme (Türkçe harfler, büyük/küçük harf, hece, ek, sıralama, sayı/yazı)",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "tutar_yazi.py içinde TutarYazici sınıfı oluşturuldu. tamsayiyi_yaziya_cevir 0-999999 arası tam sayıları Türkçe yazıya çeviriyor, sayiyi_yaziya_cevir 0-999999,99 arası tutarı kuruşa yuvarlayıp lira/kuruş olarak yazıyor. TypeError ve ValueError kontrolleri eklendi. test_tutar_yazi.py ile pytest testleri çalıştırıldı ve 4 test geçti.",
+ "adim": 6,
+ "glimmer_token": {
+  "girdi": 16180,
+  "cikti": 22036
+ },
+ "sure_sn": 525.3,
+ "gizli": {
+  "gecti": true,
+  "gecen": 16,
+  "toplam": 16,
+  "cikti": "................                                                         [100%]\n16 passed in 0.03s\n"
+ }
+}

@@ -1,0 +1,30 @@
+{
+ "id": "g15",
+ "kip": "c",
+ "kategori": "tarih ve saat (iş günü, resmî tatil listesi parametre olarak verilir, süre hesabı, biçim dönüşümü)",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 14,
+   "basarili": 14
+  }
+ ],
+ "spark_usd": 0.0015552,
+ "arayuz": "",
+ "hakem": [],
+ "iptal_edilen_test": [],
+ "kabul_gecti": true,
+ "ozet": "izin.py içinde YillikIzinTakvimi sınıfı oluşturuldu. __init__ tatilleri doğrular ve yinelenenleri tekilleştirir, ekle personel adını normalize eder, tarihleri YYYY-MM-DD olarak kontrol eder, hafta sonu ve tatilleri çıkararak iş günlerini sayar, yarım gün için tek iş günü kuralını uygular ve izin aralığını saklar. kalan fonksiyonu çakışan günleri bir kez sayarak yıllık hak üzerinden kalanı 0.5 adımlarıyla döndürür. test_izin.py ile 19 test geçti.",
+ "adim": 6,
+ "glimmer_token": {
+  "girdi": 19805,
+  "cikti": 13593
+ },
+ "sure_sn": 334.6,
+ "gizli": {
+  "gecti": true,
+  "gecen": 18,
+  "toplam": 18,
+  "cikti": "..................                                                       [100%]\n18 passed in 0.03s\n"
+ }
+}

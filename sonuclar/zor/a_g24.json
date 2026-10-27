@@ -1,0 +1,20 @@
+{
+ "id": "g24",
+ "kip": "a",
+ "kategori": "veri yapıları ve algoritmalar (kuyruk, önbellek, arama, gruplama, birleştirme, durum makinesi)",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "log_birlestir.py çok bayraklı komut satırı programı oluşturuldu. --girdi, --cikti, --bicim (jsonl/csv) ve isteğe bağlı --sirala bayraklarını destekler. Geçersiz zaman damgaları atlanır ve ATLANAN sayısı stderr'e yazılır. Sıralama kararlıdır (zaman, dosya adı alfabetik, satır numarası). CSV çıktısında standart kaçış uygulanır, çıktı dizini otomatik oluşturulur. Hata durumları için çıkış kodları 2 ve 3, başarılı çalışmada 0 döndürülür. Test dosyalarıyla jsonl ve csv çıktıları doğrulandı.",
+ "adim": 12,
+ "glimmer_token": {
+  "girdi": 32968,
+  "cikti": 7568
+ },
+ "sure_sn": 197.2,
+ "gizli": {
+  "gecti": false,
+  "gecen": 15,
+  "toplam": 17,
+  "cikti": " in r.stderr\nE           AssertionError: assert 'ATLANAN: 0' in ''\nE            +  where '' = CompletedProcess(args=['/usr/local/bin/python', '/work/log_birlestir.py', '--girdi', '/tmp/tmp1p6v93ps/a.log', '/tmp/tmp1p6v93ps/b.log', '--cikti', '/tmp/tmp1p6v93ps/out.jsonl', '--bicim', 'jsonl'], returncode=0, stdout='', stderr='').stderr\n\n.gizli/test_gizli.py:30: AssertionError\n______________________ test_atlanan_sifirsa_bile_yazilir _______________________\n\n    def test_atlanan_sifirsa_bile_yazilir():\n        import tempfile\n        with tempfile.TemporaryDirectory() as td:\n            td = pathlib.Path(td)\n            a = td / 'a.log'\n            yaz(a, ['2024-01-01T10:00:00 - iyi'])\n            out = td / 'out.jsonl'\n            r = run(['--girdi', str(a), '--cikti', str(out), '--bicim', 'jsonl'])\n            assert r.returncode == 0\n>           assert 'ATLANAN: 0' in r.stderr\nE           AssertionError: assert 'ATLANAN: 0' in ''\nE            +  where '' = CompletedProcess(args=['/usr/local/bin/python', '/work/log_birlestir.py', '--girdi', '/tmp/tmp6dq7kvas/a.log', '--cikti', '/tmp/tmp6dq7kvas/out.jsonl', '--bicim', 'jsonl'], returncode=0, stdout='', stderr='').stderr\n\n.gizli/test_gizli.py:112: AssertionError\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_jsonl_temel_sirasiz_dosya_sirasi - Assertio...\nFAILED .gizli/test_gizli.py::test_atlanan_sifirsa_bile_yazilir - AssertionErr...\n2 failed, 15 passed in 0.65s\n"
+ }
+}

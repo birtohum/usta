@@ -1,0 +1,20 @@
+{
+ "id": "g29",
+ "kip": "b",
+ "kategori": "doğrulama ve ayrıştırma (TC kimlik, IBAN, telefon, plaka, e-posta, adres biçimi)",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "vergi.py içinde VergiDogrulayici sınıfı oluşturuldu. __init__ sayaçları başlatıyor, dogrula_vkn 10 haneli ASCII rakam, ilk hane sıfır değil ve ağırlıklı toplam mod 10 doğrulaması yapıyor, dogrula_mersis 16 haneli ASCII rakam, ilk 10 hane geçerli VKN ve 11-16 hane 000001-999999 aralığında kontrol ediyor. Tip hatası TypeError fırlatıyor, biçim/algoritma hatası False döndürüyor ve her çağrıda sorgu sayacı artıyor, geçerli durumda gecerli sayacı artıyor. ozet dört sayacı aynı anahtarlarla döndürüyor. test_vergi.py ile 16 test geçti.",
+ "adim": 7,
+ "glimmer_token": {
+  "girdi": 20819,
+  "cikti": 9197
+ },
+ "sure_sn": 225.4,
+ "gizli": {
+  "gecti": false,
+  "gecen": 10,
+  "toplam": 17,
+  "cikti": "   v = VergiDogrulayici()\n        assert v.ozet() == {\"vkn_sorgu\": 0, \"mersis_sorgu\": 0, \"vkn_gecerli\": 0, \"mersis_gecerli\": 0}\n>       assert v.dogrula_vkn(\"1234567890\") is True\nE       AssertionError: assert False is True\nE        +  where False = dogrula_vkn('1234567890')\nE        +    where dogrula_vkn = <vergi.VergiDogrulayici object at 0x2b581fc50da0>.dogrula_vkn\n\n.gizli/test_gizli.py:103: AssertionError\n______________________ test_sayaclar_birbirini_etkilemez _______________________\n\n    def test_sayaclar_birbirini_etkilemez():\n        v = VergiDogrulayici()\n        v.dogrula_mersis(\"1234567890000001\")\n        v.dogrula_mersis(\"1234567890000000\")\n        o = v.ozet()\n        assert o[\"mersis_sorgu\"] == 2\n>       assert o[\"mersis_gecerli\"] == 1\nE       assert 0 == 1\n\n.gizli/test_gizli.py:115: AssertionError\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_vkn_gecerli_1 - AssertionError: assert Fals...\nFAILED .gizli/test_gizli.py::test_vkn_gecerli_2 - AssertionError: assert Fals...\nFAILED .gizli/test_gizli.py::test_vkn_gecerli_3 - AssertionError: assert Fals...\nFAILED .gizli/test_gizli.py::test_mersis_gecerli - AssertionError: assert Fal...\nFAILED .gizli/test_gizli.py::test_mersis_gecerli_farkli - AssertionError: ass...\nFAILED .gizli/test_gizli.py::test_ozet_baslangic_ve_sayaclar - AssertionError...\nFAILED .gizli/test_gizli.py::test_sayaclar_birbirini_etkilemez - assert 0 == 1\n7 failed, 10 passed in 0.04s\n"
+ }
+}

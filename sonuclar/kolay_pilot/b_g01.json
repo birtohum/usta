@@ -1,0 +1,20 @@
+{
+ "id": "g01",
+ "kip": "b",
+ "kategori": "Türkçe metin işleme (Türkçe harfler, büyük/küçük harf, hece, ek, sıralama, sayı/yazı)",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "slug.py içinde slug_yap fonksiyonu yazıldı. Türkçe karakterler ASCII'ye çevriliyor, küçük harfe indiriliyor, harf/rakam dışındaki diziler tek tireye indirgeniyor ve kenar tireler temizleniyor. Boş/işaret girdisi için boş string, str dışı için TypeError döndürüyor. test_slug.py ile 10 test yazıldı ve pytest ile tüm testler geçti.",
+ "adim": 5,
+ "glimmer_token": {
+  "girdi": 8226,
+  "cikti": 2836
+ },
+ "sure_sn": 72.4,
+ "gizli": {
+  "gecti": true,
+  "gecen": 10,
+  "toplam": 10,
+  "cikti": "..........                                                               [100%]\n10 passed in 0.01s\n"
+ }
+}
