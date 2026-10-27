@@ -69,8 +69,8 @@ Yalnızca JSON döndür: {{"cozum": {{"dosya.py": "..."}}, "testler": "..."}}"""
 
 def _kategori_gorevleri(k: str, n: int, zorluk: str, parti: int = 8) -> list:
     """Bir kategoride n görev; tekrarları önlemek için partiler hâlinde, önceki görevlerin başı istemde gösterilir."""
-    gorevler = []
-    while len(gorevler) < n:
+    gorevler, hata = [], 0
+    while len(gorevler) < n and hata < 3:
         istem = GOREV_ISTEMI.format(n=min(parti, n - len(gorevler)), kategori=k, zorluk=ZORLUK[zorluk])
         if gorevler:
             istem += "\n\nŞu görevler zaten var; bunlara benzemeyen, farklı ihtiyaçlar seç:\n" + "\n".join(
@@ -81,6 +81,7 @@ def _kategori_gorevleri(k: str, n: int, zorluk: str, parti: int = 8) -> list:
             yeni = _json_ayikla(m["content"])["gorevler"]
         except Exception as e:
             print("görev listesi okunamadı:", k[:30], e)
+            hata += 1
             continue
         if not yeni:
             break
