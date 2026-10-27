@@ -48,3 +48,22 @@ def test_gecersiz_arguman_gorevi_cokertmez():
         assert c.arac_calistir("Write", {"path": 5, "content": ""}).startswith("HATA")
         assert c.arac_calistir("Edit", {"path": "a.json", "old_string": "", "new_string": "y"}).startswith("HATA")
         assert c.arac_calistir("Bash", {"command": ["ls"]}).startswith("HATA")
+
+
+def test_geri_alma_yeni_dosyayi_siler_eskileri_geri_yazar():
+    from usta.surec import _geri_al, _goruntu
+    with YerelCalisma() as c:
+        c.arac_calistir("Write", {"path": "a.py", "content": "x = 1\n"})
+        goruntu = _goruntu(c)
+        c.arac_calistir("Write", {"path": "a.py", "content": "x = 2\n"})
+        c.arac_calistir("Write", {"path": "b.py", "content": ""})
+        _geri_al(c, goruntu)
+        assert c.dosyalar() == {"a.py": "x = 1\n"}
+
+
+def test_yerel_kabuk_calisma_klasorunde_ve_wsl_degil():
+    from usta.arac import _bash_bul
+    b = _bash_bul()
+    assert "system32" not in b.lower() and "windowsapps" not in b.lower()
+    with YerelCalisma() as c:
+        assert c.arac_calistir("Bash", {"command": "pwd"}).strip().endswith(c.kok.name)

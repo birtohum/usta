@@ -14,7 +14,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 from usta import spark  # noqa: E402
-from usta.arac import ModalCalisma  # noqa: E402
+from usta.arac import calisma_ac  # noqa: E402
 from usta.dogrulayici import _json_ayikla  # noqa: E402
 
 KOK = Path(__file__).resolve().parent.parent
@@ -86,7 +86,7 @@ def dogrula(kg) -> dict | None:
                          max_tokens=24000, reasoning_effort="medium")
         veri = _json_ayikla(m["content"])
         compile(veri["testler"], GIZLI_DOSYA, "exec")
-        with ModalCalisma(zaman_asimi=600) as c:
+        with calisma_ac() as c:
             for yol, icerik in veri["cozum"].items():
                 c._yaz(yol, icerik)
             c._yaz(GIZLI_DOSYA, veri["testler"])

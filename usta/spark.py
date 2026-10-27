@@ -80,6 +80,8 @@ def sohbet(messages: list, model: str = MODEL, max_tokens: int = 4096, temperatu
         r.raise_for_status()
         veri = r.json()
         mesaj = veri["choices"][0]["message"]
+        mesaj["tool_calls"] = mesaj.get("tool_calls") or []
+        mesaj["_finish"] = veri["choices"][0].get("finish_reason")
         usage = veri.get("usage") or {}
         mesaj["_usage"] = usage
         mesaj["_maliyet"] = _kaydet(model, usage)

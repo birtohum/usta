@@ -4,6 +4,7 @@
 """
 import asyncio
 import json
+import os
 import queue
 import threading
 import uuid
@@ -28,18 +29,20 @@ AKTIF = threading.BoundedSemaphore(AZAMI_ESZAMANLI)   # her görev bir Sandbox +
 class Gorev(BaseModel):
     gorev: str
     kip: str = "c"
+    yurutucu: str = os.environ.get("USTA_YURUTUCU", "spark")
 
 
-def _yurut(is_id: str, gorev: str, kip: str):
+def _yurut(is_id: str, gorev: str, kip: str, yurutucu: str):
     q = ISLER[is_id]
 
     def olay(tur, veri):
         q.put({"tur": tur, "veri": veri})
 
     try:
-        glimmer.hazir_bekle(bildir=lambda m: olay("asama", m))
-        with calisma_ac("modal") as c:
-            rapor = surec.gorevi_yap(gorev, c, kip=kip, olay=olay)
+        if yurutucu == "glimmer":
+            glimmer.hazir_bekle(bildir=lambda m: olay("asama", m))
+        with calisma_ac() as c:
+            rapor = surec.gorevi_yap(gorev, c, kip=kip, olay=olay, yurutucu=yurutucu)
             dosyalar = {k: v for k, v in c.dosyalar().items() if not k.startswith(".usta_kabul/")}
         kabul = rapor.pop("kabul", None) or {}
         rapor["kabul_testleri"] = kabul.get("testler")
@@ -61,6 +64,8 @@ def gorev_baslat(g: Gorev):
         raise HTTPException(400, "görev boş ya da çok uzun")
     if g.kip not in ("a", "b", "c"):
         raise HTTPException(400, "kip a, b ya da c olmalı")
+    if g.yurutucu not in ("spark", "glimmer"):
+        raise HTTPException(400, "yürütücü spark ya da glimmer olmalı")
     if not AKTIF.acquire(blocking=False):
         raise HTTPException(429, f"aynı anda en çok {AZAMI_ESZAMANLI} görev çalışabilir")
     is_id = uuid.uuid4().hex[:10]
@@ -68,7 +73,7 @@ def gorev_baslat(g: Gorev):
 
     def calis():
         try:
-            _yurut(is_id, g.gorev.strip(), g.kip)
+            _yurut(is_id, g.gorev.strip(), g.kip, g.yurutucu)
         finally:
             AKTIF.release()
 

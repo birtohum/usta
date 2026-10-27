@@ -1,9 +1,10 @@
 """Ajanın araçları ve bunları yalıtılmış bir çalışma alanında yürüten çalıştırıcılar.
 
 İki arka uç:
-  ModalCalisma  — her görev için ayrı bir Modal Sandbox (ağ tamamen kapalı, /work klasörü). Varsayılan.
-  YerelCalisma  — yerel geçici klasör + alt süreç. Yalnızca geliştirme/test içindir; işletim sistemi düzeyinde
-                  yalıtım YOKTUR, yalnızca aşağıdaki yol ve komut denetimleri uygulanır.
+  ModalCalisma  — her görev için ayrı bir Modal Sandbox (ağ tamamen kapalı, /work klasörü).
+  YerelCalisma  — yerel geçici klasör + alt süreç. İşletim sistemi düzeyinde yalıtım ve AĞ KISITLAMASI YOKTUR; yalnızca
+                  aşağıdaki yol/komut denetimleri, en küçük ortam değişkenleri ve zaman aşımı uygulanır.
+Varsayılan USTA_CALISMA ortam değişkeninden gelir ("yerel" ya da "modal"; verilmezse "yerel").
 
 Her iki arka uçta da: klasör dışına çıkan yollar reddedilir, ağ/yetki/yıkıcı komut kalıpları reddedilir,
 komutlar zaman aşımıyla kesilir ve çıktı kırpılır.
@@ -13,6 +14,7 @@ import os
 import posixpath
 import re
 import shutil
+import sys
 import subprocess
 import tempfile
 from pathlib import Path
@@ -173,9 +175,32 @@ class Calisma:
         self.kapat()
 
 
+def _bash_bul() -> str:
+    """Komutları çalıştıracak bash. Windows'ta yalnızca Git Bash kabul edilir: PATH'teki `bash` çoğu zaman WSL'dir
+    (System32 / WindowsApps) ve WSL komutları çalışma klasöründe değil Linux ev dizininde çalıştırır."""
+    if os.name != "nt":
+        return shutil.which("bash") or "/bin/bash"
+    adaylar = [os.environ.get("USTA_BASH", "")]
+    git = shutil.which("git")
+    if git:
+        kok = Path(git).resolve().parent.parent
+        adaylar += [str(kok / "bin" / "bash.exe"), str(kok / "usr" / "bin" / "bash.exe")]
+    adaylar += [r"C:\Program Files\Git\bin\bash.exe", r"C:\Program Files\Git\usr\bin\bash.exe", shutil.which("bash") or ""]
+    for a in adaylar:
+        if a and Path(a).is_file() and not re.search(r"system32|windowsapps", a, re.I):
+            return a
+    raise RuntimeError("Git Bash bulunamadı (WSL bash kullanılmaz); USTA_BASH ile yolunu verin")
+
+
 class YerelCalisma(Calisma):
     def __init__(self):
         self.kok = Path(tempfile.mkdtemp(prefix="usta_"))
+        self.bash = _bash_bul()
+        # Güvenlik: kabuk gerçekten bu klasörde mi çalışıyor? Değilse hiçbir komut çalıştırılmaz.
+        kod, cikti = self._calistir("pwd", 30)
+        if kod != 0 or not cikti.strip().endswith(self.kok.name):
+            shutil.rmtree(self.kok, ignore_errors=True)
+            raise RuntimeError(f"kabuk çalışma klasöründe açılmadı ({self.bash}: {cikti.strip()[:200]})")
 
     def _tam(self, yol: str) -> Path:
         p = (self.kok / yol).resolve()
@@ -197,12 +222,21 @@ class YerelCalisma(Calisma):
         env = {k: v for k, v in os.environ.items() if k.upper() in tut}
         tmp = self.kok / ".tmp"
         tmp.mkdir(exist_ok=True)
+        # `python` ve `python3`, pytest'in kurulu olduğu bu yorumlayıcıyı göstersin (Windows'ta python3 mağaza kısayoludur).
+        bin_ = tmp / "bin"
+        bin_.mkdir(exist_ok=True)
+        py = Path(sys.executable).as_posix()
+        for ad in ("python", "python3"):
+            (bin_ / ad).write_text(f'#!/bin/sh\nexec "{py}" "$@"\n', encoding="utf-8", newline="\n")
+        yol = env.get("PATH") or env.get("Path") or ""
+        env = {k: v for k, v in env.items() if k.upper() != "PATH"}
+        env["PATH"] = os.pathsep.join([str(bin_), str(Path(sys.executable).parent), yol])
         env.update(HOME=str(self.kok), USERPROFILE=str(self.kok), TMP=str(tmp), TEMP=str(tmp), TMPDIR=str(tmp),
-                   PYTHONIOENCODING="utf-8", PYTHONDONTWRITEBYTECODE="1")
+                   PYTHONIOENCODING="utf-8", PYTHONUTF8="1", PYTHONDONTWRITEBYTECODE="1")
         return env
 
     def _calistir(self, komut, sure):
-        bash = shutil.which("bash") or "bash"
+        bash = self.bash
         # Çıktı boru yerine dosyaya: arka plandaki alt süreçler boruyu açık tutup bizi bekletemez.
         with tempfile.TemporaryFile() as cikti:
             p = subprocess.Popen([bash, "-c", komut], cwd=self.kok, stdin=subprocess.DEVNULL, stdout=cikti,
@@ -220,6 +254,9 @@ class YerelCalisma(Calisma):
         return sorted(str(p.relative_to(self.kok)).replace("\\", "/") for p in self.kok.rglob("*")
                       if p.is_file() and not p.is_symlink() and p.stat().st_size < 200_000
                       and not {"__pycache__", ".pytest_cache", ".tmp"} & set(p.relative_to(self.kok).parts))
+
+    def _sil(self, yol):
+        self._tam(yol).unlink(missing_ok=True)
 
     def kapat(self):
         shutil.rmtree(self.kok, ignore_errors=True)
@@ -259,6 +296,9 @@ class ModalCalisma(Calisma):
             cikti += f"\nzaman aşımı: {sure} sn"
         return kod, cikti
 
+    def _sil(self, yol):
+        self.sb.filesystem.remove(f"/work/{yol}")
+
     def _listele(self):
         p = self.sb.exec("bash", "-c", "find . -type f -not -path '*/__pycache__/*' -not -path '*/.pytest_cache/*' "
                          "-size -200k | sed 's|^./||' | sort", workdir="/work")
@@ -291,5 +331,6 @@ def _tirnak(s: str) -> str:
     return "'" + s.replace("'", "'\"'\"'") + "'"
 
 
-def calisma_ac(tur: str = "modal") -> Calisma:
+def calisma_ac(tur: str | None = None) -> Calisma:
+    tur = tur or os.environ.get("USTA_CALISMA", "yerel")
     return ModalCalisma() if tur == "modal" else YerelCalisma()

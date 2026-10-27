@@ -9,7 +9,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 from usta import glimmer, spark, surec  # noqa: E402
-from usta.arac import ModalCalisma  # noqa: E402
+from usta.arac import calisma_ac  # noqa: E402
 
 GOREVLER = [
     "tckn.py içinde gecerli_tckn(no: str) -> bool yaz: 11 haneli T.C. kimlik numarasının resmî algoritmaya "
@@ -27,7 +27,7 @@ GOREVLER = [
 
 
 def tek(gorev: str) -> dict:
-    with ModalCalisma() as c:
+    with calisma_ac() as c:
         try:
             r = surec.gorevi_yap(gorev, c, kip="c")
             r["dosyalar"] = list(c.dosyalar())
