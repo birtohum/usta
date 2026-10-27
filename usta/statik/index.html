@@ -47,7 +47,8 @@ details summary{cursor:pointer;color:var(--soluk);font-size:13px}
 <body>
 <header>
   <h1>Usta</h1>
-  <p>Türkçe görev ver; Usta yazar, bağımsız testlerle doğrulatır, kalan testleri düzeltir ve sonucu kanıtıyla gösterir.</p>
+  <p>Türkçe görev ver; Usta yazar, bağımsız testlerle doğrulatır, kalan testleri düzeltir ve sonucu kanıtıyla gösterir.
+  <br><span class="soluk">Kod bu bilgisayarda geçici bir klasörde çalışır (yerel kip: ağ kısıtlaması yok).</span></p>
 </header>
 <main>
   <section>
@@ -61,6 +62,10 @@ details summary{cursor:pointer;color:var(--soluk);font-size:13px}
           <option value="c">Usta (bağımsız testler + düzeltme)</option>
           <option value="b">Yalnızca kendi testleri</option>
           <option value="a">Tek başına</option>
+        </select>
+        <select id="yurutucu" title="Kodu yazan model">
+          <option value="spark">Yürütücü: Muse Spark</option>
+          <option value="glimmer">Yürütücü: Muse Glimmer (Modal GPU)</option>
         </select>
         <span id="durum" class="soluk"></span>
       </div>
@@ -96,9 +101,9 @@ const $ = id => document.getElementById(id);
 const ORNEKLER = [
   "fatura.py içinde kdv_ekle(tutar: float, oran: int) -> float yaz: oran 1, 10 ya da 20 olmalı, değilse ValueError; sonuç 2 ondalığa yuvarlansın.",
   "yazi.py içinde sayiyi_yaziya(n: int) -> str yaz: 0-999999 arası sayıyı Türkçe yazıya çevirsin (1234 -> 'bin iki yüz otuz dört').",
-  "sirala.py içinde turkce_sirala(kelimeler: list[str]) -> list[str] yaz: Türk alfabesine göre, büyük/küçük harf duyarsız sıralasın.",
+  "sirala.py içinde turkce_sirala(kelimeler: list[str]) -> list[str] yaz: Türk alfabesine göre, büyük/küçük harf duyarsız sıralasın.",  "Bursa'daki bir tedarikçi firması için `vade.py` adlı çok bayraklı komut satırı programını `python vade.py --fatura-tarihi YYYY-MM-DD --vade-gun N --tatiller T1,T2 --hafta-sonu-oteleme ileri --cikti-formati YYYY-MM-DD` çağrı biçiminde yazın. Tüm bayraklar zorunludur, vade-gun 0 ile 365 arasında tam sayı olmalı yoksa program stderr çıktısı verip çıkış kodu 2 ile sonlanmalıdır. Tatiller bayrağı virgülle ayrılmış YYYY-MM-DD listesi veya boş dizge olabilir, boş ise tatil yok sayılır ve sırasız veya yinelenen listeler kabul edilirken biçimi bozuk her tarih için stderr çıktısı verip çıkış kodu 2 ile sonlanılmalıdır. Hafta-sonu-oteleme yalnızca küçük harfle ileri veya geri değerini alır, 'İleri' gibi yazımlar geçersizdir ve hesaplanan vade tarihi hafta sonu veya tatile denk gelirse seçilen yöne doğru en yakın iş gününe taşınır. Taşıma sonrası yeni tarihin de tatil olduğu zincir durumlar tamamen çözülür ve ondalıklı vade-gun değeri yuvarlanmadan geçersiz sayılarak çıkış kodu 2 ile sonlanılır. Cikti-formati yalnızca YYYY-MM-DD veya DD-MM-YYYY değerlerini alır, sonuç stdout üzerine yalnızca tek satır olarak sondaki yeni satır dışında ek boşluk olmadan yazılır ve başka hiçbir stdout çıktısı üretilmez. Fatura-tarihi geçersiz takvim günü içeriyorsa stderr çıktısı verip çıkış kodu 2 ile sonlanılır ve vade-gun sıfırsa fatura tarihi iş günü değilse bile oteleme kuralı aynen uygulanır.",
 ];
-ORNEKLER.forEach(o => { const b = document.createElement("button"); b.textContent = o.split(" içinde")[0]; b.title = o;
+ORNEKLER.forEach(o => { const b = document.createElement("button"); b.textContent = (o.match(/`?([a-z_]+\.py)`?/) || [o.slice(0, 20)])[1] || o.slice(0, 20); b.title = o;
   b.onclick = () => $("gorev").value = o; $("ornekler").appendChild(b); });
 
 function kirp(s, n = 1200) { s = String(s ?? ""); return s.length > n ? s.slice(0, n) + " …" : s; }
@@ -133,7 +138,7 @@ $("baslat").onclick = async () => {
   $("sozlesme").textContent = ""; $("kabulTest").textContent = "";
   $("rozetler").innerHTML = ""; $("adimlar").dataset.bos = "1"; $("adimlar").innerHTML = "";
   const r = await fetch("/api/gorev", {method: "POST", headers: {"Content-Type": "application/json"},
-    body: JSON.stringify({gorev, kip: $("kip").value})});
+    body: JSON.stringify({gorev, kip: $("kip").value, yurutucu: $("yurutucu").value})});
   if (!r.ok) { $("durum").textContent = "hata: " + (await r.text()); $("baslat").disabled = false; return; }
   const {id} = await r.json(); const bas = Date.now();
   olayKaynagi = new EventSource("/api/olaylar/" + id);
@@ -154,7 +159,7 @@ function isle(o) {
   else if (o.tur === "hakem") { const ad = {gerekli: "görev açıkça istiyor → düzeltilecek", belirsiz: "belirsiz → dayatılmadı",
       hatali: "test hatalı → iptal"};
     v.forEach(k => ekle({ad: "HAKEM", cls: "test"}, `${k.test}: ${ad[k.karar] || k.karar}`, k.gerekce)); }
-  else if (o.tur === "dusunce") ekle({ad: "GLIMMER", cls: ""}, kirp(v, 400));
+  else if (o.tur === "dusunce") ekle({ad: "AJAN", cls: ""}, kirp(v, 400));
   else if (o.tur === "arac") { const [m, k] = aracMetni(v); ekle({ad: v.ad.toUpperCase(), cls: ""}, m, k); }
   else if (o.tur === "sonuc") { if (v.ad === "Bash" || String(v.cikti).startsWith("HATA"))
     ekle({ad: "ÇIKTI", cls: ""}, ozetSatir(v.cikti), kirp(v.cikti, 3000)); }
@@ -173,7 +178,9 @@ function rapor(r) {
     : son?.gecti ? `Bağımsız testlerin hepsi geçti (${r.turlar.length}. turda)` : `Testler tam geçmedi: ${son?.basarili}/${son?.toplam}`;
   $("ozet").textContent = r.ozet || "";
   const iptal = (r.iptal_edilen_test || []).length;
-  $("olcum").textContent = `${r.adim} Glimmer adımı · ${r.sure_sn} sn · Spark ${r.spark_usd.toFixed(4)} $` +
+  const usd = r.spark_usd + (r.yurutucu_usd || 0);
+  $("olcum").textContent = `${r.adim} ajan adımı · ${r.sure_sn} sn · Meta API ${usd.toFixed(4)} $` +
+    (r.geri_alma ? ` · ${r.geri_alma} düzeltme turu gerileme yüzünden geri alındı` : "") +
     (iptal ? ` · ${iptal} hatalı test referans çözüme göre iptal edildi` : "");
   if (r.kabul_testleri) $("kabulTest").textContent = r.kabul_testleri;
   const dosyalar = r.dosyalar || {}; const adlar = Object.keys(dosyalar);

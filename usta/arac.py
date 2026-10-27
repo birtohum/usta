@@ -175,9 +175,32 @@ class Calisma:
         self.kapat()
 
 
+def _bash_bul() -> str:
+    """Komutları çalıştıracak bash. Windows'ta yalnızca Git Bash kabul edilir: PATH'teki `bash` çoğu zaman WSL'dir
+    (System32 / WindowsApps) ve WSL komutları çalışma klasöründe değil Linux ev dizininde çalıştırır."""
+    if os.name != "nt":
+        return shutil.which("bash") or "/bin/bash"
+    adaylar = [os.environ.get("USTA_BASH", "")]
+    git = shutil.which("git")
+    if git:
+        kok = Path(git).resolve().parent.parent
+        adaylar += [str(kok / "bin" / "bash.exe"), str(kok / "usr" / "bin" / "bash.exe")]
+    adaylar += [r"C:\Program Files\Git\bin\bash.exe", r"C:\Program Files\Git\usr\bin\bash.exe", shutil.which("bash") or ""]
+    for a in adaylar:
+        if a and Path(a).is_file() and not re.search(r"system32|windowsapps", a, re.I):
+            return a
+    raise RuntimeError("Git Bash bulunamadı (WSL bash kullanılmaz); USTA_BASH ile yolunu verin")
+
+
 class YerelCalisma(Calisma):
     def __init__(self):
         self.kok = Path(tempfile.mkdtemp(prefix="usta_"))
+        self.bash = _bash_bul()
+        # Güvenlik: kabuk gerçekten bu klasörde mi çalışıyor? Değilse hiçbir komut çalıştırılmaz.
+        kod, cikti = self._calistir("pwd", 30)
+        if kod != 0 or not cikti.strip().endswith(self.kok.name):
+            shutil.rmtree(self.kok, ignore_errors=True)
+            raise RuntimeError(f"kabuk çalışma klasöründe açılmadı ({self.bash}: {cikti.strip()[:200]})")
 
     def _tam(self, yol: str) -> Path:
         p = (self.kok / yol).resolve()
@@ -213,7 +236,7 @@ class YerelCalisma(Calisma):
         return env
 
     def _calistir(self, komut, sure):
-        bash = shutil.which("bash") or "bash"
+        bash = self.bash
         # Çıktı boru yerine dosyaya: arka plandaki alt süreçler boruyu açık tutup bizi bekletemez.
         with tempfile.TemporaryFile() as cikti:
             p = subprocess.Popen([bash, "-c", komut], cwd=self.kok, stdin=subprocess.DEVNULL, stdout=cikti,

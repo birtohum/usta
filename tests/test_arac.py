@@ -59,3 +59,11 @@ def test_geri_alma_yeni_dosyayi_siler_eskileri_geri_yazar():
         c.arac_calistir("Write", {"path": "b.py", "content": ""})
         _geri_al(c, goruntu)
         assert c.dosyalar() == {"a.py": "x = 1\n"}
+
+
+def test_yerel_kabuk_calisma_klasorunde_ve_wsl_degil():
+    from usta.arac import _bash_bul
+    b = _bash_bul()
+    assert "system32" not in b.lower() and "windowsapps" not in b.lower()
+    with YerelCalisma() as c:
+        assert c.arac_calistir("Bash", {"command": "pwd"}).strip().endswith(c.kok.name)
