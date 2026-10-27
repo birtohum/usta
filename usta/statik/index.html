@@ -80,7 +80,7 @@ details summary{cursor:pointer;color:var(--soluk);font-size:13px}
       <div class="soluk" id="olcum"></div>
     </div>
     <div class="kart" id="sozlesmeKart" style="margin-top:16px">
-      <h2>Arayüz sözleşmesi (Muse Spark)</h2>
+      <h2>Adlandırma sözleşmesi ve bağımsız testler (Muse Spark)</h2>
       <pre id="sozlesme"></pre>
       <details style="margin-top:8px"><summary>Bağımsız kabul testleri</summary><pre id="kabulTest"></pre></details>
     </div>
@@ -130,6 +130,7 @@ $("baslat").onclick = async () => {
   const gorev = $("gorev").value.trim(); if (!gorev) return;
   $("baslat").disabled = true; $("durum").textContent = "başlıyor…";
   ["sonuc", "sozlesmeKart", "dosyaKart"].forEach(i => $(i).style.display = "none");
+  $("sozlesme").textContent = ""; $("kabulTest").textContent = "";
   $("rozetler").innerHTML = ""; $("adimlar").dataset.bos = "1"; $("adimlar").innerHTML = "";
   const r = await fetch("/api/gorev", {method: "POST", headers: {"Content-Type": "application/json"},
     body: JSON.stringify({gorev, kip: $("kip").value})});
@@ -146,9 +147,13 @@ function isle(o) {
   if (o.tur === "asama") { ekle({ad: "AŞAMA", cls: "asama"}, v); $("durum").textContent = v; }
   else if (o.tur === "sozlesme") { $("sozlesme").textContent = v; $("sozlesmeKart").style.display = "block";
     ekle({ad: "SÖZLEŞME", cls: "asama"}, "Spark arayüz sözleşmesini yazdı", v); }
-  else if (o.tur === "kabul") { $("kabulTest").textContent = v.testler;
+  else if (o.tur === "kabul") { $("kabulTest").textContent = v.testler; $("sozlesmeKart").style.display = "block";
+    if (!$("sozlesme").textContent) $("sozlesme").textContent = "Görev dosya ve fonksiyon adlarını zaten belirtiyor; ek sözleşme gerekmedi.";
     ekle({ad: "SPARK", cls: "asama"}, `Bağımsız kabul testleri hazır` +
       (v.iptal.length ? ` (${v.iptal.length} test, Spark'ın kendi referans çözümünü de geçemediği için iptal edildi)` : ""), v.testler); }
+  else if (o.tur === "hakem") { const ad = {gerekli: "görev açıkça istiyor → düzeltilecek", belirsiz: "belirsiz → dayatılmadı",
+      hatali: "test hatalı → iptal"};
+    v.forEach(k => ekle({ad: "HAKEM", cls: "test"}, `${k.test}: ${ad[k.karar] || k.karar}`, k.gerekce)); }
   else if (o.tur === "dusunce") ekle({ad: "GLIMMER", cls: ""}, kirp(v, 400));
   else if (o.tur === "arac") { const [m, k] = aracMetni(v); ekle({ad: v.ad.toUpperCase(), cls: ""}, m, k); }
   else if (o.tur === "sonuc") { if (v.ad === "Bash" || String(v.cikti).startsWith("HATA"))

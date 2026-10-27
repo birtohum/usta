@@ -38,3 +38,13 @@ def test_yerel_arac_akisi():
         assert c.arac_calistir("Write", {"path": "../kacis.py", "content": ""}).startswith("HATA")
         assert c.arac_calistir("Edit", {"path": "p/a.py", "old_string": "yok", "new_string": "x"}).startswith("HATA")
         assert list(c.dosyalar()) == ["p/a.py"]
+
+
+def test_gecersiz_arguman_gorevi_cokertmez():
+    with YerelCalisma() as c:
+        assert "yazıldı" in c.arac_calistir("Write", {"path": "a.json", "content": {"x": 1}})
+        assert '"x": 1' in c.arac_calistir("Read", {"path": "a.json"})
+        assert c.arac_calistir("Write", {"path": "b.py", "content": 5}).startswith("HATA")
+        assert c.arac_calistir("Write", {"path": 5, "content": ""}).startswith("HATA")
+        assert c.arac_calistir("Edit", {"path": "a.json", "old_string": "", "new_string": "y"}).startswith("HATA")
+        assert c.arac_calistir("Bash", {"command": ["ls"]}).startswith("HATA")

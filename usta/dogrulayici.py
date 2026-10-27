@@ -11,11 +11,15 @@ from usta.arac import guvenli_yol
 
 KABUL_DOSYASI = ".usta_kabul/test_kabul.py"
 
-SOZLESME_ISTEMI = """Aşağıdaki Türkçe yazılım görevi bir kodlama ajanına verilecek. Sen işi dışarıdan doğrulayacaksın;
-önce ajanın uyması gereken kısa bir arayüz sözleşmesi yaz (Türkçe karakterlerle düzgün Türkçe): dosya adları,
-fonksiyon/sınıf adları ve imzaları, dönüş türleri, hata durumlarında ne olacağı. Görev bunları zaten belirtiyorsa aynen
-koru; belirtmiyorsa makul ve basit seçimler yap. Görevde olmayan yeni gereksinim ekleme. Python 3.12 standart
-kütüphanesi dışında bağımlılık yok.
+SOZLESME_ISTEMI = """Aşağıdaki Türkçe yazılım görevi bir kodlama ajanına verilecek; işi sonra dışarıdan testle doğrulayacağız.
+Testlerin ajanın koduna bağlanabilmesi için ADLANDIRMA sözleşmesi gerekiyor: dosya adları, fonksiyon/sınıf/metot adları
+ve imzaları (komut satırı programıysa çağrı biçimi).
+
+Kurallar:
+- Görev bunların hepsini zaten açıkça belirtiyorsa sözleşme gereksizdir: {{"arayuz": ""}} döndür.
+- Eksik olanları en basit, en olağan biçimde seç. Davranış kuralı, hata türü, biçim ya da uç durum EKLEME ve görevdeki
+  davranışı yeniden yazma; davranışı yalnızca görev metni belirler.
+- Türkçe karakterlerle kısa yaz.
 
 GÖREV:
 {gorev}
@@ -27,16 +31,18 @@ TEST_ISTEMI = """Bir kodlama ajanı aşağıdaki görevi yapıyor. Ajanın kodun
 GÖREV:
 {gorev}
 
-ARAYÜZ SÖZLEŞMESİ (ajan buna uyacak):
+ADLANDIRMA SÖZLEŞMESİ (ajan buna uyacak; boşsa görevdeki adlar geçerlidir):
 {arayuz}
 
 İki şey üret:
 1. "testler": pytest kabul testleri (tek dosya). Kurallar:
    - Dosya çalışma klasörünün alt klasöründe (.usta_kabul/) duracak; en başta şunu koy:
      import sys, pathlib; sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent.parent))
-   - Yalnızca görevin açıkça istediği ya da sözleşmede yazan davranışı test et; belirsiz ayrıntıyı test etme.
-   - Normal durumlar + görevde geçen uç durumlar; 5-12 test. Her test kısa ve tek şeyi denesin.
-   - Komut satırı programıysa subprocess ile sys.executable kullanarak çalıştır, cwd çalışma klasörü olsun.
+   - Yalnızca GÖREV metninde açıkça yazan davranışı test et. Sözleşme yalnızca adlar içindir; metinde olmayan bir
+     ayrıntıyı (hata mesajı metni, belirtilmemiş biçim, varsayılan değer, dönüş türünün iç yapısı) test etme.
+   - Normal durumlar + görevde geçen uç durumlar; 6-14 test. Her test kısa ve tek şeyi denesin.
+   - Komut satırı programıysa subprocess ile sys.executable kullanarak çalıştır, cwd çalışma klasörü olsun; gereken
+     girdi dosyalarını tmp_path'e oluştur.
    - Ağ, rastgelelik, zaman ya da dosya sistemi dışına bağımlılık yok.
 2. "cozum": Sözleşmeye uyan referans çözüm, dosya adı -> içerik sözlüğü. Ajana gösterilmez; yalnızca testlerindeki
    hatalı beklentileri (ör. yanlış hesaplanmış örnek değer) ayıklamak için testlerin kendisine karşı çalıştırılır.
@@ -62,7 +68,7 @@ def sozlesme_yaz(gorev: str, deneme: int = 3) -> dict:
                          max_tokens=8000, reasoning_effort="low")
         maliyet += m["_maliyet"]
         try:
-            return {"arayuz": _json_ayikla(m.get("content"))["arayuz"].strip(), "maliyet": maliyet}
+            return {"arayuz": (_json_ayikla(m.get("content"))["arayuz"] or "").strip(), "maliyet": maliyet}
         except (ValueError, KeyError, AttributeError, json.JSONDecodeError):
             continue
     raise RuntimeError("Spark arayüz sözleşmesi üretemedi")
@@ -119,3 +125,57 @@ def kabul_testlerini_calistir(calisma, testler: str, iptal: list | None = None) 
     kalan = sum(int(x) for x in re.findall(r"(\d+) (?:failed|error)", cikti))
     toplam = gecen + kalan
     return {"gecti": toplam > 0 and kalan == 0, "toplam": toplam, "basarili": gecen, "cikti": cikti}
+
+
+HAKEM_ISTEMI = """Bir kodlama ajanının işi bağımsız kabul testleriyle denetlendi ve bazı testler kaldı. Kalan testler ajana
+"düzelt" diye geri verilecek. Ama testi yazan model görev metnini yanlış ya da tek taraflı yorumlamış olabilir; o zaman
+ajanı doğru kodu bozmaya zorlarız. Senin işin hakemlik: her kalan test için görev metnine bak ve karar ver.
+
+GÖREV:
+{gorev}
+
+KALAN TESTLERİN KODU:
+{test_kodu}
+
+TEST ÇIKTISI:
+{cikti}
+
+Her kalan test için karar:
+- "gerekli": görev metni bu beklentiyi AÇIKÇA ve tek anlamlı olarak istiyor; ajanın kodu yanlış.
+- "belirsiz": görev metni bu ayrıntıyı belirtmiyor ya da birden çok makul okuması var.
+- "hatali": testin beklentisi görev metniyle çelişiyor ya da test kendi içinde yanlış.
+Emin değilsen "belirsiz" de. Gerekçe tek kısa Türkçe cümle olsun.
+
+Yalnızca JSON döndür: {{"kararlar": [{{"test": "test_adi", "karar": "gerekli|belirsiz|hatali", "gerekce": "..."}}]}}"""
+
+
+def kalan_testler(cikti: str) -> list:
+    return sorted(set(re.findall(r"(?:FAILED|ERROR) \S*::(\w+)", cikti)))
+
+
+def _test_kaynagi(testler: str, adlar: list) -> str:
+    """Kalan test fonksiyonlarının kaynağını (ve yardımcıların tamamını görmek için dosyanın başını) çıkarır."""
+    parcalar = [testler.split("\ndef test_", 1)[0][:2500]]
+    for ad in adlar:
+        m = re.search(rf"^def {ad}\(.*?(?=^def |^class |\Z)", testler, re.S | re.M)
+        if m:
+            parcalar.append(m.group(0).strip())
+    return "\n\n".join(parcalar)
+
+
+def hakem(gorev: str, testler: str, cikti: str) -> dict:
+    """Kalan testleri görev metnine göre sınıflandırır. {'kararlar': [...], 'maliyet'} döndürür.
+    Ayrıştırılamazsa her test 'gerekli' sayılır (doğrulamayı gevşetmemek için)."""
+    adlar = kalan_testler(cikti)
+    if not adlar:
+        return {"kararlar": [], "maliyet": 0.0}
+    m = spark.sohbet([{"role": "user", "content": HAKEM_ISTEMI.format(
+        gorev=gorev, test_kodu=_test_kaynagi(testler, adlar), cikti=cikti[-4000:])}],
+        max_tokens=12000, reasoning_effort="medium")
+    try:
+        kararlar = {k["test"]: k for k in _json_ayikla(m.get("content"))["kararlar"]
+                    if k.get("karar") in ("gerekli", "belirsiz", "hatali")}
+    except (ValueError, KeyError, TypeError, json.JSONDecodeError):
+        kararlar = {}
+    sonuc = [kararlar.get(ad, {"test": ad, "karar": "gerekli", "gerekce": "hakem kararı okunamadı"}) for ad in adlar]
+    return {"kararlar": sonuc, "maliyet": m["_maliyet"]}

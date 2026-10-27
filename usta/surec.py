@@ -30,7 +30,7 @@ Bir test görev metniyle açıkça çelişiyorsa görev metnine uy ve bunu Done 
 
 
 def gorevi_yap(gorev: str, calisma, kip: str = "c", azami_tur: int = 3, azami_adim: int = 20,
-               olay=lambda tur, veri: None, kabul: dict | None = None) -> dict:
+               olay=lambda tur, veri: None, kabul: dict | None = None, hakem: bool = True) -> dict:
     """Görevi seçilen kipte yürütür. kabul verilirse (önceden üretilmiş sözleşme+testler) Spark yeniden çağrılmaz."""
     bas = time.time()
     rapor = {"kip": kip, "turlar": [], "spark_usd": 0.0}
@@ -48,8 +48,9 @@ def gorevi_yap(gorev: str, calisma, kip: str = "c", azami_tur: int = 3, azami_ad
         else:
             arayuz = kabul["arayuz"]
         rapor["arayuz"] = arayuz
-        olay("sozlesme", arayuz)
-        gorev_metni = f"{gorev}\n\nArayüz sözleşmesi (buna uy):\n{arayuz}"
+        if arayuz:
+            olay("sozlesme", arayuz)
+            gorev_metni = f"{gorev}\n\nAdlandırma sözleşmesi (dosya/fonksiyon adları ve imzalar için buna uy):\n{arayuz}"
 
     sistem = {"a": SISTEM_A, "b": SISTEM_B, "c": SISTEM_B}[kip]
     olay("asama", "Glimmer görevi yürütüyor")
@@ -68,11 +69,23 @@ def gorevi_yap(gorev: str, calisma, kip: str = "c", azami_tur: int = 3, azami_ad
                               "glimmer_token": token, "sure_sn": round(time.time() - bas, 1), "kabul": None})
                 return rapor
             rapor["spark_usd"] += kabul["maliyet"]
-        rapor["iptal_edilen_test"] = kabul.get("iptal", [])
         olay("kabul", {"testler": kabul["testler"], "iptal": kabul["iptal"]})
+        iptal = list(kabul.get("iptal", []))
+        rapor["hakem"] = []
         for tur in range(1, azami_tur + 1):
             olay("asama", f"Kabul testleri çalışıyor (tur {tur})")
-            sonuc = dogrulayici.kabul_testlerini_calistir(calisma, kabul["testler"], kabul.get("iptal"))
+            sonuc = dogrulayici.kabul_testlerini_calistir(calisma, kabul["testler"], iptal)
+            if not sonuc["gecti"] and hakem:
+                # Hakem: kalan testlerden yalnızca görev metninin açıkça istediği beklentiler Glimmer'a geri gider.
+                olay("asama", "Spark hakem kalan testleri görev metnine göre inceliyor")
+                h = dogrulayici.hakem(gorev, kabul["testler"], sonuc["cikti"])
+                rapor["spark_usd"] += h["maliyet"]
+                rapor["hakem"] += [{**k, "tur": tur} for k in h["kararlar"]]
+                olay("hakem", h["kararlar"])
+                dusen = [k["test"] for k in h["kararlar"] if k["karar"] != "gerekli"]
+                if dusen:
+                    iptal += dusen
+                    sonuc = dogrulayici.kabul_testlerini_calistir(calisma, kabul["testler"], iptal)
             rapor["turlar"].append({k: sonuc[k] for k in ("gecti", "toplam", "basarili")})
             olay("test", {"tur": tur, **sonuc})
             if sonuc["gecti"] or tur == azami_tur:
@@ -85,6 +98,7 @@ def gorevi_yap(gorev: str, calisma, kip: str = "c", azami_tur: int = 3, azami_ad
             toplam_adim += s["adim"]
             token["girdi"] += s["token"]["girdi"]
             token["cikti"] += s["token"]["cikti"]
+        rapor["iptal_edilen_test"] = iptal
         rapor["kabul_gecti"] = rapor["turlar"][-1]["gecti"]
 
     rapor.update({"ozet": s["ozet"], "adim": toplam_adim, "glimmer_token": token, "sure_sn": round(time.time() - bas, 1),

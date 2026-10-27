@@ -8,6 +8,7 @@
 Her iki arka uçta da: klasör dışına çıkan yollar reddedilir, ağ/yetki/yıkıcı komut kalıpları reddedilir,
 komutlar zaman aşımıyla kesilir ve çıktı kırpılır.
 """
+import json
 import posixpath
 import re
 import shutil
@@ -111,13 +112,20 @@ class Calisma:
         try:
             if ad == "Write":
                 yol = guvenli_yol(arg["path"])
-                self._yaz(yol, arg.get("content", ""))
-                return f"{yol} yazıldı ({len(arg.get('content', ''))} karakter)."
+                icerik = arg.get("content", "")
+                if isinstance(icerik, (dict, list)):
+                    icerik = json.dumps(icerik, ensure_ascii=False, indent=2)  # model JSON dosyasını nesne olarak verdi
+                elif not isinstance(icerik, str):
+                    raise AracHatasi("content metin olmalı")
+                self._yaz(yol, icerik)
+                return f"{yol} yazıldı ({len(icerik)} karakter)."
             if ad == "Read":
                 return _kirp(self._oku(guvenli_yol(arg["path"])))
             if ad == "Edit":
                 yol = guvenli_yol(arg["path"])
                 eski, yeni = arg["old_string"], arg["new_string"]
+                if not isinstance(eski, str) or not isinstance(yeni, str) or not eski:
+                    raise AracHatasi("old_string ve new_string metin olmalı; old_string boş olamaz")
                 metin = self._oku(yol)
                 adet = metin.count(eski)
                 if adet != 1:
@@ -135,6 +143,8 @@ class Calisma:
             return f"HATA: eksik argüman {e}"
         except FileNotFoundError:
             return f"HATA: dosya bulunamadı: {arg.get('path')}"
+        except (TypeError, AttributeError) as e:
+            return f"HATA: geçersiz argüman ({e})"
 
     def dosyalar(self) -> dict:
         """Çalışma alanındaki metin dosyalarını {yol: içerik} olarak döndürür (sonuç ekranı ve test için)."""
