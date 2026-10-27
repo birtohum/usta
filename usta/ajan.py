@@ -87,7 +87,7 @@ if __name__ == "__main__":
     from usta.arac import calisma_ac
 
     gorev = sys.argv[1] if len(sys.argv) > 1 else "asal.py içinde asal_mi(n) fonksiyonu yaz ve birkaç örnekle dene."
-    tur = sys.argv[2] if len(sys.argv) > 2 else "yerel"
+    tur = sys.argv[2] if len(sys.argv) > 2 else "modal"
 
     def yaz(t, v):
         print(f"[{t}]", json.dumps(v, ensure_ascii=False)[:400])
