@@ -1,6 +1,8 @@
 """Glimmer ajan döngüsü: model araç çağırır, çalıştırıcı yürütür, sonuç geri verilir; Done ya da adım sınırına kadar."""
 import json
 
+import requests
+
 from usta import glimmer
 from usta.arac import ARACLAR, Calisma
 
@@ -13,15 +15,22 @@ Kurallar:
 
 
 def calistir(gorev: str, calisma: Calisma, azami_adim: int = 20, gecmis: list | None = None,
-             olay=lambda tur, veri: None) -> dict:
+             olay=lambda tur, veri: None, sistem: str = SISTEM) -> dict:
     """Görevi yürütür. gecmis verilirse (düzeltme turu) konuşma oradan sürer.
     olay(tur, veri): arayüz için canlı adım bildirimi ('dusunce', 'arac', 'sonuc', 'bitti')."""
-    mesajlar = gecmis if gecmis is not None else [{"role": "system", "content": SISTEM},
+    mesajlar = gecmis if gecmis is not None else [{"role": "system", "content": sistem},
                                                    {"role": "user", "content": gorev}]
     ozet, adim, token = None, 0, {"girdi": 0, "cikti": 0}
     while adim < azami_adim:
         adim += 1
-        m = glimmer.sohbet(mesajlar, tools=ARACLAR)
+        try:
+            m = glimmer.sohbet(mesajlar, tools=ARACLAR)
+        except requests.HTTPError as e:
+            # 400 çoğunlukla bağlam sınırının (32k token) aşılmasıdır: görevi burada bırak.
+            if e.response is not None and e.response.status_code == 400:
+                olay("dusunce", f"Glimmer isteği reddetti (bağlam sınırı olabilir): {e.response.text[:200]}")
+                break
+            raise
         token["girdi"] += m["_usage"].get("prompt_tokens", 0)
         token["cikti"] += m["_usage"].get("completion_tokens", 0)
         asistan = {"role": "assistant", "content": m.get("content") or ""}
