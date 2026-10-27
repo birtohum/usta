@@ -89,7 +89,8 @@ def kabul_testleri_yaz(gorev: str, arayuz: str, deneme: int = 3, suz: bool = Tru
             compile(testler, KABUL_DOSYASI, "exec")
             if "def test_" not in testler:
                 raise ValueError("test fonksiyonu yok")
-            kabul = {"testler": testler, "maliyet": maliyet, "iptal": []}
+            # cozum yürütücüye asla gösterilmez; yalnızca testleri (ve d kipinde inceleme testlerini) sınamak için tutulur.
+            kabul = {"testler": testler, "maliyet": maliyet, "iptal": [], "cozum": veri.get("cozum") or {}}
             if not suz:
                 return kabul
             kabul["iptal"], toplam = referansla_suz(testler, veri.get("cozum") or {})
@@ -181,3 +182,67 @@ def hakem(gorev: str, testler: str, cikti: str) -> dict:
         kararlar = {}
     sonuc = [kararlar.get(ad, {"test": ad, "karar": "gerekli", "gerekce": "hakem kararı okunamadı"}) for ad in adlar]
     return {"kararlar": sonuc, "maliyet": m["_maliyet"]}
+
+
+INCELEME_ISTEMI = """Bir kodlama ajanı aşağıdaki görevi yaptı ve bağımsız kabul testlerinin hepsini geçti. Ama kabul testleri
+her gereksinimi denemiyor olabilir. Senin işin kanıtlı kod incelemesi.
+
+GÖREV:
+{gorev}
+
+AJANIN KODU:
+{kod}
+
+ZATEN KOŞAN KABUL TESTLERİNİN ADLARI:
+{mevcut}
+
+Görev metnindeki gereksinimleri tek tek kodla karşılaştır. Kodun görev metnini AÇIKÇA ihlal ettiğinden şüphelendiğin
+her nokta için (en çok 6) bir pytest testi yaz: test, ihlal varsa kalmalı, görevi doğru yapan bir kodda geçmeli.
+Kurallar:
+- Yalnızca görev metninde açıkça yazan davranışı test et; üslup, verimlilik ya da metinde olmayan ayrıntı yok.
+- Test adları test_inceleme_ ile başlasın. Dosyanın başına şunu koy:
+  import sys, pathlib; sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent.parent))
+  ve gereken importları ekle. Komut satırı programları için subprocess + sys.executable, girdi dosyaları tmp_path'e.
+- Hiç şüphen yoksa boş döndür.
+
+Yalnızca JSON döndür: {{"testler": "..."}}  (şüphe yoksa {{"testler": ""}})"""
+
+INCELEME_DOSYASI = ".usta_kabul/test_inceleme.py"
+
+
+def inceleme_testleri(gorev: str, kod: dict, mevcut_adlar: list) -> dict:
+    """Spark, görev + ajanın kodunu okuyup şüpheli ihlaller için test yazar. {'testler', 'maliyet'}."""
+    metin = "\n\n".join(f"### {yol}\n{icerik[:12000]}" for yol, icerik in kod.items()
+                         if not yol.startswith(".usta_kabul/") and not yol.startswith("test_"))[:40000]
+    m = spark.sohbet([{"role": "user", "content": INCELEME_ISTEMI.format(
+        gorev=gorev, kod=metin or "(dosya yok)", mevcut=", ".join(mevcut_adlar) or "-")}],
+        max_tokens=16000, reasoning_effort="medium")
+    try:
+        testler = (_json_ayikla(m.get("content"))["testler"] or "").strip()
+        if testler:
+            compile(testler, INCELEME_DOSYASI, "exec")
+    except (ValueError, KeyError, SyntaxError, TypeError, json.JSONDecodeError):
+        testler = ""
+    return {"testler": testler if "def test_" in testler else "", "maliyet": m["_maliyet"]}
+
+
+def _dosyada_kalanlar(calisma, dosya: str, testler: str) -> tuple[set, set]:
+    """Test dosyasını çalıştırır; (kalan, geçen) test adlarını döndürür."""
+    calisma._yaz(dosya, testler)
+    _, cikti = calisma._calistir(f"python -m pytest -q -rA -p no:cacheprovider {dosya} 2>&1 | tail -n 80", 120)
+    kalan = set(re.findall(r"(?:FAILED|ERROR) \S*::(\w+)", cikti))
+    gecen = set(re.findall(r"PASSED \S*::(\w+)", cikti))
+    return kalan, gecen
+
+
+def inceleme_testlerini_sina(calisma, testler: str, cozum: dict) -> list:
+    """Kanıt şartı: ajanın kodunda KALAN ve referans çözümde GEÇEN inceleme testlerinin adları."""
+    from usta.arac import calisma_ac
+    ajanda_kalan, _ = _dosyada_kalanlar(calisma, INCELEME_DOSYASI, testler)
+    if not ajanda_kalan or not cozum:
+        return []
+    with calisma_ac() as ref:
+        for yol, icerik in cozum.items():
+            ref._yaz(guvenli_yol(yol), icerik)
+        _, refte_gecen = _dosyada_kalanlar(ref, INCELEME_DOSYASI, testler)
+    return sorted(ajanda_kalan & refte_gecen)

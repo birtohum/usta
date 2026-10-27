@@ -59,6 +59,7 @@ details summary{cursor:pointer;color:var(--soluk);font-size:13px}
         <button class="ana" id="baslat">Başlat</button>
         <button id="mikrofon" title="Sesle görev ver (Muse Voice Transcribe)">🎤 Sesle söyle</button>
         <select id="kip" title="Karşılaştırma kipi">
+          <option value="d">Usta + kanıtlı kod incelemesi</option>
           <option value="c">Usta (bağımsız testler + düzeltme)</option>
           <option value="b">Yalnızca kendi testleri</option>
           <option value="a">Tek başına</option>
@@ -159,6 +160,10 @@ function isle(o) {
   else if (o.tur === "hakem") { const ad = {gerekli: "görev açıkça istiyor → düzeltilecek", belirsiz: "belirsiz → dayatılmadı",
       hatali: "test hatalı → iptal"};
     v.forEach(k => ekle({ad: "HAKEM", cls: "test"}, `${k.test}: ${ad[k.karar] || k.karar}`, k.gerekce)); }
+  else if (o.tur === "inceleme") ekle({ad: "İNCELEME", cls: "test"}, v.kanitli.length
+      ? `Spark kodu inceledi: ${v.yazilan} şüpheden ${v.kanitli.length} tanesi kanıtlandı (ajanın kodunda kalıyor, referansta geçiyor)`
+      : `Spark kodu inceledi: ${v.yazilan} şüphe yazdı, kanıtlanan ihlal yok`, v.kanitli.join("
+"));
   else if (o.tur === "dusunce") ekle({ad: "AJAN", cls: ""}, kirp(v, 400));
   else if (o.tur === "arac") { const [m, k] = aracMetni(v); ekle({ad: v.ad.toUpperCase(), cls: ""}, m, k); }
   else if (o.tur === "sonuc") { if (v.ad === "Bash" || String(v.cikti).startsWith("HATA"))
@@ -174,7 +179,7 @@ function isle(o) {
 function rapor(r) {
   $("sonuc").style.display = "block";
   const son = (r.turlar || []).at(-1);
-  $("sonucBaslik").textContent = r.kip !== "c" ? (r.ozet ? "Ajan bitirdiğini söylüyor (bağımsız doğrulama yok)" : "Ajan bitiremedi")
+  $("sonucBaslik").textContent = !["c", "d"].includes(r.kip) ? (r.ozet ? "Ajan bitirdiğini söylüyor (bağımsız doğrulama yok)" : "Ajan bitiremedi")
     : son?.gecti ? `Bağımsız testlerin hepsi geçti (${r.turlar.length}. turda)` : `Testler tam geçmedi: ${son?.basarili}/${son?.toplam}`;
   $("ozet").textContent = r.ozet || "";
   const iptal = (r.iptal_edilen_test || []).length;

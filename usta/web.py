@@ -62,8 +62,8 @@ def ana_sayfa():
 def gorev_baslat(g: Gorev):
     if not g.gorev.strip() or len(g.gorev) > 4000:
         raise HTTPException(400, "görev boş ya da çok uzun")
-    if g.kip not in ("a", "b", "c"):
-        raise HTTPException(400, "kip a, b ya da c olmalı")
+    if g.kip not in ("a", "b", "c", "d"):
+        raise HTTPException(400, "kip a, b, c ya da d olmalı")
     if g.yurutucu not in ("spark", "glimmer"):
         raise HTTPException(400, "yürütücü spark ya da glimmer olmalı")
     if not AKTIF.acquire(blocking=False):

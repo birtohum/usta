@@ -21,7 +21,8 @@ from usta import glimmer, spark, surec  # noqa: E402
 from usta.arac import calisma_ac  # noqa: E402
 
 KOK = Path(__file__).resolve().parent.parent
-SETLER = {"kolay": KOK / "veri" / "degerlendirme.jsonl", "zor": KOK / "veri" / "zor.jsonl"}
+SETLER = {"kolay": KOK / "veri" / "degerlendirme.jsonl", "zor": KOK / "veri" / "zor.jsonl",
+          "zor2": KOK / "veri" / "zor2.jsonl"}
 KAYIT = KOK / "kayitlar" / "degerlendirme"  # main() set ve yürütücü adına göre alt klasör seçer
 YURUTUCU = "glimmer"
 GIZLI_DOSYA = ".gizli/test_gizli.py"

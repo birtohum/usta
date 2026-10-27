@@ -67,16 +67,30 @@ GÖREV:
 Yalnızca JSON döndür: {{"cozum": {{"dosya.py": "..."}}, "testler": "..."}}"""
 
 
-def gorev_listesi(n_kategori: int, zorluk: str) -> list:
+def _kategori_gorevleri(k: str, n: int, zorluk: str, parti: int = 8) -> list:
+    """Bir kategoride n görev; tekrarları önlemek için partiler hâlinde, önceki görevlerin başı istemde gösterilir."""
     gorevler = []
-    for k in KATEGORILER:
-        m = spark.sohbet([{"role": "user", "content": GOREV_ISTEMI.format(n=n_kategori, kategori=k, zorluk=ZORLUK[zorluk])}],
-                         max_tokens=16000, temperature=0.8, reasoning_effort="medium")
+    while len(gorevler) < n:
+        istem = GOREV_ISTEMI.format(n=min(parti, n - len(gorevler)), kategori=k, zorluk=ZORLUK[zorluk])
+        if gorevler:
+            istem += "\n\nŞu görevler zaten var; bunlara benzemeyen, farklı ihtiyaçlar seç:\n" + "\n".join(
+                f"- {g[:90]}" for g in gorevler)
         try:
-            gorevler += [(k, g) for g in _json_ayikla(m["content"])["gorevler"]]
+            m = spark.sohbet([{"role": "user", "content": istem}], max_tokens=16000, temperature=0.9,
+                             reasoning_effort="medium")
+            yeni = _json_ayikla(m["content"])["gorevler"]
         except Exception as e:
-            print("görev listesi okunamadı:", k, e)
-    return gorevler
+            print("görev listesi okunamadı:", k[:30], e)
+            continue
+        if not yeni:
+            break
+        gorevler += yeni
+    return [(k, g) for g in gorevler[:n]]
+
+
+def gorev_listesi(n_kategori: int, zorluk: str) -> list:
+    with ThreadPoolExecutor(len(KATEGORILER)) as ex:
+        return [kg for liste in ex.map(lambda k: _kategori_gorevleri(k, n_kategori, zorluk), KATEGORILER) for kg in liste]
 
 
 def dogrula(kg) -> dict | None:
@@ -108,11 +122,13 @@ def main():
     ap.add_argument("--kategori_basina", type=int, default=9)
     ap.add_argument("--zorluk", choices=list(ZORLUK), default="kolay")
     ap.add_argument("--cikis", default=str(CIKIS))
+    ap.add_argument("--onek", default="g", help="görev kimliği öneki (setler arasında çakışmasın)")
+    ap.add_argument("--paralel", type=int, default=8)
     a = ap.parse_args()
     test_sayisi = "6-12" if a.zorluk == "kolay" else "12-20"
     adaylar = [(k, g, test_sayisi) for k, g in gorev_listesi(a.kategori_basina, a.zorluk)]
     print(f"{len(adaylar)} aday görev")
-    with ThreadPoolExecutor(8) as ex:
+    with ThreadPoolExecutor(a.paralel) as ex:
         alinan = [r for r in ex.map(dogrula, adaylar) if r]
     # Kategoriler dengeli kalsın: sırayla birer birer seç
     secilen, kovalar = [], {k: [r for r in alinan if r["kategori"] == k] for k in KATEGORILER}
@@ -124,7 +140,8 @@ def main():
     cikis.parent.mkdir(exist_ok=True)
     with cikis.open("w", encoding="utf-8") as f:
         for i, r in enumerate(secilen):
-            f.write(json.dumps({"id": f"g{i + 1:02d}", **r}, ensure_ascii=False) + "\n")
+            kimlik = f"{a.onek}{i + 1:02d}" if a.onek == "g" else f"{a.onek}{i + 1:03d}"
+            f.write(json.dumps({"id": kimlik, **r}, ensure_ascii=False) + "\n")
     print(f"{len(alinan)}/{len(adaylar)} görev referans süzgecinden geçti; {len(secilen)} görev yazıldı -> {cikis}")
     print(f"Spark toplam: {spark.butce()['toplam_usd']:.4f} $")
 
