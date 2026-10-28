@@ -1,0 +1,23 @@
+{
+ "id": "a075",
+ "kip": "a",
+ "kategori": "Türkçe büyük/küçük harf (İ/i, I/ı), Türk alfabesiyle sıralama, sayıyı yazıya çevirme, ünlü uyumuna göre ek",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "sira.py içinde sira_yaziya(n,bicim) yazıldı: 1-9999 düz Türkçe sayı, sıra için ıncı/inci/uncu/üncü ve üleştirme için ar/er/şar/şer ekleri, TypeError/ValueError kontrolleriyle.",
+ "adim": 4,
+ "yurutucu_token": {
+  "girdi": 7078,
+  "cikti": 22165
+ },
+ "yurutucu_usd": 0.005140799999999999,
+ "bitirdi": true,
+ "sure_sn": 160.3,
+ "gizli": {
+  "gecti": true,
+  "gecen": 23,
+  "toplam": 23,
+  "cikti": ".......................                                                  [100%]\n23 passed in 0.03s\n"
+ }
+}

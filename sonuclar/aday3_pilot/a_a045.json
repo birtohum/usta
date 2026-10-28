@@ -1,0 +1,23 @@
+{
+ "id": "a045",
+ "kip": "a",
+ "kategori": "Türkçe büyük/küçük harf (İ/i, I/ı), Türk alfabesiyle sıralama, sayıyı yazıya çevirme, ünlü uyumuna göre ek",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "sozluk.py yazıldı ve test edildi. Program: girdiyi satır satır okuyup strip uygular, boş satırları atar; --ara ile Türkçe küçük harf çevirisi (I→ı, İ→i) üzerinden filtreler; --sirala ile Türk alfabesi sırasına (a b c ç d e f g ğ h ı i j k l m n o ö p r s ş t u ü v y z), duyarsız + küçük-önce + Unicode eşitlik bozma ile sıralar; önce ara sonra sırala uygular; hata kodları (eksik --girdi→2, dosya yok→3, bayrak denetimi önce) ve çıktı biçimini (satır başına kayıt + tek son satır sonu, boş sonuçta boş çıktı) doğru uygular. Yalnızca standart kütüphane (sys) kullanılır.",
+ "adim": 8,
+ "yurutucu_token": {
+  "girdi": 30512,
+  "cikti": 21830
+ },
+ "yurutucu_usd": 0.0074172000000000005,
+ "bitirdi": true,
+ "sure_sn": 197.0,
+ "gizli": {
+  "gecti": true,
+  "gecen": 21,
+  "toplam": 21,
+  "cikti": ".....................                                                    [100%]\n21 passed in 0.42s\n"
+ }
+}

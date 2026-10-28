@@ -1,0 +1,23 @@
+{
+ "id": "a200",
+ "kip": "a",
+ "kategori": "Türkçe büyük/küçük harf (İ/i, I/ı), Türk alfabesiyle sıralama, sayıyı yazıya çevirme, ünlü uyumuna göre ek",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "belge.py oluşturuldu: puan_yazisi tip denetimini önce yapar (bool dahil sayı olmayana TypeError), 0-100 aralığını kapsayıcı denetler, yarım-yukarı yuvarlar, 0 için sıfır puan 100 için yüz puan ve diğerleri küçük harf Türkçe sayı+puan döndürür; soru_eki boş/boşluk girdide ValueError verir, son ünlüye göre mı/mi/mu/mü ekini küçük harfle ayrı yazarak döndürür, tek harf ve büyük harf uyumlu çalışır. Yalnızca math ve numbers kullanıldı.",
+ "adim": 10,
+ "yurutucu_token": {
+  "girdi": 35962,
+  "cikti": 31145
+ },
+ "yurutucu_usd": 0.009825200000000001,
+ "bitirdi": true,
+ "sure_sn": 270.7,
+ "gizli": {
+  "gecti": true,
+  "gecen": 23,
+  "toplam": 23,
+  "cikti": ".......................                                                  [100%]\n23 passed in 0.02s\n"
+ }
+}

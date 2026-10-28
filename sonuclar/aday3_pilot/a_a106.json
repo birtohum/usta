@@ -1,0 +1,23 @@
+{
+ "id": "a106",
+ "kip": "a",
+ "kategori": "tarih ve saat: resmî tatiller parametreyle, iş günü hesabı, Türkiye saat dilimi (UTC+3, yaz saati yok), gün/ay adları Türkçe",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "tur_takvim.py oluşturuldu: tur_tarihlerini_uret başlangıç dahil toplam_hafta*7 günlük pencerede eşleşen günleri üretip tatilleri çıkarıyor, artan sıralı ve tekrarsız döndürüyor; tur_etiketi DD Month YYYY Gün formatında Türkçe adlarla etiketliyor. Doğrulama sırası (tarih, hafta günü, sayı, tatil) ve ValueError kuralları uygulandı, yalnızca datetime kullanıldı.",
+ "adim": 6,
+ "yurutucu_token": {
+  "girdi": 21311,
+  "cikti": 8735
+ },
+ "yurutucu_usd": 0.0038781,
+ "bitirdi": true,
+ "sure_sn": 75.2,
+ "gizli": {
+  "gecti": true,
+  "gecen": 20,
+  "toplam": 20,
+  "cikti": "....................                                                     [100%]\n20 passed in 0.02s\n"
+ }
+}

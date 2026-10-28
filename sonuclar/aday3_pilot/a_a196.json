@@ -1,0 +1,23 @@
+{
+ "id": "a196",
+ "kip": "a",
+ "kategori": "tarih ve saat: resmî tatiller parametreyle, iş günü hesabı, Türkiye saat dilimi (UTC+3, yaz saati yok), gün/ay adları Türkçe",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "izin_hesap.py içinde yillik_izin_bitisi yazıldı: YYYY-AA-GG başlangıcı Europe/Istanbul bilinçli tarihe çevirir, hata önceliği (başlangıç biçimi → is_gunu negatifliği → tatiller türü) uygulanır, boş dize ve geçersiz takvim tarihi ValueError verir, None tatil boş küme sayılır, Cumartesi varsayılan kapalı/Pazar hep kapalı, tatil günü asla sayılmaz, başlangıç dahil iş günü sayımı ve iş-günü-değilse ileri sarma yapılır, dönüş YYYY-AA-GG'dir; Türkçe gün/ay adları, I→ı/İ→i küçük harf ve tarih+sicil sıralama yardımcıları eklendi, yalnızca standart kütüphane kullanıldı.",
+ "adim": 9,
+ "yurutucu_token": {
+  "girdi": 36123,
+  "cikti": 19033
+ },
+ "yurutucu_usd": 0.007418900000000001,
+ "bitirdi": true,
+ "sure_sn": 171.2,
+ "gizli": {
+  "gecti": true,
+  "gecen": 22,
+  "toplam": 22,
+  "cikti": "......................                                                   [100%]\n22 passed in 0.03s\n"
+ }
+}

@@ -1,0 +1,23 @@
+{
+ "id": "a086",
+ "kip": "a",
+ "kategori": "tarih ve saat: resmî tatiller parametreyle, iş günü hesabı, Türkiye saat dilimi (UTC+3, yaz saati yok), gün/ay adları Türkçe",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "iade_kargo.py oluşturuldu: iade_son_gunu UTC girdiyi +3 saatle TR tarihine çevirip 14 gün ekler, hafta sonu/tatil ise sonraki ilk iş gününe öteler (önce sipariş sonra tatil denetimi, ValueError); etiketle DD Month YYYY Gün döndürür; Türkçe İ/I ayrımlı dönüşüm yardımcıları eklendi, yalnızca standart kütüphane kullanıldı.",
+ "adim": 16,
+ "yurutucu_token": {
+  "girdi": 117048,
+  "cikti": 20950
+ },
+ "yurutucu_usd": 0.0158948,
+ "bitirdi": true,
+ "sure_sn": 213.4,
+ "gizli": {
+  "gecti": true,
+  "gecen": 20,
+  "toplam": 20,
+  "cikti": "....................                                                     [100%]\n20 passed in 0.02s\n"
+ }
+}

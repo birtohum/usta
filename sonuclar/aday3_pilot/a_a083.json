@@ -1,0 +1,23 @@
+{
+ "id": "a083",
+ "kip": "a",
+ "kategori": "CSV/JSON ile çalışan ve uç durumları çok olan veri işleme (BOM, ; ayırıcı, 1.234,56 sayı biçimi, boş/bozuk satır)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "`zeytin_kabul.py` içinde `konsolide_et` yazıldı: `;` ayırıcılı CSV `utf-8-sig` ile okunuyor, Türkçe sayı kuralı (`.` sil, `,`→`.`, boş→0) `Decimal` ile çözümleniyor, fire `brut>=taban` iken `ROUND_HALF_UP` ile satır bazında uygulanıyor, üreticiler Türkçe duyarsız (`I→ı`,`İ→i`+casefold) gruplanıp net azalan/ad artan sıralanıyor, sonuçlar Türkçe biçimde (`1.234,56`) döndürülüyor; hata sayaçları ve `FileNotFoundError`/`ValueError` önceliği uygulandı.",
+ "adim": 4,
+ "yurutucu_token": {
+  "girdi": 14413,
+  "cikti": 16190
+ },
+ "yurutucu_usd": 0.0046793,
+ "bitirdi": true,
+ "sure_sn": 138.1,
+ "gizli": {
+  "gecti": true,
+  "gecen": 20,
+  "toplam": 20,
+  "cikti": "....................                                                     [100%]\n20 passed in 0.06s\n"
+ }
+}

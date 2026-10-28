@@ -1,0 +1,23 @@
+{
+ "id": "a208",
+ "kip": "a",
+ "kategori": "KDV, tevkifat, stopaj, taksit ve kuruş yuvarlama (Decimal, ROUND_HALF_UP, satır bazında ve toplamda yuvarlama farkı)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "duzce_mobilya.py içinde TaksitliSatis sınıfı yazıldı: KDV matrahı brut/1,20 ROUND_HALF_UP ile ayrıştırılır; peşinat==brut ise tek kalem peşin plan; kalan borca aylık vade farkı eklenip taksitler yuvarlanır, kuruş farkı son taksite eklenir; 2-12 taksit ve %0-5 oran aralıkları, str tür kontrolünde TypeError / boş metinde ValueError uygulanır; plan() taksit_no/tutar/kalan sözlükleri, ozet() matrah/kdv/pesinat/vadeli_toplam/taksit_sayisi döndürür.",
+ "adim": 3,
+ "yurutucu_token": {
+  "girdi": 9106,
+  "cikti": 14105
+ },
+ "yurutucu_usd": 0.0037316000000000007,
+ "bitirdi": true,
+ "sure_sn": 108.4,
+ "gizli": {
+  "gecti": true,
+  "gecen": 20,
+  "toplam": 20,
+  "cikti": "....................                                                     [100%]\n20 passed in 0.05s\n"
+ }
+}

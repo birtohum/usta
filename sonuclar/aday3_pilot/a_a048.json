@@ -1,0 +1,23 @@
+{
+ "id": "a048",
+ "kip": "a",
+ "kategori": "CSV/JSON ile çalışan ve uç durumları çok olan veri işleme (BOM, ; ayırıcı, 1.234,56 sayı biçimi, boş/bozuk satır)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "cay_alim.py yazıldı: hesapla işlevi tüm kuralları uyguluyor.",
+ "adim": 6,
+ "yurutucu_token": {
+  "girdi": 11702,
+  "cikti": 42212
+ },
+ "yurutucu_usd": 0.009612600000000002,
+ "bitirdi": true,
+ "sure_sn": 382.4,
+ "gizli": {
+  "gecti": true,
+  "gecen": 20,
+  "toplam": 20,
+  "cikti": "....................                                                     [100%]\n20 passed in 0.07s\n"
+ }
+}

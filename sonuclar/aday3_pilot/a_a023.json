@@ -1,0 +1,23 @@
+{
+ "id": "a023",
+ "kip": "a",
+ "kategori": "çok dosyalı küçük modül: iki-üç dosyaya bölünmüş, ortak hata sınıfları ve bir komut satırı girişi olan araç",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "hatalar.py (BiçimHatasi, UzunlukHatasi → ValueError) ve iban.py (temizle, dogrula, banka_kodu + `python -m iban kontrol --iban` CLI) yazıldı. 26 uzunluk kontrolü, mod-97 doğrulaması, hata önceliği (tip→uzunluk→biçim) ve tek satır JSON çıktı doğrulandı.",
+ "adim": 7,
+ "yurutucu_token": {
+  "girdi": 17274,
+  "cikti": 20379
+ },
+ "yurutucu_usd": 0.0058032000000000005,
+ "bitirdi": true,
+ "sure_sn": 177.2,
+ "gizli": {
+  "gecti": true,
+  "gecen": 20,
+  "toplam": 20,
+  "cikti": "....................                                                     [100%]\n20 passed in 0.16s\n"
+ }
+}

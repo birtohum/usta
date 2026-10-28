@@ -1,0 +1,23 @@
+{
+ "id": "a185",
+ "kip": "a",
+ "kategori": "Türkçe büyük/küçük harf (İ/i, I/ı), Türk alfabesiyle sıralama, sayıyı yazıya çevirme, ünlü uyumuna göre ek",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "envanter.py içinde Envanter sınıfı yazıldı: ekle/sirali_listele/ara imzalarına uygun, önce TypeError sonra ValueError denetimi, Türkçe duyarsız yineleme eleme, Türk alfabesi sırasına göre sıralama (eşitlikte küçük harf biçimi + eklenme sırası), I->ı ve İ->i dönüşümlü özel küçük harf ile i->İ ve ı->I dönüşümlü özel büyük harf (lower/upper kullanılmadan), boş sorguda tüm kayıtların sıralı dönmesi. Yalnızca standart kütüphane, ağ/rastgelelik/zaman yok.",
+ "adim": 13,
+ "yurutucu_token": {
+  "girdi": 66759,
+  "cikti": 35531
+ },
+ "yurutucu_usd": 0.013782099999999999,
+ "bitirdi": true,
+ "sure_sn": 350.6,
+ "gizli": {
+  "gecti": true,
+  "gecen": 20,
+  "toplam": 20,
+  "cikti": "....................                                                     [100%]\n20 passed in 0.03s\n"
+ }
+}

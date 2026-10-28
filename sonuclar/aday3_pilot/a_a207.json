@@ -1,0 +1,23 @@
+{
+ "id": "a207",
+ "kip": "a",
+ "kategori": "CSV/JSON ile çalışan ve uç durumları çok olan veri işleme (BOM, ; ayırıcı, 1.234,56 sayı biçimi, boş/bozuk satır)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "balik_kabul.py yazıldı: mutabakat işlevi CSV'yi utf-8-sig ile `;` ayırıcıyla okur, boş satırları atlar, Türkçe sayı/tarih doğrulaması yapar, hatalı satırları sayar, fiyatları BOM-toleranslı okur, 1000,00 kg sınır satırlarını sayar, Türkçe duyarlı normalize edip ilk yazımı koruyarak birleştirir, HALF_UP yuvarlayıp Türkçe biçimde yazar ve kg azalan/Türkçe alfabetik sıralı dict döner; dosya yokluğunda FileNotFoundError, bozuk JSON'da ValueError yükseltir.",
+ "adim": 7,
+ "yurutucu_token": {
+  "girdi": 22585,
+  "cikti": 38294
+ },
+ "yurutucu_usd": 0.0099173,
+ "bitirdi": true,
+ "sure_sn": 328.0,
+ "gizli": {
+  "gecti": true,
+  "gecen": 21,
+  "toplam": 21,
+  "cikti": ".....................                                                    [100%]\n21 passed in 0.06s\n"
+ }
+}

@@ -1,0 +1,23 @@
+{
+ "id": "a047",
+ "kip": "a",
+ "kategori": "çok dosyalı küçük modül: iki-üç dosyaya bölünmüş, ortak hata sınıfları ve bir komut satırı girişi olan araç",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "hatalar.py (NotHatasi, OgrenciHatasi: ValueError alt sınıfı) ve burs.py (ortalama_hesapla: tabana yuvarlanmış ortalama, boş/aralık dışı NotHatasi; sirala: ortalama büyük, devamsızlık az, kimlik küçük önceliği, Türkçe normalize karşılaştırma, tip>öğrenci>not hata önceliği; CLI `python -m burs sirala --ogrenciler ...`) yalnızca standart kütüphane ile yazıldı ve doğrulandı.",
+ "adim": 9,
+ "yurutucu_token": {
+  "girdi": 37864,
+  "cikti": 21933
+ },
+ "yurutucu_usd": 0.008173,
+ "bitirdi": true,
+ "sure_sn": 209.8,
+ "gizli": {
+  "gecti": false,
+  "gecen": 19,
+  "toplam": 20,
+  "cikti": "\n    def test_ilk_ihlal():\n        ogr = [{\"ad\": \"Ali\", \"notlar\": [200], \"devamsizlik\": 0, \"kimlik\": 1}, {\"ad\": \"\", \"notlar\": [50], \"devamsizlik\": 0, \"kimlik\": 2}]\n        with pytest.raises(hatalar.NotHatasi):\n>           sirala(ogr)\n\n.gizli/test_gizli.py:94: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \nburs.py:135: in sirala\n    _ogrenci_kontrolu(ogrenciler)\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nogrenciler = [{'ad': 'Ali', 'devamsizlik': 0, 'kimlik': 1, 'notlar': [200]}, {'ad': '', 'devamsizlik': 0, 'kimlik': 2, 'notlar': [50]}]\n\n    def _ogrenci_kontrolu(ogrenciler):\n        for ogr in ogrenciler:\n            ad_alan, ad = _alan_bul(ogr, _AD_ALANLARI)\n            not_alan, notlar = _alan_bul(ogr, _NOT_ALANLARI)\n            dev_alan, dev = _alan_bul(ogr, _DEV_ALANLARI)\n            _, kimlik = _alan_bul(ogr, _KIMLIK_ALANLARI)\n            if ad_alan is None or not_alan is None or dev_alan is None:\n                raise OgrenciHatasi(\"ogrenci bilgisi eksik\")\n            if not isinstance(ad, str) or ad.strip() == \"\":\n>               raise OgrenciHatasi(\"ogrenci adi gecersiz\")\nE               hatalar.OgrenciHatasi: ogrenci adi gecersiz\n\nburs.py:89: OgrenciHatasi\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_ilk_ihlal - hatalar.OgrenciHatasi: ogrenci ...\n1 failed, 19 passed in 0.09s\n"
+ }
+}

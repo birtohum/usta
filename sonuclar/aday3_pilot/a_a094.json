@@ -1,0 +1,23 @@
+{
+ "id": "a094",
+ "kip": "a",
+ "kategori": "KDV, tevkifat, stopaj, taksit ve kuruş yuvarlama (Decimal, ROUND_HALF_UP, satır bazında ve toplamda yuvarlama farkı)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "balon.py içinde SepetHesaplayici sınıfı yazıldı: Decimal oran kontrolü, None→varsayılan, ROUND_HALF_UP yuvarlama, satır bazlı KDV + ham toplam farkı, boş sepette sıfır sözlük, sıfır tutar kabul/negatif ValueError, >=3000 TL %5 indirim, aynı adda birleştirmeme ve id sıralı tutarlılık, TypeError önceliği, I->ı/İ->i normalize fonksiyonu, istenen ozet sözlüğü; yalnızca standart kütüphane, float yok.",
+ "adim": 6,
+ "yurutucu_token": {
+  "girdi": 29985,
+  "cikti": 17918
+ },
+ "yurutucu_usd": 0.0065821000000000005,
+ "bitirdi": true,
+ "sure_sn": 142.3,
+ "gizli": {
+  "gecti": true,
+  "gecen": 22,
+  "toplam": 22,
+  "cikti": "......................                                                   [100%]\n22 passed in 0.05s\n"
+ }
+}

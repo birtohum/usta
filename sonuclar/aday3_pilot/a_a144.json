@@ -1,0 +1,23 @@
+{
+ "id": "a144",
+ "kip": "a",
+ "kategori": "KDV, tevkifat, stopaj, taksit ve kuruş yuvarlama (Decimal, ROUND_HALF_UP, satır bazında ve toplamda yuvarlama farkı)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "kayisi.py içinde brutten_kdv_ayristir fonksiyonu yazıldı: Decimal + ROUND_HALF_UP ile brüt pay dağıtımı, kuruş farkının son satıra eklenmesi, matrah/KDV ayrıştırması, istenen tür/değer denetimleri (TypeError önce, ValueError sonra) ve 6 alanlı sözlük dönüşü uygulandı.",
+ "adim": 5,
+ "yurutucu_token": {
+  "girdi": 12497,
+  "cikti": 11761
+ },
+ "yurutucu_usd": 0.0036019000000000003,
+ "bitirdi": true,
+ "sure_sn": 95.3,
+ "gizli": {
+  "gecti": true,
+  "gecen": 21,
+  "toplam": 21,
+  "cikti": ".....................                                                    [100%]\n21 passed in 0.03s\n"
+ }
+}

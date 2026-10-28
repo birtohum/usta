@@ -1,0 +1,23 @@
+{
+ "id": "a164",
+ "kip": "a",
+ "kategori": "KDV, tevkifat, stopaj, taksit ve kuruş yuvarlama (Decimal, ROUND_HALF_UP, satır bazında ve toplamda yuvarlama farkı)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "edirne_peynir.py dosyası yazıldı: PeynirToptanFaturasi sınıfı Decimal+ROUND_HALF_UP ile satır toplamları, satır bazında ve tek seferlik KDV, kuruş farkının en büyük matrahlı (eşitlikte Türkçe küçük harfe göre ilk) satıra dengelenmesi, 5000,00 TL eşiğinde %2 tevkifat, boş listede sıfır toplamlar ve TypeError öncelikli doğrulama kurallarını uygular.",
+ "adim": 7,
+ "yurutucu_token": {
+  "girdi": 19384,
+  "cikti": 32533
+ },
+ "yurutucu_usd": 0.008445000000000001,
+ "bitirdi": true,
+ "sure_sn": 272.7,
+ "gizli": {
+  "gecti": true,
+  "gecen": 20,
+  "toplam": 20,
+  "cikti": "....................                                                     [100%]\n20 passed in 0.04s\n"
+ }
+}

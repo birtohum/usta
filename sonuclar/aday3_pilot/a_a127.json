@@ -1,0 +1,23 @@
+{
+ "id": "a127",
+ "kip": "a",
+ "kategori": "çok dosyalı küçük modül: iki-üç dosyaya bölünmüş, ortak hata sınıfları ve bir komut satırı girişi olan araç",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "hatalar.py (3 ValueError alt sınıfı), parti.py (PartiDeposu: 200 kapasite, Türkçe büyük harf doğrulama Q/W/X hariç, öncelikli doğrulama, ı→I/i→İ dönüşümlü saklama ve sorgu, 60 gün baz + tuz/süt ekleri, yaşa ve Türkçe alfabeye göre sıralı hazir_liste) ve cli.py (--komut/--sorgu-gunu/--depo argümanları, JSON okuma, virgüllü çıktı) yazıldı ve test edildi.",
+ "adim": 14,
+ "yurutucu_token": {
+  "girdi": 99701,
+  "cikti": 36705
+ },
+ "yurutucu_usd": 0.017311100000000003,
+ "bitirdi": true,
+ "sure_sn": 308.5,
+ "gizli": {
+  "gecti": true,
+  "gecen": 21,
+  "toplam": 21,
+  "cikti": ".....................                                                    [100%]\n21 passed in 0.08s\n"
+ }
+}

@@ -1,0 +1,23 @@
+{
+ "id": "a114",
+ "kip": "a",
+ "kategori": "KDV, tevkifat, stopaj, taksit ve kuruş yuvarlama (Decimal, ROUND_HALF_UP, satır bazında ve toplamda yuvarlama farkı)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "avans.py yazıldı: Decimal+ROUND_HALF_UP ile kdv_dahil True/False yolları, sıfır/None/negatif kontrolleri (TypeError öncelikli), oran desteği ve aralık ValueError'ları, 1000 TL eşiğinde TRK-6 haneli belge_no (çağrı sayacına göre, Türkçe I->ı/İ->i dönüşümüyle büyük harf), yuvarlama_farki ve yasaklı float/ağ/zaman kullanılmadan sonuç dict'i.",
+ "adim": 7,
+ "yurutucu_token": {
+  "girdi": 21382,
+  "cikti": 29765
+ },
+ "yurutucu_usd": 0.008091200000000002,
+ "bitirdi": true,
+ "sure_sn": 257.3,
+ "gizli": {
+  "gecti": false,
+  "gecen": 19,
+  "toplam": 20,
+  "cikti": "_________________________ test_turkce_normalize_kurali _________________________\n\n    def test_turkce_normalize_kurali():\n        p = _pl.Path(__file__).resolve().parent.parent / 'avans.py'\n        src = p.read_text(encoding='utf-8')\n        assert 'ı' in src\n        assert 'İ' in src or 'i' in src\n        found = False\n        for name in ['turkce_kucuk_harf', 'tr_kucuk_harf', 'normalize_musteri_notu', 'turkce_buyuk_harf', 'normalize']:\n            fn = getattr(avans, name, None)\n            if callable(fn):\n                try:\n                    if fn('I') == 'ı' and fn('İ') == 'i':\n                        found = True\n                        break\n                except Exception:\n                    continue\n                try:\n                    if 'I' in str(fn('ISTANBUL')) or 'ı' in str(fn('ISTANBUL')):\n                        pass\n                except Exception:\n                    pass\n>       assert found, 'I->ı ve İ->i kuralini uygulayan yardimci bulunamadi'\nE       AssertionError: I->ı ve İ->i kuralini uygulayan yardimci bulunamadi\nE       assert False\n\n.gizli/test_gizli.py:211: AssertionError\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_turkce_normalize_kurali - AssertionError: I...\n1 failed, 19 passed in 0.06s\n"
+ }
+}

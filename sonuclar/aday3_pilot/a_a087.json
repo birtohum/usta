@@ -1,0 +1,23 @@
+{
+ "id": "a087",
+ "kip": "a",
+ "kategori": "çok dosyalı küçük modül: iki-üç dosyaya bölünmüş, ortak hata sınıfları ve bir komut satırı girişi olan araç",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "hatalar.py, bordro.py ve cli.py oluşturuldu. Hata sınıfları ValueError'dan türetildi, net_odeme tam sayı kuruş aritmetiğiyle (taban 2500, nem>20 için tavan puan başına %2 kesinti yukarı yuvarlanır, destekli +10000) ve kilo→UreticiHatasi, nem→NemHatasi, boş ad→UreticiHatasi önceliğiyle yazıldı; Türkçe küçük harf I→ı, İ→i dönüşümü ve strip uygulandı. CLI `python cli.py --kilo 100 --nem 22.5 --destekli` çağrısında tek satır `Ödeme: tutar kuruş` yazdırır.",
+ "adim": 11,
+ "yurutucu_token": {
+  "girdi": 38100,
+  "cikti": 28735
+ },
+ "yurutucu_usd": 0.009557,
+ "bitirdi": true,
+ "sure_sn": 244.6,
+ "gizli": {
+  "gecti": true,
+  "gecen": 20,
+  "toplam": 20,
+  "cikti": "....................                                                     [100%]\n20 passed in 0.11s\n"
+ }
+}

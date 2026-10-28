@@ -1,0 +1,23 @@
+{
+ "id": "a021",
+ "kip": "a",
+ "kategori": "Türkçe büyük/küçük harf (İ/i, I/ı), Türk alfabesiyle sıralama, sayıyı yazıya çevirme, ünlü uyumuna göre ek",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "ek_motor.py dosyasında EkMotor sınıfı yazıldı: cogul (son ünlüye göre lar/ler), bulunma (son ünlü + sert ünsüz f s t k ç ş h p kuralıyla da/de/ta/te, boşluksuz), yonelme (son ünlüye göre a/e, ünlüyle bitende y kaynaştırma). Büyük harfli kelimede ek büyük, diğerlerinde küçük. Hata sırası: önce TypeError (str değilse), sonra ValueError (boş, yalnızca rakam, ünsüz yığını). Yalnızca standart kütüphane, ağ/rastgelelik/saat yok.",
+ "adim": 7,
+ "yurutucu_token": {
+  "girdi": 18828,
+  "cikti": 14084
+ },
+ "yurutucu_usd": 0.0046996,
+ "bitirdi": true,
+ "sure_sn": 124.4,
+ "gizli": {
+  "gecti": true,
+  "gecen": 22,
+  "toplam": 22,
+  "cikti": "......................                                                   [100%]\n22 passed in 0.04s\n"
+ }
+}

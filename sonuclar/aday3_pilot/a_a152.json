@@ -1,0 +1,23 @@
+{
+ "id": "a152",
+ "kip": "a",
+ "kategori": "çok dosyalı küçük modül: iki-üç dosyaya bölünmüş, ortak hata sınıfları ve bir komut satırı girişi olan araç",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "Sakarya oto yıkama abonelik aracı yazıldı: hatalar.py (Hata/GirdiHatasi/BulunamadiHatasi/HakBittiHatasi), yikama.py (AbonelikYonetici: Türkçe plaka normalizasyonu, BASIC 4/800 PRO 8/1400, iade taban yuvarlama, HakBitti koruması, Türkçe sıralı listeleme, hata öncelik sırası) ve cli.py (ekle/kullan/iade komutları, TAMAM/HATA tek satır çıktı, dosya tabanlı kalıcılık). Yalnızca stdlib kullanıldı, CLI ve birim davranışlar test edildi.",
+ "adim": 12,
+ "yurutucu_token": {
+  "girdi": 80757,
+  "cikti": 40911
+ },
+ "yurutucu_usd": 0.016257900000000002,
+ "bitirdi": true,
+ "sure_sn": 334.2,
+ "gizli": {
+  "gecti": true,
+  "gecen": 20,
+  "toplam": 20,
+  "cikti": "....................                                                     [100%]\n20 passed in 0.39s\n"
+ }
+}

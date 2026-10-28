@@ -1,0 +1,23 @@
+{
+ "id": "a002",
+ "kip": "a",
+ "kategori": "KDV, tevkifat, stopaj, taksit ve kuruş yuvarlama (Decimal, ROUND_HALF_UP, satır bazında ve toplamda yuvarlama farkı)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "fatura.py içinde FaturaHesaplayici sınıfı uygulandı: Decimal + ROUND_HALF_UP ile satır bazında KDV yuvarlama, yalnızca 1/10/20 oran kabulü, matrah için str tip + en fazla 2 ondalık + pozitif kontrolü, tip-önce-değer-sonra sırası, açıklama strip + boş kontrolü, boş faturada sıfır Decimal toplamlar.",
+ "adim": 6,
+ "yurutucu_token": {
+  "girdi": 17256,
+  "cikti": 14491
+ },
+ "yurutucu_usd": 0.004623800000000001,
+ "bitirdi": true,
+ "sure_sn": 127.9,
+ "gizli": {
+  "gecti": true,
+  "gecen": 22,
+  "toplam": 22,
+  "cikti": "......................                                                   [100%]\n22 passed in 0.03s\n"
+ }
+}

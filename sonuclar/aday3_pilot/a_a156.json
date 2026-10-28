@@ -1,0 +1,23 @@
+{
+ "id": "a156",
+ "kip": "a",
+ "kategori": "tarih ve saat: resmî tatiller parametreyle, iş günü hesabı, Türkiye saat dilimi (UTC+3, yaz saati yok), gün/ay adları Türkçe",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "bulten_cli.py oluşturuldu: --tarih/--tatiller/--isgunu-ekle bayraklarını sırasız kabul eder, hata önceliğine (eksik bayrak, tarih biçim, takvimde olmayan gün, N tür-aralık, tatil biçim) uyar, iş günü hesabını Pazartesi-Cuma eksi tatillerle yapıp başlangıcı düzeltir ve N gün ekler, çıktıyı iki satır (ISO tarih ve Türkçe küçük harf gün-ay adıyla) verir; lower/upper kullanılmadan sabit küçük harf adlar yazıldı.",
+ "adim": 10,
+ "yurutucu_token": {
+  "girdi": 45931,
+  "cikti": 35549
+ },
+ "yurutucu_usd": 0.011702900000000002,
+ "bitirdi": true,
+ "sure_sn": 289.7,
+ "gizli": {
+  "gecti": true,
+  "gecen": 20,
+  "toplam": 20,
+  "cikti": "....................                                                     [100%]\n20 passed in 0.40s\n"
+ }
+}

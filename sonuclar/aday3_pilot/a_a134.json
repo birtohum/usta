@@ -1,0 +1,23 @@
+{
+ "id": "a134",
+ "kip": "a",
+ "kategori": "KDV, tevkifat, stopaj, taksit ve kuruş yuvarlama (Decimal, ROUND_HALF_UP, satır bazında ve toplamda yuvarlama farkı)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "sut_odemesi.py içinde sut_stopaj_hesapla(kalemler, stopaj_orani) fonksiyonunu yazdım. Her satırda matrah, KDV ve stopaj (KDV hariç matrah üzerinden) Decimal ile ROUND_HALF_UP kuruş yuvarlamalı hesaplanıyor; toplamlar, net ödenecek ve toplu-KDV eksi satır-KDV yuvarlama farkı döndürülüyor. kdv_orani (1/20) ve stopaj_orani (0/2/4) dışında ValueError; litre/birim_fiyat için önce tür (Decimal değilse TypeError) sonra değer (negatifse ValueError) denetimi; boş liste ve boş/blank üretici için ValueError; satırlar uretici casefold'a göre kararlı sıralı. Sonuç ve satır sözlükleri takma-adla okumaya izin veren dict alt sınıfı olarak dönüyor.",
+ "adim": 5,
+ "yurutucu_token": {
+  "girdi": 16082,
+  "cikti": 18308
+ },
+ "yurutucu_usd": 0.0052698,
+ "bitirdi": true,
+ "sure_sn": 148.2,
+ "gizli": {
+  "gecti": true,
+  "gecen": 21,
+  "toplam": 21,
+  "cikti": ".....................                                                    [100%]\n21 passed in 0.03s\n"
+ }
+}

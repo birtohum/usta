@@ -1,0 +1,23 @@
+{
+ "id": "a084",
+ "kip": "a",
+ "kategori": "KDV, tevkifat, stopaj, taksit ve kuruş yuvarlama (Decimal, ROUND_HALF_UP, satır bazında ve toplamda yuvarlama farkı)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "vade_farki.py yazıldı ve doğrulandı: Decimal+ROUND_HALF_UP hesaplar, kalan/vade farkı/%20 KDV, kuruş farkı son taksitte, 1-12 aralığı, peşinat/oran kontrolleri, TypeError/ValueError önceliği, casefold ödeme türü, stabil sıralama.",
+ "adim": 5,
+ "yurutucu_token": {
+  "girdi": 13155,
+  "cikti": 24519
+ },
+ "yurutucu_usd": 0.006219300000000001,
+ "bitirdi": true,
+ "sure_sn": 194.8,
+ "gizli": {
+  "gecti": true,
+  "gecen": 21,
+  "toplam": 21,
+  "cikti": ".....................                                                    [100%]\n21 passed in 0.03s\n"
+ }
+}

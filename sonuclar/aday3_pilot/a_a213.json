@@ -1,0 +1,23 @@
+{
+ "id": "a213",
+ "kip": "a",
+ "kategori": "Türkçe büyük/küçük harf (İ/i, I/ı), Türk alfabesiyle sıralama, sayıyı yazıya çevirme, ünlü uyumuna göre ek",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "tablo.py yazıldı: --satir doğrulama (2 kod), Türkçe duyarsız tekilleştirme, başlık biçimi, puan/averaj/alfabe sıralaması, --ust kesme, sayı yazısı, bulunma eki, --kucuk bayrağı ve boş liste desteği eklendi; testlerle doğrulandı.",
+ "adim": 10,
+ "yurutucu_token": {
+  "girdi": 34626,
+  "cikti": 61251
+ },
+ "yurutucu_usd": 0.015712800000000002,
+ "bitirdi": true,
+ "sure_sn": 503.0,
+ "gizli": {
+  "gecti": true,
+  "gecen": 20,
+  "toplam": 20,
+  "cikti": "....................                                                     [100%]\n20 passed in 0.43s\n"
+ }
+}

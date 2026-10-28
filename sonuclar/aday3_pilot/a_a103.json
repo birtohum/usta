@@ -1,0 +1,23 @@
+{
+ "id": "a103",
+ "kip": "a",
+ "kategori": "CSV/JSON ile çalışan ve uç durumları çok olan veri işleme (BOM, ; ayırıcı, 1.234,56 sayı biçimi, boş/bozuk satır)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "bilet_mutabakat.py içinde mutabakat() yazıldı: utf-8-sig + ';' CSV, Türkçe sayı çözümleme, %5 eşik indirimi ve komisyon ile ROUND_HALF_UP, Türkçe duyarsız gruplama/sıralama, hatalı satır sayımı ve hata öncelikleri uygulandı.",
+ "adim": 7,
+ "yurutucu_token": {
+  "girdi": 26493,
+  "cikti": 31600
+ },
+ "yurutucu_usd": 0.0089693,
+ "bitirdi": true,
+ "sure_sn": 264.4,
+ "gizli": {
+  "gecti": true,
+  "gecen": 20,
+  "toplam": 20,
+  "cikti": "....................                                                     [100%]\n20 passed in 0.06s\n"
+ }
+}

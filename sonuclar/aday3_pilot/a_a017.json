@@ -1,0 +1,23 @@
+{
+ "id": "a017",
+ "kip": "a",
+ "kategori": "çok dosyalı küçük modül: iki-üç dosyaya bölünmüş, ortak hata sınıfları ve bir komut satırı girişi olan araç",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "hatalar.py (BarkodHatasi, AdetHatasi → ValueError) ve stok.py (StokYoneticisi: ekle/dus/kalan/rapor, alfabetik + kararlı sıralama, tip→barkod→adet hata önceliği, 8/13 hane barkod, sıfır adet yasak, sıfıra düşme serbest/negatif yasak) yazıldı; yalnızca standart kütüphane kullanıldı, `python -m stok ekle --barkod ... --adet ...` ve `python -m stok rapor` (satır başına `barkod adet`) doğrulandı.",
+ "adim": 6,
+ "yurutucu_token": {
+  "girdi": 17445,
+  "cikti": 15851
+ },
+ "yurutucu_usd": 0.004914699999999999,
+ "bitirdi": true,
+ "sure_sn": 145.2,
+ "gizli": {
+  "gecti": true,
+  "gecen": 21,
+  "toplam": 21,
+  "cikti": ".....................                                                    [100%]\n21 passed in 0.22s\n"
+ }
+}

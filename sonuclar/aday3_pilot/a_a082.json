@@ -1,0 +1,23 @@
+{
+ "id": "a082",
+ "kip": "a",
+ "kategori": "çok dosyalı küçük modül: iki-üç dosyaya bölünmüş, ortak hata sınıfları ve bir komut satırı girişi olan araç",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "Denizli tekstil atölyesi kumaş fire aracı yazıldı: hatalar.py (ValueError'dan türeyen GirdiHatasi, PartiHatasi), kumas.py (Decimal ile santimetre hesabı yapan gerekli_miktar, Türkçe I/İ dönüşümü, hata önceliği), cli.py (--siparis/--fire/--top ile \"Top: N Artan: X m\" çıktısı). Doğrulandı: 120.5/5/100 -> 2 top, 73.47 m artan.",
+ "adim": 19,
+ "yurutucu_token": {
+  "girdi": 99600,
+  "cikti": 45600
+ },
+ "yurutucu_usd": 0.01908,
+ "bitirdi": true,
+ "sure_sn": 407.5,
+ "gizli": {
+  "gecti": false,
+  "gecen": 19,
+  "toplam": 22,
+  "cikti": "kod = 'KIRMIZI-01', kayitlar = None\n\n    def parti_dogrula(kod: str, kayitlar=None) -> str:\n        if kod is None:\n            raise GirdiHatasi(\"parti kodu bo\\u015f olamaz\")\n        if not isinstance(kod, str):\n            raise GirdiHatasi(\"parti kodu metin olmal\\u0131d\\u0131r\")\n        s = kod.strip()\n        if s == \"\":\n            raise GirdiHatasi(\"parti kodu bo\\u015f olamaz\")\n        norm_kod = tr_kucukharf(s)\n        kayit_set = _normalize_kayitlar(kayitlar)\n        if norm_kod not in kayit_set:\n>           raise PartiHatasi(\"parti kodu kay\\u0131tl\\u0131 de\\u011fil\")\nE           hatalar.PartiHatasi: parti kodu kayıtlı değil\n\nkumas.py:48: PartiHatasi\n______________________ test_19_hata_oncelik_sayisal_once _______________________\n\n    def test_19_hata_oncelik_sayisal_once():\n        with pytest.raises(hatalar.GirdiHatasi):\n>           kumas.parti_ile_hesapla(-5, 5, 100, \"bilinmeyen-999\")\nE           AttributeError: module 'kumas' has no attribute 'parti_ile_hesapla'\n\n.gizli/test_gizli.py:106: AttributeError\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_15_parti_bosluklari_silinir - hatalar.Parti...\nFAILED .gizli/test_gizli.py::test_18_parti_turkce_kucuk_harf - hatalar.PartiH...\nFAILED .gizli/test_gizli.py::test_19_hata_oncelik_sayisal_once - AttributeErr...\n3 failed, 19 passed in 0.11s\n"
+ }
+}

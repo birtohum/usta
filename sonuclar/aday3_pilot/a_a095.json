@@ -1,0 +1,23 @@
+{
+ "id": "a095",
+ "kip": "a",
+ "kategori": "Türkçe büyük/küçük harf (İ/i, I/ı), Türk alfabesiyle sıralama, sayıyı yazıya çevirme, ünlü uyumuna göre ek",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "derskitabi.py oluşturuldu: sayiyi_yaziya ve sira_sozcugu 0-9999 aralığında Türkçe yazım yapıyor, tip-önce-aralık-sonra denetimiyle TypeError/ValueError yükseltiyor, yüz/bin/yüz bir/bin yüz ve yüzüncü/bininci/birinci/onuncu/yedinci/altıncı kurallarına uyuyor.",
+ "adim": 8,
+ "yurutucu_token": {
+  "girdi": 29614,
+  "cikti": 12728
+ },
+ "yurutucu_usd": 0.005507000000000001,
+ "bitirdi": true,
+ "sure_sn": 122.0,
+ "gizli": {
+  "gecti": true,
+  "gecen": 24,
+  "toplam": 24,
+  "cikti": "........................                                                 [100%]\n24 passed in 0.03s\n"
+ }
+}

@@ -1,0 +1,23 @@
+{
+ "id": "a168",
+ "kip": "a",
+ "kategori": "CSV/JSON ile çalışan ve uç durumları çok olan veri işleme (BOM, ; ayırıcı, 1.234,56 sayı biçimi, boş/bozuk satır)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "yaprak_bidon.py içinde BidonTakip sınıfı yazıldı: utf-8-sig/;-çift tırnak CSV okuma, Türkçe sayı ayrıştırma, boş satır atlama, minimum kontrollü eşik okuma, Decimal HALF_UP yuvarlama, I/İ dönüşümlü köy gruplama ve Türkçe sıralı stok_durumu.",
+ "adim": 7,
+ "yurutucu_token": {
+  "girdi": 16527,
+  "cikti": 33381
+ },
+ "yurutucu_usd": 0.008328900000000002,
+ "bitirdi": true,
+ "sure_sn": 301.2,
+ "gizli": {
+  "gecti": false,
+  "gecen": 13,
+  "toplam": 22,
+  "cikti": "tf8_sig_ve_tirnak(tmp_path):\n        c = tmp_path / 'b.csv'\n        j = tmp_path / 'e.json'\n        with open(c, 'w', encoding='utf-8-sig', newline='') as f:\n            w = csv.writer(f, delimiter=';', quotechar='\"', quoting=csv.QUOTE_MINIMAL)\n            w.writerow(BASLIK)\n            w.writerow(['B1', 'Tokat', '10,0', '5,0'])\n            w.writerow(['B2', 'Tokat', '2,5', '5,0'])\n        with open(j, 'w', encoding='utf-8-sig') as f:\n            json.dump({'minimum': 12.5}, f)\n        b = BidonTakip()\n        b.bidon_ekle(str(c))\n        s = b.stok_durumu(str(j))\n>       assert abs(s[0]['toplam_kg'] - 12.5) < 1e-9\nE       KeyError: 'toplam_kg'\n\n.gizli/test_gizli.py:242: KeyError\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_temel_toplam_ve_yeterli - KeyError: 'toplam...\nFAILED .gizli/test_gizli.py::test_binlik_nokta_cozumu - KeyError: 'toplam_kg'\nFAILED .gizli/test_gizli.py::test_bos_satirlar_atlanir - KeyError: 'toplam_kg'\nFAILED .gizli/test_gizli.py::test_birikimli_ekleme - KeyError: 'toplam_kg'\nFAILED .gizli/test_gizli.py::test_koy_gruplama_I_i - KeyError: 'toplam_kg'\nFAILED .gizli/test_gizli.py::test_koy_bosluk_temizleme - KeyError: 'toplam_kg'\nFAILED .gizli/test_gizli.py::test_yuvarlama_half_up - KeyError: 'toplam_kg'\nFAILED .gizli/test_gizli.py::test_siralama_toplam_azalan - KeyError: 'toplam_kg'\nFAILED .gizli/test_gizli.py::test_utf8_sig_ve_tirnak - KeyError: 'toplam_kg'\n9 failed, 13 passed in 0.13s\n"
+ }
+}

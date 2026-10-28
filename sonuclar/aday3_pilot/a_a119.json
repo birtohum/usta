@@ -1,0 +1,23 @@
+{
+ "id": "a119",
+ "kip": "a",
+ "kategori": "KDV, tevkifat, stopaj, taksit ve kuruş yuvarlama (Decimal, ROUND_HALF_UP, satır bazında ve toplamda yuvarlama farkı)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "fark.py yazıldı: Decimal + ROUND_HALF_UP satır yuvarlama, hata önceliği ve sıralama kuralları uygulandı.",
+ "adim": 9,
+ "yurutucu_token": {
+  "girdi": 32356,
+  "cikti": 36949
+ },
+ "yurutucu_usd": 0.0106254,
+ "bitirdi": true,
+ "sure_sn": 304.0,
+ "gizli": {
+  "gecti": true,
+  "gecen": 20,
+  "toplam": 20,
+  "cikti": "....................                                                     [100%]\n20 passed in 0.03s\n"
+ }
+}

@@ -1,0 +1,23 @@
+{
+ "id": "a033",
+ "kip": "a",
+ "kategori": "Türkçe büyük/küçük harf (İ/i, I/ı), Türk alfabesiyle sıralama, sayıyı yazıya çevirme, ünlü uyumuna göre ek",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "kart.py dosyasında MusteriKart sınıfı yazıldı: TypeError denetimi önce, boş isim ve rakamla başlayan sözcük için ValueError, Türkçe'ye uygun baş harf büyütme (i→İ, I→ı, İ→i, ı→I), boşluk normalizasyonu, tireli parçaların ayrı baş harf büyütülmesi, hitap() içinde son sözcüğün son ünlüsüne göre a/e eki, ünlüyle bitende y kaynaştırması ve Sayın öneki eklendi.",
+ "adim": 3,
+ "yurutucu_token": {
+  "girdi": 6252,
+  "cikti": 10337
+ },
+ "yurutucu_usd": 0.0026926000000000003,
+ "bitirdi": true,
+ "sure_sn": 83.6,
+ "gizli": {
+  "gecti": true,
+  "gecen": 21,
+  "toplam": 21,
+  "cikti": ".....................                                                    [100%]\n21 passed in 0.03s\n"
+ }
+}

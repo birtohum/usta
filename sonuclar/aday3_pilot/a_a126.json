@@ -1,0 +1,23 @@
+{
+ "id": "a126",
+ "kip": "a",
+ "kategori": "tarih ve saat: resmî tatiller parametreyle, iş günü hesabı, Türkiye saat dilimi (UTC+3, yaz saati yok), gün/ay adları Türkçe",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "tir_park.py içinde TirParki sınıfı yazıldı: Türkçe büyük harf plaka normalizasyonu (i→İ), sıkı tarih/ tatil biçimi denetimi, tatil listesinin kopyalanması, iş günü sayımı (Pzt–Cuma eksi tatiller, aynı gün=1), ücret kademesi (ilk 2 ücretsiz, 3–7 arası 400, 8+ 650) ve hata önceliği (plaka boşluğu → tarih biçimi → KeyError/ValueError) uygulandı.",
+ "adim": 5,
+ "yurutucu_token": {
+  "girdi": 16410,
+  "cikti": 26332
+ },
+ "yurutucu_usd": 0.006907400000000001,
+ "bitirdi": true,
+ "sure_sn": 220.1,
+ "gizli": {
+  "gecti": true,
+  "gecen": 22,
+  "toplam": 22,
+  "cikti": "......................                                                   [100%]\n22 passed in 0.03s\n"
+ }
+}

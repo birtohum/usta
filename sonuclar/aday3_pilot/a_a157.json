@@ -1,0 +1,23 @@
+{
+ "id": "a157",
+ "kip": "a",
+ "kategori": "çok dosyalı küçük modül: iki-üç dosyaya bölünmüş, ortak hata sınıfları ve bir komut satırı girişi olan araç",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "hatalar.py, mermer.py ve cli.py yazıldı. Hata hiyerarşisi, Türkçe normalizasyon (i→İ), döndürmeli kesim hesabı, en_verimli_blok ve CLI çıktı biçimi (ADET/HATA) doğrulandı.",
+ "adim": 18,
+ "yurutucu_token": {
+  "girdi": 105620,
+  "cikti": 84668
+ },
+ "yurutucu_usd": 0.027495599999999995,
+ "bitirdi": true,
+ "sure_sn": 734.5,
+ "gizli": {
+  "gecti": false,
+  "gecen": 19,
+  "toplam": 21,
+  "cikti": "        if norm not in self._bloklar:\n            raise GirdiHatasi(\"blok bulunamadı\")\n        ben, bboy = self._bloklar[norm]\n        eff_en = plaka_en + pay_mm\n        eff_boy = plaka_boy + pay_mm\n        a1 = (ben // eff_en) * (bboy // eff_boy)\n        a2 = (ben // eff_boy) * (bboy // eff_en)\n        adet = a1 if a1 >= a2 else a2\n        if adet <= 0:\n>           raise SigdirilamazHatasi(\"plaka sığmıyor\")\nE           hatalar.SigdirilamazHatasi: plaka sığmıyor\n\nmermer.py:63: SigdirilamazHatasi\n_________________________ test_13_kesim_girdi_kontrol __________________________\n\n    def test_13_kesim_girdi_kontrol():\n        s = BlokStogu()\n        s.blok_ekle(\"G\", 500, 500)\n        with pytest.raises(GirdiHatasi):\n            s.kesim_hesapla(\"G\", 0, 100, 5)\n        with pytest.raises(GirdiHatasi):\n            s.kesim_hesapla(\"G\", 100, -1, 5)\n>       with pytest.raises(GirdiHatasi):\nE       Failed: DID NOT RAISE <class 'hatalar.GirdiHatasi'>\n\n.gizli/test_gizli.py:120: Failed\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_08_tam_esit_sigar - hatalar.SigdirilamazHat...\nFAILED .gizli/test_gizli.py::test_13_kesim_girdi_kontrol - Failed: DID NOT RA...\n2 failed, 19 passed in 0.27s\n"
+ }
+}

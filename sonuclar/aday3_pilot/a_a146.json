@@ -1,0 +1,23 @@
+{
+ "id": "a146",
+ "kip": "a",
+ "kategori": "tarih ve saat: resmî tatiller parametreyle, iş günü hesabı, Türkiye saat dilimi (UTC+3, yaz saati yok), gün/ay adları Türkçe",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "sulama.py yazıldı: SulamaNobeti sınıfı TR saati (UTC+3), Türkçe küçük harf (I→ı, İ→i), iş günü (Pzt-Cuma eksi tatiller), round-robin dağıtım, hata önceliği (üye boşluk → tarih/hafta → KeyError → tatil biçimi) ve belirtilen dönüş biçimleriyle uygulandı.",
+ "adim": 11,
+ "yurutucu_token": {
+  "girdi": 33253,
+  "cikti": 70030
+ },
+ "yurutucu_usd": 0.0173313,
+ "bitirdi": true,
+ "sure_sn": 631.6,
+ "gizli": {
+  "gecti": true,
+  "gecen": 23,
+  "toplam": 23,
+  "cikti": ".......................                                                  [100%]\n23 passed in 0.03s\n"
+ }
+}

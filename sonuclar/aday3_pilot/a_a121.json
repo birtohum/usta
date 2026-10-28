@@ -1,0 +1,23 @@
+{
+ "id": "a121",
+ "kip": "a",
+ "kategori": "tarih ve saat: resmî tatiller parametreyle, iş günü hesabı, Türkiye saat dilimi (UTC+3, yaz saati yok), gün/ay adları Türkçe",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "kutuphane.py içinde gecikme_cezasi(son_teslim, iade, tatiller) yazıldı: yalnızca YYYY-AA-GG kabul edip saat dilimi ekini reddeder, hata önceliği (ana biçim → ana takvim → tatil hatası) ile ValueError yükseltir, iş gününü Pzt–Cuma eksi tatiller (set ile tekilleştirme) olarak sayar, ücreti Decimal ile ilk 5 gün 7.50 TL + sonrası 12 TL ve HALF_UP yuvarlama ile hesaplar, iade gününü GG ay YYYY gün biçiminde Türkçe tablodan küçük harfle yazar ve İngilizce lower kullanmadan I→ı / İ→i dönüşümü uygular.",
+ "adim": 3,
+ "yurutucu_token": {
+  "girdi": 8842,
+  "cikti": 7912
+ },
+ "yurutucu_usd": 0.0024666,
+ "bitirdi": true,
+ "sure_sn": 66.7,
+ "gizli": {
+  "gecti": true,
+  "gecen": 21,
+  "toplam": 21,
+  "cikti": ".....................                                                    [100%]\n21 passed in 0.03s\n"
+ }
+}

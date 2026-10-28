@@ -1,0 +1,23 @@
+{
+ "id": "a025",
+ "kip": "a",
+ "kategori": "Türkiye'ye özgü kimlik ve hesap numaraları (TC kimlik, VKN, IBAN, MERSİS, plaka, telefon) — birden çok kuralın birlikte uygulandığı",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "hesap_no_uretici.py içinde tc_tamamla, vkn_tamamla, iban_kontrol_hanesi_hesapla ve mersis_tamamla işlevleri yazıldı; TC/VKN/MERSIS/IBAN-MOD97 formülleri, hata öncelik sırası (tip, boş, uzunluk, rakam, ilk hane) ve iki haneli kontrol hanesi kurallarına uygun, stdout'a yazmayan ve yalnızca standart kütüphanesiz saf Python kullanan şekilde doğrulandı.",
+ "adim": 4,
+ "yurutucu_token": {
+  "girdi": 12318,
+  "cikti": 14959
+ },
+ "yurutucu_usd": 0.0042236,
+ "bitirdi": true,
+ "sure_sn": 112.8,
+ "gizli": {
+  "gecti": true,
+  "gecen": 21,
+  "toplam": 21,
+  "cikti": ".....................                                                    [100%]\n21 passed in 0.05s\n"
+ }
+}

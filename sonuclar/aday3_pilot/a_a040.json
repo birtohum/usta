@@ -1,0 +1,23 @@
+{
+ "id": "a040",
+ "kip": "a",
+ "kategori": "tarih ve saat: resmî tatiller parametreyle, iş günü hesabı, Türkiye saat dilimi (UTC+3, yaz saati yok), gün/ay adları Türkçe",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "nobet.py içinde NobetCizelgesi sınıfını gerçekledim: iş günü kontrolü (hafta sonu/tatil dışı), ata'da TypeError-öncelikli doğrulama ve yinelenen/sınır kontrolleri, 30 günlük pencerede en-az-yüklüye Türkçe duyarsız alfabetik (sonra duyarlı) dağıtım yapan bos_gunleri_doldur, Türkçe gün adı döndüren gun_adi_tr ve (tarih, personel) sıralı ozet. Davranışları manuel testlerle doğruladım.",
+ "adim": 6,
+ "yurutucu_token": {
+  "girdi": 17357,
+  "cikti": 27750
+ },
+ "yurutucu_usd": 0.007285700000000001,
+ "bitirdi": true,
+ "sure_sn": 242.2,
+ "gizli": {
+  "gecti": true,
+  "gecen": 20,
+  "toplam": 20,
+  "cikti": "....................                                                     [100%]\n20 passed in 0.04s\n"
+ }
+}

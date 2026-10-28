@@ -1,0 +1,23 @@
+{
+ "id": "a139",
+ "kip": "a",
+ "kategori": "KDV, tevkifat, stopaj, taksit ve kuruş yuvarlama (Decimal, ROUND_HALF_UP, satır bazında ve toplamda yuvarlama farkı)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "seramik.py içinde TevkifatliSatisHesabi sınıfını yazdım: satir_ekle önce matrah türünü denetler (Decimal değilse TypeError, negatifse ValueError), kdv_orani 10/20 ve normalize edilmiş tevkifat_payi (boşluklar yoksayılır) dışında ValueError fırlatır; satır KDV ve tevkifat tutarları yalnızca Decimal ile ROUND_HALF_UP kuruş yuvarlamasıyla hesaplanır, tahsil = matrah + KDV - tevkifat bulunur. ozet_hesapla toplam matrah/KDV/tevkifat/tahsil ile satır toplamı eksi teorik KDV yuvarlama farkını döndürür (boşken sıfır Decimal'ler, fark sıfırken de alan korunur); sonuç dict alt sınıfıyla yaygın anahtar adlarına dayanıklıdır.",
+ "adim": 10,
+ "yurutucu_token": {
+  "girdi": 43432,
+  "cikti": 19940
+ },
+ "yurutucu_usd": 0.0083312,
+ "bitirdi": true,
+ "sure_sn": 182.4,
+ "gizli": {
+  "gecti": true,
+  "gecen": 20,
+  "toplam": 20,
+  "cikti": "....................                                                     [100%]\n20 passed in 0.03s\n"
+ }
+}

@@ -1,0 +1,23 @@
+{
+ "id": "a172",
+ "kip": "a",
+ "kategori": "çok dosyalı küçük modül: iki-üç dosyaya bölünmüş, ortak hata sınıfları ve bir komut satırı girişi olan araç",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "hatalar.py, depo.py ve cli.py yazıldı. DepoTakip; Türkçe normalleştirme (i→İ), taban fire, eşitlik satışa izin, (kilo, id) sıralama ve hata önceliğini uygular. CLI başarıda STOK:<id>:<kilo>, hatada HATA:<Sınıf> ile çıkış 1 verir.",
+ "adim": 16,
+ "yurutucu_token": {
+  "girdi": 55910,
+  "cikti": 33037
+ },
+ "yurutucu_usd": 0.012198399999999998,
+ "bitirdi": true,
+ "sure_sn": 302.1,
+ "gizli": {
+  "gecti": true,
+  "gecen": 23,
+  "toplam": 23,
+  "cikti": ".......................                                                  [100%]\n23 passed in 0.16s\n"
+ }
+}

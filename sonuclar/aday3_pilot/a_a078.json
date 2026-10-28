@@ -1,0 +1,23 @@
+{
+ "id": "a078",
+ "kip": "a",
+ "kategori": "CSV/JSON ile çalışan ve uç durumları çok olan veri işleme (BOM, ; ayırıcı, 1.234,56 sayı biçimi, boş/bozuk satır)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "ihracat_paket.py yazıldı: paketle() CSV'yi utf-8-sig, delimiter=';', quotechar='\"' ile okur; boş satırları atlar, sütun uyumsuzluğunda ValueError verir; sayıları binlik nokta silip virgül-nokta çevirisiyle Decimal ile ayrıştırıp ROUND_HALF_UP ile 2 basamağa yuvarlar; Türkçe küçük harf (I->ı, İ->i) normalizasyonla eşleştirir; tam eşit stokta karşılar, bir eksikte eksik sayar, negatif adette ValueError verir; hata önceliği JSON-yok/CSV-yok/JSON-bozuk/CSV-bozuk sırasıyla; boş siparişte sıfır sonuç; çıktıda toplam_agirlik, eksik_urunler, paketler (ağırlık azalan, eşitlikte Türkçe alfabetik) döndürür, ilk görülen yazımı korur.",
+ "adim": 10,
+ "yurutucu_token": {
+  "girdi": 35037,
+  "cikti": 37933
+ },
+ "yurutucu_usd": 0.011090300000000003,
+ "bitirdi": true,
+ "sure_sn": 324.5,
+ "gizli": {
+  "gecti": true,
+  "gecen": 22,
+  "toplam": 22,
+  "cikti": "......................                                                   [100%]\n22 passed in 0.06s\n"
+ }
+}

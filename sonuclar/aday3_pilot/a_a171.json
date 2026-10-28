@@ -1,0 +1,23 @@
+{
+ "id": "a171",
+ "kip": "a",
+ "kategori": "tarih ve saat: resmî tatiller parametreyle, iş günü hesabı, Türkiye saat dilimi (UTC+3, yaz saati yok), gün/ay adları Türkçe",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "cicek_takvim.py oluşturuldu: CicekAboneligi(tatiller) sınıfı; UTC damgaları +3h sabit ekleyip saniyeyi atarak güne çevirir, başlangıç dahil ileriye tarayıp haftalık günlere uyan ve tatilde olmayan tarihleri seçer, adet 0 ise boş liste, boş haftalık günlerde ve hatalı tarih/eksi adette ValueError (önce tarih denetlenir), tr_gun Türkçe gün adı döndürür ve küçük harfte I→ı dönüşümü yapar. Yalnızca standart kütüphane kullanıldı.",
+ "adim": 5,
+ "yurutucu_token": {
+  "girdi": 14759,
+  "cikti": 15923
+ },
+ "yurutucu_usd": 0.004660500000000001,
+ "bitirdi": true,
+ "sure_sn": 126.2,
+ "gizli": {
+  "gecti": true,
+  "gecen": 20,
+  "toplam": 20,
+  "cikti": "....................                                                     [100%]\n20 passed in 0.02s\n"
+ }
+}

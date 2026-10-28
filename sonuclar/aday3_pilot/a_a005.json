@@ -1,0 +1,23 @@
+{
+ "id": "a005",
+ "kip": "a",
+ "kategori": "çok dosyalı küçük modül: iki-üç dosyaya bölünmüş, ortak hata sınıfları ve bir komut satırı girişi olan araç",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "hatalar.py (GirdiHatasi/OranHatasi hiyerarşisi) ve fatura.py (half-up yuvarlamalı kdv_ekle, toplu_hesapla, tip>oran>tutar önceliği ve tek satır JSON yazan `python -m fatura hesapla` CLI) yazıldı; tüm kurallar testlerle doğrulandı.",
+ "adim": 5,
+ "yurutucu_token": {
+  "girdi": 13743,
+  "cikti": 16779
+ },
+ "yurutucu_usd": 0.0047301,
+ "bitirdi": true,
+ "sure_sn": 135.1,
+ "gizli": {
+  "gecti": true,
+  "gecen": 20,
+  "toplam": 20,
+  "cikti": "....................                                                     [100%]\n20 passed in 0.11s\n"
+ }
+}

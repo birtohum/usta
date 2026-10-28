@@ -1,0 +1,23 @@
+{
+ "id": "a141",
+ "kip": "a",
+ "kategori": "tarih ve saat: resmî tatiller parametreyle, iş günü hesabı, Türkiye saat dilimi (UTC+3, yaz saati yok), gün/ay adları Türkçe",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "vardiya.py içinde VardiyaPlani sınıfı yazıldı.",
+ "adim": 4,
+ "yurutucu_token": {
+  "girdi": 7340,
+  "cikti": 34234
+ },
+ "yurutucu_usd": 0.0075808,
+ "bitirdi": true,
+ "sure_sn": 286.2,
+ "gizli": {
+  "gecti": false,
+  "gecen": 13,
+  "toplam": 21,
+  "cikti": "     p = VardiyaPlani([\"kotu-tarih\"])\n\n.gizli/test_gizli.py:121: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \nvardiya.py:86: in __init__\n    self._tatil_gunleri = _tatil_set(self._tatiller_raw)\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\ntatiller = ['kotu-tarih']\n\n    def _tatil_set(tatiller) -> set:\n        if not isinstance(tatiller, list):\n            raise TatilBicimHatasi(\"tatil biçim hatası\")\n        s = set()\n        for t in tatiller:\n            if not isinstance(t, str) or not _TARIH_RE.match(t):\n>               raise TatilBicimHatasi(\"tatil biçim hatası\")\nE               vardiya.TatilBicimHatasi: tatil biçim hatası\n\nvardiya.py:74: TatilBicimHatasi\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_basic_next_day - AssertionError: assert [('...\nFAILED .gizli/test_gizli.py::test_weekend_skip_friday_plus_one - AssertionErr...\nFAILED .gizli/test_gizli.py::test_holiday_skip - AssertionError: assert '2024...\nFAILED .gizli/test_gizli.py::test_saturday_start - AssertionError: assert '20...\nFAILED .gizli/test_gizli.py::test_sunday_never_workday - AssertionError: asse...\nFAILED .gizli/test_gizli.py::test_holiday_error_not_valueerror - vardiya.Tati...\nFAILED .gizli/test_gizli.py::test_priority_personnel_over_holiday - vardiya.T...\nFAILED .gizli/test_gizli.py::test_priority_isgunu_over_holiday - vardiya.Tati...\n8 failed, 13 passed in 0.05s\n"
+ }
+}

@@ -1,0 +1,23 @@
+{
+ "id": "a105",
+ "kip": "a",
+ "kategori": "Türkçe büyük/küçük harf (İ/i, I/ı), Türk alfabesiyle sıralama, sayıyı yazıya çevirme, ünlü uyumuna göre ek",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "anket.py içinde cogul_ekle ve soru_eki_ekle yazıldı: son ünlüye göre lar/ler bitişik küçük, mı/mi/mu/mü tek boşlukla ayrı küçük; strip, tek sözcük, TypeError/ValueError sırası ve a→alar, e→eler sınır durumları uygulandı, Türkçe harfler korundu.",
+ "adim": 9,
+ "yurutucu_token": {
+  "girdi": 30301,
+  "cikti": 7814
+ },
+ "yurutucu_usd": 0.0045929000000000005,
+ "bitirdi": true,
+ "sure_sn": 80.1,
+ "gizli": {
+  "gecti": true,
+  "gecen": 20,
+  "toplam": 20,
+  "cikti": "....................                                                     [100%]\n20 passed in 0.04s\n"
+ }
+}

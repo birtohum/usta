@@ -1,0 +1,23 @@
+{
+ "id": "a064",
+ "kip": "a",
+ "kategori": "tarih ve saat: resmî tatiller parametreyle, iş günü hesabı, Türkiye saat dilimi (UTC+3, yaz saati yok), gün/ay adları Türkçe",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "hasat_rapor.py yazıldı: hasat_ozeti UTC ISO'yu TR'ye çevirir, tatilleri ayırır, Türkçe özet üretir.",
+ "adim": 7,
+ "yurutucu_token": {
+  "girdi": 19041,
+  "cikti": 37939
+ },
+ "yurutucu_usd": 0.009491900000000003,
+ "bitirdi": true,
+ "sure_sn": 327.9,
+ "gizli": {
+  "gecti": true,
+  "gecen": 20,
+  "toplam": 20,
+  "cikti": "....................                                                     [100%]\n20 passed in 0.04s\n"
+ }
+}

@@ -1,0 +1,23 @@
+{
+ "id": "a014",
+ "kip": "a",
+ "kategori": "KDV, tevkifat, stopaj, taksit ve kuruş yuvarlama (Decimal, ROUND_HALF_UP, satır bazında ve toplamda yuvarlama farkı)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "makbuz.py içinde SerbestMeslekMakbuzu sınıfı oluşturuldu: Decimal ile %20 stopaj (brüt üzerinden, gider toplamı 5000'i aşarsa giderlerin tamamı matraha eklenir) ve %20 KDV (brüt+gider üzerinden), ROUND_HALF_UP yuvarlama, TypeError/ValueError önceliği ve sıfır/negatif reddi kurallarıyla ozet ve ek_gider uygulandı.",
+ "adim": 3,
+ "yurutucu_token": {
+  "girdi": 7005,
+  "cikti": 9805
+ },
+ "yurutucu_usd": 0.0026615000000000002,
+ "bitirdi": true,
+ "sure_sn": 75.8,
+ "gizli": {
+  "gecti": true,
+  "gecen": 20,
+  "toplam": 20,
+  "cikti": "....................                                                     [100%]\n20 passed in 0.03s\n"
+ }
+}

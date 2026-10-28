@@ -1,0 +1,23 @@
+{
+ "id": "a029",
+ "kip": "a",
+ "kategori": "çok dosyalı küçük modül: iki-üç dosyaya bölünmüş, ortak hata sınıfları ve bir komut satırı girişi olan araç",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "hatalar.py (SaatHatasi, CakismaHatasi) ve randevu.py (RandevuTakvimi: ekle/iptal/liste + CLI ekle/liste) yazıldı; HH:MM doğrulama, yarı-açık aralık çakışma kuralı, sıralama ve hata önceliği uygulandı, test edildi.",
+ "adim": 7,
+ "yurutucu_token": {
+  "girdi": 23256,
+  "cikti": 14915
+ },
+ "yurutucu_usd": 0.005308599999999999,
+ "bitirdi": true,
+ "sure_sn": 124.7,
+ "gizli": {
+  "gecti": false,
+  "gecen": 20,
+  "toplam": 21,
+  "cikti": ".............F.......                                                    [100%]\n=================================== FAILURES ===================================\n____________________ test_liste_esit_baslangic_kimlige_gore ____________________\n\n    def test_liste_esit_baslangic_kimlige_gore():\n        t = RandevuTakvimi()\n        t.ekle(\"09:00\", \"09:30\")\n        t._randevular.append({\"kimlik\": \"5\", \"baslangic\": \"10:00\", \"bitis\": \"10:30\"})\n        t._randevular.append({\"kimlik\": \"3\", \"baslangic\": \"10:00\", \"bitis\": \"10:30\"})\n>       lst = t.liste()\n\n.gizli/test_gizli.py:107: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \nrandevu.py:87: in liste\n    siralı = sorted(\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nr = {'baslangic': '10:00', 'bitis': '10:30', 'kimlik': '5'}\n\n>       key=lambda r: (r[\"_bdk\"], int(r[\"kimlik\"])),\n    )\nE   KeyError: '_bdk'\n\nrandevu.py:89: KeyError\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_liste_esit_baslangic_kimlige_gore - KeyErro...\n1 failed, 20 passed in 0.11s\n"
+ }
+}

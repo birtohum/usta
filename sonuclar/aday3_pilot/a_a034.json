@@ -1,0 +1,23 @@
+{
+ "id": "a034",
+ "kip": "a",
+ "kategori": "tarih ve saat: resmî tatiller parametreyle, iş günü hesabı, Türkiye saat dilimi (UTC+3, yaz saati yok), gün/ay adları Türkçe",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "turkce_tarih.py oluşturuldu: turkce_kucuk I->ı, İ->i ve diğerleri lower ile Türkçe küçültme yapar (str değilse TypeError); tarihi_cozumle strip+split ile 3 parça bekler, gün/yıl ASCII rakam kontrolü, ay adı turkce_kucuk+çğışöü duyarsız normalize ile eşleştirilir, date(yıl,ay,gün) ile Gregoryen artık yıl dahil doğrulanır, tatiller None ise yok sayılır ve sonuç aynen döndürülür, hata önceliği TypeError sonra ValueError.",
+ "adim": 5,
+ "yurutucu_token": {
+  "girdi": 10542,
+  "cikti": 12654
+ },
+ "yurutucu_usd": 0.003585,
+ "bitirdi": true,
+ "sure_sn": 106.8,
+ "gizli": {
+  "gecti": true,
+  "gecen": 20,
+  "toplam": 20,
+  "cikti": "....................                                                     [100%]\n20 passed in 0.03s\n"
+ }
+}

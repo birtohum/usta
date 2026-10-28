@@ -1,0 +1,23 @@
+{
+ "id": "a079",
+ "kip": "a",
+ "kategori": "KDV, tevkifat, stopaj, taksit ve kuruş yuvarlama (Decimal, ROUND_HALF_UP, satır bazında ve toplamda yuvarlama farkı)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "ihracat.py içinde ihrac_kayitli_satis_hesapla fonksiyonu yazıldı: tüm hesaplar Decimal + ROUND_HALF_UP ile kuruşa yuvarlanır, TL matrah ve tecil KDV sırayla hesaplanır, kur_yuvarlama_farki ve genel_toplam (tecil hariç) raporlanır, FOB/CIF casefold+CİF uyumu, kur-öncelikli TypeError/ValueError kontrolleri ve stabil masraf sıralaması uygulandı.",
+ "adim": 3,
+ "yurutucu_token": {
+  "girdi": 8321,
+  "cikti": 12340
+ },
+ "yurutucu_usd": 0.0033001,
+ "bitirdi": true,
+ "sure_sn": 91.2,
+ "gizli": {
+  "gecti": true,
+  "gecen": 22,
+  "toplam": 22,
+  "cikti": "......................                                                   [100%]\n22 passed in 0.03s\n"
+ }
+}

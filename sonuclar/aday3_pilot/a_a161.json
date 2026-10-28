@@ -1,0 +1,23 @@
+{
+ "id": "a161",
+ "kip": "a",
+ "kategori": "tarih ve saat: resmî tatiller parametreyle, iş günü hesabı, Türkiye saat dilimi (UTC+3, yaz saati yok), gün/ay adları Türkçe",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "baski_cli.py yazıldı: UTC+3 sabit ofset, iş günü hesabı (başlangıç hariç/bitiş dahil, süre 0 kaydırma), Türkçe ay/gün adları ve Türkçe küçük harf dönüşümü (I→ı, İ→i), saniye atma, ValueError/SystemExit önceliği uygulandı. Örnek çağrı 20 Mart 2025 Perşembe çıktısını veriyor.",
+ "adim": 12,
+ "yurutucu_token": {
+  "girdi": 85632,
+  "cikti": 36448
+ },
+ "yurutucu_usd": 0.0158528,
+ "bitirdi": true,
+ "sure_sn": 329.4,
+ "gizli": {
+  "gecti": true,
+  "gecen": 20,
+  "toplam": 20,
+  "cikti": "....................                                                     [100%]\n20 passed in 0.76s\n"
+ }
+}

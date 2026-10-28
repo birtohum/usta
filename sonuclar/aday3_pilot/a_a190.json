@@ -1,0 +1,23 @@
+{
+ "id": "a190",
+ "kip": "a",
+ "kategori": "Türkçe büyük/küçük harf (İ/i, I/ı), Türk alfabesiyle sıralama, sayıyı yazıya çevirme, ünlü uyumuna göre ek",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "etiket.py oluşturuldu: baslik_yap ve cogul_ekle işlevleri Türkçe kurallara uygun yazıldı. Tip denetimi en başta TypeError veriyor, boş/boşluk girdi \"\" dönüyor, Türkçe i/I/İ/ı dönüşümleri, ve/ile/veya küçük bırakma, son ünlüye göre lar/ler, sert ünsüzde değişmeme ve tek harfe doğrudan ek kuralları uygulandı.",
+ "adim": 4,
+ "yurutucu_token": {
+  "girdi": 7937,
+  "cikti": 9496
+ },
+ "yurutucu_usd": 0.0026929000000000002,
+ "bitirdi": true,
+ "sure_sn": 85.6,
+ "gizli": {
+  "gecti": true,
+  "gecen": 21,
+  "toplam": 21,
+  "cikti": ".....................                                                    [100%]\n21 passed in 0.02s\n"
+ }
+}

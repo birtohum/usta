@@ -1,0 +1,23 @@
+{
+ "id": "a117",
+ "kip": "a",
+ "kategori": "çok dosyalı küçük modül: iki-üç dosyaya bölünmüş, ortak hata sınıfları ve bir komut satırı girişi olan araç",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "Bolu kooperatifi istif hacim aracı yazıldı: hatalar.py (OdunHatasi, NemHatasi), odun.py (ster_hesapla: tip→tur→ölçü→nem önceliği, ceil litre, CAM 2/MESE 3/GURGEN 4 kuruş, nem≥26 %10 floor indirim), cli.py (--en/--boy/--yukseklik/--nem/--tur, başarıda LITRE:x:UCRET:y, hatada stderr HATA:mesaj + çıkış 2). Tüm sınır ve öncelik durumları test edildi.",
+ "adim": 7,
+ "yurutucu_token": {
+  "girdi": 24276,
+  "cikti": 9050
+ },
+ "yurutucu_usd": 0.004237599999999999,
+ "bitirdi": true,
+ "sure_sn": 81.7,
+ "gizli": {
+  "gecti": true,
+  "gecen": 22,
+  "toplam": 22,
+  "cikti": "......................                                                   [100%]\n22 passed in 0.13s\n"
+ }
+}

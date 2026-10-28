@@ -1,0 +1,23 @@
+{
+ "id": "a199",
+ "kip": "a",
+ "kategori": "KDV, tevkifat, stopaj, taksit ve kuruş yuvarlama (Decimal, ROUND_HALF_UP, satır bazında ve toplamda yuvarlama farkı)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "aksaray_yem.py yazıldı: YemStopajDefteri sınıfı Decimal+ROUND_HALF_UP ile stopaj/net/KDV/prim hesaplar, %2/%4 dışı ValueError, tür hatasında TypeError, Türkçe i→İ dönüşümü ve net azalan + Türkçe alfabetik sıralama uygulandı.",
+ "adim": 4,
+ "yurutucu_token": {
+  "girdi": 12545,
+  "cikti": 22489
+ },
+ "yurutucu_usd": 0.005752300000000001,
+ "bitirdi": true,
+ "sure_sn": 187.8,
+ "gizli": {
+  "gecti": false,
+  "gecen": 20,
+  "toplam": 22,
+  "cikti": "        d.ekle(\"ali\", \"arpa\", \"100.00\", \"2\")\n        d.ekle(\"veli\", \"arpa\", \"1000.00\", \"2\")\n        o = d.ozet()\n        liste = o[\"ureticiler\"]\n        adlar = [e[\"uretici\"] for e in liste]\n>       assert adlar[0] == \"VEL\\u0130\"\nE       AssertionError: assert 'veli' == 'VELİ'\nE         - VELİ\nE         + veli\n\n.gizli/test_gizli.py:129: AssertionError\n____________________ test_uretici_siralama_turkce_alfabetik ____________________\n\n    def test_uretici_siralama_turkce_alfabetik():\n        d = YemStopajDefteri()\n        d.ekle(\"tana\", \"arpa\", \"100.00\", \"2\")\n        d.ekle(\"\\u015Fana\", \"arpa\", \"100.00\", \"2\")\n        o = d.ozet()\n        liste = o[\"ureticiler\"]\n        adlar = [e[\"uretici\"] for e in liste]\n>       assert adlar == [\"\\u015EANA\", \"TANA\"]\nE       AssertionError: assert ['şana', 'tana'] == ['ŞANA', 'TANA']\nE         At index 0 diff: 'şana' != 'ŞANA'\nE         Use -v to get more diff\n\n.gizli/test_gizli.py:139: AssertionError\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_uretici_siralama_net_azalan - AssertionErro...\nFAILED .gizli/test_gizli.py::test_uretici_siralama_turkce_alfabetik - Asserti...\n2 failed, 20 passed in 0.04s\n"
+ }
+}

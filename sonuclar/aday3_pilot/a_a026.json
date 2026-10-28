@@ -1,0 +1,23 @@
+{
+ "id": "a026",
+ "kip": "a",
+ "kategori": "KDV, tevkifat, stopaj, taksit ve kuruş yuvarlama (Decimal, ROUND_HALF_UP, satır bazında ve toplamda yuvarlama farkı)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "kdv_cli.py yalnızca argparse ile yazıldı: matrah/oran/yuvarlama/cikti zorunlu, --not opsiyonel; oran 1/10/20, yuvarlama satir/toplam (casefold), cikti json/metin denetimleri parser.error ile çıkış 2; matrah Decimal ile çözümlenip 0/negatif/boş/geçersizde çıkış 2; satırda kalem bazında, toplamda önce topla sonra ROUND_HALF_UP yuvarlama; json tek satır sıralı, metin MATRAH/KDV/TOPLAM; float ve upper kullanılmadı.",
+ "adim": 4,
+ "yurutucu_token": {
+  "girdi": 12538,
+  "cikti": 15469
+ },
+ "yurutucu_usd": 0.0043476,
+ "bitirdi": true,
+ "sure_sn": 127.7,
+ "gizli": {
+  "gecti": true,
+  "gecen": 20,
+  "toplam": 20,
+  "cikti": "....................                                                     [100%]\n20 passed in 0.65s\n"
+ }
+}

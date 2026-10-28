@@ -1,0 +1,23 @@
+{
+ "id": "a123",
+ "kip": "a",
+ "kategori": "CSV/JSON ile çalışan ve uç durumları çok olan veri işleme (BOM, ; ayırıcı, 1.234,56 sayı biçimi, boş/bozuk satır)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "kutuphane_ceza_cli.py yazıldı ve hızlı testten geçti: CSV/JSON okuma, katı tarih, Türkçe alt-harf, ceza/tavan/yuvarlama, sıralı JSON çıktı, çıkış kodları 2/3 ve stderr kullanımı.",
+ "adim": 7,
+ "yurutucu_token": {
+  "girdi": 20794,
+  "cikti": 37986
+ },
+ "yurutucu_usd": 0.0096766,
+ "bitirdi": true,
+ "sure_sn": 337.9,
+ "gizli": {
+  "gecti": false,
+  "gecen": 17,
+  "toplam": 20,
+  "cikti": "\"U001\", \"Kitap A\", \"2024-01-10\", \"2024-01-10\"]])\n        r = run_cli(od, uy, ci, \"7.5\", \"100\")\n        assert r.returncode == 0\n        d = read_out(ci)\n>       assert abs(d[\"cezalar\"][0][\"ceza\"] - 0.0) < 1e-6\nE       IndexError: list index out of range\n\n.gizli/test_gizli.py:74: IndexError\n___________________________ test_json_yapi_hatasi_3 ____________________________\n\ntmp_path = PosixPath('/home/usta/is/d7f579c5e9f0/.tmp/pytest-of-usta/pytest-0/test_json_yapi_hatasi_30')\n\n    def test_json_yapi_hatasi_3(tmp_path):\n        od = tmp_path / \"o.csv\"; uy = tmp_path / \"u.json\"; ci = tmp_path / \"c.json\"\n        write_csv(od, HDR, [])\n        with open(uy, \"w\", encoding=\"utf-8\") as f:\n            json.dump({\"uyeler\": []}, f)\n        r = run_cli(od, uy, ci, \"10\", \"100\")\n>       assert r.returncode == 3\nE       AssertionError: assert 0 == 3\nE        +  where 0 = CompletedProcess(args=['/usr/bin/python', '/home/usta/is/d7f579c5e9f0/kutuphane_ceza_cli.py', '--odunc-csv', '/home/us...st-0/test_json_yapi_hatasi_30/c.json', '--gunluk-gecikme', '10', '--tavan', '100'], returncode=0, stdout='', stderr='').returncode\n\n.gizli/test_gizli.py:227: AssertionError\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_erken_iade_sifir - assert 0 == 1\nFAILED .gizli/test_gizli.py::test_esit_tarih_sifir - IndexError: list index o...\nFAILED .gizli/test_gizli.py::test_json_yapi_hatasi_3 - AssertionError: assert...\n3 failed, 17 passed in 0.76s\n"
+ }
+}

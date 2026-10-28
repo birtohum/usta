@@ -1,0 +1,23 @@
+{
+ "id": "a175",
+ "kip": "a",
+ "kategori": "Türkçe büyük/küçük harf (İ/i, I/ı), Türk alfabesiyle sıralama, sayıyı yazıya çevirme, ünlü uyumuna göre ek",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "stok.py oluşturuldu: --urun/--adet/--raf/--firin bayraklarını ayrıştırır, eksik arguman (çıkış 2), tür hatası, boş girdi, aralık dışı (çıkış 1) kontrollerini belirtilen öncelik sırasıyla yapar; Türkçe başlık çevrimi (I→ı, i→İ), ürününden/rafta ekleri, 1-40 ve 1-12 sayılarının küçük harfli Türkçe yazımı ile tek satır çıktı üretir.",
+ "adim": 5,
+ "yurutucu_token": {
+  "girdi": 20525,
+  "cikti": 17686
+ },
+ "yurutucu_usd": 0.0055897,
+ "bitirdi": true,
+ "sure_sn": 146.8,
+ "gizli": {
+  "gecti": true,
+  "gecen": 23,
+  "toplam": 23,
+  "cikti": ".......................                                                  [100%]\n23 passed in 0.38s\n"
+ }
+}

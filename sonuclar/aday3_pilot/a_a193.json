@@ -1,0 +1,23 @@
+{
+ "id": "a193",
+ "kip": "a",
+ "kategori": "CSV/JSON ile çalışan ve uç durumları çok olan veri işleme (BOM, ; ayırıcı, 1.234,56 sayı biçimi, boş/bozuk satır)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "findik_fiyat.py yazıldı: fiyatlandir işlevi CSV/JSON okuma, Türkçe sayı ve sıralama, randıman ödemesi ve istenen hata/dönüş kurallarını uygular.",
+ "adim": 6,
+ "yurutucu_token": {
+  "girdi": 12975,
+  "cikti": 37330
+ },
+ "yurutucu_usd": 0.0087635,
+ "bitirdi": true,
+ "sure_sn": 324.1,
+ "gizli": {
+  "gecti": true,
+  "gecen": 20,
+  "toplam": 20,
+  "cikti": "....................                                                     [100%]\n20 passed in 0.07s\n"
+ }
+}

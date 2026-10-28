@@ -1,0 +1,23 @@
+{
+ "id": "a016",
+ "kip": "a",
+ "kategori": "tarih ve saat: resmî tatiller parametreyle, iş günü hesabı, Türkiye saat dilimi (UTC+3, yaz saati yok), gün/ay adları Türkçe",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "randevu.py oluşturuldu: uygun_slotlari_bul ve tarihce_tr işlevleri spec'e uygun gerçeklendi (TRT UTC+3 çevrimi, hafta içi 09:00–17:00, hafta sonu/tatil eleme, sure_dakika adımlı slotlar, [başlangıç,bitiş) çakışma kuralı, TypeError>ValueError önceliği, sıralı sonuç, Türkçe tarih etiketi).",
+ "adim": 5,
+ "yurutucu_token": {
+  "girdi": 16498,
+  "cikti": 12219
+ },
+ "yurutucu_usd": 0.0040936,
+ "bitirdi": true,
+ "sure_sn": 101.8,
+ "gizli": {
+  "gecti": true,
+  "gecen": 22,
+  "toplam": 22,
+  "cikti": "......................                                                   [100%]\n22 passed in 0.04s\n"
+ }
+}

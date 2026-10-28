@@ -1,0 +1,23 @@
+{
+ "id": "a041",
+ "kip": "a",
+ "kategori": "çok dosyalı küçük modül: iki-üç dosyaya bölünmüş, ortak hata sınıfları ve bir komut satırı girişi olan araç",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "hatalar.py (OlcuHatasi, IlHatasi → ValueError) ve kargo.py (desi_hesapla tavana yuvarlama, ucret_hesapla kuruş tam-sayı tarife: desi≤50 standart / ≥51 ağır, kampanyada %10 indirim, Türkçe harf duyarsız il eşleşmesi, tip→ölçü→il hata önceliği, `python -m kargo hesap ...` tek satır JSON çıktısı) yazıldı; yalnızca standart kütüphane kullanıldı.",
+ "adim": 13,
+ "yurutucu_token": {
+  "girdi": 68862,
+  "cikti": 38223
+ },
+ "yurutucu_usd": 0.0145308,
+ "bitirdi": true,
+ "sure_sn": 339.7,
+ "gizli": {
+  "gecti": true,
+  "gecen": 20,
+  "toplam": 20,
+  "cikti": "....................                                                     [100%]\n20 passed in 0.14s\n"
+ }
+}

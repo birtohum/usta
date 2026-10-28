@@ -1,0 +1,23 @@
+{
+ "id": "a092",
+ "kip": "a",
+ "kategori": "çok dosyalı küçük modül: iki-üç dosyaya bölünmüş, ortak hata sınıfları ve bir komut satırı girişi olan araç",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "Balıkesir zeytinyağı kooperatifi asitlik sınıflandırma aracı yazıldı: hatalar.py (GirdiHatasi, LimitHatasi), zeytin.py (ucret_hesapla: önce tip denetimi TypeError, sonra asitlik/litre/taban önceliğiyle aralık denetimi, SIZMA/BIRINCI/LAMPANT sınıfları, 1.0/0.85/0.6 katsayıları, math.floor), cli.py (sıra bağımsız --asitlik/--litre/--taban, başarıda SINIF:TUTAR, hatada stderr HATA:mesaj + çıkış 2). Tüm sınır, öncelik, tip ve CLI davranışları test edildi.",
+ "adim": 9,
+ "yurutucu_token": {
+  "girdi": 41603,
+  "cikti": 13155
+ },
+ "yurutucu_usd": 0.006791300000000001,
+ "bitirdi": true,
+ "sure_sn": 142.3,
+ "gizli": {
+  "gecti": true,
+  "gecen": 23,
+  "toplam": 23,
+  "cikti": ".......................                                                  [100%]\n23 passed in 0.12s\n"
+ }
+}

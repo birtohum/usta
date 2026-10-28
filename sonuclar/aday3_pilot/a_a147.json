@@ -1,0 +1,23 @@
+{
+ "id": "a147",
+ "kip": "a",
+ "kategori": "çok dosyalı küçük modül: iki-üç dosyaya bölünmüş, ortak hata sınıfları ve bir komut satırı girişi olan araç",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": null,
+ "adim": 20,
+ "yurutucu_token": {
+  "girdi": 87352,
+  "cikti": 103745
+ },
+ "yurutucu_usd": 0.029484200000000002,
+ "bitirdi": false,
+ "sure_sn": 836.7,
+ "gizli": {
+  "gecti": true,
+  "gecen": 20,
+  "toplam": 20,
+  "cikti": "....................                                                     [100%]\n20 passed in 0.08s\n"
+ }
+}

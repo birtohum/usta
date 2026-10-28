@@ -1,0 +1,23 @@
+{
+ "id": "a098",
+ "kip": "a",
+ "kategori": "CSV/JSON ile çalışan ve uç durumları çok olan veri işleme (BOM, ; ayırıcı, 1.234,56 sayı biçimi, boş/bozuk satır)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "`uzum_kurutma.py` içinde `kurutma_raporu` yazıldı: utf-8-sig + `;` okuma, boş satır atlama, Türkçe sayı çözümleme (`.` sil, `,`→`.`), Decimal + ROUND_HALF_UP formül, nem==hedef sınır durumu, 3 sütun/sayı/nem-aralık kontrolleriyle `hatali` sayımı, Türkçe duyarsız gruplama (I→ı, İ→i + casefold, ilk yazım korunur), tutar ve sıralama kuralları, FileNotFoundError önceliği ve boş sonuç `\"0,00\"` uygulandı.",
+ "adim": 6,
+ "yurutucu_token": {
+  "girdi": 30922,
+  "cikti": 22300
+ },
+ "yurutucu_usd": 0.007552200000000001,
+ "bitirdi": true,
+ "sure_sn": 180.0,
+ "gizli": {
+  "gecti": false,
+  "gecen": 19,
+  "toplam": 21,
+  "cikti": "        assert r['kalemler'][0]['uretici']=='Mehmet'\n        assert r['kalemler'][0]['kuru_kg']=='898,88'\n        assert r['kalemler'][0]['tutar']=='76854,24'\n>       assert r['genel_toplam']=='76854,24'\nE       AssertionError: assert '898,88' == '76854,24'\nE         - 76854,24\nE         + 898,88\n\n.gizli/test_gizli.py:22: AssertionError\n______________________________ test_genel_toplam _______________________________\n\ntmp_path = PosixPath('/home/usta/is/d68061ef728f/.tmp/pytest-of-usta/pytest-0/test_genel_toplam0')\n\n    def test_genel_toplam(tmp_path):\n        c=tmp_path/'k.csv'; j=tmp_path/'o.json'\n        _csv_yaz(c, 'uretici;yas_kg;nem_orani\\nA;100,00;11,00\\nB;200,00;11,00\\n')\n        _json_yaz(j, {'hedef_nem':'11,00','fiyat':'1.234,56'})\n        r=kurutma_raporu(str(c), str(j))\n        assert r['kalemler'][0]['tutar']=='246912,00'\n        assert r['kalemler'][1]['tutar']=='123456,00'\n>       assert r['genel_toplam']=='370368,00'\nE       AssertionError: assert '300,00' == '370368,00'\nE         - 370368,00\nE         + 300,00\n\n.gizli/test_gizli.py:179: AssertionError\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_normal_hesap - AssertionError: assert '898,...\nFAILED .gizli/test_gizli.py::test_genel_toplam - AssertionError: assert '300,...\n2 failed, 19 passed in 0.07s\n"
+ }
+}

@@ -1,0 +1,23 @@
+{
+ "id": "a154",
+ "kip": "a",
+ "kategori": "KDV, tevkifat, stopaj, taksit ve kuruş yuvarlama (Decimal, ROUND_HALF_UP, satır bazında ve toplamda yuvarlama farkı)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "servis_kdv.py içinde servis_kdv_ayir yazıldı: yerinde %10 / paket %20 KDV, satır bazında ROUND_HALF_UP kuruş yuvarlama, %10 indirimli matrah hesabı, matrah/KDV/genel toplam + yuvarlama farkı dönüşü, casefold servis/ad denetimi, İ/ile eşitliği, tür-önce denetimler ve sıralı ayrı satırlar.",
+ "adim": 11,
+ "yurutucu_token": {
+  "girdi": 78793,
+  "cikti": 33001
+ },
+ "yurutucu_usd": 0.0144795,
+ "bitirdi": true,
+ "sure_sn": 279.9,
+ "gizli": {
+  "gecti": true,
+  "gecen": 23,
+  "toplam": 23,
+  "cikti": ".......................                                                  [100%]\n23 passed in 0.04s\n"
+ }
+}

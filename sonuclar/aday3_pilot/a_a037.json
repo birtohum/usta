@@ -1,0 +1,23 @@
+{
+ "id": "a037",
+ "kip": "a",
+ "kategori": "Türkiye'ye özgü kimlik ve hesap numaraları (TC kimlik, VKN, IBAN, MERSİS, plaka, telefon) — birden çok kuralın birlikte uygulandığı",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "aidat_defteri.py içinde AidatDefteri sınıfı yazıldı: ekle ve borclulari_listele yöntemleri, daire_no/TC/telefon/IBAN doğrulamaları, TypeError/ValueError öncelikleri ve sıralı listeleme kurallara uygun uygulandı.",
+ "adim": 7,
+ "yurutucu_token": {
+  "girdi": 27390,
+  "cikti": 14903
+ },
+ "yurutucu_usd": 0.0057196,
+ "bitirdi": true,
+ "sure_sn": 129.3,
+ "gizli": {
+  "gecti": true,
+  "gecen": 22,
+  "toplam": 22,
+  "cikti": "......................                                                   [100%]\n22 passed in 0.02s\n"
+ }
+}

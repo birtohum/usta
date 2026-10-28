@@ -1,0 +1,23 @@
+{
+ "id": "a211",
+ "kip": "a",
+ "kategori": "CSV/JSON ile çalışan ve uç durumları çok olan veri işleme (BOM, ; ayırıcı, 1.234,56 sayı biçimi, boş/bozuk satır)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "seramik_sevkiyat_cli.py yazıldı: Türkçe sayı ayrıştırma/biçimlendirme (Decimal, HALF_UP), boş/bozuk/sıfır/fiyat-uyumsuz sayaçları, tolerans 0,01, doğal Türkçe sıralama, exit kodları ve stderr öncelikleri uygulandı.",
+ "adim": 17,
+ "yurutucu_token": {
+  "girdi": 132281,
+  "cikti": 61704
+ },
+ "yurutucu_usd": 0.025568899999999995,
+ "bitirdi": true,
+ "sure_sn": 525.8,
+ "gizli": {
+  "gecti": true,
+  "gecen": 21,
+  "toplam": 21,
+  "cikti": ".....................                                                    [100%]\n21 passed in 0.67s\n"
+ }
+}

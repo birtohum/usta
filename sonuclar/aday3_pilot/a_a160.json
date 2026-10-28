@@ -1,0 +1,23 @@
+{
+ "id": "a160",
+ "kip": "a",
+ "kategori": "Türkçe büyük/küçük harf (İ/i, I/ı), Türk alfabesiyle sıralama, sayıyı yazıya çevirme, ünlü uyumuna göre ek",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "vardiya.py içinde VardiyaListesi sınıfı oluşturuldu: Türkçe başlık çevrimi (I→ı, i→İ), 1-9999 sayı yazımı (bin/yüz kurallı), \"Ad Soyad - Sicil: ... - Ekibindedir\" çıktısı, Türk alfabesi sıralaması, TypeError/ValueError/KeyError kontrolleri doğru sırada uygulandı.",
+ "adim": 3,
+ "yurutucu_token": {
+  "girdi": 8699,
+  "cikti": 11394
+ },
+ "yurutucu_usd": 0.0031487,
+ "bitirdi": true,
+ "sure_sn": 87.2,
+ "gizli": {
+  "gecti": true,
+  "gecen": 22,
+  "toplam": 22,
+  "cikti": "......................                                                   [100%]\n22 passed in 0.02s\n"
+ }
+}

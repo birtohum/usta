@@ -1,0 +1,23 @@
+{
+ "id": "a113",
+ "kip": "a",
+ "kategori": "CSV/JSON ile çalışan ve uç durumları çok olan veri işleme (BOM, ; ayırıcı, 1.234,56 sayı biçimi, boş/bozuk satır)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "`aycicek_teslim.py` yazıldı: utf-8-sig + `;` ayrımlı giriş okuma, boş satır atlama, Türkçe sayı çözümleme (`.` sil, `,`→`.`), `tonaj*baz+prim` hesabı ve HALF_UP yuvarlama, hatalı satır sayımı, Türkçe duyarsız çiftçi gruplama, tutar azalan/eşitlikte ad artan sıralama, Türkçe formatlı özet JSON, exit 1/2 öncelikleri uygulandı.",
+ "adim": 4,
+ "yurutucu_token": {
+  "girdi": 15216,
+  "cikti": 11794
+ },
+ "yurutucu_usd": 0.0038804000000000004,
+ "bitirdi": true,
+ "sure_sn": 105.4,
+ "gizli": {
+  "gecti": false,
+  "gecen": 18,
+  "toplam": 20,
+  "cikti": ">           assert d[\"ciftciler\"][0][\"tutar\"] == \"15750,75\"\nE           AssertionError: assert '15.750,75' == '15750,75'\nE             - 15750,75\nE             + 15.750,75\nE             ?   +\n\n.gizli/test_gizli.py:89: AssertionError\n______________________________ test_tonaj_binlik _______________________________\n\n    def test_tonaj_binlik():\n        import tempfile\n        with tempfile.TemporaryDirectory() as td:\n            td = pathlib.Path(td)\n            g = td / \"g.csv\"; fj = td / \"f.json\"; o = td / \"o.json\"\n            write_giris(g, [\"Ali;1.234,50;10,00\"])\n            write_fiyat(fj, baz=\"10,00\", esik=\"90,00\", prim=\"5,00\")\n            r = run_prog(g, fj, o)\n            assert r.returncode == 0\n            d = load_ozet(o)\n>           assert d[\"ciftciler\"][0][\"tutar\"] == \"12345,00\"\nE           AssertionError: assert '12.345,00' == '12345,00'\nE             - 12345,00\nE             + 12.345,00\nE             ?   +\n\n.gizli/test_gizli.py:101: AssertionError\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_binlik_ayraci_cozumleme - AssertionError: a...\nFAILED .gizli/test_gizli.py::test_tonaj_binlik - AssertionError: assert '12.3...\n2 failed, 18 passed in 0.71s\n"
+ }
+}

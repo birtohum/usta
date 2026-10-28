@@ -1,0 +1,23 @@
+{
+ "id": "a192",
+ "kip": "a",
+ "kategori": "çok dosyalı küçük modül: iki-üç dosyaya bölünmüş, ortak hata sınıfları ve bir komut satırı girişi olan araç",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "hatalar.py, kayak.py ve cli.py oluşturuldu. Türkçe küçük harf dönüşümü (I→ı, İ→i) ve aksan katlamayla seviye eşleştirme, 2-12 kontenjan ve 6-70 yaş denetimi, boşluk normalize ad/pist kontrolleri, D-001/K-0001 artımlı kimlikler, yaş→ad→kimlik sıralı grup listesi ve tek satır JSON yazan kalıcı CLI gerçekleştirildi.",
+ "adim": 12,
+ "yurutucu_token": {
+  "girdi": 60312,
+  "cikti": 24366
+ },
+ "yurutucu_usd": 0.010904400000000002,
+ "bitirdi": true,
+ "sure_sn": 210.8,
+ "gizli": {
+  "gecti": true,
+  "gecen": 22,
+  "toplam": 22,
+  "cikti": "......................                                                   [100%]\n22 passed in 0.21s\n"
+ }
+}

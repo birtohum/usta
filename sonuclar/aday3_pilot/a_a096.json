@@ -1,0 +1,23 @@
+{
+ "id": "a096",
+ "kip": "a",
+ "kategori": "tarih ve saat: resmî tatiller parametreyle, iş günü hesabı, Türkiye saat dilimi (UTC+3, yaz saati yok), gün/ay adları Türkçe",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "liman_cli.py uygulandı: varış sonrası iş günü sayımıyla ardiye başlangıcı hesaplar, json/metin çıktısı üretir, Türkçe gün/ay adlarını korur, hatalarda stderr + çıkış kodu 2 verir, yalnızca standart kütüphane kullanır.",
+ "adim": 9,
+ "yurutucu_token": {
+  "girdi": 44883,
+  "cikti": 13763
+ },
+ "yurutucu_usd": 0.0072409,
+ "bitirdi": true,
+ "sure_sn": 147.5,
+ "gizli": {
+  "gecti": false,
+  "gecen": 20,
+  "toplam": 21,
+  "cikti": "..........F..........                                                    [100%]\n=================================== FAILURES ===================================\n__________________________ test_metin_tek_haneli_gun ___________________________\n\n    def test_metin_tek_haneli_gun():\n        r = calistir(\"--varis\", \"2026-01-01\", \"--serbest-gun\", \"0\", \"--tatiller\", \"\", \"--cikti\", \"metin\")\n        assert r.returncode == 0\n>       assert r.stdout.strip() == \"2 Ocak 2026 Cuma\"\nE       AssertionError: assert '02 Ocak 2026 Cuma' == '2 Ocak 2026 Cuma'\nE         - 2 Ocak 2026 Cuma\nE         + 02 Ocak 2026 Cuma\nE         ? +\n\n.gizli/test_gizli.py:80: AssertionError\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_metin_tek_haneli_gun - AssertionError: asse...\n1 failed, 20 passed in 0.48s\n"
+ }
+}

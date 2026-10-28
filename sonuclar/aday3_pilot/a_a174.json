@@ -1,0 +1,23 @@
+{
+ "id": "a174",
+ "kip": "a",
+ "kategori": "KDV, tevkifat, stopaj, taksit ve kuruş yuvarlama (Decimal, ROUND_HALF_UP, satır bazında ve toplamda yuvarlama farkı)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "isparta_gul.py yazıldı: GulYagiSatisDefteri; ekle tip→pozitiflik→oran sırasıyla TypeError/ValueError, matrah ROUND_HALF_UP; ozet satır KDV toplamı ile toplu KDV farkını en büyük miktarlı (eşitlikte ilk eklenen) satıra yansıtır, 20000,00 üzeri %1 stopaj, boşta sıfırlar; Türkçe sıralamada I→ı, İ→i.",
+ "adim": 6,
+ "yurutucu_token": {
+  "girdi": 15231,
+  "cikti": 23302
+ },
+ "yurutucu_usd": 0.0061835,
+ "bitirdi": true,
+ "sure_sn": 188.5,
+ "gizli": {
+  "gecti": false,
+  "gecen": 18,
+  "toplam": 20,
+  "cikti": "        if \"sira\" in a or \"sıra\" in a or \"sort\" in a:\n            return self.notlari_sirala\n>       raise AttributeError(ad)\nE       AttributeError: not_ekle\n\nisparta_gul.py:152: AttributeError\n________________________ test_18_turkce_esitlik_koruma _________________________\n\n    def test_18_turkce_esitlik_koruma():\n        d = GulYagiSatisDefteri()\n>       d.not_ekle(\"I\")\n\n.gizli/test_gizli.py:141: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nself = <isparta_gul.GulYagiSatisDefteri object at 0x7c4a8b970980>\nad = 'not_ekle'\n\n    def __getattr__(self, ad):\n        a = ad.lower()\n        if \"sira\" in a or \"sıra\" in a or \"sort\" in a:\n            return self.notlari_sirala\n>       raise AttributeError(ad)\nE       AttributeError: not_ekle\n\nisparta_gul.py:152: AttributeError\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_17_turkce_siralama - AttributeError: not_ekle\nFAILED .gizli/test_gizli.py::test_18_turkce_esitlik_koruma - AttributeError: ...\n2 failed, 18 passed in 0.05s\n"
+ }
+}

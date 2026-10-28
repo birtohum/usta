@@ -1,0 +1,23 @@
+{
+ "id": "a058",
+ "kip": "a",
+ "kategori": "tarih ve saat: resmî tatiller parametreyle, iş günü hesabı, Türkiye saat dilimi (UTC+3, yaz saati yok), gün/ay adları Türkçe",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "gumruk_cli.py yazıldı: --baslangic/--bitis/--tatiller/--bicim bayrakları, bilinmeyen bayrakta kod 3 (tarih denetiminden önce), hatalı tarihte HATALI TARIH + kod 2, bas>bit kod 2, hafta sonu+tatil hariç iş günü listesi (tarih: küçük Türkçe gün adı, İ->i/I->ı kuralıyla) ve kronolojik ay özeti (küçük Türkçe ay adı). Yalnızca sys/re/datetime kullanıldı.",
+ "adim": 7,
+ "yurutucu_token": {
+  "girdi": 18653,
+  "cikti": 25304
+ },
+ "yurutucu_usd": 0.0069261,
+ "bitirdi": true,
+ "sure_sn": 210.5,
+ "gizli": {
+  "gecti": true,
+  "gecen": 20,
+  "toplam": 20,
+  "cikti": "....................                                                     [100%]\n20 passed in 0.46s\n"
+ }
+}

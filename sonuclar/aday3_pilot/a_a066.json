@@ -1,0 +1,23 @@
+{
+ "id": "a066",
+ "kip": "a",
+ "kategori": "CSV/JSON ile çalışan ve uç durumları çok olan veri işleme (BOM, ; ayırıcı, 1.234,56 sayı biçimi, boş/bozuk satır)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "otel_doluluk.py yazıldı: analiz_et CSV'yi utf-8-sig ve noktalı virgülle okur, Türkçe sayı ve oda adı normalizasyonu yapar, Decimal+ROUND_HALF_UP kullanır, hata önceliğine ve sıralama kurallarına uyar.",
+ "adim": 6,
+ "yurutucu_token": {
+  "girdi": 14521,
+  "cikti": 38236
+ },
+ "yurutucu_usd": 0.009099300000000001,
+ "bitirdi": true,
+ "sure_sn": 302.5,
+ "gizli": {
+  "gecti": false,
+  "gecen": 22,
+  "toplam": 23,
+  "cikti": ".............F.........                                                  [100%]\n=================================== FAILURES ===================================\n____________________________ test_uzun_kisa_sayimi _____________________________\n\ntmp_path = PosixPath('/home/usta/is/9ad54b3ddf2d/.tmp/pytest-of-usta/pytest-0/test_uzun_kisa_sayimi0')\n\n    def test_uzun_kisa_sayimi(tmp_path):\n        c = tmp_path / 'k.csv'; j = tmp_path / 'f.json'\n        _yaz_csv(c, 'oda_tipi;gece_sayisi\\nA;7\\nB;6\\nC;10\\n')\n        _yaz_json(j, {'A': '10,00', 'B': '10,00', 'C': '10,00'})\n        s = analiz_et(str(c), str(j))\n        # 7 ve 10 uzun, 6 k\\u0131sa\n        uzun = s.get('toplam_uzun', s.get('uzun_konaklama'))\n        kisa = s.get('toplam_kisa', s.get('kisa_konaklama'))\n>       assert uzun == 2\nE       assert None == 2\n\n.gizli/test_gizli.py:134: AssertionError\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_uzun_kisa_sayimi - assert None == 2\n1 failed, 22 passed in 0.10s\n"
+ }
+}

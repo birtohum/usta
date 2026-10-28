@@ -1,0 +1,23 @@
+{
+ "id": "a122",
+ "kip": "a",
+ "kategori": "çok dosyalı küçük modül: iki-üç dosyaya bölünmüş, ortak hata sınıfları ve bir komut satırı girişi olan araç",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "hatalar.py, balon.py ve cli.py yazıldı. Sepet doğrulama öncelik sırasına, Türkçe duyarsız yineleme kontrolüne ve greedy dengeleme kuralına uygun; CLI başarıda A:|B: satırı, hatada stderr HATA: ve çıkış 2 veriyor.",
+ "adim": 9,
+ "yurutucu_token": {
+  "girdi": 29782,
+  "cikti": 14221
+ },
+ "yurutucu_usd": 0.0058224,
+ "bitirdi": true,
+ "sure_sn": 132.8,
+ "gizli": {
+  "gecti": false,
+  "gecen": 21,
+  "toplam": 23,
+  "cikti": "FF.....................                                                  [100%]\n=================================== FAILURES ===================================\n__________________________ test_kapasite_alt_sinir_ok __________________________\n\n    def test_kapasite_alt_sinir_ok():\n        s = Sepet(200)\n>       assert s.kapasite_kg == 200\nE       AttributeError: 'Sepet' object has no attribute 'kapasite_kg'\n\n.gizli/test_gizli.py:12: AttributeError\n__________________________ test_kapasite_ust_sinir_ok __________________________\n\n    def test_kapasite_ust_sinir_ok():\n        s = Sepet(600)\n>       assert s.kapasite_kg == 600\nE       AttributeError: 'Sepet' object has no attribute 'kapasite_kg'\n\n.gizli/test_gizli.py:16: AttributeError\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_kapasite_alt_sinir_ok - AttributeError: 'Se...\nFAILED .gizli/test_gizli.py::test_kapasite_ust_sinir_ok - AttributeError: 'Se...\n2 failed, 21 passed in 0.15s\n"
+ }
+}

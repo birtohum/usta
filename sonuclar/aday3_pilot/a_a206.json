@@ -1,0 +1,23 @@
+{
+ "id": "a206",
+ "kip": "a",
+ "kategori": "tarih ve saat: resmî tatiller parametreyle, iş günü hesabı, Türkiye saat dilimi (UTC+3, yaz saati yok), gün/ay adları Türkçe",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "muayene_cli.py yazıldı: --baslangic/--adet zorunlu, --tatiller ve --cumartesi-acik isteğe bağlı; Europe/Istanbul bilinçli tarihlerle iş günü hesabı (Pazar kapalı, Cumartesi bayrağa bağlı, tatiller hariç), başlangıç dahil adet kadar gün üretilir, çıktı YYYY-AA-GG,Türkçe gün adı,gün ay yıl formatında; geçersiz tarih/adet ve eksik bayrakta çıkış kodu 2 ve stderr mesajı; yalnızca standart kütüphane, ağ/zaman okuma yok.",
+ "adim": 15,
+ "yurutucu_token": {
+  "girdi": 72947,
+  "cikti": 21669
+ },
+ "yurutucu_usd": 0.0116285,
+ "bitirdi": true,
+ "sure_sn": 202.4,
+ "gizli": {
+  "gecti": true,
+  "gecen": 20,
+  "toplam": 20,
+  "cikti": "....................                                                     [100%]\n20 passed in 0.76s\n"
+ }
+}

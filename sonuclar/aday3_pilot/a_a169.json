@@ -1,0 +1,23 @@
+{
+ "id": "a169",
+ "kip": "a",
+ "kategori": "KDV, tevkifat, stopaj, taksit ve kuruş yuvarlama (Decimal, ROUND_HALF_UP, satır bazında ve toplamda yuvarlama farkı)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "karaman_firin.py yazıldı: firin_kdv_dagit Decimal ile brüt üzerinden matrah ayrıştırır, ROUND_HALF_UP uygular, farkı en yüksek brütlü (eşitlikte TR küçük harf alfabetik ilk) satıra ekler, 1000.00 sınırında indirim uygulamaz/üzerinde 5 TL düşüp yeniden ayrıştırır, TypeError öncelikli denetim yapar.",
+ "adim": 5,
+ "yurutucu_token": {
+  "girdi": 13991,
+  "cikti": 23615
+ },
+ "yurutucu_usd": 0.006122100000000001,
+ "bitirdi": true,
+ "sure_sn": 199.6,
+ "gizli": {
+  "gecti": false,
+  "gecen": 17,
+  "toplam": 20,
+  "cikti": "\n    def test_turkce_I_J():\n        sepet = [\n            {'urun': 'I', 'adet': 1, 'etiket_fiyat': '0.15', 'kdv_oran': 10},\n            {'urun': 'J', 'adet': 1, 'etiket_fiyat': '0.15', 'kdv_oran': 10},\n        ]\n        r = firin_kdv_dagit(sepet)\n>       assert r['fark'] == Decimal('0.01')\nE       AssertionError: assert Decimal('0.00') == Decimal('0.01')\nE        +  where Decimal('0.01') = Decimal('0.01')\n\n.gizli/test_gizli.py:66: AssertionError\n___________________________ test_turkce_I_I_noktali ____________________________\n\n    def test_turkce_I_I_noktali():\n        sepet = [\n            {'urun': 'I', 'adet': 1, 'etiket_fiyat': '0.15', 'kdv_oran': 10},\n            {'urun': '\\u0130', 'adet': 1, 'etiket_fiyat': '0.15', 'kdv_oran': 10},\n        ]\n        r = firin_kdv_dagit(sepet)\n>       assert r['fark'] == Decimal('0.01')\nE       AssertionError: assert Decimal('0.00') == Decimal('0.01')\nE        +  where Decimal('0.01') = Decimal('0.01')\n\n.gizli/test_gizli.py:77: AssertionError\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_fark_max_satir_ustlenir - AssertionError: a...\nFAILED .gizli/test_gizli.py::test_turkce_I_J - AssertionError: assert Decimal...\nFAILED .gizli/test_gizli.py::test_turkce_I_I_noktali - AssertionError: assert...\n3 failed, 17 passed in 0.05s\n"
+ }
+}

@@ -1,0 +1,23 @@
+{
+ "id": "a116",
+ "kip": "a",
+ "kategori": "tarih ve saat: resmî tatiller parametreyle, iş günü hesabı, Türkiye saat dilimi (UTC+3, yaz saati yok), gün/ay adları Türkçe",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "abonelik.py oluşturuldu: dondurma_bitisini_bul (yalnızca Pzt-Cuma ve tatil dışı gün sayımı, 0 günde sonraki ilk iş günü), iade_tutari (Decimal ile kuruşa yukarı yuvarlama), ay_adi (İ/I duyarlı Türkçe aylar). Denetim sırası tarih→tatil→sayı aralığı, tüm geçersiz girdilerde ValueError, yalnızca standart kütüphane.",
+ "adim": 12,
+ "yurutucu_token": {
+  "girdi": 55529,
+  "cikti": 18519
+ },
+ "yurutucu_usd": 0.009256700000000001,
+ "bitirdi": true,
+ "sure_sn": 165.1,
+ "gizli": {
+  "gecti": true,
+  "gecen": 20,
+  "toplam": 20,
+  "cikti": "....................                                                     [100%]\n20 passed in 0.03s\n"
+ }
+}

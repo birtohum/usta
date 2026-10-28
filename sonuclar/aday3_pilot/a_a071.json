@@ -1,0 +1,23 @@
+{
+ "id": "a071",
+ "kip": "a",
+ "kategori": "çok dosyalı küçük modül: iki-üç dosyaya bölünmüş, ortak hata sınıfları ve bir komut satırı girişi olan araç",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "Taksi durağı kuyruk aracı yazıldı: hatalar.py (ValueError'dan türeyen PlakaHatasi, KuyrukHatasi), durak.py (20 kapasiteli FIFO DurakKuyrugu; strip + Türkçe i→İ/ı→I normalizasyonu; boş→PlakaHatasi, dolu/boş-kuyruk→KuyrukHatasi, tekrar→PlakaHatasi; öncelik: biçim→kapasite→tekrar), cli.py (--ekle/--liste/--cikar/--siradaki; liste normalize eklenme sırasıyla, son satır \\n'li). Yalnızca sys kullanıldı; FIFO ve tüm hata/öncelik davranışları testlerle doğrulandı.",
+ "adim": 8,
+ "yurutucu_token": {
+  "girdi": 29855,
+  "cikti": 13688
+ },
+ "yurutucu_usd": 0.0057231,
+ "bitirdi": true,
+ "sure_sn": 115.9,
+ "gizli": {
+  "gecti": true,
+  "gecen": 22,
+  "toplam": 22,
+  "cikti": "......................                                                   [100%]\n22 passed in 0.13s\n"
+ }
+}

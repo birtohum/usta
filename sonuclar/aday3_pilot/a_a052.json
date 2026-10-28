@@ -1,0 +1,23 @@
+{
+ "id": "a052",
+ "kip": "a",
+ "kategori": "tarih ve saat: resmî tatiller parametreyle, iş günü hesabı, Türkiye saat dilimi (UTC+3, yaz saati yok), gün/ay adları Türkçe",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "uretim_plan.py içinde uretim_gunleri(yil, ay, tatiller, gunluk_kapasite) yazıldı. Türkçe ay adları, İ->i / I->ı kuralıyla kucuk_ay, hafta sonu+tatil kapatma, sıralı is_gunleri, hata öncelikli ValueError/TypeError denetimleri ve yalnızca calendar+datetime kullanımı doğrulandı.",
+ "adim": 7,
+ "yurutucu_token": {
+  "girdi": 25914,
+  "cikti": 8522
+ },
+ "yurutucu_usd": 0.0042958,
+ "bitirdi": true,
+ "sure_sn": 77.0,
+ "gizli": {
+  "gecti": true,
+  "gecen": 20,
+  "toplam": 20,
+  "cikti": "....................                                                     [100%]\n20 passed in 0.04s\n"
+ }
+}

@@ -1,0 +1,23 @@
+{
+ "id": "a111",
+ "kip": "a",
+ "kategori": "tarih ve saat: resmî tatiller parametreyle, iş günü hesabı, Türkiye saat dilimi (UTC+3, yaz saati yok), gün/ay adları Türkçe",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "otopark.py oluşturuldu: otopark_ucreti UTC girdileri +3 saatle TR'ye çevirip saatlik dilimlerle (08:00 dahil–20:00 hariç gündüz 40 TL, diğer gece 25 TL, hafta sonu/tatil 2x, çakışmada 4x yok) ücretlendirdi, yukarı yuvarlama uyguladı; gun_adi Türkçe gün döndürdü; hata denetim sırası (zaman, tatil, sıralama) ve ValueError kuralları uygulandı.",
+ "adim": 8,
+ "yurutucu_token": {
+  "girdi": 39063,
+  "cikti": 17215
+ },
+ "yurutucu_usd": 0.0073493000000000005,
+ "bitirdi": true,
+ "sure_sn": 162.3,
+ "gizli": {
+  "gecti": true,
+  "gecen": 23,
+  "toplam": 23,
+  "cikti": ".......................                                                  [100%]\n23 passed in 0.02s\n"
+ }
+}

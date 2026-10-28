@@ -1,0 +1,23 @@
+{
+ "id": "a050",
+ "kip": "a",
+ "kategori": "KDV, tevkifat, stopaj, taksit ve kuruş yuvarlama (Decimal, ROUND_HALF_UP, satır bazında ve toplamda yuvarlama farkı)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "adisyon.py yazıldı: Decimal+ROUND_HALF_UP ile satır matrah/KDV yuvarlama, toplamlar yuvarlanmış satırların toplamı, yuvarlama_farki raporlama, KDV oranı kontrolü, TypeError/ValueError önceliği, Türkçe duyarsız birleştirme ve stabil sıralama uygulandı.",
+ "adim": 6,
+ "yurutucu_token": {
+  "girdi": 14498,
+  "cikti": 25279
+ },
+ "yurutucu_usd": 0.006505600000000001,
+ "bitirdi": true,
+ "sure_sn": 205.7,
+ "gizli": {
+  "gecti": false,
+  "gecen": 19,
+  "toplam": 20,
+  "cikti": "...F................                                                     [100%]\n=================================== FAILURES ===================================\n_____________________________ test_04_kdv_half_up ______________________________\n\n    def test_04_kdv_half_up():\n        h = AdisyonHesaplayici()\n        h.ekle(\"Somon\", \"1\", \"10.05\", \"0.10\")\n        s = h.toplam()\n        assert s[\"satirlar\"][0][\"matrah\"] == \"10.05\"\n>       assert s[\"satirlar\"][0][\"kdv_tutar\"] == \"1.01\"\nE       KeyError: 'kdv_tutar'\n\n.gizli/test_gizli.py:38: KeyError\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_04_kdv_half_up - KeyError: 'kdv_tutar'\n1 failed, 19 passed in 0.04s\n"
+ }
+}

@@ -1,0 +1,23 @@
+{
+ "id": "a215",
+ "kip": "a",
+ "kategori": "KDV, tevkifat, stopaj, taksit ve kuruş yuvarlama (Decimal, ROUND_HALF_UP, satır bazında ve toplamda yuvarlama farkı)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "yedek_parca.py içinde YedekParcaFaturasi sınıfı yazıldı: Decimal ile KDV/tevkifat (ROUND_HALF_UP), Türkçe normalize kod, sıralı satırlar, özet toplamlar ve ROUND_DOWN taksitlendirme; tip/değer hata öncelikleri uygulandı.",
+ "adim": 4,
+ "yurutucu_token": {
+  "girdi": 14032,
+  "cikti": 20900
+ },
+ "yurutucu_usd": 0.0055832,
+ "bitirdi": true,
+ "sure_sn": 160.4,
+ "gizli": {
+  "gecti": true,
+  "gecen": 21,
+  "toplam": 21,
+  "cikti": ".....................                                                    [100%]\n21 passed in 0.03s\n"
+ }
+}

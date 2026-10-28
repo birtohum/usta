@@ -1,0 +1,23 @@
+{
+ "id": "a219",
+ "kip": "a",
+ "kategori": "tarih ve saat: resmî tatiller parametreyle, iş günü hesabı, Türkiye saat dilimi (UTC+3, yaz saati yok), gün/ay adları Türkçe",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "etiket_cli.py yazıldı: --tarih (zorunlu, YYYY-AA-GG), --tatiller (opsiyonel dosya, boş olabilir/verilmezse boş küme), --sonraki-isgunu (iş günü değilse ileri kaydırma) destekler. Cumartesi/Pazar ve tatil kümesindeki günler iş günü sayılmaz (date eşitliği). Tarihler zoneinfo Europe/Istanbul ile bilinçlendirilir. Başlık \"gün Ay yıl, GünAdı\" biçimindedir (Türkçe adlar). tr_upper ile i→İ, ı→I dönüşümü, etiketleri_sirala ile aynı günde parti numarasına göre sıralama, dakika yukarı yuvarlama (math.ceil) eklendi. Başarılı çıktı tek satır stdout'a, hatalar stderr'e çıkış kodu 2 ile verilir; yalnızca standart kütüphane kullanılır, ağ/rastgelelik/şimdiki zaman okuma yoktur.",
+ "adim": 9,
+ "yurutucu_token": {
+  "girdi": 40799,
+  "cikti": 15270
+ },
+ "yurutucu_usd": 0.0071339,
+ "bitirdi": true,
+ "sure_sn": 137.9,
+ "gizli": {
+  "gecti": true,
+  "gecen": 20,
+  "toplam": 20,
+  "cikti": "....................                                                     [100%]\n20 passed in 0.63s\n"
+ }
+}

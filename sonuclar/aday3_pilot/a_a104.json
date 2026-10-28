@@ -1,0 +1,23 @@
+{
+ "id": "a104",
+ "kip": "a",
+ "kategori": "KDV, tevkifat, stopaj, taksit ve kuruş yuvarlama (Decimal, ROUND_HALF_UP, satır bazında ve toplamda yuvarlama farkı)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "pazaryeri.py içinde komisyon_netlestir fonksiyonu yazıldı: Decimal + ROUND_HALF_UP ile satır bazında komisyon/KDV/net hesabı, 500 TL eşiğinde +0.02 puan, sıfır brut için sıfır kesinti, yuvarlama_farki (satır KDV toplamı - ham toplamdan tek yuvarlanan KDV), net+Türkçe normalize sku sıralaması, TypeError>oran ValueError>boşluk/negatiflik önceliği ve yasaklı float/ağ kullanılmadan sonuç sözlüğü döndürme.",
+ "adim": 4,
+ "yurutucu_token": {
+  "girdi": 12837,
+  "cikti": 17435
+ },
+ "yurutucu_usd": 0.0047707,
+ "bitirdi": true,
+ "sure_sn": 142.2,
+ "gizli": {
+  "gecti": true,
+  "gecen": 22,
+  "toplam": 22,
+  "cikti": "......................                                                   [100%]\n22 passed in 0.03s\n"
+ }
+}

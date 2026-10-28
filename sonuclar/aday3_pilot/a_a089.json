@@ -1,0 +1,23 @@
+{
+ "id": "a089",
+ "kip": "a",
+ "kategori": "KDV, tevkifat, stopaj, taksit ve kuruş yuvarlama (Decimal, ROUND_HALF_UP, satır bazında ve toplamda yuvarlama farkı)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "mustahsil.py içinde mustahsil_hesapla fonksiyonu yazıldı: Decimal + ROUND_HALF_UP ile satır bedel/stopaj yuvarlama, satır toplamları, tekten yuvarlama farkı, 10000 sınırında %1 ek masraf payı, net ödeme hesabı, TypeError/ValueError öncelikleri ve boş/negatif/ürün adı kontrolleri uygulandı.",
+ "adim": 7,
+ "yurutucu_token": {
+  "girdi": 28967,
+  "cikti": 14139
+ },
+ "yurutucu_usd": 0.0057245,
+ "bitirdi": true,
+ "sure_sn": 135.6,
+ "gizli": {
+  "gecti": true,
+  "gecen": 21,
+  "toplam": 21,
+  "cikti": ".....................                                                    [100%]\n21 passed in 0.03s\n"
+ }
+}

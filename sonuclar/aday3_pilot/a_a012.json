@@ -1,0 +1,23 @@
+{
+ "id": "a012",
+ "kip": "a",
+ "kategori": "CSV/JSON ile çalışan ve uç durumları çok olan veri işleme (BOM, ; ayırıcı, 1.234,56 sayı biçimi, boş/bozuk satır)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "stok_deposu.py yazıldı: StokDeposu sınıfı utf-8-sig ve noktalı virgül ile okur, başlığı tam bekler, Türkçe fiyat/adet ayrıştırır, Türkçe küçük harf çevrimiyle birleştirir, boş satırları atlar, sütun hatalarını sayar, utf-8 ensure_ascii False JSON çıktısı üretir.",
+ "adim": 5,
+ "yurutucu_token": {
+  "girdi": 11274,
+  "cikti": 32378
+ },
+ "yurutucu_usd": 0.007603,
+ "bitirdi": true,
+ "sure_sn": 286.0,
+ "gizli": {
+  "gecti": true,
+  "gecen": 21,
+  "toplam": 21,
+  "cikti": ".....................                                                    [100%]\n21 passed in 0.06s\n"
+ }
+}

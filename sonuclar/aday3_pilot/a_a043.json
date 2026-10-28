@@ -1,0 +1,23 @@
+{
+ "id": "a043",
+ "kip": "a",
+ "kategori": "Türkiye'ye özgü kimlik ve hesap numaraları (TC kimlik, VKN, IBAN, MERSİS, plaka, telefon) — birden çok kuralın birlikte uygulandığı",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "icra_dosyasi.py içinde dosya_ac işlevi yazıldı: dosya_no biçimi (2 büyük harf + tire + 4 rakam), TC 11 hane algoritması, VKN 10 hane algoritması, MERSIS 16 hane (VKN kuralı + toplam mod 10) doğrulamaları, boş/boşluk girdilerde ValueError, hata önceliği dosya_no→TC→VKN→MERSIS, rakam dışı karakterlerde ValueError, aynı dosya_no tekrarında ValueError ve yalnızca standart kütüphane kullanımı sağlandı.",
+ "adim": 5,
+ "yurutucu_token": {
+  "girdi": 14684,
+  "cikti": 8421
+ },
+ "yurutucu_usd": 0.0031526000000000006,
+ "bitirdi": true,
+ "sure_sn": 66.6,
+ "gizli": {
+  "gecti": true,
+  "gecen": 20,
+  "toplam": 20,
+  "cikti": "....................                                                     [100%]\n20 passed in 0.02s\n"
+ }
+}

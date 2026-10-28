@@ -1,0 +1,23 @@
+{
+ "id": "a062",
+ "kip": "a",
+ "kategori": "KDV, tevkifat, stopaj, taksit ve kuruş yuvarlama (Decimal, ROUND_HALF_UP, satır bazında ve toplamda yuvarlama farkı)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "hakedis.py içinde HakedisHesaplayici sınıfı yazıldı: Decimal + ROUND_HALF_UP ile satır bazında matrah/KDV (%20)/tevkifat yuvarlama, 2/10-4/10-5/10 kontrolü, tip-önce-değer-sonra hata önceliği, boş/negatif kontrolleri, sıfır matrah desteği, casefold (Türkçe I/İ düzeltmeli) eşleştirme, ayrı kalem tutma, stabil sıralama, matrah_farki/kdv_farki raporlama ve ödenecek=matrah+kdv-tevkifat hesabı uygulandı.",
+ "adim": 13,
+ "yurutucu_token": {
+  "girdi": 96793,
+  "cikti": 39054
+ },
+ "yurutucu_usd": 0.0174901,
+ "bitirdi": true,
+ "sure_sn": 347.8,
+ "gizli": {
+  "gecti": true,
+  "gecen": 20,
+  "toplam": 20,
+  "cikti": "....................                                                     [100%]\n20 passed in 0.04s\n"
+ }
+}

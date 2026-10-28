@@ -1,0 +1,23 @@
+{
+ "id": "a159",
+ "kip": "a",
+ "kategori": "KDV, tevkifat, stopaj, taksit ve kuruş yuvarlama (Decimal, ROUND_HALF_UP, satır bazında ve toplamda yuvarlama farkı)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "zeytin_iade.py içinde ZeytinIadeKontrol sınıfı yazıldı: satis_ekle türü önce denetler (Decimal dışı TypeError, oran 1/10/20 dışı ValueError, negatif ValueError), her satır KDV matrah*oran/100 ile ROUND_HALF_UP kuruşa yuvarlanır, tevkifatlı satırlar iade matrah/KDV'ye katılır, iade_hesapla iade matrahı, satır KDV toplamı, toplu-yuvarlama farkı ve alt_sınır eşiğine göre hak durumunu dict olarak döndürür; boş satışta sıfırlar ve False döner, eklenme sırası korunur.",
+ "adim": 16,
+ "yurutucu_token": {
+  "girdi": 155013,
+  "cikti": 49834
+ },
+ "yurutucu_usd": 0.025468100000000004,
+ "bitirdi": true,
+ "sure_sn": 449.3,
+ "gizli": {
+  "gecti": false,
+  "gecen": 21,
+  "toplam": 22,
+  "cikti": "...................F..                                                   [100%]\n=================================== FAILURES ===================================\n_________________________ test_yuvarlama_farki_negatif _________________________\n\n    def test_yuvarlama_farki_negatif():\n        k = ZeytinIadeKontrol()\n        k.satis_ekle(Decimal(\"10.05\"), 10, True)\n        k.satis_ekle(Decimal(\"10.05\"), 10, True)\n        s = k.iade_hesapla(Decimal(\"0\"))\n        assert s[\"iade_kdv_toplami\"] == Decimal(\"2.02\")\n>       assert s[\"yuvarlama_farki\"] == Decimal(\"-0.01\")\nE       AssertionError: assert Decimal('0.01') == Decimal('-0.01')\nE        +  where Decimal('-0.01') = Decimal('-0.01')\n\n.gizli/test_gizli.py:148: AssertionError\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_yuvarlama_farki_negatif - AssertionError: a...\n1 failed, 21 passed in 0.04s\n"
+ }
+}

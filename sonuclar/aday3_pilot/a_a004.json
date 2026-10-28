@@ -1,0 +1,23 @@
+{
+ "id": "a004",
+ "kip": "a",
+ "kategori": "tarih ve saat: resmî tatiller parametreyle, iş günü hesabı, Türkiye saat dilimi (UTC+3, yaz saati yok), gün/ay adları Türkçe",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "mesai.py yazıldı: gece_mesaisi_hesapla (TRT çevrimi, hafta içi 08-22 normal / diğer tüm saatler ile hafta sonu ve tatiller 2x, saniye atma + 15 dk yukarı yuvarlama, TypeError>ValueError önceliği, sonuç yukarı 2 ondalık) ve ay_adi (Türkçe ay adları) gerçeklendi; temel senaryolarla doğrulandı.",
+ "adim": 5,
+ "yurutucu_token": {
+  "girdi": 12123,
+  "cikti": 25521
+ },
+ "yurutucu_usd": 0.0063165,
+ "bitirdi": true,
+ "sure_sn": 227.7,
+ "gizli": {
+  "gecti": true,
+  "gecen": 20,
+  "toplam": 20,
+  "cikti": "....................                                                     [100%]\n20 passed in 0.03s\n"
+ }
+}

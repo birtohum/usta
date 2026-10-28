@@ -1,0 +1,23 @@
+{
+ "id": "a109",
+ "kip": "a",
+ "kategori": "KDV, tevkifat, stopaj, taksit ve kuruş yuvarlama (Decimal, ROUND_HALF_UP, satır bazında ve toplamda yuvarlama farkı)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "abonelik.py içinde AbonelikTaksitleri sınıfı yazıldı: Decimal + ROUND_HALF_UP ile matrah/KDV ayrıştırma, son taksite fark ekleme, 12000/6 kuralı, %3 erken kapatma indirimi ve TypeError/ValueError önceliği uygulandı.",
+ "adim": 4,
+ "yurutucu_token": {
+  "girdi": 9748,
+  "cikti": 21333
+ },
+ "yurutucu_usd": 0.005241399999999999,
+ "bitirdi": true,
+ "sure_sn": 175.8,
+ "gizli": {
+  "gecti": false,
+  "gecen": 21,
+  "toplam": 22,
+  "cikti": "....................F.                                                   [100%]\n=================================== FAILURES ===================================\n_____________________________ test_erken_discount ______________________________\n\n    def test_erken_discount():\n        a = AbonelikTaksitleri(Decimal('1200.00'), 4, Decimal('0.20'))\n        t = a.taksitler()\n        kalan = t[1:]\n        top_m = sum(x['matrah'] for x in kalan)\n        top_k = sum(x['kdv'] for x in kalan)\n        top_t = sum(x['tutar'] for x in kalan)\n        s = a.erken_kapat(1)\n        exp_m = Q(top_m * Decimal('0.97'))\n        exp_k = Q(top_k * Decimal('0.97'))\n        assert s['kalan_matrah'] == exp_m\n        assert s['kalan_kdv'] == exp_k\n        assert s['kalan_tutar'] == exp_m + exp_k\n>       assert s['indirimsiz_tutar'] == top_t\nE       KeyError: 'indirimsiz_tutar'\n\n.gizli/test_gizli.py:176: KeyError\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_erken_discount - KeyError: 'indirimsiz_tutar'\n1 failed, 21 passed in 0.05s\n"
+ }
+}

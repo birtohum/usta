@@ -1,0 +1,23 @@
+{
+ "id": "a128",
+ "kip": "a",
+ "kategori": "CSV/JSON ile çalışan ve uç durumları çok olan veri işleme (BOM, ; ayırıcı, 1.234,56 sayı biçimi, boş/bozuk satır)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "ekmek_dagitim.py yazıldı: DagitimPlani kapasite kontrolü, utf-8-sig ve ; ile okuma, boş satır atlama, Türkçe sayı çözümleme (binlik nokta, ondalık virgül, yarım-yukarı yuvarlama), Türkçe küçük harf normalizasyonu ve talep toplama, sıfır/negatif atlama, oranlı pay + aşağı yuvarlama + en büyük kalan paya göre dağıtım (alfabetik kırılım), dagitim/karsilanmayan/kullanim_orani sonucu ve hata öncelikleri uygulandı.",
+ "adim": 8,
+ "yurutucu_token": {
+  "girdi": 20669,
+  "cikti": 43042
+ },
+ "yurutucu_usd": 0.0106753,
+ "bitirdi": true,
+ "sure_sn": 356.7,
+ "gizli": {
+  "gecti": true,
+  "gecen": 22,
+  "toplam": 22,
+  "cikti": "......................                                                   [100%]\n22 passed in 0.05s\n"
+ }
+}

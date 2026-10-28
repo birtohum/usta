@@ -1,0 +1,23 @@
+{
+ "id": "a018",
+ "kip": "a",
+ "kategori": "CSV/JSON ile çalışan ve uç durumları çok olan veri işleme (BOM, ; ayırıcı, 1.234,56 sayı biçimi, boş/bozuk satır)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "bordro_cli.py yazıldı: utf-8-sig + ';' okuma, sicil;ad;brut başlık kontrolü, Türkçe sayı ayrıştırma (ValueError→çıkış 2), yukarı=ceil/asagi=floor kuruş yuvarlama, 10000'de %20 dilimi, boş satır atlama/bozuk sayma, Türkçe duyarlı ad+sicil sıralama, utf-8 ensure_ascii=False JSON çıktısı; dosya yoksa çıkış 1. Yalnızca standart kütüphane kullanıldı.",
+ "adim": 11,
+ "yurutucu_token": {
+  "girdi": 52533,
+  "cikti": 17257
+ },
+ "yurutucu_usd": 0.008704700000000001,
+ "bitirdi": true,
+ "sure_sn": 165.7,
+ "gizli": {
+  "gecti": true,
+  "gecen": 20,
+  "toplam": 20,
+  "cikti": "....................                                                     [100%]\n20 passed in 0.57s\n"
+ }
+}

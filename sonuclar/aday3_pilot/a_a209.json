@@ -1,0 +1,23 @@
+{
+ "id": "a209",
+ "kip": "a",
+ "kategori": "Türkçe büyük/küçük harf (İ/i, I/ı), Türk alfabesiyle sıralama, sayıyı yazıya çevirme, ünlü uyumuna göre ek",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "manifesto.py içinde Manifesto sınıfı tanımlandı: Türkçe I/İ/i/ı dönüşümlü başlık biçimi, 1-32 koltuk aralığı ve yazı karşılıkları, büyük ünlü uyumlu yönelme eki (Göreme'ye/Uçhisar'a), boş-girdi öncelikli ValueError/KeyError kontrolleri ve Türkçe alfabetik sıralı liste. Testlerle doğrulandı.",
+ "adim": 9,
+ "yurutucu_token": {
+  "girdi": 55031,
+  "cikti": 22870
+ },
+ "yurutucu_usd": 0.010077099999999999,
+ "bitirdi": true,
+ "sure_sn": 190.1,
+ "gizli": {
+  "gecti": true,
+  "gecen": 20,
+  "toplam": 20,
+  "cikti": "....................                                                     [100%]\n20 passed in 0.03s\n"
+ }
+}

@@ -1,0 +1,23 @@
+{
+ "id": "a081",
+ "kip": "a",
+ "kategori": "tarih ve saat: resmî tatiller parametreyle, iş günü hesabı, Türkiye saat dilimi (UTC+3, yaz saati yok), gün/ay adları Türkçe",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "kargo_cli.py yazıldı: UTC+3 çevrimi, saniye alta yuvarlama, 17:00 sınırı, gun=0/negatif kuralları, hata kodları (zaman önce: 2/3), YOK satırları, Türkçe küçük harf (İ→i, I→ı), erken saate göre sıralama; yalnızca standart kütüphane kullanıldı.",
+ "adim": 7,
+ "yurutucu_token": {
+  "girdi": 21437,
+  "cikti": 27392
+ },
+ "yurutucu_usd": 0.007622100000000001,
+ "bitirdi": true,
+ "sure_sn": 228.9,
+ "gizli": {
+  "gecti": false,
+  "gecen": 19,
+  "toplam": 20,
+  "cikti": ".....F..............                                                     [100%]\n=================================== FAILURES ===================================\n__________________________ test_06_tatil_yok_sayilir ___________________________\n\n    def test_06_tatil_yok_sayilir():\n        r = run_cli(\"--teslim\", \"2024-01-15-09:00\", \"--gun\", \"1\", \"--tatiller\", \"2024-01-16\", \"--cikti\", \"liste\")\n        assert r.returncode == 0\n        assert \"2024-01-15\" in r.stdout\n>       assert \"2024-01-16\" not in r.stdout\nE       AssertionError: assert '2024-01-16' not in '2024-01-15:...01-16: YOK\\n'\nE         '2024-01-16' is contained here:\nE           2024-01-15: pazartesi\nE           2024-01-16: YOK\n\n.gizli/test_gizli.py:47: AssertionError\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_06_tatil_yok_sayilir - AssertionError: asse...\n1 failed, 19 passed in 0.58s\n"
+ }
+}

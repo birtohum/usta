@@ -1,0 +1,23 @@
+{
+ "id": "a077",
+ "kip": "a",
+ "kategori": "çok dosyalı küçük modül: iki-üç dosyaya bölünmüş, ortak hata sınıfları ve bir komut satırı girişi olan araç",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "hatalar.py (OgrenciHatasi, LimitHatasi→ValueError), veresiye.py (VeresiyeDefteri: 1-20000 tutar kontrolü, 50000 limit, strip+Türkçe I/İ küçük harf birleşimi, özel Türkçe sıralama, hata önceliği) ve cli.py (--ogrenci/--islem/--tutar, tek satır \"Bakiye: N kuruş\") yazıldı ve doğrulandı.",
+ "adim": 8,
+ "yurutucu_token": {
+  "girdi": 31508,
+  "cikti": 18691
+ },
+ "yurutucu_usd": 0.006889000000000001,
+ "bitirdi": true,
+ "sure_sn": 190.1,
+ "gizli": {
+  "gecti": true,
+  "gecen": 20,
+  "toplam": 20,
+  "cikti": "....................                                                     [100%]\n20 passed in 0.13s\n"
+ }
+}

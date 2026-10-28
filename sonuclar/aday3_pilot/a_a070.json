@@ -1,0 +1,23 @@
+{
+ "id": "a070",
+ "kip": "a",
+ "kategori": "tarih ve saat: resmî tatiller parametreyle, iş günü hesabı, Türkiye saat dilimi (UTC+3, yaz saati yok), gün/ay adları Türkçe",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "ders_program.py yazıldı: DersProgrami(tatiller) tatilleri doğrular; ekle() tarih→ValueError/saat→TypeError önceliğiyle denetler, Türkiye saati (UTC+3) kullanır, bitiş<başlangıç ValueError, eşitlik 0 dakika; haftalik_plan() Pazartesi-Pazar Türkçe gün adlarıyla, tatil ve hafta sonu atlayarak, aynı saatte eklenme sırasını koruyarak döndürür; Türkçe İ→i/I→ı kuralı uygulanır; yalnızca standart kütüphane kullanılır.",
+ "adim": 9,
+ "yurutucu_token": {
+  "girdi": 26925,
+  "cikti": 34799
+ },
+ "yurutucu_usd": 0.009652299999999999,
+ "bitirdi": true,
+ "sure_sn": 314.6,
+ "gizli": {
+  "gecti": false,
+  "gecen": 14,
+  "toplam": 20,
+  "cikti": "0\", \"10:00\")\n        plan = dp.haftalik_plan(\"2024-01-01\")\n>       cmt = [g for g in plan if g[\"tarih\"] == \"2024-01-06\"][0]\nE       IndexError: list index out of range\n\n.gizli/test_gizli.py:101: IndexError\n__________________________ test_13_turkce_kucuk_harf ___________________________\n\n    def test_13_turkce_kucuk_harf():\n        assert _tr_lower(\"\\u0130\") == \"i\"\n        assert _tr_lower(\"I\") == \"\\u0131\"\n        dp = DersProgrami([])\n        plan = dp.haftalik_plan(\"2024-01-01\")\n        kucukler = [_tr_lower(g[\"gun\"]) for g in plan]\n>       assert kucukler == [\"pazartesi\", \"sal\\u0131\", \"\\u00e7ar\\u015famba\", \"per\\u015fembe\", \"cuma\", \"cumartesi\", \"pazar\"]\nE       AssertionError: assert ['pazartesi',...embe', 'cuma'] == ['pazartesi',...martesi', ...]\nE         Right contains 2 more items, first extra item: 'cumartesi'\nE         Use -v to get more diff\n\n.gizli/test_gizli.py:123: AssertionError\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_01_bos_tatil_hafta_doner - AssertionError: ...\nFAILED .gizli/test_gizli.py::test_03_aralik_pazartesi_pazar - AssertionError:...\nFAILED .gizli/test_gizli.py::test_04_gun_adlari_turkce - AssertionError: asse...\nFAILED .gizli/test_gizli.py::test_05_tatil_gunleri_atlanir - AssertionError: ...\nFAILED .gizli/test_gizli.py::test_11_hafta_sonu_sayilmaz - IndexError: list i...\nFAILED .gizli/test_gizli.py::test_13_turkce_kucuk_harf - AssertionError: asse...\n6 failed, 14 passed in 0.07s\n"
+ }
+}

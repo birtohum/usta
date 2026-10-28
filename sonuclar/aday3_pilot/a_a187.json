@@ -1,0 +1,23 @@
+{
+ "id": "a187",
+ "kip": "a",
+ "kategori": "çok dosyalı küçük modül: iki-üç dosyaya bölünmüş, ortak hata sınıfları ve bir komut satırı girişi olan araç",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "hatalar.py (4 hata sınıfı), kamp.py (KampAlani: rezervasyon/ucret/doluluk, TR küçük harf, yarı-açık çakışma, R-0001 kimlik, Decimal ROUND_HALF_UP ücret, hata önceliği tarih>tip>dolu) ve cli.py (--rezerve/--ucret/--doluluk tek satır JSON, kalıcı durum dosyası) yazıldı; yalnızca stdlib kullanıldı, tüm kurallar test edildi.",
+ "adim": 10,
+ "yurutucu_token": {
+  "girdi": 53907,
+  "cikti": 30447
+ },
+ "yurutucu_usd": 0.0114801,
+ "bitirdi": true,
+ "sure_sn": 276.4,
+ "gizli": {
+  "gecti": false,
+  "gecen": 21,
+  "toplam": 22,
+  "cikti": "                # Windows accumulates the output in a single blocking\n                    # read() call run on child threads, with the timeout\n                    # being done in a join() on those threads.  communicate()\n                    # _after_ kill() is required to collect that and add it\n                    # to the exception.\n                    exc.stdout, exc.stderr = process.communicate()\n                else:\n                    # POSIX _communicate already populated the output so\n                    # far into the TimeoutExpired exception.\n                    process.wait()\n                raise\n            except:  # Including KeyboardInterrupt, communicate handled that.\n                process.kill()\n                # We don't call process.wait() as .__exit__ does that for us.\n                raise\n            retcode = process.poll()\n            if check and retcode:\n>               raise CalledProcessError(retcode, process.args,\n                                         output=stdout, stderr=stderr)\nE               subprocess.CalledProcessError: Command '['/usr/bin/python', 'cli.py', '--rezerve', '--parsel', '5', '--tip', 'çadır', '--giris', '2026-06-01', '--cikis', '2026-06-04']' returned non-zero exit status 1.\n\n/usr/lib/python3.12/subprocess.py:571: CalledProcessError\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_cli_ucret_ve_doluluk - subprocess.CalledPro...\n1 failed, 21 passed in 0.14s\n"
+ }
+}

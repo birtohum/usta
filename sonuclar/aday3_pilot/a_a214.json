@@ -1,0 +1,23 @@
+{
+ "id": "a214",
+ "kip": "a",
+ "kategori": "tarih ve saat: resmî tatiller parametreyle, iş günü hesabı, Türkiye saat dilimi (UTC+3, yaz saati yok), gün/ay adları Türkçe",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "fuar.py içinde fuar_katilim_gunleri fonksiyonu yazıldı: Europe/Istanbul zoneinfo ile tarih çözümleme, Türkçe gün/ay adları, Türkçe büyük harf (i→İ, ı→I) ile ÇORUM LEBLEBİ FUARI etiketi, haftalık gün filtresi, tatil atlama, dahil sınırlar, math.ceil ile gün hesabı, öncelik/ada göre sıralama yardımcısı ve tarih→haftalık→bitiş→tatil hata önceliği ile ValueError kontrolleri uygulandı.",
+ "adim": 10,
+ "yurutucu_token": {
+  "girdi": 46553,
+  "cikti": 33045
+ },
+ "yurutucu_usd": 0.0112643,
+ "bitirdi": true,
+ "sure_sn": 280.3,
+ "gizli": {
+  "gecti": true,
+  "gecen": 20,
+  "toplam": 20,
+  "cikti": "....................                                                     [100%]\n20 passed in 0.03s\n"
+ }
+}

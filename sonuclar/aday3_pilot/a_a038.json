@@ -1,0 +1,23 @@
+{
+ "id": "a038",
+ "kip": "a",
+ "kategori": "KDV, tevkifat, stopaj, taksit ve kuruş yuvarlama (Decimal, ROUND_HALF_UP, satır bazında ve toplamda yuvarlama farkı)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "doviz.py içinde dovizli_kdv_hesapla fonksiyonu uygulandı: önce tip kontrolleri (TypeError), sonra değer kontrolleri; Decimal ile matrah*kur çarpılıp ROUND_HALF_UP ile 2 basamağa yuvarlanıyor, bu yuvarlanmış matrahtan KDV hesaplanıp yine yuvarlanıyor, toplam matrah+kdv olarak bulunuyor. Kur ≤0 ValueError, boş matrah ValueError, kdv_oran yalnızca 1/10/20, kur en fazla 6 ondalık basamak, float kullanılmadı.",
+ "adim": 4,
+ "yurutucu_token": {
+  "girdi": 8615,
+  "cikti": 9120
+ },
+ "yurutucu_usd": 0.0026855000000000004,
+ "bitirdi": true,
+ "sure_sn": 73.2,
+ "gizli": {
+  "gecti": true,
+  "gecen": 22,
+  "toplam": 22,
+  "cikti": "......................                                                   [100%]\n22 passed in 0.03s\n"
+ }
+}

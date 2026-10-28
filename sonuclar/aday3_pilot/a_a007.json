@@ -1,0 +1,23 @@
+{
+ "id": "a007",
+ "kip": "a",
+ "kategori": "Türkiye'ye özgü kimlik ve hesap numaraları (TC kimlik, VKN, IBAN, MERSİS, plaka, telefon) — birden çok kuralın birlikte uygulandığı",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "telefon_plaka_duzenleyici.py yazıldı ve test edildi: --telefon/--plaka zorunlu bayraklar, boş denetimi önce (çıkış 2), telefon boşluk-tire-parantez yoksayıp artı kontrolü ve 10/11/12 hane E164 dönüşümü, Türkçe büyük harf dönüşümü (ı→I, i→İ, lower/upper yok), plaka 01-81 il kodu ve harf/sayı grubu doğrulaması, başarıda tek satır JSON, hatada stderr Türkçe mesaj + çıkış 2, yalnızca standart kütüphane.",
+ "adim": 6,
+ "yurutucu_token": {
+  "girdi": 23841,
+  "cikti": 14092
+ },
+ "yurutucu_usd": 0.0052025000000000005,
+ "bitirdi": true,
+ "sure_sn": 117.1,
+ "gizli": {
+  "gecti": true,
+  "gecen": 20,
+  "toplam": 20,
+  "cikti": "....................                                                     [100%]\n20 passed in 0.62s\n"
+ }
+}

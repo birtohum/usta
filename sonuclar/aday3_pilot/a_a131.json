@@ -1,0 +1,23 @@
+{
+ "id": "a131",
+ "kip": "a",
+ "kategori": "tarih ve saat: resmî tatiller parametreyle, iş günü hesabı, Türkiye saat dilimi (UTC+3, yaz saati yok), gün/ay adları Türkçe",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "sozlesme.py içinde SozlesmeTakvimi sınıfı yazıldı: başlangıç YYYY-AA-GG regex+takvim kontrolü, sure 0-500 tam sayı (bool ve float reddi), tatiller kopyalanıp set ile tekilleştirme, iş günü Pazartesi-Cuma eksi tatil, sure=0 sonraki ilk iş günü, hata önceliği sırasına uygun ValueError, Türkçe özel küçük harf dönüşümü (I→ı, İ→i) ile rapor_satiri GG ay YYYY gün formatı, .lower kullanılmadı.",
+ "adim": 3,
+ "yurutucu_token": {
+  "girdi": 8464,
+  "cikti": 15910
+ },
+ "yurutucu_usd": 0.0040284000000000006,
+ "bitirdi": true,
+ "sure_sn": 133.6,
+ "gizli": {
+  "gecti": true,
+  "gecen": 20,
+  "toplam": 20,
+  "cikti": "....................                                                     [100%]\n20 passed in 0.02s\n"
+ }
+}

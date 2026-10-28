@@ -1,0 +1,23 @@
+{
+ "id": "a068",
+ "kip": "a",
+ "kategori": "KDV, tevkifat, stopaj, taksit ve kuruş yuvarlama (Decimal, ROUND_HALF_UP, satır bazında ve toplamda yuvarlama farkı)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "iskonto.py yazıldı: Decimal+ROUND_HALF_UP ile iki ondalık hesap, satır/genel iskonto ve KDV sırası, tip önceliği, hata kontrolleri, dagitilacak_fark, casefold ve stabil sıralama uygulandı.",
+ "adim": 9,
+ "yurutucu_token": {
+  "girdi": 25701,
+  "cikti": 53668
+ },
+ "yurutucu_usd": 0.013303699999999998,
+ "bitirdi": true,
+ "sure_sn": 435.2,
+ "gizli": {
+  "gecti": true,
+  "gecen": 22,
+  "toplam": 22,
+  "cikti": "......................                                                   [100%]\n22 passed in 0.03s\n"
+ }
+}

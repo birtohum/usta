@@ -1,0 +1,23 @@
+{
+ "id": "a056",
+ "kip": "a",
+ "kategori": "KDV, tevkifat, stopaj, taksit ve kuruş yuvarlama (Decimal, ROUND_HALF_UP, satır bazında ve toplamda yuvarlama farkı)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "kira.py içinde netten_brute_hesapla fonksiyonunu yazdım: tip kontrolü (TypeError) → sayıya çevirme (ValueError) önceliği, Decimal + ROUND_HALF_UP ile 2 ondalık yuvarlama, brüt=net/(1-stopaj), stopaj/KDV/damga (%0.948) brüt üzerinden, toplam=brüt+KDV, yuvarlama_farki=brüt*(1-stopaj)-net, sıfır nette sıfırlar, stopaj [0,1) ve KDV {0,0.01,0.10,0.20} doğrulaması, Türkçe I/İ düzeltmeli casefold ile işyeri kontrolü ve stabil sıralama (eşitlikte stopaj önce) uygulandı; float kullanılmadı.",
+ "adim": 4,
+ "yurutucu_token": {
+  "girdi": 10167,
+  "cikti": 15154
+ },
+ "yurutucu_usd": 0.0040475,
+ "bitirdi": true,
+ "sure_sn": 121.5,
+ "gizli": {
+  "gecti": true,
+  "gecen": 22,
+  "toplam": 22,
+  "cikti": "......................                                                   [100%]\n22 passed in 0.03s\n"
+ }
+}

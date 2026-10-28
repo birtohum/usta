@@ -1,0 +1,23 @@
+{
+ "id": "a151",
+ "kip": "a",
+ "kategori": "tarih ve saat: resmî tatiller parametreyle, iş günü hesabı, Türkiye saat dilimi (UTC+3, yaz saati yok), gün/ay adları Türkçe",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "bakim_cli.py yazıldı: --baslangic/--isgunu/--tatiller/--bicim bayraklarını sırayla denetler (eksik bayrak, başlangıç biçim, takvimde olmayan gün, isgunu 0-200, tatil biçim, bicim değeri), N iş günü hesabını başlangıçtan sonraki ilk iş gününden başlatır, kısa/uzun Türkçe çıktıyı stdout'a, hataları `hata: ...` olarak stderr'ye yazar; İngilizce lower kullanılmadan ay/gün adları sabit yazıldı.",
+ "adim": 6,
+ "yurutucu_token": {
+  "girdi": 20717,
+  "cikti": 21500
+ },
+ "yurutucu_usd": 0.006371700000000001,
+ "bitirdi": true,
+ "sure_sn": 174.2,
+ "gizli": {
+  "gecti": true,
+  "gecen": 22,
+  "toplam": 22,
+  "cikti": "......................                                                   [100%]\n22 passed in 0.53s\n"
+ }
+}

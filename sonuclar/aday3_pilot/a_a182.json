@@ -1,0 +1,23 @@
+{
+ "id": "a182",
+ "kip": "a",
+ "kategori": "çok dosyalı küçük modül: iki-üç dosyaya bölünmüş, ortak hata sınıfları ve bir komut satırı girişi olan araç",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "hatalar.py, sahaf.py ve cli.py yazıldı: ISBN/yıl/durum/fiyat doğrulama, Decimal ROUND_HALF_UP değerleme, Türkçe küçük harfli benzerlik sıralı arama ve tek satır JSON çıktılı CLI (dosya tabanlı kalıcılık ile) gerçeklendi.",
+ "adim": 13,
+ "yurutucu_token": {
+  "girdi": 60290,
+  "cikti": 31837
+ },
+ "yurutucu_usd": 0.012396400000000002,
+ "bitirdi": true,
+ "sure_sn": 295.1,
+ "gizli": {
+  "gecti": true,
+  "gecen": 20,
+  "toplam": 20,
+  "cikti": "....................                                                     [100%]\n20 passed in 0.19s\n"
+ }
+}

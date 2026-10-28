@@ -1,0 +1,23 @@
+{
+ "id": "a149",
+ "kip": "a",
+ "kategori": "KDV, tevkifat, stopaj, taksit ve kuruş yuvarlama (Decimal, ROUND_HALF_UP, satır bazında ve toplamda yuvarlama farkı)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "findik_taksit.py içinde durumsuz TaksitPlani sınıfı yazıldı. plan_olustur önce tür denetimleri (Decimal dışı TypeError, taksit/kdv için bool dahil int dışı TypeError), sonra değer denetimleri (nakit<=0, oran<0, taksit 1-36 dışı, kdv 1/10/20 dışı ValueError) yapar; vade farkını ve KDV'yi ROUND_HALF_UP ile kuruşa yuvarlayıp toplamı bulur, toplamı n'e bölüp yuvarlayarak kuruş farkını ilk taksitlere ±1 kuruş dağıtarak sira/tutar/anapara_payi/vade_farki_payi sözlükleri döner.",
+ "adim": 10,
+ "yurutucu_token": {
+  "girdi": 51708,
+  "cikti": 22945
+ },
+ "yurutucu_usd": 0.0097598,
+ "bitirdi": true,
+ "sure_sn": 180.1,
+ "gizli": {
+  "gecti": true,
+  "gecen": 22,
+  "toplam": 22,
+  "cikti": "......................                                                   [100%]\n22 passed in 0.03s\n"
+ }
+}

@@ -1,0 +1,23 @@
+{
+ "id": "a220",
+ "kip": "a",
+ "kategori": "tarih ve saat: resmî tatiller parametreyle, iş günü hesabı, Türkiye saat dilimi (UTC+3, yaz saati yok), gün/ay adları Türkçe",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "asi_takip.py içinde AsiTakvimi sınıfı yazıldı: tatil doğrulamalı kurucu, hafta sonu+tatil iş günü mantığı, sonraki iş günü, iş günü ekleme, Türkçe DD Ay YYYY Gün HH:MM etiketi ve Türkçe küçük harf eşlemesi (I→ı, İ→i) ile hata öncelikli ValueError kontrolleri eklendi.",
+ "adim": 11,
+ "yurutucu_token": {
+  "girdi": 57368,
+  "cikti": 17544
+ },
+ "yurutucu_usd": 0.0092456,
+ "bitirdi": true,
+ "sure_sn": 153.1,
+ "gizli": {
+  "gecti": true,
+  "gecen": 23,
+  "toplam": 23,
+  "cikti": ".......................                                                  [100%]\n23 passed in 0.03s\n"
+ }
+}

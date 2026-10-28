@@ -1,0 +1,23 @@
+{
+ "id": "a032",
+ "kip": "a",
+ "kategori": "KDV, tevkifat, stopaj, taksit ve kuruş yuvarlama (Decimal, ROUND_HALF_UP, satır bazında ve toplamda yuvarlama farkı)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "rapor.py içinde KdvRaporu sınıfı yazıldı: Decimal ile satır bazında ROUND_HALF_UP KDV hesabı, yuvarlanmış toplamlar, strip+casefold kategori gruplama/sıralama, toplam/ad sıralama, tip-öncelikli TypeError/ValueError kontrolleri ve boş özet için [] dönüşü uygulandı.",
+ "adim": 14,
+ "yurutucu_token": {
+  "girdi": 103535,
+  "cikti": 68546
+ },
+ "yurutucu_usd": 0.0240627,
+ "bitirdi": true,
+ "sure_sn": 564.3,
+ "gizli": {
+  "gecti": true,
+  "gecen": 22,
+  "toplam": 22,
+  "cikti": "......................                                                   [100%]\n22 passed in 0.03s\n"
+ }
+}

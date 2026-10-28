@@ -1,0 +1,23 @@
+{
+ "id": "a080",
+ "kip": "a",
+ "kategori": "Türkçe büyük/küçük harf (İ/i, I/ı), Türk alfabesiyle sıralama, sayıyı yazıya çevirme, ünlü uyumuna göre ek",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "eposta.py içinde eposta_oner(ad_soyad, mevcutlar) fonksiyonunu yazdım. Türkçe küçültme (İ→i, I→ı), çğışöü→cgiosu dönüşümü, boşluk/tire gruplarını tek alt çizgiye çevirme, geçersiz karakterleri silme, boş/işaret-only girdide ValueError, çakışmada 2'den başlayan sayı ekleme, ASCII tabanlı büyük/küçük harf duyarsız karşılaştırma ve tip kontrollerinde TypeError önceliği uygulandı; alan adı kapadokyaotel.com olarak sabitlendi. Yalnızca standart kütüphane (re) kullanıldı, deterministik ve testlerle doğrulandı.",
+ "adim": 5,
+ "yurutucu_token": {
+  "girdi": 11048,
+  "cikti": 9932
+ },
+ "yurutucu_usd": 0.0030912000000000005,
+ "bitirdi": true,
+ "sure_sn": 92.4,
+ "gizli": {
+  "gecti": true,
+  "gecen": 20,
+  "toplam": 20,
+  "cikti": "....................                                                     [100%]\n20 passed in 0.03s\n"
+ }
+}

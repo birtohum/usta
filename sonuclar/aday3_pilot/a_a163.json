@@ -1,0 +1,23 @@
+{
+ "id": "a163",
+ "kip": "a",
+ "kategori": "CSV/JSON ile çalışan ve uç durumları çok olan veri işleme (BOM, ; ayırıcı, 1.234,56 sayı biçimi, boş/bozuk satır)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": null,
+ "adim": 20,
+ "yurutucu_token": {
+  "girdi": 164780,
+  "cikti": 92482
+ },
+ "yurutucu_usd": 0.0349744,
+ "bitirdi": false,
+ "sure_sn": 816.2,
+ "gizli": {
+  "gecti": true,
+  "gecen": 20,
+  "toplam": 20,
+  "cikti": "....................                                                     [100%]\n20 passed in 0.71s\n"
+ }
+}

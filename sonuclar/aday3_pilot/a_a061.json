@@ -1,0 +1,23 @@
+{
+ "id": "a061",
+ "kip": "a",
+ "kategori": "Türkiye'ye özgü kimlik ve hesap numaraları (TC kimlik, VKN, IBAN, MERSİS, plaka, telefon) — birden çok kuralın birlikte uygulandığı",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "kooperatif_ortak.py içinde OrtakDefter yazıldı: unvan/VKN/MERSIS/IBAN doğrulamaları, hata önceliği ve sıralı raporla uygulandı, test edildi.",
+ "adim": 10,
+ "yurutucu_token": {
+  "girdi": 41678,
+  "cikti": 29485
+ },
+ "yurutucu_usd": 0.010064800000000002,
+ "bitirdi": true,
+ "sure_sn": 249.8,
+ "gizli": {
+  "gecti": true,
+  "gecen": 22,
+  "toplam": 22,
+  "cikti": "......................                                                   [100%]\n22 passed in 0.02s\n"
+ }
+}

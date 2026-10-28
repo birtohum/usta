@@ -1,0 +1,23 @@
+{
+ "id": "a129",
+ "kip": "a",
+ "kategori": "KDV, tevkifat, stopaj, taksit ve kuruş yuvarlama (Decimal, ROUND_HALF_UP, satır bazında ve toplamda yuvarlama farkı)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "karma_kdv.py içinde durum tutan KarmaKdvDagitici sınıfı yazıldı: satir_ekle tür denetimini (Decimal dışı TypeError) değer denetiminden önce yapar, negatif matrahta ve 0/10/20 dışı oranda ValueError, boş açıklamada ValueError fırlatır; her satır KDV'si matrah*oran/100 ile ROUND_HALF_UP kuruş yuvarlamasıyla hesaplanır. toplam_hesapla her oran için matrah/KDV kırılımı, genel matrah, satır yuvarlamalı KDV, genel toplam, toplu yuvarlama farkı (tek seferde yuvarlanan toplam eksi satır toplamı) ve casefold sıralı satır listesi döndürür; boşken tüm toplamlar sıfır Decimal olur.",
+ "adim": 10,
+ "yurutucu_token": {
+  "girdi": 85890,
+  "cikti": 33185
+ },
+ "yurutucu_usd": 0.015225999999999998,
+ "bitirdi": true,
+ "sure_sn": 276.4,
+ "gizli": {
+  "gecti": true,
+  "gecen": 20,
+  "toplam": 20,
+  "cikti": "....................                                                     [100%]\n20 passed in 0.04s\n"
+ }
+}

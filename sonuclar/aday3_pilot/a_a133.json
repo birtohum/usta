@@ -1,0 +1,23 @@
+{
+ "id": "a133",
+ "kip": "a",
+ "kategori": "CSV/JSON ile çalışan ve uç durumları çok olan veri işleme (BOM, ; ayırıcı, 1.234,56 sayı biçimi, boş/bozuk satır)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "sera_iklim.py yazıldı: iklim_ozeti CSV'yi utf-8-sig/; ile okur, Türkçe sayı ve YYYY-AA-GG SS-DD doğrular, bozuk satırları atlar, aynı dakika kaydını ezer, Türkçe küçük harfle normalize eder, Decimal yarım-yukarı ortalama hesaplar, eşik aşımında alarm üretir, seralar/toplam_olcum/en_dalgali döndürür; hata önceliği FileNotFoundError, ValueError(JSON), ValueError(başlık).",
+ "adim": 14,
+ "yurutucu_token": {
+  "girdi": 86983,
+  "cikti": 46968
+ },
+ "yurutucu_usd": 0.0180919,
+ "bitirdi": true,
+ "sure_sn": 399.6,
+ "gizli": {
+  "gecti": true,
+  "gecen": 22,
+  "toplam": 22,
+  "cikti": "......................                                                   [100%]\n22 passed in 0.07s\n"
+ }
+}

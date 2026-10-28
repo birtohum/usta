@@ -1,0 +1,23 @@
+{
+ "id": "a136",
+ "kip": "a",
+ "kategori": "tarih ve saat: resmî tatiller parametreyle, iş günü hesabı, Türkiye saat dilimi (UTC+3, yaz saati yok), gün/ay adları Türkçe",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "nikah.py içinde uygun_gunleri_bul ve salon_kurallari.py içinde kapali_gun yazıldı; hata önceliği, Türkçe gün adları ve bağımsızlık kurallarına uyuldu.",
+ "adim": 4,
+ "yurutucu_token": {
+  "girdi": 9862,
+  "cikti": 16125
+ },
+ "yurutucu_usd": 0.004211200000000001,
+ "bitirdi": true,
+ "sure_sn": 137.3,
+ "gizli": {
+  "gecti": true,
+  "gecen": 20,
+  "toplam": 20,
+  "cikti": "....................                                                     [100%]\n20 passed in 0.02s\n"
+ }
+}

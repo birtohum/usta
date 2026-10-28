@@ -1,0 +1,23 @@
+{
+ "id": "a065",
+ "kip": "a",
+ "kategori": "çok dosyalı küçük modül: iki-üç dosyaya bölünmüş, ortak hata sınıfları ve bir komut satırı girişi olan araç",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "hatalar.py (ValueError'dan türeyen UyeHatasi/KitapHatasi), odunc.py (strip+boş kontrolü, 0-365 gün aralığı, Türkçe I→ı/İ→i eşitliği, 3 kitap limiti, 14 gün muafiyetli 15 TL/gün ceza, hata önceliği) ve cli.py (--uye/--kitap/--gun/--donus ile tek satır \"Ceza: N TL\" çıktısı) yazıldı ve CLI ile sınır durumları doğrulandı.",
+ "adim": 8,
+ "yurutucu_token": {
+  "girdi": 26706,
+  "cikti": 18282
+ },
+ "yurutucu_usd": 0.006327000000000001,
+ "bitirdi": true,
+ "sure_sn": 146.0,
+ "gizli": {
+  "gecti": true,
+  "gecen": 22,
+  "toplam": 22,
+  "cikti": "......................                                                   [100%]\n22 passed in 0.08s\n"
+ }
+}
