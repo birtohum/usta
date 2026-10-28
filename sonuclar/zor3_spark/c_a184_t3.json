@@ -1,0 +1,59 @@
+{
+ "id": "a184",
+ "kip": "c",
+ "tekrar": 3,
+ "kategori": "KDV, tevkifat, stopaj, taksit ve kuruş yuvarlama (Decimal, ROUND_HALF_UP, satır bazında ve toplamda yuvarlama farkı)",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 57,
+   "basarili": 57
+  }
+ ],
+ "spark_usd": 0.0130431,
+ "arayuz": "bartin_kereste.py içinde kereste_taksitlendir(brut_toplam: str, kdv_oran: int, taksit_sayisi: int, vade_farki_oran: str) -> dict; sözlük anahtarları matrah, kdv, vade_farki, taksitler",
+ "kabul_yazar": 3,
+ "mutasyon": {
+  "mutant": 14,
+  "ham_mutant": 14,
+  "turlar": [
+   {
+    "oldurulen": 12,
+    "toplam": 14
+   },
+   {
+    "oldurulen": 13,
+    "toplam": 14
+   },
+   {
+    "oldurulen": 13,
+    "toplam": 14
+   }
+  ],
+  "hayatta": [
+   "Sifir brut tutar icin matrah KDV vade ve taksitlerin sifir donmesi gereksinimini cigner"
+  ]
+ },
+ "hakem": [],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [],
+ "kabul_test_sayisi": 57,
+ "kabul_gecti": true,
+ "ozet": "bartin_kereste.py içinde kereste_taksitlendir yazıldı: Decimal+ROUND_HALF_UP ile matrah/KDV/vade farkı/taksit hesabı, son taksit düzeltmesi, tek taksitte sıfır vade farkı, boş/sıfır brütte sıfırlar, Türkçe küçük harf yardımcısı, tip→aralık→negatif denetim sırası. pytest ile 6 test geçti.",
+ "adim": 8,
+ "yurutucu_token": {
+  "girdi": 30427,
+  "cikti": 25919
+ },
+ "yurutucu_usd": 0.008226500000000001,
+ "bitirdi": true,
+ "sure_sn": 492.8,
+ "gizli": {
+  "gecti": false,
+  "gecen": 0,
+  "toplam": 2,
+  "cikti": "\n==================================== ERRORS ====================================\n____________________ ERROR collecting .gizli/test_gizli.py _____________________\nImportError while importing test module '/home/usta/is/3c38613c4b74/.gizli/test_gizli.py'.\nHint: make sure your test modules/packages have valid Python names.\nTraceback:\n/usr/lib/python3.12/importlib/__init__.py:90: in import_module\n    return _bootstrap._gcd_import(name[level:], package, level)\n.gizli/test_gizli.py:4: in <module>\n    from bartin_kereste import kereste_taksitlendir, _turkce_kucuk_harf, musteri_unvan_sirala\nE   ImportError: cannot import name 'musteri_unvan_sirala' from 'bartin_kereste' (/home/usta/is/3c38613c4b74/bartin_kereste.py)\n=========================== short test summary info ============================\nERROR .gizli/test_gizli.py\n!!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!\n1 error in 0.05s\n"
+ }
+}

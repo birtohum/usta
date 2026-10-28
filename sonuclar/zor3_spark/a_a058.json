@@ -1,0 +1,24 @@
+{
+ "id": "a058",
+ "kip": "a",
+ "tekrar": 1,
+ "kategori": "tarih ve saat: resmî tatiller parametreyle, iş günü hesabı, Türkiye saat dilimi (UTC+3, yaz saati yok), gün/ay adları Türkçe",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "gumruk_cli.py yazıldı: --baslangic/--bitis/--tatiller/--bicim bayraklarını işler, TR takvimiyle hafta sonu+tatil eleme yapar, `YYYY-MM-DD: günadı` satırları ve Türkçe ay özeti yazar, hatalı tarihte kod 2 + HATALI TARIH, ters aralıkta kod 2, bilinmeyen bayrakta (tarihten önce denetlenir) kod 3 verir, İ->i/I->ı Türkçe küçük harf ve ay özetinde eşit sayıda erken başlangıç önceliği uygulanır; yalnızca sys+datetime kullanılır.",
+ "adim": 7,
+ "yurutucu_token": {
+  "girdi": 36116,
+  "cikti": 13934
+ },
+ "yurutucu_usd": 0.006398399999999999,
+ "bitirdi": true,
+ "sure_sn": 117.8,
+ "gizli": {
+  "gecti": false,
+  "gecen": 18,
+  "toplam": 20,
+  "cikti": "                                      [100%]\n=================================== FAILURES ===================================\n__________________ test_04_tatiller_bos_ise_sadece_haftasonu ___________________\n\n    def test_04_tatiller_bos_ise_sadece_haftasonu():\n        r = calistir(\"--baslangic\", \"2024-01-01\", \"--bitis\", \"2024-01-07\", \"--tatiller\", \"\", \"--bicim\", \"metin\")\n        assert r.returncode == 0\n        gs = gun_satirlari(r)\n>       assert len(gs) == 5\nE       AssertionError: assert 6 == 5\nE        +  where 6 = len(['2024-01-01: pazartesi', '2024-01-02: salı', '2024-01-03: çarşamba', '2024-01-04: perşembe', '2024-01-05: cuma', '2024-01 ocak: 5'])\n\n.gizli/test_gizli.py:49: AssertionError\n________________________ test_20_metin_bicimi_iki_nokta ________________________\n\n    def test_20_metin_bicimi_iki_nokta():\n        r = calistir(\"--baslangic\", \"2024-01-01\", \"--bitis\", \"2024-01-03\", \"--tatiller\", \"\", \"--bicim\", \"metin\")\n        assert r.returncode == 0\n        gs = gun_satirlari(r)\n>       assert len(gs) == 3\nE       AssertionError: assert 4 == 3\nE        +  where 4 = len(['2024-01-01: pazartesi', '2024-01-02: salı', '2024-01-03: çarşamba', '2024-01 ocak: 3'])\n\n.gizli/test_gizli.py:157: AssertionError\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_04_tatiller_bos_ise_sadece_haftasonu - Asse...\nFAILED .gizli/test_gizli.py::test_20_metin_bicimi_iki_nokta - AssertionError:...\n2 failed, 18 passed in 0.46s\n"
+ }
+}

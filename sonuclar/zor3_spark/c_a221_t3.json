@@ -1,0 +1,53 @@
+{
+ "id": "a221",
+ "kip": "c",
+ "tekrar": 3,
+ "kategori": "tarih ve saat: resmî tatiller parametreyle, iş günü hesabı, Türkiye saat dilimi (UTC+3, yaz saati yok), gün/ay adları Türkçe",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 57,
+   "basarili": 57
+  }
+ ],
+ "spark_usd": 0.0135075,
+ "arayuz": "",
+ "kabul_yazar": 3,
+ "mutasyon": {
+  "mutant": 16,
+  "ham_mutant": 16,
+  "turlar": [
+   {
+    "oldurulen": 11,
+    "toplam": 16
+   },
+   {
+    "oldurulen": 16,
+    "toplam": 16
+   }
+  ],
+  "hayatta": []
+ },
+ "hakem": [],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [],
+ "kabul_test_sayisi": 57,
+ "kabul_gecti": true,
+ "ozet": "denetim_cli.py yazıldı: iş günü hesabı (hafta sonu + tatil dosyası, N=0 kuralı, ileri/geri), iso/etiket çıktısı ve Türkçe küçük harf (--kucuk) desteklendi; hata öncelik ve çıkış kodları (2/3) uygulandı. test_denetim.py ile 35 pytest testi yazıldı, hepsi geçiyor.",
+ "adim": 11,
+ "yurutucu_token": {
+  "girdi": 78873,
+  "cikti": 32467
+ },
+ "yurutucu_usd": 0.014380700000000001,
+ "bitirdi": true,
+ "sure_sn": 479.5,
+ "gizli": {
+  "gecti": true,
+  "gecen": 22,
+  "toplam": 22,
+  "cikti": "......................                                                   [100%]\n22 passed in 0.49s\n"
+ }
+}

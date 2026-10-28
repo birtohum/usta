@@ -1,0 +1,24 @@
+{
+ "id": "a216",
+ "kip": "b",
+ "tekrar": 3,
+ "kategori": "tarih ve saat: resmî tatiller parametreyle, iş günü hesabı, Türkiye saat dilimi (UTC+3, yaz saati yok), gün/ay adları Türkçe",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "mezat.py içinde mezat_takvimi fonksiyonunu yazdım: başlangıç biçimini, mezat_günleri aralığını, gün sayısı negatifliğini ve tatil içeriğini belirtilen öncelikle doğrulayıp ValueError veriyor; gün sayısı sıfırsa veya mezat günleri boşsa boş liste döndürüyor; tarihleri Europe/Istanbul (UTC+3) bilinçli hesaplayıp tatilleri atlayarak başlangıç günü dahil ilerliyor ve Türkçe \"Gün Ay Yıl GünAdı\" biçiminde artan sıralı liste üretiyor. 19 pytest testi yazıp hepsini geçirdim.",
+ "adim": 6,
+ "yurutucu_token": {
+  "girdi": 19713,
+  "cikti": 18060
+ },
+ "yurutucu_usd": 0.005583299999999999,
+ "bitirdi": true,
+ "sure_sn": 191.3,
+ "gizli": {
+  "gecti": true,
+  "gecen": 20,
+  "toplam": 20,
+  "cikti": "....................                                                     [100%]\n20 passed in 0.03s\n"
+ }
+}

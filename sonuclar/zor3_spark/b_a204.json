@@ -1,0 +1,24 @@
+{
+ "id": "a204",
+ "kip": "b",
+ "tekrar": 1,
+ "kategori": "KDV, tevkifat, stopaj, taksit ve kuruş yuvarlama (Decimal, ROUND_HALF_UP, satır bazında ve toplamda yuvarlama farkı)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "bolu_lokanta_cli.py yazıldı: argparse ile --kalem/--indirim/--cikti, Türkçe duyarsız TUR, Decimal+ROUND_HALF_UP hesaplar, eşik/indirim/KDV/yuvarlama_farki kuralları, json/fis çıktıları ve exit kodları. 13 pytest testi geçiyor.",
+ "adim": 11,
+ "yurutucu_token": {
+  "girdi": 57487,
+  "cikti": 46334
+ },
+ "yurutucu_usd": 0.0150155,
+ "bitirdi": true,
+ "sure_sn": 494.8,
+ "gizli": {
+  "gecti": false,
+  "gecen": 9,
+  "toplam": 21,
+  "cikti": "alem\", \"servis:100.00:1\", \"--cikti\", \"fis\")\n>       assert r.returncode == 0\nE       AssertionError: assert 2 == 0\nE        +  where 2 = CompletedProcess(args=['/usr/bin/python', '/home/usta/is/6076d6b49dc2/bolu_lokanta_cli.py', '--kalem', 'paket:100.00:1...n                           {json,fis}\\nbolu_lokanta_cli.py: error: the following arguments are required: --indirim\\n').returncode\n\n.gizli/test_gizli.py:147: AssertionError\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_json_keys_single_line - AssertionError: ass...\nFAILED .gizli/test_gizli.py::test_paket_rate - AssertionError: assert 2 == 0\nFAILED .gizli/test_gizli.py::test_servis_rate - AssertionError: assert 2 == 0\nFAILED .gizli/test_gizli.py::test_paket_case_insensitive - AssertionError: PA...\nFAILED .gizli/test_gizli.py::test_servis_dotted_I - AssertionError: assert 2 ...\nFAILED .gizli/test_gizli.py::test_mixed_case_servis - AssertionError: assert ...\nFAILED .gizli/test_gizli.py::test_half_kurus_matrah_up - AssertionError: asse...\nFAILED .gizli/test_gizli.py::test_half_kurus_kdv_up - AssertionError: assert ...\nFAILED .gizli/test_gizli.py::test_yuvarlama_farki - AssertionError: assert 2 ...\nFAILED .gizli/test_gizli.py::test_success_exit0 - AssertionError: assert 2 == 0\nFAILED .gizli/test_gizli.py::test_fis_order - AssertionError: assert 2 == 0\nFAILED .gizli/test_gizli.py::test_fis_equal_stable - AssertionError: assert 2...\n12 failed, 9 passed in 1.95s\n"
+ }
+}

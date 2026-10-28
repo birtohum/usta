@@ -1,0 +1,24 @@
+{
+ "id": "a124",
+ "kip": "b",
+ "tekrar": 1,
+ "kategori": "KDV, tevkifat, stopaj, taksit ve kuruş yuvarlama (Decimal, ROUND_HALF_UP, satır bazında ve toplamda yuvarlama farkı)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "toplu_kdv_cli.py argparse ile yazıldı: Decimal + ROUND_HALF_UP, 750 TL kesinti, yuvarlama_farki, hata kodları 2, JSON formatı, --sira sıralaması ve Türkçe normalize karşılaştırma. pytest ile 6 test geçti.",
+ "adim": 14,
+ "yurutucu_token": {
+  "girdi": 66184,
+  "cikti": 61780
+ },
+ "yurutucu_usd": 0.018974400000000006,
+ "bitirdi": true,
+ "sure_sn": 712.9,
+ "gizli": {
+  "gecti": true,
+  "gecen": 21,
+  "toplam": 21,
+  "cikti": ".....................                                                    [100%]\n21 passed in 1.91s\n"
+ }
+}

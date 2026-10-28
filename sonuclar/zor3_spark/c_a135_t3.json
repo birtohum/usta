@@ -1,0 +1,66 @@
+{
+ "id": "a135",
+ "kip": "c",
+ "tekrar": 3,
+ "kategori": "Türkçe büyük/küçük harf (İ/i, I/ı), Türk alfabesiyle sıralama, sayıyı yazıya çevirme, ünlü uyumuna göre ek",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": false,
+   "toplam": 6,
+   "basarili": 0
+  },
+  {
+   "gecti": true,
+   "toplam": 23,
+   "basarili": 23
+  }
+ ],
+ "spark_usd": 0.027402600000000006,
+ "arayuz": "",
+ "kabul_yazar": 1,
+ "mutasyon": {
+  "mutant": 16,
+  "ham_mutant": 16,
+  "turlar": [
+   {
+    "oldurulen": 13,
+    "toplam": 16
+   },
+   {
+    "oldurulen": 15,
+    "toplam": 16
+   },
+   {
+    "oldurulen": 15,
+    "toplam": 16
+   }
+  ],
+  "hayatta": [
+   "kat_sirala dogal esitlikte once kisa etiket siralamali, uzunluk olcutu kaldirilarak ihlal"
+  ]
+ },
+ "hakem": [],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [
+  ".usta_kabul/test_kabul_1.py::test_kat_sayi_esitliginde_kisa_once"
+ ],
+ "kabul_test_sayisi": 23,
+ "kabul_gecti": true,
+ "ozet": "kart.py yazıldı: tr_baslik_ad (Türkçe i/I dönüşümlü başlık), oda_iyelik (son ünlüye göre sı/si/su/sü, ünsüz uyumu ve s kaynaştırma), sira_sozcugu (1-999 sıra sayısı, birinci/yüzüncü dahil), kat_sirala (Türk alfabesi + doğal sayı sıralaması, kısa-önce ve Unicode eşitlik kırma). Kabul testleri (24) ve kendi testlerim (5) geçiyor.",
+ "adim": 16,
+ "yurutucu_token": {
+  "girdi": 100193,
+  "cikti": 73604
+ },
+ "yurutucu_usd": 0.0247401,
+ "bitirdi": true,
+ "sure_sn": 1164.9,
+ "gizli": {
+  "gecti": true,
+  "gecen": 24,
+  "toplam": 24,
+  "cikti": "........................                                                 [100%]\n24 passed in 0.06s\n"
+ }
+}

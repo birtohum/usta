@@ -75,23 +75,52 @@ def _kaydet(model: str, usage: dict) -> float:
     return maliyet
 
 
+class _HizSiniri:
+    """Süreç içi kayan pencere: son 60 sn'deki istek sayısı RPM'i aşmasın (Meta contributor sınırı 150/dk)."""
+
+    def __init__(self, rpm: int):
+        self.rpm, self.zamanlar, self.kilit = rpm, [], threading.Lock()
+
+    def bekle(self):
+        while True:
+            with self.kilit:
+                simdi = time.time()
+                self.zamanlar = [t for t in self.zamanlar if simdi - t < 60]
+                if len(self.zamanlar) < self.rpm:
+                    self.zamanlar.append(simdi)
+                    return
+                bekleme = 60 - (simdi - self.zamanlar[0]) + 0.05
+            time.sleep(bekleme)
+
+
+_hiz = _HizSiniri(int(os.environ.get("USTA_RPM", "130")))
+
+
+def _bekleme(r, i: int) -> float:
+    try:
+        return min(60.0, float(r.headers.get("Retry-After"))) if r is not None and r.headers.get("Retry-After") else 0.0
+    except (TypeError, ValueError):
+        return 0.0
+
+
 def sohbet(messages: list, model: str = MODEL, max_tokens: int = 4096, temperature: float = 0.2,
-           tekrar: int = 4, **ek) -> dict:
+           tekrar: int = 8, **ek) -> dict:
     """OpenAI uyumlu /chat/completions çağrısı; mesaj sözlüğünü döndürür (+ '_usage', '_maliyet')."""
     if butce()["toplam_usd"] >= SINIR_USD:
         raise ButceAsildi(f"Spark bütçe sınırı ({SINIR_USD} $) doldu")
     govde = {"model": model, "messages": messages, "max_tokens": max_tokens, "temperature": temperature, **ek}
     basliklar = {"Authorization": f"Bearer {_anahtar()}"}
     for i in range(tekrar):
+        _hiz.bekle()
         try:
             r = requests.post(f"{BASE}/chat/completions", headers=basliklar, json=govde, timeout=300)
         except requests.RequestException:
             if i == tekrar - 1:
                 raise
-            time.sleep(2 ** i * 3)
+            time.sleep(min(60, 2 ** i * 3))
             continue
         if r.status_code in (429, 500, 502, 503, 504) and i < tekrar - 1:
-            time.sleep(2 ** i * 3)
+            time.sleep(_bekleme(r, i) or min(60, 2 ** i * 3))
             continue
         r.raise_for_status()
         try:

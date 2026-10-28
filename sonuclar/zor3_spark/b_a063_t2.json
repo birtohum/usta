@@ -1,0 +1,24 @@
+{
+ "id": "a063",
+ "kip": "b",
+ "tekrar": 2,
+ "kategori": "Türkçe büyük/küçük harf (İ/i, I/ı), Türk alfabesiyle sıralama, sayıyı yazıya çevirme, ünlü uyumuna göre ek",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "kimlik.py içinde KisiAdiDuzenleyici yazıldı: Türkçe I→ı / İ→i kuralıyla küçültüp her kelimenin ilk harfini büyütür (i→İ, ı→I), çift isim/tireli parçaları ayrı düzenler, çoklu boşlukları tekler, istisna anahtarlarını birebir korur; boş/rakamlı girdide ValueError, string olmayan/None girdide TypeError verir. 10 pytest testi geçiyor.",
+ "adim": 12,
+ "yurutucu_token": {
+  "girdi": 67725,
+  "cikti": 41039
+ },
+ "yurutucu_usd": 0.0149803,
+ "bitirdi": true,
+ "sure_sn": 478.5,
+ "gizli": {
+  "gecti": true,
+  "gecen": 20,
+  "toplam": 20,
+  "cikti": "....................                                                     [100%]\n20 passed in 0.04s\n"
+ }
+}

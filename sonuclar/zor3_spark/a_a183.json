@@ -1,0 +1,24 @@
+{
+ "id": "a183",
+ "kip": "a",
+ "tekrar": 1,
+ "kategori": "CSV/JSON ile çalışan ve uç durumları çok olan veri işleme (BOM, ; ayırıcı, 1.234,56 sayı biçimi, boş/bozuk satır)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": null,
+ "adim": 6,
+ "yurutucu_token": {
+  "girdi": 10406,
+  "cikti": 50022
+ },
+ "yurutucu_usd": 0.011045000000000001,
+ "bitirdi": false,
+ "sure_sn": 519.5,
+ "gizli": {
+  "gecti": false,
+  "gecen": 0,
+  "toplam": 2,
+  "cikti": "\n==================================== ERRORS ====================================\n____________________ ERROR collecting .gizli/test_gizli.py _____________________\nImportError while importing test module '/home/usta/is/9d34ddbb5eb2/.gizli/test_gizli.py'.\nHint: make sure your test modules/packages have valid Python names.\nTraceback:\n/usr/lib/python3.12/importlib/__init__.py:90: in import_module\n    return _bootstrap._gcd_import(name[level:], package, level)\n.gizli/test_gizli.py:3: in <module>\n    from un_kabul import UnKabul\nE   ModuleNotFoundError: No module named 'un_kabul'\n=========================== short test summary info ============================\nERROR .gizli/test_gizli.py\n!!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!\n1 error in 0.15s\n"
+ }
+}

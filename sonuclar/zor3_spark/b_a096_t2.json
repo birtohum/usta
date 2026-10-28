@@ -1,0 +1,24 @@
+{
+ "id": "a096",
+ "kip": "b",
+ "tekrar": 2,
+ "kategori": "tarih ve saat: resmî tatiller parametreyle, iş günü hesabı, Türkiye saat dilimi (UTC+3, yaz saati yok), gün/ay adları Türkçe",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "liman_cli.py programını istenen biçimde uyguladım: varıştan sonraki (N+1). iş günü ardiye başlangıcıdır, yalnızca Pzt-Cuma ve tatil dışı günler sayılır, tatiller küme ile tekillenir, json tek satır ve metin \"D Ay Y Gün\" çıktısı Türkçe adlarla üretilir, hatalarda stderr + çıkış 2 verilir ve önce eksik argüman denetlenir. 20 pytest testi yazıp `python -m pytest -q` ile hepsini geçirdim.",
+ "adim": 9,
+ "yurutucu_token": {
+  "girdi": 44317,
+  "cikti": 23862
+ },
+ "yurutucu_usd": 0.009204100000000002,
+ "bitirdi": true,
+ "sure_sn": 273.9,
+ "gizli": {
+  "gecti": true,
+  "gecen": 21,
+  "toplam": 21,
+  "cikti": ".....................                                                    [100%]\n21 passed in 1.32s\n"
+ }
+}

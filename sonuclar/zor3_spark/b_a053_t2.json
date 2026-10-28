@@ -1,0 +1,24 @@
+{
+ "id": "a053",
+ "kip": "b",
+ "tekrar": 2,
+ "kategori": "çok dosyalı küçük modül: iki-üç dosyaya bölünmüş, ortak hata sınıfları ve bir komut satırı girişi olan araç",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "hatalar.py, tarife.py ve cli.py dosyalarını yazdım: GirdiHatasi/TarifeHatasi doğrudan ValueError'dan türetildi; ucret_hesapla gece devri, 15 dk yukarı yuvarlama, en az 1 dilim, ilk 60 dk birim fiyat / sonrası 2 katı ve Türkçe kurallı tip normalizasyonu ile hata öncelik sırasını uyguluyor; cli.py \"Ücret: tutar TL\" çıktısı veriyor. 17 pytest testi geçiyor.",
+ "adim": 7,
+ "yurutucu_token": {
+  "girdi": 23023,
+  "cikti": 12892
+ },
+ "yurutucu_usd": 0.004880700000000001,
+ "bitirdi": true,
+ "sure_sn": 184.4,
+ "gizli": {
+  "gecti": true,
+  "gecen": 22,
+  "toplam": 22,
+  "cikti": "......................                                                   [100%]\n22 passed in 0.28s\n"
+ }
+}

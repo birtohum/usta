@@ -1,0 +1,69 @@
+{
+ "id": "a204",
+ "kip": "c",
+ "tekrar": 3,
+ "kategori": "KDV, tevkifat, stopaj, taksit ve kuruş yuvarlama (Decimal, ROUND_HALF_UP, satır bazında ve toplamda yuvarlama farkı)",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 52,
+   "basarili": 52
+  }
+ ],
+ "spark_usd": 0.019522800000000003,
+ "arayuz": "",
+ "kabul_yazar": 3,
+ "mutasyon": {
+  "mutant": 14,
+  "ham_mutant": 14,
+  "turlar": [
+   {
+    "oldurulen": 12,
+    "toplam": 14
+   },
+   {
+    "oldurulen": 14,
+    "toplam": 14
+   }
+  ],
+  "hayatta": []
+ },
+ "hakem": [
+  {
+   "test": ".usta_kabul/test_kabul_m1.py::test_ascii_I_gecersiz_SERVIS",
+   "karar": "belirsiz",
+   "gerekce": "Görev metni ASCII I içeren SERVIS yazımının geçersiz olduğunu açıkça belirtmiyor ve hoşgörülü yorum da makuldür.",
+   "tur": 1
+  },
+  {
+   "test": ".usta_kabul/test_kabul_m1.py::test_ascii_I_gecersiz_SeRVIS",
+   "karar": "belirsiz",
+   "gerekce": "Görev metni ASCII I içeren SeRVIS yazımının geçersiz olduğunu açıkça belirtmiyor ve hoşgörülü yorum da makuldür.",
+   "tur": 1
+  }
+ ],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [
+  ".usta_kabul/test_kabul_m1.py::test_ascii_I_gecersiz_SERVIS",
+  ".usta_kabul/test_kabul_m1.py::test_ascii_I_gecersiz_SeRVIS"
+ ],
+ "kabul_test_sayisi": 52,
+ "kabul_gecti": true,
+ "ozet": "bolu_lokanta_cli.py yazıldı: argparse ile --kalem/--indirim/--cikti, Türkçe duyarsız TUR, Decimal+ROUND_HALF_UP hesaplar, 750 eşiği, json/fis çıktıları, hata kodu 2. 12 pytest testi geçiyor.",
+ "adim": 10,
+ "yurutucu_token": {
+  "girdi": 45067,
+  "cikti": 48402
+ },
+ "yurutucu_usd": 0.014187100000000001,
+ "bitirdi": true,
+ "sure_sn": 669.4,
+ "gizli": {
+  "gecti": true,
+  "gecen": 21,
+  "toplam": 21,
+  "cikti": ".....................                                                    [100%]\n21 passed in 0.87s\n"
+ }
+}

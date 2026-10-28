@@ -1,0 +1,24 @@
+{
+ "id": "a049",
+ "kip": "b",
+ "tekrar": 1,
+ "kategori": "Türkiye'ye özgü kimlik ve hesap numaraları (TC kimlik, VKN, IBAN, MERSİS, plaka, telefon) — birden çok kuralın birlikte uygulandığı",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "otopark_abone.py yazıldı ve 17 pytest testi geçti. TC (11 hane + 10./11. hane kuralı, kırpmasız), plaka (trim, iç boşluk/tire yasak, 01-81 + 1-3 harf + 2-4 rakam, QWX yasak, Türkçe/küçük harf normalizasyonu), telefon (tire/boşluk/parantez temizliği + 0/+90 sıyırma + 5xx aralığı), IBAN (TR + 26 hane, kontrol 02-98, MOD97=1), ay (1-12, ücret=ay*750) ve HATA önceliği (bos>tc>plaka>telefon>iban>ay, stderr + çıkış 2) uygulandı.",
+ "adim": 6,
+ "yurutucu_token": {
+  "girdi": 21731,
+  "cikti": 25388
+ },
+ "yurutucu_usd": 0.0072507,
+ "bitirdi": true,
+ "sure_sn": 214.5,
+ "gizli": {
+  "gecti": true,
+  "gecen": 22,
+  "toplam": 22,
+  "cikti": "......................                                                   [100%]\n22 passed in 0.76s\n"
+ }
+}

@@ -1,0 +1,24 @@
+{
+ "id": "a073",
+ "kip": "b",
+ "tekrar": 1,
+ "kategori": "Türkiye'ye özgü kimlik ve hesap numaraları (TC kimlik, VKN, IBAN, MERSİS, plaka, telefon) — birden çok kuralın birlikte uygulandığı",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "vekalet_hazirlik.py (VekaletHazirlayici: TC/VKN/telefon/IBAN doğrulama, ekle, ozet) ve vekalet_cli.py (TAMAM/HATA:kod çıktısı) yazıldı; pytest ile 9 test geçti.",
+ "adim": 10,
+ "yurutucu_token": {
+  "girdi": 42215,
+  "cikti": 45512
+ },
+ "yurutucu_usd": 0.013323900000000001,
+ "bitirdi": true,
+ "sure_sn": 457.4,
+ "gizli": {
+  "gecti": true,
+  "gecen": 23,
+  "toplam": 23,
+  "cikti": ".......................                                                  [100%]\n23 passed in 0.46s\n"
+ }
+}

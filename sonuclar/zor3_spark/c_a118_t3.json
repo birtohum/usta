@@ -1,0 +1,88 @@
+{
+ "id": "a118",
+ "kip": "c",
+ "tekrar": 3,
+ "kategori": "CSV/JSON ile çalışan ve uç durumları çok olan veri işleme (BOM, ; ayırıcı, 1.234,56 sayı biçimi, boş/bozuk satır)",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 25,
+   "basarili": 25
+  }
+ ],
+ "spark_usd": 0.016790399999999997,
+ "arayuz": "",
+ "kabul_yazar": 3,
+ "mutasyon": {
+  "mutant": 14,
+  "ham_mutant": 14,
+  "turlar": [
+   {
+    "oldurulen": 10,
+    "toplam": 14
+   },
+   {
+    "oldurulen": 10,
+    "toplam": 14
+   },
+   {
+    "oldurulen": 10,
+    "toplam": 14
+   }
+  ],
+  "hayatta": [
+   "(1) utf-8-sig ile okuma zorunlulugunu cigner, BOM isareti yanlis islenir",
+   "(2) yalnizca bosluk iceren satirlari yok sayma kuralini bozar",
+   "(3) Turkce ucret biciminde birden fazla virgulu kabul ederek bozuk sayma kuralini cigner",
+   "(5) tarih alaninda yalnizca GG-AA-YYYY bicimini kabul etme kuralini gevsetir"
+  ]
+ },
+ "hakem": [],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [
+  ".usta_kabul/test_kabul_1.py::test_bos_ve_bosluk_satirlar_yoksayilir",
+  ".usta_kabul/test_kabul_1.py::test_ekle_utf8sig_noktali_virgul_ve_baslik",
+  ".usta_kabul/test_kabul_1.py::test_en_yogun_gun_esitlikte_en_kucuk",
+  ".usta_kabul/test_kabul_1.py::test_hasilat_satir_bazinda_yuvarlanir",
+  ".usta_kabul/test_kabul_1.py::test_hasilat_yarim_yukari_yuvarlama",
+  ".usta_kabul/test_kabul_1.py::test_rapor_sozluk_anahtarlari_ve_en_yogun_gun",
+  ".usta_kabul/test_kabul_1.py::test_sefer_id_bos_ise_bozuk",
+  ".usta_kabul/test_kabul_1.py::test_sutun_sayisi_bes_olmayan_atlanir",
+  ".usta_kabul/test_kabul_1.py::test_tarih_gg_aa_yyyy_disi_bozuk",
+  ".usta_kabul/test_kabul_1.py::test_tekrar_sefer_id_ilk_korunur",
+  ".usta_kabul/test_kabul_1.py::test_ucret_cozumlenemezse_bozuk",
+  ".usta_kabul/test_kabul_1.py::test_ucret_turkce_bicim_cozumlenir",
+  ".usta_kabul/test_kabul_3.py::test_bom_ile_okuma",
+  ".usta_kabul/test_kabul_3.py::test_bos_ve_bosluk_satirlar_yoksayilir",
+  ".usta_kabul/test_kabul_3.py::test_ekle_noktali_virgulle_okur_ve_sayar",
+  ".usta_kabul/test_kabul_3.py::test_en_yogun_gun_esitlikte_en_kucuk",
+  ".usta_kabul/test_kabul_3.py::test_hasilat_satir_bazinda_yuvarlanir",
+  ".usta_kabul/test_kabul_3.py::test_hasilat_yarim_yukari_yuvarlama",
+  ".usta_kabul/test_kabul_3.py::test_rapor_anahtarlar_ve_en_yogun_gun",
+  ".usta_kabul/test_kabul_3.py::test_sefer_id_bos_ise_bozuk",
+  ".usta_kabul/test_kabul_3.py::test_sutun_sayisi_bes_olmayan_atlanir",
+  ".usta_kabul/test_kabul_3.py::test_tarih_gecerli_kabul_gecersiz_red",
+  ".usta_kabul/test_kabul_3.py::test_tekrar_sefer_id_ilk_korunur",
+  ".usta_kabul/test_kabul_3.py::test_ucret_binlik_nokta_cozumlenir",
+  ".usta_kabul/test_kabul_3.py::test_ucret_cozumlenemezse_bozuk"
+ ],
+ "kabul_test_sayisi": 25,
+ "kabul_gecti": true,
+ "ozet": "SeferDefteri sınıfı feribot_sefer.py içinde yazıldı; utf-8-sig/; ayrıştırma, boş satır atlama, 5 sütun kontrolü, Türkçe ücret ayrıştırma, sefer_id tekilleme, GG-AA-YYYY tarih doğrulama, satır bazında ROUND_HALF_UP hasılat, en yoğun gün eşitliğinde en küçük tarih, boş defter ve hata durumları uygulandı. 8 pytest testi geçti.",
+ "adim": 7,
+ "yurutucu_token": {
+  "girdi": 23436,
+  "cikti": 26748
+ },
+ "yurutucu_usd": 0.007693200000000001,
+ "bitirdi": true,
+ "sure_sn": 822.7,
+ "gizli": {
+  "gecti": true,
+  "gecen": 20,
+  "toplam": 20,
+  "cikti": "....................                                                     [100%]\n20 passed in 0.08s\n"
+ }
+}

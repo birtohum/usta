@@ -1,0 +1,63 @@
+{
+ "id": "a072",
+ "kip": "c",
+ "tekrar": 1,
+ "kategori": "CSV/JSON ile çalışan ve uç durumları çok olan veri işleme (BOM, ; ayırıcı, 1.234,56 sayı biçimi, boş/bozuk satır)",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 15,
+   "basarili": 15
+  }
+ ],
+ "spark_usd": 0.0313018,
+ "arayuz": "",
+ "kabul_yazar": 1,
+ "mutasyon": {
+  "mutant": 16,
+  "ham_mutant": 16,
+  "turlar": [
+   {
+    "oldurulen": 11,
+    "toplam": 16
+   },
+   {
+    "oldurulen": 11,
+    "toplam": 16
+   },
+   {
+    "oldurulen": 11,
+    "toplam": 16
+   }
+  ],
+  "hayatta": [
+   "(1) utf-8-sig ile okuma gereksinimini ihlal eder, BOM'lu dosyayi bozar",
+   "(3) tamamen bos satirlari atlama gereksinimini ihlal eder",
+   "(5) 20 m3'e tam esit tuketimi birinci kademeye dahil etme gereksinimini ihlal eder",
+   "(5) negatif tuketimde hata verip cikis kodu 1 gereksinimini ihlal eder",
+   "(6) eksik argumanda cikis kodu 2 gereksinimini ihlal eder"
+  ]
+ },
+ "hakem": [],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [],
+ "kabul_test_sayisi": 15,
+ "kabul_gecti": true,
+ "ozet": "su_fatura_cli.py yazıldı: utf-8-sig + noktalı virgül CSV, Türkçe sayı/Decimal + HALF_UP, boş satır atlama, sütun/JSON/negatif hatalarında stderr+exit1, eksik argümanda exit2, I/İ Türkçe normalize birleştirme, 20 m³ kademeli ücret, toplam+aboneler JSON (utf-8, ensure_ascii=False, indent=2), tutar/m³/Türkçe alfabetik sıralama. test_su.py ile 13 test geçti.",
+ "adim": 7,
+ "yurutucu_token": {
+  "girdi": 36675,
+  "cikti": 31449
+ },
+ "yurutucu_usd": 0.0099573,
+ "bitirdi": true,
+ "sure_sn": 1288.8,
+ "gizli": {
+  "gecti": true,
+  "gecen": 20,
+  "toplam": 20,
+  "cikti": "....................                                                     [100%]\n20 passed in 2.14s\n"
+ }
+}

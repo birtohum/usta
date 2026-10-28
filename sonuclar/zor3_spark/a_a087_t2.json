@@ -1,0 +1,24 @@
+{
+ "id": "a087",
+ "kip": "a",
+ "tekrar": 2,
+ "kategori": "çok dosyalı küçük modül: iki-üç dosyaya bölünmüş, ortak hata sınıfları ve bir komut satırı girişi olan araç",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "hatalar.py, bordro.py ve cli.py oluşturuldu. net_odeme tam sayı kuruş aritmetiğiyle brüt, tavana yuvarlanan %2 kesinti ve 10000 kuruş destek primini hesaplıyor; hata önceliği kilo-UreticiHatasi, nem-NemHatasi, boş ad-UreticiHatasi ve Türkçe küçük harf dönüşümü uygulandı; CLI tek satır ödeme çıktısı veriyor.",
+ "adim": 12,
+ "yurutucu_token": {
+  "girdi": 52676,
+  "cikti": 30533
+ },
+ "yurutucu_usd": 0.0113742,
+ "bitirdi": true,
+ "sure_sn": 344.0,
+ "gizli": {
+  "gecti": true,
+  "gecen": 20,
+  "toplam": 20,
+  "cikti": "....................                                                     [100%]\n20 passed in 0.23s\n"
+ }
+}

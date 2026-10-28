@@ -1,0 +1,59 @@
+{
+ "id": "a069",
+ "kip": "c",
+ "tekrar": 3,
+ "kategori": "Türkçe büyük/küçük harf (İ/i, I/ı), Türk alfabesiyle sıralama, sayıyı yazıya çevirme, ünlü uyumuna göre ek",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 57,
+   "basarili": 57
+  }
+ ],
+ "spark_usd": 0.0125147,
+ "arayuz": "Dosya: envanter.py. Fonksiyon: envanter.tr_dogal_sira(etiketler: list) -> list. CLI: python envanter.py [--ters] [--yoksay-buyuk-kucuk]; girdi stdin satır başına bir etiket, çıktı stdout satır başına bir etiket.",
+ "kabul_yazar": 3,
+ "mutasyon": {
+  "mutant": 14,
+  "ham_mutant": 14,
+  "turlar": [
+   {
+    "oldurulen": 12,
+    "toplam": 14
+   },
+   {
+    "oldurulen": 13,
+    "toplam": 14
+   },
+   {
+    "oldurulen": 13,
+    "toplam": 14
+   }
+  ],
+  "hayatta": [
+   "string eleman olmayan listede TypeError gereksinimini cigner, int kabul eder"
+  ]
+ },
+ "hakem": [],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [],
+ "kabul_test_sayisi": 57,
+ "kabul_gecti": true,
+ "ozet": "envanter.py yazıldı: tr_dogal_sira Türk alfabesi sırası, sayısal blok karşılaştırması (2<10, kısa ham string önce), varsayılan duyarsız+küçük-önce eşitlik bozma, boş liste/boş string, girdi kopyalama, TypeError kontrolleri ve stdin/stdout CLI (--ters tam tersine çevirme, --yoksay-buyuk-kucuk eşitlik bozmayı kaldırma) destekler. test_env.py ile 8 pytest geçti.",
+ "adim": 6,
+ "yurutucu_token": {
+  "girdi": 17844,
+  "cikti": 21623
+ },
+ "yurutucu_usd": 0.006109000000000001,
+ "bitirdi": true,
+ "sure_sn": 944.6,
+ "gizli": {
+  "gecti": false,
+  "gecen": 13,
+  "toplam": 20,
+  "cikti": "tionError\n____________________________ test_cli_sayisal_dosya ____________________________\n\ntmp_path = PosixPath('/home/usta/is/e6335d802740/.tmp/pytest-of-usta/pytest-0/test_cli_sayisal_dosya0')\n\n    def test_cli_sayisal_dosya(tmp_path):\n        isyeri = str(_pl.Path(\"envanter.py\").resolve().parent)\n        f = tmp_path / \"n.txt\"\n        f.write_text(\"oda10\\noda02\\noda2\\n\", encoding=\"utf-8\")\n        r = calistir_cli([str(f)], cwd=isyeri)\n>       assert r.returncode == 0\nE       AssertionError: assert 2 == 0\nE        +  where 2 = CompletedProcess(args=['/usr/bin/python', 'envanter.py', '/home/usta/is/e6335d802740/.tmp/pytest-of-usta/pytest-0/test..., stderr='bilinmeyen argüman: /home/usta/is/e6335d802740/.tmp/pytest-of-usta/pytest-0/test_cli_sayisal_dosya0/n.txt\\n').returncode\n\n.gizli/test_gizli.py:120: AssertionError\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_cli_dosya_siralama - AssertionError: assert...\nFAILED .gizli/test_gizli.py::test_cli_ters - AssertionError: assert 2 == 0\nFAILED .gizli/test_gizli.py::test_cli_yoksay_buyuk_kucuk - AssertionError: as...\nFAILED .gizli/test_gizli.py::test_cli_iki_bayrak - AssertionError: assert 2 == 0\nFAILED .gizli/test_gizli.py::test_cli_bos_dosya - AssertionError: assert 2 == 0\nFAILED .gizli/test_gizli.py::test_cli_turkce_sira_dosya - AssertionError: ass...\nFAILED .gizli/test_gizli.py::test_cli_sayisal_dosya - AssertionError: assert ...\n7 failed, 13 passed in 0.51s\n"
+ }
+}

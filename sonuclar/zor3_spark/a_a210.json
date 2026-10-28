@@ -1,0 +1,24 @@
+{
+ "id": "a210",
+ "kip": "a",
+ "tekrar": 1,
+ "kategori": "tarih ve saat: resmî tatiller parametreyle, iş günü hesabı, Türkiye saat dilimi (UTC+3, yaz saati yok), gün/ay adları Türkçe",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "kira.py içinde kira_yenileme(baslangic, yil, tatiller, kaydir) yazıldı: YYYY-AA-GG doğrulama, yil>=0, kaydir ileri/geri kontrolü, None tatiller, 29 Şubat→28 Şubat, hafta sonu/tatil kaydırma, Europe/Istanbul zoneinfo doğrulaması ve Türkçe gün/ay adlarıyla sonuç döndürme; hata önceliğine uygun ValueError.",
+ "adim": 16,
+ "yurutucu_token": {
+  "girdi": 68805,
+  "cikti": 46567
+ },
+ "yurutucu_usd": 0.016193899999999997,
+ "bitirdi": true,
+ "sure_sn": 551.2,
+ "gizli": {
+  "gecti": true,
+  "gecen": 22,
+  "toplam": 22,
+  "cikti": "......................                                                   [100%]\n22 passed in 0.08s\n"
+ }
+}

@@ -1,0 +1,24 @@
+{
+ "id": "a143",
+ "kip": "a",
+ "tekrar": 1,
+ "kategori": "CSV/JSON ile çalışan ve uç durumları çok olan veri işleme (BOM, ; ayırıcı, 1.234,56 sayı biçimi, boş/bozuk satır)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "kereste_kesim_cli.py yazıldı: utf-8-sig `;` CSV, Türkçe sayı/tür normalizasyonu, fireli atama, JSON çıktı, çıkış kodları 2/3 uygulandı.",
+ "adim": 8,
+ "yurutucu_token": {
+  "girdi": 21698,
+  "cikti": 44931
+ },
+ "yurutucu_usd": 0.011156000000000001,
+ "bitirdi": true,
+ "sure_sn": 461.3,
+ "gizli": {
+  "gecti": false,
+  "gecen": 15,
+  "toplam": 21,
+  "cikti": "t_gizli.py:197: AssertionError\n_________________________ test_17_baslik_hatasi_cikis3 _________________________\n\ntmp_path = PosixPath('/home/usta/is/1e6fbfc8327f/.tmp/pytest-of-usta/pytest-0/test_17_baslik_hatasi_cikis30')\n\n    def test_17_baslik_hatasi_cikis3(tmp_path):\n        stok = tmp_path / \"stok.csv\"\n        sip = tmp_path / \"sip.json\"\n        cik = tmp_path / \"cikti.json\"\n        yaz_stok(stok, [\"K1;cam;300\"], baslik=\"id;tur;boy\")\n        yaz_siparis(sip, [])\n        r = calistir(stok, sip, cik, \"0\", tmp_path)\n>       assert r.returncode == 3\nE       AssertionError: assert 0 == 3\nE        +  where 0 = CompletedProcess(args=['/usr/bin/python', '/home/usta/is/1e6fbfc8327f/kereste_kesim_cli.py', '--stok-csv', '/home/usta...t-of-usta/pytest-0/test_17_baslik_hatasi_cikis30/cikti.json', '--fire-orani', '0'], returncode=0, stdout='', stderr='').returncode\n\n.gizli/test_gizli.py:220: AssertionError\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_01_temel_atama - KeyError: 'siparis_id'\nFAILED .gizli/test_gizli.py::test_03_fire_hesabi_yetersiz - AssertionError: a...\nFAILED .gizli/test_gizli.py::test_12_kullanim_orani_yuvarlama - assert 90.0 =...\nFAILED .gizli/test_gizli.py::test_13_kullanim_yarim_yukari - assert 98.52 == ...\nFAILED .gizli/test_gizli.py::test_14_hic_gecerli_stok_yok - AssertionError: a...\nFAILED .gizli/test_gizli.py::test_17_baslik_hatasi_cikis3 - AssertionError: a...\n6 failed, 15 passed in 2.50s\n"
+ }
+}

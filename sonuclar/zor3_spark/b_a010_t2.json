@@ -1,0 +1,24 @@
+{
+ "id": "a010",
+ "kip": "b",
+ "tekrar": 2,
+ "kategori": "tarih ve saat: resmî tatiller parametreyle, iş günü hesabı, Türkiye saat dilimi (UTC+3, yaz saati yok), gün/ay adları Türkçe",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "isgunu_cli.py gerçeklendi: dahil mantığıyla iş günü ekleme (Cmt/Paz + tatiller tam gün, yarım günler kapalı), TR UTC+3, strict YYYY-AA-GG doğrulama, hata önceliği biçim→aralık→hesaplama, çıkış kodu 2 + stderr, json/metin çıktı, --help'te Türkçe gün/ay adları. 24 pytest testi yazıldı ve hepsi geçti.",
+ "adim": 10,
+ "yurutucu_token": {
+  "girdi": 83684,
+  "cikti": 29724
+ },
+ "yurutucu_usd": 0.0143132,
+ "bitirdi": true,
+ "sure_sn": 340.4,
+ "gizli": {
+  "gecti": true,
+  "gecen": 21,
+  "toplam": 21,
+  "cikti": ".....................                                                    [100%]\n21 passed in 1.90s\n"
+ }
+}

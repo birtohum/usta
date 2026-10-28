@@ -1,0 +1,24 @@
+{
+ "id": "a085",
+ "kip": "b",
+ "tekrar": 2,
+ "kategori": "Türkçe büyük/küçük harf (İ/i, I/ı), Türk alfabesiyle sıralama, sayıyı yazıya çevirme, ünlü uyumuna göre ek",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "denetim.py içinde IcerikDenetci yazıldı: Türkçe küçültme (I→ı, İ→i), sözcük-sınırı eşleşme, ValueError/TypeError önceliği, ekleme sırası koruma. pytest ile 12 test geçti.",
+ "adim": 14,
+ "yurutucu_token": {
+  "girdi": 78006,
+  "cikti": 21671
+ },
+ "yurutucu_usd": 0.0121348,
+ "bitirdi": true,
+ "sure_sn": 313.2,
+ "gizli": {
+  "gecti": false,
+  "gecen": 4,
+  "toplam": 20,
+  "cikti": "le('kiraz armut elma')\n>       assert r['eslesenler'] == ['elma', 'armut', 'kiraz']\nE       KeyError: 'eslesenler'\n\n.gizli/test_gizli.py:149: KeyError\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_temel_eslesme - KeyError: 'bulundu'\nFAILED .gizli/test_gizli.py::test_kucuk_buyuk_harf_engel_degil - KeyError: 'b...\nFAILED .gizli/test_gizli.py::test_turkce_I_harfi - KeyError: 'bulundu'\nFAILED .gizli/test_gizli.py::test_turkce_noktali_I_harfi - KeyError: 'bulundu'\nFAILED .gizli/test_gizli.py::test_ek_almis_bicim_eslesmez_sonek - KeyError: '...\nFAILED .gizli/test_gizli.py::test_ek_almis_bicim_eslesmez_onek - KeyError: 'b...\nFAILED .gizli/test_gizli.py::test_noktalama_sinir_sayilir - KeyError: 'bulundu'\nFAILED .gizli/test_gizli.py::test_bosluk_sinir_sayilir - KeyError: 'bulundu'\nFAILED .gizli/test_gizli.py::test_virgul_sinir - KeyError: 'bulundu'\nFAILED .gizli/test_gizli.py::test_bos_string_bos_sonuc - KeyError: 'bulundu'\nFAILED .gizli/test_gizli.py::test_ayni_kelime_ikinci_kez_sessiz - KeyError: '...\nFAILED .gizli/test_gizli.py::test_ayni_kelime_farkli_buyuklukte_yoksayilir - ...\nFAILED .gizli/test_gizli.py::test_sozluk_anahtarlari - AssertionError: assert...\nFAILED .gizli/test_gizli.py::test_sayi_liste_tutarli - KeyError: 'bulundu'\nFAILED .gizli/test_gizli.py::test_eslesme_yoksa_bos - KeyError: 'bulundu'\nFAILED .gizli/test_gizli.py::test_ekleme_sirasi_korunur - KeyError: 'eslesenler'\n16 failed, 4 passed in 0.15s\n"
+ }
+}

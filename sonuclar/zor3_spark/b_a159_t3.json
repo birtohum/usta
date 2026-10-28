@@ -1,0 +1,24 @@
+{
+ "id": "a159",
+ "kip": "b",
+ "tekrar": 3,
+ "kategori": "KDV, tevkifat, stopaj, taksit ve kuruş yuvarlama (Decimal, ROUND_HALF_UP, satır bazında ve toplamda yuvarlama farkı)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "zeytin_iade.py içinde ZeytinIadeKontrol sınıfı yazıldı: satis_ekle Decimal tür ve değer denetimi (önce TypeError sonra ValueError), oran 1/10/20 kontrolü, iade_hesapla satır bazında ROUND_HALF_UP kuruş yuvarlama, tevkifatlı filtreleme, eklenme sırası koruma, grup bazında toplu KDV ile yuvarlama farkı, alt_sınır karşılaştırması ve boş satışta sıfır/False davranışı. pytest ile 6 test geçti.",
+ "adim": 12,
+ "yurutucu_token": {
+  "girdi": 45496,
+  "cikti": 38207
+ },
+ "yurutucu_usd": 0.012191,
+ "bitirdi": true,
+ "sure_sn": 457.1,
+ "gizli": {
+  "gecti": false,
+  "gecen": 21,
+  "toplam": 22,
+  "cikti": "...........F..........                                                   [100%]\n=================================== FAILURES ===================================\n_______________________ test_tevkifatsiz_satirlar_haric ________________________\n\n    def test_tevkifatsiz_satirlar_haric():\n        k = ZeytinIadeKontrol()\n        k.satis_ekle(Decimal(\"5000\"), 20, False)\n        s = k.iade_hesapla(Decimal(\"0\"))\n        assert s[\"iade_matrahi\"] == Decimal(\"0\")\n        assert s[\"iade_kdv_toplami\"] == Decimal(\"0\")\n>       assert s[\"hak_kazanildi\"] is False\nE       assert True is False\n\n.gizli/test_gizli.py:92: AssertionError\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_tevkifatsiz_satirlar_haric - assert True is...\n1 failed, 21 passed in 0.05s\n"
+ }
+}

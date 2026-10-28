@@ -1,0 +1,24 @@
+{
+ "id": "a212",
+ "kip": "b",
+ "tekrar": 2,
+ "kategori": "KDV, tevkifat, stopaj, taksit ve kuruş yuvarlama (Decimal, ROUND_HALF_UP, satır bazında ve toplamda yuvarlama farkı)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": null,
+ "adim": 4,
+ "yurutucu_token": {
+  "girdi": 6397,
+  "cikti": 48000
+ },
+ "yurutucu_usd": 0.010239700000000001,
+ "bitirdi": false,
+ "sure_sn": 498.1,
+ "gizli": {
+  "gecti": false,
+  "gecen": 6,
+  "toplam": 21,
+  "cikti": "sert 2 == 0\nE        +  where 2 = CompletedProcess(args=['/usr/bin/python', 'kirsehir_kirtasiye_cli.py', '--satir', 'kirtasiye:2:10.00', '--satir', 'kir...python: can't open file '/home/usta/is/6c6b70918a88/kirsehir_kirtasiye_cli.py': [Errno 2] No such file or directory\\n\").returncode\n\n.gizli/test_gizli.py:167: AssertionError\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_json_kitap_basit - assert 2 == 0\nFAILED .gizli/test_gizli.py::test_json_kirtasiye_kdv - assert 2 == 0\nFAILED .gizli/test_gizli.py::test_json_oyuncak_kdv - assert 2 == 0\nFAILED .gizli/test_gizli.py::test_turkce_duyarsiz_kirtasiye - assert 2 == 0\nFAILED .gizli/test_gizli.py::test_turkce_duyarsiz_kucuk - assert 2 == 0\nFAILED .gizli/test_gizli.py::test_turkce_duyarsiz_karisik - assert 2 == 0\nFAILED .gizli/test_gizli.py::test_kitap_buyuk_kucuk - assert (2 == 0)\nFAILED .gizli/test_gizli.py::test_iskonto_yok_tam_3000 - assert 2 == 0\nFAILED .gizli/test_gizli.py::test_iskonto_var - assert 2 == 0\nFAILED .gizli/test_gizli.py::test_iskonto_kitap_kdv_sifir - assert 2 == 0\nFAILED .gizli/test_gizli.py::test_yarim_kurus_yukari - assert 2 == 0\nFAILED .gizli/test_gizli.py::test_genel_kdv_kategori_bazli - assert 2 == 0\nFAILED .gizli/test_gizli.py::test_json_tek_satir - assert 2 == 0\nFAILED .gizli/test_gizli.py::test_fis_turkce_siralama - assert 2 == 0\nFAILED .gizli/test_gizli.py::test_fis_ayni_kategori_giris_sirasi - assert 2 == 0\n15 failed, 6 passed in 1.09s\n"
+ }
+}

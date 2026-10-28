@@ -1,0 +1,24 @@
+{
+ "id": "a167",
+ "kip": "b",
+ "tekrar": 2,
+ "kategori": "çok dosyalı küçük modül: iki-üç dosyaya bölünmüş, ortak hata sınıfları ve bir komut satırı girişi olan araç",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "hatalar.py (Hata/GirdiHatasi/BulunamadiHatasi/KapanmisHatasi), kahvalti.py (Adisyon: Türkçe normalleştirme, kalan kuruş dağıtımı, fiyat+ad sıralı urunler, hata önceliği, masa_kapat) ve cli.py (ac/ekle/bol komutları, BOL çıktısı, HATA:<Sınıf> + çıkış 1, dosya kalıcılığı) yazıldı; pytest ile 13 test geçirildi.",
+ "adim": 7,
+ "yurutucu_token": {
+  "girdi": 30440,
+  "cikti": 28705
+ },
+ "yurutucu_usd": 0.008785000000000001,
+ "bitirdi": true,
+ "sure_sn": 293.2,
+ "gizli": {
+  "gecti": true,
+  "gecen": 20,
+  "toplam": 20,
+  "cikti": "....................                                                     [100%]\n20 passed in 0.46s\n"
+ }
+}

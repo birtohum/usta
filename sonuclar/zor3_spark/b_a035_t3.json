@@ -1,0 +1,24 @@
+{
+ "id": "a035",
+ "kip": "b",
+ "tekrar": 3,
+ "kategori": "çok dosyalı küçük modül: iki-üç dosyaya bölünmüş, ortak hata sınıfları ve bir komut satırı girişi olan araç",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "hatalar.py (PayHatasi/HisseHatasi: ValueError soyundan) ve aidat.py (paylastir: taban pay + kalanı küçük daireden dağıtım, tip>hisse>pay hata önceliği, sıfır toplamda sıfırlar; ozet: toplam/daire_sayisi/en_buyuk_pay; CLI `python -m aidat dagit --toplam ... --hisseler ...` tek satır JSON) yazıldı. 17 pytest testi geçiyor.",
+ "adim": 6,
+ "yurutucu_token": {
+  "girdi": 17240,
+  "cikti": 15511
+ },
+ "yurutucu_usd": 0.004826200000000001,
+ "bitirdi": true,
+ "sure_sn": 149.9,
+ "gizli": {
+  "gecti": true,
+  "gecen": 21,
+  "toplam": 21,
+  "cikti": ".....................                                                    [100%]\n21 passed in 0.22s\n"
+ }
+}

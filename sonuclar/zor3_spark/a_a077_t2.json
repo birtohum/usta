@@ -1,0 +1,24 @@
+{
+ "id": "a077",
+ "kip": "a",
+ "tekrar": 2,
+ "kategori": "çok dosyalı küçük modül: iki-üç dosyaya bölünmüş, ortak hata sınıfları ve bir komut satırı girişi olan araç",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "Mersin kantin veresiye aracı yazıldı: hatalar.py (ValueError'dan OgrenciHatasi, LimitHatasi), veresiye.py (VeresiyeDefteri: borc_ekle/odeme_yap/bakiye, 1-20000 tutar aralığı, 50000 limit, strip+boş ad kontrolü, Türkçe I/İ küçük harf eşleme, Türkçe özel sıralama, hata önceliği ad>tutar>limit), cli.py (--ogrenci/--islem/--tutar ile tek satır Bakiye çıktısı). Yalnızca argparse+sys kullanıldı, bakiyeler int kuruş tutuldu.",
+ "adim": 17,
+ "yurutucu_token": {
+  "girdi": 94765,
+  "cikti": 36441
+ },
+ "yurutucu_usd": 0.0167647,
+ "bitirdi": true,
+ "sure_sn": 462.0,
+ "gizli": {
+  "gecti": true,
+  "gecen": 20,
+  "toplam": 20,
+  "cikti": "....................                                                     [100%]\n20 passed in 0.25s\n"
+ }
+}

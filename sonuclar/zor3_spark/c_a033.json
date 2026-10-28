@@ -1,0 +1,49 @@
+{
+ "id": "a033",
+ "kip": "c",
+ "tekrar": 1,
+ "kategori": "Türkçe büyük/küçük harf (İ/i, I/ı), Türk alfabesiyle sıralama, sayıyı yazıya çevirme, ünlü uyumuna göre ek",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 51,
+   "basarili": 51
+  }
+ ],
+ "spark_usd": 0.007331000000000002,
+ "arayuz": "",
+ "kabul_yazar": 3,
+ "mutasyon": {
+  "mutant": 12,
+  "ham_mutant": 14,
+  "turlar": [
+   {
+    "oldurulen": 12,
+    "toplam": 12
+   }
+  ],
+  "hayatta": []
+ },
+ "hakem": [],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [],
+ "kabul_test_sayisi": 51,
+ "kabul_gecti": true,
+ "ozet": "kart.py içinde MusteriKart sınıfı yazıldı: Türkçe'ye uygun baş harf büyütme (i→İ, I→ı, İ→i), boşluk normalizasyonu, tireli parçaları ayrı capitalizasyon, yönelme ekli hitap (Sayın + 'a/'e, ünlüde y kaynaştırma) ve TypeError/ValueError denetimleri. test_kart.py ile 18 pytest testi geçiyor.",
+ "adim": 11,
+ "yurutucu_token": {
+  "girdi": 36440,
+  "cikti": 22747
+ },
+ "yurutucu_usd": 0.0081934,
+ "bitirdi": true,
+ "sure_sn": 534.0,
+ "gizli": {
+  "gecti": true,
+  "gecen": 21,
+  "toplam": 21,
+  "cikti": ".....................                                                    [100%]\n21 passed in 0.04s\n"
+ }
+}

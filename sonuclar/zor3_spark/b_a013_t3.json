@@ -1,0 +1,24 @@
+{
+ "id": "a013",
+ "kip": "b",
+ "tekrar": 3,
+ "kategori": "Türkiye'ye özgü kimlik ve hesap numaraları (TC kimlik, VKN, IBAN, MERSİS, plaka, telefon) — birden çok kuralın birlikte uygulandığı",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "toplu_denetim.py içinde toplu_denetle yazıldı: TypeError kontrolü, TC/VKN/IBAN/telefon/plaka doğrulama, öncelik ve sıralama kuralları, Türkçe büyük harf dönüşümü uygulandı. pytest ile 11 test geçti.",
+ "adim": 12,
+ "yurutucu_token": {
+  "girdi": 44841,
+  "cikti": 54071
+ },
+ "yurutucu_usd": 0.015298299999999999,
+ "bitirdi": true,
+ "sure_sn": 578.1,
+ "gizli": {
+  "gecti": false,
+  "gecen": 20,
+  "toplam": 23,
+  "cikti": "=================================== FAILURES ===================================\n_______________________________ test_gecerli_vkn _______________________________\n\n    def test_gecerli_vkn():\n        r = toplu_denetle([rec(GVKN, t='VKN')])\n>       assert r['gecerli_sayisi'] == 1 and r['hatalar'] == []\nE       assert (0 == 1)\n\n.gizli/test_gizli.py:66: AssertionError\n_______________________________ test_vkn_hatasi ________________________________\n\n    def test_vkn_hatasi():\n        r = toplu_denetle([rec('1234567890', t='VKN')])\n>       assert r['hatalar'][0]['kod'] == 'kimlik_no_hatası'\nE       IndexError: list index out of range\n\n.gizli/test_gizli.py:96: IndexError\n_____________________________ test_plaka_turkce_i ______________________________\n\n    def test_plaka_turkce_i():\n        r = toplu_denetle([rec(plaka='34aib12')])\n>       assert r['gecersiz_sayisi'] == 1\nE       assert 0 == 1\n\n.gizli/test_gizli.py:140: AssertionError\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_gecerli_vkn - assert (0 == 1)\nFAILED .gizli/test_gizli.py::test_vkn_hatasi - IndexError: list index out of ...\nFAILED .gizli/test_gizli.py::test_plaka_turkce_i - assert 0 == 1\n3 failed, 20 passed in 0.14s\n"
+ }
+}

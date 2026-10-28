@@ -1,0 +1,24 @@
+{
+ "id": "a050",
+ "kip": "a",
+ "tekrar": 2,
+ "kategori": "KDV, tevkifat, stopaj, taksit ve kuruş yuvarlama (Decimal, ROUND_HALF_UP, satır bazında ve toplamda yuvarlama farkı)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "adisyon.py içinde AdisyonHesaplayici sınıfı yazıldı: Decimal+ROUND_HALF_UP ile satır matrah/KDV yuvarlama, izinli KDV kontrolü, TypeError/ValueError önceliği, Türkçe duyarsız birleştirme, stabil sıralama ve yuvarlama_farki raporlama.",
+ "adim": 6,
+ "yurutucu_token": {
+  "girdi": 15916,
+  "cikti": 26137
+ },
+ "yurutucu_usd": 0.0068189999999999995,
+ "bitirdi": true,
+ "sure_sn": 251.3,
+ "gizli": {
+  "gecti": false,
+  "gecen": 18,
+  "toplam": 20,
+  "cikti": "...F..........F.....                                                     [100%]\n=================================== FAILURES ===================================\n_____________________________ test_04_kdv_half_up ______________________________\n\n    def test_04_kdv_half_up():\n        h = AdisyonHesaplayici()\n        h.ekle(\"Somon\", \"1\", \"10.05\", \"0.10\")\n        s = h.toplam()\n        assert s[\"satirlar\"][0][\"matrah\"] == \"10.05\"\n>       assert s[\"satirlar\"][0][\"kdv_tutar\"] == \"1.01\"\nE       KeyError: 'kdv_tutar'\n\n.gizli/test_gizli.py:38: KeyError\n______________________ test_15_tip_hatasi_beklenmeyen_tip ______________________\n\n    def test_15_tip_hatasi_beklenmeyen_tip():\n        with pytest.raises(TypeError):\n            AdisyonHesaplayici().ekle(123, \"1\", \"10.00\", \"0.10\")\n>       with pytest.raises(TypeError):\nE       Failed: DID NOT RAISE <class 'TypeError'>\n\n.gizli/test_gizli.py:116: Failed\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_04_kdv_half_up - KeyError: 'kdv_tutar'\nFAILED .gizli/test_gizli.py::test_15_tip_hatasi_beklenmeyen_tip - Failed: DID...\n2 failed, 18 passed in 0.11s\n"
+ }
+}

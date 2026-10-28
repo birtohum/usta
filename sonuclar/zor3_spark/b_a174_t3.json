@@ -1,0 +1,24 @@
+{
+ "id": "a174",
+ "kip": "b",
+ "tekrar": 3,
+ "kategori": "KDV, tevkifat, stopaj, taksit ve kuruş yuvarlama (Decimal, ROUND_HALF_UP, satır bazında ve toplamda yuvarlama farkı)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "isparta_gul.py içinde GulYagiSatisDefteri sınıfını yazdım: ekle satır matrahını ROUND_HALF_UP ile 2 basamağa yuvarlar, kdv_oran yalnızca 20 kabul edilir; ozet satır KDV'lerini toplayıp matrah toplamı üzerinden tek KDV ile karşılaştırır ve farkı en büyük miktarlı (eşitlikte önce eklenen) satıra yansıtır; stopaj 20000,00 TL üzerinde %1 uygulanır; Türkçe sıralamada I→ı, İ→i çevrimi ve kararlı sıralama kullanılır; hatalarda tip→pozitiflik→oran sırasıyla TypeError/ValueError yükseltilir. 12 pytest testi yazıldı ve hepsi geçti.",
+ "adim": 13,
+ "yurutucu_token": {
+  "girdi": 96712,
+  "cikti": 28453
+ },
+ "yurutucu_usd": 0.015361799999999997,
+ "bitirdi": true,
+ "sure_sn": 356.7,
+ "gizli": {
+  "gecti": true,
+  "gecen": 20,
+  "toplam": 20,
+  "cikti": "....................                                                     [100%]\n20 passed in 0.04s\n"
+ }
+}

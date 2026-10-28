@@ -1,0 +1,83 @@
+{
+ "id": "a219",
+ "kip": "c",
+ "tekrar": 2,
+ "kategori": "tarih ve saat: resmî tatiller parametreyle, iş günü hesabı, Türkiye saat dilimi (UTC+3, yaz saati yok), gün/ay adları Türkçe",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 51,
+   "basarili": 51
+  }
+ ],
+ "spark_usd": 0.0127663,
+ "arayuz": "",
+ "kabul_yazar": 3,
+ "mutasyon": {
+  "mutant": 15,
+  "ham_mutant": 15,
+  "turlar": [
+   {
+    "oldurulen": 8,
+    "toplam": 15
+   },
+   {
+    "oldurulen": 14,
+    "toplam": 15
+   },
+   {
+    "oldurulen": 14,
+    "toplam": 15
+   }
+  ],
+  "hayatta": [
+   "eksik zorunlu bayrak icin cikis kodu iki verilir gereksinimini cigner: tarih zorunlu olmaktan cikar"
+  ]
+ },
+ "hakem": [
+  {
+   "test": ".usta_kabul/test_kabul_m1.py::test_kucuk_i_buyuk_I_dotless",
+   "karar": "hatali",
+   "gerekce": "Davranış görevde var ama test ilgisiz tatiller_yukle fonksiyonunu 'a' ile çağırıp SystemExit ile kendi kusurundan başarısız oluyor.",
+   "tur": 1
+  },
+  {
+   "test": ".usta_kabul/test_kabul_m1.py::test_kucuk_idotless_buyuk_I",
+   "karar": "hatali",
+   "gerekce": "Davranış görevde var ama test ilgisiz tatiller_yukle fonksiyonunu 'a' ile çağırıp SystemExit ile kendi kusurundan başarısız oluyor.",
+   "tur": 1
+  }
+ ],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [
+  ".usta_kabul/test_kabul_1.py::test_baslik_gun_ay_yil_virgul_gun_adi",
+  ".usta_kabul/test_kabul_1.py::test_bos_tatiller_dosyasi",
+  ".usta_kabul/test_kabul_1.py::test_cumartesi_sonraki_isgunu_pazartesiye_kayar",
+  ".usta_kabul/test_kabul_1.py::test_kasim_buyuk_I_noktasiz",
+  ".usta_kabul/test_kabul_1.py::test_nisan_buyuk_I_noktali",
+  ".usta_kabul/test_kabul_1.py::test_pazar_bayraksiz_kaymaz",
+  ".usta_kabul/test_kabul_1.py::test_pazartesi_buyuk_I_noktali",
+  ".usta_kabul/test_kabul_1.py::test_tatiller_verilmezse_bos_kume",
+  ".usta_kabul/test_kabul_m1.py::test_kucuk_i_buyuk_I_dotless",
+  ".usta_kabul/test_kabul_m1.py::test_kucuk_idotless_buyuk_I"
+ ],
+ "kabul_test_sayisi": 51,
+ "kabul_gecti": true,
+ "ozet": "etiket_cli.py yazıldı: --tarih (zorunlu), --tatiller (opsiyonel), --sonraki-isgunu bayraklı CLI; Europe/Istanbul bilinçli tarihler, TR gün/ay adlarıyla \"Gün Ay Yıl, GünAdı\" başlığı, hafta sonu+tatil kaydırma, Türkçe i→İ/ı→I çevirisi, parti-no sıralama ve dakika yukarı yuvarlama yardımcıları, hatalarda stderr+çıkış 2. 15 pytest testi geçti.",
+ "adim": 10,
+ "yurutucu_token": {
+  "girdi": 56462,
+  "cikti": 19597
+ },
+ "yurutucu_usd": 0.0095656,
+ "bitirdi": true,
+ "sure_sn": 1068.1,
+ "gizli": {
+  "gecti": true,
+  "gecen": 20,
+  "toplam": 20,
+  "cikti": "....................                                                     [100%]\n20 passed in 1.98s\n"
+ }
+}

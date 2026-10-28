@@ -1,0 +1,24 @@
+{
+ "id": "a157",
+ "kip": "b",
+ "tekrar": 3,
+ "kategori": "çok dosyalı küçük modül: iki-üç dosyaya bölünmüş, ortak hata sınıfları ve bir komut satırı girişi olan araç",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "Afyon mermer atölyesi plaka kesim hesaplayıcıyı yazdım: hatalar.py (Hata/GirdiHatasi/SigdirilamazHatasi/CakismaHatasi), mermer.py (BlokStogu: Türkçe normalizasyon, pay dahil döndürmeli kesim hesabı, tam-eşit sığma, en_verimli_blok eşitlikte Unicode sıralama, boş stokta GirdiHatasi), cli.py (blok-ekle/kes komutları, ADET:/HATA: çıktıları, JSON kalıcılık). 17 pytest testi geçiyor.",
+ "adim": 11,
+ "yurutucu_token": {
+  "girdi": 64937,
+  "cikti": 48194
+ },
+ "yurutucu_usd": 0.0161325,
+ "bitirdi": true,
+ "sure_sn": 529.3,
+ "gizli": {
+  "gecti": true,
+  "gecen": 21,
+  "toplam": 21,
+  "cikti": ".....................                                                    [100%]\n21 passed in 0.30s\n"
+ }
+}

@@ -1,0 +1,24 @@
+{
+ "id": "a011",
+ "kip": "a",
+ "tekrar": 1,
+ "kategori": "çok dosyalı küçük modül: iki-üç dosyaya bölünmüş, ortak hata sınıfları ve bir komut satırı girişi olan araç",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "hatalar.py ve slug.py oluşturuldu: ValueError soyundan BosGirdiHatasi/UzunlukHatasi, Türkçe dönüşümlü slugla(metin, en_uzun=50) (tip→boş→uzunluk önceliği, 50 geçerli/51 hata), en küçük boş eki seçen benzersiz_yap ve `python -m slug üret --metin ... --mevcut ... --en-uzun 50` CLI tek satır çıktı veriyor.",
+ "adim": 18,
+ "yurutucu_token": {
+  "girdi": 99009,
+  "cikti": 39104
+ },
+ "yurutucu_usd": 0.017721699999999996,
+ "bitirdi": true,
+ "sure_sn": 361.4,
+ "gizli": {
+  "gecti": true,
+  "gecen": 22,
+  "toplam": 22,
+  "cikti": "......................                                                   [100%]\n22 passed in 0.06s\n"
+ }
+}

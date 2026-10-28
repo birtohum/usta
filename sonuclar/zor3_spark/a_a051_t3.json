@@ -1,0 +1,24 @@
+{
+ "id": "a051",
+ "kip": "a",
+ "tekrar": 3,
+ "kategori": "Türkçe büyük/küçük harf (İ/i, I/ı), Türk alfabesiyle sıralama, sayıyı yazıya çevirme, ünlü uyumuna göre ek",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "mezat.py yazıldı: kg_yaziya Decimal+ROUND_HALF_UP ile iki basamağa yuvarlar, Türkçe sayı sözcükleri üretir (bin/sıfır kuralları), ondalığı \"virgül\" ile bağlar, birimi küçük harfle ekler; boş/boşluk girdi ve aralık dışı ValueError, desteklenmeyen tip TypeError verir; CLI tek satır yazdırır.",
+ "adim": 8,
+ "yurutucu_token": {
+  "girdi": 33163,
+  "cikti": 18156
+ },
+ "yurutucu_usd": 0.0069475000000000006,
+ "bitirdi": true,
+ "sure_sn": 200.2,
+ "gizli": {
+  "gecti": true,
+  "gecen": 21,
+  "toplam": 21,
+  "cikti": ".....................                                                    [100%]\n21 passed in 0.40s\n"
+ }
+}

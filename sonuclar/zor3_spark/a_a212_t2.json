@@ -1,0 +1,24 @@
+{
+ "id": "a212",
+ "kip": "a",
+ "tekrar": 2,
+ "kategori": "KDV, tevkifat, stopaj, taksit ve kuruş yuvarlama (Decimal, ROUND_HALF_UP, satır bazında ve toplamda yuvarlama farkı)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "kirsehir_kirtasiye_cli.py yazıldı ve test edildi. argparse ile --satir (tekrarlanabilir, KATEGORI:MIKTAR:BIRIM_FIYAT) ve zorunlu --rapor (json/fis); Türkçe duyarsız kategori eşleşmesi (İ/I/ı/i), kitap %0 / kırtasiye-oyuncak %20 KDV; Decimal+ROUND_HALF_UP ile satır matrah/KDV, 3000 TL üzeri %3 iskonto ve iskontolu matrah üzerinden kategori toplamlarından genel KDV; json tek satır çıktı, fis Türkçe alfabetik sıralı (birim fiyat artan, stabil) çıktı; hatalarda çıkış kodu 2.",
+ "adim": 7,
+ "yurutucu_token": {
+  "girdi": 19812,
+  "cikti": 43458
+ },
+ "yurutucu_usd": 0.010672800000000001,
+ "bitirdi": true,
+ "sure_sn": 455.7,
+ "gizli": {
+  "gecti": true,
+  "gecen": 21,
+  "toplam": 21,
+  "cikti": ".....................                                                    [100%]\n21 passed in 1.82s\n"
+ }
+}

@@ -1,0 +1,85 @@
+{
+ "id": "a108",
+ "kip": "c",
+ "tekrar": 3,
+ "kategori": "CSV/JSON ile çalışan ve uç durumları çok olan veri işleme (BOM, ; ayırıcı, 1.234,56 sayı biçimi, boş/bozuk satır)",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 55,
+   "basarili": 55
+  }
+ ],
+ "spark_usd": 0.0187178,
+ "arayuz": "",
+ "kabul_yazar": 3,
+ "mutasyon": {
+  "mutant": 15,
+  "ham_mutant": 15,
+  "turlar": [
+   {
+    "oldurulen": 12,
+    "toplam": 15
+   },
+   {
+    "oldurulen": 12,
+    "toplam": 15
+   },
+   {
+    "oldurulen": 12,
+    "toplam": 15
+   }
+  ],
+  "hayatta": [
+   "uretim_csv utf-8-sig ile okunmali BOM yoksayilmali",
+   "oran alaninda bos dize gecersizdir",
+   "tamamen bos satirlar atlanmali"
+  ]
+ },
+ "hakem": [
+  {
+   "test": ".usta_kabul/test_kabul_1.py::test_hedef_disi_hammadde_sapma",
+   "karar": "hatali",
+   "gerekce": "Görev metni durumun yalnızca |toplam-100|<=tolerans ile belirlendiğini açıkça yazıyor, örnekte toplam 100,00 iken SAPMA beklemek bu kurala aykırı.",
+   "tur": 1
+  },
+  {
+   "test": ".usta_kabul/test_kabul_2.py::test_hedef_disi_sapma",
+   "karar": "hatali",
+   "gerekce": "Toplam 100,00 ve tolerans 0,50 iken görev metnine göre durum OK olmalıdır, hedef-dışı ifadenin otomatik SAPMA anlamı açıkça yazmıyor.",
+   "tur": 1
+  },
+  {
+   "test": ".usta_kabul/test_kabul_3.py::test_hedefte_olmayan_hammadde_sapmaya_eklenir",
+   "karar": "hatali",
+   "gerekce": "Hedefte olmayan hammaddenin toplama dahil olduğu zaten bellidir, toplam 100,00 iken SAPMA istemek açık toplam kuralıyla çelişir.",
+   "tur": 1
+  }
+ ],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [
+  ".usta_kabul/test_kabul_3.py::test_turkce_siralama_c_cetli",
+  ".usta_kabul/test_kabul_1.py::test_hedef_disi_hammadde_sapma",
+  ".usta_kabul/test_kabul_2.py::test_hedef_disi_sapma",
+  ".usta_kabul/test_kabul_3.py::test_hedefte_olmayan_hammadde_sapmaya_eklenir"
+ ],
+ "kabul_test_sayisi": 55,
+ "kabul_gecti": true,
+ "ozet": "yem_uretim.py yazıldı: utf-8-sig/BOM, `;` ayırıcı, boş satır atlama, Türkçe sayı çözümleme, ROUND_HALF_UP toplam, OK/SAPMA/HATALI mantığı, Türkçe duyarsız sıralama, hata öncelikleri. pytest ile 5 test geçti.",
+ "adim": 7,
+ "yurutucu_token": {
+  "girdi": 18180,
+  "cikti": 45969
+ },
+ "yurutucu_usd": 0.0110118,
+ "bitirdi": true,
+ "sure_sn": 803.3,
+ "gizli": {
+  "gecti": true,
+  "gecen": 21,
+  "toplam": 21,
+  "cikti": ".....................                                                    [100%]\n21 passed in 0.05s\n"
+ }
+}

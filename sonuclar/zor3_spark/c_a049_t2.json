@@ -1,0 +1,53 @@
+{
+ "id": "a049",
+ "kip": "c",
+ "tekrar": 2,
+ "kategori": "Türkiye'ye özgü kimlik ve hesap numaraları (TC kimlik, VKN, IBAN, MERSİS, plaka, telefon) — birden çok kuralın birlikte uygulandığı",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 57,
+   "basarili": 57
+  }
+ ],
+ "spark_usd": 0.015130699999999999,
+ "arayuz": "",
+ "kabul_yazar": 3,
+ "mutasyon": {
+  "mutant": 16,
+  "ham_mutant": 16,
+  "turlar": [
+   {
+    "oldurulen": 13,
+    "toplam": 16
+   },
+   {
+    "oldurulen": 16,
+    "toplam": 16
+   }
+  ],
+  "hayatta": []
+ },
+ "hakem": [],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [],
+ "kabul_test_sayisi": 57,
+ "kabul_gecti": true,
+ "ozet": "otopark_abone.py yazıldı: TC/Plaka/Telefon/IBAN/Ay doğrulamaları, öncelik sırası (bos>tc>plaka>telefon>iban>ay), ONAY/HATA çıktıları ve ücret hesabı (ay*750) uygulandı. pytest ile 8 test geçti.",
+ "adim": 8,
+ "yurutucu_token": {
+  "girdi": 36034,
+  "cikti": 20526
+ },
+ "yurutucu_usd": 0.0077086,
+ "bitirdi": true,
+ "sure_sn": 771.6,
+ "gizli": {
+  "gecti": true,
+  "gecen": 22,
+  "toplam": 22,
+  "cikti": "......................                                                   [100%]\n22 passed in 1.55s\n"
+ }
+}

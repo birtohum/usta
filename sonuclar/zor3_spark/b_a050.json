@@ -1,0 +1,24 @@
+{
+ "id": "a050",
+ "kip": "b",
+ "tekrar": 1,
+ "kategori": "KDV, tevkifat, stopaj, taksit ve kuruş yuvarlama (Decimal, ROUND_HALF_UP, satır bazında ve toplamda yuvarlama farkı)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "adisyon.py içinde AdisyonHesaplayici yazıldı: Decimal+ROUND_HALF_UP satır yuvarlama, stabil sıralama, casefold birleştirme, hata önceliği ve yuvarlama farkı raporu. 11 pytest geçti.",
+ "adim": 9,
+ "yurutucu_token": {
+  "girdi": 46001,
+  "cikti": 34588
+ },
+ "yurutucu_usd": 0.0115177,
+ "bitirdi": true,
+ "sure_sn": 289.5,
+ "gizli": {
+  "gecti": false,
+  "gecen": 19,
+  "toplam": 20,
+  "cikti": "...F................                                                     [100%]\n=================================== FAILURES ===================================\n_____________________________ test_04_kdv_half_up ______________________________\n\n    def test_04_kdv_half_up():\n        h = AdisyonHesaplayici()\n        h.ekle(\"Somon\", \"1\", \"10.05\", \"0.10\")\n        s = h.toplam()\n        assert s[\"satirlar\"][0][\"matrah\"] == \"10.05\"\n        assert s[\"satirlar\"][0][\"kdv_tutar\"] == \"1.01\"\n>       assert s[\"satirlar\"][0][\"satir_toplam\"] == \"11.06\"\nE       KeyError: 'satir_toplam'\n\n.gizli/test_gizli.py:39: KeyError\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_04_kdv_half_up - KeyError: 'satir_toplam'\n1 failed, 19 passed in 0.04s\n"
+ }
+}

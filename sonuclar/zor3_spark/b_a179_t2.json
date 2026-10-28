@@ -1,0 +1,24 @@
+{
+ "id": "a179",
+ "kip": "b",
+ "tekrar": 2,
+ "kategori": "KDV, tevkifat, stopaj, taksit ve kuruş yuvarlama (Decimal, ROUND_HALF_UP, satır bazında ve toplamda yuvarlama farkı)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "sera_cli.py yalnızca argparse+Decimal+json+sys ile yazıldı: satır matrah/KDV ROUND_HALF_UP ile yuvarlanıp toplanır, tek-seferlik KDV ile fark detayda fark_kurus olarak verilir, özet KDV satır toplamına eşitlenir, boş kalemde sıfırlar yazdırılır, 7500.00 eşiğinde tevkifat uygulanmaz (üstünde matrah üzerinden yuvarlanır), Türkçe küçük harf (I→ı, İ→i) sıralaması yapılır, tip hataları argparse (exit 2), değer hataları stderr ValueError (exit 1) verir. 16 pytest testi geçiyor.",
+ "adim": 7,
+ "yurutucu_token": {
+  "girdi": 36347,
+  "cikti": 23685
+ },
+ "yurutucu_usd": 0.0083717,
+ "bitirdi": true,
+ "sure_sn": 247.8,
+ "gizli": {
+  "gecti": false,
+  "gecen": 21,
+  "toplam": 22,
+  "cikti": "                        [100%]\n=================================== FAILURES ===================================\n_____________________ test_matrah_siralama_buyukten_kucuge _____________________\n\n    def test_matrah_siralama_buyukten_kucuge():\n        r = calis('--kalemler', 'Ucuz:1:10:10,Pahali:1:1000:10', '--cikti', 'detay')\n        assert r.returncode == 0\n        s = r.stdout\n>       assert s.index('Pahali') < s.index('Ucuz')\nE       assert 191 < 39\nE        +  where 191 = <built-in method index of str object at 0x1adb9420>('Pahali')\nE        +    where <built-in method index of str object at 0x1adb9420> = '{\\n  \"kalemler\": [\\n    {\\n      \"urun\": \"Ucuz\",\\n      \"miktar\": \"1\",\\n      \"birim_fiyat\": \"10\",\\n      \"kdv_oran\":....00\",\\n  \"toplam_kdv_tek\": \"101.00\",\\n  \"fark_kurus\": \"0.00\",\\n  \"tevkifat\": \"0.00\",\\n  \"genel_toplam\": \"1111.00\"\\n}\\n'.index\nE        +  and   39 = <built-in method index of str object at 0x1adb9420>('Ucuz')\nE        +    where <built-in method index of str object at 0x1adb9420> = '{\\n  \"kalemler\": [\\n    {\\n      \"urun\": \"Ucuz\",\\n      \"miktar\": \"1\",\\n      \"birim_fiyat\": \"10\",\\n      \"kdv_oran\":....00\",\\n  \"toplam_kdv_tek\": \"101.00\",\\n  \"fark_kurus\": \"0.00\",\\n  \"tevkifat\": \"0.00\",\\n  \"genel_toplam\": \"1111.00\"\\n}\\n'.index\n\n.gizli/test_gizli.py:115: AssertionError\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_matrah_siralama_buyukten_kucuge - assert 19...\n1 failed, 21 passed in 1.69s\n"
+ }
+}

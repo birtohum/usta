@@ -1,0 +1,63 @@
+{
+ "id": "a124",
+ "kip": "c",
+ "tekrar": 2,
+ "kategori": "KDV, tevkifat, stopaj, taksit ve kuruş yuvarlama (Decimal, ROUND_HALF_UP, satır bazında ve toplamda yuvarlama farkı)",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 37,
+   "basarili": 37
+  }
+ ],
+ "spark_usd": 0.027250899999999998,
+ "arayuz": "",
+ "kabul_yazar": 2,
+ "mutasyon": {
+  "mutant": 14,
+  "ham_mutant": 14,
+  "turlar": [
+   {
+    "oldurulen": 10,
+    "toplam": 14
+   },
+   {
+    "oldurulen": 14,
+    "toplam": 14
+   }
+  ],
+  "hayatta": []
+ },
+ "hakem": [
+  {
+   "test": ".usta_kabul/test_kabul_m1.py::test_turkce_sku_siralama",
+   "karar": "belirsiz",
+   "gerekce": "Görev metni eşitlikte giriş sırasının korunmasını isterken Türkçe sku sıralamasının ne zaman ve nasıl bağlayıcı olduğunu açıkça belirtmiyor.",
+   "tur": 1
+  }
+ ],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [
+  ".usta_kabul/test_kabul_2.py::test_turkce_sku_normalize",
+  ".usta_kabul/test_kabul_m1.py::test_turkce_sku_siralama"
+ ],
+ "kabul_test_sayisi": 37,
+ "kabul_gecti": true,
+ "ozet": "toplu_kdv_cli.py yazıldı: argparse CLI, Decimal+ROUND_HALF_UP, %1 kesinti, yuvarlama_farki, hata kodları 2, sıralama ve Türkçe normalize, 15 pytest geçti.",
+ "adim": 13,
+ "yurutucu_token": {
+  "girdi": 57159,
+  "cikti": 59199
+ },
+ "yurutucu_usd": 0.017555700000000004,
+ "bitirdi": true,
+ "sure_sn": 738.9,
+ "gizli": {
+  "gecti": true,
+  "gecen": 21,
+  "toplam": 21,
+  "cikti": ".....................                                                    [100%]\n21 passed in 0.61s\n"
+ }
+}

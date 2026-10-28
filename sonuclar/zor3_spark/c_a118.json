@@ -1,0 +1,63 @@
+{
+ "id": "a118",
+ "kip": "c",
+ "tekrar": 1,
+ "kategori": "CSV/JSON ile çalışan ve uç durumları çok olan veri işleme (BOM, ; ayırıcı, 1.234,56 sayı biçimi, boş/bozuk satır)",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 43,
+   "basarili": 43
+  }
+ ],
+ "spark_usd": 0.015026300000000001,
+ "arayuz": "",
+ "kabul_yazar": 3,
+ "mutasyon": {
+  "mutant": 16,
+  "ham_mutant": 16,
+  "turlar": [
+   {
+    "oldurulen": 15,
+    "toplam": 16
+   },
+   {
+    "oldurulen": 16,
+    "toplam": 16
+   }
+  ],
+  "hayatta": []
+ },
+ "hakem": [],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [
+  ".usta_kabul/test_kabul_1.py::test_binlik_nokta_ondalik_virgul_cozumu",
+  ".usta_kabul/test_kabul_1.py::test_bos_veri_sifir_ve_none",
+  ".usta_kabul/test_kabul_1.py::test_bozuk_ucret_atlanir",
+  ".usta_kabul/test_kabul_1.py::test_hasilat_satir_bazinda_yuvarlanir",
+  ".usta_kabul/test_kabul_1.py::test_hasilat_yarim_yukari_yuvarlama",
+  ".usta_kabul/test_kabul_1.py::test_tekrar_sefer_id_ilk_korunur",
+  ".usta_kabul/test_kabul_2.py::test_gereksinim3_binlik_nokta_ondalik_virgul",
+  ".usta_kabul/test_kabul_2.py::test_gereksinim6_ayri_ayri_yuvarlanir",
+  ".usta_kabul/test_kabul_2.py::test_gereksinim6_yarim_yukari_yuvarlama"
+ ],
+ "kabul_test_sayisi": 43,
+ "kabul_gecti": true,
+ "ozet": "SeferDefteri modülü yazıldı; utf-8-sig/; ayrıştırma, boş satır ve 5 sütun kontrolü, Türkçe ücret, sefer_id tekilliği, GG-AA-YYYY tarihi, satır bazında yarım-yukarı yuvarlama, en yoğun gün eşitliğinde en küçük tarih, boş defter ve hata durumları uygulandı; pytest ile 6 test geçti.",
+ "adim": 6,
+ "yurutucu_token": {
+  "girdi": 18941,
+  "cikti": 20807
+ },
+ "yurutucu_usd": 0.0060555,
+ "bitirdi": true,
+ "sure_sn": 843.6,
+ "gizli": {
+  "gecti": true,
+  "gecen": 20,
+  "toplam": 20,
+  "cikti": "....................                                                     [100%]\n20 passed in 0.32s\n"
+ }
+}

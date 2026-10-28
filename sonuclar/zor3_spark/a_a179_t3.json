@@ -1,0 +1,24 @@
+{
+ "id": "a179",
+ "kip": "a",
+ "tekrar": 3,
+ "kategori": "KDV, tevkifat, stopaj, taksit ve kuruş yuvarlama (Decimal, ROUND_HALF_UP, satır bazında ve toplamda yuvarlama farkı)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "sera_cli.py yazıldı (yalnızca argparse + sys/json/decimal). --kalemler (urun:miktar:birim_fiyat:kdv_oran), --tevkifat (float, argparse tür denetimi), --cikti (ozet/detay) bayrakları; Decimal ROUND_HALF_UP ile satır matrah/KDV yuvarlama, satır toplamı ile tek-seferlik KDV farkı (detayda fark_kurus, ozette toplam_kdv satır toplamına eşit), boş kalemde sıfır çıktısı, 7500,00 sınırında tevkifat muafiyeti (üstü matrahtan yuvarlanır), Türkçe küçük harfli (I→ı, İ→i) matrah-azalan sıralama, tip-önce-değer-sonra denetimiyle stderr'ye ValueError/TypeError mesajları. JSON çıktı verir; ağ/zaman/rastgelelik yok.",
+ "adim": 8,
+ "yurutucu_token": {
+  "girdi": 41718,
+  "cikti": 23432
+ },
+ "yurutucu_usd": 0.0088582,
+ "bitirdi": true,
+ "sure_sn": 289.2,
+ "gizli": {
+  "gecti": true,
+  "gecen": 22,
+  "toplam": 22,
+  "cikti": "......................                                                   [100%]\n22 passed in 0.79s\n"
+ }
+}

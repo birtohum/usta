@@ -1,0 +1,24 @@
+{
+ "id": "a011",
+ "kip": "a",
+ "tekrar": 2,
+ "kategori": "çok dosyalı küçük modül: iki-üç dosyaya bölünmüş, ortak hata sınıfları ve bir komut satırı girişi olan araç",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "hatalar.py (BosGirdiHatasi, UzunlukHatasi: ValueError soyundan) ve slug.py (slugla + benzersiz_yap + CLI) oluşturuldu. slugla Türkçe dönüşüm (ç→c, ğ→g, ı/İ/I→i, ö→o, ş→s, ü→u), küçük harf, tire birleştirme, boş girdide BosGirdiHatasi, 50 dahil geçerli / 51'de UzunlukHatasi, tip→boş→uzunluk önceliği uygular. benzersiz_yap en küçük boş -2,-3... ekini seçer, boş listede eklemez. `python -m slug üret --metin Çırağan Sarayı --mevcut cay, çay-2 --en-uzun 50` tırnaklı/tırnaksız çalışıp tek satır yazar. Yalnızca standart kütüphane kullanıldı.",
+ "adim": 10,
+ "yurutucu_token": {
+  "girdi": 39106,
+  "cikti": 31332
+ },
+ "yurutucu_usd": 0.010176999999999999,
+ "bitirdi": true,
+ "sure_sn": 344.3,
+ "gizli": {
+  "gecti": true,
+  "gecen": 22,
+  "toplam": 22,
+  "cikti": "......................                                                   [100%]\n22 passed in 0.18s\n"
+ }
+}

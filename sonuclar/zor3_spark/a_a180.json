@@ -1,0 +1,24 @@
+{
+ "id": "a180",
+ "kip": "a",
+ "tekrar": 1,
+ "kategori": "Türkçe büyük/küçük harf (İ/i, I/ı), Türk alfabesiyle sıralama, sayıyı yazıya çevirme, ünlü uyumuna göre ek",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "tarti.py yazıldı: --musteri/--kilo/--kasa bayraklarını okur, eksik bayrak→tip→aralık sırasıyla denetler, hatalarda ValueError mesajıyla 2 koduyla çıkar. Kilo Decimal ile yarım-yukarı 2 ondalığa yuvarlanır, virgüllü rakamla ve Türkçe sözcükle (bin'de bir'siz, sıfır kurallı) yazılır. Kasa 1-200 tam sayı, 'adet kasa' tekil yazılır. Müşteri adı Türkçe başlık biçimine çevrilir (ı→I, i→İ). Çıktı tek satır 'Sayın AD: KILO kilogram (yazı) ve KASA adet kasa' biçimindedir.",
+ "adim": 7,
+ "yurutucu_token": {
+  "girdi": 31853,
+  "cikti": 22135
+ },
+ "yurutucu_usd": 0.007612300000000001,
+ "bitirdi": true,
+ "sure_sn": 227.9,
+ "gizli": {
+  "gecti": false,
+  "gecen": 18,
+  "toplam": 23,
+  "cikti": "CompletedProcess(args=['/usr/bin/python', 'tarti.py', '--musteri', 'ali', '--kilo', '5000', '--kasa', '1'], returncode=0, stdout='Sayın Ali: 5000,00 kilogram (beş bin) ve 1 adet kasa\\n', stderr='').stdout\n\n.gizli/test_gizli.py:41: AssertionError\n_____________________________ test_sifir_tam_kisim _____________________________\n\n    def test_sifir_tam_kisim():\n        r = calistir('--musteri', 'ali', '--kilo', '0.5', '--kasa', '1')\n        assert r.returncode == 0\n        assert 'sıfır' in r.stdout.lower()\n>       assert '0.50' in r.stdout\nE       AssertionError: assert '0.50' in 'Sayın Ali: 0,50 kilogram (sıfır virgül elli) ve 1 adet kasa\\n'\nE        +  where 'Sayın Ali: 0,50 kilogram (sıfır virgül elli) ve 1 adet kasa\\n' = CompletedProcess(args=['/usr/bin/python', 'tarti.py', '--musteri', 'ali', '--kilo', '0.5', '--kasa', '1'], returncode=0, stdout='Sayın Ali: 0,50 kilogram (sıfır virgül elli) ve 1 adet kasa\\n', stderr='').stdout\n\n.gizli/test_gizli.py:119: AssertionError\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_kilo_yuvarlama_yarim_yukari - AssertionErro...\nFAILED .gizli/test_gizli.py::test_kilo_yuvarlama_bir_bucuk_binlik - Assertion...\nFAILED .gizli/test_gizli.py::test_kilo_alt_sinir_sifir - AssertionError: asse...\nFAILED .gizli/test_gizli.py::test_kilo_ust_sinir_besbin - AssertionError: ass...\nFAILED .gizli/test_gizli.py::test_sifir_tam_kisim - AssertionError: assert '0...\n5 failed, 18 passed in 1.24s\n"
+ }
+}

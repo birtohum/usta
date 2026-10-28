@@ -1,0 +1,70 @@
+{
+ "id": "a199",
+ "kip": "c",
+ "tekrar": 3,
+ "kategori": "KDV, tevkifat, stopaj, taksit ve kuruş yuvarlama (Decimal, ROUND_HALF_UP, satır bazında ve toplamda yuvarlama farkı)",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 57,
+   "basarili": 57
+  }
+ ],
+ "spark_usd": 0.0176283,
+ "arayuz": "",
+ "kabul_yazar": 3,
+ "mutasyon": {
+  "mutant": 14,
+  "ham_mutant": 14,
+  "turlar": [
+   {
+    "oldurulen": 12,
+    "toplam": 14
+   },
+   {
+    "oldurulen": 13,
+    "toplam": 14
+   },
+   {
+    "oldurulen": 13,
+    "toplam": 14
+   }
+  ],
+  "hayatta": [
+   "net_odeme esitliginde Turkce alfabetik sira gereksinimini cigner"
+  ]
+ },
+ "hakem": [
+  {
+   "test": ".usta_kabul/test_kabul_2.py::test_prim_10000_ustu_hesaplanir",
+   "karar": "belirsiz",
+   "gerekce": "Görev metni primin net_toplamdan düşülüp düşülmeyeceğini açıkça belirtmiyor.",
+   "tur": 1
+  }
+ ],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [
+  ".usta_kabul/test_kabul_1.py::test_esit_nette_turkce_alfabetik_sira",
+  ".usta_kabul/test_kabul_1.py::test_nete_gore_azalan_siralama",
+  ".usta_kabul/test_kabul_2.py::test_prim_10000_ustu_hesaplanir"
+ ],
+ "kabul_test_sayisi": 57,
+ "kabul_gecti": true,
+ "ozet": "aksaray_yem.py içinde YemStopajDefteri sınıfı yazıldı: str tür kontrolleri (TypeError öncelikli), %2/%4 oran kontrolü (ValueError), boş üretici ve sıfır/negatif tutar kontrolleri, ROUND_HALF_UP ile stopaj/net/KDV (%1 brüt üzerinden) hesabı, 10000 TL kesin aşımda prim, net azalan + Türkçe alfabetik üretici sıralaması, Türkçe i→İ büyük harf dönüşümü ve dokum/ozet raporları. pytest ile 15 test geçirildi.",
+ "adim": 8,
+ "yurutucu_token": {
+  "girdi": 53929,
+  "cikti": 22633
+ },
+ "yurutucu_usd": 0.009919500000000001,
+ "bitirdi": true,
+ "sure_sn": 779.5,
+ "gizli": {
+  "gecti": true,
+  "gecen": 22,
+  "toplam": 22,
+  "cikti": "......................                                                   [100%]\n22 passed in 0.03s\n"
+ }
+}

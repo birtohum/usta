@@ -1,0 +1,55 @@
+{
+ "id": "a216",
+ "kip": "c",
+ "tekrar": 1,
+ "kategori": "tarih ve saat: resmî tatiller parametreyle, iş günü hesabı, Türkiye saat dilimi (UTC+3, yaz saati yok), gün/ay adları Türkçe",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 45,
+   "basarili": 45
+  }
+ ],
+ "spark_usd": 0.0088444,
+ "arayuz": "",
+ "kabul_yazar": 3,
+ "mutasyon": {
+  "mutant": 15,
+  "ham_mutant": 15,
+  "turlar": [
+   {
+    "oldurulen": 15,
+    "toplam": 15
+   }
+  ],
+  "hayatta": []
+ },
+ "hakem": [],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [
+  ".usta_kabul/test_kabul_3.py::test_baslangic_gunu_kurala_uyarsa_listeye_alinir",
+  ".usta_kabul/test_kabul_3.py::test_baslangic_kurala_uymazsa_sonraki_adaydan_baslar",
+  ".usta_kabul/test_kabul_3.py::test_sonuclar_tarih_artarak_ve_istenen_sayida",
+  ".usta_kabul/test_kabul_3.py::test_turkce_gun_adlari_dogrulugu",
+  ".usta_kabul/test_kabul_3.py::test_yalnizca_mezat_gunleri_aday_olur"
+ ],
+ "kabul_test_sayisi": 45,
+ "kabul_gecti": true,
+ "ozet": "mezat.py içinde mezat_takvimi yazıldı: başlangıç dahil ilerleyip yalnızca mezat_gunleri'ndeki günleri alır, tatilleri atlar, Europe/Istanbul bilinçli tarihlerle Türkçe \"G Ay Yıl GünAdı\" biçiminde (iso, açıklamalı) liste döndürür; gun_sayisi 0 ise boş liste, negatif ise ValueError; hata önceliği başlangıç→gün aralığı→negatiflik→tatiller sırasıyla ValueError verir. Türkçe küçük harf kuralı (I→ı, İ→i) için turkce_kucuk_harf eklendi. 20 pytest testi yazıldı ve hepsi geçti.",
+ "adim": 8,
+ "yurutucu_token": {
+  "girdi": 33704,
+  "cikti": 18250
+ },
+ "yurutucu_usd": 0.0070203999999999996,
+ "bitirdi": true,
+ "sure_sn": 260.0,
+ "gizli": {
+  "gecti": true,
+  "gecen": 20,
+  "toplam": 20,
+  "cikti": "....................                                                     [100%]\n20 passed in 0.06s\n"
+ }
+}

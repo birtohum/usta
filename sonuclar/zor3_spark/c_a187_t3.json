@@ -1,0 +1,53 @@
+{
+ "id": "a187",
+ "kip": "c",
+ "tekrar": 3,
+ "kategori": "çok dosyalı küçük modül: iki-üç dosyaya bölünmüş, ortak hata sınıfları ve bir komut satırı girişi olan araç",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 52,
+   "basarili": 52
+  }
+ ],
+ "spark_usd": 0.0177337,
+ "arayuz": "",
+ "kabul_yazar": 3,
+ "mutasyon": {
+  "mutant": 16,
+  "ham_mutant": 16,
+  "turlar": [
+   {
+    "oldurulen": 15,
+    "toplam": 16
+   },
+   {
+    "oldurulen": 16,
+    "toplam": 16
+   }
+  ],
+  "hayatta": []
+ },
+ "hakem": [],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [],
+ "kabul_test_sayisi": 52,
+ "kabul_gecti": true,
+ "ozet": "hatalar.py (4 hata sınıfı), kamp.py (KampAlani: Türkçe küçük harf tip eşleme, tarih/parsel doğrulama, yarı-açık çakışma, R-0001 artan kimlik, Decimal ROUND_HALF_UP ücret, doluluk) ve cli.py (--rezerve/--ucret/--doluluk tek satır JSON, dosya kalıcılığı) yazıldı; pytest ile 14 test geçirildi.",
+ "adim": 11,
+ "yurutucu_token": {
+  "girdi": 76715,
+  "cikti": 29804
+ },
+ "yurutucu_usd": 0.013632299999999998,
+ "bitirdi": true,
+ "sure_sn": 655.5,
+ "gizli": {
+  "gecti": true,
+  "gecen": 22,
+  "toplam": 22,
+  "cikti": "......................                                                   [100%]\n22 passed in 0.21s\n"
+ }
+}

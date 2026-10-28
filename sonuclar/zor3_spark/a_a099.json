@@ -1,0 +1,24 @@
+{
+ "id": "a099",
+ "kip": "a",
+ "tekrar": 1,
+ "kategori": "KDV, tevkifat, stopaj, taksit ve kuruş yuvarlama (Decimal, ROUND_HALF_UP, satır bazında ve toplamda yuvarlama farkı)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "kargo.py dosyası yazıldı: kargo_faturala Decimal ile taban/yakıt/KDV yuvarlaması (ROUND_HALF_UP), yuvarlama_farki, %2 handling indirimi (>=2000), boş/negatif/boş takip_no/duplicate kontrolleri, TypeError öncelikli hata sırası ve Türkçe duyarlı matrah+takip_no sıralaması uygulandı.",
+ "adim": 6,
+ "yurutucu_token": {
+  "girdi": 18805,
+  "cikti": 24578
+ },
+ "yurutucu_usd": 0.006796100000000001,
+ "bitirdi": true,
+ "sure_sn": 247.4,
+ "gizli": {
+  "gecti": false,
+  "gecen": 21,
+  "toplam": 22,
+  "cikti": "...............F......                                                   [100%]\n=================================== FAILURES ===================================\n____________________________ test_indirim_uygulanir ____________________________\n\n    def test_indirim_uygulanir():\n        r = kargo_faturala([(\"B1\", Decimal('10'), Decimal('100.00')), (\"B2\", Decimal('10'), Decimal('100.00'))], Decimal('0.00'), Decimal('0.20'))\n        assert r['net_matrah'] == Decimal('1960.00')\n        assert r['kdv_toplam'] == Decimal('392.00')\n        assert r['genel_toplam'] == Decimal('2352.00')\n>       assert sum(x['matrah'] for x in r['satirlar']) == r['net_matrah']\nE       AssertionError: assert Decimal('2000.00') == Decimal('1960.00')\nE        +  where Decimal('2000.00') = sum(<generator object test_indirim_uygulanir.<locals>.<genexpr> at 0x76e2e7303510>)\n\n.gizli/test_gizli.py:103: AssertionError\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_indirim_uygulanir - AssertionError: assert ...\n1 failed, 21 passed in 0.12s\n"
+ }
+}

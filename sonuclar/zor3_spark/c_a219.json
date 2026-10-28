@@ -1,0 +1,59 @@
+{
+ "id": "a219",
+ "kip": "c",
+ "tekrar": 1,
+ "kategori": "tarih ve saat: resmî tatiller parametreyle, iş günü hesabı, Türkiye saat dilimi (UTC+3, yaz saati yok), gün/ay adları Türkçe",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 57,
+   "basarili": 57
+  }
+ ],
+ "spark_usd": 0.010746700000000001,
+ "arayuz": "",
+ "kabul_yazar": 3,
+ "mutasyon": {
+  "mutant": 14,
+  "ham_mutant": 14,
+  "turlar": [
+   {
+    "oldurulen": 12,
+    "toplam": 14
+   },
+   {
+    "oldurulen": 13,
+    "toplam": 14
+   },
+   {
+    "oldurulen": 13,
+    "toplam": 14
+   }
+  ],
+  "hayatta": [
+   "bos tarih dizesi ValueError karsiligi cikis kodu iki verir, hata vermez"
+  ]
+ },
+ "hakem": [],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [],
+ "kabul_test_sayisi": 57,
+ "kabul_gecti": true,
+ "ozet": "etiket_cli.py yazıldı: --tarih (zorunlu YYYY-AA-GG), --tatiller (opsiyonel dosya), --sonraki-isgunu bayraklı CLI; Europe/Istanbul bilinçli tarihler, hafta sonu+tatil iş-günü denetimi, ileri kaydırma, Türkçe gün/ay adlarıyla \"Gün Ay Yıl, GünAdı\" başlığı, Türkçe i→İ/ı→I büyük harf çevirimi, parti numarasına göre sıralama ve dakika yukarı yuvarlama yardımcıları; hatalarda stderr + çıkış 2, yalnızca stdlib. test_etiket.py ile 19 pytest testi geçiyor.",
+ "adim": 11,
+ "yurutucu_token": {
+  "girdi": 56112,
+  "cikti": 23640
+ },
+ "yurutucu_usd": 0.0103392,
+ "bitirdi": true,
+ "sure_sn": 973.2,
+ "gizli": {
+  "gecti": true,
+  "gecen": 20,
+  "toplam": 20,
+  "cikti": "....................                                                     [100%]\n20 passed in 1.58s\n"
+ }
+}

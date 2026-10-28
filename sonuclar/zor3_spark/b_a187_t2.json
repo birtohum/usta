@@ -1,0 +1,24 @@
+{
+ "id": "a187",
+ "kip": "b",
+ "tekrar": 2,
+ "kategori": "çok dosyalı küçük modül: iki-üç dosyaya bölünmüş, ortak hata sınıfları ve bir komut satırı girişi olan araç",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "hatalar.py (4 hata sınıfı), kamp.py (KampAlani: rezervasyon/ucret/doluluk, Türkçe küçük harf, yarı-açık çakışma, R-0001 artan kimlik, 400/700 TL + %10 indirim, 25 kWh ücretsiz + 6 TL, ROUND_HALF_UP, hata önceliği) ve cli.py (tek satır JSON, kalıcı kamp_veri.json) yazıldı; pytest ile 16 test geçti.",
+ "adim": 7,
+ "yurutucu_token": {
+  "girdi": 40379,
+  "cikti": 26667
+ },
+ "yurutucu_usd": 0.0093713,
+ "bitirdi": true,
+ "sure_sn": 269.9,
+ "gizli": {
+  "gecti": false,
+  "gecen": 21,
+  "toplam": 22,
+  "cikti": "        k = KampAlani()\n        with pytest.raises(GecersizTipHatasi):\n            k.rezervasyon(5, \"karavan\", \"2026-06-01\", \"2026-06-02\")\n        with pytest.raises(GecersizTipHatasi):\n            k.rezervasyon(31, \"çadır\", \"2026-06-01\", \"2026-06-02\")\n        with pytest.raises(GecersizTipHatasi):\n>           k.rezervasyon(0, \"çadır\", \"2026-06-01\", \"2026-06-02\")\n\n.gizli/test_gizli.py:50: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \nkamp.py:140: in rezervasyon\n    _parsel_dogrula(parsel_no)\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nparsel_no = 0\n\n    def _parsel_dogrula(parsel_no) -> int:\n        # bool, int'in alt sınıfıdır; ayrıca reddedilir.\n        if isinstance(parsel_no, bool):\n            raise ParselDoluHatasi(\"Parsel numarası geçersiz.\")\n        if not isinstance(parsel_no, int):\n            raise ParselDoluHatasi(\"Parsel numarası geçersiz.\")\n        if parsel_no < 1 or parsel_no > 60:\n>           raise ParselDoluHatasi(\"Parsel numarası geçersiz.\")\nE           hatalar.ParselDoluHatasi: Parsel numarası geçersiz.\n\nkamp.py:56: ParselDoluHatasi\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_parsel_tip_uyumsuz - hatalar.ParselDoluHata...\n1 failed, 21 passed in 0.33s\n"
+ }
+}

@@ -1,0 +1,24 @@
+{
+ "id": "a143",
+ "kip": "b",
+ "tekrar": 1,
+ "kategori": "CSV/JSON ile çalışan ve uç durumları çok olan veri işleme (BOM, ; ayırıcı, 1.234,56 sayı biçimi, boş/bozuk satır)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": null,
+ "adim": 20,
+ "yurutucu_token": {
+  "girdi": 149821,
+  "cikti": 80430
+ },
+ "yurutucu_usd": 0.0310681,
+ "bitirdi": false,
+ "sure_sn": 867.6,
+ "gizli": {
+  "gecti": false,
+  "gecen": 9,
+  "toplam": 21,
+  "cikti": "  r = calistir(stok, sip, cik, \"0\", tmp_path)\n>       assert r.returncode == 3\nE       AssertionError: assert 0 == 3\nE        +  where 0 = CompletedProcess(args=['/usr/bin/python', '/home/usta/is/2ccf9dc40e6c/kereste_kesim_cli.py', '--stok-csv', '/home/usta...of-usta/pytest-0/test_19_json_yapi_hatasi_cikis0/cikti.json', '--fire-orani', '0'], returncode=0, stdout='', stderr='').returncode\n\n.gizli/test_gizli.py:238: AssertionError\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_01_temel_atama - KeyError: 'siparis_id'\nFAILED .gizli/test_gizli.py::test_03_fire_hesabi_yetersiz - AssertionError: a...\nFAILED .gizli/test_gizli.py::test_06_bozuk_satirlar_atlanir - KeyError: 'stok...\nFAILED .gizli/test_gizli.py::test_07_bos_satirlar_yoksayilir - KeyError: 'sto...\nFAILED .gizli/test_gizli.py::test_09_en_kisa_uygun - KeyError: 'stok_id'\nFAILED .gizli/test_gizli.py::test_10_boy_esit_kimlik_alfabetik - KeyError: 's...\nFAILED .gizli/test_gizli.py::test_11_kimlik_kucuk_harf_karsilastirma - KeyErr...\nFAILED .gizli/test_gizli.py::test_12_kullanim_orani_yuvarlama - assert 0.17 =...\nFAILED .gizli/test_gizli.py::test_13_kullanim_yarim_yukari - assert 0.01 == 1.02\nFAILED .gizli/test_gizli.py::test_14_hic_gecerli_stok_yok - AssertionError: a...\nFAILED .gizli/test_gizli.py::test_17_baslik_hatasi_cikis3 - AssertionError: a...\nFAILED .gizli/test_gizli.py::test_19_json_yapi_hatasi_cikis3 - AssertionError...\n12 failed, 9 passed in 2.15s\n"
+ }
+}

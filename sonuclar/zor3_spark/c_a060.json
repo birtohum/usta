@@ -1,0 +1,85 @@
+{
+ "id": "a060",
+ "kip": "c",
+ "tekrar": 1,
+ "kategori": "CSV/JSON ile çalışan ve uç durumları çok olan veri işleme (BOM, ; ayırıcı, 1.234,56 sayı biçimi, boş/bozuk satır)",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 15,
+   "basarili": 15
+  }
+ ],
+ "spark_usd": 0.0352993,
+ "arayuz": "",
+ "kabul_yazar": 1,
+ "mutasyon": {
+  "mutant": 15,
+  "ham_mutant": 15,
+  "turlar": [
+   {
+    "oldurulen": 12,
+    "toplam": 15
+   },
+   {
+    "oldurulen": 12,
+    "toplam": 15
+   },
+   {
+    "oldurulen": 12,
+    "toplam": 15
+   }
+  ],
+  "hayatta": [
+   "(1)/(9) utf-8-sig ile okuma zorunlulugunu cigner, BOM birakir",
+   "(1) basliktaki on-son bosluk temizlemeyi atlar",
+   "(8) esitlikte Turk alfabesi yerine bayt sirasi kullanir, c-g-ı-o-s-u yeri bozulur"
+  ]
+ },
+ "hakem": [
+  {
+   "test": ".usta_kabul/test_kabul_1.py::test_fire_esik_1000_siniri",
+   "karar": "belirsiz",
+   "gerekce": "Görev net ağırlık formülünü ve ıskarta grupların rapordan çıkarılacağını açıkça tanımlamıyor.",
+   "tur": 1
+  },
+  {
+   "test": ".usta_kabul/test_kabul_1.py::test_fire_half_up_yuvarlama",
+   "karar": "belirsiz",
+   "gerekce": "Görev yuvarlanmış fire oranının net ağırlığa nasıl uygulanacağını açıkça tanımlamıyor.",
+   "tur": 1
+  },
+  {
+   "test": ".usta_kabul/test_kabul_1.py::test_net_1000_dahil_999_iskarta",
+   "karar": "belirsiz",
+   "gerekce": "Görev fire sütunu yokken varsayılanı ve ıskartaların rapora dahil edilip edilmeyeceğini açıkça belirtmiyor.",
+   "tur": 1
+  }
+ ],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [
+  ".usta_kabul/test_kabul_1.py::test_kodlama_bozulmasi_unicode_decode",
+  ".usta_kabul/test_kabul_1.py::test_fire_esik_1000_siniri",
+  ".usta_kabul/test_kabul_1.py::test_fire_half_up_yuvarlama",
+  ".usta_kabul/test_kabul_1.py::test_net_1000_dahil_999_iskarta"
+ ],
+ "kabul_test_sayisi": 15,
+ "kabul_gecti": true,
+ "ozet": "SecimMotoru yazıldı: utf-8-sig + noktalı virgül CSV, başlık trim, Decimal ağırlık (binlik nokta silme), Türkçe I/İ küçük harf normalizasyonu, 1000g ikinci kalite / altı ıskarta, fire ROUND_HALF_UP 3 basamak, toplam net azalan + Türkçe alfabetik tie-break sıralı rapor, hata önceliği ve append davranışıyla. pytest 6 test geçti.",
+ "adim": 11,
+ "yurutucu_token": {
+  "girdi": 50060,
+  "cikti": 50275
+ },
+ "yurutucu_usd": 0.015061,
+ "bitirdi": true,
+ "sure_sn": 1292.3,
+ "gizli": {
+  "gecti": false,
+  "gecen": 17,
+  "toplam": 20,
+  "cikti": "      'adet': 1,\nE                           'birinci': 0,\nE                           'birinci_kalite': 0,\nE                           'cesit': 'portakal',\nE                           'count': 1,...\nE             \nE             ...Full output truncated (29 lines hidden), use '-vv' to show\n\n.gizli/test_gizli.py:114: AssertionError\n________________________ test_net_altinda_iskarta_haric ________________________\n\n    def test_net_altinda_iskarta_haric():\n        import tempfile, os\n        m = SecimMotoru()\n        with tempfile.TemporaryDirectory() as d:\n            p = os.path.join(d, \"a.csv\")\n            _yaz(p, \"\\u00e7e\\u015fit;a\\u011f\\u0131rl\\u0131k;fire_oran\\u0131\\nportakal;900;0\\nlimon;2000;0\\n\")\n            m.yukle(p)\n            r = m.rapor()\n>           assert len(r) == 1\nE           AssertionError: assert 2 == 1\nE            +  where 2 = len({'limon': {'toplam_net': Decimal('2000'), 'toplam': Decimal('2000'), 'sayi': 1, 'sayı': 1, 'adet': 1, 'count': 1, 'ilk...00'), 'fire_brut': Decimal('1.000'), 'ikinci_kalite': 0, 'iskarta': 1, 'birinci_kalite': 0, 'ikinci': 0, 'birinci': 0}})\n\n.gizli/test_gizli.py:124: AssertionError\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_fire_half_up - AssertionError: assert Decim...\nFAILED .gizli/test_gizli.py::test_net_1000_ikinci_kalite_haric - AssertionErr...\nFAILED .gizli/test_gizli.py::test_net_altinda_iskarta_haric - AssertionError:...\n3 failed, 17 passed in 0.30s\n"
+ }
+}

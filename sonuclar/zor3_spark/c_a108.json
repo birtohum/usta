@@ -1,0 +1,84 @@
+{
+ "id": "a108",
+ "kip": "c",
+ "tekrar": 1,
+ "kategori": "CSV/JSON ile çalışan ve uç durumları çok olan veri işleme (BOM, ; ayırıcı, 1.234,56 sayı biçimi, boş/bozuk satır)",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 54,
+   "basarili": 54
+  }
+ ],
+ "spark_usd": 0.022617300000000003,
+ "arayuz": "",
+ "kabul_yazar": 3,
+ "mutasyon": {
+  "mutant": 16,
+  "ham_mutant": 16,
+  "turlar": [
+   {
+    "oldurulen": 14,
+    "toplam": 16
+   },
+   {
+    "oldurulen": 15,
+    "toplam": 16
+   },
+   {
+    "oldurulen": 15,
+    "toplam": 16
+   }
+  ],
+  "hayatta": [
+   "BOM yoksayma gereksinimini cigner: utf-8-sig yerine utf-8 okur"
+  ]
+ },
+ "hakem": [
+  {
+   "test": ".usta_kabul/test_kabul_2.py::test_siralama_turkce_duyarsiz",
+   "karar": "belirsiz",
+   "gerekce": "Görev Türkçe duyarsız sıralamanın ı/i için kod-noktası mı yoksa alfabe sırası mı olduğunu açıkça tanımlamıyor.",
+   "tur": 1
+  },
+  {
+   "test": ".usta_kabul/test_kabul_m1.py::test_kararli_siralama_esitlik_korunur",
+   "karar": "belirsiz",
+   "gerekce": "Görev parti gruplamanın büyük-küçük harfe duyarlı mı duyarsız mı olduğunu ve eşitlikte neyin korunacağını tek anlamlı tanımlamıyor.",
+   "tur": 1
+  },
+  {
+   "test": ".usta_kabul/test_kabul_m1.py::test_kararli_siralama_esitlik_ters_giris",
+   "karar": "belirsiz",
+   "gerekce": "Görev parti gruplamanın büyük-küçük harfe duyarlı mı duyarsız mı olduğunu ve eşitlikte neyin korunacağını tek anlamlı tanımlamıyor.",
+   "tur": 1
+  }
+ ],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [
+  ".usta_kabul/test_kabul_3.py::test_binlik_nokta_silerek_cozulur",
+  ".usta_kabul/test_kabul_3.py::test_turkce_siralama_ag_once_ah",
+  ".usta_kabul/test_kabul_2.py::test_siralama_turkce_duyarsiz",
+  ".usta_kabul/test_kabul_m1.py::test_kararli_siralama_esitlik_korunur",
+  ".usta_kabul/test_kabul_m1.py::test_kararli_siralama_esitlik_ters_giris"
+ ],
+ "kabul_test_sayisi": 54,
+ "kabul_gecti": true,
+ "ozet": "yem_uretim.py yazıldı: utf-8-sig/; ayrımı, boş satır atlama, Türkçe sayı çözümleme, HALF_UP yuvarlama, HATALI/OK/SAPMA mantığı, Türkçe duyarsız doğal sıralama ve hata önceliği uygulandı; pytest ile 7 test geçti.",
+ "adim": 6,
+ "yurutucu_token": {
+  "girdi": 18955,
+  "cikti": 38988
+ },
+ "yurutucu_usd": 0.0096931,
+ "bitirdi": true,
+ "sure_sn": 1294.8,
+ "gizli": {
+  "gecti": false,
+  "gecen": 19,
+  "toplam": 21,
+  "cikti": "        c = tmp_path / \"u.csv\"; r = tmp_path / \"r.json\"\n        _recete_yaz(r, {\"MISIR\": \"60,00\", \"SOYA\": \"40,00\"}, \"0,00\")\n        _csv_yaz(c, [\"P1;MISIR;49,995\", \"P1;SOYA;50,00\"])\n        res = parti_kontrol(str(c), str(r))\n>       assert res[0][\"toplam\"] == \"100,00\" and res[0][\"durum\"] == \"OK\"\nE       AssertionError: assert ('100,00' == '100,00'\nE           100,00 and 'SAPMA' == 'OK'\nE         - OK\nE         + SAPMA)\n\n.gizli/test_gizli.py:55: AssertionError\n_____________________________ test_siralama_turkce _____________________________\n\ntmp_path = PosixPath('/home/usta/is/642552169813/.tmp/pytest-of-usta/pytest-2/test_siralama_turkce0')\n\n    def test_siralama_turkce(tmp_path):\n        c = tmp_path / \"u.csv\"; r = tmp_path / \"r.json\"\n        _recete_yaz(r, {\"A\": \"0,00\"}, \"200,00\")\n        _csv_yaz(c, [\"I;MISIR;100,00\", \"i;MISIR;100,00\", \"b;MISIR;100,00\", \"A;MISIR;100,00\"])\n        res = parti_kontrol(str(c), str(r))\n>       assert [d[\"parti\"] for d in res] == [\"A\", \"b\", \"i\", \"I\"]\nE       AssertionError: assert ['A', 'b', 'I', 'i'] == ['A', 'b', 'i', 'I']\nE         At index 2 diff: 'I' != 'i'\nE         Use -v to get more diff\n\n.gizli/test_gizli.py:121: AssertionError\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_yuvarlama_half_up_ok - AssertionError: asse...\nFAILED .gizli/test_gizli.py::test_siralama_turkce - AssertionError: assert ['...\n2 failed, 19 passed in 0.20s\n"
+ }
+}

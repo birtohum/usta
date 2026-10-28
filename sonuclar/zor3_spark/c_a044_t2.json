@@ -1,0 +1,66 @@
+{
+ "id": "a044",
+ "kip": "c",
+ "tekrar": 2,
+ "kategori": "KDV, tevkifat, stopaj, taksit ve kuruş yuvarlama (Decimal, ROUND_HALF_UP, satır bazında ve toplamda yuvarlama farkı)",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 56,
+   "basarili": 56
+  }
+ ],
+ "spark_usd": 0.0152657,
+ "arayuz": "",
+ "kabul_yazar": 3,
+ "mutasyon": {
+  "mutant": 15,
+  "ham_mutant": 15,
+  "turlar": [
+   {
+    "oldurulen": 12,
+    "toplam": 15
+   },
+   {
+    "oldurulen": 12,
+    "toplam": 15
+   },
+   {
+    "oldurulen": 15,
+    "toplam": 15
+   }
+  ],
+  "hayatta": []
+ },
+ "hakem": [
+  {
+   "test": ".usta_kabul/test_kabul_m2.py::test_esik_esitlik_alt_dilim",
+   "karar": "hatali",
+   "gerekce": "Görev eşik eşitliğinde işlevsel sonucu istiyor, kaynak kodda _ESIK adında değişken ve belirli karşılaştırma yazımı şart koşmuyor.",
+   "tur": 1
+  }
+ ],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [
+  ".usta_kabul/test_kabul_m2.py::test_esik_esitlik_alt_dilim"
+ ],
+ "kabul_test_sayisi": 56,
+ "kabul_gecti": true,
+ "ozet": "iade.py içinde KdvIadeHesabi sınıfı yazıldı: satır bazında ROUND_HALF_UP KDV, 10000 sınırında yarım indirim, oran/negatif/boş/tip kontrolleri ve odenecek-iade-devreden sözlüğü. 10 pytest testi geçiyor.",
+ "adim": 7,
+ "yurutucu_token": {
+  "girdi": 27349,
+  "cikti": 19062
+ },
+ "yurutucu_usd": 0.0065473,
+ "bitirdi": true,
+ "sure_sn": 870.4,
+ "gizli": {
+  "gecti": true,
+  "gecen": 20,
+  "toplam": 20,
+  "cikti": "....................                                                     [100%]\n20 passed in 0.11s\n"
+ }
+}

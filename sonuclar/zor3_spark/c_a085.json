@@ -1,0 +1,49 @@
+{
+ "id": "a085",
+ "kip": "c",
+ "tekrar": 1,
+ "kategori": "Türkçe büyük/küçük harf (İ/i, I/ı), Türk alfabesiyle sıralama, sayıyı yazıya çevirme, ünlü uyumuna göre ek",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 46,
+   "basarili": 46
+  }
+ ],
+ "spark_usd": 0.007824200000000002,
+ "arayuz": "Dosya denetim.py, sınıf IcerikDenetci(): yasakli_ekle(self, kelime: str)->None; denetle(self, metin: str)->dict{bulundu:bool, eslesenler:list, sayi:int}",
+ "kabul_yazar": 3,
+ "mutasyon": {
+  "mutant": 14,
+  "ham_mutant": 14,
+  "turlar": [
+   {
+    "oldurulen": 14,
+    "toplam": 14
+   }
+  ],
+  "hayatta": []
+ },
+ "hakem": [],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [],
+ "kabul_test_sayisi": 46,
+ "kabul_gecti": true,
+ "ozet": "denetim.py içinde IcerikDenetci yazıldı: Türkçe küçültme (I→ı, İ→i), sözcük-sınırı eşleşme (isalnum kontrolü), ValueError/TypeError ayrımı, sessiz duplicate yoksayma ve ekleme sırası koruma. pytest ile 11 test geçti.",
+ "adim": 4,
+ "yurutucu_token": {
+  "girdi": 10519,
+  "cikti": 17068
+ },
+ "yurutucu_usd": 0.0044655,
+ "bitirdi": true,
+ "sure_sn": 410.0,
+ "gizli": {
+  "gecti": true,
+  "gecen": 20,
+  "toplam": 20,
+  "cikti": "....................                                                     [100%]\n20 passed in 0.05s\n"
+ }
+}

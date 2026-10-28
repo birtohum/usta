@@ -1,0 +1,49 @@
+{
+ "id": "a095",
+ "kip": "c",
+ "tekrar": 3,
+ "kategori": "Türkçe büyük/küçük harf (İ/i, I/ı), Türk alfabesiyle sıralama, sayıyı yazıya çevirme, ünlü uyumuna göre ek",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 47,
+   "basarili": 47
+  }
+ ],
+ "spark_usd": 0.0081489,
+ "arayuz": "",
+ "kabul_yazar": 3,
+ "mutasyon": {
+  "mutant": 15,
+  "ham_mutant": 15,
+  "turlar": [
+   {
+    "oldurulen": 15,
+    "toplam": 15
+   }
+  ],
+  "hayatta": []
+ },
+ "hakem": [],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [],
+ "kabul_test_sayisi": 47,
+ "kabul_gecti": true,
+ "ozet": "derskitabi.py içinde sayiyi_yaziya ve sira_sozcugu yazıldı; 0-9999 Türkçe yazım, sıra eki (yedinci/altıncı, ünlü uyumu, n kaynaştırması), TypeError/ValueError denetimleri uygulandı. pytest ile 13 test geçti.",
+ "adim": 4,
+ "yurutucu_token": {
+  "girdi": 10896,
+  "cikti": 9796
+ },
+ "yurutucu_usd": 0.0030488,
+ "bitirdi": true,
+ "sure_sn": 374.5,
+ "gizli": {
+  "gecti": true,
+  "gecen": 24,
+  "toplam": 24,
+  "cikti": "........................                                                 [100%]\n24 passed in 0.06s\n"
+ }
+}

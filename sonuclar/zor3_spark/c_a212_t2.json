@@ -1,0 +1,61 @@
+{
+ "id": "a212",
+ "kip": "c",
+ "tekrar": 2,
+ "kategori": "KDV, tevkifat, stopaj, taksit ve kuruş yuvarlama (Decimal, ROUND_HALF_UP, satır bazında ve toplamda yuvarlama farkı)",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 16,
+   "basarili": 16
+  }
+ ],
+ "spark_usd": 0.037884100000000004,
+ "arayuz": "python kirsehir_kirtasiye_cli.py --satir KATEGORI:MIKTAR:BIRIM_FIYAT [--satir ...] --rapor json|fis",
+ "kabul_yazar": 1,
+ "mutasyon": {
+  "mutant": 13,
+  "ham_mutant": 15,
+  "turlar": [
+   {
+    "oldurulen": 10,
+    "toplam": 13
+   },
+   {
+    "oldurulen": 10,
+    "toplam": 13
+   },
+   {
+    "oldurulen": 10,
+    "toplam": 13
+   }
+  ],
+  "hayatta": [
+   "kitap satirlarinda KDV her zaman sifir olmali, kosulu bozarak kitap KDV hesaplatir",
+   "fis kategori Turkce alfabetik sirali olmali, duz byte siralama yapar",
+   "KDV iskontolu matrah uzerinden yuvarlanarak yeniden hesaplanmali, yuvarlamayi atlar"
+  ]
+ },
+ "hakem": [],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [],
+ "kabul_test_sayisi": 16,
+ "kabul_gecti": true,
+ "ozet": "kirsehir_kirtasiye_cli.py yazıldı: argparse ile --satir/--rapor, Türkçe duyarsız kategori, Decimal ROUND_HALF_UP, 3000 TL iskonto kuralı, json/fis raporları. pytest ile 11 test geçti.",
+ "adim": 6,
+ "yurutucu_token": {
+  "girdi": 20514,
+  "cikti": 26131
+ },
+ "yurutucu_usd": 0.0072776,
+ "bitirdi": true,
+ "sure_sn": 1218.3,
+ "gizli": {
+  "gecti": true,
+  "gecen": 21,
+  "toplam": 21,
+  "cikti": ".....................                                                    [100%]\n21 passed in 1.83s\n"
+ }
+}

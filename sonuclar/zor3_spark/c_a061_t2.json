@@ -1,0 +1,64 @@
+{
+ "id": "a061",
+ "kip": "c",
+ "tekrar": 2,
+ "kategori": "Türkiye'ye özgü kimlik ve hesap numaraları (TC kimlik, VKN, IBAN, MERSİS, plaka, telefon) — birden çok kuralın birlikte uygulandığı",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 52,
+   "basarili": 52
+  }
+ ],
+ "spark_usd": 0.020530000000000003,
+ "arayuz": "Dosya kooperatif_ortak.py içinde sınıf OrtakDefter(): ortak_ekle(unvan: str, vkn: str, mersis: str, iban: str) -> None; raporla() -> list[dict] anahtarlar unvan,vkn,mersis,iban",
+ "kabul_yazar": 3,
+ "mutasyon": {
+  "mutant": 15,
+  "ham_mutant": 15,
+  "turlar": [
+   {
+    "oldurulen": 11,
+    "toplam": 15
+   },
+   {
+    "oldurulen": 11,
+    "toplam": 15
+   },
+   {
+    "oldurulen": 11,
+    "toplam": 15
+   }
+  ],
+  "hayatta": [
+   "VKN kirpma yapilmadan ham haliyle tam 10 rakam olmali; strip ile bosluklu VKN kabul edilir",
+   "VKN kuralinda a sifirsa katki sifir olmali; her zaman katki eklenir",
+   "IBAN kontrol hanesi 02-98 arasi olmali, 01 gecersiz; 01 kabul edilir",
+   "VKN ile MERSIS ilk 10 hanesi tutarsizsa VKN hatasi oncelikli olmali; mersis hatasi verilir"
+  ]
+ },
+ "hakem": [],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [
+  ".usta_kabul/test_kabul_1.py::test_raporla_siralama_unvan_ve_vkn"
+ ],
+ "kabul_test_sayisi": 52,
+ "kabul_gecti": true,
+ "ozet": "kooperatif_ortak.py içinde OrtakDefter sınıfı yazıldı: unvan strip+min3, VKN 10 rakam + (d+10-j)%10 / 2^(10-j)%9 kontrolü, MERSIS 16 rakam + ilk hane≠0 + ilk10 VKN kuralı + 16.hane toplam%10, IBAN TR+26 + kontrol 02-98 + mod97==1; hata önceliği unvan>VKN>MERSIS>IBAN (ilk10 tutarsızlığı VKN hatası). raporla() unvan+VKN sözlük sırasına göre sıralar. pytest ile 10 test geçti.",
+ "adim": 8,
+ "yurutucu_token": {
+  "girdi": 36838,
+  "cikti": 23109
+ },
+ "yurutucu_usd": 0.0083056,
+ "bitirdi": true,
+ "sure_sn": 910.1,
+ "gizli": {
+  "gecti": true,
+  "gecen": 22,
+  "toplam": 22,
+  "cikti": "......................                                                   [100%]\n22 passed in 0.07s\n"
+ }
+}

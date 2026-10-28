@@ -1,0 +1,49 @@
+{
+ "id": "a134",
+ "kip": "c",
+ "tekrar": 3,
+ "kategori": "KDV, tevkifat, stopaj, taksit ve kuruş yuvarlama (Decimal, ROUND_HALF_UP, satır bazında ve toplamda yuvarlama farkı)",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 53,
+   "basarili": 53
+  }
+ ],
+ "spark_usd": 0.0094036,
+ "arayuz": "sut_odemesi.py içinde sut_stopaj_hesapla(kalemler: list, stopaj_orani: Decimal) -> dict. Dönüş anahtarları: satirlar, matrah_toplami, kdv_toplami, stopaj_toplami, net_odenecek, yuvarlama_farki. Satır anahtarları: uretici, litre, birim_fiyat, kdv_orani, matrah, kdv, stopaj.",
+ "kabul_yazar": 3,
+ "mutasyon": {
+  "mutant": 14,
+  "ham_mutant": 14,
+  "turlar": [
+   {
+    "oldurulen": 14,
+    "toplam": 14
+   }
+  ],
+  "hayatta": []
+ },
+ "hakem": [],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [],
+ "kabul_test_sayisi": 53,
+ "kabul_gecti": true,
+ "ozet": "sut_odemesi.py içinde sut_stopaj_hesapla yazıldı: satır matrah/KDV/stopaj ROUND_HALF_UP ile kuruşa yuvarlanır, oran ve değer/tür kontrolleri yapılır, satırlar casefold sıralanır, toplamlar ve yuvarlama farkı hesaplanır. pytest ile 15 test geçti.",
+ "adim": 7,
+ "yurutucu_token": {
+  "girdi": 32850,
+  "cikti": 13654
+ },
+ "yurutucu_usd": 0.0060158,
+ "bitirdi": true,
+ "sure_sn": 302.2,
+ "gizli": {
+  "gecti": false,
+  "gecen": 14,
+  "toplam": 21,
+  "cikti": "    kalemler = [{\"uretici\": \"Ali\", \"litre\": Decimal(\"10\"), \"birim_fiyat\": Decimal(\"10.00\"), \"kdv_orani\": 1}]\n            r = sut_stopaj_hesapla(kalemler, oran)\n>           assert r[\"stopaj_toplam\"] == beklenen\nE           KeyError: 'stopaj_toplam'\n\n.gizli/test_gizli.py:121: KeyError\n______________________ test_sifir_litre_ve_fiyat_gecerli _______________________\n\n    def test_sifir_litre_ve_fiyat_gecerli():\n        kalemler = [\n            {\"uretici\": \"Ali\", \"litre\": Decimal(\"0\"), \"birim_fiyat\": Decimal(\"10.00\"), \"kdv_orani\": 1},\n            {\"uretici\": \"Veli\", \"litre\": Decimal(\"5\"), \"birim_fiyat\": Decimal(\"0.00\"), \"kdv_orani\": 20},\n        ]\n        r = sut_stopaj_hesapla(kalemler, Decimal(\"2\"))\n>       assert r[\"matrah_toplam\"] == Decimal(\"0.00\")\nE       KeyError: 'matrah_toplam'\n\n.gizli/test_gizli.py:157: KeyError\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_tek_satir_hesap - KeyError: 'matrah_toplam'\nFAILED .gizli/test_gizli.py::test_kdv_oranlari_1_ve_20 - KeyError: 'kdv_tutari'\nFAILED .gizli/test_gizli.py::test_stopaj_matrah_uzerinden_hesaplanir - KeyErr...\nFAILED .gizli/test_gizli.py::test_toplamlar_ve_net - KeyError: 'matrah_toplam'\nFAILED .gizli/test_gizli.py::test_yuvarlama_farki_negatif - KeyError: 'kdv_to...\nFAILED .gizli/test_gizli.py::test_stopaj_orani_gecerli_degerler - KeyError: '...\nFAILED .gizli/test_gizli.py::test_sifir_litre_ve_fiyat_gecerli - KeyError: 'm...\n7 failed, 14 passed in 0.17s\n"
+ }
+}

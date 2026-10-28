@@ -1,0 +1,24 @@
+{
+ "id": "a047",
+ "kip": "b",
+ "tekrar": 3,
+ "kategori": "çok dosyalı küçük modül: iki-üç dosyaya bölünmüş, ortak hata sınıfları ve bir komut satırı girişi olan araç",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "hatalar.py (NotHatasi/OgrenciHatasi ValueError soyundan) ve burs.py (ortalama_hesapla taban yuvarlama, sirala ortalama/devamsızlık/kimlik sıralaması, Türkçe normalize ı→i ş→s ğ→g, tip→öğrenci→not hata önceliği, CLI `python -m burs sirala --ogrenciler`) yazıldı; pytest ile 17 test geçti.",
+ "adim": 8,
+ "yurutucu_token": {
+  "girdi": 32244,
+  "cikti": 35258
+ },
+ "yurutucu_usd": 0.010276,
+ "bitirdi": true,
+ "sure_sn": 368.3,
+ "gizli": {
+  "gecti": false,
+  "gecen": 18,
+  "toplam": 20,
+  "cikti": "...........FF.......                                                     [100%]\n=================================== FAILURES ===================================\n__________________________ test_turkce_karsilastirma ___________________________\n\n    def test_turkce_karsilastirma():\n        ogr = [{\"ad\": \"I\", \"notlar\": [90], \"devamsizlik\": 0, \"kimlik\": 1}, {\"ad\": \"a\", \"notlar\": [90], \"devamsizlik\": 0, \"kimlik\": 1}]\n        s = sirala(ogr)\n>       assert [_ad(x) for x in s] == [\"a\", \"I\"]\nE       AssertionError: assert ['I', 'a'] == ['a', 'I']\nE         At index 0 diff: 'I' != 'a'\nE         Use -v to get more diff\n\n.gizli/test_gizli.py:74: AssertionError\n____________________________ test_turkce_g_donusumu ____________________________\n\n    def test_turkce_g_donusumu():\n        ogr = [{\"ad\": \"h\", \"notlar\": [90], \"devamsizlik\": 0, \"kimlik\": 1}, {\"ad\": \"\\u011f\", \"notlar\": [90], \"devamsizlik\": 0, \"kimlik\": 1}]\n        s = sirala(ogr)\n>       assert [_ad(x) for x in s][0] == \"\\u011f\"\nE       AssertionError: assert 'h' == 'ğ'\nE         - ğ\nE         + h\n\n.gizli/test_gizli.py:79: AssertionError\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_turkce_karsilastirma - AssertionError: asse...\nFAILED .gizli/test_gizli.py::test_turkce_g_donusumu - AssertionError: assert ...\n2 failed, 18 passed in 0.32s\n"
+ }
+}

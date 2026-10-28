@@ -1,0 +1,26 @@
+{
+ "id": "a118",
+ "kip": "c",
+ "tekrar": 2,
+ "kategori": "CSV/JSON ile çalışan ve uç durumları çok olan veri işleme (BOM, ; ayırıcı, 1.234,56 sayı biçimi, boş/bozuk satır)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0001715,
+ "arayuz": "",
+ "kabul_gecti": false,
+ "dogrulanamadi": true,
+ "ozet": "`feribot_sefer.py` içinde `SeferDefteri` sınıfı yazıldı: `ekle` dosyayı `utf-8-sig` ile `;` ayırıcıyla okuyup başlığı denetler (önce FileNotFoundError, sonra ValueError), boş/boşluk satırları yok sayar, 5 sütunlu olmayan, ücreti Türkçe biçimde ayrışmayan, sefer_id'si boş, tarihi GG-AA-YYYY olmayan satırları atlar, tekrar eden sefer_id'de ilk kaydı korur; `raporla` hasılatı her seferde yolcu×ücret çarpımını HALF_UP ile iki ondalığa yuvarlayıp toplar, en yoğun günü yolcu toplamına göre (eşitlikte en küçük ISO tarih) seçer, boşken hasılat 0 ve gün None döner. Yalnızca standart kütüphane kullanıldı; `test_feribot.py` ile 14 pytest testi geçiyor.",
+ "adim": 8,
+ "yurutucu_token": {
+  "girdi": 49882,
+  "cikti": 33057
+ },
+ "yurutucu_usd": 0.011599600000000002,
+ "sure_sn": 447.3,
+ "gizli": {
+  "gecti": true,
+  "gecen": 20,
+  "toplam": 20,
+  "cikti": "....................                                                     [100%]\n20 passed in 0.12s\n"
+ }
+}

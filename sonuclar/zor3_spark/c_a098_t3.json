@@ -1,0 +1,61 @@
+{
+ "id": "a098",
+ "kip": "c",
+ "tekrar": 3,
+ "kategori": "CSV/JSON ile çalışan ve uç durumları çok olan veri işleme (BOM, ; ayırıcı, 1.234,56 sayı biçimi, boş/bozuk satır)",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 57,
+   "basarili": 57
+  }
+ ],
+ "spark_usd": 0.018256400000000002,
+ "arayuz": "",
+ "kabul_yazar": 3,
+ "mutasyon": {
+  "mutant": 15,
+  "ham_mutant": 16,
+  "turlar": [
+   {
+    "oldurulen": 13,
+    "toplam": 15
+   },
+   {
+    "oldurulen": 14,
+    "toplam": 15
+   },
+   {
+    "oldurulen": 14,
+    "toplam": 15
+   }
+  ],
+  "hayatta": [
+   "BOM yoksayma: utf-8-sig ile okuma gereksinimini cigner"
+  ]
+ },
+ "hakem": [],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [
+  ".usta_kabul/test_kabul_3.py::test_tamamen_bos_satirlar_atlanir"
+ ],
+ "kabul_test_sayisi": 57,
+ "kabul_gecti": true,
+ "ozet": "uzum_kurutma.py içinde kurutma_raporu yazıldı: utf-8-sig + ';' okuma, boş satır atlama, Türkçe sayı çözümleme (Decimal), kuru ağırlık formülü (HALF_UP, eşit nemde aynen), hatalı sayaç, Türkçe duyarsız gruplama (ilk yazım), tutar hesabı ve sıralama, genel_toplam; yokluk öncelikli hata yönetimi. pytest ile 8 test geçti.",
+ "adim": 9,
+ "yurutucu_token": {
+  "girdi": 39610,
+  "cikti": 35447
+ },
+ "yurutucu_usd": 0.0110504,
+ "bitirdi": true,
+ "sure_sn": 820.5,
+ "gizli": {
+  "gecti": true,
+  "gecen": 21,
+  "toplam": 21,
+  "cikti": ".....................                                                    [100%]\n21 passed in 0.11s\n"
+ }
+}

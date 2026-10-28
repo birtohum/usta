@@ -1,0 +1,53 @@
+{
+ "id": "a167",
+ "kip": "c",
+ "tekrar": 2,
+ "kategori": "çok dosyalı küçük modül: iki-üç dosyaya bölünmüş, ortak hata sınıfları ve bir komut satırı girişi olan araç",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 56,
+   "basarili": 56
+  }
+ ],
+ "spark_usd": 0.012815799999999999,
+ "arayuz": "Dosyalar: hatalar.py, kahvalti.py, cli.py. from hatalar import Hata, GirdiHatasi, BulunamadiHatasi, KapanmisHatasi; class Hata(Exception), class GirdiHatasi(Hata), class BulunamadiHatasi(Hata), class KapanmisHatasi(Hata). from kahvalti import Adisyon; kurucu Adisyon() argümansız; metotlar Adisyon.masa_ac(self, masa_id: str) -> dict, Adisyon.urun_ekle(self, masa_id: str, urun: str, fiyat_kurus: int) -> dict, Adisyon.kisi_basi(self, masa_id: str, kisi: int) -> list[int], Adisyon.masa_kapat(self, masa_id: str) -> dict, Adisyon.urunler(self, masa_id: str) -> list[dict]. CLI aynı dizindeki adisyon.json ile durum saklar; çağrılar python cli.py ac --masa ID, python cli.py ekle --masa ID --urun AD --fiyat KURUS, python cli.py bol --masa ID --kisi N.",
+ "kabul_yazar": 3,
+ "mutasyon": {
+  "mutant": 15,
+  "ham_mutant": 15,
+  "turlar": [
+   {
+    "oldurulen": 13,
+    "toplam": 15
+   },
+   {
+    "oldurulen": 15,
+    "toplam": 15
+   }
+  ],
+  "hayatta": []
+ },
+ "hakem": [],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [],
+ "kabul_test_sayisi": 56,
+ "kabul_gecti": true,
+ "ozet": "hatalar.py (Hata/GirdiHatasi/BulunamadiHatasi/KapanmisHatasi), kahvalti.py (Adisyon: masa_ac/urun_ekle/kisi_basi/masa_kapat/urunler; Türkçe I→ı/İ→i normalleştirme, kalan kuruş ilk kişilere dağıtımı, fiyat eşitliğinde ada göre sıralama, hata önceliği) ve cli.py (adisyon.json durum saklama, ac/ekle/bol komutları, BOL:/HATA: çıktıları) yazıldı; 13 pytest testi geçti.",
+ "adim": 10,
+ "yurutucu_token": {
+  "girdi": 53423,
+  "cikti": 25388
+ },
+ "yurutucu_usd": 0.0104199,
+ "bitirdi": true,
+ "sure_sn": 410.7,
+ "gizli": {
+  "gecti": true,
+  "gecen": 20,
+  "toplam": 20,
+  "cikti": "....................                                                     [100%]\n20 passed in 0.25s\n"
+ }
+}

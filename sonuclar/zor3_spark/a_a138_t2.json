@@ -1,0 +1,24 @@
+{
+ "id": "a138",
+ "kip": "a",
+ "tekrar": 2,
+ "kategori": "CSV/JSON ile çalışan ve uç durumları çok olan veri işleme (BOM, ; ayırıcı, 1.234,56 sayı biçimi, boş/bozuk satır)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "sabun_parti.py içinde PartiTakip sınıfı yazıldı: utf-8-sig/;-ayırıcılı CSV okuma, Türkçe sayı çözümleme, Türkçe normalize ad+toplama, atomik üretim, Decimal yarım-yukarı maliyet, hata öncelikleri ve standart kütüphane kullanımı.",
+ "adim": 15,
+ "yurutucu_token": {
+  "girdi": 84027,
+  "cikti": 43995
+ },
+ "yurutucu_usd": 0.0172017,
+ "bitirdi": true,
+ "sure_sn": 429.8,
+ "gizli": {
+  "gecti": false,
+  "gecen": 19,
+  "toplam": 20,
+  "cikti": "test_malzeme_normalizasyon_toplama ______________________\n\ntmp_path = PosixPath('/home/usta/is/80e351116bfc/.tmp/pytest-of-usta/pytest-0/test_malzeme_normalizasyon_top0')\n\n    def test_malzeme_normalizasyon_toplama(tmp_path):\n        csv_i = 'malzeme;miktar;birim_fiyat\\nZEYT\\u0130NYA\\u011eI;3,0;5,0\\nzeytinya\\u011f\\u0131;7,0;5,0\\n'\n        y = _stok_yaz(tmp_path, csv_i)\n        t = PartiTakip()\n>       assert t.stok_yukle(y) == 1\nE       AssertionError: assert 2 == 1\nE        +  where 2 = <bound method PartiTakip.stok_yukle of <sabun_parti.PartiTakip object at 0x73b5ea342840>>('/home/usta/is/80e351116bfc/.tmp/pytest-of-usta/pytest-0/test_malzeme_normalizasyon_top0/stok.csv')\nE        +    where <bound method PartiTakip.stok_yukle of <sabun_parti.PartiTakip object at 0x73b5ea342840>> = <sabun_parti.PartiTakip object at 0x73b5ea342840>.stok_yukle\n\n.gizli/test_gizli.py:55: AssertionError\n=============================== warnings summary ===============================\n.gizli/test_gizli.py:191\n  /home/usta/is/80e351116bfc/.gizli/test_gizli.py:191: SyntaxWarning: invalid escape sequence '\\.'\n    for yasak in ['socket', 'requests', 'urllib', 'random', 'import time', 'import datetime', 'os\\.system', 'subprocess']:\n\n-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_malzeme_normalizasyon_toplama - AssertionEr...\n1 failed, 19 passed, 1 warning in 0.09s\n"
+ }
+}

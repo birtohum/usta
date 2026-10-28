@@ -1,0 +1,24 @@
+{
+ "id": "a060",
+ "kip": "a",
+ "tekrar": 2,
+ "kategori": "CSV/JSON ile çalışan ve uç durumları çok olan veri işleme (BOM, ; ayırıcı, 1.234,56 sayı biçimi, boş/bozuk satır)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "narenciye_secim.py içinde SecimMotoru yazıldı: utf-8-sig + noktalı virgül, Decimal TR parse, HALF_UP fire, boş satır atlama/sütun ValueError/dosya FileNotFoundError, TR normalize (I→ı, İ→i), 1000==ikinci kalite/<1000 ıskarta hariç, append, rapor ilk yazım+toplam_net+sayi ile toplam azalan ve TR alfabetik tie-break sıralı.",
+ "adim": 12,
+ "yurutucu_token": {
+  "girdi": 70161,
+  "cikti": 37785
+ },
+ "yurutucu_usd": 0.014573100000000002,
+ "bitirdi": true,
+ "sure_sn": 403.3,
+ "gizli": {
+  "gecti": false,
+  "gecen": 19,
+  "toplam": 20,
+  "cikti": ".....F..............                                                     [100%]\n=================================== FAILURES ===================================\n______________________________ test_fire_half_up _______________________________\n\n    def test_fire_half_up():\n        import tempfile, os\n        m = SecimMotoru()\n        with tempfile.TemporaryDirectory() as d:\n            p = os.path.join(d, \"a.csv\")\n            _yaz(p, \"\\u00e7e\\u015fit;a\\u011f\\u0131rl\\u0131k;fire_oran\\u0131\\nportakal;2.000,00;0,1225\\n\")\n            m.yukle(p)\n            r = m.rapor()\n>           assert list(r.values())[0][\"toplam_net\"] == Decimal(\"1754\")\nE           AssertionError: assert Decimal('2000.00') == Decimal('1754')\nE            +  where Decimal('1754') = Decimal('1754')\n\n.gizli/test_gizli.py:59: AssertionError\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_fire_half_up - AssertionError: assert Decim...\n1 failed, 19 passed in 0.14s\n"
+ }
+}

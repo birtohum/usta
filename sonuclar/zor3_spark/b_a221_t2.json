@@ -1,0 +1,24 @@
+{
+ "id": "a221",
+ "kip": "b",
+ "tekrar": 2,
+ "kategori": "tarih ve saat: resmî tatiller parametreyle, iş günü hesabı, Türkiye saat dilimi (UTC+3, yaz saati yok), gün/ay adları Türkçe",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "denetim_cli.py yazıldı: iş günü hesabı (hafta sonu+tatil atlama, N=0 kuralı, ileri/geri), iso/etiket çıktısı ve Türkçe küçük harf (--kucuk) desteği, belirtilen 6 öncelikli hata mesajları ve çıkış kodları (2/3). 32 pytest testi yazıldı ve hepsi geçti.",
+ "adim": 14,
+ "yurutucu_token": {
+  "girdi": 146272,
+  "cikti": 33976
+ },
+ "yurutucu_usd": 0.021422400000000005,
+ "bitirdi": true,
+ "sure_sn": 368.0,
+ "gizli": {
+  "gecti": true,
+  "gecen": 22,
+  "toplam": 22,
+  "cikti": "......................                                                   [100%]\n22 passed in 1.61s\n"
+ }
+}

@@ -1,0 +1,24 @@
+{
+ "id": "a178",
+ "kip": "b",
+ "tekrar": 3,
+ "kategori": "CSV/JSON ile çalışan ve uç durumları çok olan veri işleme (BOM, ; ayırıcı, 1.234,56 sayı biçimi, boş/bozuk satır)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": null,
+ "adim": 20,
+ "yurutucu_token": {
+  "girdi": 214102,
+  "cikti": 67536
+ },
+ "yurutucu_usd": 0.0349174,
+ "bitirdi": false,
+ "sure_sn": 936.5,
+ "gizli": {
+  "gecti": false,
+  "gecen": 19,
+  "toplam": 20,
+  "cikti": "..............F.....                                                     [100%]\n=================================== FAILURES ===================================\n_____________________________ test_15_kod_siralama _____________________________\n\ntmp_path = PosixPath('/home/usta/is/976cd973fb3c/.tmp/pytest-of-usta/pytest-0/test_15_kod_siralama0')\n\n    def test_15_kod_siralama(tmp_path):\n        g = tmp_path / \"g.csv\"; c = tmp_path / \"c.csv\"; r = tmp_path / \"r.json\"\n        _write(g, [[\"002\",\"Nigde\",\"Agria\",\"5\",\"100,00\"],[\"001\",\"Nigde\",\"Agria\",\"5\",\"100,00\"]])\n        _write(c, [])\n        assert _run(g, c, r).returncode == 0\n        d = _load(r)\n>       assert [x[\"depo_kodu\"] for x in d[\"stok\"]] == [\"001\",\"002\"]\nE       AssertionError: assert ['001'] == ['001', '002']\nE         Right contains one more item: '002'\nE         Use -v to get more diff\n\n.gizli/test_gizli.py:161: AssertionError\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_15_kod_siralama - AssertionError: assert ['...\n1 failed, 19 passed in 0.64s\n"
+ }
+}

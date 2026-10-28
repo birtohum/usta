@@ -1,0 +1,55 @@
+{
+ "id": "a136",
+ "kip": "c",
+ "tekrar": 2,
+ "kategori": "tarih ve saat: resmî tatiller parametreyle, iş günü hesabı, Türkiye saat dilimi (UTC+3, yaz saati yok), gün/ay adları Türkçe",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 52,
+   "basarili": 52
+  }
+ ],
+ "spark_usd": 0.007703000000000001,
+ "arayuz": "",
+ "kabul_yazar": 3,
+ "mutasyon": {
+  "mutant": 13,
+  "ham_mutant": 14,
+  "turlar": [
+   {
+    "oldurulen": 12,
+    "toplam": 13
+   },
+   {
+    "oldurulen": 13,
+    "toplam": 13
+   }
+  ],
+  "hayatta": []
+ },
+ "hakem": [],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [
+  ".usta_kabul/test_kabul_1.py::test_uygun_gunler_cumartesi_pazar_haric"
+ ],
+ "kabul_test_sayisi": 52,
+ "kabul_gecti": true,
+ "ozet": "nikah.py'de uygun_gunleri_bul ve salon_kurallari.py'de kapali_gun yazıldı; Türkçe küçük harf dönüşümü özel haritala yapıldı, hata önceliği uygulandı, karşılıklı içe aktarma yok. pytest ile 13 test geçti.",
+ "adim": 17,
+ "yurutucu_token": {
+  "girdi": 139766,
+  "cikti": 35082
+ },
+ "yurutucu_usd": 0.020993,
+ "bitirdi": true,
+ "sure_sn": 361.3,
+ "gizli": {
+  "gecti": true,
+  "gecen": 20,
+  "toplam": 20,
+  "cikti": "....................                                                     [100%]\n20 passed in 0.11s\n"
+ }
+}

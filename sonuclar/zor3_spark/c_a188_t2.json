@@ -1,0 +1,65 @@
+{
+ "id": "a188",
+ "kip": "c",
+ "tekrar": 2,
+ "kategori": "CSV/JSON ile çalışan ve uç durumları çok olan veri işleme (BOM, ; ayırıcı, 1.234,56 sayı biçimi, boş/bozuk satır)",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 16,
+   "basarili": 16
+  }
+ ],
+ "spark_usd": 0.0373293,
+ "arayuz": "",
+ "kabul_yazar": 1,
+ "mutasyon": {
+  "mutant": 15,
+  "ham_mutant": 15,
+  "turlar": [
+   {
+    "oldurulen": 10,
+    "toplam": 15
+   },
+   {
+    "oldurulen": 10,
+    "toplam": 15
+   },
+   {
+    "oldurulen": 10,
+    "toplam": 15
+   }
+  ],
+  "hayatta": [
+   "puantaj CSV utf-8-sig ile okunmali gereksinimini cigner",
+   "Turkce sayida binlik noktasi kaldirma gereksinimini cigner",
+   "gunluk tam 8,00 saati normal sayma gereksinimini cigner",
+   "Turkce alt harf donusumunde I harfini i yapmama gereksinimini cigner",
+   "ucreti esit iscileri Turkce ada gore siralama gereksinimini cigner"
+  ]
+ },
+ "hakem": [],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [
+  ".usta_kabul/test_kabul_3.py::test_turkce_lower_gruplama"
+ ],
+ "kabul_test_sayisi": 16,
+ "kabul_gecti": true,
+ "ozet": "vardiya_cli.py yazıldı: utf-8-sig + noktalı virgül CSV, Decimal Türkçe sayı, exit 2/3/4, 8 saat normal/fazla, ROUND_HALF_UP, Türkçe alt-harf ve sıralama, boş CSV desteği. 7 pytest testi geçiyor.",
+ "adim": 13,
+ "yurutucu_token": {
+  "girdi": 72325,
+  "cikti": 70772
+ },
+ "yurutucu_usd": 0.0213869,
+ "bitirdi": true,
+ "sure_sn": 1143.0,
+ "gizli": {
+  "gecti": true,
+  "gecen": 20,
+  "toplam": 20,
+  "cikti": "....................                                                     [100%]\n20 passed in 2.41s\n"
+ }
+}

@@ -1,0 +1,24 @@
+{
+ "id": "a090",
+ "kip": "a",
+ "tekrar": 1,
+ "kategori": "Türkçe büyük/küçük harf (İ/i, I/ı), Türk alfabesiyle sıralama, sayıyı yazıya çevirme, ünlü uyumuna göre ek",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "irsaliye.py yazıldı: parca_aciklamasi sayı yazımı, uyum ve ek kurallarıyla cümle üretir, hata tipleri uygulanır.",
+ "adim": 6,
+ "yurutucu_token": {
+  "girdi": 10011,
+  "cikti": 48959
+ },
+ "yurutucu_usd": 0.0107929,
+ "bitirdi": true,
+ "sure_sn": 513.2,
+ "gizli": {
+  "gecti": false,
+  "gecen": 6,
+  "toplam": 22,
+  "cikti": "   - kitapsı bir adet.\nE         + Bir adet kitapsı.\n\n.gizli/test_gizli.py:98: AssertionError\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_benim_unlu - AssertionError: assert 'Bir ad...\nFAILED .gizli/test_gizli.py::test_senin_unlu - AssertionError: assert 'İki ad...\nFAILED .gizli/test_gizli.py::test_onun_unlu - AssertionError: assert 'Üç adet...\nFAILED .gizli/test_gizli.py::test_benim_unsuz_s - AssertionError: assert 'İki...\nFAILED .gizli/test_gizli.py::test_onun_unsuz_s - AssertionError: assert 'İki ...\nFAILED .gizli/test_gizli.py::test_senin_unsuz_s - AssertionError: assert 'On ...\nFAILED .gizli/test_gizli.py::test_araba_a_uyumu - AssertionError: assert 'Bir...\nFAILED .gizli/test_gizli.py::test_kil_uyumu - AssertionError: assert 'Bir ade...\nFAILED .gizli/test_gizli.py::test_kol_o_uyumu - AssertionError: assert 'Beş a...\nFAILED .gizli/test_gizli.py::test_kilit_i_uyumu - AssertionError: assert 'Yed...\nFAILED .gizli/test_gizli.py::test_yuz_yalin - AssertionError: assert 'Yüz ade...\nFAILED .gizli/test_gizli.py::test_yuz_bir - AssertionError: assert 'Yüz bir a...\nFAILED .gizli/test_gizli.py::test_iki_yuz - AssertionError: assert 'İki yüz a...\nFAILED .gizli/test_gizli.py::test_dokuz_yuz - AssertionError: assert 'Dokuz y...\nFAILED .gizli/test_gizli.py::test_nokta_tek_cumle - AssertionError: assert 'O...\nFAILED .gizli/test_gizli.py::test_yumusama_yok - AssertionError: assert 'Bir ...\n16 failed, 6 passed in 0.20s\n"
+ }
+}

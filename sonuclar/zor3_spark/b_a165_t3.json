@@ -1,0 +1,24 @@
+{
+ "id": "a165",
+ "kip": "b",
+ "tekrar": 3,
+ "kategori": "Türkçe büyük/küçük harf (İ/i, I/ı), Türk alfabesiyle sıralama, sayıyı yazıya çevirme, ünlü uyumuna göre ek",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "puan.py içinde PuanDefteri sınıfı oluşturuldu: Türkçe başlık çevrimi (I→ı, i→İ), 0-100 sayı yazımı (0 sıfır, 100 yüz), belge formatı, Türk alfabesi sıralaması, no yönetimi ve TypeError/ValueError/KeyError kontrolleri. 18 pytest testi yazıldı ve hepsi geçti.",
+ "adim": 7,
+ "yurutucu_token": {
+  "girdi": 29017,
+  "cikti": 17472
+ },
+ "yurutucu_usd": 0.0063961,
+ "bitirdi": true,
+ "sure_sn": 204.5,
+ "gizli": {
+  "gecti": false,
+  "gecen": 16,
+  "toplam": 22,
+  "cikti": "        d.ogrenci_ekle('oda', 50)\n        d.ogrenci_ekle('öda', 50)\n        s = d.basari_sirala()\n>       assert s[0].startswith('Oda -')\nE       AssertionError: assert False\nE        +  where False = <built-in method startswith of str object at 0x717f3364b8a0>('Oda -')\nE        +    where <built-in method startswith of str object at 0x717f3364b8a0> = 'Oda'.startswith\n\n.gizli/test_gizli.py:153: AssertionError\n__________________________ test_esit_ad_no_kucuk_once __________________________\n\n    def test_esit_ad_no_kucuk_once():\n        d = PuanDefteri()\n        d.ogrenci_ekle('ali veli', 50)\n        d.ogrenci_ekle('ali veli', 50)\n        s = d.basari_sirala()\n>       assert s[0] == d.belge(1)\nE       AssertionError: assert 'Ali Veli' == 'Ali Veli - P...kulumuzdandır'\nE         - Ali Veli - Puan: elli - Okulumuzdandır\nE         + Ali Veli\n\n.gizli/test_gizli.py:161: AssertionError\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_basari_puan_sirasi - AssertionError: assert...\nFAILED .gizli/test_gizli.py::test_basari_turk_alfabesi - AssertionError: asse...\nFAILED .gizli/test_gizli.py::test_basari_case_insensitive - AssertionError: a...\nFAILED .gizli/test_gizli.py::test_g_g_brevesi_sirasi - AssertionError: assert...\nFAILED .gizli/test_gizli.py::test_o_ö_sirasi - AssertionError: assert False\nFAILED .gizli/test_gizli.py::test_esit_ad_no_kucuk_once - AssertionError: ass...\n6 failed, 16 passed in 0.12s\n"
+ }
+}

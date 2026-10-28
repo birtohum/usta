@@ -1,0 +1,107 @@
+{
+ "id": "a180",
+ "kip": "c",
+ "tekrar": 1,
+ "kategori": "Türkçe büyük/küçük harf (İ/i, I/ı), Türk alfabesiyle sıralama, sayıyı yazıya çevirme, ünlü uyumuna göre ek",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": false,
+   "toplam": 55,
+   "basarili": 53
+  },
+  {
+   "gecti": true,
+   "toplam": 55,
+   "basarili": 55
+  }
+ ],
+ "spark_usd": 0.0153119,
+ "arayuz": "",
+ "kabul_yazar": 3,
+ "mutasyon": {
+  "mutant": 15,
+  "ham_mutant": 15,
+  "turlar": [
+   {
+    "oldurulen": 11,
+    "toplam": 15
+   },
+   {
+    "oldurulen": 13,
+    "toplam": 15
+   },
+   {
+    "oldurulen": 13,
+    "toplam": 15
+   }
+  ],
+  "hayatta": [
+   "Gereksinim 5: KASA tam sayi olmali, ondalikli kabul edilmemeli",
+   "Gereksinim 8: eksik bayrak hatasi gecersiz deger hatasindan once denetlenir"
+  ]
+ },
+ "hakem": [
+  {
+   "test": ".usta_kabul/test_kabul_1.py::test_kasa_adet_tekil_kalir",
+   "karar": "gerekli",
+   "gerekce": "Görev madde 6 adet sözcüğünün tekil kalmasını açıkça istiyor.",
+   "tur": 1
+  },
+  {
+   "test": ".usta_kabul/test_kabul_1.py::test_musteri_bos_valueerror",
+   "karar": "belirsiz",
+   "gerekce": "Görev 2 çıkış kodunu istiyor ama stderrde ValueError yazmasını açıkça şart koşmuyor.",
+   "tur": 1
+  },
+  {
+   "test": ".usta_kabul/test_kabul_1.py::test_musteri_sadece_bosluk_valueerror",
+   "karar": "belirsiz",
+   "gerekce": "Görev 2 çıkış kodunu istiyor ama stderrde ValueError yazmasını açıkça şart koşmuyor.",
+   "tur": 1
+  },
+  {
+   "test": ".usta_kabul/test_kabul_1.py::test_tip_aralik_onceligi",
+   "karar": "belirsiz",
+   "gerekce": "Görev tip sonra aralık diyor ama stderrde ValueError yazmasını açıkça şart koşmuyor.",
+   "tur": 1
+  },
+  {
+   "test": ".usta_kabul/test_kabul_3.py::test_ad_bos_veya_bosluk_valueerror",
+   "karar": "belirsiz",
+   "gerekce": "Görev 2 çıkış kodunu istiyor ama çıktıda ValueError yazmasını açıkça şart koşmuyor.",
+   "tur": 1
+  },
+  {
+   "test": ".usta_kabul/test_kabul_3.py::test_kasa_adet_tekil",
+   "karar": "gerekli",
+   "gerekce": "Görev madde 6 adet sözcüğünün tekil kalmasını açıkça istiyor.",
+   "tur": 1
+  }
+ ],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [
+  ".usta_kabul/test_kabul_1.py::test_musteri_bos_valueerror",
+  ".usta_kabul/test_kabul_1.py::test_musteri_sadece_bosluk_valueerror",
+  ".usta_kabul/test_kabul_1.py::test_tip_aralik_onceligi",
+  ".usta_kabul/test_kabul_3.py::test_ad_bos_veya_bosluk_valueerror"
+ ],
+ "kabul_test_sayisi": 55,
+ "kabul_gecti": true,
+ "ozet": "Kabul testlerindeki 2 hata düzeltildi: kasa çıktısına \"adet\" eklendi (\"N adet kasa\", tekil) ve hata mesajları stderr'de \"ValueError: ...\" biçimine çevrildi (çıkış kodu 2 korundu). Not: görev metnindeki örnek çıktı \"KASA kasa\" diyordu ancak kabul testleri \"adet\" sözcüğünü zorunlu kıldığı için testlere uyuldu. Kendi 9 test + kabul 59 testin tamamı geçiyor.",
+ "adim": 20,
+ "yurutucu_token": {
+  "girdi": 208223,
+  "cikti": 36151
+ },
+ "yurutucu_usd": 0.028052500000000005,
+ "bitirdi": true,
+ "sure_sn": 1080.8,
+ "gizli": {
+  "gecti": true,
+  "gecen": 23,
+  "toplam": 23,
+  "cikti": ".......................                                                  [100%]\n23 passed in 1.59s\n"
+ }
+}

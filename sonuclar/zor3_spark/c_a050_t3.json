@@ -1,0 +1,77 @@
+{
+ "id": "a050",
+ "kip": "c",
+ "tekrar": 3,
+ "kategori": "KDV, tevkifat, stopaj, taksit ve kuruş yuvarlama (Decimal, ROUND_HALF_UP, satır bazında ve toplamda yuvarlama farkı)",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 52,
+   "basarili": 52
+  }
+ ],
+ "spark_usd": 0.0136857,
+ "arayuz": "",
+ "kabul_yazar": 3,
+ "mutasyon": {
+  "mutant": 15,
+  "ham_mutant": 15,
+  "turlar": [
+   {
+    "oldurulen": 13,
+    "toplam": 15
+   },
+   {
+    "oldurulen": 15,
+    "toplam": 15
+   }
+  ],
+  "hayatta": []
+ },
+ "hakem": [
+  {
+   "test": ".usta_kabul/test_kabul_1.py::test_yanlis_tipte_typeerror",
+   "karar": "belirsiz",
+   "gerekce": "İmzada str yazsa da beklenen tipler açıkça tanımlanmadığı için int miktarın TypeError sayılması tek anlamlı değil.",
+   "tur": 1
+  },
+  {
+   "test": ".usta_kabul/test_kabul_2.py::test_tip_hatasi_yanlis_tip_ve_oncelik",
+   "karar": "belirsiz",
+   "gerekce": "Decimal'e çevrilebilen int değerin tip hatası sayılıp sayılmayacağı görevde açıkça belirtilmiyor.",
+   "tur": 1
+  },
+  {
+   "test": ".usta_kabul/test_kabul_3.py::test_tip_hatasi_beklenmeyen_tip",
+   "karar": "belirsiz",
+   "gerekce": "Görev int sayısal girdiyi açıkça yasaklamadığı için sıkı str kontrolü belirsiz bir yorumdur.",
+   "tur": 1
+  }
+ ],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [
+  ".usta_kabul/test_kabul_2.py::test_yuvarlama_farki_toplamlari_degistirmez",
+  ".usta_kabul/test_kabul_1.py::test_yanlis_tipte_typeerror",
+  ".usta_kabul/test_kabul_2.py::test_tip_hatasi_yanlis_tip_ve_oncelik",
+  ".usta_kabul/test_kabul_3.py::test_tip_hatasi_beklenmeyen_tip"
+ ],
+ "kabul_test_sayisi": 52,
+ "kabul_gecti": true,
+ "ozet": "adisyon.py içinde AdisyonHesaplayici yazıldı: Decimal+ROUND_HALF_UP ile satır matrah/KDV yuvarlama, toplamlar yuvarlanmış satırların toplamı, yuvarlama_farki string raporu, 0.01/0.10/0.20 KDV kontrolü, boş ad/liste ve <=0 kontrolleri (ValueError), tip hatalarında TypeError önceliği, casefold tabanlı Türkçe duyarsız birleştirme (IŞIK/ışık) ve stabil sorted sıralama. pytest ile 12 test geçti.",
+ "adim": 12,
+ "yurutucu_token": {
+  "girdi": 76875,
+  "cikti": 43041
+ },
+ "yurutucu_usd": 0.016295699999999996,
+ "bitirdi": true,
+ "sure_sn": 754.1,
+ "gizli": {
+  "gecti": false,
+  "gecen": 19,
+  "toplam": 20,
+  "cikti": "..............F.....                                                     [100%]\n=================================== FAILURES ===================================\n______________________ test_15_tip_hatasi_beklenmeyen_tip ______________________\n\n    def test_15_tip_hatasi_beklenmeyen_tip():\n        with pytest.raises(TypeError):\n            AdisyonHesaplayici().ekle(123, \"1\", \"10.00\", \"0.10\")\n>       with pytest.raises(TypeError):\nE       Failed: DID NOT RAISE <class 'TypeError'>\n\n.gizli/test_gizli.py:116: Failed\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_15_tip_hatasi_beklenmeyen_tip - Failed: DID...\n1 failed, 19 passed in 0.10s\n"
+ }
+}

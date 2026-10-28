@@ -1,0 +1,67 @@
+{
+ "id": "a087",
+ "kip": "c",
+ "tekrar": 2,
+ "kategori": "çok dosyalı küçük modül: iki-üç dosyaya bölünmüş, ortak hata sınıfları ve bir komut satırı girişi olan araç",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 53,
+   "basarili": 53
+  }
+ ],
+ "spark_usd": 0.012401800000000001,
+ "arayuz": "hatalar.py içinde UreticiHatasi ve NemHatasi sınıfları, bordro.py içinde net_odeme(kilo: float, nem: float, destekli: bool) -> int ve normalize_uretici(ad: str) -> str fonksiyonları, cli.py içinde python cli.py --kilo 100 --nem 22.5 --destekli çağrısı kullanılır.",
+ "kabul_yazar": 3,
+ "mutasyon": {
+  "mutant": 15,
+  "ham_mutant": 15,
+  "turlar": [
+   {
+    "oldurulen": 13,
+    "toplam": 15
+   },
+   {
+    "oldurulen": 15,
+    "toplam": 15
+   }
+  ],
+  "hayatta": []
+ },
+ "hakem": [
+  {
+   "test": ".usta_kabul/test_kabul_m1.py::test_nem_20_esitlik_kosulu_kaynak",
+   "karar": "hatali",
+   "gerekce": "Görev nem 20 davranışını isterken test belirli değişken adlarıyla kaynak metni dayatıyor.",
+   "tur": 1
+  }
+ ],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [
+  ".usta_kabul/test_kabul_1.py::test_cli_odeme_satiri",
+  ".usta_kabul/test_kabul_1.py::test_destekli_prim_eklenir",
+  ".usta_kabul/test_kabul_1.py::test_desteksiz_prim_eklenmez",
+  ".usta_kabul/test_kabul_1.py::test_kismi_puan_kesinti_yukari_yuvarlanir",
+  ".usta_kabul/test_kabul_2.py::test_stdlib_disi_ve_zaman_ag_rastgele_yok",
+  ".usta_kabul/test_kabul_m1.py::test_nem_20_esitlik_kosulu_kaynak"
+ ],
+ "kabul_test_sayisi": 53,
+ "kabul_gecti": true,
+ "ozet": "hatalar.py, bordro.py ve cli.py yazıldı; tam sayı kuruş aritmetiğiyle kesinti/destek hesabı, hata önceliği ve Türkçe normalize kuruldu. 16 pytest testi geçti.",
+ "adim": 12,
+ "yurutucu_token": {
+  "girdi": 66049,
+  "cikti": 35456
+ },
+ "yurutucu_usd": 0.013696100000000001,
+ "bitirdi": true,
+ "sure_sn": 594.8,
+ "gizli": {
+  "gecti": true,
+  "gecen": 20,
+  "toplam": 20,
+  "cikti": "....................                                                     [100%]\n20 passed in 0.28s\n"
+ }
+}

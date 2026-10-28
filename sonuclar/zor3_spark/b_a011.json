@@ -1,0 +1,24 @@
+{
+ "id": "a011",
+ "kip": "b",
+ "tekrar": 1,
+ "kategori": "çok dosyalı küçük modül: iki-üç dosyaya bölünmüş, ortak hata sınıfları ve bir komut satırı girişi olan araç",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "Türkçe slug aracı hazır: hatalar.py (BosGirdiHatasi, UzunlukHatasi → ValueError), slug.py (slugla + benzersiz_yap + CLI). Türkçe dönüşüm, 50/51 sınırı, en küçük boş ek, hata önceliği ve `python -m slug üret ...` komutu uygulandı; 15 pytest testi geçti.",
+ "adim": 9,
+ "yurutucu_token": {
+  "girdi": 38994,
+  "cikti": 30278
+ },
+ "yurutucu_usd": 0.009954999999999999,
+ "bitirdi": true,
+ "sure_sn": 252.5,
+ "gizli": {
+  "gecti": true,
+  "gecen": 22,
+  "toplam": 22,
+  "cikti": "......................                                                   [100%]\n22 passed in 0.11s\n"
+ }
+}

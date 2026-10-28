@@ -1,0 +1,24 @@
+{
+ "id": "a077",
+ "kip": "a",
+ "tekrar": 1,
+ "kategori": "çok dosyalı küçük modül: iki-üç dosyaya bölünmüş, ortak hata sınıfları ve bir komut satırı girişi olan araç",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": null,
+ "adim": 20,
+ "yurutucu_token": {
+  "girdi": 148647,
+  "cikti": 35621
+ },
+ "yurutucu_usd": 0.021988900000000002,
+ "bitirdi": false,
+ "sure_sn": 459.8,
+ "gizli": {
+  "gecti": true,
+  "gecen": 20,
+  "toplam": 20,
+  "cikti": "....................                                                     [100%]\n20 passed in 0.21s\n"
+ }
+}

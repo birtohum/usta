@@ -1,0 +1,69 @@
+{
+ "id": "a159",
+ "kip": "c",
+ "tekrar": 2,
+ "kategori": "KDV, tevkifat, stopaj, taksit ve kuruş yuvarlama (Decimal, ROUND_HALF_UP, satır bazında ve toplamda yuvarlama farkı)",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 50,
+   "basarili": 50
+  }
+ ],
+ "spark_usd": 0.0114727,
+ "arayuz": "Dosya: zeytin_iade.py; Sınıf: ZeytinIadeKontrol: def __init__(self)->None; def satis_ekle(self, matrah: Decimal, kdv_orani: int, tevkifatli_mi: bool)->None; def iade_hesapla(self, alt_sinir: Decimal)->dict{iade_matrahi: Decimal, iade_kdv_toplami: Decimal, yuvarlama_farki: Decimal, hak_kazanildi: bool}",
+ "kabul_yazar": 3,
+ "mutasyon": {
+  "mutant": 14,
+  "ham_mutant": 14,
+  "turlar": [
+   {
+    "oldurulen": 12,
+    "toplam": 14
+   },
+   {
+    "oldurulen": 14,
+    "toplam": 14
+   }
+  ],
+  "hayatta": []
+ },
+ "hakem": [
+  {
+   "test": ".usta_kabul/test_kabul_m1.py::test_yuvarlama_farki_negatif_toplu_eksi_satir",
+   "karar": "belirsiz",
+   "gerekce": "Görev metni yuvarlama farkında toplu eksi satır sırasını açıkça tanımlamıyor.",
+   "tur": 1
+  },
+  {
+   "test": ".usta_kabul/test_kabul_m1.py::test_yuvarlama_farki_pozitif_toplu_eksi_satir",
+   "karar": "belirsiz",
+   "gerekce": "Görev metni yuvarlama farkında toplu eksi satır sırasını açıkça tanımlamıyor.",
+   "tur": 1
+  }
+ ],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [
+  ".usta_kabul/test_kabul_m1.py::test_yuvarlama_farki_negatif_toplu_eksi_satir",
+  ".usta_kabul/test_kabul_m1.py::test_yuvarlama_farki_pozitif_toplu_eksi_satir"
+ ],
+ "kabul_test_sayisi": 50,
+ "kabul_gecti": true,
+ "ozet": "zeytin_iade.py içinde ZeytinIadeKontrol sınıfı yazıldı: satis_ekle türü önce denetleyip Decimal/ValueError kurallarını uyguluyor, her satır KDV matrah*oran/100 ile ROUND_HALF_UP kuruşa yuvarlanıyor, tevkifatlı satırlar aynen alınıyor; iade_hesapla iade matrahı, satır yuvarlamalı KDV toplamı, ham toplamın tek seferde yuvarlanmasıyla fark ve alt_sinir eşiğiyle hak durumunu döndürüyor, boş satışta sıfırlar+False veriyor ve eklenme sırasını koruyor. 11 pytest testi yazıldı ve geçti.",
+ "adim": 5,
+ "yurutucu_token": {
+  "girdi": 16594,
+  "cikti": 12273
+ },
+ "yurutucu_usd": 0.0041140000000000005,
+ "bitirdi": true,
+ "sure_sn": 377.0,
+ "gizli": {
+  "gecti": false,
+  "gecen": 20,
+  "toplam": 22,
+  "cikti": "=================================== FAILURES ===================================\n_______________________ test_tevkifatsiz_satirlar_haric ________________________\n\n    def test_tevkifatsiz_satirlar_haric():\n        k = ZeytinIadeKontrol()\n        k.satis_ekle(Decimal(\"5000\"), 20, False)\n        s = k.iade_hesapla(Decimal(\"0\"))\n        assert s[\"iade_matrahi\"] == Decimal(\"0\")\n        assert s[\"iade_kdv_toplami\"] == Decimal(\"0\")\n>       assert s[\"hak_kazanildi\"] is False\nE       assert True is False\n\n.gizli/test_gizli.py:92: AssertionError\n_________________________ test_yuvarlama_farki_negatif _________________________\n\n    def test_yuvarlama_farki_negatif():\n        k = ZeytinIadeKontrol()\n        k.satis_ekle(Decimal(\"10.05\"), 10, True)\n        k.satis_ekle(Decimal(\"10.05\"), 10, True)\n        s = k.iade_hesapla(Decimal(\"0\"))\n        assert s[\"iade_kdv_toplami\"] == Decimal(\"2.02\")\n>       assert s[\"yuvarlama_farki\"] == Decimal(\"-0.01\")\nE       AssertionError: assert Decimal('0.01') == Decimal('-0.01')\nE        +  where Decimal('-0.01') = Decimal('-0.01')\n\n.gizli/test_gizli.py:148: AssertionError\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_tevkifatsiz_satirlar_haric - assert True is...\nFAILED .gizli/test_gizli.py::test_yuvarlama_farki_negatif - AssertionError: a...\n2 failed, 20 passed in 0.04s\n"
+ }
+}

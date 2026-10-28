@@ -1,0 +1,64 @@
+{
+ "id": "a191",
+ "kip": "c",
+ "tekrar": 1,
+ "kategori": "tarih ve saat: resmî tatiller parametreyle, iş günü hesabı, Türkiye saat dilimi (UTC+3, yaz saati yok), gün/ay adları Türkçe",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 15,
+   "basarili": 15
+  }
+ ],
+ "spark_usd": 0.035359299999999996,
+ "arayuz": "python balon_cli.py --baslangic YYYY-AA-GG --bitis YYYY-AA-GG --ucus-gunleri 2,4,6 [--tatiller TARIHLER] [--ek-tatil-dosyasi DOSYA] [--utc-damgasi DAMGA] [--kucuk]",
+ "kabul_yazar": 1,
+ "mutasyon": {
+  "mutant": 13,
+  "ham_mutant": 14,
+  "turlar": [
+   {
+    "oldurulen": 7,
+    "toplam": 13
+   },
+   {
+    "oldurulen": 7,
+    "toplam": 13
+   },
+   {
+    "oldurulen": 7,
+    "toplam": 13
+   }
+  ],
+  "hayatta": [
+   "UTC gece yarisi icin sabit 3 saat ekleme gereksinimini cigner, 5 saat ekler",
+   "--kucuk Turkce kucultme I->i degil I->ı olmali, Ingilizce lower kullanir",
+   "UTC damgasinda saniye atilir, yuvarlama yapilmaz; saniyeyi korur",
+   "bilinmeyen bayrakta cikis kodu 2 olmali, 1 yapar",
+   "once tarih denetlenir sonra bilinmeyen bayrak; sirayi bozar",
+   "ucus gunleri 0-6 araliginda olmali, 7 kabul eder"
+  ]
+ },
+ "hakem": [],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [],
+ "kabul_test_sayisi": 15,
+ "kabul_gecti": true,
+ "ozet": "balon_cli.py yazıldı: tarih aralığı tarama, uçuş günü ve tatil filtreleri, Türkçe gün adları ve --kucuk için Türkçe küçük harf, UTC+3 sabit dönüşüm, saniye yuvarlamasız damga doğrulama, hatalarda stderr+çıkış 2. pytest ile 9 test geçti.",
+ "adim": 9,
+ "yurutucu_token": {
+  "girdi": 55490,
+  "cikti": 31735
+ },
+ "yurutucu_usd": 0.011896,
+ "bitirdi": true,
+ "sure_sn": 1194.6,
+ "gizli": {
+  "gecti": false,
+  "gecen": 16,
+  "toplam": 22,
+  "cikti": "  r = run(\"--utc-damgasi\", \"2025-04-01T22:00:00Z\")\n>       assert r.returncode == 0\nE       AssertionError: assert 2 == 0\nE        +  where 2 = CompletedProcess(args=['/usr/bin/python', '/home/usta/is/4cdc4b4251ce/balon_cli.py', '--utc-damgasi', '2025-04-01T22:00:00Z'], returncode=2, stdout='', stderr='hata: --baslangic gerekli\\n').returncode\n\n.gizli/test_gizli.py:104: AssertionError\n________________________________ test_utc_kucuk ________________________________\n\n    def test_utc_kucuk():\n        r = run(\"--utc-damgasi\", \"2025-04-01T22:00:00Z\", \"--kucuk\")\n>       assert r.returncode == 0\nE       AssertionError: assert 2 == 0\nE        +  where 2 = CompletedProcess(args=['/usr/bin/python', '/home/usta/is/4cdc4b4251ce/balon_cli.py', '--utc-damgasi', '2025-04-01T22:00:00Z', '--kucuk'], returncode=2, stdout='', stderr='hata: --baslangic gerekli\\n').returncode\n\n.gizli/test_gizli.py:109: AssertionError\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_tatil_dosyasi - AssertionError: assert 2 == 0\nFAILED .gizli/test_gizli.py::test_tatil_dosyasi_bos - AssertionError: assert ...\nFAILED .gizli/test_gizli.py::test_tatil_liste_ve_dosya_birlikte - AssertionEr...\nFAILED .gizli/test_gizli.py::test_utc_saniye_atilir - AssertionError: assert ...\nFAILED .gizli/test_gizli.py::test_utc_uc_saat_eklenir - AssertionError: asser...\nFAILED .gizli/test_gizli.py::test_utc_kucuk - AssertionError: assert 2 == 0\n6 failed, 16 passed in 1.46s\n"
+ }
+}

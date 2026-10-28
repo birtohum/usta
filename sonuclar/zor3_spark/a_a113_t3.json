@@ -1,0 +1,24 @@
+{
+ "id": "a113",
+ "kip": "a",
+ "tekrar": 3,
+ "kategori": "CSV/JSON ile çalışan ve uç durumları çok olan veri işleme (BOM, ; ayırıcı, 1.234,56 sayı biçimi, boş/bozuk satır)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "`aycicek_teslim.py` yazıldı: `utf-8-sig` okuma, `;` ayrımı, başlık atlama, boş satır atlama, Türkçe sayı çözümleme (`1.234,56`→Decimal), `tonaj*baz_fiyat` + `>=esik` ise `prim*tonaj` (ROUND_HALF_UP 2 ondalık), hatalı satır sayımı (sütun≠3, bozuk sayı, yağ 0–100 dışı), Türkçe duyarsız gruplama (I→ı, İ→i + casefold, ilk yazım), tutar azalan / ad Türkçe duyarsız artan sıralama, Türkçe formatlı çıktı, exit 1 (GİRİŞ yok) / exit 2 (FİYAT bozuk, yokluk öncelikli), boş sonuçta `\"0,00\"`. Yalnızca standart kütüphane; davranış testlerle doğrulandı.",
+ "adim": 3,
+ "yurutucu_token": {
+  "girdi": 9375,
+  "cikti": 14933
+ },
+ "yurutucu_usd": 0.0039241,
+ "bitirdi": true,
+ "sure_sn": 160.9,
+ "gizli": {
+  "gecti": true,
+  "gecen": 20,
+  "toplam": 20,
+  "cikti": "....................                                                     [100%]\n20 passed in 2.29s\n"
+ }
+}

@@ -1,0 +1,49 @@
+{
+ "id": "a202",
+ "kip": "c",
+ "tekrar": 1,
+ "kategori": "çok dosyalı küçük modül: iki-üç dosyaya bölünmüş, ortak hata sınıfları ve bir komut satırı girişi olan araç",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 50,
+   "basarili": 50
+  }
+ ],
+ "spark_usd": 0.0163703,
+ "arayuz": "hatalar.py: BosKayitHatasi, BozukSatirHatasi, GecersizEsikHatasi. ozet.py: Ozetleyici; ekle(self, satir: str) -> None; rapor(self, esik_ms: int, ilk_n: int) -> dict; dict: toplam:int, ortalama_sure_ms:float, yavas_sayisi:int, top_url:list[tuple[str,int]] olarak (url,sayi). cli.py: python cli.py --dosya <yol> --esik <int> --ilk-n <int>; stdout 4 satır: toplam: X, ortalama: XX.XX, yavas: Y, top: url (sayi), ...",
+ "kabul_yazar": 3,
+ "mutasyon": {
+  "mutant": 15,
+  "ham_mutant": 16,
+  "turlar": [
+   {
+    "oldurulen": 15,
+    "toplam": 15
+   }
+  ],
+  "hayatta": []
+ },
+ "hakem": [],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [],
+ "kabul_test_sayisi": 50,
+ "kabul_gecti": true,
+ "ozet": "hatalar.py (3 hata sınıfı), ozet.py (Ozetleyici: boşluk-öncelikli ekle doğrulaması, ceil-ortalamalı ve TR-küçük-harfe göre sıralı rapor) ve cli.py (4 satırlık stdout, hatalarda stderr'e sınıf adı + çıkış 1) yazıldı; test_kontrol.py ile 13 pytest testi geçirildi.",
+ "adim": 17,
+ "yurutucu_token": {
+  "girdi": 113290,
+  "cikti": 40818
+ },
+ "yurutucu_usd": 0.0194926,
+ "bitirdi": true,
+ "sure_sn": 772.6,
+ "gizli": {
+  "gecti": true,
+  "gecen": 22,
+  "toplam": 22,
+  "cikti": "......................                                                   [100%]\n22 passed in 0.48s\n"
+ }
+}

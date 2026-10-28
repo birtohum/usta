@@ -1,0 +1,24 @@
+{
+ "id": "a202",
+ "kip": "a",
+ "tekrar": 3,
+ "kategori": "çok dosyalı küçük modül: iki-üç dosyaya bölünmüş, ortak hata sınıfları ve bir komut satırı girişi olan araç",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "hatalar.py, ozet.py ve cli.py dosyaları yazıldı. Hata sınıfları, Ozetleyici ekle/rapor kuralları (boşluk önceliği, tam sayı kontrolleri, yukarı yuvarlama, Türkçe sıralama, eşik dahil yavaş sayımı) ve CLI çıktısı/hata yönetimi istendiği gibi uygulandı, testlerle doğrulandı.",
+ "adim": 15,
+ "yurutucu_token": {
+  "girdi": 89790,
+  "cikti": 30953
+ },
+ "yurutucu_usd": 0.015169600000000004,
+ "bitirdi": true,
+ "sure_sn": 379.7,
+ "gizli": {
+  "gecti": true,
+  "gecen": 22,
+  "toplam": 22,
+  "cikti": "......................                                                   [100%]\n22 passed in 0.19s\n"
+ }
+}

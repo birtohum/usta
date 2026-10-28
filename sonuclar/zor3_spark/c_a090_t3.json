@@ -1,0 +1,91 @@
+{
+ "id": "a090",
+ "kip": "c",
+ "tekrar": 3,
+ "kategori": "Türkçe büyük/küçük harf (İ/i, I/ı), Türk alfabesiyle sıralama, sayıyı yazıya çevirme, ünlü uyumuna göre ek",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": false,
+   "toplam": 24,
+   "basarili": 20
+  },
+  {
+   "gecti": true,
+   "toplam": 24,
+   "basarili": 24
+  }
+ ],
+ "spark_usd": 0.0343489,
+ "arayuz": "",
+ "kabul_yazar": 1,
+ "mutasyon": {
+  "mutant": 16,
+  "ham_mutant": 16,
+  "turlar": [
+   {
+    "oldurulen": 12,
+    "toplam": 16
+   },
+   {
+    "oldurulen": 16,
+    "toplam": 16
+   }
+  ],
+  "hayatta": []
+ },
+ "hakem": [
+  {
+   "test": ".usta_kabul/test_kabul_3.py::test_ince_uyum_unsuz_s_girisi",
+   "karar": "gerekli",
+   "gerekce": "Görev metni ünsüzle bitende araya s girer diyor.",
+   "tur": 1
+  },
+  {
+   "test": ".usta_kabul/test_kabul_3.py::test_kalin_u_uyumu",
+   "karar": "gerekli",
+   "gerekce": "Görev metni ünsüzle bitende araya s girer diyor.",
+   "tur": 1
+  },
+  {
+   "test": ".usta_kabul/test_kabul_3.py::test_kalin_uyum_p_ile_yumusamasiz",
+   "karar": "gerekli",
+   "gerekce": "Görev metni ünsüzde s ister ve p ç t k yumuşamasız korunur diyor.",
+   "tur": 1
+  },
+  {
+   "test": ".usta_kabul/test_kabul_3.py::test_tek_cumle_nokta_ve_adet",
+   "karar": "belirsiz",
+   "gerekce": "Adet sözcüğü ifadesi gerçek sayı mı yoksa adet kelimesi mi belli değil.",
+   "tur": 1
+  },
+  {
+   "test": ".usta_kabul/test_kabul_3.py::test_unluyle_biten_yalnizca_ek",
+   "karar": "gerekli",
+   "gerekce": "Görev metni ünlüyle bitende yalnızca ek gelir diyor.",
+   "tur": 1
+  }
+ ],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [
+  ".usta_kabul/test_kabul_3.py::test_tek_cumle_nokta_ve_adet"
+ ],
+ "kabul_test_sayisi": 24,
+ "kabul_gecti": true,
+ "ozet": "irsaliye.py düzeltildi: 'onun' ekinde s kuralı görev metnine uygun hale getirildi (ünsüzle bitende araya s girer: kalemsi/kitapsı/okulsu; ünlüyle bitende yalnızca ek: masaı) ve çıktıya 'adet' sözcüğü eklendi. Görev metniyle çelişki yoktu; ilk sürümde kural ters uygulanmıştı. Kendi testlerim (2) ve kabul testleri (25) tamamen geçiyor.",
+ "adim": 19,
+ "yurutucu_token": {
+  "girdi": 109232,
+  "cikti": 52355
+ },
+ "yurutucu_usd": 0.021394200000000002,
+ "bitirdi": true,
+ "sure_sn": 981.5,
+ "gizli": {
+  "gecti": false,
+  "gecen": 6,
+  "toplam": 22,
+  "cikti": "kitapsı bir adet.\nE         + Onun bir adet kitapsı.\n\n.gizli/test_gizli.py:98: AssertionError\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_benim_unlu - AssertionError: assert 'Benim ...\nFAILED .gizli/test_gizli.py::test_senin_unlu - AssertionError: assert 'Senin ...\nFAILED .gizli/test_gizli.py::test_onun_unlu - AssertionError: assert 'Onun üç...\nFAILED .gizli/test_gizli.py::test_benim_unsuz_s - AssertionError: assert 'Ben...\nFAILED .gizli/test_gizli.py::test_onun_unsuz_s - AssertionError: assert 'Onun...\nFAILED .gizli/test_gizli.py::test_senin_unsuz_s - AssertionError: assert 'Sen...\nFAILED .gizli/test_gizli.py::test_araba_a_uyumu - AssertionError: assert 'Ben...\nFAILED .gizli/test_gizli.py::test_kil_uyumu - AssertionError: assert 'Benim b...\nFAILED .gizli/test_gizli.py::test_kol_o_uyumu - AssertionError: assert 'Onun ...\nFAILED .gizli/test_gizli.py::test_kilit_i_uyumu - AssertionError: assert 'Ben...\nFAILED .gizli/test_gizli.py::test_yuz_yalin - AssertionError: assert 'Onun yü...\nFAILED .gizli/test_gizli.py::test_yuz_bir - AssertionError: assert 'Onun yüz ...\nFAILED .gizli/test_gizli.py::test_iki_yuz - AssertionError: assert 'Benim iki...\nFAILED .gizli/test_gizli.py::test_dokuz_yuz - AssertionError: assert 'Senin d...\nFAILED .gizli/test_gizli.py::test_nokta_tek_cumle - AssertionError: assert 'O...\nFAILED .gizli/test_gizli.py::test_yumusama_yok - AssertionError: assert 'Onun...\n16 failed, 6 passed in 0.07s\n"
+ }
+}

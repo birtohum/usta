@@ -1,0 +1,24 @@
+{
+ "id": "a110",
+ "kip": "b",
+ "tekrar": 2,
+ "kategori": "Türkçe büyük/küçük harf (İ/i, I/ı), Türk alfabesiyle sıralama, sayıyı yazıya çevirme, ünlü uyumuna göre ek",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "karsilama.py yazıldı: iyelikli_yonelme son ünlüye göre ınız/iniz/unuz/ünüz seçip sessizde doğrudan, seslide n kaynaştırmasıyla bitiştirir ve ınız→a diğerleri→e yönelme getirir (otel→otelinize, oda→odanıza, a→anıza, e→enize). karsilama_cumlesi önce tür (TypeError), sonra normalize edilmiş boşluk/aralık (ValueError) denetimi yapıp `Sayın, {isim}, odanıza hoş geldiniz` döndürür; isim iç boşlukları teklenir, Türkçe harfler korunur, oda_no yazılmaz. test_karsilama.py ile 14 test `python -m pytest -q` ile geçti.",
+ "adim": 6,
+ "yurutucu_token": {
+  "girdi": 17862,
+  "cikti": 13160
+ },
+ "yurutucu_usd": 0.004418200000000001,
+ "bitirdi": true,
+ "sure_sn": 141.9,
+ "gizli": {
+  "gecti": false,
+  "gecen": 17,
+  "toplam": 22,
+  "cikti": "E         ?      +\n\n.gizli/test_gizli.py:42: AssertionError\n___________________________ test_karsilama_sinir_alt ___________________________\n\n    def test_karsilama_sinir_alt():\n>       assert karsilama_cumlesi(\"Ali\", 1) == \"Say\\u0131n Ali, odan\\u0131za ho\\u015f geldiniz\"\nE       AssertionError: assert 'Sayın, Ali, ... hoş geldiniz' == 'Sayın Ali, o... hoş geldiniz'\nE         - Sayın Ali, odanıza hoş geldiniz\nE         + Sayın, Ali, odanıza hoş geldiniz\nE         ?      +\n\n.gizli/test_gizli.py:45: AssertionError\n___________________________ test_karsilama_sinir_ust ___________________________\n\n    def test_karsilama_sinir_ust():\n>       assert karsilama_cumlesi(\"Ali\", 999) == \"Say\\u0131n Ali, odan\\u0131za ho\\u015f geldiniz\"\nE       AssertionError: assert 'Sayın, Ali, ... hoş geldiniz' == 'Sayın Ali, o... hoş geldiniz'\nE         - Sayın Ali, odanıza hoş geldiniz\nE         + Sayın, Ali, odanıza hoş geldiniz\nE         ?      +\n\n.gizli/test_gizli.py:48: AssertionError\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_karsilama_temel - AssertionError: assert 'S...\nFAILED .gizli/test_gizli.py::test_karsilama_bosluk_duzenleme - AssertionError...\nFAILED .gizli/test_gizli.py::test_karsilama_turkce_koruma - AssertionError: a...\nFAILED .gizli/test_gizli.py::test_karsilama_sinir_alt - AssertionError: asser...\nFAILED .gizli/test_gizli.py::test_karsilama_sinir_ust - AssertionError: asser...\n5 failed, 17 passed in 0.09s\n"
+ }
+}

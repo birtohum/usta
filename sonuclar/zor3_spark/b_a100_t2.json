@@ -1,0 +1,24 @@
+{
+ "id": "a100",
+ "kip": "b",
+ "tekrar": 2,
+ "kategori": "Türkçe büyük/küçük harf (İ/i, I/ı), Türk alfabesiyle sıralama, sayıyı yazıya çevirme, ünlü uyumuna göre ek",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "ortaklar.py içinde turkce_sirala yazıldı: önce liste tür denetimi, sonra kayıt biçimi denetimi (TypeError), Türkçe küçük harf çevirisi (I→ı, İ→i) karşılaştırmadan hemen önce uygulanır, a..z Türkçe alfabe sırasına göre, yabancı karakterler sonda Unicode değerine göre dizilir, sıralama soyad→ad→sicil, kararlı sorted ile yeni liste döndürülür. pytest ile 14 test geçti.",
+ "adim": 4,
+ "yurutucu_token": {
+  "girdi": 12588,
+  "cikti": 11142
+ },
+ "yurutucu_usd": 0.0034872,
+ "bitirdi": true,
+ "sure_sn": 128.9,
+ "gizli": {
+  "gecti": true,
+  "gecen": 20,
+  "toplam": 20,
+  "cikti": "....................                                                     [100%]\n20 passed in 0.12s\n"
+ }
+}

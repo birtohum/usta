@@ -1,0 +1,24 @@
+{
+ "id": "a178",
+ "kip": "a",
+ "tekrar": 1,
+ "kategori": "CSV/JSON ile çalışan ve uç durumları çok olan veri işleme (BOM, ; ayırıcı, 1.234,56 sayı biçimi, boş/bozuk satır)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "patates_stok_cli.py yazıldı: utf-8-sig/;-okuma, boş satır yoksayma, Decimal Türkçe sayı, bozuk sayaç, exit 2/3/4, negatif stok, TR sıralama, HALF_UP TR kg formatı, boş dosya desteği doğrulandı.",
+ "adim": 16,
+ "yurutucu_token": {
+  "girdi": 92350,
+  "cikti": 82339
+ },
+ "yurutucu_usd": 0.025702799999999998,
+ "bitirdi": true,
+ "sure_sn": 896.9,
+ "gizli": {
+  "gecti": false,
+  "gecen": 4,
+  "toplam": 20,
+  "cikti": "5428d1d/patates_stok_cli.py', '--giris', '/home/usta/is/..., line 183, in main\\n    stok = out\\n           ^^^\\nNameError: name \\'out\\' is not defined. Did you mean: \\'oct\\'?\\n').returncode\n\n.gizli/test_gizli.py:202: AssertionError\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_01_rapor_anahtarlari - assert 1 == 0\nFAILED .gizli/test_gizli.py::test_02_net_hesap - assert 1 == 0\nFAILED .gizli/test_gizli.py::test_03_turkce_sayi_binlik - assert 1 == 0\nFAILED .gizli/test_gizli.py::test_04_bos_satir_yoksay - assert 1 == 0\nFAILED .gizli/test_gizli.py::test_05_bozuk_satir_sayac - assert 1 == 0\nFAILED .gizli/test_gizli.py::test_10_negatif_stok - assert 1 == 0\nFAILED .gizli/test_gizli.py::test_11_sifir_negatif_degil - assert 1 == 0\nFAILED .gizli/test_gizli.py::test_12_turkce_kucuk_harf_ayni_depo - assert 1 == 0\nFAILED .gizli/test_gizli.py::test_13_I_ve_I_farki - assert 1 == 0\nFAILED .gizli/test_gizli.py::test_14_esit_kilo_turkce_siralama - assert 1 == 0\nFAILED .gizli/test_gizli.py::test_15_kod_siralama - assert 1 == 0\nFAILED .gizli/test_gizli.py::test_16_half_up_yuvarlama - assert 1 == 0\nFAILED .gizli/test_gizli.py::test_17_turkce_bicim - assert 1 == 0\nFAILED .gizli/test_gizli.py::test_18_bos_dosyalar - AssertionError: assert 1 ...\nFAILED .gizli/test_gizli.py::test_19_hata_esigi_asim - AssertionError: assert...\nFAILED .gizli/test_gizli.py::test_20_hata_esigi_esit - AssertionError: assert...\n16 failed, 4 passed in 6.47s\n"
+ }
+}

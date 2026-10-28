@@ -1,0 +1,24 @@
+{
+ "id": "a178",
+ "kip": "b",
+ "tekrar": 2,
+ "kategori": "CSV/JSON ile çalışan ve uç durumları çok olan veri işleme (BOM, ; ayırıcı, 1.234,56 sayı biçimi, boş/bozuk satır)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "patates_stok_cli.py yazıldı: utf-8-sig ve noktalı virgülle okuma, boş satırları yok sayma, Decimal ile Türkçe sayı çözümü, bozuk_satir sayaçları, exit 2/3/4 yönetimi, Türkçe küçük harf (I/İ eşitleme) ile depo gruplama, net kg azalan + Türkçe ad artan + depo_kodu sıralama, ROUND_HALF_UP ile Türkçe kilo biçimi, stok/negatif_stok/bozuk_satir raporu. test_stok.py ile 15 pytest testi geçiyor.",
+ "adim": 14,
+ "yurutucu_token": {
+  "girdi": 67603,
+  "cikti": 54885
+ },
+ "yurutucu_usd": 0.017737300000000004,
+ "bitirdi": true,
+ "sure_sn": 572.4,
+ "gizli": {
+  "gecti": true,
+  "gecen": 20,
+  "toplam": 20,
+  "cikti": "....................                                                     [100%]\n20 passed in 1.43s\n"
+ }
+}

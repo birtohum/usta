@@ -1,0 +1,71 @@
+{
+ "id": "a188",
+ "kip": "c",
+ "tekrar": 1,
+ "kategori": "CSV/JSON ile çalışan ve uç durumları çok olan veri işleme (BOM, ; ayırıcı, 1.234,56 sayı biçimi, boş/bozuk satır)",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 20,
+   "basarili": 20
+  }
+ ],
+ "spark_usd": 0.034358900000000005,
+ "arayuz": "",
+ "kabul_yazar": 1,
+ "mutasyon": {
+  "mutant": 15,
+  "ham_mutant": 15,
+  "turlar": [
+   {
+    "oldurulen": 11,
+    "toplam": 15
+   },
+   {
+    "oldurulen": 11,
+    "toplam": 15
+   },
+   {
+    "oldurulen": 14,
+    "toplam": 15
+   }
+  ],
+  "hayatta": [
+   "girdi CSV bossa hata vermeden bos sonuc yazma"
+  ]
+ },
+ "hakem": [
+  {
+   "test": ".usta_kabul/test_kabul_1.py::test_baslik_hatali_exit3",
+   "karar": "belirsiz",
+   "gerekce": "Görev metni doğru başlığın hangi sütun adlarından oluştuğunu tanımlamıyor.",
+   "tur": 1
+  }
+ ],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [
+  ".usta_kabul/test_kabul_1.py::test_json_saat_ucreti_virgullu_kullanilir",
+  ".usta_kabul/test_kabul_1.py::test_turkce_kucultme_I_gruplama",
+  ".usta_kabul/test_kabul_1.py::test_ucret_bayragi_jsonu_ezer",
+  ".usta_kabul/test_kabul_1.py::test_baslik_hatali_exit3"
+ ],
+ "kabul_test_sayisi": 20,
+ "kabul_gecti": true,
+ "ozet": "vardiya_cli.py yazıldı: utf-8-sig + noktalı virgül CSV okuma, Türkçe Decimal ayrıştırma, exit 2/3/4 kodları, 8 saat fazla mesai, ROUND_HALF_UP, Türkçe alt-harf gruplama ve sıralama. pytest ile 8 test geçti.",
+ "adim": 10,
+ "yurutucu_token": {
+  "girdi": 57199,
+  "cikti": 36222
+ },
+ "yurutucu_usd": 0.012964300000000003,
+ "bitirdi": true,
+ "sure_sn": 1249.0,
+ "gizli": {
+  "gecti": true,
+  "gecen": 20,
+  "toplam": 20,
+  "cikti": "....................                                                     [100%]\n20 passed in 2.04s\n"
+ }
+}

@@ -1,0 +1,53 @@
+{
+ "id": "a096",
+ "kip": "c",
+ "tekrar": 2,
+ "kategori": "tarih ve saat: resmî tatiller parametreyle, iş günü hesabı, Türkiye saat dilimi (UTC+3, yaz saati yok), gün/ay adları Türkçe",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 53,
+   "basarili": 53
+  }
+ ],
+ "spark_usd": 0.010694100000000002,
+ "arayuz": "",
+ "kabul_yazar": 3,
+ "mutasyon": {
+  "mutant": 14,
+  "ham_mutant": 14,
+  "turlar": [
+   {
+    "oldurulen": 12,
+    "toplam": 14
+   },
+   {
+    "oldurulen": 14,
+    "toplam": 14
+   }
+  ],
+  "hayatta": []
+ },
+ "hakem": [],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [],
+ "kabul_test_sayisi": 53,
+ "kabul_gecti": true,
+ "ozet": "liman_cli.py uygulandı: varış sonrası ilk iş gününden başlayan serbest gün sayımı, ardiye başlangıcı, boş tatil, yinelenen tatil tek sayımı, json/metin çıktıları, Türkçe İ/I koruması ve çıkış kodu 2 hata denetimleri. test_liman.py ile 15 pytest testi geçti.",
+ "adim": 7,
+ "yurutucu_token": {
+  "girdi": 39957,
+  "cikti": 26098
+ },
+ "yurutucu_usd": 0.0092153,
+ "bitirdi": true,
+ "sure_sn": 565.4,
+ "gizli": {
+  "gecti": false,
+  "gecen": 20,
+  "toplam": 21,
+  "cikti": "..........F..........                                                    [100%]\n=================================== FAILURES ===================================\n__________________________ test_metin_tek_haneli_gun ___________________________\n\n    def test_metin_tek_haneli_gun():\n        r = calistir(\"--varis\", \"2026-01-01\", \"--serbest-gun\", \"0\", \"--tatiller\", \"\", \"--cikti\", \"metin\")\n        assert r.returncode == 0\n>       assert r.stdout.strip() == \"2 Ocak 2026 Cuma\"\nE       AssertionError: assert '02 Ocak 2026 Cuma' == '2 Ocak 2026 Cuma'\nE         - 2 Ocak 2026 Cuma\nE         + 02 Ocak 2026 Cuma\nE         ? +\n\n.gizli/test_gizli.py:80: AssertionError\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_metin_tek_haneli_gun - AssertionError: asse...\n1 failed, 20 passed in 1.03s\n"
+ }
+}

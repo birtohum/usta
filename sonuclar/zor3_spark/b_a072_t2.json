@@ -1,0 +1,24 @@
+{
+ "id": "a072",
+ "kip": "b",
+ "tekrar": 2,
+ "kategori": "CSV/JSON ile çalışan ve uç durumları çok olan veri işleme (BOM, ; ayırıcı, 1.234,56 sayı biçimi, boş/bozuk satır)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": null,
+ "adim": 20,
+ "yurutucu_token": {
+  "girdi": 230875,
+  "cikti": 79571
+ },
+ "yurutucu_usd": 0.0390017,
+ "bitirdi": false,
+ "sure_sn": 860.9,
+ "gizli": {
+  "gecti": false,
+  "gecen": 9,
+  "toplam": 20,
+  "cikti": " \"kademe2_fiyat\": \"20,00\"})\n        r = run_cli(\"--tuketim-csv\", str(c), \"--tarife-json\", str(j), \"--cikti\", str(o))\n        assert r.returncode == 0\n        d = json.loads(o.read_text(encoding=\"utf-8\"))\n        assert len(d[\"aboneler\"]) == 1\n>       assert d[\"aboneler\"][0][\"toplam_m3\"] == pytest.approx(10.0)\nE       AssertionError: assert '10.00' == 10.0 ± 1.0e-05\nE         comparison failed\nE         Obtained: 10.00\nE         Expected: 10.0 ± 1.0e-05\n\n.gizli/test_gizli.py:220: AssertionError\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_01_normal_under_20 - AssertionError: assert...\nFAILED .gizli/test_gizli.py::test_02_exact_20_first_tier - AssertionError: as...\nFAILED .gizli/test_gizli.py::test_03_over_20_split - AssertionError: assert '...\nFAILED .gizli/test_gizli.py::test_04_turkish_normalize_merge_strip - Assertio...\nFAILED .gizli/test_gizli.py::test_05_I_to_idotless_and_Idotted - AssertionErr...\nFAILED .gizli/test_gizli.py::test_06_thousand_dot_comma - AssertionError: ass...\nFAILED .gizli/test_gizli.py::test_07_price_thousand_and_round_half_up - Asser...\nFAILED .gizli/test_gizli.py::test_15_header_only_empty - AssertionError: asse...\nFAILED .gizli/test_gizli.py::test_17_sort_tutar_desc - AssertionError: assert...\nFAILED .gizli/test_gizli.py::test_18_sort_m3_when_tutar_equal - AssertionErro...\nFAILED .gizli/test_gizli.py::test_20_semicolon_only_and_quote_bom - Assertion...\n11 failed, 9 passed in 2.02s\n"
+ }
+}

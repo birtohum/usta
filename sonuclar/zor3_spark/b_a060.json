@@ -1,0 +1,24 @@
+{
+ "id": "a060",
+ "kip": "b",
+ "tekrar": 1,
+ "kategori": "CSV/JSON ile çalışan ve uç durumları çok olan veri işleme (BOM, ; ayırıcı, 1.234,56 sayı biçimi, boş/bozuk satır)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "narenciye_secim.py yazıldı: SecimMotoru utf-8-sig ve noktalı virgül okur, başlık boşluklarını temizler, ağırlığı binlik-nokta silip virgül-nokta çevirisiyle Decimal okur, fire oranını ROUND_HALF_UP ile 3 basamağa yuvarlar, boş satırları atlar, sütun uyumsuzluğunda ValueError ve kayıp dosyada FileNotFoundError verir, çeşitleri Türkçe küçük harfle (I→ı, İ→i) gruplar, 1000g ikinci kalite ve altı ıskarta sayar, negatifte ValueError verir, yüksüz raporda {} döndürür, üst üste ekler, raporu toplam net azalan ve Türkçe alfabetik sıraya göre dizer. pytest ile 12 test geçti.",
+ "adim": 12,
+ "yurutucu_token": {
+  "girdi": 86504,
+  "cikti": 48686
+ },
+ "yurutucu_usd": 0.018387600000000004,
+ "bitirdi": true,
+ "sure_sn": 631.6,
+ "gizli": {
+  "gecti": false,
+  "gecen": 16,
+  "toplam": 20,
+  "cikti": "      'birinci_kalite': 0,\nE                           'cesit': 'portakal',\nE                           'count': 1,...\nE             \nE             ...Full output truncated (19 lines hidden), use '-vv' to show\n\n.gizli/test_gizli.py:114: AssertionError\n________________________ test_net_altinda_iskarta_haric ________________________\n\n    def test_net_altinda_iskarta_haric():\n        import tempfile, os\n        m = SecimMotoru()\n        with tempfile.TemporaryDirectory() as d:\n            p = os.path.join(d, \"a.csv\")\n            _yaz(p, \"\\u00e7e\\u015fit;a\\u011f\\u0131rl\\u0131k;fire_oran\\u0131\\nportakal;900;0\\nlimon;2000;0\\n\")\n            m.yukle(p)\n            r = m.rapor()\n>           assert len(r) == 1\nE           AssertionError: assert 2 == 1\nE            +  where 2 = len({'limon': {'ilk_yazim': 'limon', 'ilk_gorulen': 'limon', 'ilk_gorulen_yazim': 'limon', 'ilk': 'limon', 'yazim': 'limon...1, 'birinci': 0, 'ikinci': 0, 'fire_orani': Decimal('0.000'), 'fire': Decimal('0.000'), 'fire_oran': Decimal('0.000')}})\n\n.gizli/test_gizli.py:124: AssertionError\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_fire_half_up - AssertionError: assert Decim...\nFAILED .gizli/test_gizli.py::test_turkce_I_normalize_ayni_grup - AssertionErr...\nFAILED .gizli/test_gizli.py::test_net_1000_ikinci_kalite_haric - AssertionErr...\nFAILED .gizli/test_gizli.py::test_net_altinda_iskarta_haric - AssertionError:...\n4 failed, 16 passed in 0.16s\n"
+ }
+}

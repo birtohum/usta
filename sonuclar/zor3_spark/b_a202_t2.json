@@ -1,0 +1,24 @@
+{
+ "id": "a202",
+ "kip": "b",
+ "tekrar": 2,
+ "kategori": "çok dosyalı küçük modül: iki-üç dosyaya bölünmüş, ortak hata sınıfları ve bir komut satırı girişi olan araç",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "hatalar.py (3 hata sınıfı), ozet.py (Ozetleyici: sıkı satır doğrulama, yukarı yuvarlanan ortalama, Türkçe küçük harfli top_url sıralaması) ve cli.py (4 satırlık stdout, stderr'e sınıf adı + çıkış 1) yazıldı; pytest ile 15 test geçirildi.",
+ "adim": 15,
+ "yurutucu_token": {
+  "girdi": 95650,
+  "cikti": 41727
+ },
+ "yurutucu_usd": 0.0179104,
+ "bitirdi": true,
+ "sure_sn": 480.8,
+ "gizli": {
+  "gecti": true,
+  "gecen": 22,
+  "toplam": 22,
+  "cikti": "......................                                                   [100%]\n22 passed in 0.45s\n"
+ }
+}

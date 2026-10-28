@@ -1,0 +1,24 @@
+{
+ "id": "a074",
+ "kip": "a",
+ "tekrar": 3,
+ "kategori": "KDV, tevkifat, stopaj, taksit ve kuruş yuvarlama (Decimal, ROUND_HALF_UP, satır bazında ve toplamda yuvarlama farkı)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "konaklama.py içinde konaklama_faturasi yazıldı: Decimal+ROUND_HALF_UP ile gece bazında matrah/vergi(%2)/KDV yuvarlama, toplamlar yuvarlanmış gecelerin toplamı, yuvarlama_farki ham-toplam farkı, 1-365 sınır, tip-öncelikli TypeError/ValueError, casefold+Türkçe İ/I normalizasyon, stabil sıralama ve 0.10/0.20 KDV kontrolü uygulandı.",
+ "adim": 3,
+ "yurutucu_token": {
+  "girdi": 8482,
+  "cikti": 12163
+ },
+ "yurutucu_usd": 0.0032808000000000004,
+ "bitirdi": true,
+ "sure_sn": 124.3,
+ "gizli": {
+  "gecti": true,
+  "gecen": 20,
+  "toplam": 20,
+  "cikti": "....................                                                     [100%]\n20 passed in 0.06s\n"
+ }
+}

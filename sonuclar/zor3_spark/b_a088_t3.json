@@ -1,0 +1,24 @@
+{
+ "id": "a088",
+ "kip": "b",
+ "tekrar": 3,
+ "kategori": "CSV/JSON ile çalışan ve uç durumları çok olan veri işleme (BOM, ; ayırıcı, 1.234,56 sayı biçimi, boş/bozuk satır)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "`navlun_paylasim.py` içinde `dagit` işlevi yazıldı: utf-8-sig + `;` CSV okuma, boş satır atlama, Türkçe sayı çözümleme (`.` sil, `,`→`.`), Decimal HALF_UP dağıtım, min_tonaj eşiği, Türkçe fold ile plaka gruplama, pay azalan/eşitlikte duyarsız artan sıralama, hata öncelikleri ve boş liste davranışı uygulandı. 12 pytest testi yazıldı ve hepsi geçti.",
+ "adim": 8,
+ "yurutucu_token": {
+  "girdi": 52932,
+  "cikti": 20233
+ },
+ "yurutucu_usd": 0.0093398,
+ "bitirdi": true,
+ "sure_sn": 226.5,
+ "gizli": {
+  "gecti": true,
+  "gecen": 22,
+  "toplam": 22,
+  "cikti": "......................                                                   [100%]\n22 passed in 0.27s\n"
+ }
+}

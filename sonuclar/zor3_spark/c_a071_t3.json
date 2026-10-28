@@ -1,0 +1,58 @@
+{
+ "id": "a071",
+ "kip": "c",
+ "tekrar": 3,
+ "kategori": "çok dosyalı küçük modül: iki-üç dosyaya bölünmüş, ortak hata sınıfları ve bir komut satırı girişi olan araç",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 47,
+   "basarili": 47
+  }
+ ],
+ "spark_usd": 0.0086529,
+ "arayuz": "",
+ "kabul_yazar": 3,
+ "mutasyon": {
+  "mutant": 14,
+  "ham_mutant": 16,
+  "turlar": [
+   {
+    "oldurulen": 14,
+    "toplam": 14
+   }
+  ],
+  "hayatta": []
+ },
+ "hakem": [
+  {
+   "test": ".usta_kabul/test_kabul_1.py::test_cli_ekle_liste_cikar_birlikte",
+   "karar": "belirsiz",
+   "gerekce": "Görev metni --cikar işleminin çıktı üretip üretmeyeceğini açıkça belirtmiyor.",
+   "tur": 1
+  }
+ ],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [
+  ".usta_kabul/test_kabul_1.py::test_cli_ekle_liste_cikar_birlikte"
+ ],
+ "kabul_test_sayisi": 47,
+ "kabul_gecti": true,
+ "ozet": "hatalar.py (PlakaHatasi/KuyrukHatasi doğrudan ValueError), durak.py (20 kapasiteli FIFO DurakKuyrugu; strip, boş→PlakaHatasi, i→İ/ı→I normalize, tekrar→PlakaHatasi, dolu/boş→KuyrukHatasi, kapasite-önce-tekrar-sonra önceliği) ve cli.py (--ekle/--liste/--cikar/--siradaki sırayla işleyen, listede normalize plakaları eklenme sırasıyla ve son satır newline ile yazan CLI) yazıldı; pytest ile 16 test geçti.",
+ "adim": 8,
+ "yurutucu_token": {
+  "girdi": 28269,
+  "cikti": 16755
+ },
+ "yurutucu_usd": 0.0061779,
+ "bitirdi": true,
+ "sure_sn": 568.4,
+ "gizli": {
+  "gecti": true,
+  "gecen": 22,
+  "toplam": 22,
+  "cikti": "......................                                                   [100%]\n22 passed in 0.40s\n"
+ }
+}

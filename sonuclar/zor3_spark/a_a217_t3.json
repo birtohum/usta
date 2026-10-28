@@ -1,0 +1,24 @@
+{
+ "id": "a217",
+ "kip": "a",
+ "tekrar": 3,
+ "kategori": "KDV, tevkifat, stopaj, taksit ve kuruş yuvarlama (Decimal, ROUND_HALF_UP, satır bazında ve toplamda yuvarlama farkı)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "mermer_cli.py yazıldı: argparse ile --kalem/--taksit/--sirala ayrıştırma, Decimal ile satır KDV/tevkifat/ödenecek hesabı (ROUND_HALF_UP), toplamlar, kdv_yuvarlama_farki, ROUND_DOWN taksit bölüşümü, ödenecek/matrah/görülme sırasına göre sıralama, belirtilen öncelik sırasıyla HATA kontrolleri (çıkış kodu 2) ve tek satır JSON çıktısı. Yalnızca argparse/json/decimal kullanıldı.",
+ "adim": 9,
+ "yurutucu_token": {
+  "girdi": 57080,
+  "cikti": 22688
+ },
+ "yurutucu_usd": 0.0102456,
+ "bitirdi": true,
+ "sure_sn": 268.8,
+ "gizli": {
+  "gecti": true,
+  "gecen": 22,
+  "toplam": 22,
+  "cikti": "......................                                                   [100%]\n22 passed in 1.37s\n"
+ }
+}

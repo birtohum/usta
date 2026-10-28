@@ -1,0 +1,24 @@
+{
+ "id": "a218",
+ "kip": "b",
+ "tekrar": 1,
+ "kategori": "tarih ve saat: resmî tatiller parametreyle, iş günü hesabı, Türkiye saat dilimi (UTC+3, yaz saati yok), gün/ay adları Türkçe",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "deneme.py içinde DenemeTakibi sınıfı yazıldı: Europe/Istanbul zoneinfo ile iş günü hesabı (hafta sonu+tatil hariç, başlangıç hariç sayım, 0 süre ve ileri kaydırma, float saat artığı yukarı yuvarlama), Türkçe gün/ay adlarıyla rapor satırı, tr_lower (I→ı, İ→i), hata önceliğine uygun ValueError kontrolleri ve bitiş+id sıralı listeleme. pytest ile 14 test geçirildi.",
+ "adim": 15,
+ "yurutucu_token": {
+  "girdi": 141035,
+  "cikti": 39392
+ },
+ "yurutucu_usd": 0.021981900000000002,
+ "bitirdi": true,
+ "sure_sn": 529.5,
+ "gizli": {
+  "gecti": false,
+  "gecen": 18,
+  "toplam": 20,
+  "cikti": "............F.F.....                                                     [100%]\n=================================== FAILURES ===================================\n__________________________ test_13_tatil_icerigi_hata __________________________\n\n    def test_13_tatil_icerigi_hata():\n>       with pytest.raises(ValueError):\nE       Failed: DID NOT RAISE <class 'ValueError'>\n\n.gizli/test_gizli.py:76: Failed\n__________________________ test_15_turkce_kucuk_harf ___________________________\n\n    def test_15_turkce_kucuk_harf():\n        t = DenemeTakibi(set())\n        t.ekle(\"I\", \"2024-01-01\", 1)\n>       with pytest.raises(ValueError):\nE       Failed: DID NOT RAISE <class 'ValueError'>\n\n.gizli/test_gizli.py:92: Failed\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_13_tatil_icerigi_hata - Failed: DID NOT RAI...\nFAILED .gizli/test_gizli.py::test_15_turkce_kucuk_harf - Failed: DID NOT RAIS...\n2 failed, 18 passed in 0.14s\n"
+ }
+}

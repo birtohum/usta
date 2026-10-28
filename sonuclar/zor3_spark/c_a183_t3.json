@@ -1,0 +1,79 @@
+{
+ "id": "a183",
+ "kip": "c",
+ "tekrar": 3,
+ "kategori": "CSV/JSON ile çalışan ve uç durumları çok olan veri işleme (BOM, ; ayırıcı, 1.234,56 sayı biçimi, boş/bozuk satır)",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": false,
+   "toplam": 23,
+   "basarili": 22
+  },
+  {
+   "gecti": true,
+   "toplam": 23,
+   "basarili": 23
+  }
+ ],
+ "spark_usd": 0.03549940000000001,
+ "arayuz": "",
+ "kabul_yazar": 1,
+ "mutasyon": {
+  "mutant": 15,
+  "ham_mutant": 16,
+  "turlar": [
+   {
+    "oldurulen": 11,
+    "toplam": 15
+   },
+   {
+    "oldurulen": 14,
+    "toplam": 15
+   },
+   {
+    "oldurulen": 14,
+    "toplam": 15
+   }
+  ],
+  "hayatta": [
+   "bos veya yalnizca bosluk olan adlari bilinmeyen grubuna atma gereksinimini cigner"
+  ]
+ },
+ "hakem": [
+  {
+   "test": ".usta_kabul/test_kabul_1.py::test_esit_ortalamada_turkce_siralama",
+   "karar": "gerekli",
+   "gerekce": "Görev eşit ortalamada Türkçe ada göre artan sıralamayı açıkça istiyor ve Türkçe alfabede Ö P'den önce gelir.",
+   "tur": 1
+  },
+  {
+   "test": ".usta_kabul/test_kabul_1.py::test_nem_ustu_red",
+   "karar": "hatali",
+   "gerekce": "Görev ayrıştırılabilen satırın listeye alınacağını söylüyor ve boş listeyi yalnızca hiç teslim yokken istiyor, nemden reddetme çıkarmayı gerektirmiyor.",
+   "tur": 1
+  }
+ ],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [
+  ".usta_kabul/test_kabul_1.py::test_nem_ustu_red"
+ ],
+ "kabul_test_sayisi": 23,
+ "kabul_gecti": true,
+ "ozet": null,
+ "adim": 25,
+ "yurutucu_token": {
+  "girdi": 205214,
+  "cikti": 62192
+ },
+ "yurutucu_usd": 0.032959800000000004,
+ "bitirdi": false,
+ "sure_sn": 1193.0,
+ "gizli": {
+  "gecti": true,
+  "gecen": 20,
+  "toplam": 20,
+  "cikti": "....................                                                     [100%]\n20 passed in 0.06s\n"
+ }
+}

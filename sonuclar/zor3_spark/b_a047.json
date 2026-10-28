@@ -1,0 +1,24 @@
+{
+ "id": "a047",
+ "kip": "b",
+ "tekrar": 1,
+ "kategori": "çok dosyalı küçük modül: iki-üç dosyaya bölünmüş, ortak hata sınıfları ve bir komut satırı girişi olan araç",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "hatalar.py (NotHatasi, OgrenciHatasi: ValueError soyundan) ve burs.py (ortalama_hesapla: tabana yuvarlanmış int ortalama, boş liste/aralık dışı NotHatasi; sirala: ortalama büyük, devamsızlık küçük, kimlik küçük önceliği, Türkçe ı/ş/ğ dönüşümlü karşılaştırma, tip>öğrenci>not hata önceliği ve ilk ihlal; CLI `python -m burs sirala --ogrenciler Ali:90:2,Veli:90:1` stdout'a sıralı ad yazar) yazıldı. 14 pytest testi geçiyor.",
+ "adim": 9,
+ "yurutucu_token": {
+  "girdi": 46646,
+  "cikti": 35015
+ },
+ "yurutucu_usd": 0.0116676,
+ "bitirdi": true,
+ "sure_sn": 300.9,
+ "gizli": {
+  "gecti": false,
+  "gecen": 19,
+  "toplam": 20,
+  "cikti": "                if not isinstance(not_val, list):\n                    raise TypeError(\"notlar liste olmalidir\")\n                for n in not_val:\n                    if isinstance(n, bool) or not isinstance(n, (int, float)):\n                        raise TypeError(\"her not sayi olmalidir\")\n            # devamsızlık tipi\n            if dev_key is not None:\n                dev_val = ogr[dev_key]\n                if isinstance(dev_val, bool) or not isinstance(dev_val, (int, float)):\n                    raise TypeError(\"devamsizlik sayi olmalidir\")\n            # kimlik tipi\n            if kim_key is not None:\n                kim_val = ogr[kim_key]\n                if isinstance(kim_val, bool) or not isinstance(kim_val, (int, float, str)):\n                    raise TypeError(\"kimlik sayi veya string olmalidir\")\n    \n        # 2. Aşama: öğrenci hataları (ilk ihlal)\n        for ogr in ogrenciler:\n            ad_key, not_key, dev_key, kim_key = _alan_degerleri(ogr)\n            if ad_key is None:\n                raise OgrenciHatasi(\"ogrenci adi eksik\")\n            ad_val = ogr[ad_key]\n            if not isinstance(ad_val, str) or ad_val.strip() == \"\":\n>               raise OgrenciHatasi(\"ogrenci adi gecersiz\")\nE               hatalar.OgrenciHatasi: ogrenci adi gecersiz\n\nburs.py:139: OgrenciHatasi\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_ilk_ihlal - hatalar.OgrenciHatasi: ogrenci ...\n1 failed, 19 passed in 0.09s\n"
+ }
+}

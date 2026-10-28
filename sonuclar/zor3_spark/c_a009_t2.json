@@ -1,0 +1,49 @@
+{
+ "id": "a009",
+ "kip": "c",
+ "tekrar": 2,
+ "kategori": "Türkçe büyük/küçük harf (İ/i, I/ı), Türk alfabesiyle sıralama, sayıyı yazıya çevirme, ünlü uyumuna göre ek",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 50,
+   "basarili": 50
+  }
+ ],
+ "spark_usd": 0.006544900000000001,
+ "arayuz": "",
+ "kabul_yazar": 3,
+ "mutasyon": {
+  "mutant": 15,
+  "ham_mutant": 15,
+  "turlar": [
+   {
+    "oldurulen": 15,
+    "toplam": 15
+   }
+  ],
+  "hayatta": []
+ },
+ "hakem": [],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [],
+ "kabul_test_sayisi": 50,
+ "kabul_gecti": true,
+ "ozet": "kasa_cevir.py içinde turkce_buyut/turkce_kucult yazıldı: bağlamsız harf-harf sözlük dönüşümü (i→İ, ı→I, İ→i, I→ı, C/Ç karışmaz), uzunluk korunur, boş/boşluk/rakam/emoji korunur, str değilse TypeError, idempotent; str.upper/lower kullanılmadı, ağ/rastgelelik/saat yok. 14 pytest testi geçiyor.",
+ "adim": 7,
+ "yurutucu_token": {
+  "girdi": 23192,
+  "cikti": 7511
+ },
+ "yurutucu_usd": 0.0038214,
+ "bitirdi": true,
+ "sure_sn": 370.7,
+ "gizli": {
+  "gecti": true,
+  "gecen": 21,
+  "toplam": 21,
+  "cikti": ".....................                                                    [100%]\n21 passed in 0.09s\n"
+ }
+}

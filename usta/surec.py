@@ -17,7 +17,7 @@ from concurrent.futures import ThreadPoolExecutor
 
 from usta import ajan, dogrulayici
 
-_havuz = ThreadPoolExecutor(8)
+_havuz = ThreadPoolExecutor(64)   # c/d koşularının kabul testleri yürütücüyle paralel hazırlanır
 
 SISTEM_A = """Sen Türkçe konuşan bir yazılım ajanısın. Görevi bir çalışma klasöründe araçlarla yaparsın: Write, Read, Edit, Bash, Done.
 Yalnızca göreli yollar kullan. İnternet yok, paket kuramazsın (Python 3.12 standart kütüphanesi var).

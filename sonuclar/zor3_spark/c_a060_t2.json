@@ -1,0 +1,26 @@
+{
+ "id": "a060",
+ "kip": "c",
+ "tekrar": 2,
+ "kategori": "CSV/JSON ile çalışan ve uç durumları çok olan veri işleme (BOM, ; ayırıcı, 1.234,56 sayı biçimi, boş/bozuk satır)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.00026409999999999997,
+ "arayuz": "",
+ "kabul_gecti": false,
+ "dogrulanamadi": true,
+ "ozet": "SecimMotoru sınıfı narenciye_secim.py içinde yazıldı: utf-8-sig ve yalnızca noktalı virgül, başlık strip, TR ondalık parse (binlik nokta silme), fire ROUND_HALF_UP 3 basamak, boş satır atlama, sütun uyumsuzluğunda ValueError, yoksa FileNotFoundError, Türkçe küçük harf (I→ı, İ→i) gruplama, 1000 ikinci kalite/altı ıskarta/negatif ValueError, boş rapor {}, üst üste ekleme, toplam_net/sayi/ilk yazım anahtarları, toplam net azalan + Türkçe alfabetik tie-break, hata önceliği. 15 pytest testi geçti.",
+ "adim": 13,
+ "yurutucu_token": {
+  "girdi": 101075,
+  "cikti": 46326
+ },
+ "yurutucu_usd": 0.019372699999999996,
+ "sure_sn": 522.3,
+ "gizli": {
+  "gecti": false,
+  "gecen": 18,
+  "toplam": 20,
+  "cikti": "E             Left contains 1 more item:\nE             {'portakal': {'ad': 'portakal',\nE                           'adet': 1,\nE                           'birinci_kalite': 0,\nE                           'cesit': 'portakal',\nE                           'ikinci': 1,\nE                           'ikinci_kalite': 1,...\nE             \nE             ...Full output truncated (20 lines hidden), use '-vv' to show\n\n.gizli/test_gizli.py:114: AssertionError\n________________________ test_net_altinda_iskarta_haric ________________________\n\n    def test_net_altinda_iskarta_haric():\n        import tempfile, os\n        m = SecimMotoru()\n        with tempfile.TemporaryDirectory() as d:\n            p = os.path.join(d, \"a.csv\")\n            _yaz(p, \"\\u00e7e\\u015fit;a\\u011f\\u0131rl\\u0131k;fire_oran\\u0131\\nportakal;900;0\\nlimon;2000;0\\n\")\n            m.yukle(p)\n            r = m.rapor()\n>           assert len(r) == 1\nE           AssertionError: assert 2 == 1\nE            +  where 2 = len({'limon': {'ad': 'limon', 'adet': 1, 'birinci_kalite': 1, 'cesit': 'limon', ...}, 'portakal': {'ad': 'portakal', 'adet': 1, 'birinci_kalite': 0, 'cesit': 'portakal', ...}})\n\n.gizli/test_gizli.py:124: AssertionError\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_net_1000_ikinci_kalite_haric - AssertionErr...\nFAILED .gizli/test_gizli.py::test_net_altinda_iskarta_haric - AssertionError:...\n2 failed, 18 passed in 0.27s\n"
+ }
+}

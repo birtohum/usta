@@ -1,0 +1,63 @@
+{
+ "id": "a088",
+ "kip": "c",
+ "tekrar": 3,
+ "kategori": "CSV/JSON ile çalışan ve uç durumları çok olan veri işleme (BOM, ; ayırıcı, 1.234,56 sayı biçimi, boş/bozuk satır)",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 58,
+   "basarili": 58
+  }
+ ],
+ "spark_usd": 0.013630600000000001,
+ "arayuz": "",
+ "kabul_yazar": 3,
+ "mutasyon": {
+  "mutant": 15,
+  "ham_mutant": 16,
+  "turlar": [
+   {
+    "oldurulen": 14,
+    "toplam": 15
+   },
+   {
+    "oldurulen": 14,
+    "toplam": 15
+   },
+   {
+    "oldurulen": 14,
+    "toplam": 15
+   }
+  ],
+  "hayatta": [
+   "sefer_csv utf-8-sig ile okunup BOM yoksayilmali gereksinimini cigner"
+  ]
+ },
+ "hakem": [],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [
+  ".usta_kabul/test_kabul_1.py::test_temel_dagitim_ve_turkce_bicim",
+  ".usta_kabul/test_kabul_2.py::test_siralama_esit_payda_turkce_plaka",
+  ".usta_kabul/test_kabul_2.py::test_yuvarlama_half_up"
+ ],
+ "kabul_test_sayisi": 58,
+ "kabul_gecti": true,
+ "ozet": "`navlun_paylasim.py` içinde `dagit` işlevi yazıldı: utf-8-sig + `;` okuma, boş satır atlama, Türkçe sayı çözümleme (`.` sil, `,`→`.`), Decimal HALF_UP pay hesabı, min_tonaj filtresi (eşit dahil, altı 0,00), Türkçe fold ile plaka gruplama ve ilk yazımı koruma, pay azalan / Türkçe duyarsız artan sıralama, Türkçe para biçimleme, hata öncelikleri ve boş liste davranışı uygulandı. 17 pytest testi yazıldı ve hepsi geçti.",
+ "adim": 7,
+ "yurutucu_token": {
+  "girdi": 42130,
+  "cikti": 19711
+ },
+ "yurutucu_usd": 0.008155200000000001,
+ "bitirdi": true,
+ "sure_sn": 835.7,
+ "gizli": {
+  "gecti": true,
+  "gecen": 22,
+  "toplam": 22,
+  "cikti": "......................                                                   [100%]\n22 passed in 0.11s\n"
+ }
+}

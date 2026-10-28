@@ -1,0 +1,75 @@
+{
+ "id": "a179",
+ "kip": "c",
+ "tekrar": 2,
+ "kategori": "KDV, tevkifat, stopaj, taksit ve kuruş yuvarlama (Decimal, ROUND_HALF_UP, satır bazında ve toplamda yuvarlama farkı)",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 46,
+   "basarili": 46
+  }
+ ],
+ "spark_usd": 0.0197924,
+ "arayuz": "Dosya: sera_cli.py. Komut: python sera_cli.py [--kalemler urun:miktar:birim_fiyat:kdv_oran,...] [--tevkifat oran] [--cikti ozet|detay]. Cikti stdout JSON: ozet icin toplam_matrah, toplam_kdv, tevkifat, genel_toplam; detay icin kalemler listesi artı ayni ozet alanlari arti fark_kurus. Tutarlar iki basamakli string.",
+ "kabul_yazar": 3,
+ "mutasyon": {
+  "mutant": 16,
+  "ham_mutant": 16,
+  "turlar": [
+   {
+    "oldurulen": 16,
+    "toplam": 16
+   }
+  ],
+  "hayatta": []
+ },
+ "hakem": [
+  {
+   "test": ".usta_kabul/test_kabul_1.py::test_valueerror_gecersiz_oran",
+   "karar": "belirsiz",
+   "gerekce": "Görev metni bayrak türü hatası ile geçersiz oranın sınırını ve çıkış kodunu açıkça ayırmıyor.",
+   "tur": 1
+  },
+  {
+   "test": ".usta_kabul/test_kabul_3.py::test_gecersiz_oran_valueerror_stderr",
+   "karar": "belirsiz",
+   "gerekce": "Görev metni ValueError yazısının literal olarak stderrde olması gerektiğini açıkça belirtmiyor.",
+   "tur": 1
+  },
+  {
+   "test": ".usta_kabul/test_kabul_3.py::test_tip_denetimi_degerden_once",
+   "karar": "belirsiz",
+   "gerekce": "Görev metni tip-değer sırasının nasıl gözleneceğini ve abc girdisinin hangi sınıfa girdiğini belirtmiyor.",
+   "tur": 1
+  }
+ ],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [
+  ".usta_kabul/test_kabul_2.py::test_tip_denetimi_degerden_once",
+  ".usta_kabul/test_kabul_3.py::test_esit_matrahta_turkce_I_donusumu",
+  ".usta_kabul/test_kabul_3.py::test_turkce_alfabe_ı_once",
+  ".usta_kabul/test_kabul_1.py::test_valueerror_gecersiz_oran",
+  ".usta_kabul/test_kabul_3.py::test_gecersiz_oran_valueerror_stderr",
+  ".usta_kabul/test_kabul_3.py::test_tip_denetimi_degerden_once"
+ ],
+ "kabul_test_sayisi": 46,
+ "kabul_gecti": true,
+ "ozet": "sera_cli.py yazıldı: argparse ile --kalemler/--tevkifat/--cikti, Decimal ROUND_HALF_UP satır matrah ve KDV, satır-toplam vs tek-hesap fark_kurus, 7500 eşiği, Türkçe sıralama (I→ı, İ→i), boş kalemde sıfırlar, tip-önce-değer-sonra hata ayrımı (argparse exit 2 / ValueError stderr). pytest ile 14 test geçti.",
+ "adim": 10,
+ "yurutucu_token": {
+  "girdi": 60477,
+  "cikti": 35308
+ },
+ "yurutucu_usd": 0.0131093,
+ "bitirdi": true,
+ "sure_sn": 692.7,
+ "gizli": {
+  "gecti": true,
+  "gecen": 22,
+  "toplam": 22,
+  "cikti": "......................                                                   [100%]\n22 passed in 2.26s\n"
+ }
+}

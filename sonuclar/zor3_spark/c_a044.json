@@ -1,0 +1,116 @@
+{
+ "id": "a044",
+ "kip": "c",
+ "tekrar": 1,
+ "kategori": "KDV, tevkifat, stopaj, taksit ve kuruş yuvarlama (Decimal, ROUND_HALF_UP, satır bazında ve toplamda yuvarlama farkı)",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": false,
+   "toplam": 58,
+   "basarili": 51
+  },
+  {
+   "gecti": true,
+   "toplam": 58,
+   "basarili": 58
+  }
+ ],
+ "spark_usd": 0.0169871,
+ "arayuz": "",
+ "kabul_yazar": 3,
+ "mutasyon": {
+  "mutant": 15,
+  "ham_mutant": 15,
+  "turlar": [
+   {
+    "oldurulen": 11,
+    "toplam": 15
+   },
+   {
+    "oldurulen": 13,
+    "toplam": 15
+   },
+   {
+    "oldurulen": 13,
+    "toplam": 15
+   }
+  ],
+  "hayatta": [
+   "10000.00 sinir esitligi alt dilime dahil olmali kuralini bozar",
+   "bos devreden ValueError vermelidir, bos kabul edilemez"
+  ]
+ },
+ "hakem": [
+  {
+   "test": ".usta_kabul/test_kabul_2.py::test_alis_sinir_esit_tam_indirim",
+   "karar": "gerekli",
+   "gerekce": "Görev 10000.00 sınır eşitliğinin alt dilime dahil olup tamamının indirilebilir olduğunu açıkça söylüyor.",
+   "tur": 1
+  },
+  {
+   "test": ".usta_kabul/test_kabul_2.py::test_alis_sinir_ustu_yarim_indirim",
+   "karar": "gerekli",
+   "gerekce": "Görev sınırı aşan kısmın yalnızca yarısının indirilebilir olduğunu açıkça söylüyor.",
+   "tur": 1
+  },
+  {
+   "test": ".usta_kabul/test_kabul_2.py::test_bos_donem_devreden_aynen",
+   "karar": "gerekli",
+   "gerekce": "Görev hiç dönem yokken devredenin aynen döndürülüp boş liste hatası verilmemesini açıkça istiyor.",
+   "tur": 1
+  },
+  {
+   "test": ".usta_kabul/test_kabul_3.py::test_hic_donem_yokken_devreden_korunur",
+   "karar": "gerekli",
+   "gerekce": "Görev hiç dönem yokken devreden tutarın aynen korunmasını açıkça istiyor.",
+   "tur": 1
+  },
+  {
+   "test": ".usta_kabul/test_kabul_3.py::test_indirilebilir_sinir_alti_tamami",
+   "karar": "gerekli",
+   "gerekce": "Görev sınır altındaki tutarın tamamının indirilebilir olduğunu açıkça söylüyor.",
+   "tur": 1
+  },
+  {
+   "test": ".usta_kabul/test_kabul_3.py::test_indirilebilir_sinir_esitligi",
+   "karar": "gerekli",
+   "gerekce": "Görev sınır eşitliğinin alt dilime dahil olup tamamının indirilebilir olduğunu açıkça söylüyor.",
+   "tur": 1
+  },
+  {
+   "test": ".usta_kabul/test_kabul_3.py::test_indirilebilir_sinir_ustu_yarisi",
+   "karar": "gerekli",
+   "gerekce": "Görev sınır üstünde aşan kısmın yarısının indirilebilir olduğunu açıkça söylüyor.",
+   "tur": 1
+  },
+  {
+   "test": ".usta_kabul/test_kabul_m1.py::test_satis_oran_str_tip_hatasi",
+   "karar": "hatali",
+   "gerekce": "Görev satis_oran için geçersiz değerde ValueError istiyor, str oran için TypeError öngörmüyor.",
+   "tur": 1
+  }
+ ],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [
+  ".usta_kabul/test_kabul_m1.py::test_satis_oran_str_tip_hatasi"
+ ],
+ "kabul_test_sayisi": 58,
+ "kabul_gecti": true,
+ "ozet": null,
+ "adim": 18,
+ "yurutucu_token": {
+  "girdi": 234415,
+  "cikti": 26786
+ },
+ "yurutucu_usd": 0.0287987,
+ "bitirdi": false,
+ "sure_sn": 1236.1,
+ "gizli": {
+  "gecti": true,
+  "gecen": 20,
+  "toplam": 20,
+  "cikti": "....................                                                     [100%]\n20 passed in 0.06s\n"
+ }
+}

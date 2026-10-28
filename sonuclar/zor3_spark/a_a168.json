@@ -1,0 +1,24 @@
+{
+ "id": "a168",
+ "kip": "a",
+ "tekrar": 1,
+ "kategori": "CSV/JSON ile çalışan ve uç durumları çok olan veri işleme (BOM, ; ayırıcı, 1.234,56 sayı biçimi, boş/bozuk satır)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "yaprak_bidon.py içinde BidonTakip sınıfı yazıldı: CSV utf-8-sig/;/çift tırnak ile okunuyor, Türkçe sayılar Decimal ile ayrıştırılıyor, boş satırlar atlanıp sütun hatasında ValueError veriliyor, eşik JSON utf-8-sig ile okunup minimum kontrolü yapılıyor, toplamlar ROUND_HALF_UP ile yuvarlanıp köy gruplama ve Türkçe sıralama kurallarına göre stok_durumu döndürülüyor.",
+ "adim": 14,
+ "yurutucu_token": {
+  "girdi": 80489,
+  "cikti": 48314
+ },
+ "yurutucu_usd": 0.0177117,
+ "bitirdi": true,
+ "sure_sn": 545.4,
+ "gizli": {
+  "gecti": true,
+  "gecen": 22,
+  "toplam": 22,
+  "cikti": "......................                                                   [100%]\n22 passed in 0.14s\n"
+ }
+}

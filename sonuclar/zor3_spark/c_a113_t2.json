@@ -1,0 +1,63 @@
+{
+ "id": "a113",
+ "kip": "c",
+ "tekrar": 2,
+ "kategori": "CSV/JSON ile çalışan ve uç durumları çok olan veri işleme (BOM, ; ayırıcı, 1.234,56 sayı biçimi, boş/bozuk satır)",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 52,
+   "basarili": 52
+  }
+ ],
+ "spark_usd": 0.0164552,
+ "arayuz": "",
+ "kabul_yazar": 3,
+ "mutasyon": {
+  "mutant": 15,
+  "ham_mutant": 16,
+  "turlar": [
+   {
+    "oldurulen": 14,
+    "toplam": 15
+   },
+   {
+    "oldurulen": 14,
+    "toplam": 15
+   },
+   {
+    "oldurulen": 14,
+    "toplam": 15
+   }
+  ],
+  "hayatta": [
+   "utf-8-sig ile okuma BOM yoksayma gereksinimini cigner"
+  ]
+ },
+ "hakem": [],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [
+  ".usta_kabul/test_kabul_2.py::test_ciftci_gruplama_turkce",
+  ".usta_kabul/test_kabul_3.py::test_esitlikte_turkce_siralama",
+  ".usta_kabul/test_kabul_m2.py::test_bom_ile_bos_satir_atlanir"
+ ],
+ "kabul_test_sayisi": 52,
+ "kabul_gecti": true,
+ "ozet": "`aycicek_teslim.py` yazıldı: utf-8-sig `;` CSV okuma, Türkçe sayı çözümleme (`.` sil, `,`→`.`), HALF_UP tutar hesabı + eşik dahil prim, hatalı satır sayımı, Türkçe duyarsız gruplama/sıralama, istenen JSON çıktısı ve exit kodları (GIRIS yok=1, FIYAT bozuk=2, yokluk öncelikli). 14 pytest testi geçiyor.",
+ "adim": 4,
+ "yurutucu_token": {
+  "girdi": 18560,
+  "cikti": 13303
+ },
+ "yurutucu_usd": 0.0045166,
+ "bitirdi": true,
+ "sure_sn": 631.1,
+ "gizli": {
+  "gecti": false,
+  "gecen": 18,
+  "toplam": 20,
+  "cikti": ">           assert d[\"ciftciler\"][0][\"tutar\"] == \"15750,75\"\nE           AssertionError: assert '15.750,75' == '15750,75'\nE             - 15750,75\nE             + 15.750,75\nE             ?   +\n\n.gizli/test_gizli.py:89: AssertionError\n______________________________ test_tonaj_binlik _______________________________\n\n    def test_tonaj_binlik():\n        import tempfile\n        with tempfile.TemporaryDirectory() as td:\n            td = pathlib.Path(td)\n            g = td / \"g.csv\"; fj = td / \"f.json\"; o = td / \"o.json\"\n            write_giris(g, [\"Ali;1.234,50;10,00\"])\n            write_fiyat(fj, baz=\"10,00\", esik=\"90,00\", prim=\"5,00\")\n            r = run_prog(g, fj, o)\n            assert r.returncode == 0\n            d = load_ozet(o)\n>           assert d[\"ciftciler\"][0][\"tutar\"] == \"12345,00\"\nE           AssertionError: assert '12.345,00' == '12345,00'\nE             - 12345,00\nE             + 12.345,00\nE             ?   +\n\n.gizli/test_gizli.py:101: AssertionError\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_binlik_ayraci_cozumleme - AssertionError: a...\nFAILED .gizli/test_gizli.py::test_tonaj_binlik - AssertionError: assert '12.3...\n2 failed, 18 passed in 1.02s\n"
+ }
+}

@@ -1,0 +1,24 @@
+{
+ "id": "a194",
+ "kip": "a",
+ "tekrar": 3,
+ "kategori": "KDV, tevkifat, stopaj, taksit ve kuruş yuvarlama (Decimal, ROUND_HALF_UP, satır bazında ve toplamda yuvarlama farkı)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "nigde_temizlik.py dosyası yazıldı: temizlik_tevkifat_hesapla fonksiyonu %20 KDV, 7/9/10 pay ile satır bazında ROUND_HALF_UP yuvarlama, 2000 TL sınırı (dahil), Türkçe harf dönüşümlü sıralama, kdv_yuvarlama_farki ve TypeError/ValueError öncelikleri uygulandı.",
+ "adim": 5,
+ "yurutucu_token": {
+  "girdi": 11090,
+  "cikti": 20332
+ },
+ "yurutucu_usd": 0.0051754,
+ "bitirdi": true,
+ "sure_sn": 194.4,
+ "gizli": {
+  "gecti": true,
+  "gecen": 22,
+  "toplam": 22,
+  "cikti": "......................                                                   [100%]\n22 passed in 0.03s\n"
+ }
+}

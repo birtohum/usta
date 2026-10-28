@@ -1,0 +1,24 @@
+{
+ "id": "a179",
+ "kip": "a",
+ "tekrar": 2,
+ "kategori": "KDV, tevkifat, stopaj, taksit ve kuruş yuvarlama (Decimal, ROUND_HALF_UP, satır bazında ve toplamda yuvarlama farkı)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "sera_cli.py yalnızca argparse (+decimal, sys) ile yazıldı. --kalemler (urun:miktar:birim_fiyat:kdv_oran), --tevkifat (yüzde), --cikti (ozet/detay) desteklenir. Matrah ve satır KDV'leri Decimal ROUND_HALF_UP ile iki basamağa yuvarlanır; detayda tek seferlik KDV ve fark_kurus gösterilir, özette toplam KDV satır toplamına eşitlenir. Kalemsiz durumda sıfırlar yazdırılır. Matrah 7500,00 ise tevkifat yok, üstünde matrah üzerinden hesaplanır. Detayda Türkçe küçük harf çevrimiyle (I→ı, İ→i) matrah azalan + alfabetik sıralama yapılır. Tip denetimi değer denetiminden önce; tür hataları argparse hatası (exit 2), değer hataları stderr'e ValueError (exit 1) verir.",
+ "adim": 7,
+ "yurutucu_token": {
+  "girdi": 29256,
+  "cikti": 18826
+ },
+ "yurutucu_usd": 0.0066908,
+ "bitirdi": true,
+ "sure_sn": 221.0,
+ "gizli": {
+  "gecti": false,
+  "gecen": 10,
+  "toplam": 22,
+  "cikti": "code a JSON document from a string that may\n        have extraneous data at the end.\n    \n        \"\"\"\n        try:\n            obj, end = self.scan_once(s, idx)\n        except StopIteration as err:\n>           raise JSONDecodeError(\"Expecting value\", s, err.value) from None\nE           json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)\n\n/usr/lib/python3.12/json/decoder.py:355: JSONDecodeError\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_ozet_toplam_matrah - json.decoder.JSONDecod...\nFAILED .gizli/test_gizli.py::test_detay_matrah_kdv_dogrulugu - json.decoder.J...\nFAILED .gizli/test_gizli.py::test_matrah_half_up_yuvarlama - json.decoder.JSO...\nFAILED .gizli/test_gizli.py::test_kdv_satir_bazinda_toplam - json.decoder.JSO...\nFAILED .gizli/test_gizli.py::test_fark_kurus_detay - json.decoder.JSONDecodeE...\nFAILED .gizli/test_gizli.py::test_ozet_kdv_satir_esitligi - json.decoder.JSON...\nFAILED .gizli/test_gizli.py::test_bos_kalem_sifir - json.decoder.JSONDecodeEr...\nFAILED .gizli/test_gizli.py::test_bos_string_sifir - json.decoder.JSONDecodeE...\nFAILED .gizli/test_gizli.py::test_tevkifat_esik_7500_yok - json.decoder.JSOND...\nFAILED .gizli/test_gizli.py::test_tevkifat_7500_01_var - json.decoder.JSONDec...\nFAILED .gizli/test_gizli.py::test_tevkifat_alt_sinir_yok - json.decoder.JSOND...\nFAILED .gizli/test_gizli.py::test_tevkifat_half_up - json.decoder.JSONDecodeE...\n12 failed, 10 passed in 1.48s\n"
+ }
+}

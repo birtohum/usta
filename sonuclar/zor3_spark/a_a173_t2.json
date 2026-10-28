@@ -1,0 +1,24 @@
+{
+ "id": "a173",
+ "kip": "a",
+ "tekrar": 2,
+ "kategori": "CSV/JSON ile çalışan ve uç durumları çok olan veri işleme (BOM, ; ayırıcı, 1.234,56 sayı biçimi, boş/bozuk satır)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "leblebi_sevkiyat.py yazıldı: planla() CSV'yi utf-8-sig/; ile okur, Türkçe sayıları Decimal ile ayrıştırır, bozuk satırları sayar, başlık ve dosya hatalarını belirtildiği gibi yükseltir, %3,00 eşiğiyle net stok hesaplar, Türkçe alt-harfle müşteri gruplar, FIFO stok düşer ve istenen sözlüğü Türkçe biçimli döndürür.",
+ "adim": 14,
+ "yurutucu_token": {
+  "girdi": 59254,
+  "cikti": 44802
+ },
+ "yurutucu_usd": 0.014885800000000001,
+ "bitirdi": true,
+ "sure_sn": 504.8,
+ "gizli": {
+  "gecti": true,
+  "gecen": 21,
+  "toplam": 21,
+  "cikti": ".....................                                                    [100%]\n21 passed in 0.09s\n"
+ }
+}

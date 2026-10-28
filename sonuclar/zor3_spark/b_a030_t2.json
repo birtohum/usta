@@ -1,0 +1,24 @@
+{
+ "id": "a030",
+ "kip": "b",
+ "tekrar": 2,
+ "kategori": "CSV/JSON ile çalışan ve uç durumları çok olan veri işleme (BOM, ; ayırıcı, 1.234,56 sayı biçimi, boş/bozuk satır)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": null,
+ "adim": 5,
+ "yurutucu_token": {
+  "girdi": 8469,
+  "cikti": 49014
+ },
+ "yurutucu_usd": 0.010649700000000002,
+ "bitirdi": false,
+ "sure_sn": 517.4,
+ "gizli": {
+  "gecti": false,
+  "gecen": 0,
+  "toplam": 2,
+  "cikti": "\n==================================== ERRORS ====================================\n____________________ ERROR collecting .gizli/test_gizli.py _____________________\nImportError while importing test module '/home/usta/is/16b9a59b5130/.gizli/test_gizli.py'.\nHint: make sure your test modules/packages have valid Python names.\nTraceback:\n/usr/lib/python3.12/importlib/__init__.py:90: in import_module\n    return _bootstrap._gcd_import(name[level:], package, level)\n.gizli/test_gizli.py:3: in <module>\n    from banka_ozeti import ozetle\nE   ModuleNotFoundError: No module named 'banka_ozeti'\n=========================== short test summary info ============================\nERROR .gizli/test_gizli.py\n!!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!\n1 error in 0.18s\n"
+ }
+}

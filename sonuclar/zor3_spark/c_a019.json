@@ -1,0 +1,63 @@
+{
+ "id": "a019",
+ "kip": "c",
+ "tekrar": 1,
+ "kategori": "Türkiye'ye özgü kimlik ve hesap numaraları (TC kimlik, VKN, IBAN, MERSİS, plaka, telefon) — birden çok kuralın birlikte uygulandığı",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 50,
+   "basarili": 50
+  }
+ ],
+ "spark_usd": 0.028771600000000005,
+ "arayuz": "",
+ "kabul_yazar": 2,
+ "mutasyon": {
+  "mutant": 15,
+  "ham_mutant": 15,
+  "turlar": [
+   {
+    "oldurulen": 8,
+    "toplam": 15
+   },
+   {
+    "oldurulen": 12,
+    "toplam": 15
+   },
+   {
+    "oldurulen": 12,
+    "toplam": 15
+   }
+  ],
+  "hayatta": [
+   "bos girdiyi gecersiz degerden once denetleme ve bos girdi onceligini yok sayar",
+   "dosya bulunamadiginda cikis kodu 2 kullanilmali gereksinimini ihlal eder",
+   "satir ici bosluklar gecersiz sayilmali gereksinimini ihlal eder, bosluga izin verir"
+  ]
+ },
+ "hakem": [],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [
+  ".usta_kabul/test_kabul_3.py::test_plaka_turkce_i_ayrimi_normalizede_korunur"
+ ],
+ "kabul_test_sayisi": 50,
+ "kabul_gecti": true,
+ "ozet": "kimlik_araci.py yazıldı: TC/VKN/IBAN/MERSİS/telefon/plaka doğrulama, tekil ve CSV dosya kipi, düz metin/JSON çıktı, hata önceliği ve çıkış kodları (0/1/2) uygulandı; 18 pytest testi geçiyor.",
+ "adim": 7,
+ "yurutucu_token": {
+  "girdi": 34292,
+  "cikti": 39362
+ },
+ "yurutucu_usd": 0.011301600000000002,
+ "bitirdi": true,
+ "sure_sn": 1211.1,
+ "gizli": {
+  "gecti": false,
+  "gecen": 20,
+  "toplam": 21,
+  "cikti": ".......F.............                                                    [100%]\n=================================== FAILURES ===================================\n__________________________ test_08_mersis_valid_exit0 __________________________\n\n    def test_08_mersis_valid_exit0():\n        r = run(\"--mersis\", MERSIS_OK)\n        assert r.returncode == 0\n        r2 = run(\"--mersis\", MERSIS_BAD)\n>       assert r2.returncode == 1\nE       AssertionError: assert 0 == 1\nE        +  where 0 = CompletedProcess(args=['/usr/bin/python', '/home/usta/is/f6389949f0ac/kimlik_araci.py', '--mersis', '1111111111111116'], returncode=0, stdout='mersis: geçerli | girdi: 1111111111111116 | normalize: 1111111111111116\\n', stderr='').returncode\n\n.gizli/test_gizli.py:64: AssertionError\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_08_mersis_valid_exit0 - AssertionError: ass...\n1 failed, 20 passed in 2.77s\n"
+ }
+}

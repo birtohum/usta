@@ -1,0 +1,24 @@
+{
+ "id": "a053",
+ "kip": "a",
+ "tekrar": 2,
+ "kategori": "çok dosyalı küçük modül: iki-üç dosyaya bölünmüş, ortak hata sınıfları ve bir komut satırı girişi olan araç",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "hatalar.py, tarife.py ve cli.py oluşturuldu. GirdiHatasi/TarifeHatasi ValueError'dan türetildi; ucret_hesapla gece devri, 15 dk yukarı yuvarlama, ilk 60 dk baz / sonrası 2 katı ve Türkçe küçük harf normalizasyonu ile hata öncelik sırasına uygun yazıldı; cli.py tek satır \"Ücret: X TL\" çıktısı veriyor.",
+ "adim": 9,
+ "yurutucu_token": {
+  "girdi": 29786,
+  "cikti": 12110
+ },
+ "yurutucu_usd": 0.0054006,
+ "bitirdi": true,
+ "sure_sn": 151.0,
+ "gizli": {
+  "gecti": false,
+  "gecen": 21,
+  "toplam": 22,
+  "cikti": "..................F...                                                   [100%]\n=================================== FAILURES ===================================\n______________________________ test_tarife_hatasi ______________________________\n\nmonkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x74c06f43eb70>\n\n    def test_tarife_hatasi(monkeypatch):\n>       monkeypatch.delitem(tarife.TARIFE, \"otomobil\")\nE       AttributeError: module 'tarife' has no attribute 'TARIFE'. Did you mean: '_TARIFE'?\n\n.gizli/test_gizli.py:86: AttributeError\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_tarife_hatasi - AttributeError: module 'tar...\n1 failed, 21 passed in 0.34s\n"
+ }
+}

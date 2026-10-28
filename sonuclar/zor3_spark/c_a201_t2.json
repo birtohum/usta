@@ -1,0 +1,72 @@
+{
+ "id": "a201",
+ "kip": "c",
+ "tekrar": 2,
+ "kategori": "tarih ve saat: resmî tatiller parametreyle, iş günü hesabı, Türkiye saat dilimi (UTC+3, yaz saati yok), gün/ay adları Türkçe",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 52,
+   "basarili": 52
+  }
+ ],
+ "spark_usd": 0.014297100000000002,
+ "arayuz": "genel_kurul.py içinde GenelKurulTakvimi sınıfı; __init__(self, tatiller: set[str]|None, hafta_sonu_cumartesi_dahil: bool), ilk_toplanti(self, duyuru_tarihi: str)->str, ikinci_toplanti(self)->str",
+ "kabul_yazar": 3,
+ "mutasyon": {
+  "mutant": 14,
+  "ham_mutant": 14,
+  "turlar": [
+   {
+    "oldurulen": 13,
+    "toplam": 14
+   },
+   {
+    "oldurulen": 13,
+    "toplam": 14
+   },
+   {
+    "oldurulen": 13,
+    "toplam": 14
+   }
+  ],
+  "hayatta": [
+   "Kucuk ı harfi buyuk I olur kuralini cigner"
+  ]
+ },
+ "hakem": [
+  {
+   "test": ".usta_kabul/test_kabul_2.py::test_etiket_turkce_adlar_ve_buyuk_harf_kurali",
+   "karar": "hatali",
+   "gerekce": "Görev metni kaynak kodda İ harfi veya gün-ay listelerinin aynen yazmasını istemiyor, yalnızca çıktı etiketinde Türkçe adların doğru olmasını istiyor.",
+   "tur": 1
+  }
+ ],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [
+  ".usta_kabul/test_kabul_m1.py::test_aralik_ayi_kucuk_i_buyuk_I_olur",
+  ".usta_kabul/test_kabul_m1.py::test_kasim_ayi_kucuk_i_buyuk_I_olur",
+  ".usta_kabul/test_kabul_m1.py::test_mayis_ayi_kucuk_i_buyuk_I_olur",
+  ".usta_kabul/test_kabul_m1.py::test_sali_gunu_kucuk_i_buyuk_I_olur",
+  ".usta_kabul/test_kabul_2.py::test_etiket_turkce_adlar_ve_buyuk_harf_kurali"
+ ],
+ "kabul_test_sayisi": 52,
+ "kabul_gecti": true,
+ "ozet": "genel_kurul.py içinde GenelKurulTakvimi sınıfı yazıldı: None/boş tatil kümesi, Cumartesi dahil/hariç iş günü hesabı, duyuru günü hariç 7. iş günü (ilk_toplanti) ve ilk+7 günden sonraki ilk iş günü (ikinci_toplanti), Europe/Istanbul zoneinfo ile 09:00 sabitleme, Türkçe gün/ay adlarıyla \"gün ay yıl günadı\" etiketi, hata önceliği tarih→tatil→durum (boş duyuru ValueError, ikinci önce çağrılırsa RuntimeError). pytest ile 17 test geçti.",
+ "adim": 7,
+ "yurutucu_token": {
+  "girdi": 35527,
+  "cikti": 26463
+ },
+ "yurutucu_usd": 0.0088453,
+ "bitirdi": true,
+ "sure_sn": 735.9,
+ "gizli": {
+  "gecti": false,
+  "gecen": 0,
+  "toplam": 2,
+  "cikti": "\n==================================== ERRORS ====================================\n____________________ ERROR collecting .gizli/test_gizli.py _____________________\nImportError while importing test module '/home/usta/is/cad0e5f61b4f/.gizli/test_gizli.py'.\nHint: make sure your test modules/packages have valid Python names.\nTraceback:\n/usr/lib/python3.12/importlib/__init__.py:90: in import_module\n    return _bootstrap._gcd_import(name[level:], package, level)\n.gizli/test_gizli.py:5: in <module>\n    from genel_kurul import GenelKurulTakvimi, turkce_upper, toplantilari_sirala\nE   ImportError: cannot import name 'turkce_upper' from 'genel_kurul' (/home/usta/is/cad0e5f61b4f/genel_kurul.py)\n=========================== short test summary info ============================\nERROR .gizli/test_gizli.py\n!!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!\n1 error in 0.18s\n"
+ }
+}

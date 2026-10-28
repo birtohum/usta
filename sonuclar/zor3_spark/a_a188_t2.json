@@ -1,0 +1,24 @@
+{
+ "id": "a188",
+ "kip": "a",
+ "tekrar": 2,
+ "kategori": "CSV/JSON ile çalışan ve uç durumları çok olan veri işleme (BOM, ; ayırıcı, 1.234,56 sayı biçimi, boş/bozuk satır)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "vardiya_cli.py yazıldı ve doğrulandı: utf-8-sig + noktalı virgül CSV okuma (tırnaklı alanlar korunur, boş satırlar atlanır), Decimal ile Türkçe sayı ayrıştırma, bozuk satır sayacı, yokluk kontrolü önce (exit 2), başlık hatası exit 3, günlük 8,00 üstü fazla mesai, ROUND_HALF_UP yuvarlama, Türkçe alt harf gruplama (I→ı, İ→i), ücret eşitliğinde Türkçe ada göre + sicil_no sıralaması, boş CSV'de boş sonuç, --ucret yoksa JSON saat_ucreti yoksa exit 4.",
+ "adim": 10,
+ "yurutucu_token": {
+  "girdi": 50287,
+  "cikti": 40368
+ },
+ "yurutucu_usd": 0.0131023,
+ "bitirdi": true,
+ "sure_sn": 454.9,
+ "gizli": {
+  "gecti": true,
+  "gecen": 20,
+  "toplam": 20,
+  "cikti": "....................                                                     [100%]\n20 passed in 1.60s\n"
+ }
+}

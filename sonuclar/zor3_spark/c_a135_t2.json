@@ -1,0 +1,59 @@
+{
+ "id": "a135",
+ "kip": "c",
+ "tekrar": 2,
+ "kategori": "Türkçe büyük/küçük harf (İ/i, I/ı), Türk alfabesiyle sıralama, sayıyı yazıya çevirme, ünlü uyumuna göre ek",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 31,
+   "basarili": 31
+  }
+ ],
+ "spark_usd": 0.0287795,
+ "arayuz": "",
+ "kabul_yazar": 1,
+ "mutasyon": {
+  "mutant": 9,
+  "ham_mutant": 16,
+  "turlar": [
+   {
+    "oldurulen": 6,
+    "toplam": 9
+   },
+   {
+    "oldurulen": 8,
+    "toplam": 9
+   },
+   {
+    "oldurulen": 8,
+    "toplam": 9
+   }
+  ],
+  "hayatta": [
+   "sira_sozcugu: 1 için birinci yazımı gereksinimini çiğner"
+  ]
+ },
+ "hakem": [],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [],
+ "kabul_test_sayisi": 31,
+ "kabul_gecti": true,
+ "ozet": "kart.py yazıldı: tr_baslik_ad, oda_iyelik, sira_sozcugu, kat_sirala. pytest 5 test geçti.",
+ "adim": 9,
+ "yurutucu_token": {
+  "girdi": 23553,
+  "cikti": 60260
+ },
+ "yurutucu_usd": 0.014407300000000001,
+ "bitirdi": true,
+ "sure_sn": 806.3,
+ "gizli": {
+  "gecti": true,
+  "gecen": 24,
+  "toplam": 24,
+  "cikti": "........................                                                 [100%]\n24 passed in 0.03s\n"
+ }
+}

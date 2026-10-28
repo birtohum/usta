@@ -1,0 +1,26 @@
+{
+ "id": "a148",
+ "kip": "c",
+ "tekrar": 3,
+ "kategori": "CSV/JSON ile çalışan ve uç durumları çok olan veri işleme (BOM, ; ayırıcı, 1.234,56 sayı biçimi, boş/bozuk satır)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0001618,
+ "arayuz": "",
+ "kabul_gecti": false,
+ "dogrulanamadi": true,
+ "ozet": "nareksisi_parti.py içinde birlestir işlevi yazıldı: CSV utf-8-sig/;/çift-tırnak ile okunuyor, başlık strip+birebir doğrulanıyor, Türkçe sayılar Decimal ile çözülüyor, boş/ayıraçlı satırlar atlanıp sütun hatasında ValueError veriliyor, JSON utf-8-sig ile okunup sonuclar yoksa ValueError veriliyor, puan briks-asitlik*katsayı Decimal ROUND_HALF_UP ile hesaplanıyor, isimler I→ı/İ→i+casefold ile eşleşiyor, briks>=68 kabul ediliyor, liste puan azalan/Türkçe alfabetik/id artan sıralanıyor, hata önceliği FileNotFoundError>ValueError ve boş veri [] dönüyor. 12 pytest testi geçiyor.",
+ "adim": 19,
+ "yurutucu_token": {
+  "girdi": 188773,
+  "cikti": 60789
+ },
+ "yurutucu_usd": 0.031035100000000003,
+ "sure_sn": 717.0,
+ "gizli": {
+  "gecti": false,
+  "gecen": 7,
+  "toplam": 22,
+  "cikti": "   raise ValueError(f\"baslik hatali: {baslik_temiz!r}\")\nE               ValueError: baslik hatali: ['kimlik', 'uretici', 'miktar', 'briks']\n\nnareksisi_parti.py:96: ValueError\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_normal_birlestirme - ValueError: baslik hat...\nFAILED .gizli/test_gizli.py::test_red_durumu - ValueError: baslik hatali: ['k...\nFAILED .gizli/test_gizli.py::test_esik_68_kabul - ValueError: baslik hatali: ...\nFAILED .gizli/test_gizli.py::test_esik_alti_red - ValueError: baslik hatali: ...\nFAILED .gizli/test_gizli.py::test_binlik_nokta_virgul - ValueError: baslik ha...\nFAILED .gizli/test_gizli.py::test_bos_satir_atlama - ValueError: baslik hatal...\nFAILED .gizli/test_gizli.py::test_ayirici_bosluk_satir_atlama - ValueError: b...\nFAILED .gizli/test_gizli.py::test_baslik_bosluk_trim - ValueError: baslik hat...\nFAILED .gizli/test_gizli.py::test_yuvarlama_half_up - ValueError: baslik hata...\nFAILED .gizli/test_gizli.py::test_isim_eslestirme_I - ValueError: baslik hata...\nFAILED .gizli/test_gizli.py::test_isim_eslestirme_dottedI_strip - ValueError:...\nFAILED .gizli/test_gizli.py::test_siralama_puan_azalan - ValueError: baslik h...\nFAILED .gizli/test_gizli.py::test_siralama_turkce_alfabe - ValueError: baslik...\nFAILED .gizli/test_gizli.py::test_bos_liste - ValueError: baslik hatali: ['ki...\nFAILED .gizli/test_gizli.py::test_cift_tirnak_ayirici - ValueError: baslik ha...\n15 failed, 7 passed in 0.22s\n"
+ }
+}

@@ -1,0 +1,24 @@
+{
+ "id": "a143",
+ "kip": "a",
+ "tekrar": 2,
+ "kategori": "CSV/JSON ile çalışan ve uç durumları çok olan veri işleme (BOM, ; ayırıcı, 1.234,56 sayı biçimi, boş/bozuk satır)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": null,
+ "adim": 6,
+ "yurutucu_token": {
+  "girdi": 11124,
+  "cikti": 48809
+ },
+ "yurutucu_usd": 0.0108742,
+ "bitirdi": false,
+ "sure_sn": 477.1,
+ "gizli": {
+  "gecti": false,
+  "gecen": 3,
+  "toplam": 21,
+  "cikti": "b/python3.12/pathlib.py:1015: FileNotFoundError\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_01_temel_atama - assert 2 == 0\nFAILED .gizli/test_gizli.py::test_02_tam_esit_yeterli - assert 2 == 0\nFAILED .gizli/test_gizli.py::test_03_fire_hesabi_yetersiz - assert 2 == 0\nFAILED .gizli/test_gizli.py::test_04_turkce_sayi_stok - assert 2 == 0\nFAILED .gizli/test_gizli.py::test_05_turkce_sayi_siparis_string - assert 2 == 0\nFAILED .gizli/test_gizli.py::test_06_bozuk_satirlar_atlanir - assert 2 == 0\nFAILED .gizli/test_gizli.py::test_07_bos_satirlar_yoksayilir - assert 2 == 0\nFAILED .gizli/test_gizli.py::test_08_tur_normalizasyon_I - assert 2 == 0\nFAILED .gizli/test_gizli.py::test_09_en_kisa_uygun - assert 2 == 0\nFAILED .gizli/test_gizli.py::test_10_boy_esit_kimlik_alfabetik - assert 2 == 0\nFAILED .gizli/test_gizli.py::test_11_kimlik_kucuk_harf_karsilastirma - assert...\nFAILED .gizli/test_gizli.py::test_12_kullanim_orani_yuvarlama - assert 2 == 0\nFAILED .gizli/test_gizli.py::test_13_kullanim_yarim_yukari - assert 2 == 0\nFAILED .gizli/test_gizli.py::test_14_hic_gecerli_stok_yok - assert 2 == 0\nFAILED .gizli/test_gizli.py::test_17_baslik_hatasi_cikis3 - assert 2 == 3\nFAILED .gizli/test_gizli.py::test_18_json_bozuk_cikis3 - assert 2 == 3\nFAILED .gizli/test_gizli.py::test_19_json_yapi_hatasi_cikis3 - assert 2 == 3\nFAILED .gizli/test_gizli.py::test_21_stdlib_siniri - FileNotFoundError: [Errn...\n18 failed, 3 passed in 0.58s\n"
+ }
+}

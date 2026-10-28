@@ -1,0 +1,24 @@
+{
+ "id": "a168",
+ "kip": "a",
+ "tekrar": 2,
+ "kategori": "CSV/JSON ile çalışan ve uç durumları çok olan veri işleme (BOM, ; ayırıcı, 1.234,56 sayı biçimi, boş/bozuk satır)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": null,
+ "adim": 20,
+ "yurutucu_token": {
+  "girdi": 131429,
+  "cikti": 74601
+ },
+ "yurutucu_usd": 0.028063100000000004,
+ "bitirdi": false,
+ "sure_sn": 859.4,
+ "gizli": {
+  "gecti": false,
+  "gecen": 0,
+  "toplam": 2,
+  "cikti": "\n==================================== ERRORS ====================================\n____________________ ERROR collecting .gizli/test_gizli.py _____________________\n/usr/lib/python3/dist-packages/_pytest/python.py:617: in _importtestmodule\n    mod = import_path(self.path, mode=importmode, root=self.config.rootpath)\n/usr/lib/python3/dist-packages/_pytest/pathlib.py:567: in import_path\n    importlib.import_module(module_name)\n/usr/lib/python3.12/importlib/__init__.py:90: in import_module\n    return _bootstrap._gcd_import(name[level:], package, level)\n<frozen importlib._bootstrap>:1387: in _gcd_import\n    ???\n<frozen importlib._bootstrap>:1360: in _find_and_load\n    ???\n<frozen importlib._bootstrap>:1331: in _find_and_load_unlocked\n    ???\n<frozen importlib._bootstrap>:935: in _load_unlocked\n    ???\n/usr/lib/python3/dist-packages/_pytest/assertion/rewrite.py:186: in exec_module\n    exec(co, module.__dict__)\n.gizli/test_gizli.py:6: in <module>\n    from yaprak_bidon import BidonTakip\nE     File \"/home/usta/is/0468fa17d685/yaprak_bidon.py\", line 140\nE       n = len(baslik)\nE       ^\nE   SyntaxError: expected 'except' or 'finally' block\n=========================== short test summary info ============================\nERROR .gizli/test_gizli.py\n!!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!\n1 error in 0.22s\n"
+ }
+}

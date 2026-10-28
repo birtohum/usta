@@ -1,0 +1,24 @@
+{
+ "id": "a203",
+ "kip": "b",
+ "tekrar": 2,
+ "kategori": "CSV/JSON ile çalışan ve uç durumları çok olan veri işleme (BOM, ; ayırıcı, 1.234,56 sayı biçimi, boş/bozuk satır)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "bakir_fire_cli.py yazıldı: utf-8-sig + noktalı virgül CSV okuma, boş satır yoksayma, Decimal Türkçe sayı ayrıştırma, exit 2/3 kontrolleri (yokluk önce), ROUND_HALF_UP %2 ondalık, tam 2,50 limit-dışı değil, parti_id birebir + tedarikçi Türkçe küçük harf (standart lower yok), eşit oranda parti_id artan sıralama, sıfır payda bozuk, boş girişte boş rapor, --limit > fire.json > 2,50 önceliği ve TR biçimli kg string çıktısı. pytest 13 test geçti.",
+ "adim": 13,
+ "yurutucu_token": {
+  "girdi": 102510,
+  "cikti": 43289
+ },
+ "yurutucu_usd": 0.0189088,
+ "bitirdi": true,
+ "sure_sn": 472.5,
+ "gizli": {
+  "gecti": false,
+  "gecen": 18,
+  "toplam": 21,
+  "cikti": "      \"giren_kg\": \"1.000,00\",\\n      \"cikan_kg\": \"976,55\",\\n      \"fire_orani\": 2.35,\\n      \"limit_disi\": false\\n    }\\n  ],\\n  \"bozuk_satir\": 0,\\n  \"limit_disi\": 0\\n}'\n\n.gizli/test_gizli.py:163: AssertionError\n____________________________ test_turkce_kucuk_harf ____________________________\n\ntmp_path = PosixPath('/home/usta/is/c11dd14175de/.tmp/pytest-of-usta/pytest-1/test_turkce_kucuk_harf0')\n\n    def test_turkce_kucuk_harf(tmp_path):\n        g = tmp_path / \"giris.csv\"\n        f = tmp_path / \"fire.json\"\n        c = tmp_path / \"rapor.json\"\n        write_csv(g, \"parti_id;giren_kg;cikan_kg;tedarikci\\nP001;100,00;98,00;ISPARTA\\n\")\n        write_fire(f, {\"limit\": \"50,00\"})\n        r = run_cli(g, f, c)\n        assert r.returncode == 0\n        txt = pathlib.Path(c).read_text(encoding=\"utf-8\")\n>       assert \"\\u0131sparta\" in txt\nE       assert 'ısparta' in '{\\n  \"partiler\": [\\n    {\\n      \"parti_id\": \"P001\",\\n      \"giren_kg\": \"100,00\",\\n      \"cikan_kg\": \"98,00\",\\n      ...2.0,\\n      \"limit_disi\": false,\\n      \"tedarikci\": \"ISPARTA\"\\n    }\\n  ],\\n  \"bozuk_satir\": 0,\\n  \"limit_disi\": 0\\n}'\n\n.gizli/test_gizli.py:187: AssertionError\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_tam_sinir_limit_disi_degil - assert '2,50' ...\nFAILED .gizli/test_gizli.py::test_round_half_up - assert '2,35' in '{\\n  \"par...\nFAILED .gizli/test_gizli.py::test_turkce_kucuk_harf - assert 'ısparta' in '{\\...\n3 failed, 18 passed in 2.21s\n"
+ }
+}

@@ -1,0 +1,53 @@
+{
+ "id": "a189",
+ "kip": "c",
+ "tekrar": 2,
+ "kategori": "KDV, tevkifat, stopaj, taksit ve kuruş yuvarlama (Decimal, ROUND_HALF_UP, satır bazında ve toplamda yuvarlama farkı)",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 38,
+   "basarili": 38
+  }
+ ],
+ "spark_usd": 0.024719,
+ "arayuz": "",
+ "kabul_yazar": 2,
+ "mutasyon": {
+  "mutant": 14,
+  "ham_mutant": 14,
+  "turlar": [
+   {
+    "oldurulen": 12,
+    "toplam": 14
+   },
+   {
+    "oldurulen": 14,
+    "toplam": 14
+   }
+  ],
+  "hayatta": []
+ },
+ "hakem": [],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [],
+ "kabul_test_sayisi": 38,
+ "kabul_gecti": true,
+ "ozet": "siirt_perde.py yazıldı, 9 pytest testi geçti.",
+ "adim": 7,
+ "yurutucu_token": {
+  "girdi": 19015,
+  "cikti": 45083
+ },
+ "yurutucu_usd": 0.010918099999999998,
+ "bitirdi": true,
+ "sure_sn": 879.3,
+ "gizli": {
+  "gecti": false,
+  "gecen": 19,
+  "toplam": 21,
+  "cikti": "................F..F.                                                    [100%]\n=================================== FAILURES ===================================\n___________________________ test_iskonto_5000_uzeri ____________________________\n\n    def test_iskonto_5000_uzeri():\n        f = PerdeFaturasi()\n        f.satir_ekle(\"perde\", \"10\", \"600\", 10)\n        t = f.toplamlar()\n>       assert t[\"ara_toplam\"] == Decimal(\"5880.00\")\nE       AssertionError: assert Decimal('6000.00') == Decimal('5880.00')\nE        +  where Decimal('5880.00') = Decimal('5880.00')\n\n.gizli/test_gizli.py:134: AssertionError\n___________________ test_fis_metni_esitlikte_eklenme_sirasi ____________________\n\n    def test_fis_metni_esitlikte_eklenme_sirasi():\n        f = PerdeFaturasi()\n        f.satir_ekle(\"perde\", \"1\", \"10\", 10)\n        f.satir_ekle(\"perde\", \"2\", \"10\", 10)\n        m = f.fis_metni()\n>       ilk = m.index(\"0|PERDE\")\nE       ValueError: substring not found\n\n.gizli/test_gizli.py:169: ValueError\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_iskonto_5000_uzeri - AssertionError: assert...\nFAILED .gizli/test_gizli.py::test_fis_metni_esitlikte_eklenme_sirasi - ValueE...\n2 failed, 19 passed in 0.19s\n"
+ }
+}

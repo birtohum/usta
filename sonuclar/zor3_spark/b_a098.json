@@ -1,0 +1,24 @@
+{
+ "id": "a098",
+ "kip": "b",
+ "tekrar": 1,
+ "kategori": "CSV/JSON ile çalışan ve uç durumları çok olan veri işleme (BOM, ; ayırıcı, 1.234,56 sayı biçimi, boş/bozuk satır)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "`uzum_kurutma.py` içinde `kurutma_raporu` yazıldı: utf-8-sig/`;` okuma, Türkçe sayı çözümleme, kuru ağırlık hesabı, Türkçe gruplama ve sıralı rapor üretimi ile hata öncelikleri uygulandı. 16 pytest testi geçiyor.",
+ "adim": 4,
+ "yurutucu_token": {
+  "girdi": 17235,
+  "cikti": 17451
+ },
+ "yurutucu_usd": 0.0052137,
+ "bitirdi": true,
+ "sure_sn": 162.1,
+ "gizli": {
+  "gecti": true,
+  "gecen": 21,
+  "toplam": 21,
+  "cikti": ".....................                                                    [100%]\n21 passed in 0.10s\n"
+ }
+}

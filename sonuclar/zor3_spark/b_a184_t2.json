@@ -1,0 +1,24 @@
+{
+ "id": "a184",
+ "kip": "b",
+ "tekrar": 2,
+ "kategori": "KDV, tevkifat, stopaj, taksit ve kuruş yuvarlama (Decimal, ROUND_HALF_UP, satır bazında ve toplamda yuvarlama farkı)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "bartin_kereste.py yazıldı: kereste_taksitlendir Decimal+ROUND_HALF_UP ile matrah/KDV/vade farkı/taksit hesabı yapar, tek taksitte vade sıfır, boş/sıfır brütte sıfır listesi döner, tip→aralık→negatif sırasıyla TypeError/ValueError verir; Türkçe küçük harf (I→ı, İ→i) ve stabil sıralama eklendi. pytest ile 5 test geçti.",
+ "adim": 12,
+ "yurutucu_token": {
+  "girdi": 58590,
+  "cikti": 45461
+ },
+ "yurutucu_usd": 0.014951200000000001,
+ "bitirdi": true,
+ "sure_sn": 495.2,
+ "gizli": {
+  "gecti": false,
+  "gecen": 18,
+  "toplam": 20,
+  "cikti": ".FF.................                                                     [100%]\n=================================== FAILURES ===================================\n__________________________ test_02_half_up_yuvarlama ___________________________\n\n    def test_02_half_up_yuvarlama():\n        r = kereste_taksitlendir(\"1.005\", 0, 1, \"0.00\")\n        assert r[\"matrah\"] == Decimal(\"1.01\")\n>       assert r[\"kdv_tutari\"] == Decimal(\"1.005\") - Decimal(\"1.01\")\nE       AssertionError: assert Decimal('-0.01') == (Decimal('1.005') - Decimal('1.01'))\nE        +  where Decimal('1.005') = Decimal('1.005')\nE        +  and   Decimal('1.01') = Decimal('1.01')\n\n.gizli/test_gizli.py:14: AssertionError\n___________________________ test_03_vade_tek_seferde ___________________________\n\n    def test_03_vade_tek_seferde():\n        r = kereste_taksitlendir(\"1180.00\", 18, 2, \"0.10\")\n>       assert r[\"vade_farki\"] == Decimal(\"100.00\")\nE       AssertionError: assert Decimal('1.00') == Decimal('100.00')\nE        +  where Decimal('100.00') = Decimal('100.00')\n\n.gizli/test_gizli.py:18: AssertionError\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_02_half_up_yuvarlama - AssertionError: asse...\nFAILED .gizli/test_gizli.py::test_03_vade_tek_seferde - AssertionError: asser...\n2 failed, 18 passed in 0.08s\n"
+ }
+}

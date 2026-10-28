@@ -1,0 +1,70 @@
+{
+ "id": "a006",
+ "kip": "c",
+ "tekrar": 3,
+ "kategori": "CSV/JSON ile çalışan ve uç durumları çok olan veri işleme (BOM, ; ayırıcı, 1.234,56 sayı biçimi, boş/bozuk satır)",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 61,
+   "basarili": 61
+  }
+ ],
+ "spark_usd": 0.013671100000000002,
+ "arayuz": "",
+ "kabul_yazar": 3,
+ "mutasyon": {
+  "mutant": 16,
+  "ham_mutant": 16,
+  "turlar": [
+   {
+    "oldurulen": 12,
+    "toplam": 16
+   },
+   {
+    "oldurulen": 15,
+    "toplam": 16
+   },
+   {
+    "oldurulen": 15,
+    "toplam": 16
+   }
+  ],
+  "hayatta": [
+   "adet 0 ise satira katilmamali gereksinimini cigner, 0 degerini toplama dahil eder"
+  ]
+ },
+ "hakem": [
+  {
+   "test": ".usta_kabul/test_kabul_m1.py::test_tamamen_bos_satir_atlanir",
+   "karar": "belirsiz",
+   "gerekce": "Görev metni tamamen boş satırın yalnızca ayraç içeren ;; satırını kapsayıp kapsamadığını açıkça tanımlamıyor.",
+   "tur": 1
+  }
+ ],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [
+  ".usta_kabul/test_kabul_m1.py::test_adet_sifir_toplama_katilmamali",
+  ".usta_kabul/test_kabul_m2.py::test_adet_sifir_gecersiz_kdv_gormezden_gelir",
+  ".usta_kabul/test_kabul_m1.py::test_tamamen_bos_satir_atlanir"
+ ],
+ "kabul_test_sayisi": 61,
+ "kabul_gecti": true,
+ "ozet": "fatura_toplami.py içinde topla(csv_yolu) yazıldı: utf-8-sig ve `;` ile okuma, birebir başlık kontrolü, Türkçe tutar ayrıştırma, boş tutar=0, boş adet=1, adet 0 satırı atlama, kdv 1/10/20 dışı ValueError, satır bazında ROUND_HALF_UP yuvarlama, boş satır atlama, bozuk satır sayımı, FileNotFoundError önceliği ve toplam/kdv_toplam/bozuk_satir sözlüğü. test_fatura.py ile 18 test `python -m pytest -q` altında geçti.",
+ "adim": 4,
+ "yurutucu_token": {
+  "girdi": 12333,
+  "cikti": 18310
+ },
+ "yurutucu_usd": 0.0048953,
+ "bitirdi": true,
+ "sure_sn": 1043.1,
+ "gizli": {
+  "gecti": false,
+  "gecen": 9,
+  "toplam": 21,
+  "cikti": "test-of-usta/pytest-2/test_utf8sig_ile_okuma0')\n\n    def test_utf8sig_ile_okuma(tmp_path):\n        p = yaz(tmp_path, content=\"tutar;adet;kdv_oran\\n10,00;1;10\\n\", encoding=\"utf-8-sig\")\n        r = topla(p)\n>       assert r[\"toplam\"] == pytest.approx(10.0)\nE       assert 11.0 == 10.0 ± 1.0e-05\nE         comparison failed\nE         Obtained: 11.0\nE         Expected: 10.0 ± 1.0e-05\n\n.gizli/test_gizli.py:139: AssertionError\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_normal_tek_satir - assert 22.0 == 20.0 ± 2....\nFAILED .gizli/test_gizli.py::test_binlik_nokta_cozumu - assert 1481.47 == 123...\nFAILED .gizli/test_gizli.py::test_bos_adet_bir_sayilir - assert 22.0 == 20.0 ...\nFAILED .gizli/test_gizli.py::test_sifir_adet_toplama_katilmaz - assert 11.0 =...\nFAILED .gizli/test_gizli.py::test_kdv_oranlari_gecerli - assert 331.0 == 300....\nFAILED .gizli/test_gizli.py::test_yuvarlama_half_up - assert 1.11 == 1.01 ± 1...\nFAILED .gizli/test_gizli.py::test_yuvarlama_toplam_yuvarlanmislarin_toplami\nFAILED .gizli/test_gizli.py::test_bos_satirlar_atlanir - assert 22.0 == 20.0 ...\nFAILED .gizli/test_gizli.py::test_eksik_sutun_bozuk - assert 5.5 == 5.0 ± 5.0...\nFAILED .gizli/test_gizli.py::test_sayiya_cevrilemeyen_tutar_bozuk - assert 5....\nFAILED .gizli/test_gizli.py::test_sayiya_cevrilemeyen_adet_bozuk - assert 5.5...\nFAILED .gizli/test_gizli.py::test_utf8sig_ile_okuma - assert 11.0 == 10.0 ± 1...\n12 failed, 9 passed in 0.48s\n"
+ }
+}

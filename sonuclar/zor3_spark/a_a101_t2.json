@@ -1,0 +1,24 @@
+{
+ "id": "a101",
+ "kip": "a",
+ "tekrar": 2,
+ "kategori": "tarih ve saat: resmî tatiller parametreyle, iş günü hesabı, Türkiye saat dilimi (UTC+3, yaz saati yok), gün/ay adları Türkçe",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "bakim_sla.py oluşturuldu: kesinti_suresi_is_saati yalnızca Z/+00:00 UTC girdiyi kabul edip +3 saatle TR'ye çevirir, Pzt-Cuma 08:00-18:00 kesişimini mikrosaniye toplamından tabana yuvarlayarak dakika döndürür, tatil kümesi ve hafta sonu hariç tutar; gun_adi YYYY-MM-DD'den Türkçe gün adı döndürür. Doğrulama sırası zaman-tatil-sıralama olup tüm hata durumlarında ValueError yükseltilir, yalnızca standart kütüphane kullanılır.",
+ "adim": 10,
+ "yurutucu_token": {
+  "girdi": 49744,
+  "cikti": 22226
+ },
+ "yurutucu_usd": 0.0094196,
+ "bitirdi": true,
+ "sure_sn": 240.4,
+ "gizli": {
+  "gecti": true,
+  "gecen": 20,
+  "toplam": 20,
+  "cikti": "....................                                                     [100%]\n20 passed in 0.10s\n"
+ }
+}

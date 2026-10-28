@@ -1,0 +1,69 @@
+{
+ "id": "a206",
+ "kip": "c",
+ "tekrar": 1,
+ "kategori": "tarih ve saat: resmî tatiller parametreyle, iş günü hesabı, Türkiye saat dilimi (UTC+3, yaz saati yok), gün/ay adları Türkçe",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 51,
+   "basarili": 51
+  }
+ ],
+ "spark_usd": 0.0095683,
+ "arayuz": "",
+ "kabul_yazar": 3,
+ "mutasyon": {
+  "mutant": 14,
+  "ham_mutant": 14,
+  "turlar": [
+   {
+    "oldurulen": 12,
+    "toplam": 14
+   },
+   {
+    "oldurulen": 14,
+    "toplam": 14
+   }
+  ],
+  "hayatta": []
+ },
+ "hakem": [
+  {
+   "test": ".usta_kabul/test_kabul_m1.py::test_adet_sifir_cikis_kodu_iki",
+   "karar": "belirsiz",
+   "gerekce": "Görev metni adet sıfırın geçerli olup olmadığını ve çıkış kodunu açıkça belirtmiyor.",
+   "tur": 1
+  },
+  {
+   "test": ".usta_kabul/test_kabul_m1.py::test_adet_sifir_tatiller_ile_de_hata",
+   "karar": "belirsiz",
+   "gerekce": "Görev metni adet sıfırın geçerli olup olmadığını ve çıkış kodunu açıkça belirtmiyor.",
+   "tur": 1
+  }
+ ],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [
+  ".usta_kabul/test_kabul_m1.py::test_adet_sifir_cikis_kodu_iki",
+  ".usta_kabul/test_kabul_m1.py::test_adet_sifir_tatiller_ile_de_hata"
+ ],
+ "kabul_test_sayisi": 51,
+ "kabul_gecti": true,
+ "ozet": "muayene_cli.py yazıldı: iş günü hesabı (Pazar kapalı, Cumartesi bayraklı, tatiller hariç), başlangıç dahil adet üretim, Europe/Istanbul bilinçli tarihler, Türkçe gün/ay adları, Türkçe küçük harf (I→ı, İ→i), sıra numaralı sıralama, kısmi gün yukarı yuvarlama, hata kodu 2. 15 pytest testi geçiyor.",
+ "adim": 6,
+ "yurutucu_token": {
+  "girdi": 26543,
+  "cikti": 10923
+ },
+ "yurutucu_usd": 0.0048389,
+ "bitirdi": true,
+ "sure_sn": 488.2,
+ "gizli": {
+  "gecti": true,
+  "gecen": 20,
+  "toplam": 20,
+  "cikti": "....................                                                     [100%]\n20 passed in 2.05s\n"
+ }
+}

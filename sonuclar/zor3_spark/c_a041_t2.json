@@ -1,0 +1,53 @@
+{
+ "id": "a041",
+ "kip": "c",
+ "tekrar": 2,
+ "kategori": "çok dosyalı küçük modül: iki-üç dosyaya bölünmüş, ortak hata sınıfları ve bir komut satırı girişi olan araç",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 57,
+   "basarili": 57
+  }
+ ],
+ "spark_usd": 0.0113222,
+ "arayuz": "",
+ "kabul_yazar": 3,
+ "mutasyon": {
+  "mutant": 14,
+  "ham_mutant": 14,
+  "turlar": [
+   {
+    "oldurulen": 12,
+    "toplam": 14
+   },
+   {
+    "oldurulen": 14,
+    "toplam": 14
+   }
+  ],
+  "hayatta": []
+ },
+ "hakem": [],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [],
+ "kabul_test_sayisi": 57,
+ "kabul_gecti": true,
+ "ozet": "Desi ücret aracı yazıldı: hatalar.py (ValueError soyundan OlcuHatasi, IlHatasi), kargo.py (tavana yuvarlanan desi_hesapla, kuruş cinsinden kademeli ucret_hesapla, Türkçe duyarsız il denetimi, tip>ölçü>il hata önceliği, tek satır JSON yazan `python -m kargo hesap` CLI). 25 pytest testi yazıldı ve hepsi geçti.",
+ "adim": 10,
+ "yurutucu_token": {
+  "girdi": 32524,
+  "cikti": 27802
+ },
+ "yurutucu_usd": 0.0088128,
+ "bitirdi": true,
+ "sure_sn": 682.0,
+ "gizli": {
+  "gecti": true,
+  "gecen": 20,
+  "toplam": 20,
+  "cikti": "....................                                                     [100%]\n20 passed in 0.48s\n"
+ }
+}

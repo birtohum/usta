@@ -1,0 +1,24 @@
+{
+ "id": "a157",
+ "kip": "a",
+ "tekrar": 1,
+ "kategori": "çok dosyalı küçük modül: iki-üç dosyaya bölünmüş, ortak hata sınıfları ve bir komut satırı girişi olan araç",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "hatalar.py, mermer.py ve cli.py dosyaları yazıldı. Türkçe kimlik normalleştirme, döndürmeli kesim hesabı, hata öncelikleri ve CLI çıktı formatı uygulandı.",
+ "adim": 7,
+ "yurutucu_token": {
+  "girdi": 19582,
+  "cikti": 37825
+ },
+ "yurutucu_usd": 0.0095232,
+ "bitirdi": true,
+ "sure_sn": 363.1,
+ "gizli": {
+  "gecti": false,
+  "gecen": 19,
+  "toplam": 21,
+  "cikti": "    def kesim_hesapla(self, blok_id: str, plaka_en: int, plaka_boy: int, pay_mm: int) -> int:\n        nid = _normalize_id(blok_id)\n        if not _pozitif_int(plaka_en) or not _pozitif_int(plaka_boy) or not _pay_gecerli(pay_mm):\n            raise GirdiHatasi(\"olcu pozitif tam sayi olmali\")\n        if nid not in self._bloklar:\n            raise GirdiHatasi(\"blok bulunamadi\")\n        ben, bboy = self._bloklar[nid]\n        adet = self._adet_hesap(ben, bboy, plaka_en, plaka_boy, pay_mm)\n        if adet <= 0:\n>           raise SigdirilamazHatasi(\"sigmiyor\")\nE           hatalar.SigdirilamazHatasi: sigmiyor\n\nmermer.py:62: SigdirilamazHatasi\n_________________________ test_13_kesim_girdi_kontrol __________________________\n\n    def test_13_kesim_girdi_kontrol():\n        s = BlokStogu()\n        s.blok_ekle(\"G\", 500, 500)\n        with pytest.raises(GirdiHatasi):\n            s.kesim_hesapla(\"G\", 0, 100, 5)\n        with pytest.raises(GirdiHatasi):\n            s.kesim_hesapla(\"G\", 100, -1, 5)\n>       with pytest.raises(GirdiHatasi):\nE       Failed: DID NOT RAISE <class 'hatalar.GirdiHatasi'>\n\n.gizli/test_gizli.py:120: Failed\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_08_tam_esit_sigar - hatalar.SigdirilamazHat...\nFAILED .gizli/test_gizli.py::test_13_kesim_girdi_kontrol - Failed: DID NOT RA...\n2 failed, 19 passed in 0.66s\n"
+ }
+}

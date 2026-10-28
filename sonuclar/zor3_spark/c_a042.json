@@ -1,0 +1,63 @@
+{
+ "id": "a042",
+ "kip": "c",
+ "tekrar": 1,
+ "kategori": "CSV/JSON ile çalışan ve uç durumları çok olan veri işleme (BOM, ; ayırıcı, 1.234,56 sayı biçimi, boş/bozuk satır)",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 15,
+   "basarili": 15
+  }
+ ],
+ "spark_usd": 0.0314855,
+ "arayuz": "",
+ "kabul_yazar": 1,
+ "mutasyon": {
+  "mutant": 15,
+  "ham_mutant": 15,
+  "turlar": [
+   {
+    "oldurulen": 10,
+    "toplam": 15
+   },
+   {
+    "oldurulen": 10,
+    "toplam": 15
+   },
+   {
+    "oldurulen": 10,
+    "toplam": 15
+   }
+  ],
+  "hayatta": [
+   "basliklari aynen arama gereksinimini cigner",
+   "dilimler artan ust sinir listesi degilse ValueError gereksinimini cigner",
+   "tam sinir degerine esit gelir alt dilime dahil gereksinimini cigner",
+   "tamamen bos satirlar atlanmali gereksinimini cigner",
+   "gelir esitliginde tc numarasina gore artan yedek kural gereksinimini cigner"
+  ]
+ },
+ "hakem": [],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [],
+ "kabul_test_sayisi": 15,
+ "kabul_gecti": true,
+ "ozet": "vergi_dilimi.py yazıldı: Türkçe sayı, dilim vergisi (ROUND_HALF_UP), sıralama ve hata kuralları uygulandı; 7 pytest geçti.",
+ "adim": 8,
+ "yurutucu_token": {
+  "girdi": 30627,
+  "cikti": 34981
+ },
+ "yurutucu_usd": 0.010058899999999999,
+ "bitirdi": true,
+ "sure_sn": 1123.0,
+ "gizli": {
+  "gecti": true,
+  "gecen": 20,
+  "toplam": 20,
+  "cikti": "....................                                                     [100%]\n20 passed in 0.13s\n"
+ }
+}

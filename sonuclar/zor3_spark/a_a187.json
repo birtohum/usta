@@ -1,0 +1,24 @@
+{
+ "id": "a187",
+ "kip": "a",
+ "tekrar": 1,
+ "kategori": "çok dosyalı küçük modül: iki-üç dosyaya bölünmüş, ortak hata sınıfları ve bir komut satırı girişi olan araç",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "Salda Gölü kamp aracı yazıldı: hatalar.py (4 hata sınıfı), kamp.py (KampAlani: rezervasyon/ucret/doluluk; TR küçük harf dönüşümü, yarı-açık çakışma, R-0001 artan kimlik, 400/700 TL + %10 indirim + 25 kWh muafiyet, Decimal ROUND_HALF_UP, hata önceliği tarih>tip>dolu) ve cli.py (tek satır JSON çıktıları, kalıcı dosya tabanlı kimlik sayacı). Tüm kurallar test edildi.",
+ "adim": 13,
+ "yurutucu_token": {
+  "girdi": 79565,
+  "cikti": 31176
+ },
+ "yurutucu_usd": 0.014191700000000002,
+ "bitirdi": true,
+ "sure_sn": 336.8,
+ "gizli": {
+  "gecti": true,
+  "gecen": 22,
+  "toplam": 22,
+  "cikti": "......................                                                   [100%]\n22 passed in 0.19s\n"
+ }
+}

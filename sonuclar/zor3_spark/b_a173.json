@@ -1,0 +1,24 @@
+{
+ "id": "a173",
+ "kip": "b",
+ "tekrar": 1,
+ "kategori": "CSV/JSON ile çalışan ve uç durumları çok olan veri işleme (BOM, ; ayırıcı, 1.234,56 sayı biçimi, boş/bozuk satır)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "leblebi_sevkiyat.py yazıldı: planla() CSV'yi utf-8-sig/';' ile okur, boş satırları atlar, başlık kontrolünü önce yapar (FileNotFoundError/ValueError), Türkçe sayıları Decimal ile ayrıştırıp bozuk satırları sayar, fire>3.00 reddeder, net stokları HALF_UP ile yuvarlar, Türkçe alt-harf (I->ı, İ->i) ile müşteri gruplar, en erken tarih+küçük parti_id ile FIFO düşer, tam 4 anahtarlı Türkçe biçimli sözlük döndürür. 9 pytest testi geçiyor.",
+ "adim": 20,
+ "yurutucu_token": {
+  "girdi": 226539,
+  "cikti": 54395
+ },
+ "yurutucu_usd": 0.03353290000000001,
+ "bitirdi": true,
+ "sure_sn": 614.4,
+ "gizli": {
+  "gecti": false,
+  "gecen": 19,
+  "toplam": 21,
+  "cikti": "        s = planla(str(c), str(j))\n        assert s['karsilanan_kg'] == '0,00'\n>       assert s['eksik_kg'] == '0,00'\nE       AssertionError: assert '10,00' == '0,00'\nE         - 0,00\nE         + 10,00\nE         ? +\n\n.gizli/test_gizli.py:101: AssertionError\n_____________________________ test_hic_saglam_yok ______________________________\n\ntmp_path = PosixPath('/home/usta/is/560d8e585f8c/.tmp/pytest-of-usta/pytest-5/test_hic_saglam_yok0')\n\n    def test_hic_saglam_yok(tmp_path):\n        c = tmp_path / 'p.csv'; j = tmp_path / 's.json'\n        _csv_yaz(c, ['parti_id','tarih','miktar','fire_orani'], [['P1','2024-01-01','100,00','5,00']])\n        _json_yaz(j, [{'musteri':'Ali','miktar':'10,00'}])\n        s = planla(str(c), str(j))\n        assert s['karsilanan_kg'] == '0,00'\n>       assert s['eksik_kg'] == '0,00'\nE       AssertionError: assert '10,00' == '0,00'\nE         - 0,00\nE         + 10,00\nE         ? +\n\n.gizli/test_gizli.py:139: AssertionError\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_fire_ustu_red - AssertionError: assert '10,...\nFAILED .gizli/test_gizli.py::test_hic_saglam_yok - AssertionError: assert '10...\n2 failed, 19 passed in 0.13s\n"
+ }
+}

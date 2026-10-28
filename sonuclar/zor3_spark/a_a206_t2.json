@@ -1,0 +1,24 @@
+{
+ "id": "a206",
+ "kip": "a",
+ "tekrar": 2,
+ "kategori": "tarih ve saat: resmî tatiller parametreyle, iş günü hesabı, Türkiye saat dilimi (UTC+3, yaz saati yok), gün/ay adları Türkçe",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "muayene_cli.py yazıldı: --baslangic/--adet/--tatiller/--cumartesi-acik bayraklarını işler, Europe/Istanbul bilinçli tarihlerle yalnızca iş günlerini sayar (Pazar kapalı, Cumartesi bayrakla açık, tatiller atlanır), istenen Türkçe çıktı biçimini üretir, geçersiz tarih ve eksik bayrakta çıkış kodu 2 ile stderr'e yazar; yalnızca standart kütüphane kullanır.",
+ "adim": 9,
+ "yurutucu_token": {
+  "girdi": 29586,
+  "cikti": 15283
+ },
+ "yurutucu_usd": 0.0060152,
+ "bitirdi": true,
+ "sure_sn": 192.2,
+ "gizli": {
+  "gecti": true,
+  "gecen": 20,
+  "toplam": 20,
+  "cikti": "....................                                                     [100%]\n20 passed in 1.38s\n"
+ }
+}

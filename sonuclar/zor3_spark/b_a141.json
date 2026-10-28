@@ -1,0 +1,24 @@
+{
+ "id": "a141",
+ "kip": "b",
+ "tekrar": 1,
+ "kategori": "tarih ve saat: resmî tatiller parametreyle, iş günü hesabı, Türkiye saat dilimi (UTC+3, yaz saati yok), gün/ay adları Türkçe",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "vardiya.py içinde VardiyaPlani sınıfı yazıldı: TR saati, iş günü hesabı, Türkçe i/ı çevrimi, sıralama ve hata önceliği uygulandı; pytest ile 15 test geçti.",
+ "adim": 7,
+ "yurutucu_token": {
+  "girdi": 21089,
+  "cikti": 42590
+ },
+ "yurutucu_usd": 0.010626900000000002,
+ "bitirdi": true,
+ "sure_sn": 419.0,
+ "gizli": {
+  "gecti": true,
+  "gecen": 21,
+  "toplam": 21,
+  "cikti": ".....................                                                    [100%]\n21 passed in 0.05s\n"
+ }
+}

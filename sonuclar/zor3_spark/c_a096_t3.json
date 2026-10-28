@@ -1,0 +1,53 @@
+{
+ "id": "a096",
+ "kip": "c",
+ "tekrar": 3,
+ "kategori": "tarih ve saat: resmî tatiller parametreyle, iş günü hesabı, Türkiye saat dilimi (UTC+3, yaz saati yok), gün/ay adları Türkçe",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 53,
+   "basarili": 53
+  }
+ ],
+ "spark_usd": 0.0107838,
+ "arayuz": "",
+ "kabul_yazar": 3,
+ "mutasyon": {
+  "mutant": 15,
+  "ham_mutant": 15,
+  "turlar": [
+   {
+    "oldurulen": 12,
+    "toplam": 15
+   },
+   {
+    "oldurulen": 15,
+    "toplam": 15
+   }
+  ],
+  "hayatta": []
+ },
+ "hakem": [],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [],
+ "kabul_test_sayisi": 53,
+ "kabul_gecti": true,
+ "ozet": "liman_cli.py uygulandı: varış sonrası ilk iş gününden başlayan serbest gün sayımı, ardiye başlangıcı, json/metin çıktısı, Türkçe gün/ay adları, hata durumunda stderr + çıkış 2. pytest ile 20 test geçti.",
+ "adim": 7,
+ "yurutucu_token": {
+  "girdi": 29999,
+  "cikti": 15561
+ },
+ "yurutucu_usd": 0.0061121000000000005,
+ "bitirdi": true,
+ "sure_sn": 670.7,
+ "gizli": {
+  "gecti": false,
+  "gecen": 20,
+  "toplam": 21,
+  "cikti": "..........F..........                                                    [100%]\n=================================== FAILURES ===================================\n__________________________ test_metin_tek_haneli_gun ___________________________\n\n    def test_metin_tek_haneli_gun():\n        r = calistir(\"--varis\", \"2026-01-01\", \"--serbest-gun\", \"0\", \"--tatiller\", \"\", \"--cikti\", \"metin\")\n        assert r.returncode == 0\n>       assert r.stdout.strip() == \"2 Ocak 2026 Cuma\"\nE       AssertionError: assert '02 Ocak 2026 Cuma' == '2 Ocak 2026 Cuma'\nE         - 2 Ocak 2026 Cuma\nE         + 02 Ocak 2026 Cuma\nE         ? +\n\n.gizli/test_gizli.py:80: AssertionError\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_metin_tek_haneli_gun - AssertionError: asse...\n1 failed, 20 passed in 1.24s\n"
+ }
+}

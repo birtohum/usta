@@ -1,0 +1,24 @@
+{
+ "id": "a138",
+ "kip": "a",
+ "tekrar": 3,
+ "kategori": "CSV/JSON ile çalışan ve uç durumları çok olan veri işleme (BOM, ; ayırıcı, 1.234,56 sayı biçimi, boş/bozuk satır)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "sabun_parti.py içinde PartiTakip sınıfı yazıldı: utf-8-sig/; CSV, TR sayı ayrıştırma, İ→i normalizasyon, stok toplama, reçete çarpımı, yetersizlikte düşmeme, yarım-yukarı 2 ondalık maliyet, ValueError/KeyError kuralları uygulandı.",
+ "adim": 12,
+ "yurutucu_token": {
+  "girdi": 40659,
+  "cikti": 48134
+ },
+ "yurutucu_usd": 0.013692700000000002,
+ "bitirdi": true,
+ "sure_sn": 556.3,
+ "gizli": {
+  "gecti": false,
+  "gecen": 7,
+  "toplam": 20,
+  "cikti": "========\n.gizli/test_gizli.py:191\n  /home/usta/is/65bbcd434187/.gizli/test_gizli.py:191: SyntaxWarning: invalid escape sequence '\\.'\n    for yasak in ['socket', 'requests', 'urllib', 'random', 'import time', 'import datetime', 'os\\.system', 'subprocess']:\n\n-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_csv_bom_noktali_virgul_baslik_bos_satir - V...\nFAILED .gizli/test_gizli.py::test_turkce_sayi_cozumleme - ValueError: başlık ...\nFAILED .gizli/test_gizli.py::test_malzeme_normalizasyon_toplama - AssertionEr...\nFAILED .gizli/test_gizli.py::test_recete_adet_carpimi - ValueError: başlık ha...\nFAILED .gizli/test_gizli.py::test_tam_esit_yeterli - ValueError: başlık hatası\nFAILED .gizli/test_gizli.py::test_yetersizde_stok_dusmez - ValueError: başlık...\nFAILED .gizli/test_gizli.py::test_uretim_dusme_ve_maliyet - ValueError: başlı...\nFAILED .gizli/test_gizli.py::test_maliyet_yarim_yukari - ValueError: başlık h...\nFAILED .gizli/test_gizli.py::test_maliyet_sadece_toplam_yuvarlanir - ValueErr...\nFAILED .gizli/test_gizli.py::test_donus_anahtarlari - ValueError: başlık hatası\nFAILED .gizli/test_gizli.py::test_basarisiz_maliyet_sifir_kalan_kopya - Value...\nFAILED .gizli/test_gizli.py::test_gecersiz_stok_sifir_uretim_basarisiz - Valu...\nFAILED .gizli/test_gizli.py::test_bilinmeyen_malzeme - ValueError: başlık hatası\n13 failed, 7 passed, 1 warning in 0.14s\n"
+ }
+}

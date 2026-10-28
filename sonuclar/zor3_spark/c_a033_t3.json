@@ -1,0 +1,55 @@
+{
+ "id": "a033",
+ "kip": "c",
+ "tekrar": 3,
+ "kategori": "Türkçe büyük/küçük harf (İ/i, I/ı), Türk alfabesiyle sıralama, sayıyı yazıya çevirme, ünlü uyumuna göre ek",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 46,
+   "basarili": 46
+  }
+ ],
+ "spark_usd": 0.0081514,
+ "arayuz": "",
+ "kabul_yazar": 3,
+ "mutasyon": {
+  "mutant": 14,
+  "ham_mutant": 14,
+  "turlar": [
+   {
+    "oldurulen": 14,
+    "toplam": 14
+   }
+  ],
+  "hayatta": []
+ },
+ "hakem": [],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [
+  ".usta_kabul/test_kabul_1.py::test_hitap_unlu_sonunda_y_kaynastirma",
+  ".usta_kabul/test_kabul_1.py::test_hitap_yonelme_false_normalize",
+  ".usta_kabul/test_kabul_1.py::test_tam_unvan_basit_kucuk_harf",
+  ".usta_kabul/test_kabul_1.py::test_tam_unvan_bastaki_sondaki_coklu_bosluk",
+  ".usta_kabul/test_kabul_1.py::test_tam_unvan_tireli_isim"
+ ],
+ "kabul_test_sayisi": 46,
+ "kabul_gecti": true,
+ "ozet": "kart.py içinde MusteriKart sınıfı yazıldı: Türkçe'ye uygun baş harf büyütme (i→İ, I→ı), boşluk normalizasyonu, tireli parçaları ayrı büyütme, hitap() için son sözcüğün son ünlüsüne göre a/e eki ve ünlüyle bitenlerde y kaynaştırması ile Sayın ön eki, yonelme=False'da yalnız normalize ad, __init__'te TypeError öncelikli tip denetimi ve boş/rakamla başlayan sözcük için ValueError. pytest ile 17 test geçti.",
+ "adim": 4,
+ "yurutucu_token": {
+  "girdi": 10306,
+  "cikti": 11660
+ },
+ "yurutucu_usd": 0.0033626000000000003,
+ "bitirdi": true,
+ "sure_sn": 311.0,
+ "gizli": {
+  "gecti": true,
+  "gecen": 21,
+  "toplam": 21,
+  "cikti": ".....................                                                    [100%]\n21 passed in 0.09s\n"
+ }
+}

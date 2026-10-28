@@ -1,0 +1,24 @@
+{
+ "id": "a077",
+ "kip": "b",
+ "tekrar": 1,
+ "kategori": "çok dosyalı küçük modül: iki-üç dosyaya bölünmüş, ortak hata sınıfları ve bir komut satırı girişi olan araç",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "hatalar.py (ValueError'dan doğrudan türeyen OgrenciHatasi/LimitHatasi), veresiye.py (strip+Türkçe küçük harf eşleşme, 1-20000 tutar kontrolü, 50000 limit, Türkçe özel sıralı listeleme, hata öncelik sırası) ve cli.py (--ogrenci/--islem/--tutar ile tek satır Bakiye çıktısı) yazıldı; 12 pytest testi geçti.",
+ "adim": 6,
+ "yurutucu_token": {
+  "girdi": 21949,
+  "cikti": 19675
+ },
+ "yurutucu_usd": 0.006129900000000001,
+ "bitirdi": true,
+ "sure_sn": 194.7,
+ "gizli": {
+  "gecti": true,
+  "gecen": 20,
+  "toplam": 20,
+  "cikti": "....................                                                     [100%]\n20 passed in 0.20s\n"
+ }
+}

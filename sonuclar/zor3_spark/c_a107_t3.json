@@ -1,0 +1,59 @@
+{
+ "id": "a107",
+ "kip": "c",
+ "tekrar": 3,
+ "kategori": "çok dosyalı küçük modül: iki-üç dosyaya bölünmüş, ortak hata sınıfları ve bir komut satırı girişi olan araç",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 59,
+   "basarili": 59
+  }
+ ],
+ "spark_usd": 0.011549,
+ "arayuz": "",
+ "kabul_yazar": 3,
+ "mutasyon": {
+  "mutant": 16,
+  "ham_mutant": 16,
+  "turlar": [
+   {
+    "oldurulen": 13,
+    "toplam": 16
+   },
+   {
+    "oldurulen": 15,
+    "toplam": 16
+   },
+   {
+    "oldurulen": 15,
+    "toplam": 16
+   }
+  ],
+  "hayatta": [
+   "plaka strip sonrasi bos olamaz gereksinimi"
+  ]
+ },
+ "hakem": [],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [],
+ "kabul_test_sayisi": 59,
+ "kabul_gecti": true,
+ "ozet": "hatalar.py (YuklemeHatasi/KapasiteHatasi), feribot.py (Kuyruk: Türkçe duyarsız yineleme, öncelikli doğrulama, boy/agirlik sıralaması) ve cli.py (--ekle/--listele, normalize çıktı, stderr HATA + çıkış 2) yazıldı; 23 pytest testi geçiyor.",
+ "adim": 8,
+ "yurutucu_token": {
+  "girdi": 30803,
+  "cikti": 21854
+ },
+ "yurutucu_usd": 0.007451100000000001,
+ "bitirdi": true,
+ "sure_sn": 701.7,
+ "gizli": {
+  "gecti": true,
+  "gecen": 21,
+  "toplam": 21,
+  "cikti": ".....................                                                    [100%]\n21 passed in 0.27s\n"
+ }
+}

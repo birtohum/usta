@@ -1,0 +1,53 @@
+{
+ "id": "a057",
+ "kip": "c",
+ "tekrar": 3,
+ "kategori": "Türkçe büyük/küçük harf (İ/i, I/ı), Türk alfabesiyle sıralama, sayıyı yazıya çevirme, ünlü uyumuna göre ek",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 60,
+   "basarili": 60
+  }
+ ],
+ "spark_usd": 0.0097911,
+ "arayuz": "",
+ "kabul_yazar": 3,
+ "mutasyon": {
+  "mutant": 16,
+  "ham_mutant": 16,
+  "turlar": [
+   {
+    "oldurulen": 15,
+    "toplam": 16
+   },
+   {
+    "oldurulen": 16,
+    "toplam": 16
+   }
+  ],
+  "hayatta": []
+ },
+ "hakem": [],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [],
+ "kabul_test_sayisi": 60,
+ "kabul_gecti": true,
+ "ozet": "yonetabela.py içinde YonEkiUretici.ekle(isim, hal, ozel) yazıldı: son ünlüye göre kalın/ince (a/ı/o/u→a, e/i/ö/ü→e) ve tamlayanda dörtlü uyum (a/ı→ı, e/i→i, o/u→u, ö/ü→ü); ünlüyle bitende yönelme y, tamlayan n kaynaştırma; özel adlarda kesme işareti, ek küçük harf; tip kontrolü değer kontrolünden önce (TypeError öncelikli), boş isim ve geçersiz halde ValueError. 14 pytest testi geçiyor.",
+ "adim": 5,
+ "yurutucu_token": {
+  "girdi": 15301,
+  "cikti": 20445
+ },
+ "yurutucu_usd": 0.0056191,
+ "bitirdi": true,
+ "sure_sn": 620.2,
+ "gizli": {
+  "gecti": true,
+  "gecen": 22,
+  "toplam": 22,
+  "cikti": "......................                                                   [100%]\n22 passed in 0.08s\n"
+ }
+}

@@ -1,0 +1,59 @@
+{
+ "id": "a020",
+ "kip": "c",
+ "tekrar": 3,
+ "kategori": "KDV, tevkifat, stopaj, taksit ve kuruş yuvarlama (Decimal, ROUND_HALF_UP, satır bazında ve toplamda yuvarlama farkı)",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 55,
+   "basarili": 55
+  }
+ ],
+ "spark_usd": 0.007591100000000001,
+ "arayuz": "",
+ "kabul_yazar": 3,
+ "mutasyon": {
+  "mutant": 15,
+  "ham_mutant": 15,
+  "turlar": [
+   {
+    "oldurulen": 14,
+    "toplam": 15
+   },
+   {
+    "oldurulen": 14,
+    "toplam": 15
+   },
+   {
+    "oldurulen": 14,
+    "toplam": 15
+   }
+  ],
+  "hayatta": [
+   "bos dize toplam veya bos dize oran ValueError vermeli"
+  ]
+ },
+ "hakem": [],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [],
+ "kabul_test_sayisi": 55,
+ "kabul_gecti": true,
+ "ozet": "taksit.py içinde taksitlendir fonksiyonunu Decimal + ROUND_HALF_UP ile uyguladım: borç önce vade farkıyla bulunup 2 basamağa yuvarlanıyor, eşit pay yuvarlanıp fark son taksite ekleniyor, kalan borç-kümülatif olarak hesaplanıyor; tip/sınır kontrolleri (1-12, oran 0-1, pozitif toplam, boş dize, TypeError önceliği) eklendi. 12 pytest testi yazıldı ve hepsi geçti.",
+ "adim": 7,
+ "yurutucu_token": {
+  "girdi": 20656,
+  "cikti": 16682
+ },
+ "yurutucu_usd": 0.0054020000000000006,
+ "bitirdi": true,
+ "sure_sn": 806.3,
+ "gizli": {
+  "gecti": true,
+  "gecen": 22,
+  "toplam": 22,
+  "cikti": "......................                                                   [100%]\n22 passed in 0.16s\n"
+ }
+}

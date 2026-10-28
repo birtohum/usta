@@ -1,0 +1,24 @@
+{
+ "id": "a041",
+ "kip": "a",
+ "tekrar": 1,
+ "kategori": "çok dosyalı küçük modül: iki-üç dosyaya bölünmüş, ortak hata sınıfları ve bir komut satırı girişi olan araç",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "hatalar.py ve kargo.py yazıldı: desi=ceil(hacim/3000), 1-200 ölçü kontrolü, Türkçe duyarsız 81 il doğrulaması, 50/51 standart-ağır ayrımı, %10 kampanya indirimi, tip>ölçü>il hata önceliği ve `python -m kargo hesap ...` tek satır JSON çıktısı doğrulandı.",
+ "adim": 14,
+ "yurutucu_token": {
+  "girdi": 59869,
+  "cikti": 51290
+ },
+ "yurutucu_usd": 0.0162449,
+ "bitirdi": true,
+ "sure_sn": 460.6,
+ "gizli": {
+  "gecti": true,
+  "gecen": 20,
+  "toplam": 20,
+  "cikti": "....................                                                     [100%]\n20 passed in 0.15s\n"
+ }
+}

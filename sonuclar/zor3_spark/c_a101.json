@@ -1,0 +1,53 @@
+{
+ "id": "a101",
+ "kip": "c",
+ "tekrar": 1,
+ "kategori": "tarih ve saat: resmî tatiller parametreyle, iş günü hesabı, Türkiye saat dilimi (UTC+3, yaz saati yok), gün/ay adları Türkçe",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 53,
+   "basarili": 53
+  }
+ ],
+ "spark_usd": 0.010595000000000002,
+ "arayuz": "Kökte bakim_sla.py; kesinti_suresi_is_saati(baslangic_iso_utc: str, bitis_iso_utc: str, tatiller: list[str]) -> int; gun_adi(tarih: str) -> str, tarih YYYY-MM-DD biçimindedir.",
+ "kabul_yazar": 3,
+ "mutasyon": {
+  "mutant": 15,
+  "ham_mutant": 15,
+  "turlar": [
+   {
+    "oldurulen": 13,
+    "toplam": 15
+   },
+   {
+    "oldurulen": 15,
+    "toplam": 15
+   }
+  ],
+  "hayatta": []
+ },
+ "hakem": [],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [],
+ "kabul_test_sayisi": 53,
+ "kabul_gecti": true,
+ "ozet": "bakim_sla.py oluşturuldu: UTC girdiler sıkı ISO8601 denetimiyle (+3 saat TR dönüşümü), hafta içi 08:00-18:00 kesişimi gün gün toplanıp mikrosaniye toplamından aşağı yuvarlanarak dakikaya çevrilir; tatiller set ile tek sayılır, hafta sonu/tatil hariç tutulur. gun_adi doğru Türkçe gün adını döndürür. Doğrulama sırası (zaman→tatil→sıralama) ve ValueError kuralları uygulandı. test_sla.py ile 20 test yazıldı, `python -m pytest -q` hepsi geçti.",
+ "adim": 20,
+ "yurutucu_token": {
+  "girdi": 161183,
+  "cikti": 37020
+ },
+ "yurutucu_usd": 0.023522300000000006,
+ "bitirdi": true,
+ "sure_sn": 693.5,
+ "gizli": {
+  "gecti": true,
+  "gecen": 20,
+  "toplam": 20,
+  "cikti": "....................                                                     [100%]\n20 passed in 0.07s\n"
+ }
+}

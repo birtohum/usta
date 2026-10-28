@@ -1,0 +1,178 @@
+{
+ "id": "a180",
+ "kip": "c",
+ "tekrar": 3,
+ "kategori": "Türkçe büyük/küçük harf (İ/i, I/ı), Türk alfabesiyle sıralama, sayıyı yazıya çevirme, ünlü uyumuna göre ek",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": false,
+   "toplam": 51,
+   "basarili": 36
+  },
+  {
+   "gecti": true,
+   "toplam": 51,
+   "basarili": 51
+  }
+ ],
+ "spark_usd": 0.014511100000000002,
+ "arayuz": "",
+ "kabul_yazar": 3,
+ "mutasyon": {
+  "mutant": 15,
+  "ham_mutant": 15,
+  "turlar": [
+   {
+    "oldurulen": 13,
+    "toplam": 15
+   },
+   {
+    "oldurulen": 15,
+    "toplam": 15
+   }
+  ],
+  "hayatta": []
+ },
+ "hakem": [
+  {
+   "test": ".usta_kabul/test_kabul_1.py::test_ad_bos_valueerror",
+   "karar": "gerekli",
+   "gerekce": "Görev boş adın ValueError ile 2 kodla bitmesini açıkça istiyor.",
+   "tur": 1
+  },
+  {
+   "test": ".usta_kabul/test_kabul_1.py::test_ad_sadece_bosluk_valueerror",
+   "karar": "gerekli",
+   "gerekce": "Görev yalnızca boşluklardan oluşan adın ValueError ile 2 kodla bitmesini açıkça istiyor.",
+   "tur": 1
+  },
+  {
+   "test": ".usta_kabul/test_kabul_1.py::test_kasa_aralik_disi_alt",
+   "karar": "gerekli",
+   "gerekce": "Görev kasanın 1-200 dahil tam sayı olmasını açıkça istiyor.",
+   "tur": 1
+  },
+  {
+   "test": ".usta_kabul/test_kabul_1.py::test_kasa_aralik_disi_ust",
+   "karar": "gerekli",
+   "gerekce": "Görev kasanın 1-200 dahil tam sayı olmasını açıkça istiyor.",
+   "tur": 1
+  },
+  {
+   "test": ".usta_kabul/test_kabul_1.py::test_kasa_tip_hatasi",
+   "karar": "gerekli",
+   "gerekce": "Görev kasanın tam sayı olmasını ve önce tip sonra aralık denetimini açıkça istiyor.",
+   "tur": 1
+  },
+  {
+   "test": ".usta_kabul/test_kabul_1.py::test_kilo_aralik_disi_alt",
+   "karar": "gerekli",
+   "gerekce": "Görev kilonun 0-5000 dahil aralıkta olmasını açıkça istiyor.",
+   "tur": 1
+  },
+  {
+   "test": ".usta_kabul/test_kabul_1.py::test_kilo_aralik_disi_ust",
+   "karar": "gerekli",
+   "gerekce": "Görev kilonun 0-5000 dahil aralıkta olmasını açıkça istiyor.",
+   "tur": 1
+  },
+  {
+   "test": ".usta_kabul/test_kabul_1.py::test_kilo_tip_hatasi",
+   "karar": "gerekli",
+   "gerekce": "Görev kilonun sayı olmasını ve önce tip sonra aralık denetimini açıkça istiyor.",
+   "tur": 1
+  },
+  {
+   "test": ".usta_kabul/test_kabul_2.py::test_eksik_bayrak_ve_tip_aralik_onceligi",
+   "karar": "gerekli",
+   "gerekce": "Görev eksik bayrak önceliğini ve önce tip sonra aralık sırasını açıkça istiyor.",
+   "tur": 1
+  },
+  {
+   "test": ".usta_kabul/test_kabul_2.py::test_kasa_aralik_disi_gecersiz",
+   "karar": "gerekli",
+   "gerekce": "Görev kasanın 1-200 dahil aralıkta olmasını açıkça istiyor.",
+   "tur": 1
+  },
+  {
+   "test": ".usta_kabul/test_kabul_2.py::test_kasa_sinirlar_gecerli",
+   "karar": "hatali",
+   "gerekce": "Görev adet sözcüğünü isterken test bitişik 1 kasa alt dizesini şart koşuyor.",
+   "tur": 1
+  },
+  {
+   "test": ".usta_kabul/test_kabul_2.py::test_kasa_tekil_kalir",
+   "karar": "hatali",
+   "gerekce": "Görev adetli yazımı isterken test bitişik 5 kasa alt dizesini şart koşuyor.",
+   "tur": 1
+  },
+  {
+   "test": ".usta_kabul/test_kabul_2.py::test_kasa_tip_gecersiz",
+   "karar": "gerekli",
+   "gerekce": "Görev kasanın tam sayı olmasını ve tip denetimini açıkça istiyor.",
+   "tur": 1
+  },
+  {
+   "test": ".usta_kabul/test_kabul_2.py::test_kilo_aralik_disi_gecersiz",
+   "karar": "gerekli",
+   "gerekce": "Görev kilonun 0-5000 dahil aralıkta olmasını açıkça istiyor.",
+   "tur": 1
+  },
+  {
+   "test": ".usta_kabul/test_kabul_2.py::test_musteri_bos_ValueError",
+   "karar": "gerekli",
+   "gerekce": "Görev boş ve boşluk adın ValueError ile 2 kodla bitmesini açıkça istiyor.",
+   "tur": 1
+  },
+  {
+   "test": ".usta_kabul/test_kabul_3.py::test_ad_bos_valueerror_2_kod",
+   "karar": "gerekli",
+   "gerekce": "Görev boş adın ValueError ile 2 kodla bitmesini açıkça istiyor.",
+   "tur": 1
+  },
+  {
+   "test": ".usta_kabul/test_kabul_3.py::test_ad_yalnizca_bosluk_valueerror_2_kod",
+   "karar": "gerekli",
+   "gerekce": "Görev yalnızca boşluk adın ValueError ile 2 kodla bitmesini açıkça istiyor.",
+   "tur": 1
+  },
+  {
+   "test": ".usta_kabul/test_kabul_m1.py::test_kesir_sifir_ile_yazilir_01",
+   "karar": "belirsiz",
+   "gerekce": "Görev kesirdeki baştaki sıfırın sıfır diye okunmasını belirtmiyor.",
+   "tur": 1
+  },
+  {
+   "test": ".usta_kabul/test_kabul_m1.py::test_kesir_sifir_ile_yazilir_05",
+   "karar": "belirsiz",
+   "gerekce": "Görev kesirdeki baştaki sıfırın sıfır diye okunmasını belirtmiyor.",
+   "tur": 1
+  }
+ ],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [
+  ".usta_kabul/test_kabul_2.py::test_kasa_sinirlar_gecerli",
+  ".usta_kabul/test_kabul_2.py::test_kasa_tekil_kalir",
+  ".usta_kabul/test_kabul_m1.py::test_kesir_sifir_ile_yazilir_01",
+  ".usta_kabul/test_kabul_m1.py::test_kesir_sifir_ile_yazilir_05"
+ ],
+ "kabul_test_sayisi": 51,
+ "kabul_gecti": true,
+ "ozet": null,
+ "adim": 17,
+ "yurutucu_token": {
+  "girdi": 176024,
+  "cikti": 50730
+ },
+ "yurutucu_usd": 0.0277484,
+ "bitirdi": false,
+ "sure_sn": 875.2,
+ "gizli": {
+  "gecti": true,
+  "gecen": 23,
+  "toplam": 23,
+  "cikti": ".......................                                                  [100%]\n23 passed in 0.49s\n"
+ }
+}

@@ -1,0 +1,24 @@
+{
+ "id": "a001",
+ "kip": "a",
+ "tekrar": 2,
+ "kategori": "Türkiye'ye özgü kimlik ve hesap numaraları (TC kimlik, VKN, IBAN, MERSİS, plaka, telefon) — birden çok kuralın birlikte uygulandığı",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "mersis_denetim.py dosyasında mersis_dogrula ve mersis_son_haneyi_hesapla işlevlerini yazdım. Ağırlıklı toplam formülünü (tek konum x3, çift konum x1, son hane = (10 - toplam%10)%10) uyguladım, hata önceliğini tip > boş girdi > uzunluk > rakam > ilk hane sıfır > sağlama olarak kurdum, ayraçları temizlemeden reddettim ve 15 sıfır sınır durumunda \"0\" döndürdüm. Testlerle doğrulayıp geçici dosyayı temizledim.",
+ "adim": 6,
+ "yurutucu_token": {
+  "girdi": 21595,
+  "cikti": 17249
+ },
+ "yurutucu_usd": 0.0056093,
+ "bitirdi": true,
+ "sure_sn": 179.6,
+ "gizli": {
+  "gecti": true,
+  "gecen": 22,
+  "toplam": 22,
+  "cikti": "......................                                                   [100%]\n22 passed in 0.05s\n"
+ }
+}

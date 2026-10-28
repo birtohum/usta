@@ -1,0 +1,74 @@
+{
+ "id": "a029",
+ "kip": "c",
+ "tekrar": 2,
+ "kategori": "çok dosyalı küçük modül: iki-üç dosyaya bölünmüş, ortak hata sınıfları ve bir komut satırı girişi olan araç",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 53,
+   "basarili": 53
+  }
+ ],
+ "spark_usd": 0.0174676,
+ "arayuz": "",
+ "kabul_yazar": 3,
+ "mutasyon": {
+  "mutant": 14,
+  "ham_mutant": 14,
+  "turlar": [
+   {
+    "oldurulen": 10,
+    "toplam": 14
+   },
+   {
+    "oldurulen": 13,
+    "toplam": 14
+   },
+   {
+    "oldurulen": 14,
+    "toplam": 14
+   }
+  ],
+  "hayatta": []
+ },
+ "hakem": [
+  {
+   "test": ".usta_kabul/test_kabul_m1.py::test_liste_baslangica_gore_dizilir",
+   "karar": "hatali",
+   "gerekce": "Test genel API yerine görevde tanımlanmayan özel iç alan adlarına enjekte yapıp KeyError üretiyor.",
+   "tur": 1
+  },
+  {
+   "test": ".usta_kabul/test_kabul_m1.py::test_liste_esit_baslangic_numerik_kimlik",
+   "karar": "hatali",
+   "gerekce": "Test genel API yerine görevde tanımlanmayan özel iç alan adlarına enjekte yapıp KeyError üretiyor.",
+   "tur": 1
+  }
+ ],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [
+  ".usta_kabul/test_kabul_m1.py::test_cli_liste_kimlik_baslangic_bitis",
+  ".usta_kabul/test_kabul_m1.py::test_liste_baslangica_gore_dizilir",
+  ".usta_kabul/test_kabul_m1.py::test_liste_esit_baslangic_numerik_kimlik"
+ ],
+ "kabul_test_sayisi": 53,
+ "kabul_gecti": true,
+ "ozet": "Berber randevu aracı tamamlandı: hatalar.py (ValueError soyundan SaatHatasi, CakismaHatasi), randevu.py (RandevuTakvimi: ekle/iptal/liste, HH:MM doğrulama, artan kimlik, yarı-açık aralık çakışma, sıralı liste, öncelikli hatalar, `python -m randevu ekle/liste` CLI). 13 pytest testi geçiyor.",
+ "adim": 19,
+ "yurutucu_token": {
+  "girdi": 175098,
+  "cikti": 49934
+ },
+ "yurutucu_usd": 0.027496599999999996,
+ "bitirdi": true,
+ "sure_sn": 1071.7,
+ "gizli": {
+  "gecti": false,
+  "gecen": 20,
+  "toplam": 21,
+  "cikti": ".............F.......                                                    [100%]\n=================================== FAILURES ===================================\n____________________ test_liste_esit_baslangic_kimlige_gore ____________________\n\n    def test_liste_esit_baslangic_kimlige_gore():\n        t = RandevuTakvimi()\n        t.ekle(\"09:00\", \"09:30\")\n        t._randevular.append({\"kimlik\": \"5\", \"baslangic\": \"10:00\", \"bitis\": \"10:30\"})\n        t._randevular.append({\"kimlik\": \"3\", \"baslangic\": \"10:00\", \"bitis\": \"10:30\"})\n>       lst = t.liste()\n\n.gizli/test_gizli.py:107: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \nrandevu.py:180: in liste\n    sirali = sorted(\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nr = {'baslangic': '10:00', 'bitis': '10:30', 'kimlik': '5'}\n\n>       self._randevular, key=lambda r: (r[\"_b_dk\"], int(r[\"kimlik\"]))\n    )\nE   KeyError: '_b_dk'\n\nrandevu.py:181: KeyError\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_liste_esit_baslangic_kimlige_gore - KeyErro...\n1 failed, 20 passed in 0.35s\n"
+ }
+}

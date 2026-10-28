@@ -1,0 +1,64 @@
+{
+ "id": "a050",
+ "kip": "c",
+ "tekrar": 1,
+ "kategori": "KDV, tevkifat, stopaj, taksit ve kuruş yuvarlama (Decimal, ROUND_HALF_UP, satır bazında ve toplamda yuvarlama farkı)",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 53,
+   "basarili": 53
+  }
+ ],
+ "spark_usd": 0.012540800000000001,
+ "arayuz": "",
+ "kabul_yazar": 3,
+ "mutasyon": {
+  "mutant": 16,
+  "ham_mutant": 16,
+  "turlar": [
+   {
+    "oldurulen": 12,
+    "toplam": 16
+   },
+   {
+    "oldurulen": 15,
+    "toplam": 16
+   },
+   {
+    "oldurulen": 15,
+    "toplam": 16
+   }
+  ],
+  "hayatta": [
+   "ROUND_HALF_UP yerine varsayilan round kullanma gereksinimini cigner"
+  ]
+ },
+ "hakem": [],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [
+  ".usta_kabul/test_kabul_1.py::test_casefold_ile_birlestirme_ve_yazim_koruma",
+  ".usta_kabul/test_kabul_2.py::test_turkce_casefold_birlestirme",
+  ".usta_kabul/test_kabul_3.py::test_turkce_casefold_birlesme_orijinal_yazim",
+  ".usta_kabul/test_kabul_3.py::test_yuvarlama_farki_raporlanir"
+ ],
+ "kabul_test_sayisi": 53,
+ "kabul_gecti": true,
+ "ozet": "adisyon.py içinde AdisyonHesaplayici yazıldı: Decimal+ROUND_HALF_UP, satır matrah/KDV kuruş yuvarlama, toplamlar yuvarlanmış satırların toplamı, yuvarlama_farki raporlanıp toplamlara eklenmiyor, KDV yalnızca 0.01/0.10/0.20, hata önceliği TypeError→ValueError, casefold+Türkçe I/ı normalizasyonla birleştirme ve orijinal yazımı koruma, sorted ile stabil sıralama. 14 pytest testi geçti.",
+ "adim": 13,
+ "yurutucu_token": {
+  "girdi": 92441,
+  "cikti": 35160
+ },
+ "yurutucu_usd": 0.016276099999999998,
+ "bitirdi": true,
+ "sure_sn": 777.7,
+ "gizli": {
+  "gecti": false,
+  "gecen": 19,
+  "toplam": 20,
+  "cikti": "...F................                                                     [100%]\n=================================== FAILURES ===================================\n_____________________________ test_04_kdv_half_up ______________________________\n\n    def test_04_kdv_half_up():\n        h = AdisyonHesaplayici()\n        h.ekle(\"Somon\", \"1\", \"10.05\", \"0.10\")\n        s = h.toplam()\n        assert s[\"satirlar\"][0][\"matrah\"] == \"10.05\"\n>       assert s[\"satirlar\"][0][\"kdv_tutar\"] == \"1.01\"\nE       KeyError: 'kdv_tutar'\n\n.gizli/test_gizli.py:38: KeyError\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_04_kdv_half_up - KeyError: 'kdv_tutar'\n1 failed, 19 passed in 0.10s\n"
+ }
+}

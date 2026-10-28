@@ -1,0 +1,62 @@
+{
+ "id": "a221",
+ "kip": "c",
+ "tekrar": 1,
+ "kategori": "tarih ve saat: resmî tatiller parametreyle, iş günü hesabı, Türkiye saat dilimi (UTC+3, yaz saati yok), gün/ay adları Türkçe",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 53,
+   "basarili": 53
+  }
+ ],
+ "spark_usd": 0.0234642,
+ "arayuz": "",
+ "kabul_yazar": 3,
+ "mutasyon": {
+  "mutant": 14,
+  "ham_mutant": 14,
+  "turlar": [
+   {
+    "oldurulen": 10,
+    "toplam": 14
+   },
+   {
+    "oldurulen": 10,
+    "toplam": 14
+   },
+   {
+    "oldurulen": 10,
+    "toplam": 14
+   }
+  ],
+  "hayatta": [
+   "cikti etiket DD iki haneli olmalidir, sifirsiz gun yazar",
+   "--kucuk Turkce kuralla kucultur I harfi i degil i olur, standart lower kullanir",
+   "--sure ondaliksiz tamsayi metni olmalidir, ondalikli degeri kabul eder",
+   "--tatiller dosya yoklugu hata kodu 3 vermelidir, yakalamayi bozup traceback uretir"
+  ]
+ },
+ "hakem": [],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [],
+ "kabul_test_sayisi": 53,
+ "kabul_gecti": true,
+ "ozet": "denetim_cli.py yazıldı: iş günü hesabı (hafta sonu+tatil hariç, başvuru günü sayılmaz, N=0 kuralı), iso/etiket çıktısı, Türkçe küçük harf (--kucuk), öncelikli hata mesajları ve çıkış kodları (2/3). 39 pytest testi geçiyor.",
+ "adim": 17,
+ "yurutucu_token": {
+  "girdi": 186497,
+  "cikti": 43391
+ },
+ "yurutucu_usd": 0.027327900000000002,
+ "bitirdi": true,
+ "sure_sn": 1142.3,
+ "gizli": {
+  "gecti": true,
+  "gecen": 22,
+  "toplam": 22,
+  "cikti": "......................                                                   [100%]\n22 passed in 1.26s\n"
+ }
+}

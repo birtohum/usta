@@ -1,0 +1,24 @@
+{
+ "id": "a049",
+ "kip": "b",
+ "tekrar": 2,
+ "kategori": "Türkiye'ye özgü kimlik ve hesap numaraları (TC kimlik, VKN, IBAN, MERSİS, plaka, telefon) — birden çok kuralın birlikte uygulandığı",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "otopark_abone.py yazıldı: TC/Plaka/Telefon/IBAN/Ay doğrulamaları ve öncelikli HATA kodları ile ONAY çıktısı uygulanıp pytest ile 16 test geçirildi.",
+ "adim": 6,
+ "yurutucu_token": {
+  "girdi": 32137,
+  "cikti": 20411
+ },
+ "yurutucu_usd": 0.0072959,
+ "bitirdi": true,
+ "sure_sn": 202.7,
+ "gizli": {
+  "gecti": true,
+  "gecen": 22,
+  "toplam": 22,
+  "cikti": "......................                                                   [100%]\n22 passed in 1.40s\n"
+ }
+}

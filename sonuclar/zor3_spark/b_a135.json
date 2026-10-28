@@ -1,0 +1,24 @@
+{
+ "id": "a135",
+ "kip": "b",
+ "tekrar": 1,
+ "kategori": "Türkçe büyük/küçük harf (İ/i, I/ı), Türk alfabesiyle sıralama, sayıyı yazıya çevirme, ünlü uyumuna göre ek",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "kart.py yazıldı: tr_baslik_ad (Türkçe lower + başlık, i/İ-I/ı, boşluk normalizasyonu, TypeError/ValueError), oda_iyelik (son ünlüye göre sı/si/su/sü, ünlüde s kaynaştırma), sira_sozcugu (1-999 kardinal + ıncı eki, birinci/yüzüncü, bool ve aralık kontrolü), kat_sirala (Türk alfabesi + doğal sayı sıralaması, case-insensitive, kısa önce, codepoint eşitlik). pytest ile 6 test geçti.",
+ "adim": 15,
+ "yurutucu_token": {
+  "girdi": 62044,
+  "cikti": 80833
+ },
+ "yurutucu_usd": 0.022371000000000002,
+ "bitirdi": true,
+ "sure_sn": 818.3,
+ "gizli": {
+  "gecti": true,
+  "gecen": 24,
+  "toplam": 24,
+  "cikti": "........................                                                 [100%]\n24 passed in 0.06s\n"
+ }
+}

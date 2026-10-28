@@ -1,0 +1,65 @@
+{
+ "id": "a216",
+ "kip": "c",
+ "tekrar": 2,
+ "kategori": "tarih ve saat: resmî tatiller parametreyle, iş günü hesabı, Türkiye saat dilimi (UTC+3, yaz saati yok), gün/ay adları Türkçe",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 52,
+   "basarili": 52
+  }
+ ],
+ "spark_usd": 0.0148203,
+ "arayuz": "",
+ "kabul_yazar": 3,
+ "mutasyon": {
+  "mutant": 15,
+  "ham_mutant": 15,
+  "turlar": [
+   {
+    "oldurulen": 11,
+    "toplam": 15
+   },
+   {
+    "oldurulen": 11,
+    "toplam": 15
+   },
+   {
+    "oldurulen": 13,
+    "toplam": 15
+   }
+  ],
+  "hayatta": [
+   "kucuk harf cevirmede buyuk I kucuk ı olur gereksinimini cigner",
+   "kucuk harf cevirmede buyuk İ kucuk i olur gereksinimini cigner"
+  ]
+ },
+ "hakem": [],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [
+  ".usta_kabul/test_kabul_2.py::test_turkce_gun_adlari_dogru",
+  ".usta_kabul/test_kabul_2.py::test_yasak_kullanim_yok",
+  ".usta_kabul/test_kabul_3.py::test_turkce_ay_adlari_kullanilir",
+  ".usta_kabul/test_kabul_3.py::test_turkce_kucuk_harf_I_Isi_donusumu"
+ ],
+ "kabul_test_sayisi": 52,
+ "kabul_gecti": true,
+ "ozet": "mezat.py içinde mezat_takvimi yazıldı: YYYY-AA-GG sıkı doğrulama, hata önceliği (başlangıç > mezat_gunleri 0-6 > gun_sayisi negatiflik/tür > tatiller), None tatil boş küme, 0 boş liste, boş mezat_gunleri boş liste, başlangıç dahil aday tarama, tatil atlama, Europe/Istanbul bilinçli tarih, Türkçe gün/ay adları ve I->ı / İ->i küçük harf kuralı. 19 pytest testi geçiyor.",
+ "adim": 14,
+ "yurutucu_token": {
+  "girdi": 85748,
+  "cikti": 32913
+ },
+ "yurutucu_usd": 0.015157400000000005,
+ "bitirdi": true,
+ "sure_sn": 939.2,
+ "gizli": {
+  "gecti": true,
+  "gecen": 20,
+  "toplam": 20,
+  "cikti": "....................                                                     [100%]\n20 passed in 0.08s\n"
+ }
+}

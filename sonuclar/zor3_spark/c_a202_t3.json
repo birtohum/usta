@@ -1,0 +1,49 @@
+{
+ "id": "a202",
+ "kip": "c",
+ "tekrar": 3,
+ "kategori": "çok dosyalı küçük modül: iki-üç dosyaya bölünmüş, ortak hata sınıfları ve bir komut satırı girişi olan araç",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 49,
+   "basarili": 49
+  }
+ ],
+ "spark_usd": 0.013021300000000001,
+ "arayuz": "",
+ "kabul_yazar": 3,
+ "mutasyon": {
+  "mutant": 16,
+  "ham_mutant": 16,
+  "turlar": [
+   {
+    "oldurulen": 16,
+    "toplam": 16
+   }
+  ],
+  "hayatta": []
+ },
+ "hakem": [],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [],
+ "kabul_test_sayisi": 49,
+ "kabul_gecti": true,
+ "ozet": "hatalar.py, ozet.py ve cli.py yazıldı; istenen hata sınıfları, imzalar, doğrulama, yukarı yuvarlanan ortalama, Türkçe sıralı top_url ve CLI çıktısı/hata davranışı uygulandı. 22 pytest testi geçiyor.",
+ "adim": 20,
+ "yurutucu_token": {
+  "girdi": 148450,
+  "cikti": 39903
+ },
+ "yurutucu_usd": 0.022825599999999998,
+ "bitirdi": true,
+ "sure_sn": 615.7,
+ "gizli": {
+  "gecti": true,
+  "gecen": 22,
+  "toplam": 22,
+  "cikti": "......................                                                   [100%]\n22 passed in 0.17s\n"
+ }
+}

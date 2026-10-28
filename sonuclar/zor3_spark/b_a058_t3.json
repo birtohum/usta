@@ -1,0 +1,24 @@
+{
+ "id": "a058",
+ "kip": "b",
+ "tekrar": 3,
+ "kategori": "tarih ve saat: resmî tatiller parametreyle, iş günü hesabı, Türkiye saat dilimi (UTC+3, yaz saati yok), gün/ay adları Türkçe",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "gumruk_cli.py yazıldı: --baslangic/--bitis/--tatiller/--bicim bayrakları, sıkı YYYY-MM-DD denetimi (hata: kod 2 + HATALI TARIH), bilinmeyen bayrakta önce denetimle kod 3, Cumartesi-Pazar ve tatil eleme, tek gün ve ters aralık (kod 2), gün satırları küçük Türkçe adla, ay özeti gün sayısına göre azalan + eşitlikte erken önce sıralı. Yalnızca datetime kullanıldı. test_cli.py ile 11 test python -m pytest -q altında geçti.",
+ "adim": 12,
+ "yurutucu_token": {
+  "girdi": 57142,
+  "cikti": 30116
+ },
+ "yurutucu_usd": 0.011737399999999999,
+ "bitirdi": true,
+ "sure_sn": 369.6,
+ "gizli": {
+  "gecti": true,
+  "gecen": 20,
+  "toplam": 20,
+  "cikti": "....................                                                     [100%]\n20 passed in 1.15s\n"
+ }
+}

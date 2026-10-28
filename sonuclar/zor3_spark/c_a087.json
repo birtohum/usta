@@ -1,0 +1,61 @@
+{
+ "id": "a087",
+ "kip": "c",
+ "tekrar": 1,
+ "kategori": "çok dosyalı küçük modül: iki-üç dosyaya bölünmüş, ortak hata sınıfları ve bir komut satırı girişi olan araç",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 49,
+   "basarili": 49
+  }
+ ],
+ "spark_usd": 0.014783700000000002,
+ "arayuz": "bordro.py içinde normalize_uretici(ad: str) -> str tanımla.",
+ "kabul_yazar": 3,
+ "mutasyon": {
+  "mutant": 15,
+  "ham_mutant": 15,
+  "turlar": [
+   {
+    "oldurulen": 12,
+    "toplam": 15
+   },
+   {
+    "oldurulen": 12,
+    "toplam": 15
+   },
+   {
+    "oldurulen": 12,
+    "toplam": 15
+   }
+  ],
+  "hayatta": [
+   "nem 20 dahil kesintisiz kuralini bozar, 20de kesinti yapar",
+   "asan her tam ve kismi puan icin yukari yuvarlama gereksinimini cigner",
+   "kilo disi degerde UreticiHatasi yukseltme ve hata oncelik turu gereksinimini cigner"
+  ]
+ },
+ "hakem": [],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [],
+ "kabul_test_sayisi": 49,
+ "kabul_gecti": true,
+ "ozet": "hatalar.py (UreticiHatasi/NemHatasi doğrudan ValueError), bordro.py (normalize_uretici + net_odeme: Fraction tabanlı tam-sayı kuruş aritmetiği, ceil kesinti, 10000 destek primi, hata önceliği kilo→nem) ve cli.py (--kilo/--nem/--destekli/opsiyonel --uretici, tek satır 'Ödeme: X kuruş') yazıldı; 15 pytest testi geçti.",
+ "adim": 12,
+ "yurutucu_token": {
+  "girdi": 51320,
+  "cikti": 46211
+ },
+ "yurutucu_usd": 0.0143742,
+ "bitirdi": true,
+ "sure_sn": 1107.7,
+ "gizli": {
+  "gecti": true,
+  "gecen": 20,
+  "toplam": 20,
+  "cikti": "....................                                                     [100%]\n20 passed in 0.39s\n"
+ }
+}

@@ -1,0 +1,24 @@
+{
+ "id": "a186",
+ "kip": "a",
+ "tekrar": 3,
+ "kategori": "tarih ve saat: resmî tatiller parametreyle, iş günü hesabı, Türkiye saat dilimi (UTC+3, yaz saati yok), gün/ay adları Türkçe",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "numune.py içinde NumuneIzleyici(tatiller) sınıfını yalnızca standart kütüphane (datetime, re) ile yazdım: girdiler YYYY-AA-GG / YYYY-AA-GGTHH:MM:SSZ olarak doğrulanıp UTC'ye sabit +3 saat eklenerek Türkiye gününe çevrilir; hafta sonu ve tatil (kümeyle tekilleştirilmiş) günleri iş günü sayılmaz; sla_bitisi kabul hariç/bitiş dahil sayar ve isgunu=0'da aynı gün iş günüyse onu yoksa sonraki ilk iş gününü döndürür; isgunu_farki başlangıç dahil/bitiş hariç sayar, ters aralıkta ValueError verir; tr_format \"GG AyAdı YYYY GünAdı\" üretir; hatalı tarih ve negatif isgunu ValueError verir, tarih denetimi önce yapılır.",
+ "adim": 9,
+ "yurutucu_token": {
+  "girdi": 35149,
+  "cikti": 22539
+ },
+ "yurutucu_usd": 0.008022699999999999,
+ "bitirdi": true,
+ "sure_sn": 273.4,
+ "gizli": {
+  "gecti": true,
+  "gecen": 21,
+  "toplam": 21,
+  "cikti": ".....................                                                    [100%]\n21 passed in 0.03s\n"
+ }
+}

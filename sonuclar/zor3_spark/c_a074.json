@@ -1,0 +1,59 @@
+{
+ "id": "a074",
+ "kip": "c",
+ "tekrar": 1,
+ "kategori": "KDV, tevkifat, stopaj, taksit ve kuruş yuvarlama (Decimal, ROUND_HALF_UP, satır bazında ve toplamda yuvarlama farkı)",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 58,
+   "basarili": 58
+  }
+ ],
+ "spark_usd": 0.0190678,
+ "arayuz": "",
+ "kabul_yazar": 3,
+ "mutasyon": {
+  "mutant": 16,
+  "ham_mutant": 16,
+  "turlar": [
+   {
+    "oldurulen": 12,
+    "toplam": 16
+   },
+   {
+    "oldurulen": 15,
+    "toplam": 16
+   },
+   {
+    "oldurulen": 15,
+    "toplam": 16
+   }
+  ],
+  "hayatta": [
+   "Bos soyadi ValueError sayilir, strip olmadan bosluklari kabul eder"
+  ]
+ },
+ "hakem": [],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [],
+ "kabul_test_sayisi": 58,
+ "kabul_gecti": true,
+ "ozet": "konaklama.py içinde konaklama_faturasi yazıldı: Decimal+ROUND_HALF_UP ile gece bazında matrah/vergi(%2)/KDV yuvarlama, toplamlar yuvarlanmış gecelerin toplamı, yuvarlama_farki ham-toplam farkı olarak raporlandı. Tip önceliği (bool dahil TypeError), gece 1-365 ValueError, boş/negatif/çevrilemez fiyat ValueError, sıfır fiyat sıfır sonuç, KDV yalnızca 0/10/20 (0.10/0.20 formu dahil), soyadı casefold+Türkçe İ/I dönüşümüyle normalize, stabil sıralama korundu. 11 pytest testi geçiyor.",
+ "adim": 7,
+ "yurutucu_token": {
+  "girdi": 33998,
+  "cikti": 24530
+ },
+ "yurutucu_usd": 0.0083058,
+ "bitirdi": true,
+ "sure_sn": 1047.2,
+ "gizli": {
+  "gecti": true,
+  "gecen": 20,
+  "toplam": 20,
+  "cikti": "....................                                                     [100%]\n20 passed in 0.14s\n"
+ }
+}

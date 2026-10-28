@@ -1,0 +1,80 @@
+{
+ "id": "a070",
+ "kip": "c",
+ "tekrar": 2,
+ "kategori": "tarih ve saat: resmî tatiller parametreyle, iş günü hesabı, Türkiye saat dilimi (UTC+3, yaz saati yok), gün/ay adları Türkçe",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 45,
+   "basarili": 45
+  }
+ ],
+ "spark_usd": 0.0161635,
+ "arayuz": "",
+ "kabul_yazar": 3,
+ "mutasyon": {
+  "mutant": 14,
+  "ham_mutant": 14,
+  "turlar": [
+   {
+    "oldurulen": 8,
+    "toplam": 14
+   },
+   {
+    "oldurulen": 8,
+    "toplam": 14
+   },
+   {
+    "oldurulen": 13,
+    "toplam": 14
+   }
+  ],
+  "hayatta": [
+   "Ucuncu gereksinim: haftalik_plan Pazartesi-Pazar 7 gunluk araligi dondurmeli"
+  ]
+ },
+ "hakem": [
+  {
+   "test": ".usta_kabul/test_kabul_m2.py::test_hatali_saat_tiptype",
+   "karar": "hatali",
+   "gerekce": "\"25:00\" str tipinde olduğu için tür hatası değildir ve geçersiz değer ValueError olmalıdır.",
+   "tur": 1
+  },
+  {
+   "test": ".usta_kabul/test_kabul_m2.py::test_turkiye_saati_utc3",
+   "karar": "hatali",
+   "gerekce": "Görev metni TR_TZ adlı bir sembol istemiyor, yalnızca saatlerin UTC+3 olarak yorumlanmasını istiyor.",
+   "tur": 1
+  }
+ ],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [
+  ".usta_kabul/test_kabul_1.py::test_yalnizca_stdlib_ag_rastgelelik_zaman_yok",
+  ".usta_kabul/test_kabul_2.py::test_yalnizca_stdlib_ag_zaman_yok",
+  ".usta_kabul/test_kabul_3.py::test_tatil_cakismasi_plan_disinda_birakilir",
+  ".usta_kabul/test_kabul_3.py::test_yalnizca_stdlib_ve_guncel_zaman_okunmaz",
+  ".usta_kabul/test_kabul_m2.py::test_hafta_pazar_dahil",
+  ".usta_kabul/test_kabul_m2.py::test_hatali_saat_tiptype",
+  ".usta_kabul/test_kabul_m2.py::test_turkiye_saati_utc3"
+ ],
+ "kabul_test_sayisi": 45,
+ "kabul_gecti": true,
+ "ozet": "ders_program.py içinde DersProgrami sınıfı yazıldı: TRT (+3) yorumu, tatil/hafta sonu eleme, Türkçe gün adları ve İ/I küçük harf kuralı, sıfır dakika/ValueError, tarih-önce ValueError/saat TypeError, eklenme sırası koruması, yalnızca stdlib. pytest ile 8 test geçti.",
+ "adim": 8,
+ "yurutucu_token": {
+  "girdi": 25658,
+  "cikti": 28335
+ },
+ "yurutucu_usd": 0.0082328,
+ "bitirdi": true,
+ "sure_sn": 865.8,
+ "gizli": {
+  "gecti": false,
+  "gecen": 9,
+  "toplam": 20,
+  "cikti": "i/test_gizli.py:178: KeyError\n_____________________ test_20_bos_hafta_ve_disaridaki_ders _____________________\n\n    def test_20_bos_hafta_ve_disaridaki_ders():\n        dp = DersProgrami([])\n        dp.ekle(\"2024-01-08\", \"09:00\", \"10:00\")\n        plan = dp.haftalik_plan(\"2024-01-01\")\n        for g in plan:\n            assert g[\"dersler\"] == [] or g[\"tarih\"] != \"2024-01-08\"\n>       gun = [g for g in plan if g[\"tarih\"] == \"2024-01-01\"][0]\nE       IndexError: list index out of range\n\n.gizli/test_gizli.py:186: IndexError\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_01_bos_tatil_hafta_doner - assert 0 == 7\nFAILED .gizli/test_gizli.py::test_02_ekle_normal_gorunur - KeyError: 'dersler'\nFAILED .gizli/test_gizli.py::test_03_aralik_pazartesi_pazar - AssertionError:...\nFAILED .gizli/test_gizli.py::test_04_gun_adlari_turkce - AssertionError: asse...\nFAILED .gizli/test_gizli.py::test_05_tatil_gunleri_atlanir - assert 0 == 6\nFAILED .gizli/test_gizli.py::test_06_sifir_dakika - KeyError: 'dersler'\nFAILED .gizli/test_gizli.py::test_11_hafta_sonu_sayilmaz - IndexError: list i...\nFAILED .gizli/test_gizli.py::test_13_turkce_kucuk_harf - AssertionError: asse...\nFAILED .gizli/test_gizli.py::test_14_ayni_saatte_sira_korunur - KeyError: 'de...\nFAILED .gizli/test_gizli.py::test_19_toplam_sure_hesabi - KeyError: 'toplam_d...\nFAILED .gizli/test_gizli.py::test_20_bos_hafta_ve_disaridaki_ders - IndexErro...\n11 failed, 9 passed in 0.10s\n"
+ }
+}

@@ -1,0 +1,24 @@
+{
+ "id": "a135",
+ "kip": "b",
+ "tekrar": 2,
+ "kategori": "Türkçe büyük/küçük harf (İ/i, I/ı), Türk alfabesiyle sıralama, sayıyı yazıya çevirme, ünlü uyumuna göre ek",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "kart.py yazıldı: tr_baslik_ad (tr_lower + başlık, i/İ-I/ı, boşluk tekleme, TypeError/ValueError), oda_iyelik (son ünlüye göre sı/si/su/sü, pçtk sertleşmesi, ünlüde s kaynaştırma), sira_sozcugu (1-999, dört→dörd, ıncı/inci/uncu/üncü, bool→ValueError), kat_sirala (Türk alfabesi + doğal sayı sıralaması, sayı eşitliğinde metin, kısa önce, Unicode tiebreak, case-insensitive). pytest ile 5 test geçti.",
+ "adim": 17,
+ "yurutucu_token": {
+  "girdi": 81105,
+  "cikti": 79045
+ },
+ "yurutucu_usd": 0.0239195,
+ "bitirdi": true,
+ "sure_sn": 828.4,
+ "gizli": {
+  "gecti": false,
+  "gecen": 23,
+  "toplam": 24,
+  "cikti": "...........F............                                                 [100%]\n=================================== FAILURES ===================================\n_______________________________ test_iyelik_pctk _______________________________\n\n    def test_iyelik_pctk():\n>       assert oda_iyelik(\"kitap\") == \"kitapı\"\nE       AssertionError: assert 'kitaptı' == 'kitapı'\nE         - kitapı\nE         + kitaptı\nE         ?      +\n\n.gizli/test_gizli.py:42: AssertionError\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_iyelik_pctk - AssertionError: assert 'kitap...\n1 failed, 23 passed in 0.05s\n"
+ }
+}

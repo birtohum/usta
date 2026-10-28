@@ -1,0 +1,59 @@
+{
+ "id": "a003",
+ "kip": "c",
+ "tekrar": 1,
+ "kategori": "Türkçe büyük/küçük harf (İ/i, I/ı), Türk alfabesiyle sıralama, sayıyı yazıya çevirme, ünlü uyumuna göre ek",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 67,
+   "basarili": 67
+  }
+ ],
+ "spark_usd": 0.0135148,
+ "arayuz": "",
+ "kabul_yazar": 3,
+ "mutasyon": {
+  "mutant": 15,
+  "ham_mutant": 15,
+  "turlar": [
+   {
+    "oldurulen": 13,
+    "toplam": 15
+   },
+   {
+    "oldurulen": 14,
+    "toplam": 15
+   },
+   {
+    "oldurulen": 14,
+    "toplam": 15
+   }
+  ],
+  "hayatta": [
+   "coklu bosluklari tek bosluga indirme gereksinimini cigner"
+  ]
+ },
+ "hakem": [],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [],
+ "kabul_test_sayisi": 67,
+ "kabul_gecti": true,
+ "ozet": "tutar_yazi.py dosyasında tutar_yaziya_cevir fonksiyonunu yazdım: önce TypeError (bool/None dahil), sonra negatiflik ValueError, sonra 15 basamak lira sınırı ValueError denetimi yapar; lira ve kuruşu üçerli bölüklerle (bin/milyon/milyar/trilyon, bir yüz→yüz, bir bin→bin) Türkçe'ye çevirir, tek boşlukla birleştirip ilk harfi Türkçe kuralla büyütür. pytest ile 10 test yazıp hepsini geçirdim.",
+ "adim": 4,
+ "yurutucu_token": {
+  "girdi": 11563,
+  "cikti": 8088
+ },
+ "yurutucu_usd": 0.0027739,
+ "bitirdi": true,
+ "sure_sn": 452.0,
+ "gizli": {
+  "gecti": true,
+  "gecen": 24,
+  "toplam": 24,
+  "cikti": "........................                                                 [100%]\n24 passed in 0.04s\n"
+ }
+}

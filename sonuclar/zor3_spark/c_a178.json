@@ -1,0 +1,62 @@
+{
+ "id": "a178",
+ "kip": "c",
+ "tekrar": 1,
+ "kategori": "CSV/JSON ile çalışan ve uç durumları çok olan veri işleme (BOM, ; ayırıcı, 1.234,56 sayı biçimi, boş/bozuk satır)",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 37,
+   "basarili": 37
+  }
+ ],
+ "spark_usd": 0.029662700000000004,
+ "arayuz": "",
+ "kabul_yazar": 2,
+ "mutasyon": {
+  "mutant": 15,
+  "ham_mutant": 15,
+  "turlar": [
+   {
+    "oldurulen": 12,
+    "toplam": 15
+   },
+   {
+    "oldurulen": 14,
+    "toplam": 15
+   },
+   {
+    "oldurulen": 14,
+    "toplam": 15
+   }
+  ],
+  "hayatta": [
+   "bos giris/cikis dosyalarinda hata vermeme gereksinimini cigner"
+  ]
+ },
+ "hakem": [],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [
+  ".usta_kabul/test_kabul_1.py::test_turkce_sayi_binlik_ayraci",
+  ".usta_kabul/test_kabul_3.py::test_esit_kiloda_turkce_siralama"
+ ],
+ "kabul_test_sayisi": 37,
+ "kabul_gecti": true,
+ "ozet": "patates_stok_cli.py yazıldı: utf-8-sig ve noktalı virgülle okuma, boş satırları yok sayma, Türkçe sayıları Decimal ile çözme, exit 2/3/4 kuralları, negatif stok, Türkçe küçük harf/I-İ eşitleme, Türkçe sıralama, ROUND_HALF_UP Türkçe kilo biçimi ve rapor.json üretimi. 12 pytest testi geçiyor.",
+ "adim": 15,
+ "yurutucu_token": {
+  "girdi": 107475,
+  "cikti": 48986
+ },
+ "yurutucu_usd": 0.020544700000000003,
+ "bitirdi": true,
+ "sure_sn": 1259.5,
+ "gizli": {
+  "gecti": false,
+  "gecen": 12,
+  "toplam": 20,
+  "cikti": "        assert _run(g, c, r).returncode == 0\n        d = _load(r)\n>       assert d[\"stok\"][0][\"kilogram\"] == \"1,01\"\nE       KeyError: 'kilogram'\n\n.gizli/test_gizli.py:169: KeyError\n_____________________________ test_17_turkce_bicim _____________________________\n\ntmp_path = PosixPath('/home/usta/is/bccd842ce444/.tmp/pytest-of-usta/pytest-3/test_17_turkce_bicim0')\n\n    def test_17_turkce_bicim(tmp_path):\n        g = tmp_path / \"g.csv\"; c = tmp_path / \"c.csv\"; r = tmp_path / \"r.json\"\n        _write(g, [[\"D1\",\"Nigde\",\"Agria\",\"1\",\"1234,5\"]])\n        _write(c, [])\n        assert _run(g, c, r).returncode == 0\n        d = _load(r)\n>       assert d[\"stok\"][0][\"kilogram\"] == \"1.234,50\"\nE       KeyError: 'kilogram'\n\n.gizli/test_gizli.py:177: KeyError\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_02_net_hesap - KeyError: 'cuval_sayisi'\nFAILED .gizli/test_gizli.py::test_03_turkce_sayi_binlik - KeyError: 'kilogram'\nFAILED .gizli/test_gizli.py::test_04_bos_satir_yoksay - KeyError: 'cuval_sayisi'\nFAILED .gizli/test_gizli.py::test_11_sifir_negatif_degil - KeyError: 'kilogram'\nFAILED .gizli/test_gizli.py::test_12_turkce_kucuk_harf_ayni_depo - KeyError: ...\nFAILED .gizli/test_gizli.py::test_13_I_ve_I_farki - KeyError: 'cuval_sayisi'\nFAILED .gizli/test_gizli.py::test_16_half_up_yuvarlama - KeyError: 'kilogram'\nFAILED .gizli/test_gizli.py::test_17_turkce_bicim - KeyError: 'kilogram'\n8 failed, 12 passed in 2.13s\n"
+ }
+}

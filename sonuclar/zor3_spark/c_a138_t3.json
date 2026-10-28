@@ -1,0 +1,64 @@
+{
+ "id": "a138",
+ "kip": "c",
+ "tekrar": 3,
+ "kategori": "CSV/JSON ile çalışan ve uç durumları çok olan veri işleme (BOM, ; ayırıcı, 1.234,56 sayı biçimi, boş/bozuk satır)",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 34,
+   "basarili": 34
+  }
+ ],
+ "spark_usd": 0.0165478,
+ "arayuz": "",
+ "kabul_yazar": 3,
+ "mutasyon": {
+  "mutant": 15,
+  "ham_mutant": 16,
+  "turlar": [
+   {
+    "oldurulen": 15,
+    "toplam": 15
+   }
+  ],
+  "hayatta": []
+ },
+ "hakem": [],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [
+  ".usta_kabul/test_kabul_1.py::test_basarisizda_maliyet_sifir_kalan_kopya",
+  ".usta_kabul/test_kabul_1.py::test_bilinmeyen_malzeme_keyerror",
+  ".usta_kabul/test_kabul_1.py::test_gecerli_satir_yoksa_sifir_ve_basarisiz",
+  ".usta_kabul/test_kabul_1.py::test_gerekli_miktar_adetle_carpilir_ve_stok_duser",
+  ".usta_kabul/test_kabul_1.py::test_maliyet_yarim_yukari_yuvarlama",
+  ".usta_kabul/test_kabul_1.py::test_malzeme_adi_normalize_toplama",
+  ".usta_kabul/test_kabul_1.py::test_stok_csv_utf8sig_noktali_virgul_okunur",
+  ".usta_kabul/test_kabul_1.py::test_tam_esit_gereksinim_yeterli",
+  ".usta_kabul/test_kabul_1.py::test_turkce_sayi_bicimi_cozumlenir",
+  ".usta_kabul/test_kabul_1.py::test_yalnizca_toplam_yuvarlanir",
+  ".usta_kabul/test_kabul_1.py::test_yetersizde_stok_dusmez",
+  ".usta_kabul/test_kabul_2.py::test_bos_stok_sifir_ve_uretim_basarisiz",
+  ".usta_kabul/test_kabul_3.py::test_gecerli_satir_yoksa_sifir_ve_uretim_basarisiz",
+  ".usta_kabul/test_kabul_3.py::test_malzeme_adi_turkce_kucultme_ve_toplama"
+ ],
+ "kabul_test_sayisi": 34,
+ "kabul_gecti": true,
+ "ozet": "PartiTakip sınıfı sabun_parti.py içinde yazıldı; stok CSV utf-8-sig ve ; ile okunuyor, Türkçe sayı ve İ/i normalizasyonu, atomik üretim, yarım-yukarı maliyet yuvarlama ve hata öncelikleri uygulandı. 8 pytest testi geçiyor.",
+ "adim": 10,
+ "yurutucu_token": {
+  "girdi": 44250,
+  "cikti": 45223
+ },
+ "yurutucu_usd": 0.013469600000000002,
+ "bitirdi": true,
+ "sure_sn": 585.8,
+ "gizli": {
+  "gecti": false,
+  "gecen": 19,
+  "toplam": 20,
+  "cikti": "test_malzeme_normalizasyon_toplama ______________________\n\ntmp_path = PosixPath('/home/usta/is/a5a98a53cb70/.tmp/pytest-of-usta/pytest-3/test_malzeme_normalizasyon_top0')\n\n    def test_malzeme_normalizasyon_toplama(tmp_path):\n        csv_i = 'malzeme;miktar;birim_fiyat\\nZEYT\\u0130NYA\\u011eI;3,0;5,0\\nzeytinya\\u011f\\u0131;7,0;5,0\\n'\n        y = _stok_yaz(tmp_path, csv_i)\n        t = PartiTakip()\n>       assert t.stok_yukle(y) == 1\nE       AssertionError: assert 2 == 1\nE        +  where 2 = <bound method PartiTakip.stok_yukle of <sabun_parti.PartiTakip object at 0x7632bdbcb860>>('/home/usta/is/a5a98a53cb70/.tmp/pytest-of-usta/pytest-3/test_malzeme_normalizasyon_top0/stok.csv')\nE        +    where <bound method PartiTakip.stok_yukle of <sabun_parti.PartiTakip object at 0x7632bdbcb860>> = <sabun_parti.PartiTakip object at 0x7632bdbcb860>.stok_yukle\n\n.gizli/test_gizli.py:55: AssertionError\n=============================== warnings summary ===============================\n.gizli/test_gizli.py:191\n  /home/usta/is/a5a98a53cb70/.gizli/test_gizli.py:191: SyntaxWarning: invalid escape sequence '\\.'\n    for yasak in ['socket', 'requests', 'urllib', 'random', 'import time', 'import datetime', 'os\\.system', 'subprocess']:\n\n-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_malzeme_normalizasyon_toplama - AssertionEr...\n1 failed, 19 passed, 1 warning in 0.16s\n"
+ }
+}

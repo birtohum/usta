@@ -1,0 +1,53 @@
+{
+ "id": "a174",
+ "kip": "c",
+ "tekrar": 1,
+ "kategori": "KDV, tevkifat, stopaj, taksit ve kuruş yuvarlama (Decimal, ROUND_HALF_UP, satır bazında ve toplamda yuvarlama farkı)",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 50,
+   "basarili": 50
+  }
+ ],
+ "spark_usd": 0.0133074,
+ "arayuz": "isparta_gul.py içinde GulYagiSatisDefteri: __init__(self), ekle(miktar_ml:int, birim_fiyat:str, kdv_oran:int), ozet(self)->dict{matrah_toplam:Decimal, kdv_toplam:Decimal, stopaj:Decimal, genel_toplam:Decimal, satir_sayisi:int}",
+ "kabul_yazar": 3,
+ "mutasyon": {
+  "mutant": 14,
+  "ham_mutant": 14,
+  "turlar": [
+   {
+    "oldurulen": 12,
+    "toplam": 14
+   },
+   {
+    "oldurulen": 14,
+    "toplam": 14
+   }
+  ],
+  "hayatta": []
+ },
+ "hakem": [],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [],
+ "kabul_test_sayisi": 50,
+ "kabul_gecti": true,
+ "ozet": "isparta_gul.py içinde GulYagiSatisDefteri sınıfını yazdım: ekle satır matrahını ROUND_HALF_UP ile 2 basamağa yuvarlayıp saklar, kdv_oran yalnızca 20 kabul edilir; ozet satır KDV'lerini ve toplam üzerinden KDV'yi hesaplayıp farkı en büyük miktarlı (eşitlikte önce eklenen) satıra yansıtır, 20000,00 TL eşiğini aşan matrahta %1 stopaj uygular, genel toplamı matrah+kdv-stopaj olarak verir. Tip→pozitiflik→oran sırasıyla TypeError/ValueError yükseltilir. 12 pytest testi geçiyor.",
+ "adim": 8,
+ "yurutucu_token": {
+  "girdi": 36293,
+  "cikti": 26046
+ },
+ "yurutucu_usd": 0.008838500000000001,
+ "bitirdi": true,
+ "sure_sn": 531.4,
+ "gizli": {
+  "gecti": false,
+  "gecen": 14,
+  "toplam": 20,
+  "cikti": "        d = GulYagiSatisDefteri()\n        d.ekle(1, \"1.00\", 20)\n        d.ekle(2, \"1.00\", 20)\n        d.ekle(3, \"1.00\", 20)\n        assert d.ozet()[\"satir_sayisi\"] == 3\n>       assert len(d.ozet()[\"satirlar\"]) == 3\nE       KeyError: 'satirlar'\n\n.gizli/test_gizli.py:155: KeyError\n___________________________ test_20_decimal_tipleri ____________________________\n\n    def test_20_decimal_tipleri():\n        d = GulYagiSatisDefteri()\n        d.ekle(2, \"5.00\", 20)\n        o = d.ozet()\n        assert isinstance(o[\"matrah_toplam\"], Decimal)\n        assert isinstance(o[\"kdv_toplam\"], Decimal)\n        assert isinstance(o[\"stopaj\"], Decimal)\n>       assert isinstance(o[\"satirlar\"][0][\"matrah\"], Decimal)\nE       KeyError: 'satirlar'\n\n.gizli/test_gizli.py:164: KeyError\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_11_kdv_fark_en_buyuk_miktara - KeyError: 's...\nFAILED .gizli/test_gizli.py::test_12_kdv_fark_esit_eklenme_onceligi - KeyErro...\nFAILED .gizli/test_gizli.py::test_17_turkce_siralama - AttributeError: 'GulYa...\nFAILED .gizli/test_gizli.py::test_18_turkce_esitlik_koruma - AttributeError: ...\nFAILED .gizli/test_gizli.py::test_19_satir_sayisi - KeyError: 'satirlar'\nFAILED .gizli/test_gizli.py::test_20_decimal_tipleri - KeyError: 'satirlar'\n6 failed, 14 passed in 0.18s\n"
+ }
+}

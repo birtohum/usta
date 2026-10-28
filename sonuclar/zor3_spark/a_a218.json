@@ -1,0 +1,24 @@
+{
+ "id": "a218",
+ "kip": "a",
+ "tekrar": 1,
+ "kategori": "tarih ve saat: resmî tatiller parametreyle, iş günü hesabı, Türkiye saat dilimi (UTC+3, yaz saati yok), gün/ay adları Türkçe",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "deneme.py içinde DenemeTakibi sınıfı yazıldı: Europe/Istanbul zoneinfo, iş günü hesabı, 0/negatif süre, hata önceliği, Türkçe rapor ve sıralama kuralları uygulandı.",
+ "adim": 10,
+ "yurutucu_token": {
+  "girdi": 30927,
+  "cikti": 30927
+ },
+ "yurutucu_usd": 0.009278100000000001,
+ "bitirdi": true,
+ "sure_sn": 361.1,
+ "gizli": {
+  "gecti": false,
+  "gecen": 17,
+  "toplam": 20,
+  "cikti": ">       with pytest.raises(ValueError):\nE       Failed: DID NOT RAISE <class 'ValueError'>\n\n.gizli/test_gizli.py:76: Failed\n__________________________ test_15_turkce_kucuk_harf ___________________________\n\n    def test_15_turkce_kucuk_harf():\n        t = DenemeTakibi(set())\n        t.ekle(\"I\", \"2024-01-01\", 1)\n>       with pytest.raises(ValueError):\nE       Failed: DID NOT RAISE <class 'ValueError'>\n\n.gizli/test_gizli.py:92: Failed\n_________________________ test_16_ayni_bitis_siralama __________________________\n\n    def test_16_ayni_bitis_siralama():\n        t = DenemeTakibi(set())\n        t.ekle(\"c\", \"2024-01-01\", 1)\n        t.ekle(\"a\", \"2024-01-01\", 1)\n        t.ekle(\"b\", \"2024-01-02\", 2)\n        lst = t.liste()\n>       assert lst[0] == (\"a\", \"2024-01-02\")\nE       AssertionError: assert 'a 2 Ocak 2024 Salı' == ('a', '2024-01-02')\n\n.gizli/test_gizli.py:105: AssertionError\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_13_tatil_icerigi_hata - Failed: DID NOT RAI...\nFAILED .gizli/test_gizli.py::test_15_turkce_kucuk_harf - Failed: DID NOT RAIS...\nFAILED .gizli/test_gizli.py::test_16_ayni_bitis_siralama - AssertionError: as...\n3 failed, 17 passed in 0.19s\n"
+ }
+}

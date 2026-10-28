@@ -1,0 +1,24 @@
+{
+ "id": "a030",
+ "kip": "a",
+ "tekrar": 3,
+ "kategori": "CSV/JSON ile çalışan ve uç durumları çok olan veri işleme (BOM, ; ayırıcı, 1.234,56 sayı biçimi, boş/bozuk satır)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "banka_ozeti.py yazıldı: ozetle işlevi tüm kuralları uygular.",
+ "adim": 7,
+ "yurutucu_token": {
+  "girdi": 13221,
+  "cikti": 48814
+ },
+ "yurutucu_usd": 0.0110849,
+ "bitirdi": true,
+ "sure_sn": 479.4,
+ "gizli": {
+  "gecti": false,
+  "gecen": 11,
+  "toplam": 20,
+  "cikti": "r: 'decimal.Decimal' object has no attribute 'get'\n\n.gizli/test_gizli.py:135: AttributeError\n________________________ test_turkce_dotted_I_gruplama _________________________\n\ntmp_path = PosixPath('/home/usta/is/01300e70b93b/.tmp/pytest-of-usta/pytest-0/test_turkce_dotted_I_gruplama0')\n\n    def test_turkce_dotted_I_gruplama(tmp_path):\n        p = tmp_path / \"i2.csv\"\n        _yaz(p, \"tarih;aciklama;tutar\\n08.01.2024;F\\u0130\\u015e;+10,00\\n08.01.2024;fi\\u015f;+15,00\\n\")\n        r = ozetle(str(p))\n>       inner = r[\"gelir\"].get(\"08.01.2024\", {})\nE       AttributeError: 'decimal.Decimal' object has no attribute 'get'\n\n.gizli/test_gizli.py:144: AttributeError\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_normal_gelir_gider - AttributeError: 'decim...\nFAILED .gizli/test_gizli.py::test_turkce_binlik_cozumu - AttributeError: 'dec...\nFAILED .gizli/test_gizli.py::test_bos_satir_atlanir - AttributeError: 'decima...\nFAILED .gizli/test_gizli.py::test_bozuk_satir_sayilir - AttributeError: 'deci...\nFAILED .gizli/test_gizli.py::test_sifir_satir - AttributeError: 'decimal.Deci...\nFAILED .gizli/test_gizli.py::test_half_up_yuvarlama - AttributeError: 'decima...\nFAILED .gizli/test_gizli.py::test_gunluk_toplam_half_up - AttributeError: 'de...\nFAILED .gizli/test_gizli.py::test_turkce_I_gruplama - AttributeError: 'decima...\nFAILED .gizli/test_gizli.py::test_turkce_dotted_I_gruplama - AttributeError: ...\n9 failed, 11 passed in 0.31s\n"
+ }
+}

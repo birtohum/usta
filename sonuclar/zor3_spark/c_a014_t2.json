@@ -1,0 +1,59 @@
+{
+ "id": "a014",
+ "kip": "c",
+ "tekrar": 2,
+ "kategori": "KDV, tevkifat, stopaj, taksit ve kuruş yuvarlama (Decimal, ROUND_HALF_UP, satır bazında ve toplamda yuvarlama farkı)",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 61,
+   "basarili": 61
+  }
+ ],
+ "spark_usd": 0.008866900000000002,
+ "arayuz": "",
+ "kabul_yazar": 3,
+ "mutasyon": {
+  "mutant": 14,
+  "ham_mutant": 14,
+  "turlar": [
+   {
+    "oldurulen": 13,
+    "toplam": 14
+   },
+   {
+    "oldurulen": 13,
+    "toplam": 14
+   },
+   {
+    "oldurulen": 13,
+    "toplam": 14
+   }
+  ],
+  "hayatta": [
+   "her kalem ROUND_HALF_UP ile yuvarlanmali, ROUND_DOWN yaparak yuvarlama gereksinimini cigner"
+  ]
+ },
+ "hakem": [],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [],
+ "kabul_test_sayisi": 61,
+ "kabul_gecti": true,
+ "ozet": "makbuz.py içinde SerbestMeslekMakbuzu sınıfı oluşturuldu: Decimal + ROUND_HALF_UP, %20 stopaj (brüt üzerinden, gider toplamı 5000'i aşarsa gider dahil) ve %20 KDV (brüt+gider üzerinden), net=(brüt+gider-stopaj), tahsilat=net+kdv. Tip hatasında TypeError, geçersiz/sıfır/negatif/3+ basamaklı değerde ValueError, boş gider eklenmiyor. pytest ile 11 test geçti.",
+ "adim": 4,
+ "yurutucu_token": {
+  "girdi": 10466,
+  "cikti": 15896
+ },
+ "yurutucu_usd": 0.0042258,
+ "bitirdi": true,
+ "sure_sn": 790.9,
+ "gizli": {
+  "gecti": true,
+  "gecen": 20,
+  "toplam": 20,
+  "cikti": "....................                                                     [100%]\n20 passed in 0.07s\n"
+ }
+}

@@ -1,0 +1,59 @@
+{
+ "id": "a073",
+ "kip": "c",
+ "tekrar": 1,
+ "kategori": "Türkiye'ye özgü kimlik ve hesap numaraları (TC kimlik, VKN, IBAN, MERSİS, plaka, telefon) — birden çok kuralın birlikte uygulandığı",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 61,
+   "basarili": 61
+  }
+ ],
+ "spark_usd": 0.014609600000000002,
+ "arayuz": "vekalet_hazirlik.VekaletHazirlayici parametresiz kurulur; ekle(kisi_id:str, tc_vkn:str, telefon:str, iban:str)->None; ozet()->dict {'kisi_sayisi':int, 'banka_kodlari':list[str] sözlük sıralı}; CLI aynen python vekalet_cli.py --kisi ID --no NO --tel TEL --iban IBAN",
+ "kabul_yazar": 3,
+ "mutasyon": {
+  "mutant": 15,
+  "ham_mutant": 15,
+  "turlar": [
+   {
+    "oldurulen": 10,
+    "toplam": 15
+   },
+   {
+    "oldurulen": 14,
+    "toplam": 15
+   },
+   {
+    "oldurulen": 14,
+    "toplam": 15
+   }
+  ],
+  "hayatta": [
+   "Bos kisi_id ValueError/HATA:bos gereksinimini cigner, bos stringi kabul eder"
+  ]
+ },
+ "hakem": [],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [],
+ "kabul_test_sayisi": 61,
+ "kabul_gecti": true,
+ "ozet": "vekalet_hazirlik.py içinde VekaletHazirlayici (TC mod10, VKN j/a/katkı, telefon normalizasyon+aralık, IBAN TR+26+MOD97, hata önceliği ve ozet) ve vekalet_cli.py içinde --kisi/--no/--tel/--iban arayüzü (TAMAM/HATA:kod) yazıldı; 22 pytest testi geçti.",
+ "adim": 10,
+ "yurutucu_token": {
+  "girdi": 55220,
+  "cikti": 32309
+ },
+ "yurutucu_usd": 0.0119838,
+ "bitirdi": true,
+ "sure_sn": 1065.2,
+ "gizli": {
+  "gecti": true,
+  "gecen": 23,
+  "toplam": 23,
+  "cikti": ".......................                                                  [100%]\n23 passed in 0.38s\n"
+ }
+}

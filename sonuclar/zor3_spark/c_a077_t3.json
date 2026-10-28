@@ -1,0 +1,56 @@
+{
+ "id": "a077",
+ "kip": "c",
+ "tekrar": 3,
+ "kategori": "çok dosyalı küçük modül: iki-üç dosyaya bölünmüş, ortak hata sınıfları ve bir komut satırı girişi olan araç",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 57,
+   "basarili": 57
+  }
+ ],
+ "spark_usd": 0.0117003,
+ "arayuz": "veresiye.py: VeresiyeDefteri() parametresiz kurulur; listele(self)->list[str] öğrenci adlarını verir. cli.py: --ogrenci str --islem borc|odeme --tutar int alır.",
+ "kabul_yazar": 3,
+ "mutasyon": {
+  "mutant": 14,
+  "ham_mutant": 14,
+  "turlar": [
+   {
+    "oldurulen": 13,
+    "toplam": 14
+   },
+   {
+    "oldurulen": 14,
+    "toplam": 14
+   }
+  ],
+  "hayatta": []
+ },
+ "hakem": [],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [
+  ".usta_kabul/test_kabul_2.py::test_hata_onceligi_bos_ad_once",
+  ".usta_kabul/test_kabul_2.py::test_hata_onceligi_tutar_aralik_limitten_once"
+ ],
+ "kabul_test_sayisi": 57,
+ "kabul_gecti": true,
+ "ozet": "hatalar.py, veresiye.py ve cli.py oluşturuldu; ValueError'dan türeyen hatalar, 1-20000 tutar ve 50000 limit kontrolleri, Türkçe küçük harf eşitleme ve özel sıralama uygulandı, CLI tek satır çıktı veriyor. pytest ile 13 test geçti.",
+ "adim": 9,
+ "yurutucu_token": {
+  "girdi": 35554,
+  "cikti": 22110
+ },
+ "yurutucu_usd": 0.0079774,
+ "bitirdi": true,
+ "sure_sn": 799.9,
+ "gizli": {
+  "gecti": false,
+  "gecen": 18,
+  "toplam": 20,
+  "cikti": "................FF..                                                     [100%]\n=================================== FAILURES ===================================\n____________________________ test_turkce_siralama_c ____________________________\n\n    def test_turkce_siralama_c():\n        d = VeresiyeDefteri()\n        d.borc_ekle(\"çay\", 100)\n        d.borc_ekle(\"cay\", 100)\n        lst = d.listele()\n>       isimler = [n for n, _ in lst]\nE       ValueError: too many values to unpack (expected 2)\n\n.gizli/test_gizli.py:135: ValueError\n__________________________ test_turkce_siralama_genis __________________________\n\n    def test_turkce_siralama_genis():\n        d = VeresiyeDefteri()\n        beklenen = [\"a\", \"c\", \"ç\", \"g\", \"ğ\", \"ı\", \"i\", \"o\", \"ö\", \"s\", \"ş\", \"u\", \"ü\", \"z\"]\n        for ad in reversed(beklenen):\n            d.borc_ekle(ad, 100)\n        lst = d.listele()\n>       isimler = [n for n, _ in lst]\nE       ValueError: not enough values to unpack (expected 2, got 1)\n\n.gizli/test_gizli.py:146: ValueError\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_turkce_siralama_c - ValueError: too many va...\nFAILED .gizli/test_gizli.py::test_turkce_siralama_genis - ValueError: not eno...\n2 failed, 18 passed in 0.36s\n"
+ }
+}

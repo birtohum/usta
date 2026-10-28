@@ -1,0 +1,63 @@
+{
+ "id": "a058",
+ "kip": "c",
+ "tekrar": 1,
+ "kategori": "tarih ve saat: resmî tatiller parametreyle, iş günü hesabı, Türkiye saat dilimi (UTC+3, yaz saati yok), gün/ay adları Türkçe",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 58,
+   "basarili": 58
+  }
+ ],
+ "spark_usd": 0.012834199999999999,
+ "arayuz": "",
+ "kabul_yazar": 3,
+ "mutasyon": {
+  "mutant": 14,
+  "ham_mutant": 14,
+  "turlar": [
+   {
+    "oldurulen": 10,
+    "toplam": 14
+   },
+   {
+    "oldurulen": 11,
+    "toplam": 14
+   },
+   {
+    "oldurulen": 11,
+    "toplam": 14
+   }
+  ],
+  "hayatta": [
+   "7. gereksinim: Turkce kucuk harf ceviride I harfi i olur kuralini atlama",
+   "7. gereksinim: ay adlarinda Turkce I->i donusumunu atlama",
+   "5. gereksinim: tatiller bos ise yalnizca hafta sonu cikarilir, bos girdiyi hata sayma"
+  ]
+ },
+ "hakem": [],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [
+  ".usta_kabul/test_kabul_1.py::test_req3_ay_ozeti_son_satirda"
+ ],
+ "kabul_test_sayisi": 58,
+ "kabul_gecti": true,
+ "ozet": "gumruk_cli.py yazıldı: iş günü hesabı (hafta sonu+tatil hariç), metin çıktısı ve ay özeti, hata kodları 2/3, Türkçe küçük harf kuralı, yalnızca standart kütüphane. 8 pytest testi geçiyor.",
+ "adim": 11,
+ "yurutucu_token": {
+  "girdi": 51659,
+  "cikti": 35231
+ },
+ "yurutucu_usd": 0.0122121,
+ "bitirdi": true,
+ "sure_sn": 1030.1,
+ "gizli": {
+  "gecti": false,
+  "gecen": 19,
+  "toplam": 20,
+  "cikti": ".................F..                                                     [100%]\n=================================== FAILURES ===================================\n______________________ test_18_esit_gun_sayisi_erken_once ______________________\n\n    def test_18_esit_gun_sayisi_erken_once():\n        r = calistir(\"--baslangic\", \"2024-01-30\", \"--bitis\", \"2024-02-02\", \"--tatiller\", \"\", \"--bicim\", \"metin\")\n        assert r.returncode == 0\n        lines = (r.stdout or \"\").splitlines()\n        idx_ocak = next((i for i, l in enumerate(lines) if \"ocak\" in l.lower()), None)\n        idx_subat = next((i for i, l in enumerate(lines) if \"şubat\" in l.lower() or \"subat\" in l.lower()), None)\n        assert idx_ocak is not None\n        assert idx_subat is not None\n>       assert idx_ocak < idx_subat\nE       assert 4 < 4\n\n.gizli/test_gizli.py:142: AssertionError\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_18_esit_gun_sayisi_erken_once - assert 4 < 4\n1 failed, 19 passed in 1.04s\n"
+ }
+}

@@ -1,0 +1,63 @@
+{
+ "id": "a132",
+ "kip": "c",
+ "tekrar": 2,
+ "kategori": "çok dosyalı küçük modül: iki-üç dosyaya bölünmüş, ortak hata sınıfları ve bir komut satırı girişi olan araç",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 48,
+   "basarili": 48
+  }
+ ],
+ "spark_usd": 0.0144647,
+ "arayuz": "",
+ "kabul_yazar": 3,
+ "mutasyon": {
+  "mutant": 15,
+  "ham_mutant": 15,
+  "turlar": [
+   {
+    "oldurulen": 12,
+    "toplam": 15
+   },
+   {
+    "oldurulen": 12,
+    "toplam": 15
+   },
+   {
+    "oldurulen": 12,
+    "toplam": 15
+   }
+  ],
+  "hayatta": [
+   "kaz 0 iken ihtiyac sifir ve stok kontrolu atlanir kuralini bozar",
+   "Turkce I->ı ve İ->i donusum kuralini atlar",
+   "arpa ve bugday disinda ad kabul edilmez kuralini bozar, buğday kabul edilir"
+  ]
+ },
+ "hakem": [],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [
+  ".usta_kabul/test_kabul_2.py::test_yem_adlari_turkce_duyarsiz_opsiyonel"
+ ],
+ "kabul_test_sayisi": 48,
+ "kabul_gecti": true,
+ "ozet": "hatalar.py, yem.py ve cli.py yazıldı; karışım hesabı, açgözlü paketleme, Türkçe duyarsız ad kontrolü ve CLI çıktısı eklendi. 13 pytest testi geçiyor.",
+ "adim": 9,
+ "yurutucu_token": {
+  "girdi": 33241,
+  "cikti": 37954
+ },
+ "yurutucu_usd": 0.0109149,
+ "bitirdi": true,
+ "sure_sn": 674.8,
+ "gizli": {
+  "gecti": false,
+  "gecen": 21,
+  "toplam": 22,
+  "cikti": "..............F.......                                                   [100%]\n=================================== FAILURES ===================================\n_________________________ test_yem_adi_turkce_donusum __________________________\n\n    def test_yem_adi_turkce_donusum():\n>       assert yem.tr_kucuk_harf('I') == 'ı'\nE       AttributeError: module 'yem' has no attribute 'tr_kucuk_harf'. Did you mean: 'turkce_kucuk_harf'?\n\n.gizli/test_gizli.py:82: AttributeError\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_yem_adi_turkce_donusum - AttributeError: mo...\n1 failed, 21 passed in 0.14s\n"
+ }
+}

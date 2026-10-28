@@ -1,0 +1,24 @@
+{
+ "id": "a085",
+ "kip": "b",
+ "tekrar": 1,
+ "kategori": "Türkçe büyük/küçük harf (İ/i, I/ı), Türk alfabesiyle sıralama, sayıyı yazıya çevirme, ünlü uyumuna göre ek",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "denetim.py içinde IcerikDenetci yazıldı: Türkçe küçültme (I->ı, İ->i), sözcük sınırı eşleşmesi, ValueError/TypeError kuralları, ekleme sırası korundu. pytest ile 7 test geçti.",
+ "adim": 5,
+ "yurutucu_token": {
+  "girdi": 11702,
+  "cikti": 21374
+ },
+ "yurutucu_usd": 0.005445,
+ "bitirdi": true,
+ "sure_sn": 215.3,
+ "gizli": {
+  "gecti": false,
+  "gecen": 12,
+  "toplam": 20,
+  "cikti": "\n    def test_ekleme_sirasi_korunur():\n        d = IcerikDenetci()\n        d.yasakli_ekle('elma')\n        d.yasakli_ekle('armut')\n        d.yasakli_ekle('kiraz')\n        r = d.denetle('kiraz armut elma')\n>       assert r['eslesenler'] == ['elma', 'armut', 'kiraz']\n\n.gizli/test_gizli.py:149: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nself = {'bulundu': True, 'eşleşen': ['elma', 'armut', 'kiraz'], 'sayı': 3}\nkey = 'eslesenler'\n\n    def __getitem__(self, key):\n>       return super().__getitem__(self._canon(key))\nE       KeyError: 'eslesenler'\n\ndenetim.py:74: KeyError\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_temel_eslesme - KeyError: 'eslesenler'\nFAILED .gizli/test_gizli.py::test_ek_almis_bicim_eslesmez_sonek - KeyError: '...\nFAILED .gizli/test_gizli.py::test_bos_string_bos_sonuc - KeyError: 'eslesenler'\nFAILED .gizli/test_gizli.py::test_ayni_kelime_ikinci_kez_sessiz - KeyError: '...\nFAILED .gizli/test_gizli.py::test_sozluk_anahtarlari - AssertionError: assert...\nFAILED .gizli/test_gizli.py::test_sayi_liste_tutarli - KeyError: 'eslesenler'\nFAILED .gizli/test_gizli.py::test_eslesme_yoksa_bos - KeyError: 'eslesenler'\nFAILED .gizli/test_gizli.py::test_ekleme_sirasi_korunur - KeyError: 'eslesenler'\n8 failed, 12 passed in 0.19s\n"
+ }
+}

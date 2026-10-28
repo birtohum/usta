@@ -1,0 +1,24 @@
+{
+ "id": "a173",
+ "kip": "b",
+ "tekrar": 2,
+ "kategori": "CSV/JSON ile çalışan ve uç durumları çok olan veri işleme (BOM, ; ayırıcı, 1.234,56 sayı biçimi, boş/bozuk satır)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "leblebi_sevkiyat.py yazıldı: planla() CSV'yi utf-8-sig/; ile okur, başlığı önce doğrular, Türkçe sayıları Decimal ile çözer, fire>3'ü eler, FIFO+parti_id sırasıyla karşılar, Türkçe lower ile gruplar, TR biçimli sonuç döndürür. 10 pytest geçti.",
+ "adim": 16,
+ "yurutucu_token": {
+  "girdi": 152706,
+  "cikti": 66237
+ },
+ "yurutucu_usd": 0.028518,
+ "bitirdi": true,
+ "sure_sn": 705.7,
+ "gizli": {
+  "gecti": false,
+  "gecen": 19,
+  "toplam": 21,
+  "cikti": "        s = planla(str(c), str(j))\n        assert s['karsilanan_kg'] == '0,00'\n>       assert s['eksik_kg'] == '0,00'\nE       AssertionError: assert '10,00' == '0,00'\nE         - 0,00\nE         + 10,00\nE         ? +\n\n.gizli/test_gizli.py:101: AssertionError\n_____________________________ test_hic_saglam_yok ______________________________\n\ntmp_path = PosixPath('/home/usta/is/3cbe9999cade/.tmp/pytest-of-usta/pytest-3/test_hic_saglam_yok0')\n\n    def test_hic_saglam_yok(tmp_path):\n        c = tmp_path / 'p.csv'; j = tmp_path / 's.json'\n        _csv_yaz(c, ['parti_id','tarih','miktar','fire_orani'], [['P1','2024-01-01','100,00','5,00']])\n        _json_yaz(j, [{'musteri':'Ali','miktar':'10,00'}])\n        s = planla(str(c), str(j))\n        assert s['karsilanan_kg'] == '0,00'\n>       assert s['eksik_kg'] == '0,00'\nE       AssertionError: assert '10,00' == '0,00'\nE         - 0,00\nE         + 10,00\nE         ? +\n\n.gizli/test_gizli.py:139: AssertionError\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_fire_ustu_red - AssertionError: assert '10,...\nFAILED .gizli/test_gizli.py::test_hic_saglam_yok - AssertionError: assert '10...\n2 failed, 19 passed in 0.45s\n"
+ }
+}

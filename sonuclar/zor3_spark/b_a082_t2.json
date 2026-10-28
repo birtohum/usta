@@ -1,0 +1,24 @@
+{
+ "id": "a082",
+ "kip": "b",
+ "tekrar": 2,
+ "kategori": "çok dosyalı küçük modül: iki-üç dosyaya bölünmüş, ortak hata sınıfları ve bir komut satırı girişi olan araç",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "hatalar.py (ValueError'dan doğrudan türeyen GirdiHatasi/PartiHatasi), kumas.py (Decimal ile santimetre yukarı yuvarlamalı gerekli_miktar + Türkçe küçük harf/normalize/parti kontrolü ve hata önceliği) ve cli.py (--siparis/--fire/--top ile tek satır 'Top: N Artan: X.XX m' çıktısı) yazıldı; test_kumas_cli.py ile 13 test `python -m pytest -q` altında geçirildi.",
+ "adim": 10,
+ "yurutucu_token": {
+  "girdi": 61997,
+  "cikti": 28904
+ },
+ "yurutucu_usd": 0.0119805,
+ "bitirdi": true,
+ "sure_sn": 341.7,
+ "gizli": {
+  "gecti": false,
+  "gecen": 20,
+  "toplam": 22,
+  "cikti": ">           raise PartiHatasi(\"parti kodu kayıtlı değil\")\nE           hatalar.PartiHatasi: parti kodu kayıtlı değil\n\nkumas.py:142: PartiHatasi\n_______________________ test_18_parti_turkce_kucuk_harf ________________________\n\n    def test_18_parti_turkce_kucuk_harf():\n>       assert kumas.parti_dogrula(\"KIRMIZI-01\") == \"kırmızı-01\"\n\n.gizli/test_gizli.py:100: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nparti_kodu = 'KIRMIZI-01', kayitlar = None\n\n    def parti_kontrol(parti_kodu: str, kayitlar=None) -> str:\n        \"\"\"Parti kodunu doğrula, normalize edilmiş kodu döndür.\n    \n        Boş kodda GirdiHatasi, kayıtlı değilse PartiHatasi yükseltir.\n        \"\"\"\n        norm = normalize_parti_kodu(parti_kodu)\n        kayit_kumesi = _kayit_kumesi(kayitlar)\n        if norm not in kayit_kumesi:\n>           raise PartiHatasi(\"parti kodu kayıtlı değil\")\nE           hatalar.PartiHatasi: parti kodu kayıtlı değil\n\nkumas.py:142: PartiHatasi\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_15_parti_bosluklari_silinir - hatalar.Parti...\nFAILED .gizli/test_gizli.py::test_18_parti_turkce_kucuk_harf - hatalar.PartiH...\n2 failed, 20 passed in 0.36s\n"
+ }
+}

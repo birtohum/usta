@@ -1,0 +1,64 @@
+{
+ "id": "a061",
+ "kip": "c",
+ "tekrar": 1,
+ "kategori": "Türkiye'ye özgü kimlik ve hesap numaraları (TC kimlik, VKN, IBAN, MERSİS, plaka, telefon) — birden çok kuralın birlikte uygulandığı",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 47,
+   "basarili": 47
+  }
+ ],
+ "spark_usd": 0.0190293,
+ "arayuz": "",
+ "kabul_yazar": 3,
+ "mutasyon": {
+  "mutant": 15,
+  "ham_mutant": 15,
+  "turlar": [
+   {
+    "oldurulen": 12,
+    "toplam": 15
+   },
+   {
+    "oldurulen": 15,
+    "toplam": 15
+   }
+  ],
+  "hayatta": []
+ },
+ "hakem": [],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [
+  ".usta_kabul/test_kabul_1.py::test_coklu_gecersizde_valueerror_oncelik",
+  ".usta_kabul/test_kabul_2.py::test_raporla_unvan_ve_vkn_siralamasi",
+  ".usta_kabul/test_kabul_3.py::test_iban_kontrol_02_gecerli_01_gecersiz",
+  ".usta_kabul/test_kabul_3.py::test_iban_mod97_kontrol",
+  ".usta_kabul/test_kabul_3.py::test_raporla_esit_unvanda_vknya_gore_sirali",
+  ".usta_kabul/test_kabul_3.py::test_raporla_unvana_gore_sirali",
+  ".usta_kabul/test_kabul_3.py::test_unvan_kirpma_sonrasi_gecerli",
+  ".usta_kabul/test_kabul_3.py::test_unvan_sinir_iki_hata_uc_gecerli",
+  ".usta_kabul/test_kabul_3.py::test_vkn_kontrol_hesabi",
+  ".usta_kabul/test_kabul_3.py::test_yalnizca_stdlib_ve_zamansiz"
+ ],
+ "kabul_test_sayisi": 47,
+ "kabul_gecti": true,
+ "ozet": null,
+ "adim": 20,
+ "yurutucu_token": {
+  "girdi": 133896,
+  "cikti": 56537
+ },
+ "yurutucu_usd": 0.024697000000000004,
+ "bitirdi": false,
+ "sure_sn": 809.4,
+ "gizli": {
+  "gecti": true,
+  "gecen": 22,
+  "toplam": 22,
+  "cikti": "......................                                                   [100%]\n22 passed in 0.07s\n"
+ }
+}

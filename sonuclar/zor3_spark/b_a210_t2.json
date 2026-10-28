@@ -1,0 +1,24 @@
+{
+ "id": "a210",
+ "kip": "b",
+ "tekrar": 2,
+ "kategori": "tarih ve saat: resmî tatiller parametreyle, iş günü hesabı, Türkiye saat dilimi (UTC+3, yaz saati yok), gün/ay adları Türkçe",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "kira.py içinde kira_yenileme(baslangic, yil, tatiller, kaydir) yazıldı: sıkı YYYY-AA-GG doğrulama, yıl ekleme, 29 Şubat→28 Şubat kuralı, Cumartesi/Pazar+tatil kaydırma (ileri/geri), Europe/Istanbul ile hafta günü, Türkçe ay/gün adları, hata önceliği (başlangıç>yıl>kaydır>tatiller) ve ValueError. Sıralama yardımcısı yenilemeleri_sirala eklendi. test_kira.py ile 21 test `python -m pytest -q` altında geçiyor.",
+ "adim": 19,
+ "yurutucu_token": {
+  "girdi": 216185,
+  "cikti": 56180
+ },
+ "yurutucu_usd": 0.0328545,
+ "bitirdi": true,
+ "sure_sn": 719.9,
+ "gizli": {
+  "gecti": false,
+  "gecen": 7,
+  "toplam": 22,
+  "cikti": "== '15 Ağustos 2024 Perşembe'\nE         - 15 Ağustos 2024 Perşembe\nE         + 15 Ağustos 2024, Perşembe\nE         ?                +\n\n.gizli/test_gizli.py:69: AssertionError\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_normal_haftaici - AssertionError: assert '1...\nFAILED .gizli/test_gizli.py::test_yil_sifir_ayni_gun - AssertionError: assert...\nFAILED .gizli/test_gizli.py::test_cumartesi_ileri_pazartesi - AssertionError:...\nFAILED .gizli/test_gizli.py::test_pazar_geri_cuma - AssertionError: assert '1...\nFAILED .gizli/test_gizli.py::test_tatil_ileri - AssertionError: assert '16 Oc...\nFAILED .gizli/test_gizli.py::test_tatil_geri - AssertionError: assert '14 Oca...\nFAILED .gizli/test_gizli.py::test_zincir_ileri - AssertionError: assert '16 O...\nFAILED .gizli/test_gizli.py::test_zincir_geri - AssertionError: assert '11 Oc...\nFAILED .gizli/test_gizli.py::test_subat29_artik_yil - AssertionError: assert ...\nFAILED .gizli/test_gizli.py::test_subat29_artik_olmayan_ileri - AssertionErro...\nFAILED .gizli/test_gizli.py::test_subat29_artik_olmayan_geri - AssertionError...\nFAILED .gizli/test_gizli.py::test_subat29_hedef_tatil - AssertionError: asser...\nFAILED .gizli/test_gizli.py::test_none_bos_kabul - AssertionError: assert '15...\nFAILED .gizli/test_gizli.py::test_bos_kume_gecerli - AssertionError: assert '...\nFAILED .gizli/test_gizli.py::test_turkce_ay_gun - AssertionError: assert '15 ...\n15 failed, 7 passed in 0.19s\n"
+ }
+}

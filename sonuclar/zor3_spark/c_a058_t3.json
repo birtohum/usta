@@ -1,0 +1,77 @@
+{
+ "id": "a058",
+ "kip": "c",
+ "tekrar": 3,
+ "kategori": "tarih ve saat: resmî tatiller parametreyle, iş günü hesabı, Türkiye saat dilimi (UTC+3, yaz saati yok), gün/ay adları Türkçe",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 55,
+   "basarili": 55
+  }
+ ],
+ "spark_usd": 0.0131666,
+ "arayuz": "",
+ "kabul_yazar": 3,
+ "mutasyon": {
+  "mutant": 16,
+  "ham_mutant": 16,
+  "turlar": [
+   {
+    "oldurulen": 9,
+    "toplam": 16
+   },
+   {
+    "oldurulen": 13,
+    "toplam": 16
+   },
+   {
+    "oldurulen": 14,
+    "toplam": 16
+   }
+  ],
+  "hayatta": [
+   "Req7: Turkce I harfi ı olmaz",
+   "Req5: tatiller bossa yalnizca hafta sonu cikarilmaz, hata verir"
+  ]
+ },
+ "hakem": [
+  {
+   "test": ".usta_kabul/test_kabul_1.py::test_05_ay_ozeti_son_satirda_req3",
+   "karar": "belirsiz",
+   "gerekce": "Görev yalnızca gün adlarının küçük yazılacağını söylüyor, ay özetinin küçük harf olmasını belirtmiyor.",
+   "tur": 1
+  },
+  {
+   "test": ".usta_kabul/test_kabul_3.py::test_r3_ay_ozeti_son_satirda",
+   "karar": "belirsiz",
+   "gerekce": "Görev yalnızca gün adlarının küçük yazılacağını söylüyor, ay özetinin küçük harf olmasını belirtmiyor.",
+   "tur": 1
+  }
+ ],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [
+  ".usta_kabul/test_kabul_3.py::test_r9_yalnizca_stdlib_ve_zamansiz",
+  ".usta_kabul/test_kabul_1.py::test_05_ay_ozeti_son_satirda_req3",
+  ".usta_kabul/test_kabul_3.py::test_r3_ay_ozeti_son_satirda"
+ ],
+ "kabul_test_sayisi": 55,
+ "kabul_gecti": true,
+ "ozet": "gumruk_cli.py yazıldı: --baslangic/--bitis/--tatiller/--bicim bayraklarını işler, Cumartesi-Pazar ve tatilleri çıkarır, \"tarih: küçük gün adı\" satırları + Türkçe ay özeti yazar, eşit tarihte tek gün, ters aralıkta kod 2, bozuk tarihte kod 2 + HATALI TARIH, bilinmeyen bayrakta kod 3 (önce denetlenir), İ->i/I->ı kuralı, kronolojik sıra, yalnızca sys+re ile saf takvim aritmetiği. 16 pytest testi geçti.",
+ "adim": 16,
+ "yurutucu_token": {
+  "girdi": 125432,
+  "cikti": 37902
+ },
+ "yurutucu_usd": 0.020123600000000005,
+ "bitirdi": true,
+ "sure_sn": 1073.3,
+ "gizli": {
+  "gecti": true,
+  "gecen": 20,
+  "toplam": 20,
+  "cikti": "....................                                                     [100%]\n20 passed in 1.09s\n"
+ }
+}

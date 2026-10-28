@@ -1,0 +1,24 @@
+{
+ "id": "a189",
+ "kip": "a",
+ "tekrar": 1,
+ "kategori": "KDV, tevkifat, stopaj, taksit ve kuruş yuvarlama (Decimal, ROUND_HALF_UP, satır bazında ve toplamda yuvarlama farkı)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "siirt_perde.py dosyası yazıldı: PerdeFaturasi sınıfı Decimal+ROUND_HALF_UP ile matrah/KDV hesabı, grup bazında genel KDV, 5000 TL üzeri %2 iskontonun orantılı düşülmesi, farkın son satıra yansıtılması, özel Türkçe büyük harf dönüşümü ve Türkçe alfabetik sıralama, TypeError/ValueError ayrımı ve quantize edilmiş Decimal dönüşleri ile fis_metni sunar.",
+ "adim": 5,
+ "yurutucu_token": {
+  "girdi": 13217,
+  "cikti": 38153
+ },
+ "yurutucu_usd": 0.008952300000000002,
+ "bitirdi": true,
+ "sure_sn": 379.0,
+ "gizli": {
+  "gecti": false,
+  "gecen": 19,
+  "toplam": 21,
+  "cikti": "................F..F.                                                    [100%]\n=================================== FAILURES ===================================\n___________________________ test_iskonto_5000_uzeri ____________________________\n\n    def test_iskonto_5000_uzeri():\n        f = PerdeFaturasi()\n        f.satir_ekle(\"perde\", \"10\", \"600\", 10)\n        t = f.toplamlar()\n>       assert t[\"ara_toplam\"] == Decimal(\"5880.00\")\nE       AssertionError: assert Decimal('6000.00') == Decimal('5880.00')\nE        +  where Decimal('5880.00') = Decimal('5880.00')\n\n.gizli/test_gizli.py:134: AssertionError\n___________________ test_fis_metni_esitlikte_eklenme_sirasi ____________________\n\n    def test_fis_metni_esitlikte_eklenme_sirasi():\n        f = PerdeFaturasi()\n        f.satir_ekle(\"perde\", \"1\", \"10\", 10)\n        f.satir_ekle(\"perde\", \"2\", \"10\", 10)\n        m = f.fis_metni()\n>       ilk = m.index(\"0|PERDE\")\nE       ValueError: substring not found\n\n.gizli/test_gizli.py:169: ValueError\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_iskonto_5000_uzeri - AssertionError: assert...\nFAILED .gizli/test_gizli.py::test_fis_metni_esitlikte_eklenme_sirasi - ValueE...\n2 failed, 19 passed in 0.16s\n"
+ }
+}

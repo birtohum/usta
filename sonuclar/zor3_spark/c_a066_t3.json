@@ -1,0 +1,26 @@
+{
+ "id": "a066",
+ "kip": "c",
+ "tekrar": 3,
+ "kategori": "CSV/JSON ile çalışan ve uç durumları çok olan veri işleme (BOM, ; ayırıcı, 1.234,56 sayı biçimi, boş/bozuk satır)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.00021669999999999998,
+ "arayuz": "",
+ "kabul_gecti": false,
+ "dogrulanamadi": true,
+ "ozet": "otel_doluluk.py analiz_et yazıldı; 11 pytest geçti.",
+ "adim": 14,
+ "yurutucu_token": {
+  "girdi": 83459,
+  "cikti": 53341
+ },
+ "yurutucu_usd": 0.019014100000000003,
+ "sure_sn": 602.9,
+ "gizli": {
+  "gecti": true,
+  "gecen": 23,
+  "toplam": 23,
+  "cikti": ".......................                                                  [100%]\n23 passed in 0.19s\n"
+ }
+}

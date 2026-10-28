@@ -1,0 +1,24 @@
+{
+ "id": "a042",
+ "kip": "b",
+ "tekrar": 2,
+ "kategori": "CSV/JSON ile çalışan ve uç durumları çok olan veri işleme (BOM, ; ayırıcı, 1.234,56 sayı biçimi, boş/bozuk satır)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "vergi_dilimi.py içinde dilimle(csv_yolu, limitler_json) yazıldı: CSV utf-8-sig ve noktalı virgülle okunup tc;ad;gelir başlığı aynen aranır; JSON utf-8-sig ile okunup bozukluk ValueError olur; dosya yokluğu her şeyden önce FileNotFoundError verir. Türkçe sayı biçimi (10.000,50) Decimal ile çözülür, boş gelir 0, eksi gelir ValueError. Dilimler artan üst sınır olmalı yoksa ValueError; sınır değeri alt dilime dahildir. Vergi her dilimde ROUND_HALF_UP ile 2 ondalığa yuvarlanıp toplanır. Boş ve eksik sütunlu satırlar atlanır. Sonuç gelire azalan, eşitlikte tc artana göre sıralanır; ad I->ı/İ->i normalizasyonu ve boşluk sadeleştirmesi uygulanır. 11 pytest testi geçti.",
+ "adim": 12,
+ "yurutucu_token": {
+  "girdi": 73739,
+  "cikti": 58094
+ },
+ "yurutucu_usd": 0.0189927,
+ "bitirdi": true,
+ "sure_sn": 588.9,
+ "gizli": {
+  "gecti": true,
+  "gecen": 20,
+  "toplam": 20,
+  "cikti": "....................                                                     [100%]\n20 passed in 0.14s\n"
+ }
+}

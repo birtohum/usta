@@ -1,0 +1,74 @@
+{
+ "id": "a219",
+ "kip": "c",
+ "tekrar": 3,
+ "kategori": "tarih ve saat: resmî tatiller parametreyle, iş günü hesabı, Türkiye saat dilimi (UTC+3, yaz saati yok), gün/ay adları Türkçe",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 51,
+   "basarili": 51
+  }
+ ],
+ "spark_usd": 0.0118722,
+ "arayuz": "",
+ "kabul_yazar": 3,
+ "mutasyon": {
+  "mutant": 15,
+  "ham_mutant": 15,
+  "turlar": [
+   {
+    "oldurulen": 11,
+    "toplam": 15
+   },
+   {
+    "oldurulen": 12,
+    "toplam": 15
+   },
+   {
+    "oldurulen": 12,
+    "toplam": 15
+   }
+  ],
+  "hayatta": [
+   "kucuk i buyuk İ olur gereksinimini cigner",
+   "kucuk ı buyuk I olur gereksinimini cigner",
+   "tatiller dosyasi bos olabilir / bos satir atlanir gereksinimini cigner"
+  ]
+ },
+ "hakem": [],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [
+  ".usta_kabul/test_kabul_m1.py::test_bos_satir_atlanir_bos_gibi",
+  ".usta_kabul/test_kabul_m1.py::test_bos_satir_valid_arada_atlanir",
+  ".usta_kabul/test_kabul_m1.py::test_kucuk_dotless_ı_buyuk_I_olur",
+  ".usta_kabul/test_kabul_m1.py::test_kucuk_i_buyuk_noktali_I_olur",
+  ".usta_kabul/test_kabul_m2.py::test_kucuk_i_buyuk_I_olur_haziran",
+  ".usta_kabul/test_kabul_m2.py::test_kucuk_i_buyuk_I_olur_nisan",
+  ".usta_kabul/test_kabul_m2.py::test_kucuk_i_buyuk_I_olur_pazartesi",
+  ".usta_kabul/test_kabul_m2.py::test_kucuk_ı_buyuk_I_olur_kasim",
+  ".usta_kabul/test_kabul_m2.py::test_kucuk_ı_buyuk_I_olur_mayis",
+  ".usta_kabul/test_kabul_m2.py::test_kucuk_ı_buyuk_I_olur_sali",
+  ".usta_kabul/test_kabul_m2.py::test_tatiller_bos_satir_atlanir",
+  ".usta_kabul/test_kabul_m2.py::test_tatiller_bos_satir_valid_ile"
+ ],
+ "kabul_test_sayisi": 51,
+ "kabul_gecti": true,
+ "ozet": "etiket_cli.py yazıldı: --tarih/--tatiller/--sonraki-isgunu destekler, Türkçe başlık üretir, UTC+3 Istanbul bilinçli tarih, tatil ve hafta sonu kaydırması, i→İ/ı→I büyük harf, parti sıralaması ve dakika yukarı yuvarlama içerir; hatalarda stderr + çıkış 2. 18 pytest testi geçiyor.",
+ "adim": 12,
+ "yurutucu_token": {
+  "girdi": 74332,
+  "cikti": 29358
+ },
+ "yurutucu_usd": 0.0133048,
+ "bitirdi": true,
+ "sure_sn": 532.5,
+ "gizli": {
+  "gecti": true,
+  "gecen": 20,
+  "toplam": 20,
+  "cikti": "....................                                                     [100%]\n20 passed in 0.59s\n"
+ }
+}

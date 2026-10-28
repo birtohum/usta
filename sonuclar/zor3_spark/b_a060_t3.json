@@ -1,0 +1,24 @@
+{
+ "id": "a060",
+ "kip": "b",
+ "tekrar": 3,
+ "kategori": "CSV/JSON ile çalışan ve uç durumları çok olan veri işleme (BOM, ; ayırıcı, 1.234,56 sayı biçimi, boş/bozuk satır)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "narenciye_secim.py içinde SecimMotoru yazıldı: utf-8-sig + `;` zorunluluğu, başlık boşluk temizliği, Decimal ile binlik-nokta/virgül dönüşümü, fire ROUND_HALF_UP 3 basamak, boş satır atlama, sütun sayısı ValueError, yok dosya FileNotFoundError, bozuk kodlamada UnicodeDecodeError, Türkçe I→ı/İ→i normalizasyonuyla gruplama, net<1000 ıskarta / ==1000 dahil, negatifte ValueError, yüklenmeden boş rapor, üst üste ekleme, ilk görülen yazım + toplam_net + sayi ile azalan sıralama ve Türkçe alfabe (ç,ğ,ı,ö,ş,ü) eşitlik sıralaması. 19 pytest testi geçiyor.",
+ "adim": 20,
+ "yurutucu_token": {
+  "girdi": 358128,
+  "cikti": 89493
+ },
+ "yurutucu_usd": 0.05371139999999999,
+ "bitirdi": true,
+ "sure_sn": 1040.4,
+ "gizli": {
+  "gecti": false,
+  "gecen": 18,
+  "toplam": 20,
+  "cikti": "            r = m.rapor()\n            assert len(r) == 1\n>           assert list(r.keys())[0] == \"limon\"\nE           AssertionError: assert 'LİMON' == 'limon'\nE             - limon\nE             + LİMON\n\n.gizli/test_gizli.py:94: AssertionError\n______________________ test_net_1000_ikinci_kalite_haric _______________________\n\n    def test_net_1000_ikinci_kalite_haric():\n        import tempfile, os\n        m = SecimMotoru()\n        with tempfile.TemporaryDirectory() as d:\n            p = os.path.join(d, \"a.csv\")\n            _yaz(p, \"\\u00e7e\\u015fit;a\\u011f\\u0131rl\\u0131k;fire_oran\\u0131\\nportakal;1.000,00;0\\n\")\n            m.yukle(p)\n>           assert m.rapor() == {}\nE           AssertionError: assert {'portakal': ...), 'sayi': 1}} == {}\nE             Left contains 1 more item:\nE             {'portakal': {'ilk_yazim': 'portakal',\nE                           'sayi': 1,\nE                           'toplam_net': Decimal('1000.00000')}}\nE             Use -v to get more diff\n\n.gizli/test_gizli.py:114: AssertionError\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_turkce_I_normalize_ayni_grup - AssertionErr...\nFAILED .gizli/test_gizli.py::test_net_1000_ikinci_kalite_haric - AssertionErr...\n2 failed, 18 passed in 0.12s\n"
+ }
+}

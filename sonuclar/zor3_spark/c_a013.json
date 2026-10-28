@@ -1,0 +1,61 @@
+{
+ "id": "a013",
+ "kip": "c",
+ "tekrar": 1,
+ "kategori": "Türkiye'ye özgü kimlik ve hesap numaraları (TC kimlik, VKN, IBAN, MERSİS, plaka, telefon) — birden çok kuralın birlikte uygulandığı",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 16,
+   "basarili": 16
+  }
+ ],
+ "spark_usd": 0.037496,
+ "arayuz": "",
+ "kabul_yazar": 1,
+ "mutasyon": {
+  "mutant": 14,
+  "ham_mutant": 14,
+  "turlar": [
+   {
+    "oldurulen": 11,
+    "toplam": 14
+   },
+   {
+    "oldurulen": 11,
+    "toplam": 14
+   },
+   {
+    "oldurulen": 11,
+    "toplam": 14
+   }
+  ],
+  "hayatta": [
+   "Bir kayıtta birden çok hata varsa öncelik sırası kimlik_no, iban, telefon, plaka olmalı gereksinimini çiğner",
+   "TC formülü aynı uygulanmalı gereksinimini çiğner",
+   "plaka kuralı aynı uygulanmalı gereksinimini çiğner, geçersiz il kodlarını kabul eder"
+  ]
+ },
+ "hakem": [],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [],
+ "kabul_test_sayisi": 16,
+ "kabul_gecti": true,
+ "ozet": "toplu_denetim.py yazıldı: TC/VKN/IBAN/telefon/plaka denetimi, öncelik sırası, TypeError, sıralı hatalar, Türkçe büyük harf. 15 pytest geçti.",
+ "adim": 6,
+ "yurutucu_token": {
+  "girdi": 16180,
+  "cikti": 34857
+ },
+ "yurutucu_usd": 0.0085894,
+ "bitirdi": true,
+ "sure_sn": 1080.8,
+ "gizli": {
+  "gecti": false,
+  "gecen": 21,
+  "toplam": 23,
+  "cikti": "......F.....F..........                                                  [100%]\n=================================== FAILURES ===================================\n_______________________________ test_gecerli_vkn _______________________________\n\n    def test_gecerli_vkn():\n        r = toplu_denetle([rec(GVKN, t='VKN')])\n>       assert r['gecerli_sayisi'] == 1 and r['hatalar'] == []\nE       assert (0 == 1)\n\n.gizli/test_gizli.py:66: AssertionError\n_______________________________ test_vkn_hatasi ________________________________\n\n    def test_vkn_hatasi():\n        r = toplu_denetle([rec('1234567890', t='VKN')])\n>       assert r['hatalar'][0]['kod'] == 'kimlik_no_hatası'\nE       IndexError: list index out of range\n\n.gizli/test_gizli.py:96: IndexError\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_gecerli_vkn - assert (0 == 1)\nFAILED .gizli/test_gizli.py::test_vkn_hatasi - IndexError: list index out of ...\n2 failed, 21 passed in 0.11s\n"
+ }
+}

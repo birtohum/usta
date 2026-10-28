@@ -1,0 +1,24 @@
+{
+ "id": "a069",
+ "kip": "a",
+ "tekrar": 3,
+ "kategori": "Türkçe büyük/küçük harf (İ/i, I/ı), Türk alfabesiyle sıralama, sayıyı yazıya çevirme, ünlü uyumuna göre ek",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "envanter.py yazıldı: tr_dogal_sira Türkçe alfabe sırası + duyarsız karşılaştırma (küçük önce tiebreak) + sayısal blok ve kısa-ham-önce kuralı uygular, girdi değiştirmez, TypeError kurallarına uyar; CLI --ters/--yoksay-buyuk-kucuk destekler.",
+ "adim": 7,
+ "yurutucu_token": {
+  "girdi": 20129,
+  "cikti": 26169
+ },
+ "yurutucu_usd": 0.0072467,
+ "bitirdi": true,
+ "sure_sn": 294.5,
+ "gizli": {
+  "gecti": false,
+  "gecen": 13,
+  "toplam": 20,
+  "cikti": "____________\n\ntmp_path = PosixPath('/home/usta/is/26344a6560a1/.tmp/pytest-of-usta/pytest-0/test_cli_sayisal_dosya0')\n\n    def test_cli_sayisal_dosya(tmp_path):\n        isyeri = str(_pl.Path(\"envanter.py\").resolve().parent)\n        f = tmp_path / \"n.txt\"\n        f.write_text(\"oda10\\noda02\\noda2\\n\", encoding=\"utf-8\")\n        r = calistir_cli([str(f)], cwd=isyeri)\n        assert r.returncode == 0\n>       assert r.stdout.splitlines() == [\"oda2\", \"oda02\", \"oda10\"]\nE       AssertionError: assert ['/home/usta/...dosya0/n.txt'] == ['oda2', 'oda02', 'oda10']\nE         At index 0 diff: '/home/usta/is/26344a6560a1/.tmp/pytest-of-usta/pytest-0/test_cli_sayisal_dosya0/n.txt' != 'oda2'\nE         Right contains 2 more items, first extra item: 'oda02'\nE         Use -v to get more diff\n\n.gizli/test_gizli.py:121: AssertionError\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_cli_dosya_siralama - AssertionError: assert...\nFAILED .gizli/test_gizli.py::test_cli_ters - AssertionError: assert ['/home/u...\nFAILED .gizli/test_gizli.py::test_cli_yoksay_buyuk_kucuk - AssertionError: as...\nFAILED .gizli/test_gizli.py::test_cli_iki_bayrak - AssertionError: assert ['/...\nFAILED .gizli/test_gizli.py::test_cli_bos_dosya - AssertionError: assert ['/h...\nFAILED .gizli/test_gizli.py::test_cli_turkce_sira_dosya - AssertionError: ass...\nFAILED .gizli/test_gizli.py::test_cli_sayisal_dosya - AssertionError: assert ...\n7 failed, 13 passed in 0.66s\n"
+ }
+}

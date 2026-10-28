@@ -1,0 +1,49 @@
+{
+ "id": "a100",
+ "kip": "c",
+ "tekrar": 1,
+ "kategori": "Türkçe büyük/küçük harf (İ/i, I/ı), Türk alfabesiyle sıralama, sayıyı yazıya çevirme, ünlü uyumuna göre ek",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 51,
+   "basarili": 51
+  }
+ ],
+ "spark_usd": 0.010453400000000002,
+ "arayuz": "",
+ "kabul_yazar": 3,
+ "mutasyon": {
+  "mutant": 14,
+  "ham_mutant": 14,
+  "turlar": [
+   {
+    "oldurulen": 14,
+    "toplam": 14
+   }
+  ],
+  "hayatta": []
+ },
+ "hakem": [],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [],
+ "kabul_test_sayisi": 51,
+ "kabul_gecti": true,
+ "ozet": "ortaklar.py içinde turkce_sirala yazıldı: Türkçe küçük harf (I→ı, İ→i), 29 harfli alfabe sırası, alfabe dışı karakterler sonda Unicode'a göre, soyad→ad→sicil anahtarı, kararlı sorted, özgün listeyi değiştirmeyen yeni liste, tür-önce-içerik-sonra denetimiyle TypeError. 13 pytest testi geçiyor.",
+ "adim": 10,
+ "yurutucu_token": {
+  "girdi": 39470,
+  "cikti": 15661
+ },
+ "yurutucu_usd": 0.007079200000000001,
+ "bitirdi": true,
+ "sure_sn": 487.2,
+ "gizli": {
+  "gecti": true,
+  "gecen": 20,
+  "toplam": 20,
+  "cikti": "....................                                                     [100%]\n20 passed in 0.07s\n"
+ }
+}

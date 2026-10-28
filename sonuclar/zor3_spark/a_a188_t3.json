@@ -1,0 +1,24 @@
+{
+ "id": "a188",
+ "kip": "a",
+ "tekrar": 3,
+ "kategori": "CSV/JSON ile çalışan ve uç durumları çok olan veri işleme (BOM, ; ayırıcı, 1.234,56 sayı biçimi, boş/bozuk satır)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "vardiya_cli.py yazıldı: utf-8-sig noktalı virgüllü CSV, Decimal Türkçe sayı, exit 2/3/4, 8 saat fazla mesai, ROUND_HALF_UP, Türkçe sıralama ve JSON çıktı.",
+ "adim": 7,
+ "yurutucu_token": {
+  "girdi": 18163,
+  "cikti": 40024
+ },
+ "yurutucu_usd": 0.009821100000000001,
+ "bitirdi": true,
+ "sure_sn": 458.7,
+ "gizli": {
+  "gecti": false,
+  "gecen": 19,
+  "toplam": 20,
+  "cikti": "...................F                                                     [100%]\n=================================== FAILURES ===================================\n____________________ test_sort_equal_wage_turkish_and_sicil ____________________\n\ntmp_path = PosixPath('/home/usta/is/c095ed02ce23/.tmp/pytest-of-usta/pytest-0/test_sort_equal_wage_turkish_a0')\n\n    def test_sort_equal_wage_turkish_and_sicil(tmp_path):\n        pu = tmp_path/'p.csv'; va = tmp_path/'v.json'; out = tmp_path/'o.json'\n        write_csv(str(pu), [['10','Celik','2024-01-01','8,00'],['5','Çelik','2024-01-01','8,00'],['2','Çelik','2024-01-01','8,00']])\n        write_json(str(va), {'saat_ucreti': '10'})\n        r = run_cli(['--puantaj', str(pu), '--vardiya', str(va), '--cikti', str(out)])\n        assert r.returncode == 0\n        d = read_out(str(out))\n>       assert len(d['isciler']) == 3\nE       AssertionError: assert 2 == 3\nE        +  where 2 = len([{'ad': 'Çelik', 'ad_soyad': 'Çelik', 'fazla_mesai': 0.0, 'fazla_mesai_saati': 0.0, ...}, {'ad': 'Celik', 'ad_soyad': 'Celik', 'fazla_mesai': 0.0, 'fazla_mesai_saati': 0.0, ...}])\n\n.gizli/test_gizli.py:213: AssertionError\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_sort_equal_wage_turkish_and_sicil - Asserti...\n1 failed, 19 passed in 0.90s\n"
+ }
+}

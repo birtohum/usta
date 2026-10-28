@@ -1,0 +1,24 @@
+{
+ "id": "a148",
+ "kip": "a",
+ "tekrar": 3,
+ "kategori": "CSV/JSON ile çalışan ve uç durumları çok olan veri işleme (BOM, ; ayırıcı, 1.234,56 sayı biçimi, boş/bozuk satır)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": null,
+ "adim": 20,
+ "yurutucu_token": {
+  "girdi": 143504,
+  "cikti": 60274
+ },
+ "yurutucu_usd": 0.0264052,
+ "bitirdi": false,
+ "sure_sn": 728.3,
+ "gizli": {
+  "gecti": false,
+  "gecen": 7,
+  "toplam": 22,
+  "cikti": "\") for c in hb):\n            raise ValueError(\"baslik\")\n        bas = [str(c).strip() if c is not None else \"\" for c in hb]\n        if bas != [\"uretici\", \"kimlik\", \"miktar\", \"briks\"]:\n>           raise ValueError(\"baslik\")\nE           ValueError: baslik\n\nnareksisi_parti.py:78: ValueError\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_normal_birlestirme - ValueError: baslik\nFAILED .gizli/test_gizli.py::test_red_durumu - ValueError: baslik\nFAILED .gizli/test_gizli.py::test_esik_68_kabul - ValueError: baslik\nFAILED .gizli/test_gizli.py::test_esik_alti_red - ValueError: baslik\nFAILED .gizli/test_gizli.py::test_binlik_nokta_virgul - ValueError: baslik\nFAILED .gizli/test_gizli.py::test_bos_satir_atlama - ValueError: baslik\nFAILED .gizli/test_gizli.py::test_ayirici_bosluk_satir_atlama - ValueError: b...\nFAILED .gizli/test_gizli.py::test_baslik_bosluk_trim - ValueError: baslik\nFAILED .gizli/test_gizli.py::test_yuvarlama_half_up - ValueError: baslik\nFAILED .gizli/test_gizli.py::test_isim_eslestirme_I - ValueError: baslik\nFAILED .gizli/test_gizli.py::test_isim_eslestirme_dottedI_strip - ValueError:...\nFAILED .gizli/test_gizli.py::test_siralama_puan_azalan - ValueError: baslik\nFAILED .gizli/test_gizli.py::test_siralama_turkce_alfabe - ValueError: baslik\nFAILED .gizli/test_gizli.py::test_bos_liste - ValueError: baslik\nFAILED .gizli/test_gizli.py::test_cift_tirnak_ayirici - ValueError: baslik\n15 failed, 7 passed in 0.23s\n"
+ }
+}

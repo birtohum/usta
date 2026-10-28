@@ -1,0 +1,68 @@
+{
+ "id": "a143",
+ "kip": "c",
+ "tekrar": 3,
+ "kategori": "CSV/JSON ile çalışan ve uç durumları çok olan veri işleme (BOM, ; ayırıcı, 1.234,56 sayı biçimi, boş/bozuk satır)",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 15,
+   "basarili": 15
+  }
+ ],
+ "spark_usd": 0.03798660000000001,
+ "arayuz": "",
+ "kabul_yazar": 1,
+ "mutasyon": {
+  "mutant": 15,
+  "ham_mutant": 15,
+  "turlar": [
+   {
+    "oldurulen": 14,
+    "toplam": 15
+   },
+   {
+    "oldurulen": 14,
+    "toplam": 15
+   },
+   {
+    "oldurulen": 14,
+    "toplam": 15
+   }
+  ],
+  "hayatta": [
+   "(1) bos satirlar yok sayilmali, whitespace satirlar islenir"
+  ]
+ },
+ "hakem": [
+  {
+   "test": ".usta_kabul/test_kabul_3.py::test_kullanim_orani_yarim_yukari_yuvarlama",
+   "karar": "belirsiz",
+   "gerekce": "Görev metni kullanim_orani oranının nasıl hesaplanacağını açıkça tanımlamıyor.",
+   "tur": 1
+  }
+ ],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [
+  ".usta_kabul/test_kabul_3.py::test_kullanim_orani_yarim_yukari_yuvarlama"
+ ],
+ "kabul_test_sayisi": 15,
+ "kabul_gecti": true,
+ "ozet": "kereste_kesim_cli.py yazıldı: utf-8-sig `;` CSV okuma, Türkçe sayı ayrıştırma, tr_lower normalizasyon, fireli gereken boy, en kısa uygun + id tiebreak, Decimal yarım-yukarı kullanim_orani, çıkış kodları 2/3. test_cli.py ile 10 test geçti.",
+ "adim": 15,
+ "yurutucu_token": {
+  "girdi": 92526,
+  "cikti": 54830
+ },
+ "yurutucu_usd": 0.020218600000000003,
+ "bitirdi": true,
+ "sure_sn": 1197.0,
+ "gizli": {
+  "gecti": false,
+  "gecen": 18,
+  "toplam": 21,
+  "cikti": "is(sip, [{\"siparis_id\": \"S1\", \"tur\": \"cam\", \"siparis_boyu\": 200}])\n        r = calistir(stok, sip, cik, \"0\", tmp_path)\n        assert r.returncode == 0\n        d = oku_cikti(cik)\n>       assert d[\"kullanim_orani\"] == 1.02\nE       assert 98.52 == 1.02\n\n.gizli/test_gizli.py:184: AssertionError\n_________________________ test_17_baslik_hatasi_cikis3 _________________________\n\ntmp_path = PosixPath('/tmp/pytest-of-usta/pytest-10/test_17_baslik_hatasi_cikis30')\n\n    def test_17_baslik_hatasi_cikis3(tmp_path):\n        stok = tmp_path / \"stok.csv\"\n        sip = tmp_path / \"sip.json\"\n        cik = tmp_path / \"cikti.json\"\n        yaz_stok(stok, [\"K1;cam;300\"], baslik=\"id;tur;boy\")\n        yaz_siparis(sip, [])\n        r = calistir(stok, sip, cik, \"0\", tmp_path)\n>       assert r.returncode == 3\nE       AssertionError: assert 0 == 3\nE        +  where 0 = CompletedProcess(args=['/usr/bin/python', '/home/usta/is/fa93837c1601/kereste_kesim_cli.py', '--stok-csv', '/tmp/pytes...-of-usta/pytest-10/test_17_baslik_hatasi_cikis30/cikti.json', '--fire-orani', '0'], returncode=0, stdout='', stderr='').returncode\n\n.gizli/test_gizli.py:220: AssertionError\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_12_kullanim_orani_yuvarlama - assert 90.0 =...\nFAILED .gizli/test_gizli.py::test_13_kullanim_yarim_yukari - assert 98.52 == ...\nFAILED .gizli/test_gizli.py::test_17_baslik_hatasi_cikis3 - AssertionError: a...\n3 failed, 18 passed in 0.97s\n"
+ }
+}

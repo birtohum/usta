@@ -1,0 +1,24 @@
+{
+ "id": "a066",
+ "kip": "a",
+ "tekrar": 2,
+ "kategori": "CSV/JSON ile çalışan ve uç durumları çok olan veri işleme (BOM, ; ayırıcı, 1.234,56 sayı biçimi, boş/bozuk satır)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "otel_doluluk.py yazıldı: analiz_et CSV'yi utf-8-sig ve `;` ile okur, tamamen boş satırları atlar, sütun uyuşmazlığında ValueError verir, hata önceliğini CSV-yok/JSON-yok/JSON-bozuk/CSV-bozuk sırasıyla uygular, Türkçe sayı ayrıştırma (binlik nokta sil, virgül→nokta, Decimal) ve ROUND_HALF_UP yuvarlama yapar, oda adlarını strip+Türkçe küçük harfle normalize edip gruplar, 7 geceyi uzun sayar negatifi reddeder, başlık-only durumda sıfır sonuç döndürür, odaları gelir→gece azalan ve Türkçe alfabetik sıralar, ilk görülen yazımı korur.",
+ "adim": 8,
+ "yurutucu_token": {
+  "girdi": 29983,
+  "cikti": 33861
+ },
+ "yurutucu_usd": 0.009770500000000001,
+ "bitirdi": true,
+ "sure_sn": 391.5,
+ "gizli": {
+  "gecti": true,
+  "gecen": 23,
+  "toplam": 23,
+  "cikti": ".......................                                                  [100%]\n23 passed in 0.15s\n"
+ }
+}

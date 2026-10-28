@@ -1,0 +1,24 @@
+{
+ "id": "a199",
+ "kip": "a",
+ "tekrar": 3,
+ "kategori": "KDV, tevkifat, stopaj, taksit ve kuruş yuvarlama (Decimal, ROUND_HALF_UP, satır bazında ve toplamda yuvarlama farkı)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "aksaray_yem.py içinde YemStopajDefteri sınıfı yazıldı: ekle/ozet/dokum imzaları, str tür kontrolünde TypeError, oran %2/%4 dışında ValueError, boş üretici ve sıfır/negatif tutarda ValueError, boş defterde ozet ValueError, ROUND_HALF_UP ile stopaj/net/KDV ve 10000 TL üzeri %1 prim hesabı, Türkçe i→İ büyük harf dönüşümü, net azalan + Türkçe alfabetik üretici sıralaması ve Decimal toplamlar sağlandı.",
+ "adim": 5,
+ "yurutucu_token": {
+  "girdi": 16238,
+  "cikti": 26523
+ },
+ "yurutucu_usd": 0.0069284,
+ "bitirdi": true,
+ "sure_sn": 329.5,
+ "gizli": {
+  "gecti": true,
+  "gecen": 22,
+  "toplam": 22,
+  "cikti": "......................                                                   [100%]\n22 passed in 0.03s\n"
+ }
+}

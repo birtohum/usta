@@ -1,0 +1,69 @@
+{
+ "id": "a029",
+ "kip": "c",
+ "tekrar": 1,
+ "kategori": "çok dosyalı küçük modül: iki-üç dosyaya bölünmüş, ortak hata sınıfları ve bir komut satırı girişi olan araç",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 54,
+   "basarili": 54
+  }
+ ],
+ "spark_usd": 0.0127993,
+ "arayuz": "Dosyalar: hatalar.py, randevu.py. from hatalar import SaatHatasi, CakismaHatasi. from randevu import RandevuTakvimi. Kurulum: RandevuTakvimi() parametresiz. Yöntemler: ekle(self, baslangic: str, bitis: str) -> str; iptal(self, kimlik: str) -> bool; liste(self) -> list. liste öğesi dict: {kimlik: str, baslangic: str, bitis: str}. CLI: python -m randevu ekle --baslangic HH:MM --bitis HH:MM; python -m randevu liste",
+ "kabul_yazar": 3,
+ "mutasyon": {
+  "mutant": 15,
+  "ham_mutant": 15,
+  "turlar": [
+   {
+    "oldurulen": 11,
+    "toplam": 15
+   },
+   {
+    "oldurulen": 14,
+    "toplam": 15
+   },
+   {
+    "oldurulen": 15,
+    "toplam": 15
+   }
+  ],
+  "hayatta": []
+ },
+ "hakem": [
+  {
+   "test": ".usta_kabul/test_kabul_3.py::test_cli_ekle_satir_satir",
+   "karar": "belirsiz",
+   "gerekce": "Görev metni CLI kalıcılığının cwd izole olacağını ve yeni klasörde takvimin boş sayılacağını belirtmiyor.",
+   "tur": 1
+  }
+ ],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [
+  ".usta_kabul/test_kabul_1.py::test_liste_baslangica_gore_sirali",
+  ".usta_kabul/test_kabul_2.py::test_cli_ekle_ve_liste_calisir",
+  ".usta_kabul/test_kabul_m1.py::test_cli_liste_satir_satir",
+  ".usta_kabul/test_kabul_3.py::test_cli_ekle_satir_satir"
+ ],
+ "kabul_test_sayisi": 54,
+ "kabul_gecti": true,
+ "ozet": "hatalar.py (SaatHatasi, CakismaHatasi) ve randevu.py (RandevuTakvimi: ekle/iptal/liste + CLI ekle/liste) yazıldı; HH:MM doğrulama, yarı-açık aralık çakışma kuralı, sıralama ve hata önceliği uygulandı. 13 pytest testi geçti, CLI doğrulandı.",
+ "adim": 7,
+ "yurutucu_token": {
+  "girdi": 30031,
+  "cikti": 11798
+ },
+ "yurutucu_usd": 0.005362700000000001,
+ "bitirdi": true,
+ "sure_sn": 944.1,
+ "gizli": {
+  "gecti": false,
+  "gecen": 20,
+  "toplam": 21,
+  "cikti": "...................F.                                                    [100%]\n=================================== FAILURES ===================================\n________________________________ test_cli_ekle _________________________________\n\n    def test_cli_ekle():\n        r = subprocess.run([sys.executable, \"-m\", \"randevu\", \"ekle\", \"--baslangic\", \"09:00\", \"--bitis\", \"09:30\"], cwd=str(ROOT), capture_output=True, text=True)\n        assert r.returncode == 0\n        satirlar = r.stdout.strip().splitlines()\n        assert len(satirlar) == 1\n>       assert satirlar[0].strip() == \"1\"\nE       AssertionError: assert '4' == '1'\nE         - 1\nE         + 4\n\n.gizli/test_gizli.py:156: AssertionError\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_cli_ekle - AssertionError: assert '4' == '1'\n1 failed, 20 passed in 0.41s\n"
+ }
+}

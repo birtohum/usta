@@ -1,0 +1,24 @@
+{
+ "id": "a188",
+ "kip": "b",
+ "tekrar": 2,
+ "kategori": "CSV/JSON ile çalışan ve uç durumları çok olan veri işleme (BOM, ; ayırıcı, 1.234,56 sayı biçimi, boş/bozuk satır)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "vardiya_cli.py yazıldı: utf-8-sig + `;` csv, boş satır yoksayma, Decimal TR sayı, bozuk_satir, exit 2/3/4 sırası, günlük 8.00 üstü fazla mesai, ROUND_HALF_UP, TR alt-harf gruplama, TR ada göre eşit ücret sıralaması, boş CSV'de boş sonuç, --ucret önceliği. pytest 6 test geçti.",
+ "adim": 19,
+ "yurutucu_token": {
+  "girdi": 156826,
+  "cikti": 74105
+ },
+ "yurutucu_usd": 0.03050360000000001,
+ "bitirdi": true,
+ "sure_sn": 837.5,
+ "gizli": {
+  "gecti": true,
+  "gecen": 20,
+  "toplam": 20,
+  "cikti": "....................                                                     [100%]\n20 passed in 2.23s\n"
+ }
+}

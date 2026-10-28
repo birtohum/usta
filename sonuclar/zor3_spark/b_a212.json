@@ -1,0 +1,24 @@
+{
+ "id": "a212",
+ "kip": "b",
+ "tekrar": 1,
+ "kategori": "KDV, tevkifat, stopaj, taksit ve kuruş yuvarlama (Decimal, ROUND_HALF_UP, satır bazında ve toplamda yuvarlama farkı)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "kirsehir_kirtasiye_cli.py yazıldı: argparse ile --satir (tekrarlanabilir) ve zorunlu --rapor; Türkçe duyarsız kategori eşleşmesi, Decimal+ROUND_HALF_UP hesaplar, 3000 TL üzeri %3 iskonto ve iskontolu matrah üzerinden kategori bazında KDV, fis sıralaması (kirtasiye, kitap, oyuncak + fiyat + kararlı), hata durumlarında exit 2. test_kirsehir.py ile 15 test `python -m pytest -q` altında geçti.",
+ "adim": 7,
+ "yurutucu_token": {
+  "girdi": 29272,
+  "cikti": 35229
+ },
+ "yurutucu_usd": 0.009973000000000001,
+ "bitirdi": true,
+ "sure_sn": 400.7,
+ "gizli": {
+  "gecti": false,
+  "gecen": 20,
+  "toplam": 21,
+  "cikti": "....................F                                                    [100%]\n=================================== FAILURES ===================================\n_____________________ test_fis_ayni_kategori_giris_sirasi ______________________\n\n    def test_fis_ayni_kategori_giris_sirasi():\n        r = run_cli(\"--satir\", \"kirtasiye:2:10.00\", \"--satir\", \"kirtasiye:1:10.00\", \"--rapor\", \"fis\")\n        assert r.returncode == 0\n        out = r.stdout\n        idx2 = out.find(\"2 x 10.00\")\n        idx1 = out.find(\"1 x 10.00\")\n>       assert idx2 != -1 and idx1 != -1\nE       assert (-1 != -1)\n\n.gizli/test_gizli.py:171: AssertionError\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_fis_ayni_kategori_giris_sirasi - assert (-1...\n1 failed, 20 passed in 2.06s\n"
+ }
+}

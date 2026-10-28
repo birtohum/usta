@@ -1,0 +1,24 @@
+{
+ "id": "a058",
+ "kip": "b",
+ "tekrar": 1,
+ "kategori": "tarih ve saat: resmî tatiller parametreyle, iş günü hesabı, Türkiye saat dilimi (UTC+3, yaz saati yok), gün/ay adları Türkçe",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "gumruk_cli.py yazıldı: iş günü hesabı, Türkçe gün/ay adları, hata kodları 2/3 uygulandı; 9 pytest testi geçiyor.",
+ "adim": 7,
+ "yurutucu_token": {
+  "girdi": 21907,
+  "cikti": 18517
+ },
+ "yurutucu_usd": 0.005894100000000001,
+ "bitirdi": true,
+ "sure_sn": 160.6,
+ "gizli": {
+  "gecti": true,
+  "gecen": 20,
+  "toplam": 20,
+  "cikti": "....................                                                     [100%]\n20 passed in 0.38s\n"
+ }
+}

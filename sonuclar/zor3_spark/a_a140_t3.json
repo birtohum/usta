@@ -1,0 +1,24 @@
+{
+ "id": "a140",
+ "kip": "a",
+ "tekrar": 3,
+ "kategori": "Türkçe büyük/küçük harf (İ/i, I/ı), Türk alfabesiyle sıralama, sayıyı yazıya çevirme, ünlü uyumuna göre ek",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "kuyruk.py yazıldı: AnonsKuyrugu sınıfı, tr_lower (I→ı, İ→i), strip+TypeError/ValueError kontrolleri, ilk yazımı koruyan tekilleştirme, Türk alfabesi sıralaması, 1-5000 sayı yazımı (yüz/bin kurallı), son ünlüye göre a/e ve y kaynaştırma ile anons cümlesi kuruldu.",
+ "adim": 9,
+ "yurutucu_token": {
+  "girdi": 30404,
+  "cikti": 37862
+ },
+ "yurutucu_usd": 0.0106128,
+ "bitirdi": true,
+ "sure_sn": 411.6,
+ "gizli": {
+  "gecti": true,
+  "gecen": 21,
+  "toplam": 21,
+  "cikti": ".....................                                                    [100%]\n21 passed in 0.06s\n"
+ }
+}

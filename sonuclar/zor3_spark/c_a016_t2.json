@@ -1,0 +1,62 @@
+{
+ "id": "a016",
+ "kip": "c",
+ "tekrar": 2,
+ "kategori": "tarih ve saat: resmî tatiller parametreyle, iş günü hesabı, Türkiye saat dilimi (UTC+3, yaz saati yok), gün/ay adları Türkçe",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 55,
+   "basarili": 55
+  }
+ ],
+ "spark_usd": 0.011746300000000001,
+ "arayuz": "",
+ "kabul_yazar": 3,
+ "mutasyon": {
+  "mutant": 15,
+  "ham_mutant": 15,
+  "turlar": [
+   {
+    "oldurulen": 14,
+    "toplam": 15
+   },
+   {
+    "oldurulen": 14,
+    "toplam": 15
+   },
+   {
+    "oldurulen": 14,
+    "toplam": 15
+   }
+  ],
+  "hayatta": [
+   "17:00 haric gereksinimini cigner: 17:00 baslangici hatali uretir"
+  ]
+ },
+ "hakem": [],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [
+  ".usta_kabul/test_kabul_m2.py::test_1700_baslangici_uretilmez_30dk",
+  ".usta_kabul/test_kabul_m2.py::test_1700_baslangici_uretilmez_60dk"
+ ],
+ "kabul_test_sayisi": 55,
+ "kabul_gecti": true,
+ "ozet": "randevu.py içinde uygun_slotlari_bul ve tarihce_tr gerçeklendi: TR (+3, DST yok) normalizasyonu, hafta içi 09:00–17:00 slot üretimi (bitişi 17:00 olan geçerli), başlangıçtan sure_dakika adımlı dizilim, [başlangıç, bitiş) çakışma kuralı, TypeError-öncelikli hata kontrolleri, sıralı sonuç ve Türkçe tarih etiketi. 27 pytest testi yazıldı ve hepsi geçti.",
+ "adim": 5,
+ "yurutucu_token": {
+  "girdi": 19646,
+  "cikti": 12665
+ },
+ "yurutucu_usd": 0.0044976,
+ "bitirdi": true,
+ "sure_sn": 1029.3,
+ "gizli": {
+  "gecti": true,
+  "gecen": 22,
+  "toplam": 22,
+  "cikti": "......................                                                   [100%]\n22 passed in 0.11s\n"
+ }
+}

@@ -1,0 +1,24 @@
+{
+ "id": "a218",
+ "kip": "a",
+ "tekrar": 3,
+ "kategori": "tarih ve saat: resmî tatiller parametreyle, iş günü hesabı, Türkiye saat dilimi (UTC+3, yaz saati yok), gün/ay adları Türkçe",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "deneme.py yazıldı: DenemeTakibi sınıfı Europe/Istanbul zoneinfo ile iş günü hesabı, başlangıç hariç sayım, sıfır süre ve negatif kontrolü, float yukarı yuvarlama, Türkçe gün/ay adlarıyla rapor satırı, Türkçe küçük harf sıralaması ve belirtilen hata önceliği uygulandı.",
+ "adim": 10,
+ "yurutucu_token": {
+  "girdi": 36073,
+  "cikti": 42918
+ },
+ "yurutucu_usd": 0.0121909,
+ "bitirdi": true,
+ "sure_sn": 504.2,
+ "gizli": {
+  "gecti": false,
+  "gecen": 19,
+  "toplam": 20,
+  "cikti": "..............F.....                                                     [100%]\n=================================== FAILURES ===================================\n__________________________ test_15_turkce_kucuk_harf ___________________________\n\n    def test_15_turkce_kucuk_harf():\n        t = DenemeTakibi(set())\n        t.ekle(\"I\", \"2024-01-01\", 1)\n>       with pytest.raises(ValueError):\nE       Failed: DID NOT RAISE <class 'ValueError'>\n\n.gizli/test_gizli.py:92: Failed\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_15_turkce_kucuk_harf - Failed: DID NOT RAIS...\n1 failed, 19 passed in 0.05s\n"
+ }
+}

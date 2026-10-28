@@ -1,0 +1,24 @@
+{
+ "id": "a014",
+ "kip": "a",
+ "tekrar": 2,
+ "kategori": "KDV, tevkifat, stopaj, taksit ve kuruş yuvarlama (Decimal, ROUND_HALF_UP, satır bazında ve toplamda yuvarlama farkı)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "makbuz.py içinde SerbestMeslekMakbuzu sınıfı oluşturuldu: str girişler Decimal ile doğrulanıp ROUND_HALF_UP ile 2 basamağa yuvarlanıyor, TypeError/ValueError önceliğine uyuluyor, brüt<=0 reddediliyor, stopaj %20 (gider toplamı 5000'i aşarsa brüt+gider üzerinden), KDV %20 (brüt+gider üzerinden), net=brüt+gider-stopaj, tahsilat=net+kdv hesaplanıyor.",
+ "adim": 4,
+ "yurutucu_token": {
+  "girdi": 8866,
+  "cikti": 14323
+ },
+ "yurutucu_usd": 0.0037512000000000005,
+ "bitirdi": true,
+ "sure_sn": 181.2,
+ "gizli": {
+  "gecti": true,
+  "gecen": 20,
+  "toplam": 20,
+  "cikti": "....................                                                     [100%]\n20 passed in 0.09s\n"
+ }
+}

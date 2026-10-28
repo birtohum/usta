@@ -1,0 +1,62 @@
+{
+ "id": "a113",
+ "kip": "c",
+ "tekrar": 3,
+ "kategori": "CSV/JSON ile çalışan ve uç durumları çok olan veri işleme (BOM, ; ayırıcı, 1.234,56 sayı biçimi, boş/bozuk satır)",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 54,
+   "basarili": 54
+  }
+ ],
+ "spark_usd": 0.017628400000000002,
+ "arayuz": "",
+ "kabul_yazar": 3,
+ "mutasyon": {
+  "mutant": 16,
+  "ham_mutant": 16,
+  "turlar": [
+   {
+    "oldurulen": 14,
+    "toplam": 16
+   },
+   {
+    "oldurulen": 15,
+    "toplam": 16
+   },
+   {
+    "oldurulen": 15,
+    "toplam": 16
+   }
+  ],
+  "hayatta": [
+   "GIRIS utf-8-sig ile okunur BOM yoksayilir gereksinimini cigner"
+  ]
+ },
+ "hakem": [],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [
+  ".usta_kabul/test_kabul_3.py::test_binlik_sayi_cozumu_ve_bicim",
+  ".usta_kabul/test_kabul_3.py::test_siralama_esitlikte_turkce_ad"
+ ],
+ "kabul_test_sayisi": 54,
+ "kabul_gecti": true,
+ "ozet": "aycicek_teslim.py yazıldı: utf-8-sig/BOM, `;` ayrımı, Türkçe sayı çözümleme, prim+HALF_UP tutar, Türkçe duyarsız gruplama ve sıralama, exit 1/2 önceliği uygulandı. 11 pytest testi geçiyor.",
+ "adim": 7,
+ "yurutucu_token": {
+  "girdi": 39872,
+  "cikti": 18215
+ },
+ "yurutucu_usd": 0.007630199999999999,
+ "bitirdi": true,
+ "sure_sn": 821.3,
+ "gizli": {
+  "gecti": true,
+  "gecen": 20,
+  "toplam": 20,
+  "cikti": "....................                                                     [100%]\n20 passed in 0.74s\n"
+ }
+}

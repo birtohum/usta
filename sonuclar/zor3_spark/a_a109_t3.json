@@ -1,0 +1,24 @@
+{
+ "id": "a109",
+ "kip": "a",
+ "tekrar": 3,
+ "kategori": "KDV, tevkifat, stopaj, taksit ve kuruş yuvarlama (Decimal, ROUND_HALF_UP, satır bazında ve toplamda yuvarlama farkı)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "abonelik.py yazıldı: AbonelikTaksitleri Decimal ile KDV ayrıştırma, ROUND_HALF_UP yuvarlama, son taksit dengeleme, 12000/6 kuralı, %3 erken kapatma indirimi ve TypeError/ValueError önceliği uygulandı.",
+ "adim": 5,
+ "yurutucu_token": {
+  "girdi": 12307,
+  "cikti": 25506
+ },
+ "yurutucu_usd": 0.0063319000000000005,
+ "bitirdi": true,
+ "sure_sn": 252.4,
+ "gizli": {
+  "gecti": false,
+  "gecen": 20,
+  "toplam": 22,
+  "cikti": "        top_m = sum(x['matrah'] for x in kalan)\n        top_k = sum(x['kdv'] for x in kalan)\n        top_t = sum(x['tutar'] for x in kalan)\n        s = a.erken_kapat(1)\n        exp_m = Q(top_m * Decimal('0.97'))\n        exp_k = Q(top_k * Decimal('0.97'))\n        assert s['kalan_matrah'] == exp_m\n        assert s['kalan_kdv'] == exp_k\n        assert s['kalan_tutar'] == exp_m + exp_k\n>       assert s['indirimsiz_tutar'] == top_t\n\n.gizli/test_gizli.py:176: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nself = {'kalan_taksit': 3, 'kalan_matrah': Decimal('727.50'), 'kalan_kdv': Decimal('145.50'), 'kalan_borc': Decimal('873.00')}\nk = 'indirimsiz_tutar'\n\n    def __getitem__(self, k):\n        if dict.__contains__(self, k):\n            return dict.__getitem__(self, k)\n        if k in self._ALIAS:\n            return dict.__getitem__(self, self._ALIAS[k])\n>       raise KeyError(k)\nE       KeyError: 'indirimsiz_tutar'\n\nabonelik.py:29: KeyError\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_erken_zero - KeyError: 'indirim_tutari'\nFAILED .gizli/test_gizli.py::test_erken_discount - KeyError: 'indirimsiz_tutar'\n2 failed, 20 passed in 0.13s\n"
+ }
+}

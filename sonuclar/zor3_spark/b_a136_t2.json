@@ -1,0 +1,24 @@
+{
+ "id": "a136",
+ "kip": "b",
+ "tekrar": 2,
+ "kategori": "tarih ve saat: resmî tatiller parametreyle, iş günü hesabı, Türkiye saat dilimi (UTC+3, yaz saati yok), gün/ay adları Türkçe",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "nikah.py (uygun_gunleri_bul) ve salon_kurallari.py (kapali_gun) yazıldı; biçim/takvim/sıralama/tatil hata önceliği, UTC+3 gece yarısı yorumu, Türkçe gün adları (salı/pazar) ve bağımsızlık kurallarına uyuldu. pytest ile 16 test geçti.",
+ "adim": 7,
+ "yurutucu_token": {
+  "girdi": 24469,
+  "cikti": 22076
+ },
+ "yurutucu_usd": 0.0068621,
+ "bitirdi": true,
+ "sure_sn": 216.5,
+ "gizli": {
+  "gecti": true,
+  "gecen": 20,
+  "toplam": 20,
+  "cikti": "....................                                                     [100%]\n20 passed in 0.06s\n"
+ }
+}

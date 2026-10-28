@@ -1,0 +1,24 @@
+{
+ "id": "a136",
+ "kip": "a",
+ "tekrar": 2,
+ "kategori": "tarih ve saat: resmî tatiller parametreyle, iş günü hesabı, Türkiye saat dilimi (UTC+3, yaz saati yok), gün/ay adları Türkçe",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "nikah.py içinde uygun_gunleri_bul ve salon_kurallari.py içinde kapali_gun fonksiyonlarını yazdım. uygun_gunleri_bul; biçim, takvim, aralık sıralaması ve tatil hatalarını belirtilen öncelikle denetler, Pazartesi-Cuma günlerinden tatilleri çıkarıp Pazar kapalılığını eleyerek artan tarih sırasıyla (tarih, Türkçe küçük harf gün adı) listeler. kapali_gun yalnızca Pazar (6) için True döner, aralık dışı değerde ValueError yükseltir. Her iki dosya da bağımsızdır, lower/upper kullanılmaz, ağ ve şimdiki zaman okuma yoktur.",
+ "adim": 6,
+ "yurutucu_token": {
+  "girdi": 16976,
+  "cikti": 23242
+ },
+ "yurutucu_usd": 0.006346000000000001,
+ "bitirdi": true,
+ "sure_sn": 238.9,
+ "gizli": {
+  "gecti": true,
+  "gecen": 20,
+  "toplam": 20,
+  "cikti": "....................                                                     [100%]\n20 passed in 0.04s\n"
+ }
+}

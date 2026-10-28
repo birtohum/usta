@@ -1,0 +1,24 @@
+{
+ "id": "a027",
+ "kip": "b",
+ "tekrar": 2,
+ "kategori": "Türkçe büyük/küçük harf (İ/i, I/ı), Türk alfabesiyle sıralama, sayıyı yazıya çevirme, ünlü uyumuna göre ek",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "slug.py yazıldı: Türkçe küçük harf çevirisi (İ→i, I→ı, i korunur), çğışöü→cgisou dönüşümü, harf/rakam dışı karakterlerin tek ayraca indirgenmesi ve kenar ayraçların atılması; --baslik yoksa ve --ayrac çok karakterse exit 2, varsayılan ayraç `-`. pytest ile 14 test geçirildi.",
+ "adim": 7,
+ "yurutucu_token": {
+  "girdi": 24959,
+  "cikti": 33282
+ },
+ "yurutucu_usd": 0.009152300000000002,
+ "bitirdi": true,
+ "sure_sn": 332.0,
+ "gizli": {
+  "gecti": true,
+  "gecen": 21,
+  "toplam": 21,
+  "cikti": ".....................                                                    [100%]\n21 passed in 0.99s\n"
+ }
+}

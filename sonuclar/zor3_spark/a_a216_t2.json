@@ -1,0 +1,24 @@
+{
+ "id": "a216",
+ "kip": "a",
+ "tekrar": 2,
+ "kategori": "tarih ve saat: resmî tatiller parametreyle, iş günü hesabı, Türkiye saat dilimi (UTC+3, yaz saati yok), gün/ay adları Türkçe",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "mezat.py oluşturuldu: mezat_takvimi(baslangic, gun_sayisi, mezat_gunleri, tatiller) başlangıç dahil gün gün ilerleyip yalnızca mezat günlerine denk gelen ve tatilde olmayan gun_sayisi kadar (tarih, Türkçe gün adı) döndürür; Europe/Istanbul bilinçli tarih, Türkçe gün/ay adları ve I->ı / İ->i küçük harf kuralı, hata önceliği (başlangıç > mezat_gunleri > gun_sayisi > tatiller) ve ValueError kuralları uygulandı, yalnızca standart kütüphane kullanıldı.",
+ "adim": 10,
+ "yurutucu_token": {
+  "girdi": 42122,
+  "cikti": 23784
+ },
+ "yurutucu_usd": 0.008969000000000001,
+ "bitirdi": true,
+ "sure_sn": 278.2,
+ "gizli": {
+  "gecti": false,
+  "gecen": 19,
+  "toplam": 20,
+  "cikti": ".................F..                                                     [100%]\n=================================== FAILURES ===================================\n____________________________ test_turkce_ay_adlari _____________________________\n\n    def test_turkce_ay_adlari():\n        r = mezat_takvimi(\"2024-02-05\", 1, [0], set())\n>       assert \"Şubat\" in r[0][1]\nE       AssertionError: assert 'Şubat' in 'Pazartesi'\n\n.gizli/test_gizli.py:85: AssertionError\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_turkce_ay_adlari - AssertionError: assert '...\n1 failed, 19 passed in 0.11s\n"
+ }
+}

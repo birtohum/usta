@@ -1,0 +1,53 @@
+{
+ "id": "a134",
+ "kip": "c",
+ "tekrar": 1,
+ "kategori": "KDV, tevkifat, stopaj, taksit ve kuruş yuvarlama (Decimal, ROUND_HALF_UP, satır bazında ve toplamda yuvarlama farkı)",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 53,
+   "basarili": 53
+  }
+ ],
+ "spark_usd": 0.0098751,
+ "arayuz": "sut_odemesi.py içinde sut_stopaj_hesapla(kalemler: list, stopaj_orani: Decimal) -> dict. Dönüş dict anahtarları: satirlar, matrah_toplam, kdv_toplam, stopaj_toplam, net_odenecek, yuvarlama_farki. satirlar her biri uretici, litre, birim_fiyat, kdv_orani, matrah, kdv_tutar, stopaj_tutar alan sözlük listesi.",
+ "kabul_yazar": 3,
+ "mutasyon": {
+  "mutant": 15,
+  "ham_mutant": 15,
+  "turlar": [
+   {
+    "oldurulen": 14,
+    "toplam": 15
+   },
+   {
+    "oldurulen": 15,
+    "toplam": 15
+   }
+  ],
+  "hayatta": []
+ },
+ "hakem": [],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [],
+ "kabul_test_sayisi": 53,
+ "kabul_gecti": true,
+ "ozet": "sut_odemesi.py içinde sut_stopaj_hesapla fonksiyonunu yazdım: Decimal+ROUND_HALF_UP ile matrah/KDV/stopaj ve toplamları kuruşa yuvarlar, kdv (1/20) ve stopaj (0/2/4) denetiminde ValueError, Decimal olmayan litre/birim_fiyat için TypeError (tür denetimi önce), boş liste ve boş uretici için ValueError, stopajı KDV hariç matrahtan hesaplar, yuvarlama farkını toplu KDV eksi satır KDV olarak döndürür ve satırları casefold'a göre stabil sıralar. 15 pytest testi yazıp `python -m pytest -q` ile hepsini geçirdim.",
+ "adim": 4,
+ "yurutucu_token": {
+  "girdi": 14988,
+  "cikti": 17808
+ },
+ "yurutucu_usd": 0.0050604000000000005,
+ "bitirdi": true,
+ "sure_sn": 627.4,
+ "gizli": {
+  "gecti": false,
+  "gecen": 18,
+  "toplam": 21,
+  "cikti": ".gizli/test_gizli.py:16: KeyError\n__________________________ test_kdv_oranlari_1_ve_20 ___________________________\n\n    def test_kdv_oranlari_1_ve_20():\n        kalemler = [\n            {\"uretici\": \"A\", \"litre\": Decimal(\"10\"), \"birim_fiyat\": Decimal(\"10.00\"), \"kdv_orani\": 1},\n            {\"uretici\": \"B\", \"litre\": Decimal(\"10\"), \"birim_fiyat\": Decimal(\"10.00\"), \"kdv_orani\": 20},\n        ]\n        r = sut_stopaj_hesapla(kalemler, Decimal(\"0\"))\n        m = {s[\"uretici\"]: s for s in r[\"satirlar\"]}\n>       assert m[\"A\"][\"kdv_tutari\"] == Decimal(\"1.00\")\nE       KeyError: 'kdv_tutari'\n\n.gizli/test_gizli.py:31: KeyError\n___________________ test_stopaj_matrah_uzerinden_hesaplanir ____________________\n\n    def test_stopaj_matrah_uzerinden_hesaplanir():\n        kalemler = [{\"uretici\": \"Ali\", \"litre\": Decimal(\"10\"), \"birim_fiyat\": Decimal(\"10.00\"), \"kdv_orani\": 20}]\n        r = sut_stopaj_hesapla(kalemler, Decimal(\"4\"))\n        s = r[\"satirlar\"][0]\n        assert s[\"matrah\"] == Decimal(\"100.00\")\n>       assert s[\"kdv_tutari\"] == Decimal(\"20.00\")\nE       KeyError: 'kdv_tutari'\n\n.gizli/test_gizli.py:40: KeyError\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_tek_satir_hesap - KeyError: 'kdv_tutari'\nFAILED .gizli/test_gizli.py::test_kdv_oranlari_1_ve_20 - KeyError: 'kdv_tutari'\nFAILED .gizli/test_gizli.py::test_stopaj_matrah_uzerinden_hesaplanir - KeyErr...\n3 failed, 18 passed in 0.11s\n"
+ }
+}

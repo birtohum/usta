@@ -1,0 +1,63 @@
+{
+ "id": "a201",
+ "kip": "c",
+ "tekrar": 3,
+ "kategori": "tarih ve saat: resmî tatiller parametreyle, iş günü hesabı, Türkiye saat dilimi (UTC+3, yaz saati yok), gün/ay adları Türkçe",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 49,
+   "basarili": 49
+  }
+ ],
+ "spark_usd": 0.0170291,
+ "arayuz": "Dosya genel_kurul.py içinde sınıf GenelKurulTakvimi; __init__(tatiller: set[str] | None, hafta_sonu_cumartesi_dahil: bool); ilk_toplanti(duyuru_tarihi: str) -> str; ikinci_toplanti(self) -> str",
+ "kabul_yazar": 3,
+ "mutasyon": {
+  "mutant": 14,
+  "ham_mutant": 14,
+  "turlar": [
+   {
+    "oldurulen": 11,
+    "toplam": 14
+   },
+   {
+    "oldurulen": 11,
+    "toplam": 14
+   },
+   {
+    "oldurulen": 11,
+    "toplam": 14
+   }
+  ],
+  "hayatta": [
+   "yedinci gun tatilse ileri kaydirilir ve ardisik tatiller gereksinimini cigner",
+   "kucuk i harfi buyuk I olur gereksinimini cigner",
+   "hata onceligi once tarih bicimi sonra tatiller icerigi gereksinimini cigner"
+  ]
+ },
+ "hakem": [],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [
+  ".usta_kabul/test_kabul_2.py::test_ikinci_toplanti_tatilde_ileri_kayar"
+ ],
+ "kabul_test_sayisi": 49,
+ "kabul_gecti": true,
+ "ozet": "genel_kurul.py içinde GenelKurulTakvimi sınıfı yazıldı: duyuru sonrası 7. iş günü, +7 gün ikinci toplantı, Cumartesi seçeneği, tatil kaydırma, Europe/Istanbul, Türkçe adlar ve 09:00 sabitleme, hata önceliği uygulandı. pytest ile 19 test geçti.",
+ "adim": 4,
+ "yurutucu_token": {
+  "girdi": 15832,
+  "cikti": 15256
+ },
+ "yurutucu_usd": 0.0046344,
+ "bitirdi": true,
+ "sure_sn": 725.0,
+ "gizli": {
+  "gecti": false,
+  "gecen": 0,
+  "toplam": 2,
+  "cikti": "\n==================================== ERRORS ====================================\n____________________ ERROR collecting .gizli/test_gizli.py _____________________\nImportError while importing test module '/home/usta/is/340d5d3596f2/.gizli/test_gizli.py'.\nHint: make sure your test modules/packages have valid Python names.\nTraceback:\n/usr/lib/python3.12/importlib/__init__.py:90: in import_module\n    return _bootstrap._gcd_import(name[level:], package, level)\n.gizli/test_gizli.py:5: in <module>\n    from genel_kurul import GenelKurulTakvimi, turkce_upper, toplantilari_sirala\nE   ImportError: cannot import name 'turkce_upper' from 'genel_kurul' (/home/usta/is/340d5d3596f2/genel_kurul.py)\n=========================== short test summary info ============================\nERROR .gizli/test_gizli.py\n!!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!\n1 error in 0.05s\n"
+ }
+}

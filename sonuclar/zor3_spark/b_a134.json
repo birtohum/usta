@@ -1,0 +1,24 @@
+{
+ "id": "a134",
+ "kip": "b",
+ "tekrar": 1,
+ "kategori": "KDV, tevkifat, stopaj, taksit ve kuruş yuvarlama (Decimal, ROUND_HALF_UP, satır bazında ve toplamda yuvarlama farkı)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "sut_odemesi.py içinde sut_stopaj_hesapla yazıldı: satır matrah/KDV/stopaj ROUND_HALF_UP ile kuruşa yuvarlanır, toplamlar ve yuvarlama farkı (toplu KDV - satır KDV) hesaplanır, validasyonlar ve casefold sıralama uygulanır; pytest ile 5 test geçti.",
+ "adim": 6,
+ "yurutucu_token": {
+  "girdi": 17000,
+  "cikti": 22509
+ },
+ "yurutucu_usd": 0.0062018,
+ "bitirdi": true,
+ "sure_sn": 283.3,
+ "gizli": {
+  "gecti": true,
+  "gecen": 21,
+  "toplam": 21,
+  "cikti": ".....................                                                    [100%]\n21 passed in 0.11s\n"
+ }
+}

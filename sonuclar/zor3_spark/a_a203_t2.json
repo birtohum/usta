@@ -1,0 +1,24 @@
+{
+ "id": "a203",
+ "kip": "a",
+ "tekrar": 2,
+ "kategori": "CSV/JSON ile çalışan ve uç durumları çok olan veri işleme (BOM, ; ayırıcı, 1.234,56 sayı biçimi, boş/bozuk satır)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "bakir_fire_cli.py yazıldı ve test edildi: utf-8-sig + noktalı virgül okuma, boş satır atlama, Decimal Türkçe sayı ayrıştırma, exit 2/3 kodları (yokluk önce), ROUND_HALF_UP %2,50 sınır kuralı, birebir parti_id + Türkçe küçük harf tedarikçi eşleşmesi (lower yok), eşit oranda parti_id artan sıralama, sıfır paydayı bozuk sayma, boş dosyada boş rapor, limit önceliği (bayrak > fire.json > 2,50) ve Türkçe kilogram biçimli rapor.json çıktısı doğrulandı.",
+ "adim": 7,
+ "yurutucu_token": {
+  "girdi": 26989,
+  "cikti": 32058
+ },
+ "yurutucu_usd": 0.0091105,
+ "bitirdi": true,
+ "sure_sn": 350.0,
+ "gizli": {
+  "gecti": false,
+  "gecen": 20,
+  "toplam": 21,
+  "cikti": "..............F......                                                    [100%]\n=================================== FAILURES ===================================\n____________________________ test_turkce_kucuk_harf ____________________________\n\ntmp_path = PosixPath('/home/usta/is/a15c950343ac/.tmp/pytest-of-usta/pytest-0/test_turkce_kucuk_harf0')\n\n    def test_turkce_kucuk_harf(tmp_path):\n        g = tmp_path / \"giris.csv\"\n        f = tmp_path / \"fire.json\"\n        c = tmp_path / \"rapor.json\"\n        write_csv(g, \"parti_id;giren_kg;cikan_kg;tedarikci\\nP001;100,00;98,00;ISPARTA\\n\")\n        write_fire(f, {\"limit\": \"50,00\"})\n        r = run_cli(g, f, c)\n        assert r.returncode == 0\n        txt = pathlib.Path(c).read_text(encoding=\"utf-8\")\n>       assert \"\\u0131sparta\" in txt\nE       assert 'ısparta' in '{\\n  \"partiler\": [\\n    {\\n      \"parti_id\": \"P001\",\\n      \"giren_kg\": \"100,00\",\\n      \"cikan_kg\": \"98,00\",\\n      ...\",\\n      \"limit_disi\": false,\\n      \"tedarikci\": \"ISPARTA\"\\n    }\\n  ],\\n  \"bozuk_satir\": 0,\\n  \"limit_disi\": 0\\n}\\n'\n\n.gizli/test_gizli.py:187: AssertionError\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_turkce_kucuk_harf - assert 'ısparta' in '{\\...\n1 failed, 20 passed in 2.15s\n"
+ }
+}

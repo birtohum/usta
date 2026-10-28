@@ -1,0 +1,24 @@
+{
+ "id": "a077",
+ "kip": "b",
+ "tekrar": 2,
+ "kategori": "çok dosyalı küçük modül: iki-üç dosyaya bölünmüş, ortak hata sınıfları ve bir komut satırı girişi olan araç",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "Kantin veresiye aracı yazıldı: hatalar.py (ValueError'dan doğrudan türeyen OgrenciHatasi, LimitHatasi), veresiye.py (istenen imzalı VeresiyeDefteri; 1-20000 tutar aralığı, 50000 dahil borç sınırı, ödemede LimitHatasi, strip+boş ad kontrolü, I→ı/İ→i Türkçe kanonik eşleşme, tam Türkçe alfabe sıralı listeleme, ad→tutar→limit hata önceliği, int kuruş bakiyeler), cli.py (--ogrenci/--islem/--tutar ile tek satır \"Bakiye: N kuruş\" çıktısı). test_kantin.py ile 18 pytest testi yazıldı ve hepsi geçti.",
+ "adim": 9,
+ "yurutucu_token": {
+  "girdi": 45706,
+  "cikti": 25555
+ },
+ "yurutucu_usd": 0.0096816,
+ "bitirdi": true,
+ "sure_sn": 319.3,
+ "gizli": {
+  "gecti": true,
+  "gecen": 20,
+  "toplam": 20,
+  "cikti": "....................                                                     [100%]\n20 passed in 0.22s\n"
+ }
+}

@@ -1,0 +1,24 @@
+{
+ "id": "a081",
+ "kip": "b",
+ "tekrar": 2,
+ "kategori": "tarih ve saat: resmî tatiller parametreyle, iş günü hesabı, Türkiye saat dilimi (UTC+3, yaz saati yok), gün/ay adları Türkçe",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "kargo_cli.py yazıldı: UTC+3 çevrimi, saniye floor, 17:00 sınırı, iş günü/YOK eleme, gun=0/negatif, hata kodları 2/3 (zaman öncelikli), İ/I Türkçe küçük harf, erken-teslim sıralaması, yalnızca stdlib. pytest ile 14 test geçti.",
+ "adim": 11,
+ "yurutucu_token": {
+  "girdi": 80618,
+  "cikti": 41625
+ },
+ "yurutucu_usd": 0.0163868,
+ "bitirdi": true,
+ "sure_sn": 460.7,
+ "gizli": {
+  "gecti": true,
+  "gecen": 20,
+  "toplam": 20,
+  "cikti": "....................                                                     [100%]\n20 passed in 1.56s\n"
+ }
+}

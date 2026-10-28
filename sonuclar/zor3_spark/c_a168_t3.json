@@ -1,0 +1,86 @@
+{
+ "id": "a168",
+ "kip": "c",
+ "tekrar": 3,
+ "kategori": "CSV/JSON ile çalışan ve uç durumları çok olan veri işleme (BOM, ; ayırıcı, 1.234,56 sayı biçimi, boş/bozuk satır)",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 32,
+   "basarili": 32
+  }
+ ],
+ "spark_usd": 0.031074600000000004,
+ "arayuz": "",
+ "kabul_yazar": 2,
+ "mutasyon": {
+  "mutant": 16,
+  "ham_mutant": 16,
+  "turlar": [
+   {
+    "oldurulen": 12,
+    "toplam": 16
+   },
+   {
+    "oldurulen": 16,
+    "toplam": 16
+   }
+  ],
+  "hayatta": []
+ },
+ "hakem": [
+  {
+   "test": ".usta_kabul/test_kabul_m1.py::test_baslik_hatali_valueerror",
+   "karar": "hatali",
+   "gerekce": "Görev BASLIK gibi bir sabit istemiyor, test yardımcı bulamadığı için çalışmadan çöküyor.",
+   "tur": 1
+  },
+  {
+   "test": ".usta_kabul/test_kabul_m1.py::test_fazla_sutun_valueerror",
+   "karar": "hatali",
+   "gerekce": "Görev BASLIK sabitini zorunlu tutmuyor, test bu ek varsayım yüzünden davranışa bakamadan çöküyor.",
+   "tur": 1
+  },
+  {
+   "test": ".usta_kabul/test_kabul_m1.py::test_koy_gruplama_noktali_i",
+   "karar": "hatali",
+   "gerekce": "Gruplama beklentisi doğru olsa da test BASLIK sabitine bağımlı olup görevde olmayan ek API arıyor.",
+   "tur": 1
+  },
+  {
+   "test": ".usta_kabul/test_kabul_m1.py::test_turkce_alfabetik_sira",
+   "karar": "hatali",
+   "gerekce": "Sıralama beklentisi görevde olsa da test BASLIK bulunamadığı için kendi içinde çalışmıyor.",
+   "tur": 1
+  }
+ ],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [
+  ".usta_kabul/test_kabul_2.py::test_gereksinim1_baslik_hatasi",
+  ".usta_kabul/test_kabul_3.py::test_hata_onceligi_dosya_yok",
+  ".usta_kabul/test_kabul_3.py::test_koy_gruplama_I_i_donusumu",
+  ".usta_kabul/test_kabul_m1.py::test_baslik_hatali_valueerror",
+  ".usta_kabul/test_kabul_m1.py::test_fazla_sutun_valueerror",
+  ".usta_kabul/test_kabul_m1.py::test_koy_gruplama_noktali_i",
+  ".usta_kabul/test_kabul_m1.py::test_turkce_alfabetik_sira"
+ ],
+ "kabul_test_sayisi": 32,
+ "kabul_gecti": true,
+ "ozet": "BidonTakip sınıfı yazıldı: CSV utf-8-sig/;/çift tırnak ile okunuyor, Türkçe sayılar Decimal ile ayrıştırılıyor, boş satırlar atlanıyor, köy gruplamada I→ı/İ→i+casefold, toplamlar ROUND_HALF_UP ile yuvarlanıyor, Türkçe alfabetik sıralama uygulanıyor. pytest ile 5 test geçti.",
+ "adim": 10,
+ "yurutucu_token": {
+  "girdi": 58075,
+  "cikti": 49947
+ },
+ "yurutucu_usd": 0.0157969,
+ "bitirdi": true,
+ "sure_sn": 918.8,
+ "gizli": {
+  "gecti": false,
+  "gecen": 15,
+  "toplam": 22,
+  "cikti": "usta/is/f5087acaad24/.tmp/pytest-of-usta/pytest-3/test_utf8_sig_ve_tirnak0')\n\n    def test_utf8_sig_ve_tirnak(tmp_path):\n        c = tmp_path / 'b.csv'\n        j = tmp_path / 'e.json'\n        with open(c, 'w', encoding='utf-8-sig', newline='') as f:\n            w = csv.writer(f, delimiter=';', quotechar='\"', quoting=csv.QUOTE_MINIMAL)\n            w.writerow(BASLIK)\n            w.writerow(['B1', 'Tokat', '10,0', '5,0'])\n            w.writerow(['B2', 'Tokat', '2,5', '5,0'])\n        with open(j, 'w', encoding='utf-8-sig') as f:\n            json.dump({'minimum': 12.5}, f)\n        b = BidonTakip()\n        b.bidon_ekle(str(c))\n        s = b.stok_durumu(str(j))\n>       assert abs(s[0]['toplam_kg'] - 12.5) < 1e-9\nE       TypeError: unsupported operand type(s) for -: '_T' and 'float'\n\n.gizli/test_gizli.py:242: TypeError\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_temel_toplam_ve_yeterli - TypeError: unsupp...\nFAILED .gizli/test_gizli.py::test_binlik_nokta_cozumu - TypeError: unsupporte...\nFAILED .gizli/test_gizli.py::test_bos_satirlar_atlanir - TypeError: unsupport...\nFAILED .gizli/test_gizli.py::test_birikimli_ekleme - TypeError: unsupported o...\nFAILED .gizli/test_gizli.py::test_koy_bosluk_temizleme - TypeError: unsupport...\nFAILED .gizli/test_gizli.py::test_yuvarlama_half_up - TypeError: unsupported ...\nFAILED .gizli/test_gizli.py::test_utf8_sig_ve_tirnak - TypeError: unsupported...\n7 failed, 15 passed in 0.23s\n"
+ }
+}

@@ -1,0 +1,103 @@
+{
+ "id": "a001",
+ "kip": "c",
+ "tekrar": 1,
+ "kategori": "Türkiye'ye özgü kimlik ve hesap numaraları (TC kimlik, VKN, IBAN, MERSİS, plaka, telefon) — birden çok kuralın birlikte uygulandığı",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": false,
+   "toplam": 68,
+   "basarili": 63
+  },
+  {
+   "gecti": true,
+   "toplam": 68,
+   "basarili": 68
+  }
+ ],
+ "spark_usd": 0.0138836,
+ "arayuz": "",
+ "kabul_yazar": 3,
+ "mutasyon": {
+  "mutant": 14,
+  "ham_mutant": 14,
+  "turlar": [
+   {
+    "oldurulen": 12,
+    "toplam": 14
+   },
+   {
+    "oldurulen": 13,
+    "toplam": 14
+   },
+   {
+    "oldurulen": 13,
+    "toplam": 14
+   }
+  ],
+  "hayatta": [
+   "ic ayrac iceren girdiyi sessizce temizlememeli yapisal bozukluk saymali"
+  ]
+ },
+ "hakem": [
+  {
+   "test": ".usta_kabul/test_kabul_1.py::test_hesapla_sifirlar_sifir_sonucu",
+   "karar": "gerekli",
+   "gerekce": "Görev 15 hanesi sıfırlardan oluşan sınır durumda formülün sıfır sonucunu açıkça üretmesini istiyor.",
+   "tur": 1
+  },
+  {
+   "test": ".usta_kabul/test_kabul_2.py::test_hesapla_basinda_sifir_olan_girdi_hesaplanir",
+   "karar": "belirsiz",
+   "gerekce": "Görev sıfır-dışı başında-sıfır girdinin hesapla tarafından kabul edileceğini açıkça belirtmiyor.",
+   "tur": 1
+  },
+  {
+   "test": ".usta_kabul/test_kabul_2.py::test_hesapla_tum_sifir_sinir_durumu",
+   "karar": "gerekli",
+   "gerekce": "Görev 15 hanesi sıfırlardan oluşan sınır durumda formülün sıfır sonucunu açıkça üretmesini istiyor.",
+   "tur": 1
+  },
+  {
+   "test": ".usta_kabul/test_kabul_3.py::test_hesapla_sifir_sinir_degeri",
+   "karar": "gerekli",
+   "gerekce": "Görev 15 hanesi sıfırlardan oluşan sınır durumda formülün sıfır sonucunu açıkça üretmesini istiyor.",
+   "tur": 1
+  },
+  {
+   "test": ".usta_kabul/test_kabul_m1.py::test_hesapla_sifirlar_sifir",
+   "karar": "gerekli",
+   "gerekce": "Görev 15 hanesi sıfırlardan oluşan sınır durumda formülün sıfır sonucunu açıkça üretmesini istiyor.",
+   "tur": 1
+  },
+  {
+   "test": ".usta_kabul/test_kabul_m2.py::test_sifirlardan_olusan_hesap_sifir",
+   "karar": "gerekli",
+   "gerekce": "Görev 15 hanesi sıfırlardan oluşan sınır durumda formülün sıfır sonucunu açıkça üretmesini istiyor.",
+   "tur": 1
+  }
+ ],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [
+  ".usta_kabul/test_kabul_2.py::test_hesapla_basinda_sifir_olan_girdi_hesaplanir"
+ ],
+ "kabul_test_sayisi": 68,
+ "kabul_gecti": true,
+ "ozet": "Görev metnindeki çelişkiyi spesifik gereksinim lehine çözdüm: metin bir yanda hesapla işlevi için ilk-hane-sıfır reddi isterken diğer yanda \"15 hanesi sıfırlardan oluşan sınır durumunda formülün sıfır sonucunu tam üret\" diyor ve 5 kabul testi \"000000000000000\"→\"0\" ile \"012345678901234\"→\"3\" bekliyor. Bu yüzden mersis_son_haneyi_hesapla artık saf hesaplama yapıyor (ilk-hane-sıfır reddi yok, hata sırası tip→boş→uzunluk→rakam); ilk-hane kuralı yalnızca mersis_dogrula'da uygulanıyor. Kendi testlerimi güncelledim; sonuç: kendi testlerim 15/15, bağımsız kabul testleri 69/69 geçti.",
+ "adim": 15,
+ "yurutucu_token": {
+  "girdi": 120755,
+  "cikti": 22296
+ },
+ "yurutucu_usd": 0.0165347,
+ "bitirdi": true,
+ "sure_sn": 526.0,
+ "gizli": {
+  "gecti": false,
+  "gecen": 21,
+  "toplam": 22,
+  "cikti": "....................F.                                                   [100%]\n=================================== FAILURES ===================================\n____________________________ test_helper_ilk_sifir _____________________________\n\n    def test_helper_ilk_sifir():\n>       with pytest.raises(ValueError):\nE       Failed: DID NOT RAISE <class 'ValueError'>\n\n.gizli/test_gizli.py:78: Failed\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_helper_ilk_sifir - Failed: DID NOT RAISE <c...\n1 failed, 21 passed in 0.03s\n"
+ }
+}

@@ -1,0 +1,24 @@
+{
+ "id": "a003",
+ "kip": "b",
+ "tekrar": 3,
+ "kategori": "Türkçe büyük/küçük harf (İ/i, I/ı), Türk alfabesiyle sıralama, sayıyı yazıya çevirme, ünlü uyumuna göre ek",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "tutar_yazi.py içinde tutar_yaziya_cevir yazıldı: önce TypeError (bool dahil), sonra negatif ValueError, sonra 15 basamak sınırı denetimi; lira üçerli bölüklerle bin/milyon/milyar/trilyon, yüz/bin özel durumları, kuruş iki basamak söyleniş, Türkçe büyük harf ve tek boşluk normalizasyonu. test_tutar.py ile 14 pytest testi geçti.",
+ "adim": 5,
+ "yurutucu_token": {
+  "girdi": 16350,
+  "cikti": 10142
+ },
+ "yurutucu_usd": 0.0036634,
+ "bitirdi": true,
+ "sure_sn": 108.0,
+ "gizli": {
+  "gecti": true,
+  "gecen": 24,
+  "toplam": 24,
+  "cikti": "........................                                                 [100%]\n24 passed in 0.10s\n"
+ }
+}

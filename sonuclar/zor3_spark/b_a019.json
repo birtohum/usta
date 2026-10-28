@@ -1,0 +1,24 @@
+{
+ "id": "a019",
+ "kip": "b",
+ "tekrar": 1,
+ "kategori": "Türkiye'ye özgü kimlik ve hesap numaraları (TC kimlik, VKN, IBAN, MERSİS, plaka, telefon) — birden çok kuralın birlikte uygulandığı",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "kimlik_araci.py yazıldı: TC/VKN/IBAN/MERSİS/telefon/plaka doğrulama, tekil ve CSV dosya kipi, --cikti/--json desteği, hata önceliği ve çıkış kodları (0/1/2) uygulandı; tr_upper ile İ/I ayrımı korundu, il 01-81 sınır kontrolü yapıldı. test_arac.py ile 17 pytest testi geçti.",
+ "adim": 8,
+ "yurutucu_token": {
+  "girdi": 28669,
+  "cikti": 54486
+ },
+ "yurutucu_usd": 0.013764100000000003,
+ "bitirdi": true,
+ "sure_sn": 486.1,
+ "gizli": {
+  "gecti": false,
+  "gecen": 20,
+  "toplam": 21,
+  "cikti": ".......F.............                                                    [100%]\n=================================== FAILURES ===================================\n__________________________ test_08_mersis_valid_exit0 __________________________\n\n    def test_08_mersis_valid_exit0():\n        r = run(\"--mersis\", MERSIS_OK)\n>       assert r.returncode == 0\nE       AssertionError: assert 1 == 0\nE        +  where 1 = CompletedProcess(args=['/usr/bin/python', '/home/usta/is/42ada4d680ad/kimlik_araci.py', '--mersis', '1111111111111115'], returncode=1, stdout='mersis: geçersiz | girdi: 1111111111111115 | normalize: 1111111111111115\\n', stderr='').returncode\n\n.gizli/test_gizli.py:62: AssertionError\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_08_mersis_valid_exit0 - AssertionError: ass...\n1 failed, 20 passed in 1.08s\n"
+ }
+}

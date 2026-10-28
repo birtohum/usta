@@ -1,0 +1,24 @@
+{
+ "id": "a122",
+ "kip": "a",
+ "tekrar": 1,
+ "kategori": "çok dosyalı küçük modül: iki-üç dosyaya bölünmüş, ortak hata sınıfları ve bir komut satırı girişi olan araç",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "hatalar.py (BalonHatasi/AgirlikHatasi), balon.py (Sepet: kapasite 200-600, isim strip/20 karakter/Türkçe duyarsız yineleme, kilo 30-150, öncelik TypeError>isim>kilo>yineleme>kapasite, greedy dengeleme) ve cli.py (--kapasite/--yolcu, A:x|B:y çıktısı, stderr HATA + çıkış 2) yazıldı ve test edildi.",
+ "adim": 7,
+ "yurutucu_token": {
+  "girdi": 26062,
+  "cikti": 13451
+ },
+ "yurutucu_usd": 0.0052964,
+ "bitirdi": true,
+ "sure_sn": 139.3,
+ "gizli": {
+  "gecti": true,
+  "gecen": 23,
+  "toplam": 23,
+  "cikti": ".......................                                                  [100%]\n23 passed in 0.35s\n"
+ }
+}

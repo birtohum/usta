@@ -1,0 +1,24 @@
+{
+ "id": "a187",
+ "kip": "a",
+ "tekrar": 3,
+ "kategori": "çok dosyalı küçük modül: iki-üç dosyaya bölünmüş, ortak hata sınıfları ve bir komut satırı girişi olan araç",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "hatalar.py (4 hata sınıfı), kamp.py (KampAlani: Türkçe I/İ dönüşümlü tip eşleme, parsel 1-30 çadır/31-60 karavan, YYYY-AA-GG tarih ve [giriş,çıkış) çakışma kontrolü, R-0001 artan kimlik, 400/700 TL gecelik + %10 indirim + 25 kWh ücretsiz/6 TL Decimal ROUND_HALF_UP ücret, elektrik 0-500 kontrolü, sıralı doluluk) ve cli.py (tek satır JSON çıktılı --rezerve/--ucret/--doluluk, dosya tabanlı kalıcılık) yazıldı; tüm kurallar test edilip çalışma klasörü temizlendi.",
+ "adim": 10,
+ "yurutucu_token": {
+  "girdi": 48109,
+  "cikti": 38887
+ },
+ "yurutucu_usd": 0.012588300000000002,
+ "bitirdi": true,
+ "sure_sn": 478.7,
+ "gizli": {
+  "gecti": true,
+  "gecen": 22,
+  "toplam": 22,
+  "cikti": "......................                                                   [100%]\n22 passed in 0.19s\n"
+ }
+}

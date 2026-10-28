@@ -1,0 +1,24 @@
+{
+ "id": "a050",
+ "kip": "b",
+ "tekrar": 3,
+ "kategori": "KDV, tevkifat, stopaj, taksit ve kuruş yuvarlama (Decimal, ROUND_HALF_UP, satır bazında ve toplamda yuvarlama farkı)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "adisyon.py içinde AdisyonHesaplayici yazıldı: Decimal+ROUND_HALF_UP ile satır matrah/KDV yuvarlama, ham toplam ile farktan yuvarlama_farki, 0.01/0.10/0.20 KDV kontrolü, TypeError öncelikli hata yönetimi, Türkçe casefold birleştirme ve stabil sıralı fiş dökümü. 14 pytest testi geçti.",
+ "adim": 8,
+ "yurutucu_token": {
+  "girdi": 42444,
+  "cikti": 30203
+ },
+ "yurutucu_usd": 0.010285,
+ "bitirdi": true,
+ "sure_sn": 301.3,
+ "gizli": {
+  "gecti": true,
+  "gecen": 20,
+  "toplam": 20,
+  "cikti": "....................                                                     [100%]\n20 passed in 0.13s\n"
+ }
+}

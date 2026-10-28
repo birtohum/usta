@@ -1,0 +1,24 @@
+{
+ "id": "a001",
+ "kip": "a",
+ "tekrar": 1,
+ "kategori": "Türkiye'ye özgü kimlik ve hesap numaraları (TC kimlik, VKN, IBAN, MERSİS, plaka, telefon) — birden çok kuralın birlikte uygulandığı",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "mersis_denetim.py yazıldı: mersis_dogrula ve mersis_son_haneyi_hesapla, 3/1 ağırlıklı sağlama, hata önceliği tip-boş-uzunluk-rakam-ilk hane-sağlama, testler geçti.",
+ "adim": 6,
+ "yurutucu_token": {
+  "girdi": 13287,
+  "cikti": 19409
+ },
+ "yurutucu_usd": 0.0052105,
+ "bitirdi": true,
+ "sure_sn": 164.9,
+ "gizli": {
+  "gecti": false,
+  "gecen": 21,
+  "toplam": 22,
+  "cikti": "....................F.                                                   [100%]\n=================================== FAILURES ===================================\n____________________________ test_helper_ilk_sifir _____________________________\n\n    def test_helper_ilk_sifir():\n>       with pytest.raises(ValueError):\nE       Failed: DID NOT RAISE <class 'ValueError'>\n\n.gizli/test_gizli.py:78: Failed\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_helper_ilk_sifir - Failed: DID NOT RAISE <c...\n1 failed, 21 passed in 0.05s\n"
+ }
+}

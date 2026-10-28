@@ -1,0 +1,24 @@
+{
+ "id": "a035",
+ "kip": "a",
+ "tekrar": 1,
+ "kategori": "çok dosyalı küçük modül: iki-üç dosyaya bölünmüş, ortak hata sınıfları ve bir komut satırı girişi olan araç",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "hatalar.py (PayHatasi, HisseHatasi: ValueError soyundan) ve aidat.py (paylastir, ozet, CLI) yazıldı. paylastir taban pay + kalanı küçük daireden başlayarak dağıtır; sıfır toplamda sıfırlar, negatifte PayHatasi, boş/pozitif-olmayan hissede HisseHatasi verir; hata önceliği tip > hisse > pay. `python -m aidat dagit --toplam 10000 --hisseler 1:2,2:1,3:1` tek satır JSON çıktısı verir.",
+ "adim": 9,
+ "yurutucu_token": {
+  "girdi": 28554,
+  "cikti": 17487
+ },
+ "yurutucu_usd": 0.0063528,
+ "bitirdi": true,
+ "sure_sn": 152.2,
+ "gizli": {
+  "gecti": true,
+  "gecen": 21,
+  "toplam": 21,
+  "cikti": ".....................                                                    [100%]\n21 passed in 0.08s\n"
+ }
+}

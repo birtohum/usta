@@ -1,0 +1,73 @@
+{
+ "id": "a186",
+ "kip": "c",
+ "tekrar": 3,
+ "kategori": "tarih ve saat: resmî tatiller parametreyle, iş günü hesabı, Türkiye saat dilimi (UTC+3, yaz saati yok), gün/ay adları Türkçe",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 59,
+   "basarili": 59
+  }
+ ],
+ "spark_usd": 0.013553100000000002,
+ "arayuz": "",
+ "kabul_yazar": 3,
+ "mutasyon": {
+  "mutant": 14,
+  "ham_mutant": 14,
+  "turlar": [
+   {
+    "oldurulen": 11,
+    "toplam": 14
+   },
+   {
+    "oldurulen": 13,
+    "toplam": 14
+   },
+   {
+    "oldurulen": 14,
+    "toplam": 14
+   }
+  ],
+  "hayatta": []
+ },
+ "hakem": [
+  {
+   "test": ".usta_kabul/test_kabul_m2.py::test_date_only_3saat_sla_bitisi",
+   "karar": "hatali",
+   "gerekce": "Görev davranışsal sonucu tanımlar, timedelta çağrısı gibi iç gerçeklemeyi zorunlu kılmaz ve tarih-only midnight girdide +3 saat günü değiştirmez.",
+   "tur": 1
+  },
+  {
+   "test": ".usta_kabul/test_kabul_m2.py::test_date_only_3saat_tr_format",
+   "karar": "hatali",
+   "gerekce": "Görev davranışsal sonucu tanımlar, timedelta çağrısı gibi iç gerçeklemeyi zorunlu kılmaz ve tarih-only girdide +3 saat gözlemlenebilir günü değiştirmez.",
+   "tur": 1
+  }
+ ],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [
+  ".usta_kabul/test_kabul_m2.py::test_date_only_3saat_sla_bitisi",
+  ".usta_kabul/test_kabul_m2.py::test_date_only_3saat_tr_format"
+ ],
+ "kabul_test_sayisi": 59,
+ "kabul_gecti": true,
+ "ozet": "numune.py içinde NumuneIzleyici sınıfı yazıldı: UTC girdiler +3 saatle Türkiye gününe çevrilir, hafta sonu ve tatiller hariç iş günü sayımı yapılır, sla_bitisi/isgunu_farki/tr_format kurallara uygun çalışır, hatalı girdilerde ValueError verilir. 19 pytest testi yazıldı ve hepsi geçti.",
+ "adim": 11,
+ "yurutucu_token": {
+  "girdi": 59917,
+  "cikti": 27534
+ },
+ "yurutucu_usd": 0.011498500000000002,
+ "bitirdi": true,
+ "sure_sn": 607.4,
+ "gizli": {
+  "gecti": true,
+  "gecen": 21,
+  "toplam": 21,
+  "cikti": ".....................                                                    [100%]\n21 passed in 0.06s\n"
+ }
+}

@@ -1,0 +1,24 @@
+{
+ "id": "a204",
+ "kip": "a",
+ "tekrar": 3,
+ "kategori": "KDV, tevkifat, stopaj, taksit ve kuruş yuvarlama (Decimal, ROUND_HALF_UP, satır bazında ve toplamda yuvarlama farkı)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "bolu_lokanta_cli.py yazıldı: yalnızca argparse, Decimal+ROUND_HALF_UP, paket %10 / servis %20, Türkçe duyarsız TUR (İ/I düzeltmeli), satır ve tür-bazlı KDV ile yuvarlama_farki, 750.00 üzeri indirim, json/fis çıktı, hatalarda çıkış kodu 2.",
+ "adim": 16,
+ "yurutucu_token": {
+  "girdi": 104248,
+  "cikti": 60411
+ },
+ "yurutucu_usd": 0.022507000000000003,
+ "bitirdi": true,
+ "sure_sn": 673.4,
+ "gizli": {
+  "gecti": false,
+  "gecen": 9,
+  "toplam": 21,
+  "cikti": "rtionError\n____________________________ test_discount_half_up _____________________________\n\n    def test_discount_half_up():\n        r = run(\"--kalem\", \"paket:750.05:1\", \"--indirim\", \"10\", \"--cikti\", \"json\")\n        assert r.returncode == 0\n        v = json.loads(r.stdout.strip())\n>       assert v[\"ara_toplam\"] == \"750.05\"\nE       AssertionError: assert 750.05 == '750.05'\n\n.gizli/test_gizli.py:133: AssertionError\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_paket_rate - AssertionError: assert 100.0 =...\nFAILED .gizli/test_gizli.py::test_servis_rate - AssertionError: assert 100.0 ...\nFAILED .gizli/test_gizli.py::test_paket_case_insensitive - AssertionError: as...\nFAILED .gizli/test_gizli.py::test_servis_dotted_I - AssertionError: assert 10...\nFAILED .gizli/test_gizli.py::test_mixed_case_servis - AssertionError: assert ...\nFAILED .gizli/test_gizli.py::test_half_kurus_matrah_up - AssertionError: asse...\nFAILED .gizli/test_gizli.py::test_half_kurus_kdv_up - AssertionError: assert ...\nFAILED .gizli/test_gizli.py::test_yuvarlama_farki - AssertionError: assert 0....\nFAILED .gizli/test_gizli.py::test_exact_750_no_discount - AssertionError: ass...\nFAILED .gizli/test_gizli.py::test_over_750_discount - AssertionError: assert ...\nFAILED .gizli/test_gizli.py::test_discount_kdv_recalculated_servis - Assertio...\nFAILED .gizli/test_gizli.py::test_discount_half_up - AssertionError: assert 7...\n12 failed, 9 passed in 0.93s\n"
+ }
+}

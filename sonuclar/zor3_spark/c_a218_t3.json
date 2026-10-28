@@ -1,0 +1,66 @@
+{
+ "id": "a218",
+ "kip": "c",
+ "tekrar": 3,
+ "kategori": "tarih ve saat: resmî tatiller parametreyle, iş günü hesabı, Türkiye saat dilimi (UTC+3, yaz saati yok), gün/ay adları Türkçe",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 31,
+   "basarili": 31
+  }
+ ],
+ "spark_usd": 0.027655500000000003,
+ "arayuz": "deneme.py içinde DenemeTakibi sınıfı; mevcut __init__, ekle, bitis aynen korunur; ek olarak rapor(self, calisan_id: str) -> str gün ay yıl artı gün adı satırı verir, liste(self) -> list[str] bitiş tarihine sonra calisan_id küçükten büyüğe sırasına göre dizili rapor satırları verir.",
+ "kabul_yazar": 2,
+ "mutasyon": {
+  "mutant": 15,
+  "ham_mutant": 15,
+  "turlar": [
+   {
+    "oldurulen": 11,
+    "toplam": 15
+   },
+   {
+    "oldurulen": 11,
+    "toplam": 15
+   },
+   {
+    "oldurulen": 11,
+    "toplam": 15
+   }
+  ],
+  "hayatta": [
+   "Turkce ay adlari Ocak Subat gereksinimini cigner",
+   "Kucuk harf cevirmede buyuk I kucuk i olur buyuk I kucuk i olur gereksinimini cigner",
+   "Bitis tarihi ayni olanlar calisan_id kucukten buyuge siralanir gereksinimini cigner",
+   "Hata onceligi tatiller icerigi sonra yinelenen kayit gereksinimini cigner"
+  ]
+ },
+ "hakem": [],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [
+  ".usta_kabul/test_kabul_1.py::test_gecersiz_tarih_ve_tatil_icerigi_valueerror",
+  ".usta_kabul/test_kabul_1.py::test_zoneinfo_stdlib_yasak",
+  ".usta_kabul/test_kabul_2.py::test_tatil_icerigi_hata"
+ ],
+ "kabul_test_sayisi": 31,
+ "kabul_gecti": true,
+ "ozet": "deneme.py içinde DenemeTakibi sınıfı yazıldı: iş günü hesabı (hafta sonu+tatil atlama, başlangıç hariç sayım, sıfır süre ve yukarı yuvarlama), Europe/Istanbul zoneinfo kullanımı, Türkçe rapor/liste ve hata öncelikleri uygulandı; pytest ile 6 test geçti.",
+ "adim": 11,
+ "yurutucu_token": {
+  "girdi": 62775,
+  "cikti": 37694
+ },
+ "yurutucu_usd": 0.013816300000000002,
+ "bitirdi": true,
+ "sure_sn": 826.3,
+ "gizli": {
+  "gecti": false,
+  "gecen": 18,
+  "toplam": 20,
+  "cikti": "..............FF....                                                     [100%]\n=================================== FAILURES ===================================\n__________________________ test_15_turkce_kucuk_harf ___________________________\n\n    def test_15_turkce_kucuk_harf():\n        t = DenemeTakibi(set())\n        t.ekle(\"I\", \"2024-01-01\", 1)\n>       with pytest.raises(ValueError):\nE       Failed: DID NOT RAISE <class 'ValueError'>\n\n.gizli/test_gizli.py:92: Failed\n_________________________ test_16_ayni_bitis_siralama __________________________\n\n    def test_16_ayni_bitis_siralama():\n        t = DenemeTakibi(set())\n        t.ekle(\"c\", \"2024-01-01\", 1)\n        t.ekle(\"a\", \"2024-01-01\", 1)\n        t.ekle(\"b\", \"2024-01-02\", 2)\n        lst = t.liste()\n>       assert lst[0] == (\"a\", \"2024-01-02\")\nE       AssertionError: assert '2 Ocak 2024 Salı' == ('a', '2024-01-02')\n\n.gizli/test_gizli.py:105: AssertionError\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_15_turkce_kucuk_harf - Failed: DID NOT RAIS...\nFAILED .gizli/test_gizli.py::test_16_ayni_bitis_siralama - AssertionError: as...\n2 failed, 18 passed in 0.04s\n"
+ }
+}

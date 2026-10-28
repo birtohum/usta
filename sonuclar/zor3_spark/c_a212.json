@@ -1,0 +1,61 @@
+{
+ "id": "a212",
+ "kip": "c",
+ "tekrar": 1,
+ "kategori": "KDV, tevkifat, stopaj, taksit ve kuruş yuvarlama (Decimal, ROUND_HALF_UP, satır bazında ve toplamda yuvarlama farkı)",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 42,
+   "basarili": 42
+  }
+ ],
+ "spark_usd": 0.0290709,
+ "arayuz": "",
+ "kabul_yazar": 2,
+ "mutasyon": {
+  "mutant": 15,
+  "ham_mutant": 15,
+  "turlar": [
+   {
+    "oldurulen": 14,
+    "toplam": 15
+   },
+   {
+    "oldurulen": 14,
+    "toplam": 15
+   },
+   {
+    "oldurulen": 14,
+    "toplam": 15
+   }
+  ],
+  "hayatta": [
+   "MIKTAR pozitif tam sayi metni olmali gereksinimini cigner, ondalikli metni kabul eder"
+  ]
+ },
+ "hakem": [],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [
+  ".usta_kabul/test_kabul_2.py::test_fis_ayni_kategori_fiyat_esit_giris_sirasi"
+ ],
+ "kabul_test_sayisi": 42,
+ "kabul_gecti": true,
+ "ozet": "kirsehir_kirtasiye_cli.py yazıldı: yalnızca argparse, Decimal+ROUND_HALF_UP, Türkçe duyarsız kategori, KDV %0/%20/%20, 3000 TL eşiğinde %3 iskonto, json/fis raporları, hata çıkış kodu 2. test_cli.py ile 10 test geçti.",
+ "adim": 9,
+ "yurutucu_token": {
+  "girdi": 41396,
+  "cikti": 48785
+ },
+ "yurutucu_usd": 0.0138966,
+ "bitirdi": true,
+ "sure_sn": 1160.7,
+ "gizli": {
+  "gecti": true,
+  "gecen": 21,
+  "toplam": 21,
+  "cikti": ".....................                                                    [100%]\n21 passed in 1.98s\n"
+ }
+}

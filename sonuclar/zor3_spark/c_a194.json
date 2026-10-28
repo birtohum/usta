@@ -1,0 +1,68 @@
+{
+ "id": "a194",
+ "kip": "c",
+ "tekrar": 1,
+ "kategori": "KDV, tevkifat, stopaj, taksit ve kuruş yuvarlama (Decimal, ROUND_HALF_UP, satır bazında ve toplamda yuvarlama farkı)",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 55,
+   "basarili": 55
+  }
+ ],
+ "spark_usd": 0.0155842,
+ "arayuz": "",
+ "kabul_yazar": 3,
+ "mutasyon": {
+  "mutant": 15,
+  "ham_mutant": 15,
+  "turlar": [
+   {
+    "oldurulen": 10,
+    "toplam": 15
+   },
+   {
+    "oldurulen": 11,
+    "toplam": 15
+   },
+   {
+    "oldurulen": 11,
+    "toplam": 15
+   }
+  ],
+  "hayatta": [
+   "matrah metni bos veya yalnizca bosluk ise ValueError verilir gereksinimini cigner",
+   "aciklama karsilastirmalarinda Turkce harf donusumu zorunludur, ISÇILIK ve iscilik ayni sayilir gereksinimini cigner",
+   "ayni matrahli kalemler Turkce alfabetik aciklamaya gore dizilir gereksinimini cigner",
+   "tam esitlikte giris sirasi korunur gereksinimini cigner"
+  ]
+ },
+ "hakem": [],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [
+  ".usta_kabul/test_kabul_m1.py::test_tam_esitlikte_giris_sirasi_korunur",
+  ".usta_kabul/test_kabul_m1.py::test_turkce_alfabetik_siralama_cay_davet",
+  ".usta_kabul/test_kabul_m1.py::test_turkce_i_donusumu_esit_sayilir",
+  ".usta_kabul/test_kabul_m2.py::test_ayni_matrah_turkce_alfabetik_cay_davet",
+  ".usta_kabul/test_kabul_m2.py::test_ayni_matrah_turkce_alfabetik_sut_tas"
+ ],
+ "kabul_test_sayisi": 55,
+ "kabul_gecti": true,
+ "ozet": "nigde_temizlik.py içinde temizlik_tevkifat_hesapla yazıldı: %20 KDV ve 7/9/10 payla satır bazlı ROUND_HALF_UP, 2000 TL eşiği (dahil), Türkçe sıralama ve kdv_yuvarlama_farki ile 5 Decimal anahtar. 13 pytest testi geçti.",
+ "adim": 6,
+ "yurutucu_token": {
+  "girdi": 19923,
+  "cikti": 26319
+ },
+ "yurutucu_usd": 0.0072561,
+ "bitirdi": true,
+ "sure_sn": 910.2,
+ "gizli": {
+  "gecti": true,
+  "gecen": 22,
+  "toplam": 22,
+  "cikti": "......................                                                   [100%]\n22 passed in 0.09s\n"
+ }
+}

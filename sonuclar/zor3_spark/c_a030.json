@@ -1,0 +1,58 @@
+{
+ "id": "a030",
+ "kip": "c",
+ "tekrar": 1,
+ "kategori": "CSV/JSON ile çalışan ve uç durumları çok olan veri işleme (BOM, ; ayırıcı, 1.234,56 sayı biçimi, boş/bozuk satır)",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": false,
+   "toplam": 4,
+   "basarili": 0
+  },
+  {
+   "gecti": true,
+   "toplam": 22,
+   "basarili": 22
+  }
+ ],
+ "spark_usd": 0.027323700000000003,
+ "arayuz": "",
+ "kabul_yazar": 1,
+ "mutasyon": {
+  "mutant": 15,
+  "ham_mutant": 15,
+  "turlar": [
+   {
+    "oldurulen": 12,
+    "toplam": 15
+   },
+   {
+    "oldurulen": 15,
+    "toplam": 15
+   }
+  ],
+  "hayatta": []
+ },
+ "hakem": [],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [],
+ "kabul_test_sayisi": 22,
+ "kabul_gecti": true,
+ "ozet": "banka_ozeti.py içinde ozetle yazıldı: utf-8-sig ve `;` ile okuma, birebir başlık kontrolü, FileNotFoundError önceliği, önce tutar (işaretli Türkçe biçim, boşta ValueError) sonra GG.AA.YYYY tarih kontrolü, boş satır atlama, sütun sayısı farklı satırları bozuk sayma, 0 tutarları sifir_satir sayma, Türkçe küçük harf (I→ı, İ→i) ile gün+açıklama gruplama, ROUND_HALF_UP ile 2 ondalık yuvarlama; gelir/gider/sifir_satir/bozuk_satir döndürür. Kabul testleri (22) ve kendi pytest testlerim geçiyor.",
+ "adim": 12,
+ "yurutucu_token": {
+  "girdi": 44481,
+  "cikti": 72575
+ },
+ "yurutucu_usd": 0.0189631,
+ "bitirdi": true,
+ "sure_sn": 1127.3,
+ "gizli": {
+  "gecti": false,
+  "gecen": 15,
+  "toplam": 20,
+  "cikti": "ers.\n        if math.isnan(abs(self.expected)):  # type: ignore[arg-type]\n            return self.nan_ok and math.isnan(abs(actual))  # type: ignore[arg-type]\n    \n        # Infinity shouldn't be approximately equal to anything but itself, but\n        # if there's a relative tolerance, it will be infinite and infinity\n        # will seem approximately equal to everything.  The equal-to-itself\n        # case would have been short circuited above, so here we can just\n        # return false if the expected value is infinite.  The abs() call is\n        # for compatibility with complex numbers.\n        if math.isinf(abs(self.expected)):  # type: ignore[arg-type]\n            return False\n    \n        # Return true if the two numbers are within the tolerance.\n>       result: bool = abs(self.expected - actual) <= self.tolerance\nE       TypeError: unsupported operand type(s) for -: 'float' and 'decimal.Decimal'\n\n/usr/lib/python3/dist-packages/_pytest/python_api.py:466: TypeError\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_normal_gelir_gider - TypeError: unsupported...\nFAILED .gizli/test_gizli.py::test_turkce_binlik_cozumu - TypeError: unsupport...\nFAILED .gizli/test_gizli.py::test_hatali_tutar_bicimi - Failed: DID NOT RAISE...\nFAILED .gizli/test_gizli.py::test_half_up_yuvarlama - TypeError: unsupported ...\nFAILED .gizli/test_gizli.py::test_gunluk_toplam_half_up - TypeError: unsuppor...\n5 failed, 15 passed in 0.48s\n"
+ }
+}

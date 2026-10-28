@@ -1,0 +1,62 @@
+{
+ "id": "a136",
+ "kip": "c",
+ "tekrar": 1,
+ "kategori": "tarih ve saat: resmî tatiller parametreyle, iş günü hesabı, Türkiye saat dilimi (UTC+3, yaz saati yok), gün/ay adları Türkçe",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 58,
+   "basarili": 58
+  }
+ ],
+ "spark_usd": 0.0094268,
+ "arayuz": "",
+ "kabul_yazar": 3,
+ "mutasyon": {
+  "mutant": 15,
+  "ham_mutant": 15,
+  "turlar": [
+   {
+    "oldurulen": 13,
+    "toplam": 15
+   },
+   {
+    "oldurulen": 15,
+    "toplam": 15
+   }
+  ],
+  "hayatta": []
+ },
+ "hakem": [
+  {
+   "test": ".usta_kabul/test_kabul_m1.py::test_gun_adlari_kucuk_harf_ve_pazar_yazimi",
+   "karar": "hatali",
+   "gerekce": "Görev yalnızca çıktı gün adlarının küçük harf olmasını ister, kaynak metinde Pazar geçmesini yasaklamaz.",
+   "tur": 1
+  }
+ ],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [
+  ".usta_kabul/test_kabul_m1.py::test_gun_adlari_kucuk_harf_ve_pazar_yazimi"
+ ],
+ "kabul_test_sayisi": 58,
+ "kabul_gecti": true,
+ "ozet": "nikah.py içinde uygun_gunleri_bul ve salon_kurallari.py içinde kapali_gun yazıldı; hata önceliği, Türkçe gün adları ve bağımsızlık kurallarına uyuldu, pytest ile 13 test geçirildi.",
+ "adim": 6,
+ "yurutucu_token": {
+  "girdi": 19678,
+  "cikti": 17399
+ },
+ "yurutucu_usd": 0.0054476,
+ "bitirdi": true,
+ "sure_sn": 759.7,
+ "gizli": {
+  "gecti": true,
+  "gecen": 20,
+  "toplam": 20,
+  "cikti": "....................                                                     [100%]\n20 passed in 0.06s\n"
+ }
+}

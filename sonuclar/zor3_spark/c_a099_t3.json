@@ -1,0 +1,53 @@
+{
+ "id": "a099",
+ "kip": "c",
+ "tekrar": 3,
+ "kategori": "KDV, tevkifat, stopaj, taksit ve kuruş yuvarlama (Decimal, ROUND_HALF_UP, satır bazında ve toplamda yuvarlama farkı)",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 53,
+   "basarili": 53
+  }
+ ],
+ "spark_usd": 0.010807000000000002,
+ "arayuz": "",
+ "kabul_yazar": 3,
+ "mutasyon": {
+  "mutant": 15,
+  "ham_mutant": 15,
+  "turlar": [
+   {
+    "oldurulen": 11,
+    "toplam": 15
+   },
+   {
+    "oldurulen": 15,
+    "toplam": 15
+   }
+  ],
+  "hayatta": []
+ },
+ "hakem": [],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [],
+ "kabul_test_sayisi": 53,
+ "kabul_gecti": true,
+ "ozet": "kargo.py içinde kargo_faturala yazıldı: Decimal+ROUND_HALF_UP ile taban/yakıt/KDV yuvarlama, ham toplamdan tek-KDV ile yuvarlama_farki, 2000 TL üzeri %2 indirim, TypeError>duplicate>aralık hata önceliği, Türkçe duyarlı matrah+takip_no sıralama. pytest ile 16 test geçti.",
+ "adim": 6,
+ "yurutucu_token": {
+  "girdi": 18439,
+  "cikti": 37670
+ },
+ "yurutucu_usd": 0.009377900000000002,
+ "bitirdi": true,
+ "sure_sn": 574.9,
+ "gizli": {
+  "gecti": false,
+  "gecen": 21,
+  "toplam": 22,
+  "cikti": "...............F......                                                   [100%]\n=================================== FAILURES ===================================\n____________________________ test_indirim_uygulanir ____________________________\n\n    def test_indirim_uygulanir():\n        r = kargo_faturala([(\"B1\", Decimal('10'), Decimal('100.00')), (\"B2\", Decimal('10'), Decimal('100.00'))], Decimal('0.00'), Decimal('0.20'))\n        assert r['net_matrah'] == Decimal('1960.00')\n        assert r['kdv_toplam'] == Decimal('392.00')\n        assert r['genel_toplam'] == Decimal('2352.00')\n>       assert sum(x['matrah'] for x in r['satirlar']) == r['net_matrah']\nE       AssertionError: assert Decimal('2000.00') == Decimal('1960.00')\nE        +  where Decimal('2000.00') = sum(<generator object test_indirim_uygulanir.<locals>.<genexpr> at 0x72ff680cb510>)\n\n.gizli/test_gizli.py:103: AssertionError\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_indirim_uygulanir - AssertionError: assert ...\n1 failed, 21 passed in 0.25s\n"
+ }
+}

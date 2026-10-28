@@ -1,0 +1,24 @@
+{
+ "id": "a036",
+ "kip": "b",
+ "tekrar": 2,
+ "kategori": "CSV/JSON ile çalışan ve uç durumları çok olan veri işleme (BOM, ; ayırıcı, 1.234,56 sayı biçimi, boş/bozuk satır)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "envanter_denetim.py yazıldı: utf-8-sig ve noktalı virgüllü CSV/JSON okuma, binlik noktalı Türkçe tam sayı ayrıştırma, Türkçe küçük harf (I→ı, İ→i) kod eşleştirme, fark=sayılan-adet hesabı, 0 fark eşleşme sayacı, kod+Türkçe ad sıralı BOM'lu çıktı, eksik dosya exit 1 / ValueError exit 3. pytest ile 7 test geçti.",
+ "adim": 14,
+ "yurutucu_token": {
+  "girdi": 73726,
+  "cikti": 35421
+ },
+ "yurutucu_usd": 0.014456799999999999,
+ "bitirdi": true,
+ "sure_sn": 456.6,
+ "gizli": {
+  "gecti": true,
+  "gecen": 21,
+  "toplam": 21,
+  "cikti": ".....................                                                    [100%]\n21 passed in 2.24s\n"
+ }
+}

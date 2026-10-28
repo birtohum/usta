@@ -1,0 +1,24 @@
+{
+ "id": "a003",
+ "kip": "b",
+ "tekrar": 1,
+ "kategori": "Türkçe büyük/küçük harf (İ/i, I/ı), Türk alfabesiyle sıralama, sayıyı yazıya çevirme, ünlü uyumuna göre ek",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "tutar_yazi.py dosyasında tutar_yaziya_cevir fonksiyonunu yazdım: önce TypeError (bool/None dahil), sonra negatiflik ValueError, sonra 15 basamak lira sınırı ValueError denetimi yapar; lira/kuruş bölükleri (bin, milyon, milyar, trilyon) Türkçe kurallarla (bir bin→bin, bir yüz→yüz) çevrilir, ilk harf Türkçe büyük harfe çevrilir, boşluklar teklenir. Hiçbir import yok (yalnızca standart dil). test_tutar.py ile 30 pytest testi yazıp `python -m pytest -q` ile hepsini geçirdim.",
+ "adim": 7,
+ "yurutucu_token": {
+  "girdi": 25433,
+  "cikti": 21399
+ },
+ "yurutucu_usd": 0.0068231,
+ "bitirdi": true,
+ "sure_sn": 184.2,
+ "gizli": {
+  "gecti": true,
+  "gecen": 24,
+  "toplam": 24,
+  "cikti": "........................                                                 [100%]\n24 passed in 0.02s\n"
+ }
+}

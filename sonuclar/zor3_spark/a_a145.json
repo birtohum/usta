@@ -1,0 +1,24 @@
+{
+ "id": "a145",
+ "kip": "a",
+ "tekrar": 1,
+ "kategori": "Türkçe büyük/küçük harf (İ/i, I/ı), Türk alfabesiyle sıralama, sayıyı yazıya çevirme, ünlü uyumuna göre ek",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "makbuz.py yazıldı: 4 satırlık makbuz üretir; üretici Türkçe başlık kuralıyla (I/ı, İ/i) normalize edilir, ürüne pçtk + ünlü uyumuna göre dan/den/tan/ten eki getirilir, kilo/fiyat aralık kontrollü tam sayı olarak doğrulanır, sayılar yüz/bin birsiz ve küçük harfle sözcükle yazılır, toplam TL ile biter; hata önceliği bilinmeyen>eksik>geçersiz, exit 2 + stderr, UTF-8 LF, yalnızca standart kütüphane.",
+ "adim": 16,
+ "yurutucu_token": {
+  "girdi": 116727,
+  "cikti": 49342
+ },
+ "yurutucu_usd": 0.021541100000000004,
+ "bitirdi": true,
+ "sure_sn": 538.8,
+ "gizli": {
+  "gecti": false,
+  "gecen": 19,
+  "toplam": 20,
+  "cikti": "=================================== FAILURES ===================================\n___________________________ test_stdlib_ve_siralama ____________________________\n\n    def test_stdlib_ve_siralama():\n        import ast\n        src = (WORKDIR / \"makbuz.py\").read_text(encoding=\"utf-8\")\n        tree = ast.parse(src)\n        mods = set()\n        for n in ast.walk(tree):\n            if isinstance(n, ast.Import):\n                for a in n.names:\n                    mods.add(a.name.split(\".\")[0])\n            elif isinstance(n, ast.ImportFrom):\n                if n.module:\n                    mods.add(n.module.split(\".\")[0])\n        try:\n            std = sys.stdlib_module_names\n        except AttributeError:\n            std = {\"sys\",\"pathlib\",\"os\",\"re\",\"argparse\",\"unicodedata\"}\n        for m in mods:\n            assert m in std, m\n        import makbuz\n>       assert hasattr(makbuz, \"turkce_sira_anahtari\")\nE       AssertionError: assert False\nE        +  where False = hasattr(<module 'makbuz' from '/home/usta/is/a2a2e4f700c2/makbuz.py'>, 'turkce_sira_anahtari')\n\n.gizli/test_gizli.py:187: AssertionError\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_stdlib_ve_siralama - AssertionError: assert...\n1 failed, 19 passed in 2.37s\n"
+ }
+}

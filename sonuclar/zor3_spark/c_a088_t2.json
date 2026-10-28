@@ -1,0 +1,79 @@
+{
+ "id": "a088",
+ "kip": "c",
+ "tekrar": 2,
+ "kategori": "CSV/JSON ile çalışan ve uç durumları çok olan veri işleme (BOM, ; ayırıcı, 1.234,56 sayı biçimi, boş/bozuk satır)",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 45,
+   "basarili": 45
+  }
+ ],
+ "spark_usd": 0.0160597,
+ "arayuz": "",
+ "kabul_yazar": 3,
+ "mutasyon": {
+  "mutant": 16,
+  "ham_mutant": 16,
+  "turlar": [
+   {
+    "oldurulen": 12,
+    "toplam": 16
+   },
+   {
+    "oldurulen": 12,
+    "toplam": 16
+   },
+   {
+    "oldurulen": 12,
+    "toplam": 16
+   }
+  ],
+  "hayatta": [
+   "sefer_csv utf-8-sig ile okunup BOM yoksayilmalidir",
+   "; ayirici kullanilmalidir",
+   "pay iki ondalikli Turkce bicimde dizge olmalidir",
+   "esitlikte plakanin Turkce duyarsiz artan duzenine gore siralanmalidir"
+  ]
+ },
+ "hakem": [
+  {
+   "test": ".usta_kabul/test_kabul_1.py::test_min_tonaj_alti_sifir_payla_listede",
+   "karar": "belirsiz",
+   "gerekce": "Görev toplam_tonajın eşik altı tonajları içerip içermediğini açıkça tanımlamıyor.",
+   "tur": 1
+  },
+  {
+   "test": ".usta_kabul/test_kabul_3.py::test_min_tonaj_esit_dahil_altinda_sifir_pay",
+   "karar": "belirsiz",
+   "gerekce": "Görev toplam_tonajın eşik altı tonajları içerip içermediğini açıkça tanımlamıyor.",
+   "tur": 1
+  }
+ ],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [
+  ".usta_kabul/test_kabul_3.py::test_pay_hesabi_ve_half_up_yuvarlama",
+  ".usta_kabul/test_kabul_1.py::test_min_tonaj_alti_sifir_payla_listede",
+  ".usta_kabul/test_kabul_3.py::test_min_tonaj_esit_dahil_altinda_sifir_pay"
+ ],
+ "kabul_test_sayisi": 45,
+ "kabul_gecti": true,
+ "ozet": "`navlun_paylasim.py` içinde `dagit` yazıldı: utf-8-sig + `;` CSV okuma, boş satır atlama, Türkçe sayı çözümleme (`.` sil, `,`→`.`), Decimal ROUND_HALF_UP ile pay hesabı, min_tonaj altı `0,00`, Türkçe fold (`I→ı`, `İ→i` + casefold) gruplama ve ilk yazımı koruma, pay azalan / plaka Türkçe duyarsız sıralama, hata önceliği (sefer yokluğu FileNotFoundError, masraf bozukluğu ValueError). 11 pytest testi geçti.",
+ "adim": 13,
+ "yurutucu_token": {
+  "girdi": 92396,
+  "cikti": 35020
+ },
+ "yurutucu_usd": 0.0162436,
+ "bitirdi": true,
+ "sure_sn": 768.0,
+ "gizli": {
+  "gecti": false,
+  "gecen": 17,
+  "toplam": 22,
+  "cikti": "E       AssertionError: assert '1200,00' == '1.000,00'\nE         - 1.000,00\nE         ?  ^^\nE         + 1200,00\nE         ?  ^\n\n.gizli/test_gizli.py:111: AssertionError\n_________________________ test_pay_turkce_bicim_binlik _________________________\n\ntmp_path = PosixPath('/home/usta/is/be77afc2a6d0/.tmp/pytest-of-usta/pytest-7/test_pay_turkce_bicim_binlik0')\n\n    def test_pay_turkce_bicim_binlik(tmp_path):\n        c = tmp_path / \"s.csv\"; m = tmp_path / \"m.json\"\n        _yaz_csv(c, \"plaka;tonaj;km\\nA1;10,00;1,00\\n\")\n        _yaz_json(m, \"12.500,75\", \"5,00\")\n        r = dagit(str(c), str(m))\n>       assert r[0][\"pay\"] == \"12.500,75\"\nE       AssertionError: assert '12500,75' == '12.500,75'\nE         - 12.500,75\nE         ?   -\nE         + 12500,75\n\n.gizli/test_gizli.py:133: AssertionError\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_binlik_ayraci_cozumleme - AssertionError: a...\nFAILED .gizli/test_gizli.py::test_turkce_gruplama_toplama - AssertionError: a...\nFAILED .gizli/test_gizli.py::test_min_tonaj_esit_dahil - AssertionError: asse...\nFAILED .gizli/test_gizli.py::test_min_alti_sifir_pay_listede - AssertionError...\nFAILED .gizli/test_gizli.py::test_pay_turkce_bicim_binlik - AssertionError: a...\n5 failed, 17 passed in 0.16s\n"
+ }
+}

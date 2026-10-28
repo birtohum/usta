@@ -1,0 +1,26 @@
+{
+ "id": "a218",
+ "kip": "c",
+ "tekrar": 1,
+ "kategori": "tarih ve saat: resmî tatiller parametreyle, iş günü hesabı, Türkiye saat dilimi (UTC+3, yaz saati yok), gün/ay adları Türkçe",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0004765,
+ "arayuz": "deneme.py içinde DenemeTakibi sınıfı; __init__(self, tatiller), ekle(self, calisan_id: str, baslangic: str, sure_is_gunu: int), bitis(self, calisan_id: str) -> str, rapor(self) -> list[str]",
+ "kabul_gecti": false,
+ "dogrulanamadi": true,
+ "ozet": "deneme.py içinde DenemeTakibi sınıfı yazıldı: iş günü hesabı, tatil/hafta sonu atlama, sıfır/negatif süre, Türkçe rapor ve hata önceliği kuralları uygulandı; 8 pytest testi geçiyor.",
+ "adim": 16,
+ "yurutucu_token": {
+  "girdi": 111462,
+  "cikti": 45292
+ },
+ "yurutucu_usd": 0.020204600000000003,
+ "sure_sn": 548.6,
+ "gizli": {
+  "gecti": false,
+  "gecen": 16,
+  "toplam": 20,
+  "cikti": ">       with pytest.raises(ValueError):\nE       Failed: DID NOT RAISE <class 'ValueError'>\n\n.gizli/test_gizli.py:92: Failed\n_________________________ test_16_ayni_bitis_siralama __________________________\n\n    def test_16_ayni_bitis_siralama():\n        t = DenemeTakibi(set())\n        t.ekle(\"c\", \"2024-01-01\", 1)\n        t.ekle(\"a\", \"2024-01-01\", 1)\n        t.ekle(\"b\", \"2024-01-02\", 2)\n>       lst = t.liste()\nE       AttributeError: 'DenemeTakibi' object has no attribute 'liste'\n\n.gizli/test_gizli.py:104: AttributeError\n_____________________________ test_17_rapor_satiri _____________________________\n\n    def test_17_rapor_satiri():\n        t = DenemeTakibi(set())\n        t.ekle(\"ali\", \"2024-01-05\", 0)\n>       assert t.rapor(\"ali\") == \"5 Ocak 2024 Cuma\"\nE       TypeError: DenemeTakibi.rapor() takes 1 positional argument but 2 were given\n\n.gizli/test_gizli.py:112: TypeError\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_13_tatil_icerigi_hata - Failed: DID NOT RAI...\nFAILED .gizli/test_gizli.py::test_15_turkce_kucuk_harf - Failed: DID NOT RAIS...\nFAILED .gizli/test_gizli.py::test_16_ayni_bitis_siralama - AttributeError: 'D...\nFAILED .gizli/test_gizli.py::test_17_rapor_satiri - TypeError: DenemeTakibi.r...\n4 failed, 16 passed in 0.12s\n"
+ }
+}

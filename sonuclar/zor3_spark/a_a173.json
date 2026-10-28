@@ -1,0 +1,24 @@
+{
+ "id": "a173",
+ "kip": "a",
+ "tekrar": 1,
+ "kategori": "CSV/JSON ile çalışan ve uç durumları çok olan veri işleme (BOM, ; ayırıcı, 1.234,56 sayı biçimi, boş/bozuk satır)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "leblebi_sevkiyat.py yazıldı: planla() CSV'yi utf-8-sig/noktalı virgülle okur, başlık kontrolü yapar, Türkçe sayıları Decimal ile ayrıştırıp bozuk satırları sayar, fire>3 reddeder, FIFO stok düşer, Türkçe alt-harfe göre müşteri gruplar, Türkçe biçimli sonuç döndürür.",
+ "adim": 7,
+ "yurutucu_token": {
+  "girdi": 18751,
+  "cikti": 35010
+ },
+ "yurutucu_usd": 0.0088771,
+ "bitirdi": true,
+ "sure_sn": 362.9,
+ "gizli": {
+  "gecti": false,
+  "gecen": 16,
+  "toplam": 21,
+  "cikti": "\ntmp_path = PosixPath('/home/usta/is/e7cf046154d4/.tmp/pytest-of-usta/pytest-0/test_musteri_ozet_sirali0')\n\n    def test_musteri_ozet_sirali(tmp_path):\n        c = tmp_path / 'p.csv'; j = tmp_path / 's.json'\n        _csv_yaz(c, ['parti_id','tarih','miktar','fire_orani'], [['P1','2024-01-01','100,00','0,00']])\n        _json_yaz(j, [{'musteri':'Zebra','miktar':'10,00'},{'musteri':'Arı','miktar':'10,00'}])\n        s = planla(str(c), str(j))\n>       adlar = [_ozet_ad(e) for e in s['musteri_ozet']]\n\n.gizli/test_gizli.py:174: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nentry = 'Arı'\n\n    def _ozet_ad(entry):\n        for k in ('musteri', 'ad', 'isim', 'name'):\n            if k in entry:\n                return entry[k]\n>       raise AssertionError('ad alani yok')\nE       AssertionError: ad alani yok\n\n.gizli/test_gizli.py:27: AssertionError\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_fire_ustu_red - AssertionError: assert '10,...\nFAILED .gizli/test_gizli.py::test_hic_saglam_yok - AssertionError: assert '10...\nFAILED .gizli/test_gizli.py::test_hic_siparis_yok - assert {} == []\nFAILED .gizli/test_gizli.py::test_turkce_bicim - AssertionError: kg alani yok\nFAILED .gizli/test_gizli.py::test_musteri_ozet_sirali - AssertionError: ad al...\n5 failed, 16 passed in 0.26s\n"
+ }
+}

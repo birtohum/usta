@@ -1,0 +1,93 @@
+{
+ "id": "a203",
+ "kip": "c",
+ "tekrar": 2,
+ "kategori": "CSV/JSON ile çalışan ve uç durumları çok olan veri işleme (BOM, ; ayırıcı, 1.234,56 sayı biçimi, boş/bozuk satır)",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 21,
+   "basarili": 21
+  }
+ ],
+ "spark_usd": 0.027952800000000003,
+ "arayuz": "",
+ "kabul_yazar": 2,
+ "mutasyon": {
+  "mutant": 15,
+  "ham_mutant": 15,
+  "turlar": [
+   {
+    "oldurulen": 12,
+    "toplam": 15
+   },
+   {
+    "oldurulen": 12,
+    "toplam": 15
+   },
+   {
+    "oldurulen": 13,
+    "toplam": 15
+   }
+  ],
+  "hayatta": [
+   "Oranlar ROUND_HALF_UP ile iki ondaliga yuvarlanmali",
+   "Parti_id degerleri birebir eslesmeli, kucultme yapilmamali"
+  ]
+ },
+ "hakem": [
+  {
+   "test": ".usta_kabul/test_kabul_m2.py::test_tedarikci_turkce_I",
+   "karar": "hatali",
+   "gerekce": "Görev metni tedarikçiye özel limit tanımlamaz ve genel limit 5 iken %2 fireyi dışı saymak tek-limit kuralıyla çelişir.",
+   "tur": 1
+  },
+  {
+   "test": ".usta_kabul/test_kabul_m2.py::test_tedarikci_turkce_noktali_I",
+   "karar": "hatali",
+   "gerekce": "Görev metni tedarikçiye özel limit tanımlamaz ve genel limit 5 iken %2 fireyi dışı saymak tek-limit kuralıyla çelişir.",
+   "tur": 1
+  }
+ ],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [
+  ".usta_kabul/test_kabul_2.py::test_basarili_calisma_ve_anahtarlar",
+  ".usta_kabul/test_kabul_2.py::test_baslik_eksikse_exit3",
+  ".usta_kabul/test_kabul_2.py::test_baslik_veriye_katilmaz",
+  ".usta_kabul/test_kabul_2.py::test_bos_giris_hata_vermez",
+  ".usta_kabul/test_kabul_2.py::test_bos_satirlar_yoksayilir",
+  ".usta_kabul/test_kabul_2.py::test_bozuk_satir_sayaci",
+  ".usta_kabul/test_kabul_2.py::test_esit_oran_parti_id_siralama",
+  ".usta_kabul/test_kabul_2.py::test_limit_esit_disi_degil_ustu_disi",
+  ".usta_kabul/test_kabul_2.py::test_limit_onceligi_ve_varsayilan_ve_turkce_kg",
+  ".usta_kabul/test_kabul_2.py::test_noktali_virgul_ve_bom",
+  ".usta_kabul/test_kabul_2.py::test_oran_yuvarlama_half_up",
+  ".usta_kabul/test_kabul_2.py::test_parti_id_birebir_eslesme",
+  ".usta_kabul/test_kabul_2.py::test_payda_sifir_bozuk",
+  ".usta_kabul/test_kabul_2.py::test_tedarikci_turkce_kucuk_harf",
+  ".usta_kabul/test_kabul_2.py::test_turkce_sayi_ayristirma",
+  ".usta_kabul/test_kabul_3.py::test_parti_id_birebir_eslesir",
+  ".usta_kabul/test_kabul_3.py::test_tedarikci_turkce_kucuk_harf",
+  ".usta_kabul/test_kabul_m2.py::test_tedarikci_turkce_I",
+  ".usta_kabul/test_kabul_m2.py::test_tedarikci_turkce_noktali_I"
+ ],
+ "kabul_test_sayisi": 21,
+ "kabul_gecti": true,
+ "ozet": "bakir_fire_cli.py yazıldı: utf-8-sig + noktalı virgül okuma, boş satır yoksayma, Decimal Türkçe sayı ayrıştırma, exit 2/3 denetimleri, ROUND_HALF_UP yuvarlama, %2,50 eşitlikte limit-dışı saymama, Türkçe küçük harf dönüşümü, oran-azalan/parti_id-artan sıralama, sıfır paydayı bozuk sayma, limit önceliği ve Türkçe biçimli çıktı. 7 pytest testi geçiyor.",
+ "adim": 10,
+ "yurutucu_token": {
+  "girdi": 53760,
+  "cikti": 31183
+ },
+ "yurutucu_usd": 0.011612600000000002,
+ "bitirdi": true,
+ "sure_sn": 1344.8,
+ "gizli": {
+  "gecti": true,
+  "gecen": 21,
+  "toplam": 21,
+  "cikti": ".....................                                                    [100%]\n21 passed in 2.29s\n"
+ }
+}

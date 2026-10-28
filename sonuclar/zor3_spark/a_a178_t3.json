@@ -1,0 +1,24 @@
+{
+ "id": "a178",
+ "kip": "a",
+ "tekrar": 3,
+ "kategori": "CSV/JSON ile çalışan ve uç durumları çok olan veri işleme (BOM, ; ayırıcı, 1.234,56 sayı biçimi, boş/bozuk satır)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "patates_stok_cli.py yazıldı: utf-8-sig + `;` okuma, boş satır yoksayma, Decimal Türkçe sayı çözümleme, bozuk satır sayacı, exit 2/3/4 kuralları, Türkçe küçük harf depo eşleme, negatif stok (sıfır hariç), Türkçe ada göre sıralama, ROUND_HALF_UP ile Türkçe kg biçimi, stok/negatif_stok/bozuk_satir raporu. Testlerle doğrulandı.",
+ "adim": 19,
+ "yurutucu_token": {
+  "girdi": 125568,
+  "cikti": 74546
+ },
+ "yurutucu_usd": 0.027466,
+ "bitirdi": true,
+ "sure_sn": 879.8,
+ "gizli": {
+  "gecti": false,
+  "gecen": 11,
+  "toplam": 20,
+  "cikti": ")\n>       assert d[\"stok\"][0][\"kilogram\"] == \"1,01\"\nE       KeyError: 'kilogram'\n\n.gizli/test_gizli.py:169: KeyError\n_____________________________ test_17_turkce_bicim _____________________________\n\ntmp_path = PosixPath('/home/usta/is/c00df87876ec/.tmp/pytest-of-usta/pytest-0/test_17_turkce_bicim0')\n\n    def test_17_turkce_bicim(tmp_path):\n        g = tmp_path / \"g.csv\"; c = tmp_path / \"c.csv\"; r = tmp_path / \"r.json\"\n        _write(g, [[\"D1\",\"Nigde\",\"Agria\",\"1\",\"1234,5\"]])\n        _write(c, [])\n        assert _run(g, c, r).returncode == 0\n        d = _load(r)\n>       assert d[\"stok\"][0][\"kilogram\"] == \"1.234,50\"\nE       KeyError: 'kilogram'\n\n.gizli/test_gizli.py:177: KeyError\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_02_net_hesap - KeyError: 'cuval_sayisi'\nFAILED .gizli/test_gizli.py::test_03_turkce_sayi_binlik - KeyError: 'kilogram'\nFAILED .gizli/test_gizli.py::test_04_bos_satir_yoksay - TypeError: 'int' obje...\nFAILED .gizli/test_gizli.py::test_05_bozuk_satir_sayac - TypeError: 'int' obj...\nFAILED .gizli/test_gizli.py::test_11_sifir_negatif_degil - KeyError: 'kilogram'\nFAILED .gizli/test_gizli.py::test_12_turkce_kucuk_harf_ayni_depo - KeyError: ...\nFAILED .gizli/test_gizli.py::test_13_I_ve_I_farki - KeyError: 'cuval_sayisi'\nFAILED .gizli/test_gizli.py::test_16_half_up_yuvarlama - KeyError: 'kilogram'\nFAILED .gizli/test_gizli.py::test_17_turkce_bicim - KeyError: 'kilogram'\n9 failed, 11 passed in 1.27s\n"
+ }
+}

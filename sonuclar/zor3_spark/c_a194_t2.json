@@ -1,0 +1,75 @@
+{
+ "id": "a194",
+ "kip": "c",
+ "tekrar": 2,
+ "kategori": "KDV, tevkifat, stopaj, taksit ve kuruş yuvarlama (Decimal, ROUND_HALF_UP, satır bazında ve toplamda yuvarlama farkı)",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 52,
+   "basarili": 52
+  }
+ ],
+ "spark_usd": 0.015592400000000001,
+ "arayuz": "",
+ "kabul_yazar": 3,
+ "mutasyon": {
+  "mutant": 15,
+  "ham_mutant": 15,
+  "turlar": [
+   {
+    "oldurulen": 12,
+    "toplam": 15
+   },
+   {
+    "oldurulen": 12,
+    "toplam": 15
+   },
+   {
+    "oldurulen": 14,
+    "toplam": 15
+   }
+  ],
+  "hayatta": [
+   "matrah yalnizca bosluk ise ValueError gereksinimini cigner"
+  ]
+ },
+ "hakem": [
+  {
+   "test": ".usta_kabul/test_kabul_m2.py::test_aciklama_turkce_donusum_esitlik_sira_korunur",
+   "karar": "belirsiz",
+   "gerekce": "Görev eşitlikte giriş sırasını istiyor ama raporun dönüş sözlüğünde hangi anahtar ve formatta yer alacağını açıkça tanımlamıyor.",
+   "tur": 1
+  },
+  {
+   "test": ".usta_kabul/test_kabul_m2.py::test_ayni_matrah_turkce_alfabetik_siralama",
+   "karar": "belirsiz",
+   "gerekce": "Görev Türkçe alfabetik sırayı istiyor ama rapor listesinin dönüşteki adı ve yapısını tek anlamlı olarak belirtmiyor.",
+   "tur": 1
+  }
+ ],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [
+  ".usta_kabul/test_kabul_m2.py::test_aciklama_turkce_donusum_esitlik_sira_korunur",
+  ".usta_kabul/test_kabul_m2.py::test_ayni_matrah_turkce_alfabetik_siralama"
+ ],
+ "kabul_test_sayisi": 52,
+ "kabul_gecti": true,
+ "ozet": "nigde_temizlik.py içinde temizlik_tevkifat_hesapla yazıldı: %20 KDV satır bazında ROUND_HALF_UP ile, tevkifat satır KDV×pay/10 ile, toplam tevkifat satır toplamı, 2000,00 TL sınırında eşitlik dahil tevkifat, altında tevkifatsız, kdv_yuvarlama_farki genel-satır farkı, Türkçe harf dönüşümlü sıralama anahtarı, tip öncelikli TypeError/ValueError kontrolleri. 15 pytest testi geçiyor.",
+ "adim": 8,
+ "yurutucu_token": {
+  "girdi": 49929,
+  "cikti": 25717
+ },
+ "yurutucu_usd": 0.0101363,
+ "bitirdi": true,
+ "sure_sn": 885.6,
+ "gizli": {
+  "gecti": true,
+  "gecen": 22,
+  "toplam": 22,
+  "cikti": "......................                                                   [100%]\n22 passed in 0.14s\n"
+ }
+}

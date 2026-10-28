@@ -1,0 +1,24 @@
+{
+ "id": "a066",
+ "kip": "b",
+ "tekrar": 3,
+ "kategori": "CSV/JSON ile çalışan ve uç durumları çok olan veri işleme (BOM, ; ayırıcı, 1.234,56 sayı biçimi, boş/bozuk satır)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "otel_doluluk.py içinde analiz_et yazıldı: utf-8-sig + noktalı virgül CSV, Decimal TR sayı ayrıştırma, ROUND_HALF_UP, boş satır atlama/sütun ValueError, JSONDecodeError geçişi, TR küçük harf gruplama (I→ı, İ→i), 7 gece sınırı, hata önceliği, başlık-only sıfır sonucu, gelir/gece/TR-alfabe sıralaması ve ilk yazım koruma. pytest 8 test geçti.",
+ "adim": 18,
+ "yurutucu_token": {
+  "girdi": 122658,
+  "cikti": 61357
+ },
+ "yurutucu_usd": 0.0245372,
+ "bitirdi": true,
+ "sure_sn": 686.5,
+ "gizli": {
+  "gecti": false,
+  "gecen": 20,
+  "toplam": 23,
+  "cikti": "    def test_turkce_noktali_I_gruplama(tmp_path):\n        c = tmp_path / 'k.csv'; j = tmp_path / 'f.json'\n        _yaz_csv(c, 'oda_tipi;gece_sayisi\\n\\u0130ZM\\u0130R;1\\nizmir;2\\n')\n        _yaz_json(j, {'izmir': '20,00'})\n        s = analiz_et(str(c), str(j))\n        assert len(s['odalar']) == 1\n>       assert s['odalar'][0]['gece'] == 3\nE       KeyError: 'gece'\n\n.gizli/test_gizli.py:115: KeyError\n____________________________ test_trim_ve_ilk_yazim ____________________________\n\ntmp_path = PosixPath('/home/usta/is/9b3b4a13ed48/.tmp/pytest-of-usta/pytest-0/test_trim_ve_ilk_yazim0')\n\n    def test_trim_ve_ilk_yazim(tmp_path):\n        c = tmp_path / 'k.csv'; j = tmp_path / 'f.json'\n        _yaz_csv(c, 'oda_tipi;gece_sayisi\\n  Standart  ;1\\nstandart;1\\n')\n        _yaz_json(j, {'standart': '30,00'})\n        s = analiz_et(str(c), str(j))\n        assert len(s['odalar']) == 1\n        assert s['odalar'][0]['oda'] == 'Standart'\n>       assert s['odalar'][0]['gece'] == 2\nE       KeyError: 'gece'\n\n.gizli/test_gizli.py:124: KeyError\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_turkce_I_gruplama - KeyError: 'gece'\nFAILED .gizli/test_gizli.py::test_turkce_noktali_I_gruplama - KeyError: 'gece'\nFAILED .gizli/test_gizli.py::test_trim_ve_ilk_yazim - KeyError: 'gece'\n3 failed, 20 passed in 0.29s\n"
+ }
+}

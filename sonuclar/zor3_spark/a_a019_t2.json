@@ -1,0 +1,24 @@
+{
+ "id": "a019",
+ "kip": "a",
+ "tekrar": 2,
+ "kategori": "Türkiye'ye özgü kimlik ve hesap numaraları (TC kimlik, VKN, IBAN, MERSİS, plaka, telefon) — birden çok kuralın birlikte uygulandığı",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "kimlik_araci.py yazıldı: TC/VKN/IBAN/MERSİS/telefon/plaka tekil bayraklar, --girdi CSV, --cikti, --json destekler; boş girdi öncelikli stderr+exit 2, dosya yok exit 2, sonuç 0/1, UTF-8, yalnızca stdlib.",
+ "adim": 14,
+ "yurutucu_token": {
+  "girdi": 91132,
+  "cikti": 66784
+ },
+ "yurutucu_usd": 0.02247,
+ "bitirdi": true,
+ "sure_sn": 799.5,
+ "gizli": {
+  "gecti": true,
+  "gecen": 21,
+  "toplam": 21,
+  "cikti": ".....................                                                    [100%]\n21 passed in 2.30s\n"
+ }
+}

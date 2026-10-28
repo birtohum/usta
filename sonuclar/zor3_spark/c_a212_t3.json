@@ -1,0 +1,59 @@
+{
+ "id": "a212",
+ "kip": "c",
+ "tekrar": 3,
+ "kategori": "KDV, tevkifat, stopaj, taksit ve kuruş yuvarlama (Decimal, ROUND_HALF_UP, satır bazında ve toplamda yuvarlama farkı)",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 40,
+   "basarili": 40
+  }
+ ],
+ "spark_usd": 0.0339806,
+ "arayuz": "",
+ "kabul_yazar": 2,
+ "mutasyon": {
+  "mutant": 14,
+  "ham_mutant": 14,
+  "turlar": [
+   {
+    "oldurulen": 11,
+    "toplam": 14
+   },
+   {
+    "oldurulen": 13,
+    "toplam": 14
+   },
+   {
+    "oldurulen": 13,
+    "toplam": 14
+   }
+  ],
+  "hayatta": [
+   "MIKTAR pozitif tam sayi metni olmalidir gereksinimini cigner, 12abc kabul edilir"
+  ]
+ },
+ "hakem": [],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [],
+ "kabul_test_sayisi": 40,
+ "kabul_gecti": true,
+ "ozet": "kirsehir_kirtasiye_cli.py yazıldı: argparse ile --satir/--rapor, Türkçe duyarsız kategori, Decimal+HALF_UP hesap, 3000 TL iskonto kuralı, json/fis raporları. pytest ile 11 test geçti.",
+ "adim": 8,
+ "yurutucu_token": {
+  "girdi": 26536,
+  "cikti": 46320
+ },
+ "yurutucu_usd": 0.011917599999999999,
+ "bitirdi": true,
+ "sure_sn": 859.6,
+ "gizli": {
+  "gecti": false,
+  "gecen": 20,
+  "toplam": 21,
+  "cikti": "....................F                                                    [100%]\n=================================== FAILURES ===================================\n_____________________ test_fis_ayni_kategori_giris_sirasi ______________________\n\n    def test_fis_ayni_kategori_giris_sirasi():\n        r = run_cli(\"--satir\", \"kirtasiye:2:10.00\", \"--satir\", \"kirtasiye:1:10.00\", \"--rapor\", \"fis\")\n        assert r.returncode == 0\n        out = r.stdout\n        idx2 = out.find(\"2 x 10.00\")\n        idx1 = out.find(\"1 x 10.00\")\n>       assert idx2 != -1 and idx1 != -1\nE       assert (-1 != -1)\n\n.gizli/test_gizli.py:171: AssertionError\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_fis_ayni_kategori_giris_sirasi - assert (-1...\n1 failed, 20 passed in 0.58s\n"
+ }
+}

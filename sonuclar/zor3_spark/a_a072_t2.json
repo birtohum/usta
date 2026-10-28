@@ -1,0 +1,24 @@
+{
+ "id": "a072",
+ "kip": "a",
+ "tekrar": 2,
+ "kategori": "CSV/JSON ile çalışan ve uç durumları çok olan veri işleme (BOM, ; ayırıcı, 1.234,56 sayı biçimi, boş/bozuk satır)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "su_fatura_cli.py yazıldı ve test edildi: utf-8-sig + noktalı virgül CSV okuma, TR sayı Decimal dönüşümü, ROUND_HALF_UP, boş satır atlama, sütun/JSON/negatif hatalarında stderr+exit1, eksik argümanda exit2, Türkçe küçük harf normalizasyonla birleştirme, 20 m3 kademeli ücret, header-only boş çıktı, utf-8 ensure_ascii=False indent2 JSON, tutar/m3/TR-alfabetik sıralama.",
+ "adim": 7,
+ "yurutucu_token": {
+  "girdi": 24375,
+  "cikti": 30257
+ },
+ "yurutucu_usd": 0.0084889,
+ "bitirdi": true,
+ "sure_sn": 328.5,
+ "gizli": {
+  "gecti": true,
+  "gecen": 20,
+  "toplam": 20,
+  "cikti": "....................                                                     [100%]\n20 passed in 2.27s\n"
+ }
+}

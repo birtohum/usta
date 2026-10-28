@@ -1,0 +1,53 @@
+{
+ "id": "a167",
+ "kip": "c",
+ "tekrar": 1,
+ "kategori": "çok dosyalı küçük modül: iki-üç dosyaya bölünmüş, ortak hata sınıfları ve bir komut satırı girişi olan araç",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 54,
+   "basarili": 54
+  }
+ ],
+ "spark_usd": 0.0112595,
+ "arayuz": "",
+ "kabul_yazar": 3,
+ "mutasyon": {
+  "mutant": 14,
+  "ham_mutant": 14,
+  "turlar": [
+   {
+    "oldurulen": 12,
+    "toplam": 14
+   },
+   {
+    "oldurulen": 14,
+    "toplam": 14
+   }
+  ],
+  "hayatta": []
+ },
+ "hakem": [],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [],
+ "kabul_test_sayisi": 54,
+ "kabul_gecti": true,
+ "ozet": "Van serpme kahvaltı adisyon aracı yazıldı: hatalar.py (Hata/GirdiHatasi/BulunamadiHatasi/KapanmisHatasi), kahvalti.py (Adisyon: masa_ac, urun_ekle, kisi_basi, urunler, masa_kapat; Türkçe normalleştirme I→ı/İ→i, kalan kuruş ilk kişilere dağıtımı, fiyat+ad sıralaması, hata önceliği), cli.py (ac/ekle/bol komutları, BOL:/HATA: çıktısı, kalıcı dosya saklama). 17 pytest testi geçiyor.",
+ "adim": 11,
+ "yurutucu_token": {
+  "girdi": 65860,
+  "cikti": 35396
+ },
+ "yurutucu_usd": 0.0136652,
+ "bitirdi": true,
+ "sure_sn": 521.2,
+ "gizli": {
+  "gecti": true,
+  "gecen": 20,
+  "toplam": 20,
+  "cikti": "....................                                                     [100%]\n20 passed in 0.57s\n"
+ }
+}

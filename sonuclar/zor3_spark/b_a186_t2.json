@@ -1,0 +1,24 @@
+{
+ "id": "a186",
+ "kip": "b",
+ "tekrar": 2,
+ "kategori": "tarih ve saat: resmî tatiller parametreyle, iş günü hesabı, Türkiye saat dilimi (UTC+3, yaz saati yok), gün/ay adları Türkçe",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "numune.py içinde NumuneIzleyici sınıfı yazıldı: UTC girdiler +3 saatle Türkiye gününe çevrilir, hafta sonu ve tatil (TR gününe göre, yinelenensiz) dışı günler iş günü sayılır; sla_bitisi kabul hariç sayar, isgunu=0 ise aynı/sonraki iş günü; isgunu_farki başlangıç dahil bitiş hariç sayar; tr_format \"GG AyAdı YYYY GünAdı\" döndürür; hatalı tarih ve negatif isgunu ValueError verir (önce tarih denetlenir). pytest ile 15 test geçti.",
+ "adim": 7,
+ "yurutucu_token": {
+  "girdi": 25755,
+  "cikti": 17406
+ },
+ "yurutucu_usd": 0.0060567,
+ "bitirdi": true,
+ "sure_sn": 201.1,
+ "gizli": {
+  "gecti": true,
+  "gecen": 21,
+  "toplam": 21,
+  "cikti": ".....................                                                    [100%]\n21 passed in 0.03s\n"
+ }
+}

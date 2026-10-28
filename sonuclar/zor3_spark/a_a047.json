@@ -1,0 +1,24 @@
+{
+ "id": "a047",
+ "kip": "a",
+ "tekrar": 1,
+ "kategori": "çok dosyalı küçük modül: iki-üç dosyaya bölünmüş, ortak hata sınıfları ve bir komut satırı girişi olan araç",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "hatalar.py (NotHatasi, OgrenciHatasi ValueError soyundan) ve burs.py (ortalama_hesapla tabana yuvarlar, boş/aralık dışı NotHatasi, tip hatası TypeError; sirala ortalama büyük/devamsızlık küçük/kimlik küçük sırası, Türkçe normalize ı-ş-ğ + lower, hata önceliği tip>öğrenci>not ve ilk ihlal, CLI `python -m burs sirala --ogrenciler Ali:90:2,Veli:90:1` satır satır ad yazımı) oluşturuldu ve doğrulandı.",
+ "adim": 9,
+ "yurutucu_token": {
+  "girdi": 36024,
+  "cikti": 27377
+ },
+ "yurutucu_usd": 0.0090778,
+ "bitirdi": true,
+ "sure_sn": 244.5,
+ "gizli": {
+  "gecti": false,
+  "gecen": 19,
+  "toplam": 20,
+  "cikti": "                if kim_val is not None:\n                    if isinstance(kim_val, bool):\n                        raise TypeError(\"kimlik int ya da str olmalidir\")\n                    if not isinstance(kim_val, (int, str)):\n                        raise TypeError(\"kimlik int ya da str olmalidir\")\n            except TypeError as e:\n                if ilk_tip_hatasi is None:\n                    ilk_tip_hatasi = e\n        if ilk_tip_hatasi is not None:\n            raise ilk_tip_hatasi\n    \n        # 2. asama: ogrenci hatalari\n        ilk_ogrenci_hatasi = None\n        for ogr in ogrenciler:\n            try:\n                ad_val, _ = _ad_al(ogr)\n                not_val, _ = _notlar_al(ogr)\n                dev_val, _ = _dev_al(ogr)\n                kim_val, _ = _kimlik_al(ogr)\n    \n                if ad_val is None:\n                    raise OgrenciHatasi(\"ogrenci adi eksik\")\n                if not isinstance(ad_val, str) or ad_val.strip() == \"\":\n>                   raise OgrenciHatasi(\"ogrenci adi gecersiz\")\nE                   hatalar.OgrenciHatasi: ogrenci adi gecersiz\n\nburs.py:132: OgrenciHatasi\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_ilk_ihlal - hatalar.OgrenciHatasi: ogrenci ...\n1 failed, 19 passed in 0.08s\n"
+ }
+}

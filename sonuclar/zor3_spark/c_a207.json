@@ -1,0 +1,62 @@
+{
+ "id": "a207",
+ "kip": "c",
+ "tekrar": 1,
+ "kategori": "CSV/JSON ile çalışan ve uç durumları çok olan veri işleme (BOM, ; ayırıcı, 1.234,56 sayı biçimi, boş/bozuk satır)",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 36,
+   "basarili": 36
+  }
+ ],
+ "spark_usd": 0.0256531,
+ "arayuz": "",
+ "kabul_yazar": 2,
+ "mutasyon": {
+  "mutant": 16,
+  "ham_mutant": 16,
+  "turlar": [
+   {
+    "oldurulen": 15,
+    "toplam": 16
+   },
+   {
+    "oldurulen": 15,
+    "toplam": 16
+   },
+   {
+    "oldurulen": 15,
+    "toplam": 16
+   }
+  ],
+  "hayatta": [
+   "kabul_csv utf-8-sig ile okunmali gereksinimini cigner (BOM yok sayilmaz)"
+  ]
+ },
+ "hakem": [],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [
+  ".usta_kabul/test_kabul_2.py::test_bos_ve_bozuk_miktar_hatali",
+  ".usta_kabul/test_kabul_2.py::test_turkce_kucuk_harf_birlestirme"
+ ],
+ "kabul_test_sayisi": 36,
+ "kabul_gecti": true,
+ "ozet": "`balik_kabul.py` içinde `mutabakat` yazıldı: utf-8-sig + `;` CSV okuma, boş satır atlama, Türkçe sayı (binlik nokta/ondalık virgül) Decimal ayrıştırma, GG.AA.YYYY tarih doğrulama, BOM'lu JSON fiyat okuma, fiyatsız tür hatalı sayma, 0/negatif dahil etme, 1000,00 sınır sayımı, ROUND_HALF_UP ile Türkçe biçimli çıktı, I->ı/İ->i normalize birleştirme + ilk yazımı koruma, toplam azalan / Türkçe alfabetik sıralama, hata önceliği FileNotFoundError>ValueError. 12 pytest testi geçiyor.",
+ "adim": 17,
+ "yurutucu_token": {
+  "girdi": 198581,
+  "cikti": 37366
+ },
+ "yurutucu_usd": 0.027331300000000003,
+ "bitirdi": true,
+ "sure_sn": 1212.1,
+ "gizli": {
+  "gecti": true,
+  "gecen": 21,
+  "toplam": 21,
+  "cikti": ".....................                                                    [100%]\n21 passed in 0.35s\n"
+ }
+}

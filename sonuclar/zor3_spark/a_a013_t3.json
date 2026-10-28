@@ -1,0 +1,24 @@
+{
+ "id": "a013",
+ "kip": "a",
+ "tekrar": 3,
+ "kategori": "Türkiye'ye özgü kimlik ve hesap numaraları (TC kimlik, VKN, IBAN, MERSİS, plaka, telefon) — birden çok kuralın birlikte uygulandığı",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "toplu_denetim.py yazıldı: toplu_denetle liste kontrolü, tur_hatası önceliği, kimlik/iban/telefon/plaka doğrulama, Türkçe büyük harf ve sıralı hatalar uygulandı.",
+ "adim": 5,
+ "yurutucu_token": {
+  "girdi": 13796,
+  "cikti": 38599
+ },
+ "yurutucu_usd": 0.0090994,
+ "bitirdi": true,
+ "sure_sn": 389.2,
+ "gizli": {
+  "gecti": false,
+  "gecen": 20,
+  "toplam": 23,
+  "cikti": "=================================== FAILURES ===================================\n_______________________________ test_gecerli_vkn _______________________________\n\n    def test_gecerli_vkn():\n        r = toplu_denetle([rec(GVKN, t='VKN')])\n>       assert r['gecerli_sayisi'] == 1 and r['hatalar'] == []\nE       assert (0 == 1)\n\n.gizli/test_gizli.py:66: AssertionError\n______________________________ test_gecersiz_tur _______________________________\n\n    def test_gecersiz_tur():\n        r = toplu_denetle([rec(t='XX')])\n>       assert r['gecersiz_sayisi'] == 1\nE       assert 0 == 1\n\n.gizli/test_gizli.py:70: AssertionError\n_______________________________ test_vkn_hatasi ________________________________\n\n    def test_vkn_hatasi():\n        r = toplu_denetle([rec('1234567890', t='VKN')])\n>       assert r['hatalar'][0]['kod'] == 'kimlik_no_hatası'\nE       IndexError: list index out of range\n\n.gizli/test_gizli.py:96: IndexError\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_gecerli_vkn - assert (0 == 1)\nFAILED .gizli/test_gizli.py::test_gecersiz_tur - assert 0 == 1\nFAILED .gizli/test_gizli.py::test_vkn_hatasi - IndexError: list index out of ...\n3 failed, 20 passed in 0.17s\n"
+ }
+}

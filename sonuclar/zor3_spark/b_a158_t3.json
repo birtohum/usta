@@ -1,0 +1,24 @@
+{
+ "id": "a158",
+ "kip": "b",
+ "tekrar": 3,
+ "kategori": "CSV/JSON ile çalışan ve uç durumları çok olan veri işleme (BOM, ; ayırıcı, 1.234,56 sayı biçimi, boş/bozuk satır)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "ceviz_kalibre.py içinde KalibreSiniflayici yazıldı: utf-8-sig okuma, Türkçe sayı ayrıştırma (binlik noktası silme, virgül→nokta, Decimal), ;-ayırıcılı CSV, boş satır atlama, sütun sayısı kontrolü, Decimal puan (ağırlık/çap, HALF_UP 2 basamak), I→ı/İ→i + casefold normalizasyon, alt sınıra eşitlikte üst kalibre, puan azalan/Türkçe alfabetik/parti_id sıralaması ve istenen hata öncelikleri uygulandı; pytest ile 5 test geçti.",
+ "adim": 17,
+ "yurutucu_token": {
+  "girdi": 111334,
+  "cikti": 72762
+ },
+ "yurutucu_usd": 0.0256858,
+ "bitirdi": true,
+ "sure_sn": 847.4,
+ "gizli": {
+  "gecti": false,
+  "gecen": 16,
+  "toplam": 22,
+  "cikti": "\n    def test_tolerans_yok(tmp_path):\n        e = esik_yaz(tmp_path, orta=\"3,20\", iri=\"3,60\")\n        p = parti_yaz(tmp_path, [[\"P1\", \"B\", \"3,19\", \"3,19\"]])\n        s = KalibreSiniflayici(e).siniflandir(p)\n>       assert s[0][\"kalibre\"] == \"ince\"\nE       AssertionError: assert 'orta_alt_sinir' == 'ince'\nE         - ince\nE         + orta_alt_sinir\n\n.gizli/test_gizli.py:140: AssertionError\n___________________________ test_esik_anahtar_eksik ____________________________\n\ntmp_path = PosixPath('/home/usta/is/076ec2675427/.tmp/pytest-of-usta/pytest-4/test_esik_anahtar_eksik0')\n\n    def test_esik_anahtar_eksik(tmp_path):\n        pth = tmp_path / \"esik.json\"\n        pth.write_text(json.dumps({\"orta_alt_sinir\": \"3,20\"}, ensure_ascii=False), encoding=\"utf-8\")\n>       with pytest.raises(ValueError):\nE       Failed: DID NOT RAISE <class 'ValueError'>\n\n.gizli/test_gizli.py:176: Failed\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_esik_ondalik_virgul - AssertionError: asser...\nFAILED .gizli/test_gizli.py::test_esik_binlik_noktasi - AssertionError: asser...\nFAILED .gizli/test_gizli.py::test_baslik_hatasi - Failed: DID NOT RAISE <clas...\nFAILED .gizli/test_gizli.py::test_cap_esitlik_ust_kalibre - AssertionError: a...\nFAILED .gizli/test_gizli.py::test_tolerans_yok - AssertionError: assert 'orta...\nFAILED .gizli/test_gizli.py::test_esik_anahtar_eksik - Failed: DID NOT RAISE ...\n6 failed, 16 passed in 0.11s\n"
+ }
+}

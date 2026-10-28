@@ -1,0 +1,53 @@
+{
+ "id": "a046",
+ "kip": "c",
+ "tekrar": 2,
+ "kategori": "tarih ve saat: resmî tatiller parametreyle, iş günü hesabı, Türkiye saat dilimi (UTC+3, yaz saati yok), gün/ay adları Türkçe",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 53,
+   "basarili": 53
+  }
+ ],
+ "spark_usd": 0.0097495,
+ "arayuz": "",
+ "kabul_yazar": 3,
+ "mutasyon": {
+  "mutant": 15,
+  "ham_mutant": 15,
+  "turlar": [
+   {
+    "oldurulen": 12,
+    "toplam": 15
+   },
+   {
+    "oldurulen": 15,
+    "toplam": 15
+   }
+  ],
+  "hayatta": []
+ },
+ "hakem": [],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [],
+ "kabul_test_sayisi": 53,
+ "kabul_gecti": true,
+ "ozet": "DavaTakvimi sınıfı dava_sure.py içinde yazıldı: hafta sonu+tatil atlayan son_gun, sıfır süre öteleme, önce ValueError sonra TypeError denetimi, Türkçe gün adları ve i/ı büyük harf kuralı, yinelenen tatil tekilleme; yalnızca datetime+re kullanıldı. pytest ile 15 test geçti.",
+ "adim": 4,
+ "yurutucu_token": {
+  "girdi": 13549,
+  "cikti": 10766
+ },
+ "yurutucu_usd": 0.0035081000000000005,
+ "bitirdi": true,
+ "sure_sn": 602.9,
+ "gizli": {
+  "gecti": true,
+  "gecen": 22,
+  "toplam": 22,
+  "cikti": "......................                                                   [100%]\n22 passed in 0.08s\n"
+ }
+}

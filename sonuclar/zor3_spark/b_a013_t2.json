@@ -1,0 +1,24 @@
+{
+ "id": "a013",
+ "kip": "b",
+ "tekrar": 2,
+ "kategori": "Türkiye'ye özgü kimlik ve hesap numaraları (TC kimlik, VKN, IBAN, MERSİS, plaka, telefon) — birden çok kuralın birlikte uygulandığı",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "toplu_denetim.py içinde toplu_denetle yazıldı: TC/VKN/IBAN/telefon/plaka doğrulama, öncelik sırası, tur_hatası handling, TypeError, sıralama ve Türkçe i dönüşümü uygulandı; 16 pytest testi geçti.",
+ "adim": 8,
+ "yurutucu_token": {
+  "girdi": 33465,
+  "cikti": 25562
+ },
+ "yurutucu_usd": 0.0084589,
+ "bitirdi": true,
+ "sure_sn": 274.5,
+ "gizli": {
+  "gecti": false,
+  "gecen": 12,
+  "toplam": 23,
+  "cikti": "': 'iban'} != {'kod': 'iban_hatası'}\nE         Use -v to get more diff\n\n.gizli/test_gizli.py:134: AssertionError\n_____________________________ test_plaka_turkce_i ______________________________\n\n    def test_plaka_turkce_i():\n        r = toplu_denetle([rec(plaka='34aib12')])\n        assert r['gecersiz_sayisi'] == 1\n>       assert r['hatalar'][0]['kod'] == 'plaka_hatası'\nE       AssertionError: assert 'plaka' == 'plaka_hatası'\nE         - plaka_hatası\nE         + plaka\n\n.gizli/test_gizli.py:141: AssertionError\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_gecerli_vkn - assert (0 == 1)\nFAILED .gizli/test_gizli.py::test_tc_hatasi - AssertionError: assert 'kimlik_...\nFAILED .gizli/test_gizli.py::test_vkn_hatasi - IndexError: list index out of ...\nFAILED .gizli/test_gizli.py::test_iban_hatasi - AssertionError: assert 'iban'...\nFAILED .gizli/test_gizli.py::test_telefon_hatasi - AssertionError: assert 'te...\nFAILED .gizli/test_gizli.py::test_plaka_hatasi - AssertionError: assert 'plak...\nFAILED .gizli/test_gizli.py::test_oncelik_kimlik - AssertionError: assert 'ki...\nFAILED .gizli/test_gizli.py::test_oncelik_iban - AssertionError: assert 'iban...\nFAILED .gizli/test_gizli.py::test_oncelik_telefon - AssertionError: assert 't...\nFAILED .gizli/test_gizli.py::test_siralama - AssertionError: assert {'indeks'...\nFAILED .gizli/test_gizli.py::test_plaka_turkce_i - AssertionError: assert 'pl...\n11 failed, 12 passed in 0.27s\n"
+ }
+}

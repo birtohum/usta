@@ -1,0 +1,24 @@
+{
+ "id": "a001",
+ "kip": "b",
+ "tekrar": 2,
+ "kategori": "Türkiye'ye özgü kimlik ve hesap numaraları (TC kimlik, VKN, IBAN, MERSİS, plaka, telefon) — birden çok kuralın birlikte uygulandığı",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "mersis_denetim.py içinde mersis_dogrula ve mersis_son_haneyi_hesapla yazıldı; ağırlıklı toplam (tek konum×3, çift konum×1, son hane (10-toplam%10)%10), hata önceliği tip→boş→uzunluk→rakam→ilk hane→sağlama uygulandı, ayraç temizleme yapılmadı. 13 pytest testi geçti.",
+ "adim": 10,
+ "yurutucu_token": {
+  "girdi": 47097,
+  "cikti": 16167
+ },
+ "yurutucu_usd": 0.0079431,
+ "bitirdi": true,
+ "sure_sn": 208.0,
+ "gizli": {
+  "gecti": false,
+  "gecen": 21,
+  "toplam": 22,
+  "cikti": ".gizli/test_gizli.py:59: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nilk_onbes = '000000000000000'\n\n    def mersis_son_haneyi_hesapla(ilk_onbes: str) -> str:\n        \"\"\"İlk 15 haneden MERSİS sağlama hanesini hesaplar.\n    \n        Aynı ağırlıklı formülü kullanır, tek basamaklı string döndürür.\n        Hata önceliği: tip, boş girdi, uzunluk, rakam, ilk hane sıfır.\n        \"\"\"\n        # 1. tip\n        _tip_denetimi(ilk_onbes)\n        # 2. boş girdi (uzunluktan önce)\n        _bos_denetimi(ilk_onbes)\n        # 3. uzunluk\n        if len(ilk_onbes) != 15:\n            raise ValueError(\"Girdi tam 15 haneli olmalıdır.\")\n        # 4. rakam (sessizce temizleme yok; boşluk/tire/ayraç burada elenir)\n        if not _rakam_mi(ilk_onbes):\n            raise ValueError(\"Girdi yalnızca rakamlardan oluşmalıdır.\")\n        # 5. ilk hane sıfır olamaz\n        if ilk_onbes[0] == \"0\":\n>           raise ValueError(\"İlk hane sıfır olamaz.\")\nE           ValueError: İlk hane sıfır olamaz.\n\nmersis_denetim.py:61: ValueError\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_helper_sifirlar - ValueError: İlk hane sıfı...\n1 failed, 21 passed in 0.08s\n"
+ }
+}

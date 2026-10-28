@@ -1,0 +1,24 @@
+{
+ "id": "a042",
+ "kip": "a",
+ "tekrar": 3,
+ "kategori": "CSV/JSON ile çalışan ve uç durumları çok olan veri işleme (BOM, ; ayırıcı, 1.234,56 sayı biçimi, boş/bozuk satır)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "vergi_dilimi.py içinde dilimle(csv_yolu, limitler_json) yazıldı: utf-8-sig + noktalı virgül CSV, aynen tc;ad;gelir başlık kontrolü, utf-8-sig JSON dilim listesi artan kontrolü (ValueError), Türkçe sayı ayrıştırma, boş=0, eksi=ValueError, dilim başına ROUND_HALF_UP ve toplam, sınır alt dilime dahil, boş satır atlama + eksik sütun atlama, gelir azalan + tc artan sıralama, ad için I->ı İ->i + boşluk sadeleştirme, FileNotFoundError önceliği, bozuk JSON ValueError, yalnızca stdlib.",
+ "adim": 15,
+ "yurutucu_token": {
+  "girdi": 87856,
+  "cikti": 41262
+ },
+ "yurutucu_usd": 0.017038000000000005,
+ "bitirdi": true,
+ "sure_sn": 539.4,
+ "gizli": {
+  "gecti": false,
+  "gecen": 18,
+  "toplam": 20,
+  "cikti": "    def test_ad_I_normalizasyon(tmp_path):\n        c = tmp_path / \"g.csv\"; j = tmp_path / \"l.json\"\n        _csv_yaz(c, \"tc;ad;gelir\\n1;YILMAZ;100\\n\")\n        _json_yaz(j, {\"dilimler\": [{\"ust\": 10000, \"oran\": 0.10}]})\n        r = dilimle(str(c), str(j))\n>       assert r[0][\"ad\"] == \"y\\u0131lmaz\"\nE       AssertionError: assert 'YıLMAZ' == 'yılmaz'\nE         - yılmaz\nE         + YıLMAZ\n\n.gizli/test_gizli.py:115: AssertionError\n___________________________ test_ad_dotted_I_bosluk ____________________________\n\ntmp_path = PosixPath('/home/usta/is/9616aea76603/.tmp/pytest-of-usta/pytest-0/test_ad_dotted_I_bosluk0')\n\n    def test_ad_dotted_I_bosluk(tmp_path):\n        c = tmp_path / \"g.csv\"; j = tmp_path / \"l.json\"\n        _csv_yaz(c, \"tc;ad;gelir\\n1;  \\u0130STANBUL   B\\u00dcY\\u00dcK  ;100\\n\")\n        _json_yaz(j, {\"dilimler\": [{\"ust\": 10000, \"oran\": 0.10}]})\n        r = dilimle(str(c), str(j))\n>       assert r[0][\"ad\"] == \"istanbul b\\u00fcy\\u00fck\"\nE       AssertionError: assert 'iSTANBUL BÜYÜK' == 'istanbul büyük'\nE         - istanbul büyük\nE         + iSTANBUL BÜYÜK\n\n.gizli/test_gizli.py:122: AssertionError\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_ad_I_normalizasyon - AssertionError: assert...\nFAILED .gizli/test_gizli.py::test_ad_dotted_I_bosluk - AssertionError: assert...\n2 failed, 18 passed in 0.21s\n"
+ }
+}

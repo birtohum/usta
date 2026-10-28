@@ -1,0 +1,24 @@
+{
+ "id": "a001",
+ "kip": "b",
+ "tekrar": 3,
+ "kategori": "Türkiye'ye özgü kimlik ve hesap numaraları (TC kimlik, VKN, IBAN, MERSİS, plaka, telefon) — birden çok kuralın birlikte uygulandığı",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "mersis_denetim.py yazıldı: mersis_dogrula ve mersis_son_haneyi_hesapla işlevleri ağırlıklı toplam formülüyle, tip/boş/uzunluk/rakam/ilk-hane/sağlama önceliğine uygun hazırlandı. pytest ile 6 test geçti.",
+ "adim": 5,
+ "yurutucu_token": {
+  "girdi": 11131,
+  "cikti": 19623
+ },
+ "yurutucu_usd": 0.0050377,
+ "bitirdi": true,
+ "sure_sn": 245.0,
+ "gizli": {
+  "gecti": false,
+  "gecen": 21,
+  "toplam": 22,
+  "cikti": "...............F......                                                   [100%]\n=================================== FAILURES ===================================\n_____________________________ test_helper_sifirlar _____________________________\n\n    def test_helper_sifirlar():\n>       assert mersis_son_haneyi_hesapla(\"000000000000000\") == \"0\"\n\n.gizli/test_gizli.py:59: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nilk_onbes = '000000000000000'\n\n    def mersis_son_haneyi_hesapla(ilk_onbes: str) -> str:\n        if not isinstance(ilk_onbes, str):\n            raise TypeError(\"MERSIS girdisi string olmalidir.\")\n        if ilk_onbes == \"\" or ilk_onbes.strip() == \"\":\n            raise ValueError(\"MERSIS girdisi bos olamaz.\")\n        if len(ilk_onbes) != 15:\n            raise ValueError(\"MERSIS onbes hanesi tam 15 haneli olmalidir.\")\n        for ch in ilk_onbes:\n            if not (\"0\" <= ch <= \"9\"):\n                raise ValueError(\"MERSIS girdisi yalnizca rakamlardan olusmalidir.\")\n        if ilk_onbes[0] == \"0\":\n>           raise ValueError(\"MERSIS numarasinin ilk hanesi sifir olamaz.\")\nE           ValueError: MERSIS numarasinin ilk hanesi sifir olamaz.\n\nmersis_denetim.py:30: ValueError\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_helper_sifirlar - ValueError: MERSIS numara...\n1 failed, 21 passed in 0.07s\n"
+ }
+}

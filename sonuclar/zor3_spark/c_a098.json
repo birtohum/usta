@@ -1,0 +1,60 @@
+{
+ "id": "a098",
+ "kip": "c",
+ "tekrar": 1,
+ "kategori": "CSV/JSON ile çalışan ve uç durumları çok olan veri işleme (BOM, ; ayırıcı, 1.234,56 sayı biçimi, boş/bozuk satır)",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 57,
+   "basarili": 57
+  }
+ ],
+ "spark_usd": 0.017479099999999997,
+ "arayuz": "",
+ "kabul_yazar": 3,
+ "mutasyon": {
+  "mutant": 16,
+  "ham_mutant": 16,
+  "turlar": [
+   {
+    "oldurulen": 14,
+    "toplam": 16
+   },
+   {
+    "oldurulen": 14,
+    "toplam": 16
+   },
+   {
+    "oldurulen": 14,
+    "toplam": 16
+   }
+  ],
+  "hayatta": [
+   "BOM yoksayma: utf-8-sig ile okuma gereksinimini ihlal eder",
+   "ROUND_HALF_UP ile 2 ondalik yuvarlama gereksinimini ihlal eder (varsayilan HALF_EVEN)"
+  ]
+ },
+ "hakem": [],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [],
+ "kabul_test_sayisi": 57,
+ "kabul_gecti": true,
+ "ozet": "`uzum_kurutma.py` içinde `kurutma_raporu` yazıldı: utf-8-sig + `;` CSV okuma, BOM yoksayma, boş satır atlama, Türkçe sayı çözümleme (`.` sil, `,`→`.`), Decimal HALF_UP hesaplar, nem==hedef sınır durumu, hatalı sayaç, Türkçe duyarsız gruplama (I→ı, İ→i + casefold) ve tutar-azalan sıralama. Hata önceliği (kabul yokluğu önce) ve boş-sonuç `\"0,00\"` uygulandı. `test_uzum.py` ile 21 pytest testi geçiyor.",
+ "adim": 19,
+ "yurutucu_token": {
+  "girdi": 186805,
+  "cikti": 51369
+ },
+ "yurutucu_usd": 0.028954299999999995,
+ "bitirdi": true,
+ "sure_sn": 1079.8,
+ "gizli": {
+  "gecti": true,
+  "gecen": 21,
+  "toplam": 21,
+  "cikti": ".....................                                                    [100%]\n21 passed in 0.34s\n"
+ }
+}

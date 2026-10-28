@@ -1,0 +1,70 @@
+{
+ "id": "a206",
+ "kip": "c",
+ "tekrar": 2,
+ "kategori": "tarih ve saat: resmî tatiller parametreyle, iş günü hesabı, Türkiye saat dilimi (UTC+3, yaz saati yok), gün/ay adları Türkçe",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 53,
+   "basarili": 53
+  }
+ ],
+ "spark_usd": 0.0110563,
+ "arayuz": "",
+ "kabul_yazar": 3,
+ "mutasyon": {
+  "mutant": 14,
+  "ham_mutant": 14,
+  "turlar": [
+   {
+    "oldurulen": 11,
+    "toplam": 14
+   },
+   {
+    "oldurulen": 12,
+    "toplam": 14
+   },
+   {
+    "oldurulen": 13,
+    "toplam": 14
+   }
+  ],
+  "hayatta": [
+   "eksik zorunlu bayrak icin cikis kodu iki verilir gereksinimini cigner"
+  ]
+ },
+ "hakem": [
+  {
+   "test": ".usta_kabul/test_kabul_m1.py::test_sure_kismi_gun_yukari_yuvarlanir",
+   "karar": "hatali",
+   "gerekce": "Görev metni yuvarlama davranışını anıyor ama tek argümanlı bir yardımcı fonksiyonun varlığını şart koşmuyor.",
+   "tur": 1
+  }
+ ],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [
+  ".usta_kabul/test_kabul_m1.py::test_turkce_kucuk_harf_buyuk_I",
+  ".usta_kabul/test_kabul_m1.py::test_turkce_kucuk_harf_buyuk_I_noktali",
+  ".usta_kabul/test_kabul_m1.py::test_sure_kismi_gun_yukari_yuvarlanir"
+ ],
+ "kabul_test_sayisi": 53,
+ "kabul_gecti": true,
+ "ozet": "muayene_cli.py yazıldı: başlangıç dahil iş günü sayarak adet kadar muayene günü üretir; Cumartesi varsayılan kapalı, --cumartesi-acik ile açık, Pazar ve tatiller hep kapalı; tarihler Europe/Istanbul bilinçli yorumlanır; çıktı `YYYY-AA-GG,GünAdı,Gün AyAdı Yıl` biçimindedir; Türkçe küçük harf (I→ı, İ→i) yardımcısı, sıralama ve hata kodları (geçersiz tarih/eksik bayrak → çıkış 2, stderr) eklendi. Yalnızca stdlib, yasaklı çağrı yok. test_muayene.py ile 17 test `python -m pytest -q` altında geçiyor.",
+ "adim": 10,
+ "yurutucu_token": {
+  "girdi": 46053,
+  "cikti": 20235
+ },
+ "yurutucu_usd": 0.008652300000000002,
+ "bitirdi": true,
+ "sure_sn": 716.2,
+ "gizli": {
+  "gecti": true,
+  "gecen": 20,
+  "toplam": 20,
+  "cikti": "....................                                                     [100%]\n20 passed in 1.88s\n"
+ }
+}

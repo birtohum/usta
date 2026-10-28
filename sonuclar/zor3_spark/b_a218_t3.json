@@ -1,0 +1,24 @@
+{
+ "id": "a218",
+ "kip": "b",
+ "tekrar": 3,
+ "kategori": "tarih ve saat: resmî tatiller parametreyle, iş günü hesabı, Türkiye saat dilimi (UTC+3, yaz saati yok), gün/ay adları Türkçe",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "DenemeTakibi sınıfı deneme.py içinde yazıldı, iş günü hesabı ve rapor üretildi, pytest ile 4 test geçti.",
+ "adim": 6,
+ "yurutucu_token": {
+  "girdi": 18718,
+  "cikti": 26358
+ },
+ "yurutucu_usd": 0.007143399999999999,
+ "bitirdi": true,
+ "sure_sn": 335.2,
+ "gizli": {
+  "gecti": false,
+  "gecen": 18,
+  "toplam": 20,
+  "cikti": "...............FF...                                                     [100%]\n=================================== FAILURES ===================================\n_________________________ test_16_ayni_bitis_siralama __________________________\n\n    def test_16_ayni_bitis_siralama():\n        t = DenemeTakibi(set())\n        t.ekle(\"c\", \"2024-01-01\", 1)\n        t.ekle(\"a\", \"2024-01-01\", 1)\n        t.ekle(\"b\", \"2024-01-02\", 2)\n        lst = t.liste()\n>       assert lst[0] == (\"a\", \"2024-01-02\")\nE       AssertionError: assert 'a: 2 Ocak 2024 Salı' == ('a', '2024-01-02')\n\n.gizli/test_gizli.py:105: AssertionError\n_____________________________ test_17_rapor_satiri _____________________________\n\n    def test_17_rapor_satiri():\n        t = DenemeTakibi(set())\n        t.ekle(\"ali\", \"2024-01-05\", 0)\n>       assert t.rapor(\"ali\") == \"5 Ocak 2024 Cuma\"\nE       TypeError: DenemeTakibi.rapor() takes 1 positional argument but 2 were given\n\n.gizli/test_gizli.py:112: TypeError\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_16_ayni_bitis_siralama - AssertionError: as...\nFAILED .gizli/test_gizli.py::test_17_rapor_satiri - TypeError: DenemeTakibi.r...\n2 failed, 18 passed in 0.06s\n"
+ }
+}

@@ -1,0 +1,62 @@
+{
+ "id": "a114",
+ "kip": "c",
+ "tekrar": 1,
+ "kategori": "KDV, tevkifat, stopaj, taksit ve kuruş yuvarlama (Decimal, ROUND_HALF_UP, satır bazında ve toplamda yuvarlama farkı)",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 51,
+   "basarili": 51
+  }
+ ],
+ "spark_usd": 0.017450900000000002,
+ "arayuz": "avans.py içinde avans_faturala(brut_hedef, avans_oran, kdv_oran, kdv_dahil, musteri_notu=\"\") -> dict; sonuç sözlüğünde ek anahtar musteri_notu_buyuk; sıra sayacı _sira_no",
+ "kabul_yazar": 3,
+ "mutasyon": {
+  "mutant": 16,
+  "ham_mutant": 16,
+  "turlar": [
+   {
+    "oldurulen": 12,
+    "toplam": 16
+   },
+   {
+    "oldurulen": 12,
+    "toplam": 16
+   },
+   {
+    "oldurulen": 12,
+    "toplam": 16
+   }
+  ],
+  "hayatta": [
+   "brut_hedef sifirsa tum ciktilar sifir gereksinimini bozar",
+   "bos None girisi TypeError gereksinimini bozar",
+   "hata onceligi oran destegi/aralik sonra negatiflik gereksinimini bozar",
+   "Turkce I->i ve i donusumu normalize buyuk harf gereksinimini bozar"
+  ]
+ },
+ "hakem": [],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [],
+ "kabul_test_sayisi": 51,
+ "kabul_gecti": true,
+ "ozet": "avans.py yazıldı, pytest ile 7 test geçti. Decimal+ROUND_HALF_UP hesaplar, hata önceliği, TRK- belge no ve Türkçe büyük harf dönüşümü uygulandı.",
+ "adim": 5,
+ "yurutucu_token": {
+  "girdi": 13650,
+  "cikti": 21650
+ },
+ "yurutucu_usd": 0.005695,
+ "bitirdi": true,
+ "sure_sn": 839.7,
+ "gizli": {
+  "gecti": false,
+  "gecen": 19,
+  "toplam": 20,
+  "cikti": "...................F                                                     [100%]\n=================================== FAILURES ===================================\n_________________________ test_turkce_normalize_kurali _________________________\n\n    def test_turkce_normalize_kurali():\n        p = _pl.Path(__file__).resolve().parent.parent / 'avans.py'\n        src = p.read_text(encoding='utf-8')\n>       assert 'ı' in src\nE       assert 'ı' in 'from decimal import Decimal, ROUND_HALF_UP\\n\\n_sira_no = 0\\n\\n_PARA = Decimal(\"0.01\")\\n_BOLEN = Decimal(\"1.10\")\\n_SIN...     \"yuvarlama_farki\": yuvarlama_farki,\\n        \"belge_no\": belge_no,\\n        \"musteri_notu_buyuk\": buyuk,\\n    }\\n'\n\n.gizli/test_gizli.py:194: AssertionError\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_turkce_normalize_kurali - assert 'ı' in 'fr...\n1 failed, 19 passed in 0.17s\n"
+ }
+}

@@ -1,0 +1,26 @@
+{
+ "id": "a143",
+ "kip": "c",
+ "tekrar": 2,
+ "kategori": "CSV/JSON ile çalışan ve uç durumları çok olan veri işleme (BOM, ; ayırıcı, 1.234,56 sayı biçimi, boş/bozuk satır)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.00042639999999999996,
+ "arayuz": "",
+ "kabul_gecti": false,
+ "dogrulanamadi": true,
+ "ozet": null,
+ "adim": 20,
+ "yurutucu_token": {
+  "girdi": 199711,
+  "cikti": 49705
+ },
+ "yurutucu_usd": 0.0299121,
+ "sure_sn": 567.1,
+ "gizli": {
+  "gecti": false,
+  "gecen": 18,
+  "toplam": 21,
+  "cikti": "nError: assert [{'gereken_bo...dex': 0, ...}] == ['S1']\nE         At index 0 diff: {'siparis_index': 0, 'tur': 'cam', 'siparis_boyu': 100.0, 'gereken_boy': 100.0, 'siparis_id': 'S1'} != 'S1'\nE         Use -v to get more diff\n\n.gizli/test_gizli.py:197: AssertionError\n_________________________ test_17_baslik_hatasi_cikis3 _________________________\n\ntmp_path = PosixPath('/home/usta/is/f092c7687bc3/.tmp/pytest-of-usta/pytest-0/test_17_baslik_hatasi_cikis30')\n\n    def test_17_baslik_hatasi_cikis3(tmp_path):\n        stok = tmp_path / \"stok.csv\"\n        sip = tmp_path / \"sip.json\"\n        cik = tmp_path / \"cikti.json\"\n        yaz_stok(stok, [\"K1;cam;300\"], baslik=\"id;tur;boy\")\n        yaz_siparis(sip, [])\n        r = calistir(stok, sip, cik, \"0\", tmp_path)\n>       assert r.returncode == 3\nE       AssertionError: assert 0 == 3\nE        +  where 0 = CompletedProcess(args=['/usr/bin/python', '/home/usta/is/f092c7687bc3/kereste_kesim_cli.py', '--stok-csv', '/home/usta...t-of-usta/pytest-0/test_17_baslik_hatasi_cikis30/cikti.json', '--fire-orani', '0'], returncode=0, stdout='', stderr='').returncode\n\n.gizli/test_gizli.py:220: AssertionError\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_03_fire_hesabi_yetersiz - AssertionError: a...\nFAILED .gizli/test_gizli.py::test_14_hic_gecerli_stok_yok - AssertionError: a...\nFAILED .gizli/test_gizli.py::test_17_baslik_hatasi_cikis3 - AssertionError: a...\n3 failed, 18 passed in 1.15s\n"
+ }
+}

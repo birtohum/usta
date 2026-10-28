@@ -1,0 +1,24 @@
+{
+ "id": "a051",
+ "kip": "b",
+ "tekrar": 1,
+ "kategori": "Türkçe büyük/küçük harf (İ/i, I/ı), Türk alfabesiyle sıralama, sayıyı yazıya çevirme, ünlü uyumuna göre ek",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "mezat.py içinde kg_yaziya(kg, birim) yazıldı: Decimal ile yarım-yukarı 2 basamak yuvarlama, Türkçe sayı sözcükleri (bin/sıfır kuralları), virgül bağlacı, küçük harf kilo/kasa birimi, aralık kontrolü (ValueError), tip kontrolü (TypeError öncelikli), boş string kontrolü ve tek satırlık CLI (--kg/--birim). pytest ile 13 test geçti.",
+ "adim": 10,
+ "yurutucu_token": {
+  "girdi": 46055,
+  "cikti": 33371
+ },
+ "yurutucu_usd": 0.0112797,
+ "bitirdi": true,
+ "sure_sn": 266.5,
+ "gizli": {
+  "gecti": true,
+  "gecen": 21,
+  "toplam": 21,
+  "cikti": ".....................                                                    [100%]\n21 passed in 0.14s\n"
+ }
+}

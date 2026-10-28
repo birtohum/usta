@@ -1,0 +1,24 @@
+{
+ "id": "a041",
+ "kip": "b",
+ "tekrar": 3,
+ "kategori": "çok dosyalı küçük modül: iki-üç dosyaya bölünmüş, ortak hata sınıfları ve bir komut satırı girişi olan araç",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "hatalar.py (OlcuHatasi, IlHatasi: ValueError soyundan) ve kargo.py (desi_hesapla: ceil(hacim/3000); ucret_hesapla: kuruş int, 50 standart/51+ ağır, kampanyada %10 indirim, Türkçe duyarsız il karşılaştırması, tip>ölçü>il önceliği) yazıldı; `python -m kargo hesap ...` tek satır JSON basıyor. 17 pytest testi geçiyor.",
+ "adim": 16,
+ "yurutucu_token": {
+  "girdi": 148048,
+  "cikti": 46913
+ },
+ "yurutucu_usd": 0.024187399999999998,
+ "bitirdi": true,
+ "sure_sn": 491.8,
+ "gizli": {
+  "gecti": true,
+  "gecen": 20,
+  "toplam": 20,
+  "cikti": "....................                                                     [100%]\n20 passed in 0.36s\n"
+ }
+}

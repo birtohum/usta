@@ -1,0 +1,69 @@
+{
+ "id": "a147",
+ "kip": "c",
+ "tekrar": 1,
+ "kategori": "çok dosyalı küçük modül: iki-üç dosyaya bölünmüş, ortak hata sınıfları ve bir komut satırı girişi olan araç",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 59,
+   "basarili": 59
+  }
+ ],
+ "spark_usd": 0.033111,
+ "arayuz": "isot.py: Harman() parametresiz kurulur, Harman.__init__(self)->None; diger dosya, sinif, metot ve cli cagrisi gorevdeki gibidir.",
+ "kabul_yazar": 3,
+ "mutasyon": {
+  "mutant": 14,
+  "ham_mutant": 14,
+  "turlar": [
+   {
+    "oldurulen": 10,
+    "toplam": 14
+   },
+   {
+    "oldurulen": 13,
+    "toplam": 14
+   },
+   {
+    "oldurulen": 13,
+    "toplam": 14
+   }
+  ],
+  "hayatta": [
+   "dogrulama oncelik sirasi agirlik ve acilik araligi sonra tekrar kuralini bozar"
+  ]
+ },
+ "hakem": [
+  {
+   "test": ".usta_kabul/test_kabul_2.py::test_dogrulama_onceligi_hedef_araligi_banttan_once",
+   "karar": "belirsiz",
+   "gerekce": "Görev metni hedef aralığı kontrolünün banda göre önceliğini açıkça tanımlamıyor.",
+   "tur": 1
+  }
+ ],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [
+  ".usta_kabul/test_kabul_m2.py::test_acilik_ust_sinir_tekrar_oncesi",
+  ".usta_kabul/test_kabul_2.py::test_dogrulama_onceligi_hedef_araligi_banttan_once"
+ ],
+ "kabul_test_sayisi": 59,
+ "kabul_gecti": true,
+ "ozet": "hatalar.py, isot.py, cli.py yazıldı; Türkçe duyarsız kod, ağırlıklı ortalama (ROUND_HALF_UP), %3 fire ve ±500 bandı uygulandı; pytest ile 7 test geçti.",
+ "adim": 11,
+ "yurutucu_token": {
+  "girdi": 45260,
+  "cikti": 39728
+ },
+ "yurutucu_usd": 0.012471600000000001,
+ "bitirdi": true,
+ "sure_sn": 1096.1,
+ "gizli": {
+  "gecti": true,
+  "gecen": 20,
+  "toplam": 20,
+  "cikti": "....................                                                     [100%]\n20 passed in 0.31s\n"
+ }
+}

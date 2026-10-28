@@ -1,0 +1,24 @@
+{
+ "id": "a123",
+ "kip": "b",
+ "tekrar": 2,
+ "kategori": "CSV/JSON ile çalışan ve uç durumları çok olan veri işleme (BOM, ; ayırıcı, 1.234,56 sayı biçimi, boş/bozuk satır)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "kutuphane_ceza_cli.py yazildi: utf-8-sig `;` CSV, katı YYYY-AA-GG tarih, Türkçe alt-harfe göre başlık/soyad sıralaması, boş iade hariç, gün farkı*oran, tavan ve yarım-yukarı yuvarlama, id/surname sıralı JSON çıktı, hata kodları 2/3 stderr. pytest 7 test geçti.",
+ "adim": 15,
+ "yurutucu_token": {
+  "girdi": 90899,
+  "cikti": 86873
+ },
+ "yurutucu_usd": 0.026464500000000002,
+ "bitirdi": true,
+ "sure_sn": 969.8,
+ "gizli": {
+  "gecti": false,
+  "gecen": 19,
+  "toplam": 20,
+  "cikti": "..................F.                                                     [100%]\n=================================== FAILURES ===================================\n___________________________ test_json_yapi_hatasi_3 ____________________________\n\ntmp_path = PosixPath('/home/usta/is/08934eb653ce/.tmp/pytest-of-usta/pytest-2/test_json_yapi_hatasi_30')\n\n    def test_json_yapi_hatasi_3(tmp_path):\n        od = tmp_path / \"o.csv\"; uy = tmp_path / \"u.json\"; ci = tmp_path / \"c.json\"\n        write_csv(od, HDR, [])\n        with open(uy, \"w\", encoding=\"utf-8\") as f:\n            json.dump({\"uyeler\": []}, f)\n        r = run_cli(od, uy, ci, \"10\", \"100\")\n>       assert r.returncode == 3\nE       AssertionError: assert 0 == 3\nE        +  where 0 = CompletedProcess(args=['/usr/bin/python', '/home/usta/is/08934eb653ce/kutuphane_ceza_cli.py', '--odunc-csv', '/home/us...st-2/test_json_yapi_hatasi_30/c.json', '--gunluk-gecikme', '10', '--tavan', '100'], returncode=0, stdout='', stderr='').returncode\n\n.gizli/test_gizli.py:227: AssertionError\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_json_yapi_hatasi_3 - AssertionError: assert...\n1 failed, 19 passed in 0.83s\n"
+ }
+}

@@ -1,0 +1,76 @@
+{
+ "id": "a013",
+ "kip": "c",
+ "tekrar": 3,
+ "kategori": "Türkiye'ye özgü kimlik ve hesap numaraları (TC kimlik, VKN, IBAN, MERSİS, plaka, telefon) — birden çok kuralın birlikte uygulandığı",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 37,
+   "basarili": 37
+  }
+ ],
+ "spark_usd": 0.0278441,
+ "arayuz": "",
+ "kabul_yazar": 2,
+ "mutasyon": {
+  "mutant": 15,
+  "ham_mutant": 15,
+  "turlar": [
+   {
+    "oldurulen": 11,
+    "toplam": 15
+   },
+   {
+    "oldurulen": 14,
+    "toplam": 15
+   },
+   {
+    "oldurulen": 14,
+    "toplam": 15
+   }
+  ],
+  "hayatta": [
+   "None girdisinin bos liste gibi sayilmamasi gereksinimini cigner, None icin bos sonuc dondurur"
+  ]
+ },
+ "hakem": [
+  {
+   "test": ".usta_kabul/test_kabul_m1.py::test_extra_string_olmayan_deger_tur_hatasi",
+   "karar": "belirsiz",
+   "gerekce": "Görev metni ekstra alanların yok sayılacağını ya da tür denetimine dahil olduğunu açıkça belirtmiyor.",
+   "tur": 1
+  },
+  {
+   "test": ".usta_kabul/test_kabul_m1.py::test_kucuk_harf_tc_tur_hatasi",
+   "karar": "belirsiz",
+   "gerekce": "Görev metni tur için geçerli değerleri ve küçük-büyük harf duyarlılığını açıkça tanımlamıyor.",
+   "tur": 1
+  }
+ ],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [
+  ".usta_kabul/test_kabul_3.py::test_telefon_kurali_sinirlar",
+  ".usta_kabul/test_kabul_m1.py::test_extra_string_olmayan_deger_tur_hatasi",
+  ".usta_kabul/test_kabul_m1.py::test_kucuk_harf_tc_tur_hatasi"
+ ],
+ "kabul_test_sayisi": 37,
+ "kabul_gecti": true,
+ "ozet": "toplu_denetim.py içinde toplu_denetle yazıldı: TC/VKN/IBAN/telefon/plaka doğrulama, öncelik sırası, tur_hatası kuralları, alfabetik+indeks sıralama, Türkçe büyük harf (i→İ geçersiz) ve TypeError/boş liste davranışları uygulandı; 10 pytest testi geçiyor.",
+ "adim": 15,
+ "yurutucu_token": {
+  "girdi": 71421,
+  "cikti": 72548
+ },
+ "yurutucu_usd": 0.0216517,
+ "bitirdi": true,
+ "sure_sn": 1195.3,
+ "gizli": {
+  "gecti": false,
+  "gecen": 21,
+  "toplam": 23,
+  "cikti": "......F.....F..........                                                  [100%]\n=================================== FAILURES ===================================\n_______________________________ test_gecerli_vkn _______________________________\n\n    def test_gecerli_vkn():\n        r = toplu_denetle([rec(GVKN, t='VKN')])\n>       assert r['gecerli_sayisi'] == 1 and r['hatalar'] == []\nE       assert (0 == 1)\n\n.gizli/test_gizli.py:66: AssertionError\n_______________________________ test_vkn_hatasi ________________________________\n\n    def test_vkn_hatasi():\n        r = toplu_denetle([rec('1234567890', t='VKN')])\n>       assert r['hatalar'][0]['kod'] == 'kimlik_no_hatası'\nE       IndexError: list index out of range\n\n.gizli/test_gizli.py:96: IndexError\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_gecerli_vkn - assert (0 == 1)\nFAILED .gizli/test_gizli.py::test_vkn_hatasi - IndexError: list index out of ...\n2 failed, 21 passed in 0.14s\n"
+ }
+}

@@ -1,0 +1,52 @@
+{
+ "id": "a130",
+ "kip": "c",
+ "tekrar": 1,
+ "kategori": "Türkçe büyük/küçük harf (İ/i, I/ı), Türk alfabesiyle sıralama, sayıyı yazıya çevirme, ünlü uyumuna göre ek",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 51,
+   "basarili": 51
+  }
+ ],
+ "spark_usd": 0.0099332,
+ "arayuz": "",
+ "kabul_yazar": 3,
+ "mutasyon": {
+  "mutant": 16,
+  "ham_mutant": 16,
+  "turlar": [
+   {
+    "oldurulen": 16,
+    "toplam": 16
+   }
+  ],
+  "hayatta": []
+ },
+ "hakem": [],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [
+  ".usta_kabul/test_kabul_1.py::test_belirtme_son_unluye_gore_dort_ek",
+  ".usta_kabul/test_kabul_2.py::test_belirtme_eki_unlu_dogrudan"
+ ],
+ "kabul_test_sayisi": 51,
+ "kabul_gecti": true,
+ "ozet": "menu.py içinde tr_kucuk, belirtme_eki, fiyat_yaziya ve sirali_menu fonksiyonları yazıldı; Türkçe ünlü uyumu, y kaynaştırma, sayıların yazıyla yazımı ve Türk alfabesi sıralaması kuralları uygulandı. test_menu.py ile 15 pytest testi yazıldı ve hepsi geçti.",
+ "adim": 9,
+ "yurutucu_token": {
+  "girdi": 50774,
+  "cikti": 17485
+ },
+ "yurutucu_usd": 0.0085744,
+ "bitirdi": true,
+ "sure_sn": 337.0,
+ "gizli": {
+  "gecti": true,
+  "gecen": 22,
+  "toplam": 22,
+  "cikti": "......................                                                   [100%]\n22 passed in 0.08s\n"
+ }
+}

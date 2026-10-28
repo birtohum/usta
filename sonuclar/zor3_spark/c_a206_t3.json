@@ -1,0 +1,85 @@
+{
+ "id": "a206",
+ "kip": "c",
+ "tekrar": 3,
+ "kategori": "tarih ve saat: resmî tatiller parametreyle, iş günü hesabı, Türkiye saat dilimi (UTC+3, yaz saati yok), gün/ay adları Türkçe",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 47,
+   "basarili": 47
+  }
+ ],
+ "spark_usd": 0.0138841,
+ "arayuz": "",
+ "kabul_yazar": 3,
+ "mutasyon": {
+  "mutant": 15,
+  "ham_mutant": 15,
+  "turlar": [
+   {
+    "oldurulen": 11,
+    "toplam": 15
+   },
+   {
+    "oldurulen": 15,
+    "toplam": 15
+   }
+  ],
+  "hayatta": []
+ },
+ "hakem": [
+  {
+   "test": ".usta_kabul/test_kabul_m1.py::test_kucuk_harf_I_to_dotless",
+   "karar": "hatali",
+   "gerekce": "Görev genel harf kuralını anar ama belirli imza ve append kaynak kalıbını şart koşmaz, test SystemExit'i yakalayamayıp çöküyor.",
+   "tur": 1
+  },
+  {
+   "test": ".usta_kabul/test_kabul_m1.py::test_kucuk_harf_İ_to_i",
+   "karar": "hatali",
+   "gerekce": "Görev genel harf kuralını anar ama belirli imza ve append kaynak kalıbını şart koşmaz, test SystemExit'i yakalayamayıp çöküyor.",
+   "tur": 1
+  },
+  {
+   "test": ".usta_kabul/test_kabul_m1.py::test_sure_kismi_gun_yukari_ikinci_deger",
+   "karar": "hatali",
+   "gerekce": "Görev yukarı yuvarlamayı ister ama tek argümanlı işlevi ve math.ceil dizgesini şart koşmaz.",
+   "tur": 1
+  },
+  {
+   "test": ".usta_kabul/test_kabul_m1.py::test_sure_kismi_gun_yukari_yuvarlanir",
+   "karar": "hatali",
+   "gerekce": "Görev yukarı yuvarlamayı ister ama math.ceil kullanımını şart koşmaz, test kaynak dizgesini dayatıyor.",
+   "tur": 1
+  }
+ ],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [
+  ".usta_kabul/test_kabul_2.py::test_cikti_bicimi_turkce_adlar",
+  ".usta_kabul/test_kabul_2.py::test_kismi_gun_yukari_yuvarlanir",
+  ".usta_kabul/test_kabul_m1.py::test_kucuk_harf_I_to_dotless",
+  ".usta_kabul/test_kabul_m1.py::test_kucuk_harf_İ_to_i",
+  ".usta_kabul/test_kabul_m1.py::test_sure_kismi_gun_yukari_ikinci_deger",
+  ".usta_kabul/test_kabul_m1.py::test_sure_kismi_gun_yukari_yuvarlanir"
+ ],
+ "kabul_test_sayisi": 47,
+ "kabul_gecti": true,
+ "ozet": "muayene_cli.py yazıldı: --baslangic/--adet zorunlu, --tatiller opsiyonel, --cumartesi-acik bayraklı; Pazar kapalı, Cumartesi bayrakla açık, tatiller atlanır, başlangıç dahil iş günü sayımı, Europe/Istanbul bilinçli tarihler, YYYY-AA-GG,Gün adı,Gün Ay Yıl çıktısı. Geçersiz tarih ve eksik bayrakta çıkış kodu 2 + stderr. Yalnızca standart kütüphane, ağ/zaman okuma yok. test_muayene.py ile 16 test `python -m pytest -q` altında geçti.",
+ "adim": 7,
+ "yurutucu_token": {
+  "girdi": 29746,
+  "cikti": 15269
+ },
+ "yurutucu_usd": 0.0060284,
+ "bitirdi": true,
+ "sure_sn": 570.1,
+ "gizli": {
+  "gecti": true,
+  "gecen": 20,
+  "toplam": 20,
+  "cikti": "....................                                                     [100%]\n20 passed in 0.56s\n"
+ }
+}

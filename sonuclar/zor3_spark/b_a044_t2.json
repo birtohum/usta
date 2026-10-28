@@ -1,0 +1,24 @@
+{
+ "id": "a044",
+ "kip": "b",
+ "tekrar": 2,
+ "kategori": "KDV, tevkifat, stopaj, taksit ve kuruş yuvarlama (Decimal, ROUND_HALF_UP, satır bazında ve toplamda yuvarlama farkı)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "iade.py içinde KdvIadeHesabi sınıfı geliştirildi: satır bazında ROUND_HALF_UP yuvarlama, toplamda yeniden yuvarlamama, oran kontrolü (1/10/20), devreden 0.00 geçerli/negatif hatalı, boş dönemde devreden aynen iade, boş dize ValueError + str dışı TypeError önceliği, 10000.00 sınırında tamamı/aşan yarısı indirilebilir, Decimal sözlük ve odenecek/iade aynı anda pozitif değil. 14 pytest testi geçti.",
+ "adim": 6,
+ "yurutucu_token": {
+  "girdi": 19400,
+  "cikti": 24883
+ },
+ "yurutucu_usd": 0.0069166,
+ "bitirdi": true,
+ "sure_sn": 236.7,
+ "gizli": {
+  "gecti": true,
+  "gecen": 20,
+  "toplam": 20,
+  "cikti": "....................                                                     [100%]\n20 passed in 0.09s\n"
+ }
+}

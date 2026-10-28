@@ -1,0 +1,24 @@
+{
+ "id": "a072",
+ "kip": "b",
+ "tekrar": 1,
+ "kategori": "CSV/JSON ile çalışan ve uç durumları çok olan veri işleme (BOM, ; ayırıcı, 1.234,56 sayı biçimi, boş/bozuk satır)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "su_fatura_cli.py yazıldı: noktalı virgüllü CSV, TR sayı/isim normalizasyonu, 20 m³ kademeli ROUND_HALF_UP hesap, TR sıralama, hata kodları ve UTF-8 JSON çıktısı. 13 pytest testi geçiyor.",
+ "adim": 18,
+ "yurutucu_token": {
+  "girdi": 167145,
+  "cikti": 58421
+ },
+ "yurutucu_usd": 0.028398700000000002,
+ "bitirdi": true,
+ "sure_sn": 635.8,
+ "gizli": {
+  "gecti": false,
+  "gecen": 18,
+  "toplam": 20,
+  "cikti": "       assert len(d[\"aboneler\"]) == 2\n        isimler = {x[\"abone\"]: x for x in d[\"aboneler\"]}\n>       assert \"ısparta\" in isimler\nE       AssertionError: assert 'ısparta' in {'ISPARTA': {'abone': 'ISPARTA', 'toplam_m3': 15.0, 'tutar': 150.0}, 'İZMİR': {'abone': 'İZMİR', 'toplam_m3': 10.0, 'tutar': 100.0}}\n\n.gizli/test_gizli.py:72: AssertionError\n_______________________ test_18_sort_m3_when_tutar_equal _______________________\n\ntmp_path = PosixPath('/home/usta/is/90b3554f3cbc/.tmp/pytest-of-usta/pytest-4/test_18_sort_m3_when_tutar_equ0')\n\n    def test_18_sort_m3_when_tutar_equal(tmp_path):\n        c = tmp_path / \"t.csv\"; j = tmp_path / \"tar.json\"; o = tmp_path / \"f.json\"\n        write_csv(c, \"abone;tüketim_m3\\nali;10,001\\nveli;10,002\\n\")\n        write_json(j, {\"kademe1_fiyat\": \"1,00\", \"kademe2_fiyat\": \"1,00\"})\n        r = run_cli(\"--tuketim-csv\", str(c), \"--tarife-json\", str(j), \"--cikti\", str(o))\n        assert r.returncode == 0\n        d = json.loads(o.read_text(encoding=\"utf-8\"))\n        assert d[\"aboneler\"][0][\"tutar\"] == pytest.approx(d[\"aboneler\"][1][\"tutar\"])\n>       assert d[\"aboneler\"][0][\"toplam_m3\"] > d[\"aboneler\"][1][\"toplam_m3\"]\nE       assert 10.0 > 10.0\n\n.gizli/test_gizli.py:199: AssertionError\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_05_I_to_idotless_and_Idotted - AssertionErr...\nFAILED .gizli/test_gizli.py::test_18_sort_m3_when_tutar_equal - assert 10.0 >...\n2 failed, 18 passed in 2.09s\n"
+ }
+}

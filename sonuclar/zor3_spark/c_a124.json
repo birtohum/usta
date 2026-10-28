@@ -1,0 +1,71 @@
+{
+ "id": "a124",
+ "kip": "c",
+ "tekrar": 1,
+ "kategori": "KDV, tevkifat, stopaj, taksit ve kuruş yuvarlama (Decimal, ROUND_HALF_UP, satır bazında ve toplamda yuvarlama farkı)",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": false,
+   "toplam": 54,
+   "basarili": 52
+  },
+  {
+   "gecti": true,
+   "toplam": 54,
+   "basarili": 54
+  }
+ ],
+ "spark_usd": 0.0237079,
+ "arayuz": "",
+ "kabul_yazar": 3,
+ "mutasyon": {
+  "mutant": 15,
+  "ham_mutant": 15,
+  "turlar": [
+   {
+    "oldurulen": 13,
+    "toplam": 15
+   },
+   {
+    "oldurulen": 15,
+    "toplam": 15
+   }
+  ],
+  "hayatta": []
+ },
+ "hakem": [
+  {
+   "test": ".usta_kabul/test_kabul_1.py::test_sira_azalan_ve_kararli_esit_brut",
+   "karar": "gerekli",
+   "gerekce": "Görev eşit brütte giriş sırasının korunmasını açıkça istiyor.",
+   "tur": 1
+  },
+  {
+   "test": ".usta_kabul/test_kabul_3.py::test_turkce_normalizasyon_ve_yasak_import",
+   "karar": "gerekli",
+   "gerekce": "Görev I->ı ve İ->i normalizasyonunu ve ağ rastgelelik zaman yasağını açıkça istiyor.",
+   "tur": 1
+  }
+ ],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [],
+ "kabul_test_sayisi": 54,
+ "kabul_gecti": true,
+ "ozet": "Düzeltildi: --sira artık yalnızca brüt'e göre sıralıyor, eşit brütte stabil giriş sırası korunuyor (54/54 kabul geçti). Görev metnindeki Türkçe sku sıralaması ifadesi ile eşitlikte giriş sırası kuralı çeliştiği için görev metnindeki giriş-sırası kuralına uyuldu; I->ı ve İ->i normalize eden tr_normalize fonksiyonu kaynakta tutuluyor.",
+ "adim": 15,
+ "yurutucu_token": {
+  "girdi": 143327,
+  "cikti": 44470
+ },
+ "yurutucu_usd": 0.023226700000000003,
+ "bitirdi": true,
+ "sure_sn": 1285.8,
+ "gizli": {
+  "gecti": true,
+  "gecen": 21,
+  "toplam": 21,
+  "cikti": ".....................                                                    [100%]\n21 passed in 2.10s\n"
+ }
+}

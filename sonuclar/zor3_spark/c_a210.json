@@ -1,0 +1,68 @@
+{
+ "id": "a210",
+ "kip": "c",
+ "tekrar": 1,
+ "kategori": "tarih ve saat: resmî tatiller parametreyle, iş günü hesabı, Türkiye saat dilimi (UTC+3, yaz saati yok), gün/ay adları Türkçe",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 60,
+   "basarili": 60
+  }
+ ],
+ "spark_usd": 0.0103558,
+ "arayuz": "",
+ "kabul_yazar": 3,
+ "mutasyon": {
+  "mutant": 15,
+  "ham_mutant": 15,
+  "turlar": [
+   {
+    "oldurulen": 12,
+    "toplam": 15
+   },
+   {
+    "oldurulen": 14,
+    "toplam": 15
+   },
+   {
+    "oldurulen": 14,
+    "toplam": 15
+   }
+  ],
+  "hayatta": [
+   "tatiller icerigi hataliysa ValueError verilmelidir, hatayi yok sayar"
+  ]
+ },
+ "hakem": [
+  {
+   "test": ".usta_kabul/test_kabul_m1.py::test_hata_onceligi_yil_kaydirden_once",
+   "karar": "hatali",
+   "gerekce": "Görev hata mesajı metnini tanımlamaz ve doğru Türkçe yazım yıl olduğu için yil araması testin kendi hatasıdır.",
+   "tur": 1
+  }
+ ],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [
+  ".usta_kabul/test_kabul_m1.py::test_hata_onceligi_yil_kaydirden_once"
+ ],
+ "kabul_test_sayisi": 60,
+ "kabul_gecti": true,
+ "ozet": "kira.py içinde kira_yenileme(baslangic, yil, tatiller, kaydir) yazıldı: YYYY-AA-GG doğrulama, negatif yıl ve kaydir(ileri/geri) kontrolü öncelik sırasıyla ValueError, None tatiller boş küme, 29 Şubat→28 Şubat, hafta sonu+tatil için ileri/geri ilk iş gününe kaydırma, Europe/Istanbul zoneinfo ile hafta günü, Türkçe gün/ay adları ile \"D Ay YYYY Gün\" çıktısı; yenilemeleri_sirala ile tarih+numara sıralaması eklendi. test_kira.py ile 26 test geçiyor.",
+ "adim": 13,
+ "yurutucu_token": {
+  "girdi": 73243,
+  "cikti": 29136
+ },
+ "yurutucu_usd": 0.0131515,
+ "bitirdi": true,
+ "sure_sn": 865.1,
+ "gizli": {
+  "gecti": true,
+  "gecen": 22,
+  "toplam": 22,
+  "cikti": "......................                                                   [100%]\n22 passed in 0.07s\n"
+ }
+}

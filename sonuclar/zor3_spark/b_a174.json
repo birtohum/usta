@@ -1,0 +1,24 @@
+{
+ "id": "a174",
+ "kip": "b",
+ "tekrar": 1,
+ "kategori": "KDV, tevkifat, stopaj, taksit ve kuruş yuvarlama (Decimal, ROUND_HALF_UP, satır bazında ve toplamda yuvarlama farkı)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "isparta_gul.py içinde GulYagiSatisDefteri yazıldı: satır matrahı ROUND_HALF_UP ile 2 basamağa yuvarlanır, KDV oranı yalnızca 20 kabul edilir, ozet satır KDV toplamı ile matrah üzerinden tek seferlik KDV arasındaki farkı en büyük miktarlı (eşitlikte önce eklenen) satıra yansıtır, 20000.00 TL eşiğini aşan matrahta %1 stopaj uygular, ürün notlarını Türkçe I/İ kuralıyla kararlı sıralar, tip→pozitiflik→oran sırasıyla TypeError/ValueError yükseltir. pytest ile 8 test geçti.",
+ "adim": 10,
+ "yurutucu_token": {
+  "girdi": 45052,
+  "cikti": 31230
+ },
+ "yurutucu_usd": 0.0107512,
+ "bitirdi": true,
+ "sure_sn": 335.2,
+ "gizli": {
+  "gecti": false,
+  "gecen": 18,
+  "toplam": 20,
+  "cikti": "................FF..                                                     [100%]\n=================================== FAILURES ===================================\n___________________________ test_17_turkce_siralama ____________________________\n\n    def test_17_turkce_siralama():\n        d = GulYagiSatisDefteri()\n>       d.not_ekle(\"Isparta\")\nE       AttributeError: 'GulYagiSatisDefteri' object has no attribute 'not_ekle'\n\n.gizli/test_gizli.py:134: AttributeError\n________________________ test_18_turkce_esitlik_koruma _________________________\n\n    def test_18_turkce_esitlik_koruma():\n        d = GulYagiSatisDefteri()\n>       d.not_ekle(\"I\")\nE       AttributeError: 'GulYagiSatisDefteri' object has no attribute 'not_ekle'\n\n.gizli/test_gizli.py:141: AttributeError\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_17_turkce_siralama - AttributeError: 'GulYa...\nFAILED .gizli/test_gizli.py::test_18_turkce_esitlik_koruma - AttributeError: ...\n2 failed, 18 passed in 0.11s\n"
+ }
+}

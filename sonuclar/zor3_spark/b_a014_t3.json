@@ -1,0 +1,24 @@
+{
+ "id": "a014",
+ "kip": "b",
+ "tekrar": 3,
+ "kategori": "KDV, tevkifat, stopaj, taksit ve kuruş yuvarlama (Decimal, ROUND_HALF_UP, satır bazında ve toplamda yuvarlama farkı)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "makbuz.py içinde SerbestMeslekMakbuzu sınıfı oluşturuldu: Decimal + ROUND_HALF_UP ile %20 stopaj/%20 KDV, 5000.00 gider eşiği, TypeError/ValueError önceliği ve boş/geçersiz giderde durum koruma kuralları uygulandı. 12 pytest testi yazıldı ve hepsi geçti.",
+ "adim": 4,
+ "yurutucu_token": {
+  "girdi": 11968,
+  "cikti": 15642
+ },
+ "yurutucu_usd": 0.0043252,
+ "bitirdi": true,
+ "sure_sn": 151.6,
+ "gizli": {
+  "gecti": true,
+  "gecen": 20,
+  "toplam": 20,
+  "cikti": "....................                                                     [100%]\n20 passed in 0.06s\n"
+ }
+}

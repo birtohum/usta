@@ -1,0 +1,24 @@
+{
+ "id": "a041",
+ "kip": "b",
+ "tekrar": 2,
+ "kategori": "çok dosyalı küçük modül: iki-üç dosyaya bölünmüş, ortak hata sınıfları ve bir komut satırı girişi olan araç",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "hatalar.py (OlcuHatasi, IlHatasi: ValueError) ve kargo.py (desi_hesapla tavan bölme, ucret_hesapla kuruş ücret + %10 indirim, Türkçe duyarsız il eşleşmesi, tip>ölçü>il önceliği, tek satır JSON yazan `hesap` CLI) yazıldı; 13 pytest testi geçti.",
+ "adim": 6,
+ "yurutucu_token": {
+  "girdi": 19418,
+  "cikti": 21186
+ },
+ "yurutucu_usd": 0.0061790000000000005,
+ "bitirdi": true,
+ "sure_sn": 220.9,
+ "gizli": {
+  "gecti": true,
+  "gecen": 20,
+  "toplam": 20,
+  "cikti": "....................                                                     [100%]\n20 passed in 0.38s\n"
+ }
+}

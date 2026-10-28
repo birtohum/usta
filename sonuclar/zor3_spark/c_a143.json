@@ -1,0 +1,26 @@
+{
+ "id": "a143",
+ "kip": "c",
+ "tekrar": 1,
+ "kategori": "CSV/JSON ile çalışan ve uç durumları çok olan veri işleme (BOM, ; ayırıcı, 1.234,56 sayı biçimi, boş/bozuk satır)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0001448,
+ "arayuz": "",
+ "kabul_gecti": false,
+ "dogrulanamadi": true,
+ "ozet": "kereste_kesim_cli.py yazıldı: utf-8-sig `;` CSV okuma, Türkçe sayı/fire çözümü, Türkçe küçük harf normalizasyonu, fireli gereken boy, en kısa uygun kütük ataması, HALF_UP yuvarlamalı kullanım oranı, çıkış kodları 2/3. pytest ile 6 test geçti.",
+ "adim": 12,
+ "yurutucu_token": {
+  "girdi": 96338,
+  "cikti": 55651
+ },
+ "yurutucu_usd": 0.020763999999999998,
+ "sure_sn": 602.4,
+ "gizli": {
+  "gecti": false,
+  "gecen": 10,
+  "toplam": 21,
+  "cikti": "k(stok, [\"K1;cam;300\"], baslik=\"id;tur;boy\")\n        yaz_siparis(sip, [])\n        r = calistir(stok, sip, cik, \"0\", tmp_path)\n>       assert r.returncode == 3\nE       AssertionError: assert 0 == 3\nE        +  where 0 = CompletedProcess(args=['/usr/bin/python', '/home/usta/is/1af9868b4874/kereste_kesim_cli.py', '--stok-csv', '/home/usta...t-of-usta/pytest-0/test_17_baslik_hatasi_cikis30/cikti.json', '--fire-orani', '0'], returncode=0, stdout='', stderr='').returncode\n\n.gizli/test_gizli.py:220: AssertionError\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_01_temel_atama - KeyError: 'siparis_id'\nFAILED .gizli/test_gizli.py::test_03_fire_hesabi_yetersiz - AssertionError: a...\nFAILED .gizli/test_gizli.py::test_06_bozuk_satirlar_atlanir - KeyError: 'stok...\nFAILED .gizli/test_gizli.py::test_07_bos_satirlar_yoksayilir - KeyError: 'sto...\nFAILED .gizli/test_gizli.py::test_09_en_kisa_uygun - KeyError: 'stok_id'\nFAILED .gizli/test_gizli.py::test_10_boy_esit_kimlik_alfabetik - KeyError: 's...\nFAILED .gizli/test_gizli.py::test_11_kimlik_kucuk_harf_karsilastirma - KeyErr...\nFAILED .gizli/test_gizli.py::test_12_kullanim_orani_yuvarlama - assert 0.17 =...\nFAILED .gizli/test_gizli.py::test_13_kullanim_yarim_yukari - assert 0.01 == 1.02\nFAILED .gizli/test_gizli.py::test_14_hic_gecerli_stok_yok - AssertionError: a...\nFAILED .gizli/test_gizli.py::test_17_baslik_hatasi_cikis3 - AssertionError: a...\n11 failed, 10 passed in 2.59s\n"
+ }
+}

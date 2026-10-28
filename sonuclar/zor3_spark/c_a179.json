@@ -1,0 +1,72 @@
+{
+ "id": "a179",
+ "kip": "c",
+ "tekrar": 1,
+ "kategori": "KDV, tevkifat, stopaj, taksit ve kuruş yuvarlama (Decimal, ROUND_HALF_UP, satır bazında ve toplamda yuvarlama farkı)",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 32,
+   "basarili": 32
+  }
+ ],
+ "spark_usd": 0.026762400000000002,
+ "arayuz": "",
+ "kabul_yazar": 2,
+ "mutasyon": {
+  "mutant": 15,
+  "ham_mutant": 15,
+  "turlar": [
+   {
+    "oldurulen": 12,
+    "toplam": 15
+   },
+   {
+    "oldurulen": 15,
+    "toplam": 15
+   }
+  ],
+  "hayatta": []
+ },
+ "hakem": [
+  {
+   "test": ".usta_kabul/test_kabul_m1.py::test_tip_hatasi_kdv_oran_argparse_hatasi",
+   "karar": "belirsiz",
+   "gerekce": "Görev metni kalemler içindeki kdv_oran tip hatasının bayrak türü sayılıp argparse olacağını açıkça belirtmiyor.",
+   "tur": 1
+  },
+  {
+   "test": ".usta_kabul/test_kabul_m1.py::test_tip_hatasi_miktar_argparse_hatasi",
+   "karar": "belirsiz",
+   "gerekce": "Görev metni kalemler içindeki miktar tip hatasının argparse mi ValueError mi olacağını tek anlamlı belirtmiyor.",
+   "tur": 1
+  }
+ ],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [
+  ".usta_kabul/test_kabul_1.py::test_tip_denetimi_degerden_once",
+  ".usta_kabul/test_kabul_2.py::test_tevkifat_half_up_yuvarlama",
+  ".usta_kabul/test_kabul_2.py::test_tip_denetimi_degerden_once",
+  ".usta_kabul/test_kabul_m1.py::test_tip_hatasi_kdv_oran_argparse_hatasi",
+  ".usta_kabul/test_kabul_m1.py::test_tip_hatasi_miktar_argparse_hatasi"
+ ],
+ "kabul_test_sayisi": 32,
+ "kabul_gecti": true,
+ "ozet": "sera_cli.py argparse ile yazıldı: Decimal ROUND_HALF_UP satır yuvarlama, satır KDV toplamı vs tek-sefer farkı (fark_kurus), 7500.00 sınır tevkifatı, Türkçe sıralama, boş kalemde sıfır çıktı, hatalı bayrakta argparse hatası, geçersiz/negatif değerde stderr ValueError. pytest ile 6 test geçti.",
+ "adim": 6,
+ "yurutucu_token": {
+  "girdi": 16794,
+  "cikti": 21334
+ },
+ "yurutucu_usd": 0.0059462000000000004,
+ "bitirdi": true,
+ "sure_sn": 927.5,
+ "gizli": {
+  "gecti": true,
+  "gecen": 22,
+  "toplam": 22,
+  "cikti": "......................                                                   [100%]\n22 passed in 2.11s\n"
+ }
+}

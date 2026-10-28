@@ -1,0 +1,24 @@
+{
+ "id": "a107",
+ "kip": "a",
+ "tekrar": 3,
+ "kategori": "çok dosyalı küçük modül: iki-üç dosyaya bölünmüş, ortak hata sınıfları ve bir komut satırı girişi olan araç",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "hatalar.py (YuklemeHatasi/KapasiteHatasi), feribot.py (Kuyruk.ekle/sirala: tip→plaka→boy→ağırlık→yineleme önceliği, Türkçe duyarsız yineleme, boy küçük/ağırlık büyük sıralama) ve cli.py (--ekle çoklu, --listele, stdout normalize plaka, stderr HATA:mesaj + çıkış 2) yazıldı ve CLI/sıralama/doğrulama testleri geçti.",
+ "adim": 11,
+ "yurutucu_token": {
+  "girdi": 44941,
+  "cikti": 33840
+ },
+ "yurutucu_usd": 0.0112621,
+ "bitirdi": true,
+ "sure_sn": 361.9,
+ "gizli": {
+  "gecti": true,
+  "gecen": 21,
+  "toplam": 21,
+  "cikti": ".....................                                                    [100%]\n21 passed in 0.24s\n"
+ }
+}

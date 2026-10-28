@@ -1,0 +1,24 @@
+{
+ "id": "a107",
+ "kip": "a",
+ "tekrar": 2,
+ "kategori": "çok dosyalı küçük modül: iki-üç dosyaya bölünmüş, ortak hata sınıfları ve bir komut satırı girişi olan araç",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "hatalar.py, feribot.py ve cli.py yazıldı. Kuyruk.ekle tip→plaka→boy→ağırlık→yineleme önceliğiyle doğrulama yapar, Türkçe duyarsız yineleme (I→ı, İ→i + casefold) ve boy-küçük/ağırlık-büyük/eklenme sıralaması uygular; CLI --ekle/--listele ile normalize plaka yazar, hatada stderr'e HATA:mesaj + çıkış 2 verir.",
+ "adim": 15,
+ "yurutucu_token": {
+  "girdi": 78531,
+  "cikti": 38249
+ },
+ "yurutucu_usd": 0.015502900000000002,
+ "bitirdi": true,
+ "sure_sn": 442.4,
+ "gizli": {
+  "gecti": true,
+  "gecen": 21,
+  "toplam": 21,
+  "cikti": ".....................                                                    [100%]\n21 passed in 0.31s\n"
+ }
+}

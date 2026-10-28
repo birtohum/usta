@@ -1,0 +1,24 @@
+{
+ "id": "a148",
+ "kip": "a",
+ "tekrar": 2,
+ "kategori": "CSV/JSON ile çalışan ve uç durumları çok olan veri işleme (BOM, ; ayırıcı, 1.234,56 sayı biçimi, boş/bozuk satır)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "nareksisi_parti.py içinde birlestir işlevi yazıldı: utf-8-sig CSV/JSON okuma, başlık doğrulama, Türkçe sayı ayrıştırma, boş satır atlama, puan hesabı ve Türkçe sıralama uygulandı.",
+ "adim": 10,
+ "yurutucu_token": {
+  "girdi": 34147,
+  "cikti": 23312
+ },
+ "yurutucu_usd": 0.0080771,
+ "bitirdi": true,
+ "sure_sn": 233.7,
+ "gizli": {
+  "gecti": false,
+  "gecen": 6,
+  "toplam": 22,
+  "cikti": "r: hatalı başlık: ['kimlik', 'uretici', 'miktar', 'briks']\n\nnareksisi_parti.py:96: ValueError\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_normal_birlestirme - ValueError: hatalı baş...\nFAILED .gizli/test_gizli.py::test_red_durumu - ValueError: hatalı başlık: ['k...\nFAILED .gizli/test_gizli.py::test_esik_68_kabul - ValueError: hatalı başlık: ...\nFAILED .gizli/test_gizli.py::test_esik_alti_red - ValueError: hatalı başlık: ...\nFAILED .gizli/test_gizli.py::test_binlik_nokta_virgul - ValueError: hatalı ba...\nFAILED .gizli/test_gizli.py::test_bos_satir_atlama - ValueError: hatalı başlı...\nFAILED .gizli/test_gizli.py::test_ayirici_bosluk_satir_atlama - ValueError: h...\nFAILED .gizli/test_gizli.py::test_baslik_bosluk_trim - ValueError: hatalı baş...\nFAILED .gizli/test_gizli.py::test_dosya_yok_json - ValueError: hatalı başlık:...\nFAILED .gizli/test_gizli.py::test_yuvarlama_half_up - ValueError: hatalı başl...\nFAILED .gizli/test_gizli.py::test_isim_eslestirme_I - ValueError: hatalı başl...\nFAILED .gizli/test_gizli.py::test_isim_eslestirme_dottedI_strip - ValueError:...\nFAILED .gizli/test_gizli.py::test_siralama_puan_azalan - ValueError: hatalı b...\nFAILED .gizli/test_gizli.py::test_siralama_turkce_alfabe - ValueError: hatalı...\nFAILED .gizli/test_gizli.py::test_bos_liste - ValueError: hatalı başlık: ['ki...\nFAILED .gizli/test_gizli.py::test_cift_tirnak_ayirici - ValueError: hatalı ba...\n16 failed, 6 passed in 0.47s\n"
+ }
+}

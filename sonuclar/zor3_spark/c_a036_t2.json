@@ -1,0 +1,106 @@
+{
+ "id": "a036",
+ "kip": "c",
+ "tekrar": 2,
+ "kategori": "CSV/JSON ile çalışan ve uç durumları çok olan veri işleme (BOM, ; ayırıcı, 1.234,56 sayı biçimi, boş/bozuk satır)",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": false,
+   "toplam": 31,
+   "basarili": 28
+  },
+  {
+   "gecti": true,
+   "toplam": 31,
+   "basarili": 31
+  }
+ ],
+ "spark_usd": 0.0282837,
+ "arayuz": "",
+ "kabul_yazar": 2,
+ "mutasyon": {
+  "mutant": 14,
+  "ham_mutant": 14,
+  "turlar": [
+   {
+    "oldurulen": 12,
+    "toplam": 14
+   },
+   {
+    "oldurulen": 14,
+    "toplam": 14
+   }
+  ],
+  "hayatta": []
+ },
+ "hakem": [
+  {
+   "test": ".usta_kabul/test_kabul_2.py::test_bos_adet_sayilan_valueerror",
+   "karar": "gerekli",
+   "gerekce": "Görev boş adet ve sayilan değerinin ValueError doğurmasını açıkça istiyor.",
+   "tur": 1
+  },
+  {
+   "test": ".usta_kabul/test_kabul_2.py::test_kod_esitliginde_ad_siralamasi",
+   "karar": "belirsiz",
+   "gerekce": "Görev ad ile tie-break diyor ama aynı kodun toplanıp toplanmayacağını ve fark hesabını belirtmiyor.",
+   "tur": 1
+  },
+  {
+   "test": ".usta_kabul/test_kabul_2.py::test_sayim_eksik_kod_cikis3",
+   "karar": "gerekli",
+   "gerekce": "Görev sayımda eksik kod alanının ValueError ile çıkış kodu 3 vermesini açıkça istiyor.",
+   "tur": 1
+  },
+  {
+   "test": ".usta_kabul/test_kabul_2.py::test_sayim_eksik_sayilan_cikis3",
+   "karar": "gerekli",
+   "gerekce": "Görev sayımda eksik sayilan alanının ValueError ile çıkış kodu 3 vermesini açıkça istiyor.",
+   "tur": 1
+  },
+  {
+   "test": ".usta_kabul/test_kabul_3.py::test_envanter_basligi_eksikse_cikis3",
+   "karar": "belirsiz",
+   "gerekce": "Görev başlığı şart koşuyor ama hatalı başlık için çıkış kodu 3 olduğunu açıkça yazmıyor.",
+   "tur": 1
+  },
+  {
+   "test": ".usta_kabul/test_kabul_3.py::test_kod_esitken_ad_siralamasi_turkce",
+   "karar": "belirsiz",
+   "gerekce": "Görev sıralama kuralı veriyor ama yinelenen kod satırlarının ayrı tutulacağını açıkça belirtmiyor.",
+   "tur": 1
+  },
+  {
+   "test": ".usta_kabul/test_kabul_m1.py::test_envanter_dizin_dosya_yoklugu",
+   "karar": "hatali",
+   "gerekce": "Görev yokluk için FileNotFoundError diyor, var olan dizin için IsADirectoryError beklenmesi doğaldır.",
+   "tur": 1
+  }
+ ],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [
+  ".usta_kabul/test_kabul_2.py::test_kod_esitliginde_ad_siralamasi",
+  ".usta_kabul/test_kabul_3.py::test_envanter_basligi_eksikse_cikis3",
+  ".usta_kabul/test_kabul_3.py::test_kod_esitken_ad_siralamasi_turkce",
+  ".usta_kabul/test_kabul_m1.py::test_envanter_dizin_dosya_yoklugu"
+ ],
+ "kabul_test_sayisi": 31,
+ "kabul_gecti": true,
+ "ozet": "Düzeltmeler: stderr mesajlarına sınıf adları eklendi (ValueError/FileNotFoundError), dosya yokluğu kontrolü isfile ile dizinleri de kapsayıp çıkış 1 veriyor, başlık hatası ValueError ile çıkış 3 veriyor (görev metni kod belirtmiyordu, kabul testine uyuldu), aynı kodlu envanter satırları birleştirilmeyip ayrı satır olarak Türkçe ad sıralamasıyla yazılıyor. Kendi 6 test + kabul 35 test geçiyor.",
+ "adim": 15,
+ "yurutucu_token": {
+  "girdi": 143360,
+  "cikti": 30876
+ },
+ "yurutucu_usd": 0.0205112,
+ "bitirdi": true,
+ "sure_sn": 1035.7,
+ "gizli": {
+  "gecti": true,
+  "gecen": 21,
+  "toplam": 21,
+  "cikti": ".....................                                                    [100%]\n21 passed in 0.93s\n"
+ }
+}

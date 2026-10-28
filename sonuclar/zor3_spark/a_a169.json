@@ -1,0 +1,24 @@
+{
+ "id": "a169",
+ "kip": "a",
+ "tekrar": 1,
+ "kategori": "KDV, tevkifat, stopaj, taksit ve kuruş yuvarlama (Decimal, ROUND_HALF_UP, satır bazında ve toplamda yuvarlama farkı)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "karaman_firin.py yazıldı: firin_kdv_dagit Decimal ile net/KDV ayrıştırır, farkı en yüksek brütlü (eşitlikte TR küçük harf alfabetik ilk) satıra ekler, 1000,00 TL sınırında 5 TL indirimi uygular, TypeError/ValueError önceliğine uyar.",
+ "adim": 5,
+ "yurutucu_token": {
+  "girdi": 15133,
+  "cikti": 25607
+ },
+ "yurutucu_usd": 0.006634700000000001,
+ "bitirdi": true,
+ "sure_sn": 266.0,
+ "gizli": {
+  "gecti": true,
+  "gecen": 20,
+  "toplam": 20,
+  "cikti": "....................                                                     [100%]\n20 passed in 0.08s\n"
+ }
+}

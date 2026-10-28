@@ -1,0 +1,24 @@
+{
+ "id": "a110",
+ "kip": "b",
+ "tekrar": 1,
+ "kategori": "Türkçe büyük/küçük harf (İ/i, I/ı), Türk alfabesiyle sıralama, sayıyı yazıya çevirme, ünlü uyumuna göre ek",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "karsilama.py içinde iyelikli_yonelme ve karsilama_cumlesi yazıldı; son ünlüye göre ınız/iniz/unuz/ünüz + n kaynaştırması + yönelme a/e kuralları uygulandı, tür-önce değer-sonra denetim ve boşluk normalizasyonu eklendi. pytest ile 14 test geçti.",
+ "adim": 7,
+ "yurutucu_token": {
+  "girdi": 24753,
+  "cikti": 11023
+ },
+ "yurutucu_usd": 0.0046799,
+ "bitirdi": true,
+ "sure_sn": 110.0,
+ "gizli": {
+  "gecti": true,
+  "gecen": 22,
+  "toplam": 22,
+  "cikti": "......................                                                   [100%]\n22 passed in 0.05s\n"
+ }
+}

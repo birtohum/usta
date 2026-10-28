@@ -1,0 +1,73 @@
+{
+ "id": "a124",
+ "kip": "c",
+ "tekrar": 3,
+ "kategori": "KDV, tevkifat, stopaj, taksit ve kuruş yuvarlama (Decimal, ROUND_HALF_UP, satır bazında ve toplamda yuvarlama farkı)",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": false,
+   "toplam": 33,
+   "basarili": 32
+  },
+  {
+   "gecti": true,
+   "toplam": 33,
+   "basarili": 33
+  }
+ ],
+ "spark_usd": 0.0246894,
+ "arayuz": "",
+ "kabul_yazar": 2,
+ "mutasyon": {
+  "mutant": 16,
+  "ham_mutant": 16,
+  "turlar": [
+   {
+    "oldurulen": 13,
+    "toplam": 16
+   },
+   {
+    "oldurulen": 13,
+    "toplam": 16
+   },
+   {
+    "oldurulen": 13,
+    "toplam": 16
+   }
+  ],
+  "hayatta": [
+   "Turkce sku normalize I->ı ve İ->i karsilastirma gereksinimini cigner, İ donusumunu atlar",
+   "Esit brutte giris sirasi korunsun gereksinimini cigner, sku'ya gore bozar",
+   "Eksik bayrakta argparse varsayilan hatasi gereksinimini cigner"
+  ]
+ },
+ "hakem": [
+  {
+   "test": ".usta_kabul/test_kabul_1.py::test_sira_azalan_ve_esit_brutte_kararli",
+   "karar": "gerekli",
+   "gerekce": "Görev metni eşit brütte giriş sırasının korunmasını açıkça istediğinden testin kararlı sıralama beklentisi doğrudur.",
+   "tur": 1
+  }
+ ],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [],
+ "kabul_test_sayisi": 33,
+ "kabul_gecti": true,
+ "ozet": "Sıralama düzeltildi: eşit brütlü satırlarda sku'ya göre ikincil sıralama kaldırıldı, yalnızca brüt'e göre kararlı sıralama yapılıyor; böylece hem artan hem azalan yönde giriş sırası korunuyor. Bu, görev metnindeki \"eşitlikte giriş sırası korunsun\" kuralına uyar (Türkçe I->ı/İ->i normalize yardımcıları kodda duruyor). Kabul testleri 33/33, kendi testlerim 21/21 geçiyor.",
+ "adim": 17,
+ "yurutucu_token": {
+  "girdi": 202122,
+  "cikti": 65578
+ },
+ "yurutucu_usd": 0.0333278,
+ "bitirdi": true,
+ "sure_sn": 1139.7,
+ "gizli": {
+  "gecti": true,
+  "gecen": 21,
+  "toplam": 21,
+  "cikti": ".....................                                                    [100%]\n21 passed in 0.73s\n"
+ }
+}

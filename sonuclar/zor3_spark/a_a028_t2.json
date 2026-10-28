@@ -1,0 +1,24 @@
+{
+ "id": "a028",
+ "kip": "a",
+ "tekrar": 2,
+ "kategori": "tarih ve saat: resmî tatiller parametreyle, iş günü hesabı, Türkiye saat dilimi (UTC+3, yaz saati yok), gün/ay adları Türkçe",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "tatil_io.py ve rapor.py gerçeklendi: tatilleri_yukle tireli ISO satırları okur, boş/# satırları atlar, yinelenenleri tek sayar, dosya yokluğunda FileNotFoundError ve ilk biçimsiz satırda ValueError verir; aylik_isgunu_ozeti hafta sonu ve tatilleri eleyip toplam/tarihler/ay_adi döndürür, Türkçe ay adı, 1900-2100 kontrolü, None boş küme, date olmayan için TypeError önceliği ve tüm ay kapalıysa sıfır sonuç sağlar.",
+ "adim": 10,
+ "yurutucu_token": {
+  "girdi": 43929,
+  "cikti": 14398
+ },
+ "yurutucu_usd": 0.0072725,
+ "bitirdi": true,
+ "sure_sn": 190.0,
+ "gizli": {
+  "gecti": true,
+  "gecen": 20,
+  "toplam": 20,
+  "cikti": "....................                                                     [100%]\n20 passed in 0.09s\n"
+ }
+}

@@ -1,0 +1,49 @@
+{
+ "id": "a085",
+ "kip": "c",
+ "tekrar": 2,
+ "kategori": "Türkçe büyük/küçük harf (İ/i, I/ı), Türk alfabesiyle sıralama, sayıyı yazıya çevirme, ünlü uyumuna göre ek",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 50,
+   "basarili": 50
+  }
+ ],
+ "spark_usd": 0.008787600000000001,
+ "arayuz": "denetim.py içinde IcerikDenetci(): yasakli_ekle(self, kelime: str); denetle(self, metin: str) -> dict {'bulundu','eslesenler','sayi'}",
+ "kabul_yazar": 3,
+ "mutasyon": {
+  "mutant": 14,
+  "ham_mutant": 14,
+  "turlar": [
+   {
+    "oldurulen": 14,
+    "toplam": 14
+   }
+  ],
+  "hayatta": []
+ },
+ "hakem": [],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [],
+ "kabul_test_sayisi": 50,
+ "kabul_gecti": true,
+ "ozet": "denetim.py içinde IcerikDenetci sınıfı yazıldı: Türkçe küçültme (I->ı, İ->i + lower) iki tarafta uygulanır, sözcük sınırı isalnum ile denetlenir, yasakli_ekle tip kontrolü sonrası boşluk kontrolünde ValueError verir ve normalize dedup ile sessiz yoksayar, denetle boş stringte boş sonuç döndürür ve ekleme sırasını koruyan eslesenler listesiyle bulundu/sayi döndürür. pytest ile 10 test geçirildi.",
+ "adim": 6,
+ "yurutucu_token": {
+  "girdi": 18987,
+  "cikti": 19524
+ },
+ "yurutucu_usd": 0.0058035,
+ "bitirdi": true,
+ "sure_sn": 282.0,
+ "gizli": {
+  "gecti": true,
+  "gecen": 20,
+  "toplam": 20,
+  "cikti": "....................                                                     [100%]\n20 passed in 0.07s\n"
+ }
+}

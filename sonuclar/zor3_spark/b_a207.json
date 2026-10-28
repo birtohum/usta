@@ -1,0 +1,24 @@
+{
+ "id": "a207",
+ "kip": "b",
+ "tekrar": 1,
+ "kategori": "CSV/JSON ile çalışan ve uç durumları çok olan veri işleme (BOM, ; ayırıcı, 1.234,56 sayı biçimi, boş/bozuk satır)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "balik_kabul.py içinde mutabakat işlevi yazıldı: utf-8-sig + `;` CSV okuma, boş satır atlama, Türkçe sayı/Date doğrulama, BOM'lu JSON, tr-küçük harf normalizasyon, 1000,00 sınır sayımı, HALF_UP Türkçe biçimlendirme, sıralı dict, hata öncelikleri. pytest ile 6 test geçti.",
+ "adim": 12,
+ "yurutucu_token": {
+  "girdi": 75779,
+  "cikti": 37115
+ },
+ "yurutucu_usd": 0.015000900000000001,
+ "bitirdi": true,
+ "sure_sn": 469.8,
+ "gizli": {
+  "gecti": true,
+  "gecen": 21,
+  "toplam": 21,
+  "cikti": ".....................                                                    [100%]\n21 passed in 0.20s\n"
+ }
+}

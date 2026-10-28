@@ -1,0 +1,24 @@
+{
+ "id": "a047",
+ "kip": "b",
+ "tekrar": 2,
+ "kategori": "çok dosyalı küçük modül: iki-üç dosyaya bölünmüş, ortak hata sınıfları ve bir komut satırı girişi olan araç",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "hatalar.py (NotHatasi, OgrenciHatasi) ve burs.py (ortalama_hesapla taban yuvarlama, sirala, CLI) yazıldı; sıralama ortalama/devamsızlık/kimlik, Türkçe normalize ve hata önceliği uygulandı; pytest ile 11 test geçti.",
+ "adim": 9,
+ "yurutucu_token": {
+  "girdi": 37534,
+  "cikti": 40765
+ },
+ "yurutucu_usd": 0.011906400000000001,
+ "bitirdi": true,
+ "sure_sn": 456.2,
+ "gizli": {
+  "gecti": false,
+  "gecen": 19,
+  "toplam": 20,
+  "cikti": "v, not_v, dev_v, kim_v, has_ad, has_not, has_dev, has_kim in kayitlar:\n            if has_ad and not isinstance(ad_v, str):\n                raise TypeError(\"ad metin olmalidir\")\n            if has_dev and (isinstance(dev_v, bool) or not isinstance(dev_v, int)):\n                raise TypeError(\"devamsizlik tam sayi olmalidir\")\n            if has_kim and kim_v is not None and not isinstance(kim_v, (int, str)):\n                if isinstance(kim_v, bool):\n                    raise TypeError(\"kimlik hatali tipte\")\n                raise TypeError(\"kimlik hatali tipte\")\n            if has_not and not isinstance(not_v, list):\n                raise TypeError(\"notlar liste olmalidir\")\n            if has_not and isinstance(not_v, list):\n                for n in not_v:\n                    if isinstance(n, bool) or not isinstance(n, (int, float)):\n                        raise TypeError(\"not sayi olmalidir\")\n    \n        # 2. Aşama: öğrenci hataları\n        for o, ad_v, not_v, dev_v, kim_v, has_ad, has_not, has_dev, has_kim in kayitlar:\n            if not has_ad:\n                raise OgrenciHatasi(\"ad eksik\")\n            if not isinstance(ad_v, str) or ad_v.strip() == \"\":\n>               raise OgrenciHatasi(\"ad gecersiz\")\nE               hatalar.OgrenciHatasi: ad gecersiz\n\nburs.py:107: OgrenciHatasi\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_ilk_ihlal - hatalar.OgrenciHatasi: ad gecersiz\n1 failed, 19 passed in 0.40s\n"
+ }
+}

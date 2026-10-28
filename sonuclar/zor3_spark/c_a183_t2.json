@@ -1,0 +1,63 @@
+{
+ "id": "a183",
+ "kip": "c",
+ "tekrar": 2,
+ "kategori": "CSV/JSON ile çalışan ve uç durumları çok olan veri işleme (BOM, ; ayırıcı, 1.234,56 sayı biçimi, boş/bozuk satır)",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 35,
+   "basarili": 35
+  }
+ ],
+ "spark_usd": 0.03562730000000001,
+ "arayuz": "",
+ "kabul_yazar": 2,
+ "mutasyon": {
+  "mutant": 15,
+  "ham_mutant": 16,
+  "turlar": [
+   {
+    "oldurulen": 10,
+    "toplam": 15
+   },
+   {
+    "oldurulen": 10,
+    "toplam": 15
+   },
+   {
+    "oldurulen": 14,
+    "toplam": 15
+   }
+  ],
+  "hayatta": [
+   "bos satirlari yok sayma gereksinimini ihlal eder (sadece bosluk iceren satirlar islenir)"
+  ]
+ },
+ "hakem": [],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [
+  ".usta_kabul/test_kabul_1.py::test_nem_sinir_1450_kabul_ustu_red",
+  ".usta_kabul/test_kabul_2.py::test_ayni_parti_id_ilk_kaydi_korur",
+  ".usta_kabul/test_kabul_2.py::test_nem_sinir_14_50_kabul_ustu_red"
+ ],
+ "kabul_test_sayisi": 35,
+ "kabul_gecti": true,
+ "ozet": "un_kabul.py: UnKabul sınıfı (utf-8-sig, `;`, boş satır atlama, parti_id dedup, Decimal TR sayı, bozuk sayacı, FileNotFoundError→ValueError sırası, nem<=14.50 kabul, ROUND_HALF_UP 2 ondalık, Türkçe lower'sız gruplama, boş ad→bilinmeyen, Türkçe sıralama, boşken [] ). test_un.py 5 test geçti.",
+ "adim": 13,
+ "yurutucu_token": {
+  "girdi": 68419,
+  "cikti": 54182
+ },
+ "yurutucu_usd": 0.0176783,
+ "bitirdi": true,
+ "sure_sn": 1252.3,
+ "gizli": {
+  "gecti": false,
+  "gecen": 19,
+  "toplam": 20,
+  "cikti": "..........F.........                                                     [100%]\n=================================== FAILURES ===================================\n___________________________ test_nem_ustu_reddedilir ___________________________\n\ntmp_path = PosixPath('/home/usta/is/95bada333f73/.tmp/pytest-of-usta/pytest-3/test_nem_ustu_reddedilir0')\n\n    def test_nem_ustu_reddedilir(tmp_path):\n        p = _yaz(tmp_path, \"j.csv\", \"tedarikci;parti_id;nem;protein\\nAcme;P1;14,50;10,00\\nAcme;P2;14,51;20,00\\n\")\n        uk = UnKabul()\n        assert uk.ekle(p) == 2\n        r = uk.puanla()[0]\n>       assert abs(_ort(r) - 10.00) < 0.001\nE       AssertionError: assert 5.0 < 0.001\nE        +  where 5.0 = abs((15.0 - 10.0))\nE        +    where 15.0 = _ort({'tedarikci': 'Acme', 'tedarikçi': 'Acme', 'supplier': 'Acme', 'ad': 'Acme', 'grup': 'Acme', 'unvan': 'Acme', 'firma':... 'count': 2, 'kabul': 1, 'kabul_sayisi': 1, 'red': 1, 'red_sayisi': 1, 'ret': 1, 'ilk_tarih': None, 'ilk_teslim': None})\n\n.gizli/test_gizli.py:106: AssertionError\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_nem_ustu_reddedilir - AssertionError: asser...\n1 failed, 19 passed in 0.19s\n"
+ }
+}

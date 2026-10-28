@@ -1,0 +1,53 @@
+{
+ "id": "a159",
+ "kip": "c",
+ "tekrar": 1,
+ "kategori": "KDV, tevkifat, stopaj, taksit ve kuruş yuvarlama (Decimal, ROUND_HALF_UP, satır bazında ve toplamda yuvarlama farkı)",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 65,
+   "basarili": 65
+  }
+ ],
+ "spark_usd": 0.011039100000000001,
+ "arayuz": "ZeytinIadeKontrol kurucusu parametresizdir. iade_hesapla(alt_sinir) dict döndürür, anahtarlar: iade_matrahi, iade_kdv, yuvarlama_farki, hak_kazanildi.",
+ "kabul_yazar": 3,
+ "mutasyon": {
+  "mutant": 14,
+  "ham_mutant": 14,
+  "turlar": [
+   {
+    "oldurulen": 13,
+    "toplam": 14
+   },
+   {
+    "oldurulen": 14,
+    "toplam": 14
+   }
+  ],
+  "hayatta": []
+ },
+ "hakem": [],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [],
+ "kabul_test_sayisi": 53,
+ "kabul_gecti": true,
+ "ozet": "zeytin_iade.py içinde ZeytinIadeKontrol sınıfını yazdım: satis_ekle türü önce denetler (Decimal dışı TypeError, oran 1/10/20 dışı ValueError, negatif matrah ValueError), her satır KDV'yi matrah*oran/100 ile ROUND_HALF_UP kuruşa yuvarlar; iade_hesapla tevkifatlı satırları eklenme sırasında toplayıp iade_matrahi, iade_kdv, yuvarlama_farki (toplu tek-yuvarlama eksi satır toplamı) ve hak_kazanildi (iade_kdv >= alt_sinir) döndürür, boş listede sıfırlar ve False verir. 17 pytest testi geçiyor.",
+ "adim": 18,
+ "yurutucu_token": {
+  "girdi": 103945,
+  "cikti": 35064
+ },
+ "yurutucu_usd": 0.017407299999999997,
+ "bitirdi": true,
+ "sure_sn": 537.5,
+ "gizli": {
+  "gecti": false,
+  "gecen": 9,
+  "toplam": 22,
+  "cikti": "__\n\n    def test_sifir_matrah_gecerli():\n        k = ZeytinIadeKontrol()\n        k.satis_ekle(Decimal(\"0\"), 10, True)\n        s = k.iade_hesapla(Decimal(\"0\"))\n        assert s[\"iade_matrahi\"] == Decimal(\"0\")\n>       assert s[\"iade_kdv_toplami\"] == Decimal(\"0.00\")\nE       KeyError: 'iade_kdv_toplami'\n\n.gizli/test_gizli.py:171: KeyError\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_bos_cagri_sifirlar - KeyError: 'iade_kdv_to...\nFAILED .gizli/test_gizli.py::test_bos_cagri_pozitif_alt_sinir - KeyError: 'ia...\nFAILED .gizli/test_gizli.py::test_tek_satis_basit - KeyError: 'iade_kdv_toplami'\nFAILED .gizli/test_gizli.py::test_half_up_yukari_yuvarlama - KeyError: 'iade_...\nFAILED .gizli/test_gizli.py::test_half_up_asagi_yuvarlama - KeyError: 'iade_k...\nFAILED .gizli/test_gizli.py::test_gecerli_kdv_oranlari - KeyError: 'iade_kdv_...\nFAILED .gizli/test_gizli.py::test_tevkifatsiz_satirlar_haric - KeyError: 'iad...\nFAILED .gizli/test_gizli.py::test_karisik_tevkifatli_toplam - KeyError: 'iade...\nFAILED .gizli/test_gizli.py::test_hak_bir_kurus_altta_kazanilmaz - KeyError: ...\nFAILED .gizli/test_gizli.py::test_yuvarlama_farki_sifir - KeyError: 'iade_kdv...\nFAILED .gizli/test_gizli.py::test_yuvarlama_farki_negatif - KeyError: 'iade_k...\nFAILED .gizli/test_gizli.py::test_eklenme_sirasi_sonucu_degistirmez - KeyErro...\nFAILED .gizli/test_gizli.py::test_sifir_matrah_gecerli - KeyError: 'iade_kdv_...\n13 failed, 9 passed in 0.29s\n"
+ }
+}

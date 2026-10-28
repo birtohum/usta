@@ -1,0 +1,88 @@
+{
+ "id": "a132",
+ "kip": "c",
+ "tekrar": 1,
+ "kategori": "çok dosyalı küçük modül: iki-üç dosyaya bölünmüş, ortak hata sınıfları ve bir komut satırı girişi olan araç",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": false,
+   "toplam": 48,
+   "basarili": 47
+  },
+  {
+   "gecti": true,
+   "toplam": 48,
+   "basarili": 48
+  }
+ ],
+ "spark_usd": 0.0171899,
+ "arayuz": "",
+ "kabul_yazar": 3,
+ "mutasyon": {
+  "mutant": 15,
+  "ham_mutant": 15,
+  "turlar": [
+   {
+    "oldurulen": 13,
+    "toplam": 15
+   },
+   {
+    "oldurulen": 13,
+    "toplam": 15
+   },
+   {
+    "oldurulen": 14,
+    "toplam": 15
+   }
+  ],
+  "hayatta": [
+   "gecersiz yem adi oran hatasi olmali"
+  ]
+ },
+ "hakem": [
+  {
+   "test": ".usta_kabul/test_kabul_1.py::test_cli_stok_yetersiz_sadece_ad_yazar",
+   "karar": "gerekli",
+   "gerekce": "Görev metni stok yetersizliğinde izleme çıktısı olmadan yalnızca StokYetersizHatasi adının tek satır yazılmasını açıkça istiyor.",
+   "tur": 1
+  },
+  {
+   "test": ".usta_kabul/test_kabul_m2.py::test_turkce_I_donusumu",
+   "karar": "hatali",
+   "gerekce": "Görev ayrı bir normalize işlevi zorunlu kılmıyor ve I tek başına geçerli yem adı olmadığı için doğrulayan işlevin hata vermesi doğrudur.",
+   "tur": 1
+  },
+  {
+   "test": ".usta_kabul/test_kabul_m2.py::test_turkce_I_kucuk_donusum_detay",
+   "karar": "hatali",
+   "gerekce": "Görev ayrı bir normalize işlevi zorunlu kılmıyor ve I tek başına geçerli yem adı olmadığı için doğrulayan işlevin hata vermesi doğrudur.",
+   "tur": 1
+  }
+ ],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [
+  ".usta_kabul/test_kabul_m2.py::test_gecersiz_yem_adi_MISIR_oran_hatasi",
+  ".usta_kabul/test_kabul_m2.py::test_gecersiz_yem_adi_oran_hatasi",
+  ".usta_kabul/test_kabul_m2.py::test_turkce_I_donusumu",
+  ".usta_kabul/test_kabul_m2.py::test_turkce_I_kucuk_donusum_detay"
+ ],
+ "kabul_test_sayisi": 48,
+ "kabul_gecti": true,
+ "ozet": null,
+ "adim": 27,
+ "yurutucu_token": {
+  "girdi": 297497,
+  "cikti": 63519
+ },
+ "yurutucu_usd": 0.042453500000000005,
+ "bitirdi": false,
+ "sure_sn": 1364.7,
+ "gizli": {
+  "gecti": false,
+  "gecen": 20,
+  "toplam": 22,
+  "cikti": "..............FF......                                                   [100%]\n=================================== FAILURES ===================================\n_________________________ test_yem_adi_turkce_donusum __________________________\n\n    def test_yem_adi_turkce_donusum():\n>       assert yem.tr_kucuk_harf('I') == 'ı'\nE       AttributeError: module 'yem' has no attribute 'tr_kucuk_harf'. Did you mean: 'turkce_kucuk_harf'?\n\n.gizli/test_gizli.py:82: AttributeError\n____________________________ test_yem_adi_gecersiz _____________________________\n\n    def test_yem_adi_gecersiz():\n>       with pytest.raises(ValueError):\nE       Failed: DID NOT RAISE <class 'ValueError'>\n\n.gizli/test_gizli.py:87: Failed\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_yem_adi_turkce_donusum - AttributeError: mo...\nFAILED .gizli/test_gizli.py::test_yem_adi_gecersiz - Failed: DID NOT RAISE <c...\n2 failed, 20 passed in 0.17s\n"
+ }
+}

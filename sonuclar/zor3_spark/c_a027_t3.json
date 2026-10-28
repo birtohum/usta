@@ -1,0 +1,65 @@
+{
+ "id": "a027",
+ "kip": "c",
+ "tekrar": 3,
+ "kategori": "Türkçe büyük/küçük harf (İ/i, I/ı), Türk alfabesiyle sıralama, sayıyı yazıya çevirme, ünlü uyumuna göre ek",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 51,
+   "basarili": 51
+  }
+ ],
+ "spark_usd": 0.013637000000000002,
+ "arayuz": "",
+ "kabul_yazar": 3,
+ "mutasyon": {
+  "mutant": 14,
+  "ham_mutant": 14,
+  "turlar": [
+   {
+    "oldurulen": 12,
+    "toplam": 14
+   },
+   {
+    "oldurulen": 12,
+    "toplam": 14
+   },
+   {
+    "oldurulen": 12,
+    "toplam": 14
+   }
+  ],
+  "hayatta": [
+   "büyük I harfi küçük ı harfine dönüşür gereksinimini çiğner",
+   "büyük İ harfi küçük i harfine dönüşür gereksinimini çiğner"
+  ]
+ },
+ "hakem": [],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [
+  ".usta_kabul/test_kabul_m2.py::test_buyuk_I_bosluk_ayrac",
+  ".usta_kabul/test_kabul_m2.py::test_buyuk_I_kelime_KAPI",
+  ".usta_kabul/test_kabul_m2.py::test_buyuk_I_kucuk_dotless_single",
+  ".usta_kabul/test_kabul_m2.py::test_buyuk_I_ozel_ayrac"
+ ],
+ "kabul_test_sayisi": 51,
+ "kabul_gecti": true,
+ "ozet": "slug.py yazıldı: Türkçe'ye uygun küçük harf çevirisi (I→ı, İ→i, i korunur), çğıöşü→cgiosu harf dönüşümü (--kucuk yokken de yapılır, büyük harfler C G O S U'ya dönüşür), harf/rakam dışı karakterlerin tek ayraca indirgenmesi ve baş/son ayraçların atılması, varsayılan ayraç \"-\", boş/noktalama başlıkta boş satır, eksik --baslik ve çok karakterli --ayrac durumlarında exit code 2 ile stderr'e hata (başlık denetimi önce). Yalnızca standart kütüphane (sys) kullanıldı. test_slug.py ile 23 pytest testi yazıldı ve hepsi geçti.",
+ "adim": 17,
+ "yurutucu_token": {
+  "girdi": 103442,
+  "cikti": 44270
+ },
+ "yurutucu_usd": 0.0191982,
+ "bitirdi": true,
+ "sure_sn": 1013.0,
+ "gizli": {
+  "gecti": true,
+  "gecen": 21,
+  "toplam": 21,
+  "cikti": ".....................                                                    [100%]\n21 passed in 0.99s\n"
+ }
+}

@@ -1,0 +1,61 @@
+{
+ "id": "a050",
+ "kip": "c",
+ "tekrar": 2,
+ "kategori": "KDV, tevkifat, stopaj, taksit ve kuruş yuvarlama (Decimal, ROUND_HALF_UP, satır bazında ve toplamda yuvarlama farkı)",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 58,
+   "basarili": 58
+  }
+ ],
+ "spark_usd": 0.014337000000000003,
+ "arayuz": "adisyon.py içinde AdisyonHesaplayici sınıfı bulunur. Yöntemler: __init__(self), ekle(self, urun_adi: str, miktar: str, birim_fiyat: str, kdv_oran: str), toplam(self) -> dict. toplam sözlüğü anahtarları: toplam_matrah, toplam_kdv, fis_toplami, yuvarlama_farki.",
+ "kabul_yazar": 3,
+ "mutasyon": {
+  "mutant": 15,
+  "ham_mutant": 15,
+  "turlar": [
+   {
+    "oldurulen": 11,
+    "toplam": 15
+   },
+   {
+    "oldurulen": 13,
+    "toplam": 15
+   },
+   {
+    "oldurulen": 14,
+    "toplam": 15
+   }
+  ],
+  "hayatta": [
+   "tip kontrolunde beklenen tiplerde olmayan girdide TypeError gereksinimini cigner"
+  ]
+ },
+ "hakem": [],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [
+  ".usta_kabul/test_kabul_m1.py::test_esit_toplamda_stabil_siralama"
+ ],
+ "kabul_test_sayisi": 58,
+ "kabul_gecti": true,
+ "ozet": "adisyon.py içinde AdisyonHesaplayici sınıfı yazıldı: Decimal + ROUND_HALF_UP ile satır bazında matrah/KDV yuvarlama, toplamların yuvarlanmış satırlardan toplanması, yuvarlama_farki raporlaması, 0.01/0.10/0.20 KDV kontrolü, TypeError/ValueError önceliği, casefold tabanlı Türkçe duyarsız ürün birleştirme ve stabil sıralama. pytest ile 14 test geçirildi.",
+ "adim": 10,
+ "yurutucu_token": {
+  "girdi": 64359,
+  "cikti": 18383
+ },
+ "yurutucu_usd": 0.0101125,
+ "bitirdi": true,
+ "sure_sn": 863.6,
+ "gizli": {
+  "gecti": false,
+  "gecen": 14,
+  "toplam": 20,
+  "cikti": "\n    def test_18_orijinal_yazim_korunur():\n        h = AdisyonHesaplayici()\n        h.ekle(\"IŞIK\", \"1\", \"10.00\", \"0.10\")\n        h.ekle(\"ışık\", \"2\", \"10.00\", \"0.10\")\n        s = h.toplam()\n>       assert s[\"satirlar\"][0][\"urun_adi\"] == \"IŞIK\"\nE       KeyError: 'satirlar'\n\n.gizli/test_gizli.py:148: KeyError\n___________________________ test_19_stabil_siralama ____________________________\n\n    def test_19_stabil_siralama():\n        h = AdisyonHesaplayici()\n        h.ekle(\"Pahali\", \"1\", \"20.00\", \"0.10\")\n        h.ekle(\"Ucuz1\", \"1\", \"10.00\", \"0.10\")\n        h.ekle(\"Ucuz2\", \"2\", \"5.00\", \"0.10\")\n        s = h.toplam()\n>       isimler = [x[\"urun_adi\"] for x in s[\"satirlar\"]]\nE       KeyError: 'satirlar'\n\n.gizli/test_gizli.py:156: KeyError\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_01_basit_tek_satir - KeyError: 'satirlar'\nFAILED .gizli/test_gizli.py::test_03_matrah_half_up - KeyError: 'satirlar'\nFAILED .gizli/test_gizli.py::test_04_kdv_half_up - KeyError: 'satirlar'\nFAILED .gizli/test_gizli.py::test_17_casefold_birlestirme - KeyError: 'satirlar'\nFAILED .gizli/test_gizli.py::test_18_orijinal_yazim_korunur - KeyError: 'sati...\nFAILED .gizli/test_gizli.py::test_19_stabil_siralama - KeyError: 'satirlar'\n6 failed, 14 passed in 0.14s\n"
+ }
+}

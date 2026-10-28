@@ -1,0 +1,24 @@
+{
+ "id": "a090",
+ "kip": "b",
+ "tekrar": 3,
+ "kategori": "Türkçe büyük/küçük harf (İ/i, I/ı), Türk alfabesiyle sıralama, sayıyı yazıya çevirme, ünlü uyumuna göre ek",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": null,
+ "adim": 19,
+ "yurutucu_token": {
+  "girdi": 70215,
+  "cikti": 153916
+ },
+ "yurutucu_usd": 0.03780469999999999,
+ "bitirdi": false,
+ "sure_sn": 1636.7,
+ "gizli": {
+  "gecti": false,
+  "gecen": 6,
+  "toplam": 22,
+  "cikti": "      + kitap bir adeti.\nE         ?               +\n\n.gizli/test_gizli.py:98: AssertionError\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_benim_unlu - AssertionError: assert 'kutu b...\nFAILED .gizli/test_gizli.py::test_senin_unlu - AssertionError: assert 'kutu i...\nFAILED .gizli/test_gizli.py::test_onun_unlu - AssertionError: assert 'kutu üç...\nFAILED .gizli/test_gizli.py::test_benim_unsuz_s - AssertionError: assert 'pal...\nFAILED .gizli/test_gizli.py::test_onun_unsuz_s - AssertionError: assert 'pale...\nFAILED .gizli/test_gizli.py::test_senin_unsuz_s - AssertionError: assert 'kal...\nFAILED .gizli/test_gizli.py::test_araba_a_uyumu - AssertionError: assert 'ara...\nFAILED .gizli/test_gizli.py::test_kil_uyumu - AssertionError: assert 'kıl bir...\nFAILED .gizli/test_gizli.py::test_kol_o_uyumu - AssertionError: assert 'kol b...\nFAILED .gizli/test_gizli.py::test_kilit_i_uyumu - AssertionError: assert 'kil...\nFAILED .gizli/test_gizli.py::test_yuz_yalin - AssertionError: assert 'vida yü...\nFAILED .gizli/test_gizli.py::test_yuz_bir - AssertionError: assert 'vida yüz ...\nFAILED .gizli/test_gizli.py::test_iki_yuz - AssertionError: assert 'vida iki ...\nFAILED .gizli/test_gizli.py::test_dokuz_yuz - AssertionError: assert 'kutu do...\nFAILED .gizli/test_gizli.py::test_nokta_tek_cumle - AssertionError: assert 'p...\nFAILED .gizli/test_gizli.py::test_yumusama_yok - AssertionError: assert 'kita...\n16 failed, 6 passed in 0.11s\n"
+ }
+}

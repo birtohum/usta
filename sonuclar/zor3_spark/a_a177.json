@@ -1,0 +1,24 @@
+{
+ "id": "a177",
+ "kip": "a",
+ "tekrar": 1,
+ "kategori": "çok dosyalı küçük modül: iki-üç dosyaya bölünmüş, ortak hata sınıfları ve bir komut satırı girişi olan araç",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "Safran üretici birliği aracını üç dosyayla yazdım: hatalar.py (dört hata sınıfı), safran.py (SafranDefteri; tarih doğrulama, üretici normalleştirme + Türkçe küçük harf sıralaması, 0,10–5000,00 g tartım ve 0–30 nem aralıkları, Decimal ROUND_HALF_UP ile kuru/tutar hesabı, %12 üstü nemde 0,92 cezası, kademeli birim fiyat, S-0001'den artan kimlikler, öncelikli hata sırası) ve cli.py (--ekle ile id/kuru_g/tutar_tl, --ozet ile gun/toplamlar/kalemler JSON çıktıları; kayıtlar safran_veri.json'da saklanır). Yalnızca standart kütüphane kullanıldı, ağ/rastgelelik/zaman okuma yok; tüm hesap ve hata senaryoları test edilip çalışma dizini temiz bırakıldı.",
+ "adim": 13,
+ "yurutucu_token": {
+  "girdi": 94965,
+  "cikti": 43245
+ },
+ "yurutucu_usd": 0.018145500000000002,
+ "bitirdi": true,
+ "sure_sn": 535.4,
+ "gizli": {
+  "gecti": false,
+  "gecen": 21,
+  "toplam": 22,
+  "cikti": ".....................F                                                   [100%]\n=================================== FAILURES ===================================\n_____________________________ test_cli_ozet_akisi ______________________________\n\n    def test_cli_ozet_akisi():\n        _temizle()\n        r1 = _cli(\"--ekle\", \"--uretici\", \"Ali\", \"--yas\", \"10\", \"--nem\", \"0\", \"--tarih\", \"2024-05-01\")\n        assert r1.returncode == 0, r1.stderr\n        r2 = _cli(\"--ekle\", \"--uretici\", \"Zebra\", \"--yas\", \"20\", \"--nem\", \"0\", \"--tarih\", \"2024-05-01\")\n        assert r2.returncode == 0, r2.stderr\n        r3 = _cli(\"--ozet\", \"--gun\", \"2024-05-01\")\n        assert r3.returncode == 0, r3.stderr\n        oz = json.loads(r3.stdout.strip())\n        assert oz[\"gun\"] == \"2024-05-01\"\n>       assert oz[\"toplam_kuru_g\"] == pytest.approx(30.0)\nE       assert 120.0 == 30.0 ± 3.0e-05\nE         comparison failed\nE         Obtained: 120.0\nE         Expected: 30.0 ± 3.0e-05\n\n.gizli/test_gizli.py:202: AssertionError\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_cli_ozet_akisi - assert 120.0 == 30.0 ± 3.0...\n1 failed, 21 passed in 0.24s\n"
+ }
+}

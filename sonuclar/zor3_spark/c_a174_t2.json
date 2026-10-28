@@ -1,0 +1,120 @@
+{
+ "id": "a174",
+ "kip": "c",
+ "tekrar": 2,
+ "kategori": "KDV, tevkifat, stopaj, taksit ve kuruş yuvarlama (Decimal, ROUND_HALF_UP, satır bazında ve toplamda yuvarlama farkı)",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": false,
+   "toplam": 50,
+   "basarili": 48
+  },
+  {
+   "gecti": true,
+   "toplam": 50,
+   "basarili": 50
+  }
+ ],
+ "spark_usd": 0.018075200000000003,
+ "arayuz": "Dosya: isparta_gul.py; sınıf GulYagiSatisDefteri; __init__(self); ekle(miktar_ml:int, birim_fiyat:str, kdv_oran:int); ozet(self)->dict anahtarları satir_sayisi:int, matrah_toplam:Decimal, kdv_toplam:Decimal, stopaj:Decimal, genel_toplam:Decimal, notlar:list",
+ "kabul_yazar": 3,
+ "mutasyon": {
+  "mutant": 16,
+  "ham_mutant": 16,
+  "turlar": [
+   {
+    "oldurulen": 15,
+    "toplam": 16
+   },
+   {
+    "oldurulen": 15,
+    "toplam": 16
+   },
+   {
+    "oldurulen": 16,
+    "toplam": 16
+   }
+  ],
+  "hayatta": []
+ },
+ "hakem": [
+  {
+   "test": ".usta_kabul/test_kabul_m2.py::test_buyuk_I_kucuk_donusum",
+   "karar": "gerekli",
+   "gerekce": "Görev metni I harfinin ı olarak çevrileceğini açıkça istiyor ve test doğrudan bunu denetliyor.",
+   "tur": 1
+  },
+  {
+   "test": ".usta_kabul/test_kabul_m2.py::test_buyuk_İ_donusum",
+   "karar": "gerekli",
+   "gerekce": "Görev metni I->ı ve İ->i dönüşümünü açıkça istiyor ve test doğrudan bu kuralı denetliyor.",
+   "tur": 1
+  },
+  {
+   "test": ".usta_kabul/test_kabul_m2.py::test_c_cedilla_once_d",
+   "karar": "belirsiz",
+   "gerekce": "Görev metni ç harfinin sırasını açıkça belirtmiyor, tam Türk alfabesi sırası tanımlanmamış.",
+   "tur": 1
+  },
+  {
+   "test": ".usta_kabul/test_kabul_m2.py::test_dotless_i_once_dotted",
+   "karar": "belirsiz",
+   "gerekce": "Görev metni büyük harf dönüşümünü söylüyor ama küçük ı ile i arasındaki sıralamayı açıkça yazmıyor.",
+   "tur": 1
+  },
+  {
+   "test": ".usta_kabul/test_kabul_m2.py::test_g_breve_once_h",
+   "karar": "belirsiz",
+   "gerekce": "Görev metni ğ harfinin sırasını açıkça belirtmiyor, tam alfabe tanımı yok.",
+   "tur": 1
+  },
+  {
+   "test": ".usta_kabul/test_kabul_m2.py::test_o_umlaut_once_p",
+   "karar": "belirsiz",
+   "gerekce": "Görev metni ö harfinin sırasını açıkça belirtmiyor, birden çok sıralama yorumu mümkün.",
+   "tur": 1
+  },
+  {
+   "test": ".usta_kabul/test_kabul_m2.py::test_s_cedilla_once_t",
+   "karar": "belirsiz",
+   "gerekce": "Görev metni ş harfinin sırasını açıkça belirtmiyor, tam Türk alfabesi sırası verilmemiş.",
+   "tur": 1
+  },
+  {
+   "test": ".usta_kabul/test_kabul_m2.py::test_u_umlaut_once_v",
+   "karar": "belirsiz",
+   "gerekce": "Görev metni ü harfinin sırasını açıkça belirtmiyor, ayrıntı görevde tanımlanmamış.",
+   "tur": 1
+  }
+ ],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [
+  ".usta_kabul/test_kabul_3.py::test_turkce_I_donusumu_siralama",
+  ".usta_kabul/test_kabul_3.py::test_turkce_alfabe_sirasi",
+  ".usta_kabul/test_kabul_m2.py::test_c_cedilla_once_d",
+  ".usta_kabul/test_kabul_m2.py::test_dotless_i_once_dotted",
+  ".usta_kabul/test_kabul_m2.py::test_g_breve_once_h",
+  ".usta_kabul/test_kabul_m2.py::test_o_umlaut_once_p",
+  ".usta_kabul/test_kabul_m2.py::test_s_cedilla_once_t",
+  ".usta_kabul/test_kabul_m2.py::test_u_umlaut_once_v"
+ ],
+ "kabul_test_sayisi": 51,
+ "kabul_gecti": true,
+ "ozet": null,
+ "adim": 22,
+ "yurutucu_token": {
+  "girdi": 298373,
+  "cikti": 75039
+ },
+ "yurutucu_usd": 0.0448451,
+ "bitirdi": false,
+ "sure_sn": 1110.3,
+ "gizli": {
+  "gecti": false,
+  "gecen": 14,
+  "toplam": 20,
+  "cikti": "        d = GulYagiSatisDefteri()\n        d.ekle(1, \"1.00\", 20)\n        d.ekle(2, \"1.00\", 20)\n        d.ekle(3, \"1.00\", 20)\n        assert d.ozet()[\"satir_sayisi\"] == 3\n>       assert len(d.ozet()[\"satirlar\"]) == 3\nE       KeyError: 'satirlar'\n\n.gizli/test_gizli.py:155: KeyError\n___________________________ test_20_decimal_tipleri ____________________________\n\n    def test_20_decimal_tipleri():\n        d = GulYagiSatisDefteri()\n        d.ekle(2, \"5.00\", 20)\n        o = d.ozet()\n        assert isinstance(o[\"matrah_toplam\"], Decimal)\n        assert isinstance(o[\"kdv_toplam\"], Decimal)\n        assert isinstance(o[\"stopaj\"], Decimal)\n>       assert isinstance(o[\"satirlar\"][0][\"matrah\"], Decimal)\nE       KeyError: 'satirlar'\n\n.gizli/test_gizli.py:164: KeyError\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_11_kdv_fark_en_buyuk_miktara - KeyError: 's...\nFAILED .gizli/test_gizli.py::test_12_kdv_fark_esit_eklenme_onceligi - KeyErro...\nFAILED .gizli/test_gizli.py::test_17_turkce_siralama - AttributeError: 'GulYa...\nFAILED .gizli/test_gizli.py::test_18_turkce_esitlik_koruma - AttributeError: ...\nFAILED .gizli/test_gizli.py::test_19_satir_sayisi - KeyError: 'satirlar'\nFAILED .gizli/test_gizli.py::test_20_decimal_tipleri - KeyError: 'satirlar'\n6 failed, 14 passed in 0.19s\n"
+ }
+}

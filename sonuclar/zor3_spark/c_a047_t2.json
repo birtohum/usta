@@ -1,0 +1,58 @@
+{
+ "id": "a047",
+ "kip": "c",
+ "tekrar": 2,
+ "kategori": "çok dosyalı küçük modül: iki-üç dosyaya bölünmüş, ortak hata sınıfları ve bir komut satırı girişi olan araç",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 48,
+   "basarili": 48
+  }
+ ],
+ "spark_usd": 0.010966400000000001,
+ "arayuz": "hatalar.py: NotHatasi(ValueError), OgrenciHatasi(ValueError). burs.py: ortalama_hesapla(notlar: list) -> int, sirala(ogrenciler: list) -> list. Ogrenci sözlüğü anahtarları: ad: str, notlar: list, devamsizlik: int, kimlik: int. Girdi ve çıktı aynı sözlük yapısı. CLI: python -m burs sirala --ogrenciler Ad:Not:Devamsizlik,... çıktısı sıralı ad satırları.",
+ "kabul_yazar": 3,
+ "mutasyon": {
+  "mutant": 14,
+  "ham_mutant": 14,
+  "turlar": [
+   {
+    "oldurulen": 14,
+    "toplam": 14
+   }
+  ],
+  "hayatta": []
+ },
+ "hakem": [
+  {
+   "test": ".usta_kabul/test_kabul_3.py::test_ilk_ihlal_bildirilir",
+   "karar": "belirsiz",
+   "gerekce": "Görev metni önceliğin liste genelinde mi yoksa listedeki ilk ihlal sırasına göre mi uygulanacağını açıkça belirtmiyor.",
+   "tur": 1
+  }
+ ],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [
+  ".usta_kabul/test_kabul_3.py::test_ilk_ihlal_bildirilir"
+ ],
+ "kabul_test_sayisi": 48,
+ "kabul_gecti": true,
+ "ozet": "hatalar.py (NotHatasi/OgrenciHatasi) ve burs.py (ortalama_hesapla taban yuvarlamalı, sirala: ortalama↓/devamsızlık↑/kimlik↑ + Türkçe normalize ad, tip>öğrenci>not önceliği, CLI `python -m burs sirala --ogrenciler ...`) yazıldı; 19 pytest testi geçiyor.",
+ "adim": 6,
+ "yurutucu_token": {
+  "girdi": 21382,
+  "cikti": 21426
+ },
+ "yurutucu_usd": 0.0064234,
+ "bitirdi": true,
+ "sure_sn": 467.1,
+ "gizli": {
+  "gecti": false,
+  "gecen": 19,
+  "toplam": 20,
+  "cikti": "                raise TypeError(\"ad str olmalidir\")\n            if \"notlar\" in o and not isinstance(o[\"notlar\"], list):\n                raise TypeError(\"notlar liste olmalidir\")\n            if \"devamsizlik\" in o and (\n                isinstance(o[\"devamsizlik\"], bool)\n                or not isinstance(o[\"devamsizlik\"], int)\n            ):\n                raise TypeError(\"devamsizlik int olmalidir\")\n            if \"kimlik\" in o and (\n                isinstance(o[\"kimlik\"], bool) or not isinstance(o[\"kimlik\"], int)\n            ):\n                raise TypeError(\"kimlik int olmalidir\")\n            if \"notlar\" in o and isinstance(o[\"notlar\"], list):\n                for n in o[\"notlar\"]:\n                    if isinstance(n, bool) or not isinstance(n, int):\n                        raise TypeError(\"notlar tam sayi olmalidir\")\n    \n        # 2. Aşama: öğrenci hataları\n        for o in ogrenciler:\n            if set(o.keys()) != _BEKlenen_ANAHTARLAR:\n                raise OgrenciHatasi(\"ogrenci anahtarlari hatali\")\n            ad = o[\"ad\"]\n            if ad.strip() == \"\":\n>               raise OgrenciHatasi(\"ad bos olamaz\")\nE               hatalar.OgrenciHatasi: ad bos olamaz\n\nburs.py:62: OgrenciHatasi\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_ilk_ihlal - hatalar.OgrenciHatasi: ad bos o...\n1 failed, 19 passed in 0.32s\n"
+ }
+}

@@ -1,0 +1,24 @@
+{
+ "id": "a071",
+ "kip": "a",
+ "tekrar": 3,
+ "kategori": "çok dosyalı küçük modül: iki-üç dosyaya bölünmüş, ortak hata sınıfları ve bir komut satırı girişi olan araç",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "Diyarbakır taksi durağı kuyruk aracı yazıldı: hatalar.py'de ValueError'dan doğrudan türeyen PlakaHatasi/KuyrukHatasi, durak.py'de FIFO DurakKuyrugu (20 kapasite, strip+Türkçe normalize i→İ/ı→I, hata önceliği boş→kapasite→tekrar), cli.py'de sıralı --ekle/--liste/--cikar komutları. Yalnızca sys kullanıldı, liste normalize eklenme sırasıyla satır sonlu yazdırılıyor.",
+ "adim": 18,
+ "yurutucu_token": {
+  "girdi": 91418,
+  "cikti": 26802
+ },
+ "yurutucu_usd": 0.0145022,
+ "bitirdi": true,
+ "sure_sn": 339.5,
+ "gizli": {
+  "gecti": true,
+  "gecen": 22,
+  "toplam": 22,
+  "cikti": "......................                                                   [100%]\n22 passed in 0.47s\n"
+ }
+}

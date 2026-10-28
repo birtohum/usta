@@ -1,0 +1,24 @@
+{
+ "id": "a181",
+ "kip": "a",
+ "tekrar": 1,
+ "kategori": "tarih ve saat: resmî tatiller parametreyle, iş günü hesabı, Türkiye saat dilimi (UTC+3, yaz saati yok), gün/ay adları Türkçe",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "recete.py oluşturuldu: recete_bitisi ve tr_etiket işlevleri tanımlandı. UTC girdiler +3 saatle Türkiye tarihine çevrilir, gün dahil hesaplanır ve hafta sonu/tatil sonraki iş gününe kaydırılır; Türkçe ay/gün adlarıyla etiket üretilir, kucuk=True ise Türkçe küçük harf (I→ı, İ→i vb.) uygulanır. Hatalı tarihte ve negatif günde ValueError yükseltilir (önce tarih denetlenir); yalnızca datetime ve re kullanıldı.",
+ "adim": 8,
+ "yurutucu_token": {
+  "girdi": 31631,
+  "cikti": 24270
+ },
+ "yurutucu_usd": 0.008017100000000001,
+ "bitirdi": true,
+ "sure_sn": 251.0,
+ "gizli": {
+  "gecti": false,
+  "gecen": 16,
+  "toplam": 21,
+  "cikti": ".gizli/test_gizli.py:21: AssertionError\n________________________ test_07_zincir_tatil_haftasonu ________________________\n\n    def test_07_zincir_tatil_haftasonu():\n>       assert recete_bitisi(\"2024-01-12\", 1, [\"2024-01-15\"]) == \"2024-01-16\"\nE       AssertionError: assert '2024-01-12' == '2024-01-16'\nE         - 2024-01-16\nE         ?          ^\nE         + 2024-01-12\nE         ?          ^\n\n.gizli/test_gizli.py:24: AssertionError\n_____________________ test_08_yinelenen_tatil_tek_sayilir ______________________\n\n    def test_08_yinelenen_tatil_tek_sayilir():\n>       assert recete_bitisi(\"2024-01-15\", 1, [\"2024-01-16\", \"2024-01-16\"]) == \"2024-01-17\"\nE       AssertionError: assert '2024-01-15' == '2024-01-17'\nE         - 2024-01-17\nE         ?          ^\nE         + 2024-01-15\nE         ?          ^\n\n.gizli/test_gizli.py:27: AssertionError\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_01_temel_haftaici - AssertionError: assert ...\nFAILED .gizli/test_gizli.py::test_05_haftasonu_kaydirma - AssertionError: ass...\nFAILED .gizli/test_gizli.py::test_06_tatil_kaydirma - AssertionError: assert ...\nFAILED .gizli/test_gizli.py::test_07_zincir_tatil_haftasonu - AssertionError:...\nFAILED .gizli/test_gizli.py::test_08_yinelenen_tatil_tek_sayilir - AssertionE...\n5 failed, 16 passed in 0.08s\n"
+ }
+}

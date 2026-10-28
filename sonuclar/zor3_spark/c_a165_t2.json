@@ -1,0 +1,70 @@
+{
+ "id": "a165",
+ "kip": "c",
+ "tekrar": 2,
+ "kategori": "Türkçe büyük/küçük harf (İ/i, I/ı), Türk alfabesiyle sıralama, sayıyı yazıya çevirme, ünlü uyumuna göre ek",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 47,
+   "basarili": 47
+  }
+ ],
+ "spark_usd": 0.0167717,
+ "arayuz": "",
+ "kabul_yazar": 3,
+ "mutasyon": {
+  "mutant": 16,
+  "ham_mutant": 16,
+  "turlar": [
+   {
+    "oldurulen": 14,
+    "toplam": 16
+   },
+   {
+    "oldurulen": 14,
+    "toplam": 16
+   },
+   {
+    "oldurulen": 14,
+    "toplam": 16
+   }
+  ],
+  "hayatta": [
+   "(5) puanlar esitse ad_soyad Turk alfabesi sirasina gore buyuk kucuk harf duyarsiz siralanir kuralini cigner, Turkce lower atlanır",
+   "(6) adlar da esitse no kucugu once gelir kuralini cigner"
+  ]
+ },
+ "hakem": [
+  {
+   "test": ".usta_kabul/test_kabul_3.py::test_basari_ad_esitse_no_kucugu",
+   "karar": "belirsiz",
+   "gerekce": "Görev metni basari_sirala'nın ad listesi mi yoksa belge cümlesi listesi mi döndüreceğini açıkça belirtmiyor.",
+   "tur": 1
+  }
+ ],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [
+  ".usta_kabul/test_kabul_2.py::test_basari_esit_puanda_turk_alfabesi_buyuk_kucuk_duyarsiz",
+  ".usta_kabul/test_kabul_3.py::test_basari_ad_esitse_no_kucugu"
+ ],
+ "kabul_test_sayisi": 47,
+ "kabul_gecti": true,
+ "ozet": "puan.py içinde PuanDefteri sınıfı yazıldı: Türkçe başlık çevrimi (I→ı, i→İ), 0-100 sayı yazımı (0=sıfır, 100=yüz), \"Ad - Puan: yazı - Okulumuzdandır\" belgesi, artan no, puan-azalan + Türk alfabesi (case-insensitive) + no sıralaması, TypeError/ValueError/KeyError kontrolleri. 15 pytest testi yazıldı ve hepsi geçti.",
+ "adim": 10,
+ "yurutucu_token": {
+  "girdi": 45043,
+  "cikti": 21548
+ },
+ "yurutucu_usd": 0.008813900000000001,
+ "bitirdi": true,
+ "sure_sn": 656.6,
+ "gizli": {
+  "gecti": false,
+  "gecen": 16,
+  "toplam": 22,
+  "cikti": "        d.ogrenci_ekle('oda', 50)\n        d.ogrenci_ekle('öda', 50)\n        s = d.basari_sirala()\n>       assert s[0].startswith('Oda -')\nE       AssertionError: assert False\nE        +  where False = <built-in method startswith of str object at 0x70e565744090>('Oda -')\nE        +    where <built-in method startswith of str object at 0x70e565744090> = 'Oda'.startswith\n\n.gizli/test_gizli.py:153: AssertionError\n__________________________ test_esit_ad_no_kucuk_once __________________________\n\n    def test_esit_ad_no_kucuk_once():\n        d = PuanDefteri()\n        d.ogrenci_ekle('ali veli', 50)\n        d.ogrenci_ekle('ali veli', 50)\n        s = d.basari_sirala()\n>       assert s[0] == d.belge(1)\nE       AssertionError: assert 'Ali Veli' == 'Ali Veli - P...kulumuzdandır'\nE         - Ali Veli - Puan: elli - Okulumuzdandır\nE         + Ali Veli\n\n.gizli/test_gizli.py:161: AssertionError\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_basari_puan_sirasi - AssertionError: assert...\nFAILED .gizli/test_gizli.py::test_basari_turk_alfabesi - AssertionError: asse...\nFAILED .gizli/test_gizli.py::test_basari_case_insensitive - AssertionError: a...\nFAILED .gizli/test_gizli.py::test_g_g_brevesi_sirasi - AssertionError: assert...\nFAILED .gizli/test_gizli.py::test_o_ö_sirasi - AssertionError: assert False\nFAILED .gizli/test_gizli.py::test_esit_ad_no_kucuk_once - AssertionError: ass...\n6 failed, 16 passed in 0.08s\n"
+ }
+}

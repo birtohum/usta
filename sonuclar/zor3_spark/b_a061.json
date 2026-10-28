@@ -1,0 +1,24 @@
+{
+ "id": "a061",
+ "kip": "b",
+ "tekrar": 1,
+ "kategori": "Türkiye'ye özgü kimlik ve hesap numaraları (TC kimlik, VKN, IBAN, MERSİS, plaka, telefon) — birden çok kuralın birlikte uygulandığı",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "kooperatif_ortak.py içinde OrtakDefter sınıfını yazdım: unvan (strip sonrası ≥3), VKN (10 rakam + verilen algoritma), MERSIS (16 rakam, ilk hane ≠0, ilk 10 hane VKN kuralı, 16. hane = ilk 15 toplamı mod 10), IBAN (ham haliyle TR+26, kontrol 02–98, mod97==1) doğrulamaları; hata önceliği unvan>VKN>MERSIS>IBAN ve VKN–MERSIS ilk10 tutarsızlığı VKN hatası; raporla() unvan+VKN sözlük sırasına göre sıralı kopya döndürür. pytest ile 8 test geçti.",
+ "adim": 9,
+ "yurutucu_token": {
+  "girdi": 50634,
+  "cikti": 24412
+ },
+ "yurutucu_usd": 0.009945800000000003,
+ "bitirdi": true,
+ "sure_sn": 195.9,
+ "gizli": {
+  "gecti": true,
+  "gecen": 22,
+  "toplam": 22,
+  "cikti": "......................                                                   [100%]\n22 passed in 0.02s\n"
+ }
+}

@@ -1,0 +1,60 @@
+{
+ "id": "a056",
+ "kip": "c",
+ "tekrar": 2,
+ "kategori": "KDV, tevkifat, stopaj, taksit ve kuruş yuvarlama (Decimal, ROUND_HALF_UP, satır bazında ve toplamda yuvarlama farkı)",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 61,
+   "basarili": 61
+  }
+ ],
+ "spark_usd": 0.021292600000000002,
+ "arayuz": "",
+ "kabul_yazar": 3,
+ "mutasyon": {
+  "mutant": 16,
+  "ham_mutant": 16,
+  "turlar": [
+   {
+    "oldurulen": 13,
+    "toplam": 16
+   },
+   {
+    "oldurulen": 14,
+    "toplam": 16
+   },
+   {
+    "oldurulen": 14,
+    "toplam": 16
+   }
+  ],
+  "hayatta": [
+   "Turkce I i ve İ i donusumlerini dogru yapan yontem gereksinimini cigner",
+   "esit tutarlarda stopaji KDV kaleminden once yaz stabil siralama gereksinimini cigner"
+  ]
+ },
+ "hakem": [],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [],
+ "kabul_test_sayisi": 61,
+ "kabul_gecti": true,
+ "ozet": "kira.py içinde netten_brute_hesapla fonksiyonu yazıldı: tüm hesaplar Decimal + ROUND_HALF_UP ile, brüt=net/(1-stopaj), stopaj/KDV/damga(%0.948) brüt üzerinden, toplam=brüt+KDV, yuvarlama_farkı=brüt*(1-stopaj)-net. Tip kontrolü önce (TypeError), sonra ValueError; Türkçe casefold (I→ı, İ→i + casefold) ile işyeri kontrolü; stabil sorted ile eşit tutarda stopaj önce. pytest ile 14 test geçti.",
+ "adim": 5,
+ "yurutucu_token": {
+  "girdi": 21413,
+  "cikti": 18467
+ },
+ "yurutucu_usd": 0.005834700000000001,
+ "bitirdi": true,
+ "sure_sn": 1027.7,
+ "gizli": {
+  "gecti": true,
+  "gecen": 22,
+  "toplam": 22,
+  "cikti": "......................                                                   [100%]\n22 passed in 0.09s\n"
+ }
+}

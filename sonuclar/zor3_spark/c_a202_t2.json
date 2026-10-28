@@ -1,0 +1,55 @@
+{
+ "id": "a202",
+ "kip": "c",
+ "tekrar": 2,
+ "kategori": "çok dosyalı küçük modül: iki-üç dosyaya bölünmüş, ortak hata sınıfları ve bir komut satırı girişi olan araç",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 49,
+   "basarili": 49
+  }
+ ],
+ "spark_usd": 0.0131095,
+ "arayuz": "",
+ "kabul_yazar": 3,
+ "mutasyon": {
+  "mutant": 12,
+  "ham_mutant": 14,
+  "turlar": [
+   {
+    "oldurulen": 11,
+    "toplam": 12
+   },
+   {
+    "oldurulen": 12,
+    "toplam": 12
+   }
+  ],
+  "hayatta": []
+ },
+ "hakem": [],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [
+  ".usta_kabul/test_kabul_3.py::test_ozetleyici_imzalaraynen_uyar"
+ ],
+ "kabul_test_sayisi": 49,
+ "kabul_gecti": true,
+ "ozet": null,
+ "adim": 20,
+ "yurutucu_token": {
+  "girdi": 165253,
+  "cikti": 54436
+ },
+ "yurutucu_usd": 0.027412500000000003,
+ "bitirdi": false,
+ "sure_sn": 793.1,
+ "gizli": {
+  "gecti": true,
+  "gecen": 22,
+  "toplam": 22,
+  "cikti": "......................                                                   [100%]\n22 passed in 0.38s\n"
+ }
+}

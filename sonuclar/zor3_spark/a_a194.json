@@ -1,0 +1,24 @@
+{
+ "id": "a194",
+ "kip": "a",
+ "tekrar": 1,
+ "kategori": "KDV, tevkifat, stopaj, taksit ve kuruş yuvarlama (Decimal, ROUND_HALF_UP, satır bazında ve toplamda yuvarlama farkı)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "nigde_temizlik.py içinde temizlik_tevkifat_hesapla yazıldı: tip öncelikli hata kontrolü, pay 7/9/10 doğrulaması, Decimal matrah çözümleme, satır KDV ve tevkifat ROUND_HALF_UP hesabı, 2000 TL sınır kuralı, Türkçe harf dönüşümlü sıralama ve kdv_yuvarlama_farki ile Decimal dönüş sözlüğü uygulandı.",
+ "adim": 6,
+ "yurutucu_token": {
+  "girdi": 25930,
+  "cikti": 14634
+ },
+ "yurutucu_usd": 0.005519800000000001,
+ "bitirdi": true,
+ "sure_sn": 158.4,
+ "gizli": {
+  "gecti": true,
+  "gecen": 22,
+  "toplam": 22,
+  "cikti": "......................                                                   [100%]\n22 passed in 0.09s\n"
+ }
+}

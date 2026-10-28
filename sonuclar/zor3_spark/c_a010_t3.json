@@ -1,0 +1,77 @@
+{
+ "id": "a010",
+ "kip": "c",
+ "tekrar": 3,
+ "kategori": "tarih ve saat: resmî tatiller parametreyle, iş günü hesabı, Türkiye saat dilimi (UTC+3, yaz saati yok), gün/ay adları Türkçe",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 52,
+   "basarili": 52
+  }
+ ],
+ "spark_usd": 0.0126156,
+ "arayuz": "",
+ "kabul_yazar": 3,
+ "mutasyon": {
+  "mutant": 16,
+  "ham_mutant": 16,
+  "turlar": [
+   {
+    "oldurulen": 14,
+    "toplam": 16
+   },
+   {
+    "oldurulen": 15,
+    "toplam": 16
+   },
+   {
+    "oldurulen": 15,
+    "toplam": 16
+   }
+  ],
+  "hayatta": [
+   "--gun-ekle tam sayi degilse cikis kodu 2 gereksinimini cigner: 1.5 gibi float kabul edilir"
+  ]
+ },
+ "hakem": [
+  {
+   "test": ".usta_kabul/test_kabul_m1.py::test_negatif_gun_ekle_geriye_gider",
+   "karar": "belirsiz",
+   "gerekce": "Görev metni negatif --gun-ekle değerinin geçerli olup olmadığını açıkça belirtmiyor.",
+   "tur": 1
+  },
+  {
+   "test": ".usta_kabul/test_kabul_m1.py::test_negatif_gun_ekle_geriye_gider_pazartesi",
+   "karar": "belirsiz",
+   "gerekce": "Görev metni negatif --gun-ekle değerinin geçerli olup olmadığını açıkça belirtmiyor.",
+   "tur": 1
+  }
+ ],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [
+  ".usta_kabul/test_kabul_2.py::test_gun_adi_ay_adi_turkiye_saati",
+  ".usta_kabul/test_kabul_3.py::test_pazar_gunu_adi_dogrudur",
+  ".usta_kabul/test_kabul_m1.py::test_negatif_gun_ekle_geriye_gider",
+  ".usta_kabul/test_kabul_m1.py::test_negatif_gun_ekle_geriye_gider_pazartesi"
+ ],
+ "kabul_test_sayisi": 52,
+ "kabul_gecti": true,
+ "ozet": "isgunu_cli.py programını gerçekledim: --tarih (zorunlu, tireli ISO), --gun-ekle (dahil mantığı, 0 iş günü normalizasyonu), --tatiller/--yarim-gunler (boş dize boş küme), --cikti (json/metin), Cumartesi-Pazar ve tatiller kapalı, yarım günler iş günü sayılmaz, Türkçe gün/ay adları, tek satır JSON stdout, hatalarda stderr + çıkış 2 ve biçim→aralık→hesaplama önceliği, --help Türkçe yardım. test_isgunu.py ile 22 pytest testi yazıp `python -m pytest -q` ile hepsini geçirdim.",
+ "adim": 13,
+ "yurutucu_token": {
+  "girdi": 135316,
+  "cikti": 37130
+ },
+ "yurutucu_usd": 0.0209576,
+ "bitirdi": true,
+ "sure_sn": 1022.3,
+ "gizli": {
+  "gecti": true,
+  "gecen": 21,
+  "toplam": 21,
+  "cikti": ".....................                                                    [100%]\n21 passed in 1.74s\n"
+ }
+}

@@ -1,0 +1,62 @@
+{
+ "id": "a107",
+ "kip": "c",
+ "tekrar": 1,
+ "kategori": "çok dosyalı küçük modül: iki-üç dosyaya bölünmüş, ortak hata sınıfları ve bir komut satırı girişi olan araç",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 54,
+   "basarili": 54
+  }
+ ],
+ "spark_usd": 0.0108681,
+ "arayuz": "",
+ "kabul_yazar": 3,
+ "mutasyon": {
+  "mutant": 16,
+  "ham_mutant": 16,
+  "turlar": [
+   {
+    "oldurulen": 15,
+    "toplam": 16
+   },
+   {
+    "oldurulen": 15,
+    "toplam": 16
+   },
+   {
+    "oldurulen": 15,
+    "toplam": 16
+   }
+  ],
+  "hayatta": [
+   "hata durumunda cikis kodu 2 olmali kuralini cigner"
+  ]
+ },
+ "hakem": [],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [
+  ".usta_kabul/test_kabul_2.py::test_plaka_turkce_duyarsiz_yineleme",
+  ".usta_kabul/test_kabul_3.py::test_plaka_noktali_I_yineleme"
+ ],
+ "kabul_test_sayisi": 54,
+ "kabul_gecti": true,
+ "ozet": "hatalar.py, feribot.py ve cli.py yazıldı; Kuyruk ekle/sirala, Türkçe duyarsız yineleme, hata önceliği ve CLI davranışı uygulandı; 22 pytest testi geçti.",
+ "adim": 11,
+ "yurutucu_token": {
+  "girdi": 48353,
+  "cikti": 31799
+ },
+ "yurutucu_usd": 0.011195100000000001,
+ "bitirdi": true,
+ "sure_sn": 801.9,
+ "gizli": {
+  "gecti": true,
+  "gecen": 21,
+  "toplam": 21,
+  "cikti": ".....................                                                    [100%]\n21 passed in 0.29s\n"
+ }
+}

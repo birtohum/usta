@@ -1,0 +1,90 @@
+{
+ "id": "a019",
+ "kip": "c",
+ "tekrar": 2,
+ "kategori": "Türkiye'ye özgü kimlik ve hesap numaraları (TC kimlik, VKN, IBAN, MERSİS, plaka, telefon) — birden çok kuralın birlikte uygulandığı",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 22,
+   "basarili": 22
+  }
+ ],
+ "spark_usd": 0.0313628,
+ "arayuz": "",
+ "kabul_yazar": 1,
+ "mutasyon": {
+  "mutant": 15,
+  "ham_mutant": 15,
+  "turlar": [
+   {
+    "oldurulen": 8,
+    "toplam": 15
+   },
+   {
+    "oldurulen": 13,
+    "toplam": 15
+   },
+   {
+    "oldurulen": 14,
+    "toplam": 15
+   }
+  ],
+  "hayatta": [
+   "Hata oncelik sirasi bicim ve saglama ayrimini cigner, ulke kodu bicim olmali"
+  ]
+ },
+ "hakem": [
+  {
+   "test": ".usta_kabul/test_kabul_m1.py::test_girdi_aynen_korunur",
+   "karar": "belirsiz",
+   "gerekce": "Görev girdinin aynen korunup normalizenin ayrı alanda verilmesini istiyor ama düz metinde literal girdi/normalize etiketlerini açıkça şart koşmuyor.",
+   "tur": 1
+  },
+  {
+   "test": ".usta_kabul/test_kabul_m1.py::test_iban_ulke_kodu_bicim_hatasi",
+   "karar": "hatali",
+   "gerekce": "Test ASCII bicim arıyor oysa UTF8 Türkçe yazım biçim olmalı ve görev yabancı IBAN kuralını açıkça tanımlamıyor.",
+   "tur": 1
+  },
+  {
+   "test": ".usta_kabul/test_kabul_m2.py::test_iban_ulke_kodu_bicim_olmalidir",
+   "karar": "hatali",
+   "gerekce": "Çıktıda hata biçim zaten var, testin ASCII bicim araması ç harfi yüzünden kendi içinde yanlış.",
+   "tur": 1
+  },
+  {
+   "test": ".usta_kabul/test_kabul_m2.py::test_iban_yanlis_ulke_ikinci_ornek",
+   "karar": "hatali",
+   "gerekce": "Çıktıda hata biçim zaten var, testin ASCII bicim araması ç harfi yüzünden kendi içinde yanlış.",
+   "tur": 1
+  }
+ ],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [
+  ".usta_kabul/test_kabul_1.py::test_plaka_buyuk_I_ve_İ_ayrimi_korunur",
+  ".usta_kabul/test_kabul_m1.py::test_girdi_aynen_korunur",
+  ".usta_kabul/test_kabul_m1.py::test_iban_ulke_kodu_bicim_hatasi",
+  ".usta_kabul/test_kabul_m2.py::test_iban_ulke_kodu_bicim_olmalidir",
+  ".usta_kabul/test_kabul_m2.py::test_iban_yanlis_ulke_ikinci_ornek"
+ ],
+ "kabul_test_sayisi": 22,
+ "kabul_gecti": true,
+ "ozet": "kimlik_araci.py yazıldı: TC/VKN/IBAN/MERSİS/telefon/plaka tekil ve CSV dosya kipi, --cikti/--json desteği, hata önceliği ve 0/1/2 çıkış kodları uygulandı; pytest ile 10 test geçti.",
+ "adim": 11,
+ "yurutucu_token": {
+  "girdi": 66734,
+  "cikti": 48023
+ },
+ "yurutucu_usd": 0.016278,
+ "bitirdi": true,
+ "sure_sn": 1180.7,
+ "gizli": {
+  "gecti": false,
+  "gecen": 20,
+  "toplam": 21,
+  "cikti": ".......F.............                                                    [100%]\n=================================== FAILURES ===================================\n__________________________ test_08_mersis_valid_exit0 __________________________\n\n    def test_08_mersis_valid_exit0():\n        r = run(\"--mersis\", MERSIS_OK)\n>       assert r.returncode == 0\nE       AssertionError: assert 1 == 0\nE        +  where 1 = CompletedProcess(args=['/usr/bin/python', '/home/usta/is/5c9bdbcafd2e/kimlik_araci.py', '--mersis', '1111111111111115'], returncode=1, stdout='mersis: 1111111111111115: geçersiz: 1111111111111115\\n', stderr='').returncode\n\n.gizli/test_gizli.py:62: AssertionError\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_08_mersis_valid_exit0 - AssertionError: ass...\n1 failed, 20 passed in 1.03s\n"
+ }
+}

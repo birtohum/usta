@@ -1,0 +1,67 @@
+{
+ "id": "a081",
+ "kip": "c",
+ "tekrar": 1,
+ "kategori": "tarih ve saat: resmî tatiller parametreyle, iş günü hesabı, Türkiye saat dilimi (UTC+3, yaz saati yok), gün/ay adları Türkçe",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 52,
+   "basarili": 52
+  }
+ ],
+ "spark_usd": 0.015631000000000003,
+ "arayuz": "",
+ "kabul_yazar": 3,
+ "mutasyon": {
+  "mutant": 16,
+  "ham_mutant": 16,
+  "turlar": [
+   {
+    "oldurulen": 14,
+    "toplam": 16
+   },
+   {
+    "oldurulen": 15,
+    "toplam": 16
+   },
+   {
+    "oldurulen": 15,
+    "toplam": 16
+   }
+  ],
+  "hayatta": [
+   "2. gereksinim: saniyelerin alta yuvarlanarak dakikaya indirilmesi ihlali"
+  ]
+ },
+ "hakem": [],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [
+  ".usta_kabul/test_kabul_1.py::test_r3_liste_bicimi_haftasonu_yok",
+  ".usta_kabul/test_kabul_1.py::test_r3_tatil_atlama",
+  ".usta_kabul/test_kabul_1.py::test_r8_siralama_erken_once",
+  ".usta_kabul/test_kabul_2.py::test_r3_haftasonu_yok",
+  ".usta_kabul/test_kabul_2.py::test_r3_tatil_yok",
+  ".usta_kabul/test_kabul_2.py::test_r9_stdlib_siniri",
+  ".usta_kabul/test_kabul_3.py::test_yalnizca_stdlib_ve_zamansiz"
+ ],
+ "kabul_test_sayisi": 52,
+ "kabul_gecti": true,
+ "ozet": "kargo_cli.py yazıldı: UTC+3 çevrimi, saniye alta yuvarlama, 17:00 sınırı, iş günü/tatil/hafta sonu eleme, gun=0/negatif kuralları, hata kodları (zaman=2 önce, gun sayı değil=3), Türkçe küçük harf (İ→i, I→ı) ve erken saate göre sıralama uygulandı. Yalnızca sys+datetime kullanıldı. pytest ile 17 test geçti.",
+ "adim": 11,
+ "yurutucu_token": {
+  "girdi": 54768,
+  "cikti": 49243
+ },
+ "yurutucu_usd": 0.015325400000000001,
+ "bitirdi": true,
+ "sure_sn": 1191.5,
+ "gizli": {
+  "gecti": true,
+  "gecen": 20,
+  "toplam": 20,
+  "cikti": "....................                                                     [100%]\n20 passed in 1.87s\n"
+ }
+}

@@ -1,0 +1,24 @@
+{
+ "id": "a201",
+ "kip": "b",
+ "tekrar": 3,
+ "kategori": "tarih ve saat: resmî tatiller parametreyle, iş günü hesabı, Türkiye saat dilimi (UTC+3, yaz saati yok), gün/ay adları Türkçe",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "genel_kurul.py yazıldı: GenelKurulTakvimi; 7 iş günü, 7 gün sonra ilk iş günü, Cumartesi kuralı, tatiller, 09:00 Europe/Istanbul, Türkçe etiket/büyük harf (i→İ, ı→I), sıralama ve hata önceliği. pytest 13 test geçti.",
+ "adim": 8,
+ "yurutucu_token": {
+  "girdi": 36603,
+  "cikti": 34948
+ },
+ "yurutucu_usd": 0.010649900000000002,
+ "bitirdi": true,
+ "sure_sn": 501.2,
+ "gizli": {
+  "gecti": false,
+  "gecen": 0,
+  "toplam": 2,
+  "cikti": "\n==================================== ERRORS ====================================\n____________________ ERROR collecting .gizli/test_gizli.py _____________________\nImportError while importing test module '/home/usta/is/1573df30aad5/.gizli/test_gizli.py'.\nHint: make sure your test modules/packages have valid Python names.\nTraceback:\n/usr/lib/python3.12/importlib/__init__.py:90: in import_module\n    return _bootstrap._gcd_import(name[level:], package, level)\n.gizli/test_gizli.py:5: in <module>\n    from genel_kurul import GenelKurulTakvimi, turkce_upper, toplantilari_sirala\nE   ImportError: cannot import name 'turkce_upper' from 'genel_kurul' (/home/usta/is/1573df30aad5/genel_kurul.py). Did you mean: '_turkce_upper'?\n=========================== short test summary info ============================\nERROR .gizli/test_gizli.py\n!!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!\n1 error in 0.17s\n"
+ }
+}

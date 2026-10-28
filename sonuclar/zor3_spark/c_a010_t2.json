@@ -1,0 +1,75 @@
+{
+ "id": "a010",
+ "kip": "c",
+ "tekrar": 2,
+ "kategori": "tarih ve saat: resmî tatiller parametreyle, iş günü hesabı, Türkiye saat dilimi (UTC+3, yaz saati yok), gün/ay adları Türkçe",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 63,
+   "basarili": 63
+  }
+ ],
+ "spark_usd": 0.0124581,
+ "arayuz": "",
+ "kabul_yazar": 3,
+ "mutasyon": {
+  "mutant": 14,
+  "ham_mutant": 14,
+  "turlar": [
+   {
+    "oldurulen": 9,
+    "toplam": 14
+   },
+   {
+    "oldurulen": 13,
+    "toplam": 14
+   },
+   {
+    "oldurulen": 13,
+    "toplam": 14
+   }
+  ],
+  "hayatta": [
+   "--tarih biçime uymazsa çıkış kodu 2 gereksinimini çiğner: biçim kontrolü atlanır"
+  ]
+ },
+ "hakem": [
+  {
+   "test": ".usta_kabul/test_kabul_m1.py::test_negatif_geriye_dogru_sayar",
+   "karar": "belirsiz",
+   "gerekce": "Görev metni negatif --gun-ekle değerini açıkça yasaklamıyor ve geriye saymayı tek anlamlı tanımlamıyor.",
+   "tur": 1
+  },
+  {
+   "test": ".usta_kabul/test_kabul_m1.py::test_sifir_ileriye_normalize",
+   "karar": "belirsiz",
+   "gerekce": "Görev metni başlangıç kapalı gündeyken sıfır eklemenin ileriye normalize olacağını açıkça belirtmiyor.",
+   "tur": 1
+  }
+ ],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [
+  ".usta_kabul/test_kabul_m1.py::test_negatif_geriye_dogru_sayar",
+  ".usta_kabul/test_kabul_m1.py::test_sifir_ileriye_normalize"
+ ],
+ "kabul_test_sayisi": 63,
+ "kabul_gecti": true,
+ "ozet": "isgunu_cli.py gerçeklendi: dahil mantıklı iş günü hesabı (hafta sonu/tatil tam kapalı, yarım gün kapalı), ISO biçim ve değer kontrollerinde stderr+çıkış 2, json/metin cikti, Türkçe gün/ay adlarıyla --help. pytest ile 23 test geçti.",
+ "adim": 7,
+ "yurutucu_token": {
+  "girdi": 39864,
+  "cikti": 21505
+ },
+ "yurutucu_usd": 0.0082874,
+ "bitirdi": true,
+ "sure_sn": 1006.4,
+ "gizli": {
+  "gecti": false,
+  "gecen": 19,
+  "toplam": 21,
+  "cikti": "    def test_cumartesi_sifir_pazartesiye():\n        out = calistir('--tarih', '2024-01-06', '--gun-ekle', '0', '--cikti', 'json')\n        assert out.returncode == 0\n        veri = json.loads(out.stdout)\n>       assert veri['sonuc'] == '2024-01-08'\nE       AssertionError: assert '2024-01-06' == '2024-01-08'\nE         - 2024-01-08\nE         ?          ^\nE         + 2024-01-06\nE         ?          ^\n\n.gizli/test_gizli.py:20: AssertionError\n_________________________ test_pazar_sifir_pazartesiye _________________________\n\n    def test_pazar_sifir_pazartesiye():\n        out = calistir('--tarih', '2024-01-07', '--gun-ekle', '0', '--cikti', 'json')\n        assert out.returncode == 0\n        veri = json.loads(out.stdout)\n>       assert veri['sonuc'] == '2024-01-08'\nE       AssertionError: assert '2024-01-07' == '2024-01-08'\nE         - 2024-01-08\nE         ?          ^\nE         + 2024-01-07\nE         ?          ^\n\n.gizli/test_gizli.py:26: AssertionError\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_cumartesi_sifir_pazartesiye - AssertionErro...\nFAILED .gizli/test_gizli.py::test_pazar_sifir_pazartesiye - AssertionError: a...\n2 failed, 19 passed in 1.76s\n"
+ }
+}

@@ -1,0 +1,24 @@
+{
+ "id": "a169",
+ "kip": "b",
+ "tekrar": 1,
+ "kategori": "KDV, tevkifat, stopaj, taksit ve kuruş yuvarlama (Decimal, ROUND_HALF_UP, satır bazında ve toplamda yuvarlama farkı)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "karaman_firin.py içinde firin_kdv_dagit yazıldı: Decimal ile satır brüt (adet×etiket, HALF_UP), 1000 TL üzeri 5 TL indirim (oransal dağıtım), net=brüt/(1+oran) yuvarlama, KDV=brüt-net, fark en yüksek brütlü satıra (TR küçük harf tie-break) eklenir. Boş sepette sıfırlar, TypeError>ValueError önceliği. pytest 4 test geçti.",
+ "adim": 11,
+ "yurutucu_token": {
+  "girdi": 47728,
+  "cikti": 39076
+ },
+ "yurutucu_usd": 0.012588,
+ "bitirdi": true,
+ "sure_sn": 431.0,
+ "gizli": {
+  "gecti": true,
+  "gecen": 20,
+  "toplam": 20,
+  "cikti": "....................                                                     [100%]\n20 passed in 0.07s\n"
+ }
+}

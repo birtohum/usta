@@ -1,0 +1,24 @@
+{
+ "id": "a058",
+ "kip": "a",
+ "tekrar": 2,
+ "kategori": "tarih ve saat: resmî tatiller parametreyle, iş günü hesabı, Türkiye saat dilimi (UTC+3, yaz saati yok), gün/ay adları Türkçe",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "gumruk_cli.py yazıldı: istenen bayraklar, hafta sonu/tatil eleme, metin çıktısı ve ay özeti, hata kodları 2/3, TR küçük harf kuralı ve yalnızca standart kütüphane kurallarına uygun; hızlı testler yapıldı.",
+ "adim": 4,
+ "yurutucu_token": {
+  "girdi": 8606,
+  "cikti": 19603
+ },
+ "yurutucu_usd": 0.0047812,
+ "bitirdi": true,
+ "sure_sn": 204.1,
+ "gizli": {
+  "gecti": true,
+  "gecen": 20,
+  "toplam": 20,
+  "cikti": "....................                                                     [100%]\n20 passed in 1.10s\n"
+ }
+}

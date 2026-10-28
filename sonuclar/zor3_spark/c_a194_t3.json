@@ -1,0 +1,63 @@
+{
+ "id": "a194",
+ "kip": "c",
+ "tekrar": 3,
+ "kategori": "KDV, tevkifat, stopaj, taksit ve kuruş yuvarlama (Decimal, ROUND_HALF_UP, satır bazında ve toplamda yuvarlama farkı)",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 50,
+   "basarili": 50
+  }
+ ],
+ "spark_usd": 0.016363500000000003,
+ "arayuz": "",
+ "kabul_yazar": 3,
+ "mutasyon": {
+  "mutant": 15,
+  "ham_mutant": 15,
+  "turlar": [
+   {
+    "oldurulen": 10,
+    "toplam": 15
+   },
+   {
+    "oldurulen": 10,
+    "toplam": 15
+   },
+   {
+    "oldurulen": 10,
+    "toplam": 15
+   }
+  ],
+  "hayatta": [
+   "aciklama karsilastirmalarinda Turkce harf donusumu (I->i donusumu eksik) zorunlulugunu cigner",
+   "matrah metni bos veya yalnizca bosluk ise ValueError gereksinimini cigner, bosluklu metin kacirilir",
+   "ayni matrahli kalemler Turkce alfabetik aciklamaya gore dizilir siralama gereksinimini cigner",
+   "tam esitlikte giris sirasi korunur stabil siralama gereksinimini cigner, bag tersine doner",
+   "her satir tevkifati satir KDV carpi pay bolu 10 isleminin yuvarlanmasiyla hesaplanir gereksinimini cigner"
+  ]
+ },
+ "hakem": [],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [],
+ "kabul_test_sayisi": 50,
+ "kabul_gecti": true,
+ "ozet": "nigde_temizlik.py içinde temizlik_tevkifat_hesapla yazıldı: tip kontrolü (TypeError), pay 7/9/10 kontrolü, boş liste/matrah ve pozitif Decimal kontrolleri (ValueError), satır KDV %20 ve satır tevkifat pay/10 ROUND_HALF_UP, 2000,00 sınırında eşitlik dahil tevkifat, genel KDV ile yuvarlama farkı, Türkçe harf dönüşümlü sıralama ve Decimal dönüş sözlüğü. pytest ile 10 test geçti.",
+ "adim": 4,
+ "yurutucu_token": {
+  "girdi": 14090,
+  "cikti": 17285
+ },
+ "yurutucu_usd": 0.0048660000000000005,
+ "bitirdi": true,
+ "sure_sn": 701.9,
+ "gizli": {
+  "gecti": true,
+  "gecen": 22,
+  "toplam": 22,
+  "cikti": "......................                                                   [100%]\n22 passed in 0.04s\n"
+ }
+}

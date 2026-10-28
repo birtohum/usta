@@ -1,0 +1,59 @@
+{
+ "id": "a145",
+ "kip": "c",
+ "tekrar": 2,
+ "kategori": "Türkçe büyük/küçük harf (İ/i, I/ı), Türk alfabesiyle sıralama, sayıyı yazıya çevirme, ünlü uyumuna göre ek",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 58,
+   "basarili": 58
+  }
+ ],
+ "spark_usd": 0.012198,
+ "arayuz": "",
+ "kabul_yazar": 3,
+ "mutasyon": {
+  "mutant": 16,
+  "ham_mutant": 16,
+  "turlar": [
+   {
+    "oldurulen": 14,
+    "toplam": 16
+   },
+   {
+    "oldurulen": 15,
+    "toplam": 16
+   },
+   {
+    "oldurulen": 15,
+    "toplam": 16
+   }
+  ],
+  "hayatta": [
+   "ondalik girdiyi kabul ederek kilo/fiyat tam-sayi ve exit-2 kuralini cigner"
+  ]
+ },
+ "hakem": [],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [],
+ "kabul_test_sayisi": 58,
+ "kabul_gecti": true,
+ "ozet": "makbuz.py yazıldı: Türkçe başlık normalizasyonu (i/İ/I/ı), ayrılma eki (dan/den–tan/ten, kesmesiz), kilo/fiyat aralıklı tam sayı denetimi, yüz/bin kurallı sayı-yazımı, TL toplam satırı, bayrak öncelik sırası (bilinmeyen>eksik>geçersiz, exit 2), UTF-8 LF dört satır çıktı; yalnızca sys kullanıldı. pytest ile 11 test geçti.",
+ "adim": 17,
+ "yurutucu_token": {
+  "girdi": 167813,
+  "cikti": 55439
+ },
+ "yurutucu_usd": 0.027869100000000004,
+ "bitirdi": true,
+ "sure_sn": 611.8,
+ "gizli": {
+  "gecti": false,
+  "gecen": 19,
+  "toplam": 20,
+  "cikti": "=================================== FAILURES ===================================\n___________________________ test_stdlib_ve_siralama ____________________________\n\n    def test_stdlib_ve_siralama():\n        import ast\n        src = (WORKDIR / \"makbuz.py\").read_text(encoding=\"utf-8\")\n        tree = ast.parse(src)\n        mods = set()\n        for n in ast.walk(tree):\n            if isinstance(n, ast.Import):\n                for a in n.names:\n                    mods.add(a.name.split(\".\")[0])\n            elif isinstance(n, ast.ImportFrom):\n                if n.module:\n                    mods.add(n.module.split(\".\")[0])\n        try:\n            std = sys.stdlib_module_names\n        except AttributeError:\n            std = {\"sys\",\"pathlib\",\"os\",\"re\",\"argparse\",\"unicodedata\"}\n        for m in mods:\n            assert m in std, m\n        import makbuz\n>       assert hasattr(makbuz, \"turkce_sira_anahtari\")\nE       AssertionError: assert False\nE        +  where False = hasattr(<module 'makbuz' from '/home/usta/is/01c8b838bd9a/makbuz.py'>, 'turkce_sira_anahtari')\n\n.gizli/test_gizli.py:187: AssertionError\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_stdlib_ve_siralama - AssertionError: assert...\n1 failed, 19 passed in 0.78s\n"
+ }
+}

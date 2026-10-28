@@ -1,0 +1,59 @@
+{
+ "id": "a011",
+ "kip": "c",
+ "tekrar": 3,
+ "kategori": "çok dosyalı küçük modül: iki-üç dosyaya bölünmüş, ortak hata sınıfları ve bir komut satırı girişi olan araç",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 60,
+   "basarili": 60
+  }
+ ],
+ "spark_usd": 0.0120421,
+ "arayuz": "",
+ "kabul_yazar": 3,
+ "mutasyon": {
+  "mutant": 14,
+  "ham_mutant": 14,
+  "turlar": [
+   {
+    "oldurulen": 13,
+    "toplam": 14
+   },
+   {
+    "oldurulen": 13,
+    "toplam": 14
+   },
+   {
+    "oldurulen": 13,
+    "toplam": 14
+   }
+  ],
+  "hayatta": [
+   "büyük İ küçük i olmalidir"
+  ]
+ },
+ "hakem": [],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [],
+ "kabul_test_sayisi": 60,
+ "kabul_gecti": true,
+ "ozet": "hatalar.py (BosGirdiHatasi, UzunlukHatasi ValueError soyundan) ve slug.py (slugla Türkçe dönüşüm + tireleme, benzersiz_yap en küçük boş ek, `python -m slug üret` CLI) yazıldı; 13 pytest testi geçiyor.",
+ "adim": 11,
+ "yurutucu_token": {
+  "girdi": 41983,
+  "cikti": 32325
+ },
+ "yurutucu_usd": 0.010663299999999999,
+ "bitirdi": true,
+ "sure_sn": 1169.6,
+ "gizli": {
+  "gecti": true,
+  "gecen": 22,
+  "toplam": 22,
+  "cikti": "......................                                                   [100%]\n22 passed in 0.33s\n"
+ }
+}

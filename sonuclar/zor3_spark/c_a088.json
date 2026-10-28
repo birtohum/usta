@@ -1,0 +1,62 @@
+{
+ "id": "a088",
+ "kip": "c",
+ "tekrar": 1,
+ "kategori": "CSV/JSON ile çalışan ve uç durumları çok olan veri işleme (BOM, ; ayırıcı, 1.234,56 sayı biçimi, boş/bozuk satır)",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 54,
+   "basarili": 54
+  }
+ ],
+ "spark_usd": 0.0172537,
+ "arayuz": "",
+ "kabul_yazar": 3,
+ "mutasyon": {
+  "mutant": 15,
+  "ham_mutant": 15,
+  "turlar": [
+   {
+    "oldurulen": 13,
+    "toplam": 15
+   },
+   {
+    "oldurulen": 13,
+    "toplam": 15
+   },
+   {
+    "oldurulen": 13,
+    "toplam": 15
+   }
+  ],
+  "hayatta": [
+   "sefer_csv utf-8-sig ile okunup BOM yoksayilmali",
+   "ROUND_HALF_UP ile 2 ondaliga yuvarlanmali"
+  ]
+ },
+ "hakem": [],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [
+  ".usta_kabul/test_kabul_3.py::test_esit_payda_turkce_alfabe_siralama"
+ ],
+ "kabul_test_sayisi": 54,
+ "kabul_gecti": true,
+ "ozet": "`navlun_paylasim.py` içinde `dagit` işlevi yazıldı: utf-8-sig + `;` CSV okuma, tamamen boş satır atlama, Türkçe sayı çözümleme (`.` sil, `,`→`.`), Decimal ROUND_HALF_UP ile pay hesabı, min_tonaj altı 0,00, Türkçe duyarsız plaka gruplama (I→ı, İ→i + casefold), pay azalan/eşitlikte plaka artan sıralama, Türkçe pay biçimi, FileNotFoundError/ValueError önceliği ve boş liste durumu. 16 pytest testi yazıldı ve hepsi geçti.",
+ "adim": 7,
+ "yurutucu_token": {
+  "girdi": 34992,
+  "cikti": 23629
+ },
+ "yurutucu_usd": 0.008225,
+ "bitirdi": true,
+ "sure_sn": 997.6,
+ "gizli": {
+  "gecti": true,
+  "gecen": 22,
+  "toplam": 22,
+  "cikti": "......................                                                   [100%]\n22 passed in 0.19s\n"
+ }
+}

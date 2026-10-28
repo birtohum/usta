@@ -1,0 +1,67 @@
+{
+ "id": "a187",
+ "kip": "c",
+ "tekrar": 2,
+ "kategori": "çok dosyalı küçük modül: iki-üç dosyaya bölünmüş, ortak hata sınıfları ve bir komut satırı girişi olan araç",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": false,
+   "toplam": 54,
+   "basarili": 53
+  },
+  {
+   "gecti": true,
+   "toplam": 54,
+   "basarili": 54
+  }
+ ],
+ "spark_usd": 0.0149855,
+ "arayuz": "",
+ "kabul_yazar": 3,
+ "mutasyon": {
+  "mutant": 15,
+  "ham_mutant": 15,
+  "turlar": [
+   {
+    "oldurulen": 14,
+    "toplam": 15
+   },
+   {
+    "oldurulen": 15,
+    "toplam": 15
+   }
+  ],
+  "hayatta": []
+ },
+ "hakem": [
+  {
+   "test": ".usta_kabul/test_kabul_m1.py::test_elektrik_25kwh_dahil_ucretsiz",
+   "karar": "hatali",
+   "gerekce": "Görev 25 kWh dahil ücretsiz işlevini istiyor ama kaynak kodda belirli bir ifade şart koşmuyor.",
+   "tur": 1
+  }
+ ],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [
+  ".usta_kabul/test_kabul_m1.py::test_elektrik_25kwh_dahil_ucretsiz"
+ ],
+ "kabul_test_sayisi": 54,
+ "kabul_gecti": true,
+ "ozet": "Kabul testindeki başarısızlığın nedeni kalıcılık dosya adı uyumsuzluğuydu: cli.py `.kamp_veri.json` kullanırken kabul testi `kamp_data.json`/`rezervasyonlar.json` dosyalarını temizliyordu; eski durum dosyası silinmediği için sayaç R-0003'ten devam etti. Görev metni dosya adı belirtmediğinden kalıcılık dosyası `kamp_data.json` olarak değiştirildi. Kendi testlerim (15) ve kabul testleri (16) tamamen geçiyor.",
+ "adim": 15,
+ "yurutucu_token": {
+  "girdi": 125566,
+  "cikti": 29025
+ },
+ "yurutucu_usd": 0.0183616,
+ "bitirdi": true,
+ "sure_sn": 578.5,
+ "gizli": {
+  "gecti": false,
+  "gecen": 20,
+  "toplam": 22,
+  "cikti": "            # read() call run on child threads, with the timeout\n                    # being done in a join() on those threads.  communicate()\n                    # _after_ kill() is required to collect that and add it\n                    # to the exception.\n                    exc.stdout, exc.stderr = process.communicate()\n                else:\n                    # POSIX _communicate already populated the output so\n                    # far into the TimeoutExpired exception.\n                    process.wait()\n                raise\n            except:  # Including KeyboardInterrupt, communicate handled that.\n                process.kill()\n                # We don't call process.wait() as .__exit__ does that for us.\n                raise\n            retcode = process.poll()\n            if check and retcode:\n>               raise CalledProcessError(retcode, process.args,\n                                         output=stdout, stderr=stderr)\nE               subprocess.CalledProcessError: Command '['/usr/bin/python', 'cli.py', '--rezerve', '--parsel', '5', '--tip', 'çadır', '--giris', '2026-06-01', '--cikis', '2026-06-04']' returned non-zero exit status 1.\n\n/usr/lib/python3.12/subprocess.py:571: CalledProcessError\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_cli_rezerve - AssertionError: assert 1 == 0\nFAILED .gizli/test_gizli.py::test_cli_ucret_ve_doluluk - subprocess.CalledPro...\n2 failed, 20 passed in 0.40s\n"
+ }
+}

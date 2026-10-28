@@ -1,0 +1,70 @@
+{
+ "id": "a191",
+ "kip": "c",
+ "tekrar": 3,
+ "kategori": "tarih ve saat: resmî tatiller parametreyle, iş günü hesabı, Türkiye saat dilimi (UTC+3, yaz saati yok), gün/ay adları Türkçe",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 21,
+   "basarili": 21
+  }
+ ],
+ "spark_usd": 0.034846300000000004,
+ "arayuz": "Dosya balon_cli.py. Çağrı: python balon_cli.py --baslangic YYYY-AA-GG --bitis YYYY-AA-GG --ucus-gunleri 2,4,6 --tatiller YYYY-AA-GG,... --kucuk --zaman-damgasi DEGER --tatil-dosyasi YOL",
+ "kabul_yazar": 1,
+ "mutasyon": {
+  "mutant": 15,
+  "ham_mutant": 15,
+  "turlar": [
+   {
+    "oldurulen": 10,
+    "toplam": 15
+   },
+   {
+    "oldurulen": 10,
+    "toplam": 15
+   },
+   {
+    "oldurulen": 12,
+    "toplam": 15
+   }
+  ],
+  "hayatta": [
+   "--kucuk Turkce kucultme I->ı ve İ->i kuralini cigner (İ donusumunu atlar)",
+   "Ingilizce lower kullanilmaz Turkce kucuk harf uygulanir kuralini cigner",
+   "hatali tarih biciminde ValueError yerine stderr + exit 2 kuralini cigner"
+  ]
+ },
+ "hakem": [
+  {
+   "test": ".usta_kabul/test_kabul_2.py::test_zaman_damgasi_saniye_yuvarlanmaz_atilir",
+   "karar": "hatali",
+   "gerekce": "Görev metni başlangıç-bitiş dahil tüm uygun günlerin listelenmesini istiyor ve zaman damgasına aralığı daraltma işlevi vermiyor.",
+   "tur": 1
+  }
+ ],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [
+  ".usta_kabul/test_kabul_2.py::test_zaman_damgasi_saniye_yuvarlanmaz_atilir"
+ ],
+ "kabul_test_sayisi": 21,
+ "kabul_gecti": true,
+ "ozet": "balon_cli.py yazıldı: tarih aralığı tarama, uçuş günü filtresi, tatil/tatil-dosyası, Türkçe gün adı ve --kucuk, zaman damgası saniye atma, hata kodu 2. pytest 8 test geçti.",
+ "adim": 6,
+ "yurutucu_token": {
+  "girdi": 23913,
+  "cikti": 25753
+ },
+ "yurutucu_usd": 0.007541900000000001,
+ "bitirdi": true,
+ "sure_sn": 998.9,
+ "gizli": {
+  "gecti": false,
+  "gecen": 19,
+  "toplam": 22,
+  "cikti": "si', '2025-04-01T20:59:30Z'], returncode=2, stdout='', stderr=\"hata: bilinmeyen bayrak: '--utc-damgasi'\\n\").returncode\n\n.gizli/test_gizli.py:99: AssertionError\n___________________________ test_utc_uc_saat_eklenir ___________________________\n\n    def test_utc_uc_saat_eklenir():\n        r = run(\"--utc-damgasi\", \"2025-04-01T22:00:00Z\")\n>       assert r.returncode == 0\nE       assert 2 == 0\nE        +  where 2 = CompletedProcess(args=['/usr/bin/python', '/home/usta/is/7c1703dda678/balon_cli.py', '--utc-damgasi', '2025-04-01T22:00:00Z'], returncode=2, stdout='', stderr=\"hata: bilinmeyen bayrak: '--utc-damgasi'\\n\").returncode\n\n.gizli/test_gizli.py:104: AssertionError\n________________________________ test_utc_kucuk ________________________________\n\n    def test_utc_kucuk():\n        r = run(\"--utc-damgasi\", \"2025-04-01T22:00:00Z\", \"--kucuk\")\n>       assert r.returncode == 0\nE       assert 2 == 0\nE        +  where 2 = CompletedProcess(args=['/usr/bin/python', '/home/usta/is/7c1703dda678/balon_cli.py', '--utc-damgasi', '2025-04-01T22:00:00Z', '--kucuk'], returncode=2, stdout='', stderr=\"hata: bilinmeyen bayrak: '--utc-damgasi'\\n\").returncode\n\n.gizli/test_gizli.py:109: AssertionError\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_utc_saniye_atilir - assert 2 == 0\nFAILED .gizli/test_gizli.py::test_utc_uc_saat_eklenir - assert 2 == 0\nFAILED .gizli/test_gizli.py::test_utc_kucuk - assert 2 == 0\n3 failed, 19 passed in 0.49s\n"
+ }
+}

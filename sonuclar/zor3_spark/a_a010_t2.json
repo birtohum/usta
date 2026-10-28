@@ -1,0 +1,24 @@
+{
+ "id": "a010",
+ "kip": "a",
+ "tekrar": 2,
+ "kategori": "tarih ve saat: resmî tatiller parametreyle, iş günü hesabı, Türkiye saat dilimi (UTC+3, yaz saati yok), gün/ay adları Türkçe",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "isgunu_cli.py gerçeklendi: --tarih (zorunlu, YYYY-AA-GG), --gun-ekle (dahil mantığı, 0 ve negatif destekli), --tatiller/--yarim-gunler (boş dize=boş küme), --cikti (json/metin). Cumartesi-Pazar ve tatiller kapalı, yarım günler iş günü sayılmaz; hesaplar UTC+3 gün bazlı. Başarıda tek satır JSON (sonuc, gun_adi, ay_adi), hatalarda stderr+çıkış 2; hata önceliği biçim→aralık→hesaplama. --help Türkçe gün/ay adlarını listeler.",
+ "adim": 7,
+ "yurutucu_token": {
+  "girdi": 32991,
+  "cikti": 27911
+ },
+ "yurutucu_usd": 0.008881300000000002,
+ "bitirdi": true,
+ "sure_sn": 369.7,
+ "gizli": {
+  "gecti": true,
+  "gecen": 21,
+  "toplam": 21,
+  "cikti": ".....................                                                    [100%]\n21 passed in 1.66s\n"
+ }
+}

@@ -1,0 +1,24 @@
+{
+ "id": "a206",
+ "kip": "b",
+ "tekrar": 3,
+ "kategori": "tarih ve saat: resmî tatiller parametreyle, iş günü hesabı, Türkiye saat dilimi (UTC+3, yaz saati yok), gün/ay adları Türkçe",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "muayene_cli.py yazıldı: --baslangic/--adet zorunlu, --tatiller opsiyonel, --cumartesi-acik bayrağı ile Cumartesi iş günü sayılır, Pazar asla iş günü değil, tatiller atlanır, başlangıç dahil iş günleri sayılarak adet gün üretilir, Europe/Istanbul zoneinfo ile bilinçli tarih, çıktı YYYY-AA-GG,Türkçe gün adı,gün ay yıl formatında. Hatalarda çıkış kodu 2 ve stderr mesajı. test_muayene.py ile 20 test yazıldı ve `python -m pytest -q` ile hepsi geçti.",
+ "adim": 16,
+ "yurutucu_token": {
+  "girdi": 106323,
+  "cikti": 37386
+ },
+ "yurutucu_usd": 0.0181095,
+ "bitirdi": true,
+ "sure_sn": 510.5,
+ "gizli": {
+  "gecti": true,
+  "gecen": 20,
+  "toplam": 20,
+  "cikti": "....................                                                     [100%]\n20 passed in 0.92s\n"
+ }
+}

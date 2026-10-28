@@ -1,0 +1,24 @@
+{
+ "id": "a029",
+ "kip": "b",
+ "tekrar": 1,
+ "kategori": "çok dosyalı küçük modül: iki-üç dosyaya bölünmüş, ortak hata sınıfları ve bir komut satırı girişi olan araç",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "hatalar.py (SaatHatasi, CakismaHatasi -> ValueError) ve randevu.py (RandevuTakvimi: ekle/iptal/liste, HH:MM doğrulama, artan kimlik, bitiş==başlangıç çakışmasız, sıralama + kimlik kırılımı, tip>saat>çakışma önceliği, CLI ekle/liste) yazıldı; 14 pytest testi geçti.",
+ "adim": 6,
+ "yurutucu_token": {
+  "girdi": 21290,
+  "cikti": 16411
+ },
+ "yurutucu_usd": 0.0054112000000000006,
+ "bitirdi": true,
+ "sure_sn": 148.5,
+ "gizli": {
+  "gecti": true,
+  "gecen": 21,
+  "toplam": 21,
+  "cikti": ".....................                                                    [100%]\n21 passed in 0.16s\n"
+ }
+}

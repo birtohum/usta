@@ -1,0 +1,59 @@
+{
+ "id": "a158",
+ "kip": "c",
+ "tekrar": 1,
+ "kategori": "CSV/JSON ile çalışan ve uç durumları çok olan veri işleme (BOM, ; ayırıcı, 1.234,56 sayı biçimi, boş/bozuk satır)",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 22,
+   "basarili": 22
+  }
+ ],
+ "spark_usd": 0.0340202,
+ "arayuz": "",
+ "kabul_yazar": 1,
+ "mutasyon": {
+  "mutant": 15,
+  "ham_mutant": 15,
+  "turlar": [
+   {
+    "oldurulen": 14,
+    "toplam": 15
+   },
+   {
+    "oldurulen": 14,
+    "toplam": 15
+   },
+   {
+    "oldurulen": 15,
+    "toplam": 15
+   }
+  ],
+  "hayatta": []
+ },
+ "hakem": [],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [
+  ".usta_kabul/test_kabul_m2.py::test_bos_dize_ast_hedefli_ValueError"
+ ],
+ "kabul_test_sayisi": 22,
+ "kabul_gecti": true,
+ "ozet": "ceviz_kalibre.py içinde KalibreSiniflayici yazıldı: utf-8-sig okuma, Türkçe sayı dönüşümü (Decimal), ;-ayırıcılı CSV, boş satır atlama, sütun kontrolü, HALF_UP puan, I/İ+casefold normalizasyon, Türkçe alfabetik sıralama, eşik eşitliğinde üst kalibre. pytest ile 4 test geçti.",
+ "adim": 6,
+ "yurutucu_token": {
+  "girdi": 19350,
+  "cikti": 26082
+ },
+ "yurutucu_usd": 0.0071514000000000005,
+ "bitirdi": true,
+ "sure_sn": 1070.1,
+ "gizli": {
+  "gecti": false,
+  "gecen": 16,
+  "toplam": 22,
+  "cikti": "\n    def test_tolerans_yok(tmp_path):\n        e = esik_yaz(tmp_path, orta=\"3,20\", iri=\"3,60\")\n        p = parti_yaz(tmp_path, [[\"P1\", \"B\", \"3,19\", \"3,19\"]])\n        s = KalibreSiniflayici(e).siniflandir(p)\n>       assert s[0][\"kalibre\"] == \"ince\"\nE       AssertionError: assert 'orta_alt_sinir' == 'ince'\nE         - ince\nE         + orta_alt_sinir\n\n.gizli/test_gizli.py:140: AssertionError\n___________________________ test_esik_anahtar_eksik ____________________________\n\ntmp_path = PosixPath('/home/usta/is/e842f82923e6/.tmp/pytest-of-usta/pytest-2/test_esik_anahtar_eksik0')\n\n    def test_esik_anahtar_eksik(tmp_path):\n        pth = tmp_path / \"esik.json\"\n        pth.write_text(json.dumps({\"orta_alt_sinir\": \"3,20\"}, ensure_ascii=False), encoding=\"utf-8\")\n>       with pytest.raises(ValueError):\nE       Failed: DID NOT RAISE <class 'ValueError'>\n\n.gizli/test_gizli.py:176: Failed\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_esik_ondalik_virgul - AssertionError: asser...\nFAILED .gizli/test_gizli.py::test_esik_binlik_noktasi - AssertionError: asser...\nFAILED .gizli/test_gizli.py::test_baslik_hatasi - Failed: DID NOT RAISE <clas...\nFAILED .gizli/test_gizli.py::test_cap_esitlik_ust_kalibre - AssertionError: a...\nFAILED .gizli/test_gizli.py::test_tolerans_yok - AssertionError: assert 'orta...\nFAILED .gizli/test_gizli.py::test_esik_anahtar_eksik - Failed: DID NOT RAISE ...\n6 failed, 16 passed in 0.27s\n"
+ }
+}

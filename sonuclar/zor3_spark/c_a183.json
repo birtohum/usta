@@ -1,0 +1,79 @@
+{
+ "id": "a183",
+ "kip": "c",
+ "tekrar": 1,
+ "kategori": "CSV/JSON ile çalışan ve uç durumları çok olan veri işleme (BOM, ; ayırıcı, 1.234,56 sayı biçimi, boş/bozuk satır)",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 48,
+   "basarili": 48
+  }
+ ],
+ "spark_usd": 0.026418900000000002,
+ "arayuz": "",
+ "kabul_yazar": 3,
+ "mutasyon": {
+  "mutant": 16,
+  "ham_mutant": 16,
+  "turlar": [
+   {
+    "oldurulen": 13,
+    "toplam": 16
+   },
+   {
+    "oldurulen": 13,
+    "toplam": 16
+   },
+   {
+    "oldurulen": 13,
+    "toplam": 16
+   }
+  ],
+  "hayatta": [
+   "Sonra ilk teslim tarihine gore artan siralama gereksinimini cigner",
+   "Protein degeri negatifse bozuk sayip ortalamaya katmama gereksinimini cigner",
+   "Bos satirlari yok sayma gereksinimini cigner"
+  ]
+ },
+ "hakem": [
+  {
+   "test": ".usta_kabul/test_kabul_1.py::test_nem_ustu_red",
+   "karar": "belirsiz",
+   "gerekce": "Görev metni ortalamanın reddedilen nemli partileri dışlayıp dışlamayacağını açıkça belirtmiyor.",
+   "tur": 1
+  },
+  {
+   "test": ".usta_kabul/test_kabul_2.py::test_nem_ustu_red",
+   "karar": "belirsiz",
+   "gerekce": "Görev metni ortalamanın reddedilen nemli partileri dışlayıp dışlamayacağını açıkça belirtmiyor.",
+   "tur": 1
+  }
+ ],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [
+  ".usta_kabul/test_kabul_1.py::test_esit_ortalama_isim_once_tarih_sonra",
+  ".usta_kabul/test_kabul_3.py::test_nem_sinir_14_50_kabul_ustu_red",
+  ".usta_kabul/test_kabul_1.py::test_nem_ustu_red",
+  ".usta_kabul/test_kabul_2.py::test_nem_ustu_red"
+ ],
+ "kabul_test_sayisi": 48,
+ "kabul_gecti": true,
+ "ozet": "un_kabul.py içinde UnKabul sınıfı yazıldı: utf-8-sig noktalı virgül okuma, boş satır yok sayma, parti_id tekrarını yok sayma, Decimal Türkçe sayı ayrıştırma, bozuk sayacı, FileNotFoundError önce/ValueError başlık kontrolü, nem<=14.50 kabul, ROUND_HALF_UP 2 ondalık, Türkçe lower (I->ı,İ->i, str.lower yok), boş ad bilinmeyen grubu, puanla sıralaması (ortalama desc, Türkçe ad, ilk tarih), boşken []. pytest 7 test geçti.",
+ "adim": 14,
+ "yurutucu_token": {
+  "girdi": 71175,
+  "cikti": 54497
+ },
+ "yurutucu_usd": 0.0180169,
+ "bitirdi": true,
+ "sure_sn": 1366.2,
+ "gizli": {
+  "gecti": false,
+  "gecen": 19,
+  "toplam": 20,
+  "cikti": "..........F.........                                                     [100%]\n=================================== FAILURES ===================================\n___________________________ test_nem_ustu_reddedilir ___________________________\n\ntmp_path = PosixPath('/home/usta/is/348fa5b281c6/.tmp/pytest-of-usta/pytest-5/test_nem_ustu_reddedilir0')\n\n    def test_nem_ustu_reddedilir(tmp_path):\n        p = _yaz(tmp_path, \"j.csv\", \"tedarikci;parti_id;nem;protein\\nAcme;P1;14,50;10,00\\nAcme;P2;14,51;20,00\\n\")\n        uk = UnKabul()\n        assert uk.ekle(p) == 2\n        r = uk.puanla()[0]\n>       assert abs(_ort(r) - 10.00) < 0.001\nE       AssertionError: assert 5.0 < 0.001\nE        +  where 5.0 = abs((15.0 - 10.0))\nE        +    where 15.0 = _ort({'ilk_tarih': None, 'ilk_teslim_tarihi': None, 'kabul_orani': 0.5, 'kabul_sayisi': 1, ...})\n\n.gizli/test_gizli.py:106: AssertionError\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_nem_ustu_reddedilir - AssertionError: asser...\n1 failed, 19 passed in 0.34s\n"
+ }
+}

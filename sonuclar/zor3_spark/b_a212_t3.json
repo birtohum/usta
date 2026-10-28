@@ -1,0 +1,24 @@
+{
+ "id": "a212",
+ "kip": "b",
+ "tekrar": 3,
+ "kategori": "KDV, tevkifat, stopaj, taksit ve kuruş yuvarlama (Decimal, ROUND_HALF_UP, satır bazında ve toplamda yuvarlama farkı)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "kirsehir_kirtasiye_cli.py argparse ile yazıldı: --satir tekrarlanabilir, --rapor zorunlu; Türkçe duyarsız kategori, Decimal ROUND_HALF_UP, 3000 TL üstü %3 iskonto ve KDV yeniden hesabı, json/fis raporları, çıkış kodları 0/2. pytest ile 9 test geçti.",
+ "adim": 7,
+ "yurutucu_token": {
+  "girdi": 23562,
+  "cikti": 28239
+ },
+ "yurutucu_usd": 0.008004,
+ "bitirdi": true,
+ "sure_sn": 302.9,
+ "gizli": {
+  "gecti": true,
+  "gecen": 21,
+  "toplam": 21,
+  "cikti": ".....................                                                    [100%]\n21 passed in 1.39s\n"
+ }
+}

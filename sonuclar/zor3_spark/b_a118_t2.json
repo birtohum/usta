@@ -1,0 +1,24 @@
+{
+ "id": "a118",
+ "kip": "b",
+ "tekrar": 2,
+ "kategori": "CSV/JSON ile çalışan ve uç durumları çok olan veri işleme (BOM, ; ayırıcı, 1.234,56 sayı biçimi, boş/bozuk satır)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "SeferDefteri sınıfı feribot_sefer.py içinde yazıldı: utf-8-sig okuma, `;` ayrıştırma, boş satır atlama, 5 sütun kontrolü, Türkçe ücret ayrıştırma (binlik nokta grupları + ondalık virgül), sefer_id kırpma/tekrar koruma, GG-AA-YYYY tarih doğrulama, Decimal yarım-yukarı yuvarlamalı hasılat, en yoğun gün eşitliğinde en küçük tarih, boş raporda 0.0/None, FileNotFoundError önceliği ve ValueError başlık kontrolü. 10 pytest testi yazıldı ve hepsi geçti.",
+ "adim": 12,
+ "yurutucu_token": {
+  "girdi": 65313,
+  "cikti": 35033
+ },
+ "yurutucu_usd": 0.013537900000000002,
+ "bitirdi": true,
+ "sure_sn": 399.4,
+ "gizli": {
+  "gecti": true,
+  "gecen": 20,
+  "toplam": 20,
+  "cikti": "....................                                                     [100%]\n20 passed in 0.10s\n"
+ }
+}

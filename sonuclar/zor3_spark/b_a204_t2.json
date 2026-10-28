@@ -1,0 +1,24 @@
+{
+ "id": "a204",
+ "kip": "b",
+ "tekrar": 2,
+ "kategori": "KDV, tevkifat, stopaj, taksit ve kuruş yuvarlama (Decimal, ROUND_HALF_UP, satır bazında ve toplamda yuvarlama farkı)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "bolu_lokanta_cli.py yalnızca argparse ile yazıldı: TUR Türkçe duyarsız (İ/I dahil), paket %10 servis %20, Decimal+ROUND_HALF_UP, tur bazında KDV ve yuvarlama_farki, 750.00 sınırında indirim yok/üzerinde indirim, json tek satır ve fis giriş sırası, hatalarda exit 2. pytest 8 test geçti.",
+ "adim": 8,
+ "yurutucu_token": {
+  "girdi": 22299,
+  "cikti": 49187
+ },
+ "yurutucu_usd": 0.0120673,
+ "bitirdi": true,
+ "sure_sn": 588.6,
+ "gizli": {
+  "gecti": true,
+  "gecen": 21,
+  "toplam": 21,
+  "cikti": ".....................                                                    [100%]\n21 passed in 2.16s\n"
+ }
+}

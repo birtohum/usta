@@ -1,0 +1,61 @@
+{
+ "id": "a053",
+ "kip": "c",
+ "tekrar": 2,
+ "kategori": "çok dosyalı küçük modül: iki-üç dosyaya bölünmüş, ortak hata sınıfları ve bir komut satırı girişi olan araç",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 55,
+   "basarili": 55
+  }
+ ],
+ "spark_usd": 0.0084767,
+ "arayuz": "",
+ "kabul_yazar": 3,
+ "mutasyon": {
+  "mutant": 14,
+  "ham_mutant": 14,
+  "turlar": [
+   {
+    "oldurulen": 12,
+    "toplam": 14
+   },
+   {
+    "oldurulen": 13,
+    "toplam": 14
+   },
+   {
+    "oldurulen": 13,
+    "toplam": 14
+   }
+  ],
+  "hayatta": [
+   "ilk 60 dakika dahil baz fiyat kuralini cigner, 4. dilimi iki katli yapar"
+  ]
+ },
+ "hakem": [],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [
+  ".usta_kabul/test_kabul_3.py::test_gecersiz_tip_girdihatasi"
+ ],
+ "kabul_test_sayisi": 55,
+ "kabul_gecti": true,
+ "ozet": "hatalar.py, tarife.py ve cli.py yazıldı: ValueError'dan türeyen hata sınıfları, 15 dk dilimli ve gece devirli ücret hesabı, Türkçe tip normalizasyonu ve hata önceliği ile tek satırlık CLI çıktısı. pytest ile 17 test geçti.",
+ "adim": 8,
+ "yurutucu_token": {
+  "girdi": 30688,
+  "cikti": 13120
+ },
+ "yurutucu_usd": 0.0056928000000000005,
+ "bitirdi": true,
+ "sure_sn": 765.9,
+ "gizli": {
+  "gecti": false,
+  "gecen": 21,
+  "toplam": 22,
+  "cikti": "..................F...                                                   [100%]\n=================================== FAILURES ===================================\n______________________________ test_tarife_hatasi ______________________________\n\nmonkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x769e5f3b3080>\n\n    def test_tarife_hatasi(monkeypatch):\n>       monkeypatch.delitem(tarife.TARIFE, \"otomobil\")\nE       AttributeError: module 'tarife' has no attribute 'TARIFE'\n\n.gizli/test_gizli.py:86: AttributeError\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_tarife_hatasi - AttributeError: module 'tar...\n1 failed, 21 passed in 0.33s\n"
+ }
+}

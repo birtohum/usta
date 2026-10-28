@@ -1,0 +1,24 @@
+{
+ "id": "a179",
+ "kip": "b",
+ "tekrar": 1,
+ "kategori": "KDV, tevkifat, stopaj, taksit ve kuruş yuvarlama (Decimal, ROUND_HALF_UP, satır bazında ve toplamda yuvarlama farkı)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "sera_cli.py programını yalnızca argparse + Decimal + json + sys ile yazdım: satır matrahı ve satır KDV'si ROUND_HALF_UP ile yuvarlanıp toplanır, tek-sefer KDV ile fark detayda fark_kurus olarak gösterilir, özet KDV satır toplamına eşitlenir, boş kalem sıfır yazdırır, 7500.00 sınırında tevkifat uygulanmaz (aşınca matrah üzerinden yuvarlanır), sıralama TR küçük harf (I→ı, İ→i) ile matrah azalan + alfabetiktir, hatalı türde argparse hatası (exit 2), geçersiz oran/negatif tutarda stderr'e ValueError yazılır (tip denetimi önce). test_sera.py içinde 19 pytest testi yazıldı ve `python -m pytest -q` ile hepsi geçti.",
+ "adim": 13,
+ "yurutucu_token": {
+  "girdi": 83321,
+  "cikti": 34125
+ },
+ "yurutucu_usd": 0.0151571,
+ "bitirdi": true,
+ "sure_sn": 423.9,
+ "gizli": {
+  "gecti": true,
+  "gecen": 22,
+  "toplam": 22,
+  "cikti": "......................                                                   [100%]\n22 passed in 1.49s\n"
+ }
+}

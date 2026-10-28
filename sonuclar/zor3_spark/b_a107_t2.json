@@ -1,0 +1,24 @@
+{
+ "id": "a107",
+ "kip": "b",
+ "tekrar": 2,
+ "kategori": "çok dosyalı küçük modül: iki-üç dosyaya bölünmüş, ortak hata sınıfları ve bir komut satırı girişi olan araç",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "hatalar.py, feribot.py ve cli.py yazıldı; plaka normalizasyonu, Türkçe duyarsız yineleme, hata önceliği, sıralama ve CLI davranışları 21 pytest ile doğrulandı.",
+ "adim": 13,
+ "yurutucu_token": {
+  "girdi": 70075,
+  "cikti": 30622
+ },
+ "yurutucu_usd": 0.013131900000000002,
+ "bitirdi": true,
+ "sure_sn": 325.4,
+ "gizli": {
+  "gecti": true,
+  "gecen": 21,
+  "toplam": 21,
+  "cikti": ".....................                                                    [100%]\n21 passed in 0.12s\n"
+ }
+}

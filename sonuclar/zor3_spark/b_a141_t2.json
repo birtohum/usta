@@ -1,0 +1,24 @@
+{
+ "id": "a141",
+ "kip": "b",
+ "tekrar": 2,
+ "kategori": "tarih ve saat: resmî tatiller parametreyle, iş günü hesabı, Türkiye saat dilimi (UTC+3, yaz saati yok), gün/ay adları Türkçe",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "vardiya.py içinde VardiyaPlani sınıfı yazıldı: iş günü hesabı (Pzt-Cuma eksi tatiller), isgunu=0 dahil başlangıçtan sonraki ilk iş gününden ilerleme, Türkçe i/ı duyarlı ad birleştirme, bitişe ve Türkçe küçük harfe göre sıralama, hata önceliği ve tatil hatasının ValueError dışı olması, bitiş gün adının iç durumda küçük harf Türkçe saklanması. pytest ile 7 test geçti.",
+ "adim": 11,
+ "yurutucu_token": {
+  "girdi": 53092,
+  "cikti": 38005
+ },
+ "yurutucu_usd": 0.0129102,
+ "bitirdi": true,
+ "sure_sn": 377.3,
+ "gizli": {
+  "gecti": false,
+  "gecen": 16,
+  "toplam": 21,
+  "cikti": "        p = VardiyaPlani([])\n        p.ekle(\"Ali\", \"2024-01-06\", 1)\n>       assert p.sirali_liste()[0][2] == \"2024-01-08\"\nE       AssertionError: assert '2024-01-09' == '2024-01-08'\nE         - 2024-01-08\nE         ?          ^\nE         + 2024-01-09\nE         ?          ^\n\n.gizli/test_gizli.py:38: AssertionError\n__________________________ test_sunday_never_workday ___________________________\n\n    def test_sunday_never_workday():\n        p = VardiyaPlani([])\n        p.ekle(\"Ali\", \"2024-01-07\", 1)\n>       assert p.sirali_liste()[0][2] == \"2024-01-08\"\nE       AssertionError: assert '2024-01-09' == '2024-01-08'\nE         - 2024-01-08\nE         ?          ^\nE         + 2024-01-09\nE         ?          ^\n\n.gizli/test_gizli.py:43: AssertionError\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_basic_next_day - AssertionError: assert [('...\nFAILED .gizli/test_gizli.py::test_weekend_skip_friday_plus_one - AssertionErr...\nFAILED .gizli/test_gizli.py::test_holiday_skip - AssertionError: assert '2024...\nFAILED .gizli/test_gizli.py::test_saturday_start - AssertionError: assert '20...\nFAILED .gizli/test_gizli.py::test_sunday_never_workday - AssertionError: asse...\n5 failed, 16 passed in 0.08s\n"
+ }
+}

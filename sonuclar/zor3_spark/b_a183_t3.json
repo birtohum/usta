@@ -1,0 +1,24 @@
+{
+ "id": "a183",
+ "kip": "b",
+ "tekrar": 3,
+ "kategori": "CSV/JSON ile çalışan ve uç durumları çok olan veri işleme (BOM, ; ayırıcı, 1.234,56 sayı biçimi, boş/bozuk satır)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "un_kabul.py içinde UnKabul sınıfı yazıldı: utf-8-sig/noktalı virgül okuma, boş satır yok sayma, parti_id tekrarında ilk kaydı koruma, Decimal Türkçe sayı ayrıştırma, bozuk sayacı, FileNotFoundError/ValueError sırası, nem<=14.50 kabul, ROUND_HALF_UP 2 ondalık, Türkçe lower (I->ı,İ->i, lower/casefold yok), boş ad->bilinmeyen, puanla sıralama ve boşken [] davranışı. pytest ile 10 test geçti.",
+ "adim": 7,
+ "yurutucu_token": {
+  "girdi": 29551,
+  "cikti": 26448
+ },
+ "yurutucu_usd": 0.008244699999999999,
+ "bitirdi": true,
+ "sure_sn": 320.2,
+ "gizli": {
+  "gecti": false,
+  "gecen": 19,
+  "toplam": 20,
+  "cikti": "..........F.........                                                     [100%]\n=================================== FAILURES ===================================\n___________________________ test_nem_ustu_reddedilir ___________________________\n\ntmp_path = PosixPath('/home/usta/is/6880249389ce/.tmp/pytest-of-usta/pytest-0/test_nem_ustu_reddedilir0')\n\n    def test_nem_ustu_reddedilir(tmp_path):\n        p = _yaz(tmp_path, \"j.csv\", \"tedarikci;parti_id;nem;protein\\nAcme;P1;14,50;10,00\\nAcme;P2;14,51;20,00\\n\")\n        uk = UnKabul()\n        assert uk.ekle(p) == 2\n        r = uk.puanla()[0]\n>       assert abs(_ort(r) - 10.00) < 0.001\nE       AssertionError: assert 5.0 < 0.001\nE        +  where 5.0 = abs((15.0 - 10.0))\nE        +    where 15.0 = _ort({'ilk_tarih': '', 'ilk_teslim': '', 'ilk_teslim_tarihi': '', 'kabul': 1, ...})\n\n.gizli/test_gizli.py:106: AssertionError\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_nem_ustu_reddedilir - AssertionError: asser...\n1 failed, 19 passed in 0.11s\n"
+ }
+}

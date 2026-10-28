@@ -1,0 +1,59 @@
+{
+ "id": "a087",
+ "kip": "c",
+ "tekrar": 3,
+ "kategori": "çok dosyalı küçük modül: iki-üç dosyaya bölünmüş, ortak hata sınıfları ve bir komut satırı girişi olan araç",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 66,
+   "basarili": 66
+  }
+ ],
+ "spark_usd": 0.0141868,
+ "arayuz": "bordro.py içinde normalize_uretici(ad: str) -> str tanımlayın.",
+ "kabul_yazar": 3,
+ "mutasyon": {
+  "mutant": 15,
+  "ham_mutant": 15,
+  "turlar": [
+   {
+    "oldurulen": 14,
+    "toplam": 15
+   },
+   {
+    "oldurulen": 14,
+    "toplam": 15
+   },
+   {
+    "oldurulen": 14,
+    "toplam": 15
+   }
+  ],
+  "hayatta": [
+   "nem 20 dahil kesintisiz olmali esitlik kuralini bozar"
+  ]
+ },
+ "hakem": [],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [],
+ "kabul_test_sayisi": 66,
+ "kabul_gecti": true,
+ "ozet": "hatalar.py (UreticiHatasi/NemHatasi doğrudan ValueError'dan), bordro.py (net_odeme + normalize_uretici, tavan yuvarlamalı %2 kesinti, tam sayı kuruş aritmetiği, hata önceliği kilo→nem→üretici, Türkçe I/İ dönüşümü) ve cli.py (--kilo/--nem/--destekli/--uretici, başarılı çıktıda tek satır \"Ödeme: X kuruş\") yazıldı; 19 pytest testi geçti.",
+ "adim": 13,
+ "yurutucu_token": {
+  "girdi": 55888,
+  "cikti": 30776
+ },
+ "yurutucu_usd": 0.011744000000000001,
+ "bitirdi": true,
+ "sure_sn": 963.1,
+ "gizli": {
+  "gecti": true,
+  "gecen": 20,
+  "toplam": 20,
+  "cikti": "....................                                                     [100%]\n20 passed in 0.10s\n"
+ }
+}

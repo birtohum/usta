@@ -1,0 +1,56 @@
+{
+ "id": "a189",
+ "kip": "c",
+ "tekrar": 1,
+ "kategori": "KDV, tevkifat, stopaj, taksit ve kuruş yuvarlama (Decimal, ROUND_HALF_UP, satır bazında ve toplamda yuvarlama farkı)",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 34,
+   "basarili": 34
+  }
+ ],
+ "spark_usd": 0.025042900000000007,
+ "arayuz": "",
+ "kabul_yazar": 2,
+ "mutasyon": {
+  "mutant": 14,
+  "ham_mutant": 14,
+  "turlar": [
+   {
+    "oldurulen": 12,
+    "toplam": 14
+   },
+   {
+    "oldurulen": 14,
+    "toplam": 14
+   }
+  ],
+  "hayatta": []
+ },
+ "hakem": [],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [
+  ".usta_kabul/test_kabul_2.py::test_fis_metni_turkce_buyuk_harf",
+  ".usta_kabul/test_kabul_2.py::test_fis_metni_turkce_siralama"
+ ],
+ "kabul_test_sayisi": 34,
+ "kabul_gecti": true,
+ "ozet": "siirt_perde.py içinde PerdeFaturasi yazıldı: Decimal+ROUND_HALF_UP matrah/KDV, grup bazlı genel KDV, 5000 üzeri %2 orantılı iskonto, özel Türkçe büyük harf ve alfabetik sıralama, TypeError/ValueError ayrımı; pytest ile 11 test geçti.",
+ "adim": 7,
+ "yurutucu_token": {
+  "girdi": 24939,
+  "cikti": 43669
+ },
+ "yurutucu_usd": 0.011227700000000002,
+ "bitirdi": true,
+ "sure_sn": 837.4,
+ "gizli": {
+  "gecti": true,
+  "gecen": 21,
+  "toplam": 21,
+  "cikti": ".....................                                                    [100%]\n21 passed in 0.09s\n"
+ }
+}

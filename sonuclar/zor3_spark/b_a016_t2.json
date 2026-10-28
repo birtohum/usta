@@ -1,0 +1,24 @@
+{
+ "id": "a016",
+ "kip": "b",
+ "tekrar": 2,
+ "kategori": "tarih ve saat: resmî tatiller parametreyle, iş günü hesabı, Türkiye saat dilimi (UTC+3, yaz saati yok), gün/ay adları Türkçe",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "randevu.py içinde uygun_slotlari_bul ve tarihce_tr gerçeklendi: TR (+3, DST yok) dönüşümü, hafta içi 09:00–17:00 (bitişi 17:00 olan geçerli), hafta sonu/tatil eleme, başlangıçtan grid, [başlangıç,bitiş) çakışma kuralı, TypeError-önce-ValueError sırası, sure_dakika kontrolleri ve sıralı sonuç. 19 pytest testi yazıldı ve geçti.",
+ "adim": 13,
+ "yurutucu_token": {
+  "girdi": 67843,
+  "cikti": 49513
+ },
+ "yurutucu_usd": 0.0166869,
+ "bitirdi": true,
+ "sure_sn": 525.8,
+ "gizli": {
+  "gecti": false,
+  "gecen": 19,
+  "toplam": 22,
+  "cikti": "        for oge in mevcut:\n            if not isinstance(oge, (list, tuple)):\n                raise TypeError(\"mevcut ogesi (datetime, datetime) olmalidir\")\n            if len(oge) != 2:\n                raise TypeError(\"mevcut ogesi (datetime, datetime) olmalidir\")\n            s, e = oge[0], oge[1]\n            if not isinstance(s, datetime) or not isinstance(e, datetime):\n                raise TypeError(\"mevcut ogesi (datetime, datetime) olmalidir\")\n            if _is_naive(s) != _is_naive(e):\n                raise TypeError(\"mevcut ogesinde tz uyumsuzlugu\")\n            ns = _to_tr(s)\n            ne = _to_tr(e)\n            if ns == ne:\n                continue\n            # ters aralık varsa düzelt (kapsama hesabı için)\n            if ns > ne:\n                ns, ne = ne, ns\n            norm_mevcut.append((ns, ne))\n    \n        # ---- ValueError kontrolleri ----\n        if sure_dakika <= 0:\n>           raise ValueError(\"sure_dakika pozitif olmalidir\")\nE           ValueError: sure_dakika pozitif olmalidir\n\nrandevu.py:106: ValueError\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_tz_mismatch_baslangic_bitis - Failed: DID N...\nFAILED .gizli/test_gizli.py::test_tz_mismatch_mevcut - Failed: DID NOT RAISE ...\nFAILED .gizli/test_gizli.py::test_error_priority - ValueError: sure_dakika po...\n3 failed, 19 passed in 0.14s\n"
+ }
+}

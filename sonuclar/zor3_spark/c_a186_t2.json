@@ -1,0 +1,53 @@
+{
+ "id": "a186",
+ "kip": "c",
+ "tekrar": 2,
+ "kategori": "tarih ve saat: resmî tatiller parametreyle, iş günü hesabı, Türkiye saat dilimi (UTC+3, yaz saati yok), gün/ay adları Türkçe",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 52,
+   "basarili": 52
+  }
+ ],
+ "spark_usd": 0.014395400000000001,
+ "arayuz": "",
+ "kabul_yazar": 3,
+ "mutasyon": {
+  "mutant": 14,
+  "ham_mutant": 14,
+  "turlar": [
+   {
+    "oldurulen": 13,
+    "toplam": 14
+   },
+   {
+    "oldurulen": 14,
+    "toplam": 14
+   }
+  ],
+  "hayatta": []
+ },
+ "hakem": [],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [],
+ "kabul_test_sayisi": 52,
+ "kabul_gecti": true,
+ "ozet": "numune.py içinde NumuneIzleyici(tatiller) sınıfı yazıldı: UTC girdiler +3 saatle Türkiye gününe çevrilir, hafta sonu ve tatil günleri iş günü sayılmaz, sla_bitisi kabul hariç/bitiş dahil sayar (0 ise aynı gün iş günüyse yoksa sonraki iş günü), isgunu_farki başlangıç dahil/bitiş hariç sayar ve ters aralıkta ValueError verir, tr_format \"GG AyAdı YYYY GünAdı\" döndürür; hatalı tarih ve negatif iş günü ValueError verir (tarih öncelikli). test_numune.py ile 10 pytest testi yazıldı ve hepsi geçti.",
+ "adim": 8,
+ "yurutucu_token": {
+  "girdi": 34402,
+  "cikti": 15456
+ },
+ "yurutucu_usd": 0.0065314,
+ "bitirdi": true,
+ "sure_sn": 499.5,
+ "gizli": {
+  "gecti": true,
+  "gecen": 21,
+  "toplam": 21,
+  "cikti": ".....................                                                    [100%]\n21 passed in 0.13s\n"
+ }
+}

@@ -1,0 +1,24 @@
+{
+ "id": "a071",
+ "kip": "b",
+ "tekrar": 2,
+ "kategori": "çok dosyalı küçük modül: iki-üç dosyaya bölünmüş, ortak hata sınıfları ve bir komut satırı girişi olan araç",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "hatalar.py (ValueError'dan türeyen PlakaHatasi/KuyrukHatasi), durak.py (20 kapasiteli FIFO DurakKuyrugu; trim + Türkçe i→İ/ı→I normalize, boş→PlakaHatasi, dolu→KuyrukHatasi, tekrar→PlakaHatasi, boş kuyruk→KuyrukHatasi, öncelik: boş > kapasite > tekrar) ve cli.py (--ekle/--liste/--cikar/--siradaki, liste eklenme sırasıyla ve sondaki newline ile) yazıldı; 16 pytest testi geçti.",
+ "adim": 9,
+ "yurutucu_token": {
+  "girdi": 30447,
+  "cikti": 28729
+ },
+ "yurutucu_usd": 0.0087905,
+ "bitirdi": true,
+ "sure_sn": 316.6,
+ "gizli": {
+  "gecti": true,
+  "gecen": 22,
+  "toplam": 22,
+  "cikti": "......................                                                   [100%]\n22 passed in 0.31s\n"
+ }
+}

@@ -1,0 +1,24 @@
+{
+ "id": "a199",
+ "kip": "b",
+ "tekrar": 1,
+ "kategori": "KDV, tevkifat, stopaj, taksit ve kuruş yuvarlama (Decimal, ROUND_HALF_UP, satır bazında ve toplamda yuvarlama farkı)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "aksaray_yem.py içinde YemStopajDefteri sınıfı yazıldı: str tür kontrolü önce (TypeError), oran yalnızca %2/%4 (ValueError), boş üretici ve sıfır/negatif tutar ValueError, boş defterde ozet ValueError, stopaj/net/KDV/prim ROUND_HALF_UP ile, prim yalnızca brüt>10000'de, Türkçe büyük harf (i→İ, I→I) dokum'de, üretici toplamları net azalan + Türkçe alfabetik sıralı, ozet Decimal brut_toplam/stopaj_toplami/kdv_toplami/net_toplam/prim döndürür. pytest ile 14 test geçti.",
+ "adim": 9,
+ "yurutucu_token": {
+  "girdi": 59992,
+  "cikti": 19577
+ },
+ "yurutucu_usd": 0.0099146,
+ "bitirdi": true,
+ "sure_sn": 196.7,
+ "gizli": {
+  "gecti": false,
+  "gecen": 20,
+  "toplam": 22,
+  "cikti": "        d.ekle(\"ali\", \"arpa\", \"100.00\", \"2\")\n        d.ekle(\"veli\", \"arpa\", \"1000.00\", \"2\")\n        o = d.ozet()\n        liste = o[\"ureticiler\"]\n        adlar = [e[\"uretici\"] for e in liste]\n>       assert adlar[0] == \"VEL\\u0130\"\nE       AssertionError: assert 'veli' == 'VELİ'\nE         - VELİ\nE         + veli\n\n.gizli/test_gizli.py:129: AssertionError\n____________________ test_uretici_siralama_turkce_alfabetik ____________________\n\n    def test_uretici_siralama_turkce_alfabetik():\n        d = YemStopajDefteri()\n        d.ekle(\"tana\", \"arpa\", \"100.00\", \"2\")\n        d.ekle(\"\\u015Fana\", \"arpa\", \"100.00\", \"2\")\n        o = d.ozet()\n        liste = o[\"ureticiler\"]\n        adlar = [e[\"uretici\"] for e in liste]\n>       assert adlar == [\"\\u015EANA\", \"TANA\"]\nE       AssertionError: assert ['şana', 'tana'] == ['ŞANA', 'TANA']\nE         At index 0 diff: 'şana' != 'ŞANA'\nE         Use -v to get more diff\n\n.gizli/test_gizli.py:139: AssertionError\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_uretici_siralama_net_azalan - AssertionErro...\nFAILED .gizli/test_gizli.py::test_uretici_siralama_turkce_alfabetik - Asserti...\n2 failed, 20 passed in 0.13s\n"
+ }
+}

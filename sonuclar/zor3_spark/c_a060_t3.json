@@ -1,0 +1,71 @@
+{
+ "id": "a060",
+ "kip": "c",
+ "tekrar": 3,
+ "kategori": "CSV/JSON ile çalışan ve uç durumları çok olan veri işleme (BOM, ; ayırıcı, 1.234,56 sayı biçimi, boş/bozuk satır)",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 16,
+   "basarili": 16
+  }
+ ],
+ "spark_usd": 0.0349861,
+ "arayuz": "",
+ "kabul_yazar": 1,
+ "mutasyon": {
+  "mutant": 16,
+  "ham_mutant": 16,
+  "turlar": [
+   {
+    "oldurulen": 12,
+    "toplam": 16
+   },
+   {
+    "oldurulen": 12,
+    "toplam": 16
+   },
+   {
+    "oldurulen": 12,
+    "toplam": 16
+   }
+  ],
+  "hayatta": [
+   "(1) utf-8-sig ile okuma gereksinimini ihlal eder, BOM birakir",
+   "(1) basliktaki on/son bosluklari temizleme gereksinimini ihlal eder",
+   "(5) net agirligi tam 1000 grama esit kasalar ikinci kalite sinirini ihlal eder",
+   "(8) esitlikte Turkce alfabetik artan sira ve c,g,i,o,s,u harf sirasini ihlal eder"
+  ]
+ },
+ "hakem": [
+  {
+   "test": ".usta_kabul/test_kabul_3.py::test_fire_orani_half_up_uc_basamak",
+   "karar": "belirsiz",
+   "gerekce": "Görev fire oranının formülünü ve raporda hangi anahtarla zorunlu olduğunu açıkça tanımlamıyor.",
+   "tur": 1
+  }
+ ],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [
+  ".usta_kabul/test_kabul_3.py::test_fire_orani_half_up_uc_basamak"
+ ],
+ "kabul_test_sayisi": 16,
+ "kabul_gecti": true,
+ "ozet": "SecimMotoru sınıfı narenciye_secim.py içinde yazıldı: utf-8-sig ve noktalı virgül okuma, Decimal ağırlık/fire (ROUND_HALF_UP 3 basamak), boş satır atlama/sütun ValueError/dosya FileNotFoundError, Türkçe küçük harf normalizasyonu, 1000g ikinci kalite/altı ıskarta, boş rapor {}, üst üste ekleme, toplam azalan + Türkçe alfabetik sıralı rapor. pytest ile 10 test geçti.",
+ "adim": 10,
+ "yurutucu_token": {
+  "girdi": 31961,
+  "cikti": 43529
+ },
+ "yurutucu_usd": 0.0119019,
+ "bitirdi": true,
+ "sure_sn": 1210.8,
+ "gizli": {
+  "gecti": false,
+  "gecen": 18,
+  "toplam": 20,
+  "cikti": "contains 1 more item:\nE             {'portakal': {'ad': 'portakal',\nE                           'cesit': 'portakal',\nE                           'ikinci_kalite': 1,\nE                           'ilk_gorunum': 'portakal',\nE                           'ilk_yazim': 'portakal',\nE                           'isim': 'portakal',...\nE             \nE             ...Full output truncated (4 lines hidden), use '-vv' to show\n\n.gizli/test_gizli.py:114: AssertionError\n________________________ test_net_altinda_iskarta_haric ________________________\n\n    def test_net_altinda_iskarta_haric():\n        import tempfile, os\n        m = SecimMotoru()\n        with tempfile.TemporaryDirectory() as d:\n            p = os.path.join(d, \"a.csv\")\n            _yaz(p, \"\\u00e7e\\u015fit;a\\u011f\\u0131rl\\u0131k;fire_oran\\u0131\\nportakal;900;0\\nlimon;2000;0\\n\")\n            m.yukle(p)\n            r = m.rapor()\n>           assert len(r) == 1\nE           AssertionError: assert 2 == 1\nE            +  where 2 = len({'limon': {'ad': 'limon', 'cesit': 'limon', 'ikinci_kalite': 0, 'ilk_gorunum': 'limon', ...}, 'portakal': {'ad': 'portakal', 'cesit': 'portakal', 'ikinci_kalite': 0, 'ilk_gorunum': 'portakal', ...}})\n\n.gizli/test_gizli.py:124: AssertionError\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_net_1000_ikinci_kalite_haric - AssertionErr...\nFAILED .gizli/test_gizli.py::test_net_altinda_iskarta_haric - AssertionError:...\n2 failed, 18 passed in 0.14s\n"
+ }
+}

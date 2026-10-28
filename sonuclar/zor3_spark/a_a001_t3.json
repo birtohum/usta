@@ -1,0 +1,24 @@
+{
+ "id": "a001",
+ "kip": "a",
+ "tekrar": 3,
+ "kategori": "Türkiye'ye özgü kimlik ve hesap numaraları (TC kimlik, VKN, IBAN, MERSİS, plaka, telefon) — birden çok kuralın birlikte uygulandığı",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "mersis_denetim.py oluşturuldu: mersis_dogrula (16 hane) ve mersis_son_haneyi_hesapla (15 hane) işlevleri; ağırlıklı toplam (tek konum×3, çift konum×1) ve son hane (10-toplam%10)%10 formülüyle, tip→boş→uzunluk→rakam→ilk-hane-sıfır→sağlama önceliği, temizleme yapmadan ValueError/TypeError ayrımı ve sıfırlar sınır durumunda \"0\" sonucu ile yazıldı.",
+ "adim": 8,
+ "yurutucu_token": {
+  "girdi": 33248,
+  "cikti": 15160
+ },
+ "yurutucu_usd": 0.006356799999999999,
+ "bitirdi": true,
+ "sure_sn": 181.4,
+ "gizli": {
+  "gecti": true,
+  "gecen": 22,
+  "toplam": 22,
+  "cikti": "......................                                                   [100%]\n22 passed in 0.05s\n"
+ }
+}

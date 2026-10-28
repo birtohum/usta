@@ -1,0 +1,24 @@
+{
+ "id": "a199",
+ "kip": "b",
+ "tekrar": 2,
+ "kategori": "KDV, tevkifat, stopaj, taksit ve kuruş yuvarlama (Decimal, ROUND_HALF_UP, satır bazında ve toplamda yuvarlama farkı)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "aksaray_yem.py içinde YemStopajDefteri yazıldı: %2/%4 oran kontrolü, ROUND_HALF_UP stopaj/net/KDV, %1 KDV, prim eşiği, Türkçe büyük harf, sıralama ve Decimal özet. pytest ile 11 test geçti.",
+ "adim": 6,
+ "yurutucu_token": {
+  "girdi": 19444,
+  "cikti": 20043
+ },
+ "yurutucu_usd": 0.005953,
+ "bitirdi": true,
+ "sure_sn": 205.1,
+ "gizli": {
+  "gecti": true,
+  "gecen": 22,
+  "toplam": 22,
+  "cikti": "......................                                                   [100%]\n22 passed in 0.06s\n"
+ }
+}

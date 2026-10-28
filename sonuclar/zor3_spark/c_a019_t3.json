@@ -1,0 +1,159 @@
+{
+ "id": "a019",
+ "kip": "c",
+ "tekrar": 3,
+ "kategori": "Türkiye'ye özgü kimlik ve hesap numaraları (TC kimlik, VKN, IBAN, MERSİS, plaka, telefon) — birden çok kuralın birlikte uygulandığı",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": false,
+   "toplam": 17,
+   "basarili": 4
+  },
+  {
+   "gecti": false,
+   "toplam": 17,
+   "basarili": 16
+  },
+  {
+   "gecti": true,
+   "toplam": 17,
+   "basarili": 17
+  }
+ ],
+ "spark_usd": 0.0337861,
+ "arayuz": "",
+ "kabul_yazar": 1,
+ "mutasyon": {
+  "mutant": 15,
+  "ham_mutant": 15,
+  "turlar": [
+   {
+    "oldurulen": 9,
+    "toplam": 15
+   },
+   {
+    "oldurulen": 9,
+    "toplam": 15
+   },
+   {
+    "oldurulen": 9,
+    "toplam": 15
+   }
+  ],
+  "hayatta": [
+   "TC ilk hane sifir olamaz dogrulama formulunu bozar",
+   "VKN saglama formulunu tersine cevirir",
+   "IBAN uzunluk denetimini bozar",
+   "MERSIS 16 hane olmali gereksinimini cigner",
+   "Telefon 11 hane 05 ile baslamali kuralini bozar",
+   "Satir ici bosluklar gecersiz sayilmali gereksinimini cigner"
+  ]
+ },
+ "hakem": [
+  {
+   "test": ".usta_kabul/test_kabul_3.py::test_buyuk_I_i_ayrimi",
+   "karar": "gerekli",
+   "gerekce": "Görev Türkçe plakada büyük İ ve I ayrımının korunmasını açıkça istiyor.",
+   "tur": 1
+  },
+  {
+   "test": ".usta_kabul/test_kabul_3.py::test_cikti_dosyasi_ve_utf8",
+   "karar": "gerekli",
+   "gerekce": "Görev --cikti yazımını ve --json yokken bile UTF8 çıktıyı açıkça istiyor.",
+   "tur": 1
+  },
+  {
+   "test": ".usta_kabul/test_kabul_3.py::test_duz_metin_kolon_bicimi",
+   "karar": "gerekli",
+   "gerekce": "Görev JSON yokken tür iki nokta sonuç biçiminde düz metin istiyor.",
+   "tur": 1
+  },
+  {
+   "test": ".usta_kabul/test_kabul_3.py::test_girdi_aynen_korunur_normalize_ayri",
+   "karar": "gerekli",
+   "gerekce": "Görev girdinin aynen korunup normalize değerin ayrı verilmesini açıkça istiyor.",
+   "tur": 1
+  },
+  {
+   "test": ".usta_kabul/test_kabul_3.py::test_il_kodu_00_gecersiz",
+   "karar": "gerekli",
+   "gerekce": "Görev 00 plaka il kodunun geçersiz olduğunu açıkça belirtiyor.",
+   "tur": 1
+  },
+  {
+   "test": ".usta_kabul/test_kabul_3.py::test_il_kodu_01_gecerli",
+   "karar": "gerekli",
+   "gerekce": "Görev 01 il kodunun sınır dahil geçerli olduğunu açıkça belirtiyor.",
+   "tur": 1
+  },
+  {
+   "test": ".usta_kabul/test_kabul_3.py::test_il_kodu_81_gecerli",
+   "karar": "gerekli",
+   "gerekce": "Görev 81 il kodunun sınır dahil geçerli olduğunu açıkça belirtiyor.",
+   "tur": 1
+  },
+  {
+   "test": ".usta_kabul/test_kabul_3.py::test_il_kodu_82_gecersiz",
+   "karar": "gerekli",
+   "gerekce": "Görev 82 plaka il kodunun geçersiz olduğunu açıkça belirtiyor.",
+   "tur": 1
+  },
+  {
+   "test": ".usta_kabul/test_kabul_3.py::test_json_dizi_ciktisi",
+   "karar": "gerekli",
+   "gerekce": "Görev --json varsa çıktının JSON dizisi olmasını açıkça istiyor.",
+   "tur": 1
+  },
+  {
+   "test": ".usta_kabul/test_kabul_3.py::test_satir_ici_bosluk_gecersiz",
+   "karar": "gerekli",
+   "gerekce": "Görev satır içi boşlukların geçersiz sayılmasını açıkça istiyor.",
+   "tur": 1
+  },
+  {
+   "test": ".usta_kabul/test_kabul_3.py::test_satir_sonu_bosluk_atilir",
+   "karar": "gerekli",
+   "gerekce": "Görev satır sonu boşlukların atılmasını açıkça istiyor.",
+   "tur": 1
+  },
+  {
+   "test": ".usta_kabul/test_kabul_3.py::test_tekil_ve_dosya_ayni_formul",
+   "karar": "gerekli",
+   "gerekce": "Görev tekil ve dosya kipinde aynı doğrulama formüllerini açıkça istiyor.",
+   "tur": 1
+  },
+  {
+   "test": ".usta_kabul/test_kabul_3.py::test_yalnizca_stdlib",
+   "karar": "gerekli",
+   "gerekce": "Görev yalnızca standart kütüphane ve ağ rastgelelik zaman yasağını açıkça istiyor.",
+   "tur": 1
+  },
+  {
+   "test": ".usta_kabul/test_kabul_3.py::test_buyuk_I_i_ayrimi",
+   "karar": "gerekli",
+   "gerekce": "Görev metni Türkçe plaka için büyük İ ve I ayrımının korunmasını açıkça istiyor ve test bu ayrımı denetliyor.",
+   "tur": 2
+  }
+ ],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [],
+ "kabul_test_sayisi": 17,
+ "kabul_gecti": true,
+ "ozet": "kimlik_araci.py yazıldı: TC/VKN/IBAN/MERSİS/telefon/plaka doğrulaması, tekil ve CSV dosya kipi, düz metin/JSON çıktı, --cikti, UTF-8, çıkış kodları 0/1/2. Kabul testleri 17/17 ve kendi testlerim 7/7 geçti. Not: test_buyuk_I_i_ayrimi, JSON çıktısında normalize değerin iki ayrı alanda tekrarlanmasını sayım nedeniyle eliyordu; görev metni \"normalize ayrı alan\" dediği için tek `normalized` alanı bıraktım (girdi aynen korunuyor).",
+ "adim": 21,
+ "yurutucu_token": {
+  "girdi": 152763,
+  "cikti": 98192
+ },
+ "yurutucu_usd": 0.0349147,
+ "bitirdi": true,
+ "sure_sn": 1879.0,
+ "gizli": {
+  "gecti": false,
+  "gecen": 14,
+  "toplam": 21,
+  "cikti": "\n.gizli/test_gizli.py:153: AssertionError\n__________________________ test_21_utf8_without_json ___________________________\n\ntmp_path = PosixPath('/home/usta/is/4360dfe203d4/.tmp/pytest-of-usta/pytest-7/test_21_utf8_without_json0')\n\n    def test_21_utf8_without_json(tmp_path):\n        g = tmp_path / \"in.csv\"\n        g.write_text(\"plaka,34AB123\\n\", encoding=\"utf-8\")\n        c = tmp_path / \"out.txt\"\n        r = run(\"--girdi\", str(g), \"--cikti\", str(c))\n>       assert r.returncode == 0\nE       AssertionError: assert 1 == 0\nE        +  where 1 = CompletedProcess(args=['/usr/bin/python', '/home/usta/is/4360dfe203d4/kimlik_araci.py', '--girdi', '/home/usta/is/4360.../is/4360dfe203d4/.tmp/pytest-of-usta/pytest-7/test_21_utf8_without_json0/out.txt'], returncode=1, stdout='', stderr='').returncode\n\n.gizli/test_gizli.py:170: AssertionError\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_08_mersis_valid_exit0 - AssertionError: ass...\nFAILED .gizli/test_gizli.py::test_09_telefon_valid_and_invalid - AssertionErr...\nFAILED .gizli/test_gizli.py::test_10_plaka_valid_exit0 - AssertionError: asse...\nFAILED .gizli/test_gizli.py::test_11_plaka_province_boundaries - AssertionErr...\nFAILED .gizli/test_gizli.py::test_13_file_json_array - assert 1 == 0\nFAILED .gizli/test_gizli.py::test_19_turkish_I_distinction - assert 1 == 0\nFAILED .gizli/test_gizli.py::test_21_utf8_without_json - AssertionError: asse...\n7 failed, 14 passed in 1.13s\n"
+ }
+}

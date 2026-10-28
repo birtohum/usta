@@ -1,0 +1,24 @@
+{
+ "id": "a204",
+ "kip": "a",
+ "tekrar": 2,
+ "kategori": "KDV, tevkifat, stopaj, taksit ve kuruş yuvarlama (Decimal, ROUND_HALF_UP, satır bazında ve toplamda yuvarlama farkı)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "bolu_lokanta_cli.py yazıldı: argparse ile --kalem/--indirim/--cikti, Türkçe duyarsız TUR, Decimal+ROUND_HALF_UP hesap, 750 TL sınırı, json/fis çıktı, hata kodu 2.",
+ "adim": 13,
+ "yurutucu_token": {
+  "girdi": 69133,
+  "cikti": 47756
+ },
+ "yurutucu_usd": 0.016464500000000003,
+ "bitirdi": true,
+ "sure_sn": 553.0,
+ "gizli": {
+  "gecti": true,
+  "gecen": 21,
+  "toplam": 21,
+  "cikti": ".....................                                                    [100%]\n21 passed in 2.10s\n"
+ }
+}

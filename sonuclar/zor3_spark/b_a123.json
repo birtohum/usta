@@ -1,0 +1,24 @@
+{
+ "id": "a123",
+ "kip": "b",
+ "tekrar": 1,
+ "kategori": "CSV/JSON ile çalışan ve uç durumları çok olan veri işleme (BOM, ; ayırıcı, 1.234,56 sayı biçimi, boş/bozuk satır)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": null,
+ "adim": 6,
+ "yurutucu_token": {
+  "girdi": 12312,
+  "cikti": 51946
+ },
+ "yurutucu_usd": 0.0116204,
+ "bitirdi": false,
+ "sure_sn": 675.5,
+ "gizli": {
+  "gecti": false,
+  "gecen": 1,
+  "toplam": 20,
+  "cikti": "cli.py'\n\n/usr/lib/python3.12/pathlib.py:1015: FileNotFoundError\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_normal_tek_ceza - assert 2 == 0\nFAILED .gizli/test_gizli.py::test_iade_bos_haric - assert 2 == 0\nFAILED .gizli/test_gizli.py::test_erken_iade_sifir - assert 2 == 0\nFAILED .gizli/test_gizli.py::test_esit_tarih_sifir - assert 2 == 0\nFAILED .gizli/test_gizli.py::test_gun_hesabi_carpim - assert 2 == 0\nFAILED .gizli/test_gizli.py::test_kisi_basi_toplama - assert 2 == 0\nFAILED .gizli/test_gizli.py::test_tavan_esit_ve_ustu - assert 2 == 0\nFAILED .gizli/test_gizli.py::test_yarim_yukari_yuvarlama - assert 2 == 0\nFAILED .gizli/test_gizli.py::test_noktali_virgul_ve_bom - assert 2 == 0\nFAILED .gizli/test_gizli.py::test_bos_satir_yoksay - assert 2 == 0\nFAILED .gizli/test_gizli.py::test_bozuk_tarih_atlanir - assert 2 == 0\nFAILED .gizli/test_gizli.py::test_eksik_sutun_atlanir - assert 2 == 0\nFAILED .gizli/test_gizli.py::test_bilinmeyen_uye_atlanir - assert 2 == 0\nFAILED .gizli/test_gizli.py::test_id_artan_siralama - assert 2 == 0\nFAILED .gizli/test_gizli.py::test_esit_ceza_soyad_turkce - assert 2 == 0\nFAILED .gizli/test_gizli.py::test_kitap_tur_kirpma_turkce - assert 2 == 0\nFAILED .gizli/test_gizli.py::test_baslik_hatasi_3 - assert 2 == 3\nFAILED .gizli/test_gizli.py::test_json_yapi_hatasi_3 - assert 2 == 3\nFAILED .gizli/test_gizli.py::test_yalnizca_stdlib - FileNotFoundError: [Errno...\n19 failed, 1 passed in 1.57s\n"
+ }
+}

@@ -1,0 +1,24 @@
+{
+ "id": "a180",
+ "kip": "b",
+ "tekrar": 2,
+ "kategori": "Türkçe büyük/küçük harf (İ/i, I/ı), Türk alfabesiyle sıralama, sayıyı yazıya çevirme, ünlü uyumuna göre ek",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "tarti.py yazıldı: --musteri/--kilo/--kasa bayraklarını işler, eksik bayrak→tip→aralık sırasıyla denetler, hatalarda ValueError mesajıyla 2 koduyla çıkar; kiloyu yarım-yukarı 2 ondalığa yuvarlayıp rakam+Türkçe sözcükle (bin/bir-bin, sıfır kurallarıyla), kasayı rakam+adet ile, adı Türkçe başlık biçimiyle (ı↔I, i↔İ) tek satır fiş olarak basar. pytest ile 10 test geçirildi.",
+ "adim": 7,
+ "yurutucu_token": {
+  "girdi": 24065,
+  "cikti": 29240
+ },
+ "yurutucu_usd": 0.008254500000000001,
+ "bitirdi": true,
+ "sure_sn": 319.7,
+ "gizli": {
+  "gecti": true,
+  "gecen": 23,
+  "toplam": 23,
+  "cikti": ".......................                                                  [100%]\n23 passed in 0.52s\n"
+ }
+}

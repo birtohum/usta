@@ -1,0 +1,57 @@
+{
+ "id": "a058",
+ "kip": "c",
+ "tekrar": 2,
+ "kategori": "tarih ve saat: resmî tatiller parametreyle, iş günü hesabı, Türkiye saat dilimi (UTC+3, yaz saati yok), gün/ay adları Türkçe",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 52,
+   "basarili": 52
+  }
+ ],
+ "spark_usd": 0.0118335,
+ "arayuz": "",
+ "kabul_yazar": 3,
+ "mutasyon": {
+  "mutant": 15,
+  "ham_mutant": 15,
+  "turlar": [
+   {
+    "oldurulen": 13,
+    "toplam": 15
+   },
+   {
+    "oldurulen": 14,
+    "toplam": 15
+   },
+   {
+    "oldurulen": 15,
+    "toplam": 15
+   }
+  ],
+  "hayatta": []
+ },
+ "hakem": [],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [],
+ "kabul_test_sayisi": 52,
+ "kabul_gecti": true,
+ "ozet": "gumruk_cli.py yazıldı: TR (UTC+3) hafta sonu+tati̇l eleme, `tarih: gün` satırları ve ay özeti, HATALI TARIH→2, ters aralık→2, bilinmeyen bayrak→3 (öncelikli), TR küçük harf (İ→i, I→ı), eşit sayılı aylarda erken başlangıç önce, yalnızca stdlib. pytest 12 test geçti.",
+ "adim": 9,
+ "yurutucu_token": {
+  "girdi": 34076,
+  "cikti": 29413
+ },
+ "yurutucu_usd": 0.009290200000000002,
+ "bitirdi": true,
+ "sure_sn": 758.4,
+ "gizli": {
+  "gecti": true,
+  "gecen": 20,
+  "toplam": 20,
+  "cikti": "....................                                                     [100%]\n20 passed in 0.82s\n"
+ }
+}

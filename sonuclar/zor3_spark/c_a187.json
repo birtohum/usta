@@ -1,0 +1,52 @@
+{
+ "id": "a187",
+ "kip": "c",
+ "tekrar": 1,
+ "kategori": "çok dosyalı küçük modül: iki-üç dosyaya bölünmüş, ortak hata sınıfları ve bir komut satırı girişi olan araç",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 47,
+   "basarili": 47
+  }
+ ],
+ "spark_usd": 0.0139016,
+ "arayuz": "hatalar.py: GecersizTarihHatasi, GecersizTipHatasi, ParselDoluHatasi, GecersizElektrikHatasi; kamp.py: KampAlani() parametresiz kurucu, rezervasyon(parsel_no:int, tip:str, giris:str, cikis:str)->str, ucret(rez_id:str, elektrik_kwh:float)->float, doluluk(gun:str)->dict; cli.py: python cli.py --rezerve --parsel NO --tip TIP --giris TARIH --cikis TARIH, python cli.py --ucret --id ID --elektrik KWH, python cli.py --doluluk --gun TARIH",
+ "kabul_yazar": 3,
+ "mutasyon": {
+  "mutant": 15,
+  "ham_mutant": 15,
+  "turlar": [
+   {
+    "oldurulen": 15,
+    "toplam": 15
+   }
+  ],
+  "hayatta": []
+ },
+ "hakem": [],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [
+  ".usta_kabul/test_kabul_3.py::test_cli_doluluk_sirali_ve_bos",
+  ".usta_kabul/test_kabul_3.py::test_cli_rezerve_ve_ucret_json"
+ ],
+ "kabul_test_sayisi": 47,
+ "kabul_gecti": true,
+ "ozet": "hatalar.py, kamp.py ve cli.py dosyaları yazıldı; Türkçe küçük harf dönüşümü, yarı-açık aralık çakışma kontrolü, Decimal ROUND_HALF_UP ücret hesabı ve tek satır JSON CLI uygulandı. pytest ile 13 test geçti.",
+ "adim": 8,
+ "yurutucu_token": {
+  "girdi": 43666,
+  "cikti": 24744
+ },
+ "yurutucu_usd": 0.0093154,
+ "bitirdi": true,
+ "sure_sn": 408.1,
+ "gizli": {
+  "gecti": true,
+  "gecen": 22,
+  "toplam": 22,
+  "cikti": "......................                                                   [100%]\n22 passed in 0.51s\n"
+ }
+}

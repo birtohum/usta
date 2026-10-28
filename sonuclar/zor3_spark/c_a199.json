@@ -1,0 +1,53 @@
+{
+ "id": "a199",
+ "kip": "c",
+ "tekrar": 1,
+ "kategori": "KDV, tevkifat, stopaj, taksit ve kuruş yuvarlama (Decimal, ROUND_HALF_UP, satır bazında ve toplamda yuvarlama farkı)",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 57,
+   "basarili": 57
+  }
+ ],
+ "spark_usd": 0.0151698,
+ "arayuz": "",
+ "kabul_yazar": 3,
+ "mutasyon": {
+  "mutant": 14,
+  "ham_mutant": 14,
+  "turlar": [
+   {
+    "oldurulen": 13,
+    "toplam": 14
+   },
+   {
+    "oldurulen": 14,
+    "toplam": 14
+   }
+  ],
+  "hayatta": []
+ },
+ "hakem": [],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [],
+ "kabul_test_sayisi": 57,
+ "kabul_gecti": true,
+ "ozet": "YemStopajDefteri yazıldı: %2/%4 oran, HALF_UP stopaj/net/KDV(%1), prim eşiği, TR büyük harf ve sıralama, tip/boş/negatif kontrolleri. Testler geçti.",
+ "adim": 6,
+ "yurutucu_token": {
+  "girdi": 20455,
+  "cikti": 22146
+ },
+ "yurutucu_usd": 0.0064747,
+ "bitirdi": true,
+ "sure_sn": 745.1,
+ "gizli": {
+  "gecti": false,
+  "gecen": 20,
+  "toplam": 22,
+  "cikti": "        d.ekle(\"ali\", \"arpa\", \"100.00\", \"2\")\n        d.ekle(\"veli\", \"arpa\", \"1000.00\", \"2\")\n        o = d.ozet()\n        liste = o[\"ureticiler\"]\n        adlar = [e[\"uretici\"] for e in liste]\n>       assert adlar[0] == \"VEL\\u0130\"\nE       AssertionError: assert 'veli' == 'VELİ'\nE         - VELİ\nE         + veli\n\n.gizli/test_gizli.py:129: AssertionError\n____________________ test_uretici_siralama_turkce_alfabetik ____________________\n\n    def test_uretici_siralama_turkce_alfabetik():\n        d = YemStopajDefteri()\n        d.ekle(\"tana\", \"arpa\", \"100.00\", \"2\")\n        d.ekle(\"\\u015Fana\", \"arpa\", \"100.00\", \"2\")\n        o = d.ozet()\n        liste = o[\"ureticiler\"]\n        adlar = [e[\"uretici\"] for e in liste]\n>       assert adlar == [\"\\u015EANA\", \"TANA\"]\nE       AssertionError: assert ['şana', 'tana'] == ['ŞANA', 'TANA']\nE         At index 0 diff: 'şana' != 'ŞANA'\nE         Use -v to get more diff\n\n.gizli/test_gizli.py:139: AssertionError\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_uretici_siralama_net_azalan - AssertionErro...\nFAILED .gizli/test_gizli.py::test_uretici_siralama_turkce_alfabetik - Asserti...\n2 failed, 20 passed in 0.12s\n"
+ }
+}

@@ -1,0 +1,26 @@
+{
+ "id": "a211",
+ "kip": "c",
+ "tekrar": 1,
+ "kategori": "CSV/JSON ile çalışan ve uç durumları çok olan veri işleme (BOM, ; ayırıcı, 1.234,56 sayı biçimi, boş/bozuk satır)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0003335,
+ "arayuz": "",
+ "kabul_gecti": false,
+ "dogrulanamadi": true,
+ "ozet": null,
+ "adim": 20,
+ "yurutucu_token": {
+  "girdi": 215279,
+  "cikti": 76260
+ },
+ "yurutucu_usd": 0.0367799,
+ "sure_sn": 842.7,
+ "gizli": {
+  "gecti": true,
+  "gecen": 21,
+  "toplam": 21,
+  "cikti": ".....................                                                    [100%]\n21 passed in 2.32s\n"
+ }
+}

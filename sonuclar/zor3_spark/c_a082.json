@@ -1,0 +1,49 @@
+{
+ "id": "a082",
+ "kip": "c",
+ "tekrar": 1,
+ "kategori": "çok dosyalı küçük modül: iki-üç dosyaya bölünmüş, ortak hata sınıfları ve bir komut satırı girişi olan araç",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 49,
+   "basarili": 49
+  }
+ ],
+ "spark_usd": 0.009317800000000001,
+ "arayuz": "hatalar.py aynen: GirdiHatasi(ValueError), PartiHatasi(ValueError). kumas.py: gerekli_miktar(siparis_m: float, fire_oran: float, top_m: float) -> tuple aynen, dönüş (top_sayisi: int, artan_m: float). Eksik parti işi için ekle: KAYITLI_PARTILER: set[str] ve parti_normalize(kod: str) -> str, boşta GirdiHatasi, kayıtsızda PartiHatasi. cli.py çağrısı aynen: python cli.py --siparis F --fire F --top F.",
+ "kabul_yazar": 3,
+ "mutasyon": {
+  "mutant": 16,
+  "ham_mutant": 16,
+  "turlar": [
+   {
+    "oldurulen": 16,
+    "toplam": 16
+   }
+  ],
+  "hayatta": []
+ },
+ "hakem": [],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [],
+ "kabul_test_sayisi": 49,
+ "kabul_gecti": true,
+ "ozet": "hatalar.py (ValueError'dan doğrudan türeyen GirdiHatasi/PartiHatasi), kumas.py (Decimal ile santimetre yukarı yuvarlamalı gerekli_miktar, Türkçe I/İ dönüşümlü parti_normalize ve KAYITLI_PARTILER) ve cli.py (--siparis/--fire/--top ile tek satır çıktı) yazıldı; pytest ile 24 test geçti.",
+ "adim": 12,
+ "yurutucu_token": {
+  "girdi": 47105,
+  "cikti": 44972
+ },
+ "yurutucu_usd": 0.0137049,
+ "bitirdi": true,
+ "sure_sn": 598.9,
+ "gizli": {
+  "gecti": false,
+  "gecen": 16,
+  "toplam": 22,
+  "cikti": "_hata_oncelik_sayisal_once _______________________\n\n    def test_19_hata_oncelik_sayisal_once():\n        with pytest.raises(hatalar.GirdiHatasi):\n>           kumas.parti_ile_hesapla(-5, 5, 100, \"bilinmeyen-999\")\nE           AttributeError: module 'kumas' has no attribute 'parti_ile_hesapla'\n\n.gizli/test_gizli.py:106: AttributeError\n____________________________ test_21_cli_tam_oturma ____________________________\n\n    def test_21_cli_tam_oturma():\n        r = subprocess.run([sys.executable, \"cli.py\", \"--siparis\", \"100\", \"--fire\", \"0\", \"--top\", \"100\"], capture_output=True, text=True, cwd=WD)\n        assert r.returncode == 0\n>       assert r.stdout.strip() == \"Top: 1 Artan: 0.00 m\"\nE       AssertionError: assert 'Top: 1 Artan: 0.0 m' == 'Top: 1 Artan: 0.00 m'\nE         - Top: 1 Artan: 0.00 m\nE         ?                  -\nE         + Top: 1 Artan: 0.0 m\n\n.gizli/test_gizli.py:121: AssertionError\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_15_parti_bosluklari_silinir - AttributeErro...\nFAILED .gizli/test_gizli.py::test_16_parti_bos_girdi_hatasi - AttributeError:...\nFAILED .gizli/test_gizli.py::test_17_parti_kayitsiz_parti_hatasi - AttributeE...\nFAILED .gizli/test_gizli.py::test_18_parti_turkce_kucuk_harf - AttributeError...\nFAILED .gizli/test_gizli.py::test_19_hata_oncelik_sayisal_once - AttributeErr...\nFAILED .gizli/test_gizli.py::test_21_cli_tam_oturma - AssertionError: assert ...\n6 failed, 16 passed in 0.55s\n"
+ }
+}

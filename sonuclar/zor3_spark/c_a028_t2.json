@@ -1,0 +1,53 @@
+{
+ "id": "a028",
+ "kip": "c",
+ "tekrar": 2,
+ "kategori": "tarih ve saat: resmî tatiller parametreyle, iş günü hesabı, Türkiye saat dilimi (UTC+3, yaz saati yok), gün/ay adları Türkçe",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 54,
+   "basarili": 54
+  }
+ ],
+ "spark_usd": 0.007006500000000001,
+ "arayuz": "",
+ "kabul_yazar": 3,
+ "mutasyon": {
+  "mutant": 14,
+  "ham_mutant": 15,
+  "turlar": [
+   {
+    "oldurulen": 12,
+    "toplam": 14
+   },
+   {
+    "oldurulen": 14,
+    "toplam": 14
+   }
+  ],
+  "hayatta": []
+ },
+ "hakem": [],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [],
+ "kabul_test_sayisi": 54,
+ "kabul_gecti": true,
+ "ozet": "tatil_io.py'de tatilleri_yukle ve rapor.py'de aylik_isgunu_ozeti gerçeklendi; ISO tarih okuma, yorum/boş satır yoksama, hata öncelikleri, Türkçe ay adları ve iş günü hesabı kuruldu. 17 pytest testi yazıldı ve hepsi geçti.",
+ "adim": 6,
+ "yurutucu_token": {
+  "girdi": 17889,
+  "cikti": 8931
+ },
+ "yurutucu_usd": 0.0035751,
+ "bitirdi": true,
+ "sure_sn": 625.1,
+ "gizli": {
+  "gecti": true,
+  "gecen": 20,
+  "toplam": 20,
+  "cikti": "....................                                                     [100%]\n20 passed in 0.16s\n"
+ }
+}

@@ -1,0 +1,62 @@
+{
+ "id": "a145",
+ "kip": "c",
+ "tekrar": 3,
+ "kategori": "Türkçe büyük/küçük harf (İ/i, I/ı), Türk alfabesiyle sıralama, sayıyı yazıya çevirme, ünlü uyumuna göre ek",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 41,
+   "basarili": 41
+  }
+ ],
+ "spark_usd": 0.026178800000000006,
+ "arayuz": "",
+ "kabul_yazar": 2,
+ "mutasyon": {
+  "mutant": 14,
+  "ham_mutant": 14,
+  "turlar": [
+   {
+    "oldurulen": 11,
+    "toplam": 14
+   },
+   {
+    "oldurulen": 13,
+    "toplam": 14
+   },
+   {
+    "oldurulen": 13,
+    "toplam": 14
+   }
+  ],
+  "hayatta": [
+   "kilo ondalik girdide exit 2 kuralini bozar"
+  ]
+ },
+ "hakem": [],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [
+  ".usta_kabul/test_kabul_2.py::test_toplam_yazi_TL_kurus",
+  ".usta_kabul/test_kabul_2.py::test_yalnizca_stdlib"
+ ],
+ "kabul_test_sayisi": 41,
+ "kabul_gecti": true,
+ "ozet": null,
+ "adim": 20,
+ "yurutucu_token": {
+  "girdi": 192374,
+  "cikti": 56143
+ },
+ "yurutucu_usd": 0.030466,
+ "bitirdi": false,
+ "sure_sn": 819.0,
+ "gizli": {
+  "gecti": false,
+  "gecen": 19,
+  "toplam": 20,
+  "cikti": "=================================== FAILURES ===================================\n___________________________ test_stdlib_ve_siralama ____________________________\n\n    def test_stdlib_ve_siralama():\n        import ast\n        src = (WORKDIR / \"makbuz.py\").read_text(encoding=\"utf-8\")\n        tree = ast.parse(src)\n        mods = set()\n        for n in ast.walk(tree):\n            if isinstance(n, ast.Import):\n                for a in n.names:\n                    mods.add(a.name.split(\".\")[0])\n            elif isinstance(n, ast.ImportFrom):\n                if n.module:\n                    mods.add(n.module.split(\".\")[0])\n        try:\n            std = sys.stdlib_module_names\n        except AttributeError:\n            std = {\"sys\",\"pathlib\",\"os\",\"re\",\"argparse\",\"unicodedata\"}\n        for m in mods:\n            assert m in std, m\n        import makbuz\n>       assert hasattr(makbuz, \"turkce_sira_anahtari\")\nE       AssertionError: assert False\nE        +  where False = hasattr(<module 'makbuz' from '/home/usta/is/f91c87782874/makbuz.py'>, 'turkce_sira_anahtari')\n\n.gizli/test_gizli.py:187: AssertionError\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_stdlib_ve_siralama - AssertionError: assert...\n1 failed, 19 passed in 0.75s\n"
+ }
+}

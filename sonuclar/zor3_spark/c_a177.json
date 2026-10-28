@@ -1,0 +1,74 @@
+{
+ "id": "a177",
+ "kip": "c",
+ "tekrar": 1,
+ "kategori": "çok dosyalı küçük modül: iki-üç dosyaya bölünmüş, ortak hata sınıfları ve bir komut satırı girişi olan araç",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": false,
+   "toplam": 49,
+   "basarili": 48
+  },
+  {
+   "gecti": true,
+   "toplam": 49,
+   "basarili": 49
+  }
+ ],
+ "spark_usd": 0.0191221,
+ "arayuz": "",
+ "kabul_yazar": 3,
+ "mutasyon": {
+  "mutant": 16,
+  "ham_mutant": 16,
+  "turlar": [
+   {
+    "oldurulen": 14,
+    "toplam": 16
+   },
+   {
+    "oldurulen": 16,
+    "toplam": 16
+   }
+  ],
+  "hayatta": []
+ },
+ "hakem": [
+  {
+   "test": ".usta_kabul/test_kabul_2.py::test_cli_ekle_json_yazar",
+   "karar": "belirsiz",
+   "gerekce": "Görev metni CLI çağrıları arası kalıcılığın olup olmadığını ve nerede tutulacağını belirtmiyor.",
+   "tur": 1
+  },
+  {
+   "test": ".usta_kabul/test_kabul_2.py::test_cli_ozet_bos_gun",
+   "karar": "belirsiz",
+   "gerekce": "Görev metni CLI verisinin cwd bazında izole olacağını belirtmiyor.",
+   "tur": 1
+  }
+ ],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [
+  ".usta_kabul/test_kabul_2.py::test_cli_ekle_json_yazar",
+  ".usta_kabul/test_kabul_2.py::test_cli_ozet_bos_gun"
+ ],
+ "kabul_test_sayisi": 49,
+ "kabul_gecti": true,
+ "ozet": "Kabul testindeki tek hata, CLI kalıcılık dosyasının betik dizininde tutulmasından kaynaklanıyordu: testler cwd=tmp_path ile izole çalıştığı halde önceki kayıtlar toplamları kirletiyordu. Görev metni dosya konumunu belirtmediği için _veri_dosyasi varsayılanını çalışma dizinindeki safran_veri.json olarak değiştirdim. Kendi 16 testimin tamamı ve kabul testlerinin 51'i geçiyor.",
+ "adim": 21,
+ "yurutucu_token": {
+  "girdi": 274804,
+  "cikti": 45309
+ },
+ "yurutucu_usd": 0.0365422,
+ "bitirdi": true,
+ "sure_sn": 1025.5,
+ "gizli": {
+  "gecti": false,
+  "gecen": 20,
+  "toplam": 22,
+  "cikti": "E       AssertionError: assert 'S-0004' == 'S-0001'\nE         - S-0001\nE         ?      ^\nE         + S-0004\nE         ?      ^\n\n.gizli/test_gizli.py:187: AssertionError\n_____________________________ test_cli_ozet_akisi ______________________________\n\n    def test_cli_ozet_akisi():\n        _temizle()\n        r1 = _cli(\"--ekle\", \"--uretici\", \"Ali\", \"--yas\", \"10\", \"--nem\", \"0\", \"--tarih\", \"2024-05-01\")\n        assert r1.returncode == 0, r1.stderr\n        r2 = _cli(\"--ekle\", \"--uretici\", \"Zebra\", \"--yas\", \"20\", \"--nem\", \"0\", \"--tarih\", \"2024-05-01\")\n        assert r2.returncode == 0, r2.stderr\n        r3 = _cli(\"--ozet\", \"--gun\", \"2024-05-01\")\n        assert r3.returncode == 0, r3.stderr\n        oz = json.loads(r3.stdout.strip())\n        assert oz[\"gun\"] == \"2024-05-01\"\n>       assert oz[\"toplam_kuru_g\"] == pytest.approx(30.0)\nE       assert 120.0 == 30.0 ± 3.0e-05\nE         comparison failed\nE         Obtained: 120.0\nE         Expected: 30.0 ± 3.0e-05\n\n.gizli/test_gizli.py:202: AssertionError\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_cli_ekle - AssertionError: assert 'S-0004' ...\nFAILED .gizli/test_gizli.py::test_cli_ozet_akisi - assert 120.0 == 30.0 ± 3.0...\n2 failed, 20 passed in 0.58s\n"
+ }
+}

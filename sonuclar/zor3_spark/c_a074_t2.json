@@ -1,0 +1,60 @@
+{
+ "id": "a074",
+ "kip": "c",
+ "tekrar": 2,
+ "kategori": "KDV, tevkifat, stopaj, taksit ve kuruş yuvarlama (Decimal, ROUND_HALF_UP, satır bazında ve toplamda yuvarlama farkı)",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 61,
+   "basarili": 61
+  }
+ ],
+ "spark_usd": 0.0193846,
+ "arayuz": "",
+ "kabul_yazar": 3,
+ "mutasyon": {
+  "mutant": 14,
+  "ham_mutant": 15,
+  "turlar": [
+   {
+    "oldurulen": 11,
+    "toplam": 14
+   },
+   {
+    "oldurulen": 13,
+    "toplam": 14
+   },
+   {
+    "oldurulen": 14,
+    "toplam": 14
+   }
+  ],
+  "hayatta": []
+ },
+ "hakem": [],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [
+  ".usta_kabul/test_kabul_m1.py::test_esit_tutar_stabil_sira",
+  ".usta_kabul/test_kabul_m1.py::test_esit_tutar_stabil_sira_bes_gece"
+ ],
+ "kabul_test_sayisi": 61,
+ "kabul_gecti": true,
+ "ozet": "konaklama.py içinde konaklama_faturasi fonksiyonu yazıldı: Decimal+ROUND_HALF_UP ile gece bazında matrah/vergi(%2)/KDV(matrah+vergi üzerinden) yuvarlama, toplamlar yuvarlanmış gece değerlerinin toplamı, yuvarlama_farki=yuvarlanmış genel−ham toplam (toplamlara eklenmeden), 1-365 gece aralığı, bool dahil int değilse TypeError, boş/negatif/çevrilemez fiyatlarda ValueError, sıfır fiyat sıfır sonuç, KDV yalnızca 0.10/0.20, soyadında Türkçe İ/I dönüşümü+casefold normalizasyon ve boş kontrolü, stabil sorted ile giriş sırası koruma, string sözlük çıktı. pytest ile 11 test geçti.",
+ "adim": 4,
+ "yurutucu_token": {
+  "girdi": 14337,
+  "cikti": 14984
+ },
+ "yurutucu_usd": 0.0044305,
+ "bitirdi": true,
+ "sure_sn": 894.1,
+ "gizli": {
+  "gecti": true,
+  "gecen": 20,
+  "toplam": 20,
+  "cikti": "....................                                                     [100%]\n20 passed in 0.06s\n"
+ }
+}

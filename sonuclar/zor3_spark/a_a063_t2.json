@@ -1,0 +1,24 @@
+{
+ "id": "a063",
+ "kip": "a",
+ "tekrar": 2,
+ "kategori": "Türkçe büyük/küçük harf (İ/i, I/ı), Türk alfabesiyle sıralama, sayıyı yazıya çevirme, ünlü uyumuna göre ek",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "kimlik.py içinde KisiAdiDuzenleyici yazıldı: Türkçe küçültme (I→ı, İ→i), baş harf büyütme (i→İ, ı→I), çoklu boşluk sadeleştirme, tireli/çift isim desteği, istisna koruma, TypeError öncelikli hata kontrolleri ve durum etkileşimsizliği sağlandı.",
+ "adim": 6,
+ "yurutucu_token": {
+  "girdi": 14865,
+  "cikti": 17438
+ },
+ "yurutucu_usd": 0.0049740999999999995,
+ "bitirdi": true,
+ "sure_sn": 180.9,
+ "gizli": {
+  "gecti": true,
+  "gecen": 20,
+  "toplam": 20,
+  "cikti": "....................                                                     [100%]\n20 passed in 0.06s\n"
+ }
+}

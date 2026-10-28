@@ -1,0 +1,53 @@
+{
+ "id": "a063",
+ "kip": "c",
+ "tekrar": 3,
+ "kategori": "Türkçe büyük/küçük harf (İ/i, I/ı), Türk alfabesiyle sıralama, sayıyı yazıya çevirme, ünlü uyumuna göre ek",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 55,
+   "basarili": 55
+  }
+ ],
+ "spark_usd": 0.009969300000000002,
+ "arayuz": "",
+ "kabul_yazar": 3,
+ "mutasyon": {
+  "mutant": 14,
+  "ham_mutant": 14,
+  "turlar": [
+   {
+    "oldurulen": 13,
+    "toplam": 14
+   },
+   {
+    "oldurulen": 14,
+    "toplam": 14
+   }
+  ],
+  "hayatta": []
+ },
+ "hakem": [],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [],
+ "kabul_test_sayisi": 55,
+ "kabul_gecti": true,
+ "ozet": "kimlik.py içinde KisiAdiDuzenleyici yazıldı: Türkçe küçültme (I→ı, İ→i), baş harf büyütme (i→İ, ı→I), çift isim/tireli soyad desteği, boşluk normalizasyonu, istisna birebir koruma, ValueError/TypeError kuralları (tip önce) uygulandı. pytest ile 14 test geçti.",
+ "adim": 4,
+ "yurutucu_token": {
+  "girdi": 11242,
+  "cikti": 11832
+ },
+ "yurutucu_usd": 0.0034906,
+ "bitirdi": true,
+ "sure_sn": 609.5,
+ "gizli": {
+  "gecti": true,
+  "gecen": 20,
+  "toplam": 20,
+  "cikti": "....................                                                     [100%]\n20 passed in 0.10s\n"
+ }
+}

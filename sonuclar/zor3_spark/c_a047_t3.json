@@ -1,0 +1,81 @@
+{
+ "id": "a047",
+ "kip": "c",
+ "tekrar": 3,
+ "kategori": "çok dosyalı küçük modül: iki-üç dosyaya bölünmüş, ortak hata sınıfları ve bir komut satırı girişi olan araç",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 51,
+   "basarili": 51
+  }
+ ],
+ "spark_usd": 0.012498000000000002,
+ "arayuz": "hatalar.py: NotHatasi(ValueError), OgrenciHatasi(ValueError); burs.py: ortalama_hesapla(notlar:list)->int, sirala(ogrenciler:list)->list; öğrenci sözlüğü {ad:str, notlar:list, devamsizlik:int, kimlik:int}; sirala aynı sözlükleri sıralı listeler; CLI: python -m burs sirala --ogrenciler Ad:not:devamsizlik,... stdout satır satır ad",
+ "kabul_yazar": 3,
+ "mutasyon": {
+  "mutant": 13,
+  "ham_mutant": 14,
+  "turlar": [
+   {
+    "oldurulen": 8,
+    "toplam": 13
+   },
+   {
+    "oldurulen": 12,
+    "toplam": 13
+   },
+   {
+    "oldurulen": 13,
+    "toplam": 13
+   }
+  ],
+  "hayatta": []
+ },
+ "hakem": [
+  {
+   "test": ".usta_kabul/test_kabul_3.py::test_sirala_turkce_isimli_ogrenciler_siralanir",
+   "karar": "belirsiz",
+   "gerekce": "Görev metni tekrarlanan adın hata olduğunu açıkça belirtmiyor, ortalamaya göre sıralama dışında normallik yorumu tek anlamlı değil.",
+   "tur": 1
+  },
+  {
+   "test": ".usta_kabul/test_kabul_m1.py::test_i_donusumu",
+   "karar": "belirsiz",
+   "gerekce": "Görev metni ismin dördüncü sıralama ölçütü olduğunu ve tekrarlanan kimliğin hata olduğunu açıkça belirtmiyor.",
+   "tur": 1
+  },
+  {
+   "test": ".usta_kabul/test_kabul_m1.py::test_kucuk_harf_karsilastirma",
+   "karar": "belirsiz",
+   "gerekce": "Görev metni küçük harf sıralamasını son eşitlik bozucu olarak açıkça istemiyor ve tekrarlanan kimlik kuralını tanımlamıyor.",
+   "tur": 1
+  }
+ ],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [
+  ".usta_kabul/test_kabul_2.py::test_yalnizca_stdlib_kullanir",
+  ".usta_kabul/test_kabul_3.py::test_sirala_turkce_isimli_ogrenciler_siralanir",
+  ".usta_kabul/test_kabul_m1.py::test_i_donusumu",
+  ".usta_kabul/test_kabul_m1.py::test_kucuk_harf_karsilastirma"
+ ],
+ "kabul_test_sayisi": 51,
+ "kabul_gecti": true,
+ "ozet": "hatalar.py (NotHatasi, OgrenciHatasi) ve burs.py (ortalama_hesapla floor ortalama, sirala, Türkçe normalize ı/ş/ğ + lower, tip>öğrenci>not önceliği, CLI `python -m burs sirala --ogrenciler`) yazıldı; 22 pytest testi geçiyor.",
+ "adim": 6,
+ "yurutucu_token": {
+  "girdi": 22264,
+  "cikti": 27086
+ },
+ "yurutucu_usd": 0.0076436,
+ "bitirdi": true,
+ "sure_sn": 1019.9,
+ "gizli": {
+  "gecti": false,
+  "gecen": 17,
+  "toplam": 20,
+  "cikti": "        with pytest.raises(hatalar.NotHatasi):\n>           sirala(ogr)\n\n.gizli/test_gizli.py:94: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \nburs.py:115: in sirala\n    _ogrenci_kontrolu(ogrenciler)\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nogrenciler = [{'ad': 'Ali', 'devamsizlik': 0, 'kimlik': 1, 'notlar': [200]}, {'ad': '', 'devamsizlik': 0, 'kimlik': 2, 'notlar': [50]}]\n\n    def _ogrenci_kontrolu(ogrenciler: list) -> None:\n        gorulen_kimlik = set()\n        gorulen_isim = set()\n        for o in ogrenciler:\n            for k in (\"ad\", \"notlar\", \"devamsizlik\", \"kimlik\"):\n                if k not in o:\n                    raise OgrenciHatasi(f\"eksik alan: {k}\")\n            ad = o[\"ad\"]\n            # tipi zaten kontrol edildi, str oldugu garanti\n            if ad.strip() == \"\":\n>               raise OgrenciHatasi(\"ad bos olamaz\")\nE               hatalar.OgrenciHatasi: ad bos olamaz\n\nburs.py:79: OgrenciHatasi\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_turkce_karsilastirma - hatalar.OgrenciHatas...\nFAILED .gizli/test_gizli.py::test_turkce_g_donusumu - hatalar.OgrenciHatasi: ...\nFAILED .gizli/test_gizli.py::test_ilk_ihlal - hatalar.OgrenciHatasi: ad bos o...\n3 failed, 17 passed in 0.26s\n"
+ }
+}

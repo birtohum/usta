@@ -1,0 +1,24 @@
+{
+ "id": "a216",
+ "kip": "b",
+ "tekrar": 1,
+ "kategori": "tarih ve saat: resmî tatiller parametreyle, iş günü hesabı, Türkiye saat dilimi (UTC+3, yaz saati yok), gün/ay adları Türkçe",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "mezat.py içinde mezat_takvimi yazıldı: başlangıç dahil aday günler taranır, tatiller atlanır, Europe/Istanbul bilinçli tarihlerle Türkçe uzun tarih üretilir, hata önceliği ve boş/negatif durumlar uygulanır, Türkçe küçük harf kuralı eklendi. pytest ile 21 test geçti.",
+ "adim": 5,
+ "yurutucu_token": {
+  "girdi": 18062,
+  "cikti": 18880
+ },
+ "yurutucu_usd": 0.005582200000000001,
+ "bitirdi": true,
+ "sure_sn": 202.1,
+ "gizli": {
+  "gecti": true,
+  "gecen": 20,
+  "toplam": 20,
+  "cikti": "....................                                                     [100%]\n20 passed in 0.11s\n"
+ }
+}

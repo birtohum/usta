@@ -1,0 +1,139 @@
+{
+ "id": "a074",
+ "kip": "c",
+ "tekrar": 3,
+ "kategori": "KDV, tevkifat, stopaj, taksit ve kuruş yuvarlama (Decimal, ROUND_HALF_UP, satır bazında ve toplamda yuvarlama farkı)",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 49,
+   "basarili": 49
+  }
+ ],
+ "spark_usd": 0.0197021,
+ "arayuz": "",
+ "kabul_yazar": 3,
+ "mutasyon": {
+  "mutant": 16,
+  "ham_mutant": 16,
+  "turlar": [
+   {
+    "oldurulen": 11,
+    "toplam": 16
+   },
+   {
+    "oldurulen": 14,
+    "toplam": 16
+   },
+   {
+    "oldurulen": 14,
+    "toplam": 16
+   }
+  ],
+  "hayatta": [
+   "ROUND_HALF_UP ile kurusa yuvarlama gereksinimini cigner, varsayilan ROUND_HALF_EVEN kullanir",
+   "bos soyadi ValueError sayilmali, yalnizca bosluklardan olusani kabul eder"
+  ]
+ },
+ "hakem": [
+  {
+   "test": ".usta_kabul/test_kabul_2.py::test_cikti_anahtarlari_ve_string_turu",
+   "karar": "belirsiz",
+   "gerekce": "Test '10' oranına dayanıyor ama görevdeki '0,10 ve 0,20' yazımı ondalık mı liste mi tek anlamlı değil.",
+   "tur": 1
+  },
+  {
+   "test": ".usta_kabul/test_kabul_2.py::test_esit_gece_kalemleri_giris_sirasini_korur",
+   "karar": "belirsiz",
+   "gerekce": "Test '10' oranına dayanıyor ama görevdeki '0,10 ve 0,20' yazımı ondalık mı liste mi tek anlamlı değil.",
+   "tur": 1
+  },
+  {
+   "test": ".usta_kabul/test_kabul_2.py::test_gece_bazinda_hesap_dogrulugu",
+   "karar": "belirsiz",
+   "gerekce": "Test '10' oranına dayanıyor ama görevdeki '0,10 ve 0,20' yazımı ondalık mı liste mi tek anlamlı değil.",
+   "tur": 1
+  },
+  {
+   "test": ".usta_kabul/test_kabul_2.py::test_gece_sinir_gecerli_1_ve_365",
+   "karar": "belirsiz",
+   "gerekce": "Test '10' ve '0' oranına dayanıyor ama görevdeki '0,10 ve 0,20' yazımı ondalık mı liste mi tek anlamlı değil.",
+   "tur": 1
+  },
+  {
+   "test": ".usta_kabul/test_kabul_2.py::test_kdv_oran_gecerli_0_10_20",
+   "karar": "belirsiz",
+   "gerekce": "Görevdeki '0,10 ve 0,20' ifadesi Türkçe ondalık ile 0-10-20 listesi arasında belirsizdir.",
+   "tur": 1
+  },
+  {
+   "test": ".usta_kabul/test_kabul_2.py::test_oda_fiyati_sifir_sonucu",
+   "karar": "belirsiz",
+   "gerekce": "Test '10' oranına dayanıyor ama görevdeki '0,10 ve 0,20' yazımı ondalık mı liste mi tek anlamlı değil.",
+   "tur": 1
+  },
+  {
+   "test": ".usta_kabul/test_kabul_2.py::test_round_half_up_kurus_yuvarlama",
+   "karar": "belirsiz",
+   "gerekce": "Test '10' oranına dayanıyor ama görevdeki '0,10 ve 0,20' yazımı ondalık mı liste mi tek anlamlı değil.",
+   "tur": 1
+  },
+  {
+   "test": ".usta_kabul/test_kabul_2.py::test_soyadi_bos_ve_turkce_donusum",
+   "karar": "belirsiz",
+   "gerekce": "Test '10' oranına dayanıyor ama görevdeki '0,10 ve 0,20' yazımı ondalık mı liste mi tek anlamlı değil.",
+   "tur": 1
+  },
+  {
+   "test": ".usta_kabul/test_kabul_2.py::test_soyadi_casefold_esitligi",
+   "karar": "belirsiz",
+   "gerekce": "Test '10' oranına dayanıyor ama görevdeki '0,10 ve 0,20' yazımı ondalık mı liste mi tek anlamlı değil.",
+   "tur": 1
+  },
+  {
+   "test": ".usta_kabul/test_kabul_2.py::test_toplamlar_yuvarlanmis_degerler_toplami_fark_eklenmez",
+   "karar": "belirsiz",
+   "gerekce": "Test '10' oranına dayanıyor ama görevdeki '0,10 ve 0,20' yazımı ondalık mı liste mi tek anlamlı değil.",
+   "tur": 1
+  },
+  {
+   "test": ".usta_kabul/test_kabul_2.py::test_yuvarlama_farki_ham_fark",
+   "karar": "belirsiz",
+   "gerekce": "Test '10' oranına dayanıyor ama görevdeki '0,10 ve 0,20' yazımı ondalık mı liste mi tek anlamlı değil.",
+   "tur": 1
+  }
+ ],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [
+  ".usta_kabul/test_kabul_2.py::test_cikti_anahtarlari_ve_string_turu",
+  ".usta_kabul/test_kabul_2.py::test_esit_gece_kalemleri_giris_sirasini_korur",
+  ".usta_kabul/test_kabul_2.py::test_gece_bazinda_hesap_dogrulugu",
+  ".usta_kabul/test_kabul_2.py::test_gece_sinir_gecerli_1_ve_365",
+  ".usta_kabul/test_kabul_2.py::test_kdv_oran_gecerli_0_10_20",
+  ".usta_kabul/test_kabul_2.py::test_oda_fiyati_sifir_sonucu",
+  ".usta_kabul/test_kabul_2.py::test_round_half_up_kurus_yuvarlama",
+  ".usta_kabul/test_kabul_2.py::test_soyadi_bos_ve_turkce_donusum",
+  ".usta_kabul/test_kabul_2.py::test_soyadi_casefold_esitligi",
+  ".usta_kabul/test_kabul_2.py::test_toplamlar_yuvarlanmis_degerler_toplami_fark_eklenmez",
+  ".usta_kabul/test_kabul_2.py::test_yuvarlama_farki_ham_fark"
+ ],
+ "kabul_test_sayisi": 49,
+ "kabul_gecti": true,
+ "ozet": "konaklama.py içinde konaklama_faturasi fonksiyonu yazıldı: gece bazında matrah/vergi(%2)/KDV ROUND_HALF_UP ile yuvarlanıp toplanıyor, yuvarlama_farki ham-toplam farkı olarak raporlanıyor; tip önceliği, sınırlar, KDV izni ve casefold normalizasyonu uygulandı. pytest ile 12 test geçti.",
+ "adim": 4,
+ "yurutucu_token": {
+  "girdi": 13943,
+  "cikti": 17097
+ },
+ "yurutucu_usd": 0.004813700000000001,
+ "bitirdi": true,
+ "sure_sn": 1025.1,
+ "gizli": {
+  "gecti": true,
+  "gecen": 20,
+  "toplam": 20,
+  "cikti": "....................                                                     [100%]\n20 passed in 0.06s\n"
+ }
+}

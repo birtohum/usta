@@ -1,0 +1,24 @@
+{
+ "id": "a143",
+ "kip": "a",
+ "tekrar": 3,
+ "kategori": "CSV/JSON ile çalışan ve uç durumları çok olan veri işleme (BOM, ; ayırıcı, 1.234,56 sayı biçimi, boş/bozuk satır)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "kereste_kesim_cli.py yazıldı: utf-8-sig `;` CSV okuma, Türkçe sayı çözümleme, tr küçük harf normalizasyon, fireli gereken boy, en kısa uygun + kimlik tie-break atama, Decimal ile yarım-yukarı kullanım oranı, çıkış kodları 2/3 ve yalnızca standart kütüphane. Testlerle doğrulandı.",
+ "adim": 9,
+ "yurutucu_token": {
+  "girdi": 40411,
+  "cikti": 30628
+ },
+ "yurutucu_usd": 0.010166699999999999,
+ "bitirdi": true,
+ "sure_sn": 360.8,
+ "gizli": {
+  "gecti": false,
+  "gecen": 12,
+  "toplam": 21,
+  "cikti": "t_17_baslik_hatasi_cikis3(tmp_path):\n        stok = tmp_path / \"stok.csv\"\n        sip = tmp_path / \"sip.json\"\n        cik = tmp_path / \"cikti.json\"\n        yaz_stok(stok, [\"K1;cam;300\"], baslik=\"id;tur;boy\")\n        yaz_siparis(sip, [])\n        r = calistir(stok, sip, cik, \"0\", tmp_path)\n>       assert r.returncode == 3\nE       AssertionError: assert 0 == 3\nE        +  where 0 = CompletedProcess(args=['/usr/bin/python', '/home/usta/is/9ff40439bb27/kereste_kesim_cli.py', '--stok-csv', '/home/usta...t-of-usta/pytest-0/test_17_baslik_hatasi_cikis30/cikti.json', '--fire-orani', '0'], returncode=0, stdout='', stderr='').returncode\n\n.gizli/test_gizli.py:220: AssertionError\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_01_temel_atama - KeyError: 'siparis_id'\nFAILED .gizli/test_gizli.py::test_03_fire_hesabi_yetersiz - AssertionError: a...\nFAILED .gizli/test_gizli.py::test_06_bozuk_satirlar_atlanir - KeyError: 'stok...\nFAILED .gizli/test_gizli.py::test_07_bos_satirlar_yoksayilir - KeyError: 'sto...\nFAILED .gizli/test_gizli.py::test_09_en_kisa_uygun - KeyError: 'stok_id'\nFAILED .gizli/test_gizli.py::test_10_boy_esit_kimlik_alfabetik - KeyError: 's...\nFAILED .gizli/test_gizli.py::test_11_kimlik_kucuk_harf_karsilastirma - KeyErr...\nFAILED .gizli/test_gizli.py::test_14_hic_gecerli_stok_yok - AssertionError: a...\nFAILED .gizli/test_gizli.py::test_17_baslik_hatasi_cikis3 - AssertionError: a...\n9 failed, 12 passed in 1.76s\n"
+ }
+}

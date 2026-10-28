@@ -1,0 +1,24 @@
+{
+ "id": "a130",
+ "kip": "a",
+ "tekrar": 1,
+ "kategori": "Türkçe büyük/küçük harf (İ/i, I/ı), Türk alfabesiyle sıralama, sayıyı yazıya çevirme, ünlü uyumuna göre ek",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "menu.py oluşturuldu: tr_kucuk (İ→i, I→ı), belirtme_eki (son ünlüye göre ı/i/u/ü, sessizde y kaynaştırma), fiyat_yaziya (0-10000 tl, 0-99 kr, yüz/binsiz yazım, kuruşsuz/ondalıksız), sirali_menu (Türk alfabesi, küçük-harfe duyarsız, kısa-önce, Unicode tie-break, listeyi kopyalama). Kurallar testlerle doğrulandı.",
+ "adim": 5,
+ "yurutucu_token": {
+  "girdi": 13973,
+  "cikti": 21351
+ },
+ "yurutucu_usd": 0.0056675,
+ "bitirdi": true,
+ "sure_sn": 219.0,
+ "gizli": {
+  "gecti": true,
+  "gecen": 22,
+  "toplam": 22,
+  "cikti": "......................                                                   [100%]\n22 passed in 0.09s\n"
+ }
+}

@@ -1,0 +1,24 @@
+{
+ "id": "a206",
+ "kip": "b",
+ "tekrar": 1,
+ "kategori": "tarih ve saat: resmî tatiller parametreyle, iş günü hesabı, Türkiye saat dilimi (UTC+3, yaz saati yok), gün/ay adları Türkçe",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "muayene_cli.py yazıldı: --baslangic/--adet zorunlu, --tatiller yoksa boş küme, Cumartesi varsayılan kapalı --cumartesi-acik ile açık, Pazar hep kapalı, tatiller atlanır, başlangıç dahil iş günü sayımı, Europe/Istanbul bilinçli tarihler, çıktı YYYY-AA-GG,Gün adı,Gün Ay Yıl, Türkçe I/İ küçük harf tablosu, sıra no sıralaması ve tavana yuvarlanan gün farkı yardımcıları, hatalarda çıkış 2 + stderr, yalnızca stdlib. test_muayene.py ile 20 test `python -m pytest -q` altında geçiyor.",
+ "adim": 14,
+ "yurutucu_token": {
+  "girdi": 94584,
+  "cikti": 33138
+ },
+ "yurutucu_usd": 0.016086,
+ "bitirdi": true,
+ "sure_sn": 458.8,
+ "gizli": {
+  "gecti": true,
+  "gecen": 20,
+  "toplam": 20,
+  "cikti": "....................                                                     [100%]\n20 passed in 1.80s\n"
+ }
+}

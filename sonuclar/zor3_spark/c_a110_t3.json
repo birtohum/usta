@@ -1,0 +1,56 @@
+{
+ "id": "a110",
+ "kip": "c",
+ "tekrar": 3,
+ "kategori": "Türkçe büyük/küçük harf (İ/i, I/ı), Türk alfabesiyle sıralama, sayıyı yazıya çevirme, ünlü uyumuna göre ek",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 52,
+   "basarili": 52
+  }
+ ],
+ "spark_usd": 0.0091993,
+ "arayuz": "",
+ "kabul_yazar": 3,
+ "mutasyon": {
+  "mutant": 14,
+  "ham_mutant": 14,
+  "turlar": [
+   {
+    "oldurulen": 13,
+    "toplam": 14
+   },
+   {
+    "oldurulen": 14,
+    "toplam": 14
+   }
+  ],
+  "hayatta": []
+ },
+ "hakem": [],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [
+  ".usta_kabul/test_kabul_2.py::test_iyelikli_o_u_uyumu_memur",
+  ".usta_kabul/test_kabul_3.py::test_iyelik_okul_unuz"
+ ],
+ "kabul_test_sayisi": 52,
+ "kabul_gecti": true,
+ "ozet": "karsilama.py içinde iyelikli_yonelme ve karsilama_cumlesi fonksiyonları standart kütüphane ile yazıldı; son ünlüye göre ınız/iniz/unuz/ünüz seçimi, sessizde doğrudan ekleme, seslide n kaynaştırması ve ınız→a / diğerleri→e yönelme kuralı uygulandı (otel→otelinize, oda→odanıza, a→anıza, e→enize). Tür denetimi önce, boşluk/aralık denetimi sonra yapılır; isim normalize edilir, Türkçe harfler korunur. pytest ile 16 test geçti.",
+ "adim": 6,
+ "yurutucu_token": {
+  "girdi": 21610,
+  "cikti": 12426
+ },
+ "yurutucu_usd": 0.0046462000000000005,
+ "bitirdi": true,
+ "sure_sn": 461.5,
+ "gizli": {
+  "gecti": true,
+  "gecen": 22,
+  "toplam": 22,
+  "cikti": "......................                                                   [100%]\n22 passed in 0.11s\n"
+ }
+}

@@ -1,0 +1,24 @@
+{
+ "id": "a194",
+ "kip": "a",
+ "tekrar": 2,
+ "kategori": "KDV, tevkifat, stopaj, taksit ve kuruş yuvarlama (Decimal, ROUND_HALF_UP, satır bazında ve toplamda yuvarlama farkı)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "nigde_temizlik.py içinde temizlik_tevkifat_hesapla yazıldı: %20 KDV ve 7/9/10 payla satır bazında HALF_UP yuvarlama, 2000 TL sınırında tevkifat, Türkçe harf dönüşümlü sıralama, KDV yuvarlama farkı ve tip öncelikli hata kontrolleri uygulandı.",
+ "adim": 4,
+ "yurutucu_token": {
+  "girdi": 12754,
+  "cikti": 13792
+ },
+ "yurutucu_usd": 0.004033800000000001,
+ "bitirdi": true,
+ "sure_sn": 143.8,
+ "gizli": {
+  "gecti": false,
+  "gecen": 21,
+  "toplam": 22,
+  "cikti": "......F.                                                   [100%]\n=================================== FAILURES ===================================\n___________________________ test_turkce_ayni_sayilir ___________________________\n\n    def test_turkce_ayni_sayilir():\n        r1 = temizlik_tevkifat_hesapla([{'aciklama': 'İŞÇİLİK', 'matrah': '1500.00'}, {'aciklama': 'temizlik', 'matrah': '1000.00'}], 7)\n        r2 = temizlik_tevkifat_hesapla([{'aciklama': 'işçilik', 'matrah': '1500.00'}, {'aciklama': 'temizlik', 'matrah': '1000.00'}], 7)\n>       assert r1 == r2\nE       AssertionError: assert {'kdv_toplami...650.00'), ...} == {'kdv_toplami...650.00'), ...}\nE         Omitting 5 identical items, use -vv to show\nE         Differing items:\nE         {'satirlar': [{'aciklama': 'temizlik', 'kdv': Decimal('200.00'), 'matrah': Decimal('1000.00'), 'tevkifat': Decimal('140.00')}, {'aciklama': 'İŞÇİLİK', 'kdv': Decimal('300.00'), 'matrah': Decimal('1500.00'), 'tevkifat': Decimal('210.00')}]} != {'satirlar': [{'aciklama': 'temizlik', 'kdv': Decimal('200.00'), 'matrah': Decimal('1000.00'), 'tevkifat': Decimal('140.00')}, {'aciklama': 'işçilik', 'kdv': Decimal('300.00'), 'matrah': Decimal('1500.00'), 'tevkifat': Decimal('210.00')}]}\nE         Use -v to get more diff\n\n.gizli/test_gizli.py:110: AssertionError\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_turkce_ayni_sayilir - AssertionError: asser...\n1 failed, 21 passed in 0.04s\n"
+ }
+}

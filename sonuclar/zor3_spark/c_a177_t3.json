@@ -1,0 +1,60 @@
+{
+ "id": "a177",
+ "kip": "c",
+ "tekrar": 3,
+ "kategori": "çok dosyalı küçük modül: iki-üç dosyaya bölünmüş, ortak hata sınıfları ve bir komut satırı girişi olan araç",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 23,
+   "basarili": 23
+  }
+ ],
+ "spark_usd": 0.0337854,
+ "arayuz": "hatalar.py BosUreticiHatasi, GecersizTartimHatasi, GecersizNemHatasi, GecersizTarihHatasi Exception alt sınıfıdır. safran.py SafranDefteri() parametresiz kurulur, ekle ve ozet görevdeki imzayla çalışır. ozet dönüşü gun, toplam_kuru_g, toplam_tutar_tl, kalemler anahtarlıdır, kalem id, uretici, kuru_g, tutar_tl anahtarlıdır, sayılar float yazı str. cli.py kalıcılık dosyası ./safran_veri.json olup --ekle ve --ozet görevdeki bayraklarla çağrılır.",
+ "kabul_yazar": 1,
+ "mutasyon": {
+  "mutant": 16,
+  "ham_mutant": 16,
+  "turlar": [
+   {
+    "oldurulen": 14,
+    "toplam": 16
+   },
+   {
+    "oldurulen": 15,
+    "toplam": 16
+   },
+   {
+    "oldurulen": 16,
+    "toplam": 16
+   }
+  ],
+  "hayatta": []
+ },
+ "hakem": [],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [
+  ".usta_kabul/test_kabul_m1.py::test_tutar_quantize_half_up_cezali_kayit",
+  ".usta_kabul/test_kabul_m1.py::test_tutar_quantize_half_up_kullanir"
+ ],
+ "kabul_test_sayisi": 23,
+ "kabul_gecti": true,
+ "ozet": "hatalar.py (4 hata sınıfı), safran.py (SafranDefteri: tarih doğrulama, Türkçe küçük harf, Decimal ROUND_HALF_UP kuru/tutar hesabı, nem cezası, fiyat kademeleri, sıralama, hata önceliği) ve cli.py (--ekle/--ozet, ./safran_veri.json kalıcılık, tek satır JSON) yazıldı; 16 pytest testi geçiyor.",
+ "adim": 9,
+ "yurutucu_token": {
+  "girdi": 55749,
+  "cikti": 24488
+ },
+ "yurutucu_usd": 0.010472500000000001,
+ "bitirdi": true,
+ "sure_sn": 912.3,
+ "gizli": {
+  "gecti": false,
+  "gecen": 21,
+  "toplam": 22,
+  "cikti": ".....................F                                                   [100%]\n=================================== FAILURES ===================================\n_____________________________ test_cli_ozet_akisi ______________________________\n\n    def test_cli_ozet_akisi():\n        _temizle()\n        r1 = _cli(\"--ekle\", \"--uretici\", \"Ali\", \"--yas\", \"10\", \"--nem\", \"0\", \"--tarih\", \"2024-05-01\")\n        assert r1.returncode == 0, r1.stderr\n        r2 = _cli(\"--ekle\", \"--uretici\", \"Zebra\", \"--yas\", \"20\", \"--nem\", \"0\", \"--tarih\", \"2024-05-01\")\n        assert r2.returncode == 0, r2.stderr\n        r3 = _cli(\"--ozet\", \"--gun\", \"2024-05-01\")\n        assert r3.returncode == 0, r3.stderr\n        oz = json.loads(r3.stdout.strip())\n        assert oz[\"gun\"] == \"2024-05-01\"\n>       assert oz[\"toplam_kuru_g\"] == pytest.approx(30.0)\nE       assert 120.0 == 30.0 ± 3.0e-05\nE         comparison failed\nE         Obtained: 120.0\nE         Expected: 30.0 ± 3.0e-05\n\n.gizli/test_gizli.py:202: AssertionError\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_cli_ozet_akisi - assert 120.0 == 30.0 ± 3.0...\n1 failed, 21 passed in 0.15s\n"
+ }
+}

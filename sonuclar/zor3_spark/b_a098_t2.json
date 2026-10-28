@@ -1,0 +1,24 @@
+{
+ "id": "a098",
+ "kip": "b",
+ "tekrar": 2,
+ "kategori": "CSV/JSON ile çalışan ve uç durumları çok olan veri işleme (BOM, ; ayırıcı, 1.234,56 sayı biçimi, boş/bozuk satır)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "`uzum_kurutma.py` içinde `kurutma_raporu` yazıldı: utf-8-sig + `;` okuma, boş satır atlama, Türkçe sayı çözümleme (`.` sil, `,`→`.`), kuru ağırlık formülü + HALF_UP yuvarlama ve eşit-nem kısayolu, hatalı sayaç, Türkçe duyarsız gruplama (I→ı, İ→i + casefold), tutar hesabı ve sıralama, hata önceliği ve boş-sonuç kuralları uygulandı. 20 pytest testi yazıldı ve geçti.",
+ "adim": 4,
+ "yurutucu_token": {
+  "girdi": 19154,
+  "cikti": 17979
+ },
+ "yurutucu_usd": 0.0055112,
+ "bitirdi": true,
+ "sure_sn": 186.7,
+ "gizli": {
+  "gecti": false,
+  "gecen": 15,
+  "toplam": 21,
+  "cikti": "E       AssertionError: assert '3.000,00' == '3000,00'\nE         - 3000,00\nE         + 3.000,00\nE         ?  +\n\n.gizli/test_gizli.py:101: AssertionError\n______________________________ test_genel_toplam _______________________________\n\ntmp_path = PosixPath('/home/usta/is/371ac301fc5d/.tmp/pytest-of-usta/pytest-1/test_genel_toplam0')\n\n    def test_genel_toplam(tmp_path):\n        c=tmp_path/'k.csv'; j=tmp_path/'o.json'\n        _csv_yaz(c, 'uretici;yas_kg;nem_orani\\nA;100,00;11,00\\nB;200,00;11,00\\n')\n        _json_yaz(j, {'hedef_nem':'11,00','fiyat':'1.234,56'})\n        r=kurutma_raporu(str(c), str(j))\n>       assert r['kalemler'][0]['tutar']=='246912,00'\nE       AssertionError: assert '246.912,00' == '246912,00'\nE         - 246912,00\nE         + 246.912,00\nE         ?    +\n\n.gizli/test_gizli.py:177: AssertionError\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_normal_hesap - AssertionError: assert '76.8...\nFAILED .gizli/test_gizli.py::test_bom_yoksayilir - AssertionError: assert '1....\nFAILED .gizli/test_gizli.py::test_binlik_ayraci_cozumleme - AssertionError: a...\nFAILED .gizli/test_gizli.py::test_nem_esit_hedef - AssertionError: assert '1....\nFAILED .gizli/test_gizli.py::test_uretici_gruplama_turkce - AssertionError: a...\nFAILED .gizli/test_gizli.py::test_genel_toplam - AssertionError: assert '246....\n6 failed, 15 passed in 0.55s\n"
+ }
+}

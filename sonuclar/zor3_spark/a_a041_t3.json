@@ -1,0 +1,24 @@
+{
+ "id": "a041",
+ "kip": "a",
+ "tekrar": 3,
+ "kategori": "çok dosyalı küçük modül: iki-üç dosyaya bölünmüş, ortak hata sınıfları ve bir komut satırı girişi olan araç",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "Gaziantep desi ücret aracı yazıldı: hatalar.py (OlcuHatasi, IlHatasi-ValueError), kargo.py (desi_hesapla tavana yuvarlama, ucret_hesapla kuruş ücret, Türkçe duyarsız il karşılaştırma, 50/51 standart-ağır ayrımı, %10 indirim, tip>ölçü>il önceliği, tek satır JSON CLI `python -m kargo hesap ...`).",
+ "adim": 11,
+ "yurutucu_token": {
+  "girdi": 41000,
+  "cikti": 29489
+ },
+ "yurutucu_usd": 0.009997800000000001,
+ "bitirdi": true,
+ "sure_sn": 373.9,
+ "gizli": {
+  "gecti": true,
+  "gecen": 20,
+  "toplam": 20,
+  "cikti": "....................                                                     [100%]\n20 passed in 0.44s\n"
+ }
+}

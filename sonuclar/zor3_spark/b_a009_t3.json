@@ -1,0 +1,24 @@
+{
+ "id": "a009",
+ "kip": "b",
+ "tekrar": 3,
+ "kategori": "Türkçe büyük/küçük harf (İ/i, I/ı), Türk alfabesiyle sıralama, sayıyı yazıya çevirme, ünlü uyumuna göre ek",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "kasa_cevir.py içinde turkce_buyut ve turkce_kucult fonksiyonlarını sözlük tabanlı bağlamsız harf harf dönüşümle yazdım (i→İ, ı→I, İ→i, I→ı, C/Ç ayrımı korunur). TypeError denetimi en başta, uzunluk korunur, idempotens sağlanır, upper/lower kullanılmadı. test_kasa.py ile 11 pytest testi geçti.",
+ "adim": 4,
+ "yurutucu_token": {
+  "girdi": 10345,
+  "cikti": 6339
+ },
+ "yurutucu_usd": 0.0023023,
+ "bitirdi": true,
+ "sure_sn": 71.8,
+ "gizli": {
+  "gecti": true,
+  "gecen": 21,
+  "toplam": 21,
+  "cikti": ".....................                                                    [100%]\n21 passed in 0.13s\n"
+ }
+}

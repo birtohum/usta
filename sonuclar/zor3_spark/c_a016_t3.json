@@ -1,0 +1,51 @@
+{
+ "id": "a016",
+ "kip": "c",
+ "tekrar": 3,
+ "kategori": "tarih ve saat: resmî tatiller parametreyle, iş günü hesabı, Türkiye saat dilimi (UTC+3, yaz saati yok), gün/ay adları Türkçe",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 50,
+   "basarili": 50
+  }
+ ],
+ "spark_usd": 0.0081927,
+ "arayuz": "randevu.py içinde uygun_slotlari_bul ve tarihce_tr görevdeki imzalarla bulunur.",
+ "kabul_yazar": 3,
+ "mutasyon": {
+  "mutant": 14,
+  "ham_mutant": 14,
+  "turlar": [
+   {
+    "oldurulen": 14,
+    "toplam": 14
+   }
+  ],
+  "hayatta": []
+ },
+ "hakem": [],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [
+  ".usta_kabul/test_kabul_2.py::test_slotlar_baslangictan_hizalanir"
+ ],
+ "kabul_test_sayisi": 50,
+ "kabul_gecti": true,
+ "ozet": "randevu.py içinde uygun_slotlari_bul ve tarihce_tr gerçeklendi: TR (UTC+3, DST yok) dönüşümü, hafta içi 09:00-17:00 (17:00'de biten geçerli), hafta sonu/tatil eleme, sure_dakika adımlı dizilim, [başlangıç,bitiş) çakışma kuralı, TypeError>ValueError önceliği, sure 1..1440 ve başlangıç<=bitiş kontrolleri. 19 pytest testi geçti.",
+ "adim": 8,
+ "yurutucu_token": {
+  "girdi": 38455,
+  "cikti": 19857
+ },
+ "yurutucu_usd": 0.0078169,
+ "bitirdi": true,
+ "sure_sn": 426.2,
+ "gizli": {
+  "gecti": true,
+  "gecen": 22,
+  "toplam": 22,
+  "cikti": "......................                                                   [100%]\n22 passed in 0.09s\n"
+ }
+}

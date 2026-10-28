@@ -1,0 +1,77 @@
+{
+ "id": "a100",
+ "kip": "c",
+ "tekrar": 3,
+ "kategori": "Türkçe büyük/küçük harf (İ/i, I/ı), Türk alfabesiyle sıralama, sayıyı yazıya çevirme, ünlü uyumuna göre ek",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 51,
+   "basarili": 51
+  }
+ ],
+ "spark_usd": 0.010299299999999999,
+ "arayuz": "",
+ "kabul_yazar": 3,
+ "mutasyon": {
+  "mutant": 14,
+  "ham_mutant": 14,
+  "turlar": [
+   {
+    "oldurulen": 13,
+    "toplam": 14
+   },
+   {
+    "oldurulen": 14,
+    "toplam": 14
+   }
+  ],
+  "hayatta": []
+ },
+ "hakem": [
+  {
+   "test": ".usta_kabul/test_kabul_m1.py::test_sicil_bool_ikinci_satirda_typeerror",
+   "karar": "belirsiz",
+   "gerekce": "Görev metni bool değerlerin int sayılıp sayılmayacağını açıkça belirtmiyor.",
+   "tur": 1
+  },
+  {
+   "test": ".usta_kabul/test_kabul_m1.py::test_sicil_false_bool_typeerror",
+   "karar": "belirsiz",
+   "gerekce": "Görev metni bool değerlerin int sayılıp sayılmayacağını açıkça belirtmiyor.",
+   "tur": 1
+  },
+  {
+   "test": ".usta_kabul/test_kabul_m1.py::test_sicil_true_bool_typeerror",
+   "karar": "belirsiz",
+   "gerekce": "Görev metni bool değerlerin int sayılıp sayılmayacağını açıkça belirtmiyor.",
+   "tur": 1
+  }
+ ],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [
+  ".usta_kabul/test_kabul_3.py::test_o_o_p_sirasi",
+  ".usta_kabul/test_kabul_m1.py::test_sicil_bool_ikinci_satirda_typeerror",
+  ".usta_kabul/test_kabul_m1.py::test_sicil_false_bool_typeerror",
+  ".usta_kabul/test_kabul_m1.py::test_sicil_true_bool_typeerror"
+ ],
+ "kabul_test_sayisi": 51,
+ "kabul_gecti": true,
+ "ozet": "ortaklar.py içinde turkce_sirala yazıldı: önce tür denetimi (liste/tuple) sonra içerik denetimi (3 öğe, str/str/int) yapıp TypeError yükseltiyor; karşılaştırmadan hemen önce Türkçe küçük harfe çeviriyor (I→ı, İ→i); verilen 29 harfli Türkçe alfabe sırasına göre, alfabe dışı karakterleri sonda Unicode değerine göre diziyor; soyad→ad→sicil anahtarıyla kararlı sorted kullanıp yeni liste döndürüyor. 18 pytest testi geçiyor.",
+ "adim": 7,
+ "yurutucu_token": {
+  "girdi": 24266,
+  "cikti": 21923
+ },
+ "yurutucu_usd": 0.006811200000000001,
+ "bitirdi": true,
+ "sure_sn": 568.7,
+ "gizli": {
+  "gecti": true,
+  "gecen": 20,
+  "toplam": 20,
+  "cikti": "....................                                                     [100%]\n20 passed in 0.06s\n"
+ }
+}

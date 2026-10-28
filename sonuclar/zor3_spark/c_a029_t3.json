@@ -1,0 +1,96 @@
+{
+ "id": "a029",
+ "kip": "c",
+ "tekrar": 3,
+ "kategori": "çok dosyalı küçük modül: iki-üç dosyaya bölünmüş, ortak hata sınıfları ve bir komut satırı girişi olan araç",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 52,
+   "basarili": 52
+  }
+ ],
+ "spark_usd": 0.015119900000000002,
+ "arayuz": "hatalar.py: SaatHatasi(ValueError), CakismaHatasi(ValueError). randevu.py: class RandevuTakvimi: __init__(self), ekle(self, baslangic: str, bitis: str) -> str, iptal(self, kimlik: str) -> bool, liste(self) -> list; liste elemanı dict {kimlik:str, baslangic:str, bitis:str}. CLI: python -m randevu ekle --baslangic HH:MM --bitis HH:MM, python -m randevu liste",
+ "kabul_yazar": 3,
+ "mutasyon": {
+  "mutant": 14,
+  "ham_mutant": 14,
+  "turlar": [
+   {
+    "oldurulen": 10,
+    "toplam": 14
+   },
+   {
+    "oldurulen": 13,
+    "toplam": 14
+   },
+   {
+    "oldurulen": 13,
+    "toplam": 14
+   }
+  ],
+  "hayatta": [
+   "hata onceligi: ilk ihlal bildirilmeli, baslangic once dogrulanmali"
+  ]
+ },
+ "hakem": [
+  {
+   "test": ".usta_kabul/test_kabul_1.py::test_cli_ekle_satir_satir_yazar",
+   "karar": "belirsiz",
+   "gerekce": "Görev ekle çıktısında saatlerin yazmasını açıkça şart koşmuyor.",
+   "tur": 1
+  },
+  {
+   "test": ".usta_kabul/test_kabul_1.py::test_cli_ekle_sonra_liste_satir_satir_gosterir",
+   "karar": "belirsiz",
+   "gerekce": "Görev kalıcılığın cwd bazında izole olmasını ve çıktı biçimini açıkça tanımlamıyor.",
+   "tur": 1
+  },
+  {
+   "test": ".usta_kabul/test_kabul_2.py::test_cli_ekle_calisir_satir_yazar",
+   "karar": "belirsiz",
+   "gerekce": "Görev ekle çıktısında saatlerin yer almasını açıkça istemiyor.",
+   "tur": 1
+  },
+  {
+   "test": ".usta_kabul/test_kabul_2.py::test_cli_liste_satir_satir_yazar",
+   "karar": "belirsiz",
+   "gerekce": "Görev kalıcılık yerini ve liste satır biçimini açıkça belirtmiyor.",
+   "tur": 1
+  },
+  {
+   "test": ".usta_kabul/test_kabul_m1.py::test_cli_ekle_cikti_sirasi",
+   "karar": "belirsiz",
+   "gerekce": "Görev ekle çıktısının üç parçalı sırasını açıkça tanımlamıyor.",
+   "tur": 1
+  }
+ ],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [
+  ".usta_kabul/test_kabul_1.py::test_cli_ekle_satir_satir_yazar",
+  ".usta_kabul/test_kabul_1.py::test_cli_ekle_sonra_liste_satir_satir_gosterir",
+  ".usta_kabul/test_kabul_2.py::test_cli_ekle_calisir_satir_yazar",
+  ".usta_kabul/test_kabul_2.py::test_cli_liste_satir_satir_yazar",
+  ".usta_kabul/test_kabul_m1.py::test_cli_ekle_cikti_sirasi"
+ ],
+ "kabul_test_sayisi": 52,
+ "kabul_gecti": true,
+ "ozet": "hatalar.py (SaatHatasi, CakismaHatasi) ve randevu.py (RandevuTakvimi: ekle/iptal/liste + CLI ekle/liste) yazıldı; HH:MM doğrulama, yarı-açık çakışma kuralı, sıralama ve hata önceliği uygulandı. 12 pytest testi geçti, CLI satır satır çıktı doğrulandı.",
+ "adim": 9,
+ "yurutucu_token": {
+  "girdi": 41928,
+  "cikti": 13487
+ },
+ "yurutucu_usd": 0.006890200000000001,
+ "bitirdi": true,
+ "sure_sn": 1112.7,
+ "gizli": {
+  "gecti": false,
+  "gecen": 20,
+  "toplam": 21,
+  "cikti": "...................F.                                                    [100%]\n=================================== FAILURES ===================================\n________________________________ test_cli_ekle _________________________________\n\n    def test_cli_ekle():\n        r = subprocess.run([sys.executable, \"-m\", \"randevu\", \"ekle\", \"--baslangic\", \"09:00\", \"--bitis\", \"09:30\"], cwd=str(ROOT), capture_output=True, text=True)\n        assert r.returncode == 0\n        satirlar = r.stdout.strip().splitlines()\n        assert len(satirlar) == 1\n>       assert satirlar[0].strip() == \"1\"\nE       AssertionError: assert '2' == '1'\nE         - 1\nE         + 2\n\n.gizli/test_gizli.py:156: AssertionError\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_cli_ekle - AssertionError: assert '2' == '1'\n1 failed, 20 passed in 0.22s\n"
+ }
+}

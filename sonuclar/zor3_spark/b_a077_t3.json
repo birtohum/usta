@@ -1,0 +1,24 @@
+{
+ "id": "a077",
+ "kip": "b",
+ "tekrar": 3,
+ "kategori": "çok dosyalı küçük modül: iki-üç dosyaya bölünmüş, ortak hata sınıfları ve bir komut satırı girişi olan araç",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "hatalar.py (ValueError'dan doğrudan türeyen OgrenciHatasi, LimitHatasi), veresiye.py (VeresiyeDefteri: borc_ekle/odeme_yap/bakiye, 1-20000 tutar aralığı, 50000 limit, strip+boş ad kontrolü, Türkçe I->ı/İ->i küçük harf eşitliği, Türkçe alfabetik sıralama, hata öncelik sırası) ve cli.py (--ogrenci/--islem/--tutar, başarıda tek satır \"Bakiye: N kuruş\") yazıldı; yalnızca stdlib kullanıldı, bakiyeler int kuruş tutuldu. test_kantin.py ile 11 pytest testi geçti, CLI örneği doğrulandı.",
+ "adim": 17,
+ "yurutucu_token": {
+  "girdi": 138547,
+  "cikti": 33568
+ },
+ "yurutucu_usd": 0.0205683,
+ "bitirdi": true,
+ "sure_sn": 417.8,
+ "gizli": {
+  "gecti": true,
+  "gecen": 20,
+  "toplam": 20,
+  "cikti": "....................                                                     [100%]\n20 passed in 0.30s\n"
+ }
+}

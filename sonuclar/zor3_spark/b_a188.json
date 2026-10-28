@@ -1,0 +1,24 @@
+{
+ "id": "a188",
+ "kip": "b",
+ "tekrar": 1,
+ "kategori": "CSV/JSON ile çalışan ve uç durumları çok olan veri işleme (BOM, ; ayırıcı, 1.234,56 sayı biçimi, boş/bozuk satır)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "vardiya_cli.py yazıldı: utf-8-sig noktalı-virgül CSV, Decimal Türkçe sayı, günlük 8.00 normal/fazla ayrımı ROUND_HALF_UP, Türkçe lower ve sıralama, exit 2/3/4 kontrolleri. pytest 6 test geçti.",
+ "adim": 18,
+ "yurutucu_token": {
+  "girdi": 147689,
+  "cikti": 65769
+ },
+ "yurutucu_usd": 0.027922699999999998,
+ "bitirdi": true,
+ "sure_sn": 737.4,
+ "gizli": {
+  "gecti": false,
+  "gecen": 12,
+  "toplam": 20,
+  "cikti": "st_turkish_group_and_sort0')\n\n    def test_turkish_group_and_sort(tmp_path):\n        pu = tmp_path/'p.csv'; va = tmp_path/'v.json'; out = tmp_path/'o.json'\n        write_csv(str(pu), [['1','IŞIK','2024-01-01','8,00'],['1','ışık','2024-01-02','8,00'],['2','Çelik','2024-01-01','8,00'],['3','Celik','2024-01-01','8,00']])\n        write_json(str(va), {'saat_ucreti': '10'})\n        r = run_cli(['--puantaj', str(pu), '--vardiya', str(va), '--cikti', str(out)])\n        assert r.returncode == 0\n        d = read_out(str(out))\n        by = {x['sicil_no']: x for x in d['isciler']}\n>       assert abs(by['1']['toplam_saat'] - 16.0) < 1e-6\nE       TypeError: unsupported operand type(s) for -: 'str' and 'float'\n\n.gizli/test_gizli.py:202: TypeError\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_basic_overtime - TypeError: unsupported ope...\nFAILED .gizli/test_gizli.py::test_exact_8_no_overtime - TypeError: unsupporte...\nFAILED .gizli/test_gizli.py::test_multi_rows_same_day_sum - TypeError: unsupp...\nFAILED .gizli/test_gizli.py::test_rounding_half_up - TypeError: unsupported o...\nFAILED .gizli/test_gizli.py::test_thousands_separator - TypeError: unsupporte...\nFAILED .gizli/test_gizli.py::test_ucret_flag_comma - TypeError: unsupported o...\nFAILED .gizli/test_gizli.py::test_ucret_flag_overrides_json - TypeError: unsu...\nFAILED .gizli/test_gizli.py::test_turkish_group_and_sort - TypeError: unsuppo...\n8 failed, 12 passed in 2.46s\n"
+ }
+}

@@ -1,0 +1,24 @@
+{
+ "id": "a099",
+ "kip": "a",
+ "tekrar": 3,
+ "kategori": "KDV, tevkifat, stopaj, taksit ve kuruş yuvarlama (Decimal, ROUND_HALF_UP, satır bazında ve toplamda yuvarlama farkı)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "kargo.py yazıldı: kargo_faturala Decimal ile taban/yakıt/KDV yuvarlama, yuvarlama_farki, %2 handling indirimi, Türkçe sıralama ve hata öncelikleri uygulandı.",
+ "adim": 5,
+ "yurutucu_token": {
+  "girdi": 13816,
+  "cikti": 23830
+ },
+ "yurutucu_usd": 0.0061476000000000005,
+ "bitirdi": true,
+ "sure_sn": 240.9,
+ "gizli": {
+  "gecti": true,
+  "gecen": 22,
+  "toplam": 22,
+  "cikti": "......................                                                   [100%]\n22 passed in 0.11s\n"
+ }
+}

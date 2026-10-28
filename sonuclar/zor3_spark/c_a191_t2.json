@@ -1,0 +1,26 @@
+{
+ "id": "a191",
+ "kip": "c",
+ "tekrar": 2,
+ "kategori": "tarih ve saat: resmî tatiller parametreyle, iş günü hesabı, Türkiye saat dilimi (UTC+3, yaz saati yok), gün/ay adları Türkçe",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.00034100000000000005,
+ "arayuz": "balon_cli.py --baslangic --bitis --ucus-gunleri --tatiller --tatil-dosyasi --zaman-damgasi --kucuk",
+ "kabul_gecti": false,
+ "dogrulanamadi": true,
+ "ozet": "balon_cli.py yazıldı: --baslangic/--bitis/--ucus-gunleri/--tatiller/--tatil-dosyasi/--zaman-damgasi/--kucuk destekler, UTC+3 sabit, Türkçe gün adları, Türkçe küçük harf, saniye yuvarlamasız, hata kodu 2 ve önce tarih denetimi. 15 pytest testi geçiyor.",
+ "adim": 12,
+ "yurutucu_token": {
+  "girdi": 78008,
+  "cikti": 42940
+ },
+ "yurutucu_usd": 0.0163888,
+ "sure_sn": 542.8,
+ "gizli": {
+  "gecti": false,
+  "gecen": 19,
+  "toplam": 22,
+  "cikti": "a: bilinmeyen bayrak: --utc-damgasi\\n').returncode\n\n.gizli/test_gizli.py:99: AssertionError\n___________________________ test_utc_uc_saat_eklenir ___________________________\n\n    def test_utc_uc_saat_eklenir():\n        r = run(\"--utc-damgasi\", \"2025-04-01T22:00:00Z\")\n>       assert r.returncode == 0\nE       AssertionError: assert 2 == 0\nE        +  where 2 = CompletedProcess(args=['/usr/bin/python', '/home/usta/is/4f3e7021feec/balon_cli.py', '--utc-damgasi', '2025-04-01T22:00:00Z'], returncode=2, stdout='', stderr='hata: bilinmeyen bayrak: --utc-damgasi\\n').returncode\n\n.gizli/test_gizli.py:104: AssertionError\n________________________________ test_utc_kucuk ________________________________\n\n    def test_utc_kucuk():\n        r = run(\"--utc-damgasi\", \"2025-04-01T22:00:00Z\", \"--kucuk\")\n>       assert r.returncode == 0\nE       AssertionError: assert 2 == 0\nE        +  where 2 = CompletedProcess(args=['/usr/bin/python', '/home/usta/is/4f3e7021feec/balon_cli.py', '--utc-damgasi', '2025-04-01T22:00:00Z', '--kucuk'], returncode=2, stdout='', stderr='hata: bilinmeyen bayrak: --utc-damgasi\\n').returncode\n\n.gizli/test_gizli.py:109: AssertionError\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_utc_saniye_atilir - AssertionError: assert ...\nFAILED .gizli/test_gizli.py::test_utc_uc_saat_eklenir - AssertionError: asser...\nFAILED .gizli/test_gizli.py::test_utc_kucuk - AssertionError: assert 2 == 0\n3 failed, 19 passed in 1.49s\n"
+ }
+}

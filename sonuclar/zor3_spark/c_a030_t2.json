@@ -1,0 +1,67 @@
+{
+ "id": "a030",
+ "kip": "c",
+ "tekrar": 2,
+ "kategori": "CSV/JSON ile çalışan ve uç durumları çok olan veri işleme (BOM, ; ayırıcı, 1.234,56 sayı biçimi, boş/bozuk satır)",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": false,
+   "toplam": 8,
+   "basarili": 0
+  },
+  {
+   "gecti": true,
+   "toplam": 39,
+   "basarili": 39
+  }
+ ],
+ "spark_usd": 0.032366500000000006,
+ "arayuz": "",
+ "kabul_yazar": 2,
+ "mutasyon": {
+  "mutant": 14,
+  "ham_mutant": 14,
+  "turlar": [
+   {
+    "oldurulen": 12,
+    "toplam": 14
+   },
+   {
+    "oldurulen": 13,
+    "toplam": 14
+   },
+   {
+    "oldurulen": 13,
+    "toplam": 14
+   }
+  ],
+  "hayatta": [
+   "tam olarak 0 tutarli satirlar ne gelir ne gider sayilmali gereksinimini cigner"
+  ]
+ },
+ "hakem": [],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [
+  ".usta_kabul/test_kabul_1.py::test_sutun_sayisi_farkli_bozuk_sayilir",
+  ".usta_kabul/test_kabul_3.py::test_turkce_kucuk_harf_donusumu"
+ ],
+ "kabul_test_sayisi": 39,
+ "kabul_gecti": true,
+ "ozet": "banka_ozeti.py yazıldı: ozetle() dosyayı utf-8-sig ve noktalı virgülle okur, başlığı birebir arar, tutarı Türkçe biçimde (+/- zorunlu, boş ValueError) tarihten önce doğrular, GG.AA.YYYY tarihini doğrular, boş satırları atlar, sütun sayısı farklı satırları bozuk sayar (fazla sütunlu satırda ilk 3 alanı yine işler), sıfır tutarları ayrı sayar, günlük toplamları ROUND_HALF_UP ile yuvarlar, Türkçe küçük harf çevrimi (I→ı, İ→i) uygular, gelir/gider/sifir_satir/bozuk_satir döndürür; FileNotFoundError başlık hatasından önceliklidir. 41 kabul testi geçiyor.",
+ "adim": 15,
+ "yurutucu_token": {
+  "girdi": 122198,
+  "cikti": 79211
+ },
+ "yurutucu_usd": 0.028062,
+ "bitirdi": true,
+ "sure_sn": 1374.0,
+ "gizli": {
+  "gecti": false,
+  "gecen": 11,
+  "toplam": 20,
+  "cikti": "       AttributeError: 'float' object has no attribute 'get'\n\n.gizli/test_gizli.py:135: AttributeError\n________________________ test_turkce_dotted_I_gruplama _________________________\n\ntmp_path = PosixPath('/home/usta/is/96ac951d5d4e/.tmp/pytest-of-usta/pytest-4/test_turkce_dotted_I_gruplama0')\n\n    def test_turkce_dotted_I_gruplama(tmp_path):\n        p = tmp_path / \"i2.csv\"\n        _yaz(p, \"tarih;aciklama;tutar\\n08.01.2024;F\\u0130\\u015e;+10,00\\n08.01.2024;fi\\u015f;+15,00\\n\")\n        r = ozetle(str(p))\n>       inner = r[\"gelir\"].get(\"08.01.2024\", {})\nE       AttributeError: 'float' object has no attribute 'get'\n\n.gizli/test_gizli.py:144: AttributeError\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_normal_gelir_gider - AttributeError: 'float...\nFAILED .gizli/test_gizli.py::test_turkce_binlik_cozumu - AttributeError: 'flo...\nFAILED .gizli/test_gizli.py::test_bos_satir_atlanir - AttributeError: 'float'...\nFAILED .gizli/test_gizli.py::test_bozuk_satir_sayilir - AttributeError: 'floa...\nFAILED .gizli/test_gizli.py::test_sifir_satir - AttributeError: 'float' objec...\nFAILED .gizli/test_gizli.py::test_half_up_yuvarlama - AttributeError: 'float'...\nFAILED .gizli/test_gizli.py::test_gunluk_toplam_half_up - AttributeError: 'fl...\nFAILED .gizli/test_gizli.py::test_turkce_I_gruplama - AttributeError: 'float'...\nFAILED .gizli/test_gizli.py::test_turkce_dotted_I_gruplama - AttributeError: ...\n9 failed, 11 passed in 0.24s\n"
+ }
+}

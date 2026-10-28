@@ -1,0 +1,59 @@
+{
+ "id": "a114",
+ "kip": "c",
+ "tekrar": 2,
+ "kategori": "KDV, tevkifat, stopaj, taksit ve kuruş yuvarlama (Decimal, ROUND_HALF_UP, satır bazında ve toplamda yuvarlama farkı)",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 65,
+   "basarili": 65
+  }
+ ],
+ "spark_usd": 0.0139415,
+ "arayuz": "Dosya: avans.py; Fonksiyon: avans_faturala(brut_hedef: Decimal, avans_oran: Decimal, kdv_oran: Decimal, kdv_dahil: bool, musteri_notu: str = \"\") -> dict; Dönüş: {'avans_matrah': Decimal, 'avans_kdv': Decimal, 'avans_brut': Decimal, 'kalan_brut': Decimal, 'yuvarlama_farki': Decimal, 'belge_no': str, 'musteri_notu_buyuk': str}",
+ "kabul_yazar": 3,
+ "mutasyon": {
+  "mutant": 16,
+  "ham_mutant": 16,
+  "turlar": [
+   {
+    "oldurulen": 12,
+    "toplam": 16
+   },
+   {
+    "oldurulen": 15,
+    "toplam": 16
+   },
+   {
+    "oldurulen": 15,
+    "toplam": 16
+   }
+  ],
+  "hayatta": [
+   "her para degerini 0.01 basamagina yuvarlama gereksinimini cigner"
+  ]
+ },
+ "hakem": [],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [],
+ "kabul_test_sayisi": 65,
+ "kabul_gecti": true,
+ "ozet": "avans.py içinde avans_faturala fonksiyonu yazıldı: Decimal + ROUND_HALF_UP hesaplar, kdv_dahil True/False ayrımı, sıfır/None/negatif kontrolleri, oran doğrulama ve öncelikli hatalar, 1000 TL eşiğinde TRK-6 haneli belge_no ve çağrı sayacına göre sıra, Türkçe i/ı büyük harf dönüşümü ile musteri_notu_buyuk, yuvarlama_farki hesabı. Yasak (float/ağ/zaman) kullanım yok. pytest ile 10 test geçti.",
+ "adim": 4,
+ "yurutucu_token": {
+  "girdi": 13849,
+  "cikti": 18306
+ },
+ "yurutucu_usd": 0.0050461,
+ "bitirdi": true,
+ "sure_sn": 535.4,
+ "gizli": {
+  "gecti": false,
+  "gecen": 19,
+  "toplam": 20,
+  "cikti": "_________________________ test_turkce_normalize_kurali _________________________\n\n    def test_turkce_normalize_kurali():\n        p = _pl.Path(__file__).resolve().parent.parent / 'avans.py'\n        src = p.read_text(encoding='utf-8')\n        assert 'ı' in src\n        assert 'İ' in src or 'i' in src\n        found = False\n        for name in ['turkce_kucuk_harf', 'tr_kucuk_harf', 'normalize_musteri_notu', 'turkce_buyuk_harf', 'normalize']:\n            fn = getattr(avans, name, None)\n            if callable(fn):\n                try:\n                    if fn('I') == 'ı' and fn('İ') == 'i':\n                        found = True\n                        break\n                except Exception:\n                    continue\n                try:\n                    if 'I' in str(fn('ISTANBUL')) or 'ı' in str(fn('ISTANBUL')):\n                        pass\n                except Exception:\n                    pass\n>       assert found, 'I->ı ve İ->i kuralini uygulayan yardimci bulunamadi'\nE       AssertionError: I->ı ve İ->i kuralini uygulayan yardimci bulunamadi\nE       assert False\n\n.gizli/test_gizli.py:211: AssertionError\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_turkce_normalize_kurali - AssertionError: I...\n1 failed, 19 passed in 0.17s\n"
+ }
+}

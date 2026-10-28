@@ -1,0 +1,59 @@
+{
+ "id": "a056",
+ "kip": "c",
+ "tekrar": 3,
+ "kategori": "KDV, tevkifat, stopaj, taksit ve kuruş yuvarlama (Decimal, ROUND_HALF_UP, satır bazında ve toplamda yuvarlama farkı)",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 54,
+   "basarili": 54
+  }
+ ],
+ "spark_usd": 0.020368800000000003,
+ "arayuz": "",
+ "kabul_yazar": 3,
+ "mutasyon": {
+  "mutant": 16,
+  "ham_mutant": 16,
+  "turlar": [
+   {
+    "oldurulen": 13,
+    "toplam": 16
+   },
+   {
+    "oldurulen": 13,
+    "toplam": 16
+   },
+   {
+    "oldurulen": 15,
+    "toplam": 16
+   }
+  ],
+  "hayatta": [
+   "Bos aciklamayi ValueError say gereksinimini cigner"
+  ]
+ },
+ "hakem": [],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [],
+ "kabul_test_sayisi": 54,
+ "kabul_gecti": true,
+ "ozet": "kira.py içinde netten_brute_hesapla yazıldı: Decimal+ROUND_HALF_UP, brüt=net/(1-stopaj), KDV ve damga (%0.948) brüt üzerinden, toplam=brüt+KDV, yuvarlama_farkı eklendi, tip/ValueError önceliği, Türkçe casefold (I→ı, İ→i) ile işyeri kontrolü, stabil sıralama ile stopaj önce. pytest 7 test geçti.",
+ "adim": 19,
+ "yurutucu_token": {
+  "girdi": 106187,
+  "cikti": 59904
+ },
+ "yurutucu_usd": 0.022599500000000005,
+ "bitirdi": true,
+ "sure_sn": 1079.3,
+ "gizli": {
+  "gecti": true,
+  "gecen": 22,
+  "toplam": 22,
+  "cikti": "......................                                                   [100%]\n22 passed in 0.08s\n"
+ }
+}

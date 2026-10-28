@@ -1,0 +1,61 @@
+{
+ "id": "a098",
+ "kip": "c",
+ "tekrar": 2,
+ "kategori": "CSV/JSON ile çalışan ve uç durumları çok olan veri işleme (BOM, ; ayırıcı, 1.234,56 sayı biçimi, boş/bozuk satır)",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 58,
+   "basarili": 58
+  }
+ ],
+ "spark_usd": 0.0301595,
+ "arayuz": "",
+ "kabul_yazar": 3,
+ "mutasyon": {
+  "mutant": 16,
+  "ham_mutant": 16,
+  "turlar": [
+   {
+    "oldurulen": 15,
+    "toplam": 16
+   },
+   {
+    "oldurulen": 15,
+    "toplam": 16
+   },
+   {
+    "oldurulen": 15,
+    "toplam": 16
+   }
+  ],
+  "hayatta": [
+   "BOM yoksayma: kabul_csv utf-8-sig ile okunmali"
+  ]
+ },
+ "hakem": [],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [
+  ".usta_kabul/test_kabul_3.py::test_esit_tutarda_turkce_duyarsiz_siralama"
+ ],
+ "kabul_test_sayisi": 58,
+ "kabul_gecti": true,
+ "ozet": "`uzum_kurutma.py` içinde `kurutma_raporu` yazıldı: utf-8-sig + `;` ile okuma, boş satır atlama, Türkçe sayı çözümleme (`.` sil, `,`→`.`), kuru ağırlık formülü ve HALF_UP yuvarlama, nem==hedef sınır durumu, hatalı sayaç, Türkçe duyarsız gruplama (I→ı, İ→i + casefold), tutar hesabı ve sıralama, hata önceliği (FileNotFoundError > ValueError) ve boş sonuç `\"0,00\"` kuralları uygulandı. 16 pytest testi yazıldı ve hepsi geçti.",
+ "adim": 5,
+ "yurutucu_token": {
+  "girdi": 19684,
+  "cikti": 22604
+ },
+ "yurutucu_usd": 0.0064892000000000005,
+ "bitirdi": true,
+ "sure_sn": 822.0,
+ "gizli": {
+  "gecti": true,
+  "gecen": 21,
+  "toplam": 21,
+  "cikti": ".....................                                                    [100%]\n21 passed in 0.06s\n"
+ }
+}

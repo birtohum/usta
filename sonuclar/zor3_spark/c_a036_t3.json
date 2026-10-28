@@ -1,0 +1,70 @@
+{
+ "id": "a036",
+ "kip": "c",
+ "tekrar": 3,
+ "kategori": "CSV/JSON ile çalışan ve uç durumları çok olan veri işleme (BOM, ; ayırıcı, 1.234,56 sayı biçimi, boş/bozuk satır)",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 51,
+   "basarili": 51
+  }
+ ],
+ "spark_usd": 0.0161424,
+ "arayuz": "",
+ "kabul_yazar": 3,
+ "mutasyon": {
+  "mutant": 15,
+  "ham_mutant": 15,
+  "turlar": [
+   {
+    "oldurulen": 12,
+    "toplam": 15
+   },
+   {
+    "oldurulen": 12,
+    "toplam": 15
+   },
+   {
+    "oldurulen": 14,
+    "toplam": 15
+   }
+  ],
+  "hayatta": [
+   "Baslik kod;ad;adet kontrolunu bozar, adet zorunlulugunu kaldirir"
+  ]
+ },
+ "hakem": [
+  {
+   "test": ".usta_kabul/test_kabul_m2.py::test_kod_esitliginde_ad_siralamasi",
+   "karar": "belirsiz",
+   "gerekce": "Görev metni yinelenen kodların ayrı satır olarak korunacağını açıkça belirtmiyor, yalnızca sıralama kuralı veriyor.",
+   "tur": 1
+  }
+ ],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [
+  ".usta_kabul/test_kabul_1.py::test_kod_esitliginde_turkce_ad_sirasi",
+  ".usta_kabul/test_kabul_3.py::test_kod_esit_ad_siralama",
+  ".usta_kabul/test_kabul_m2.py::test_kod_esitliginde_ad_siralamasi"
+ ],
+ "kabul_test_sayisi": 51,
+ "kabul_gecti": true,
+ "ozet": "envanter_denetim.py yazıldı: utf-8-sig ve noktalı virgüllü CSV/JSON okuma, binlik noktalı Türkçe tam sayı ayrıştırma, I→ı / İ→i Türkçe küçük harf eşleştirme, 0 farkın eşleşme sayılması, BOM'lu kod;fark çıktısı, Türkçe alfabetik kod/ad sıralaması, dosya yokluğunda çıkış 1 (başlık kontrolünden önce) ve eksik/boş alanda ValueError ile çıkış 3. Yalnızca standart kütüphane kullanıldı. test_envanter.py ile 8 pytest testi geçiyor.",
+ "adim": 6,
+ "yurutucu_token": {
+  "girdi": 30193,
+  "cikti": 21277
+ },
+ "yurutucu_usd": 0.0072747,
+ "bitirdi": true,
+ "sure_sn": 1086.4,
+ "gizli": {
+  "gecti": false,
+  "gecen": 20,
+  "toplam": 21,
+  "cikti": "...................F.                                                    [100%]\n=================================== FAILURES ===================================\n_______________________ test20_kod_esitliginde_ad_sirasi _______________________\n\ntmp_path = PosixPath('/home/usta/is/dcf7f29fe4b8/.tmp/pytest-of-usta/pytest-4/test20_kod_esitliginde_ad_sira0')\n\n    def test20_kod_esitliginde_ad_sirasi(tmp_path):\n        e = tmp_path / \"env.csv\"; s = tmp_path / \"sayim.json\"; c = tmp_path / \"fark.csv\"\n        env_yaz(e, [[\"SILGI\", \"\\u015feftali\", \"5\"], [\"s\\u0131lg\\u0131\", \"\\u00e7ilek\", \"5\"]])\n        sayim_yaz(s, [{\"kod\": \"SILGI\", \"sayilan\": 5}])\n        r = calistir(e, s, c)\n        assert r.returncode == 0\n        rows, _ = cikti_oku(c)\n>       assert len(rows) == 2\nE       AssertionError: assert 1 == 2\nE        +  where 1 = len([{'fark': '-5', 'kod': 'SILGI'}])\n\n.gizli/test_gizli.py:211: AssertionError\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test20_kod_esitliginde_ad_sirasi - AssertionErro...\n1 failed, 20 passed in 2.44s\n"
+ }
+}

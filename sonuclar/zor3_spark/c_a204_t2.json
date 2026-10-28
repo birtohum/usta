@@ -1,0 +1,131 @@
+{
+ "id": "a204",
+ "kip": "c",
+ "tekrar": 2,
+ "kategori": "KDV, tevkifat, stopaj, taksit ve kuruş yuvarlama (Decimal, ROUND_HALF_UP, satır bazında ve toplamda yuvarlama farkı)",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 48,
+   "basarili": 48
+  }
+ ],
+ "spark_usd": 0.020845199999999998,
+ "arayuz": "",
+ "kabul_yazar": 3,
+ "mutasyon": {
+  "mutant": 15,
+  "ham_mutant": 15,
+  "turlar": [
+   {
+    "oldurulen": 12,
+    "toplam": 15
+   },
+   {
+    "oldurulen": 14,
+    "toplam": 15
+   },
+   {
+    "oldurulen": 14,
+    "toplam": 15
+   }
+  ],
+  "hayatta": [
+   "Turkce duyarsiz karsilastirma ve I harfi donusumunu bozar, SERVIS with dotted I taninmaz"
+  ]
+ },
+ "hakem": [
+  {
+   "test": ".usta_kabul/test_kabul_1.py::test_fis_esit_tutar_giris_sirasi_korunur",
+   "karar": "belirsiz",
+   "gerekce": "Görev --indirim bayrağının zorunlu mu isteğe bağlı mı olduğunu açıkça belirtmiyor.",
+   "tur": 1
+  },
+  {
+   "test": ".usta_kabul/test_kabul_1.py::test_fis_giris_sirasini_korur",
+   "karar": "belirsiz",
+   "gerekce": "Görev --indirim verilmeden çalışmanın başarılı olacağını açıkça belirtmiyor.",
+   "tur": 1
+  },
+  {
+   "test": ".usta_kabul/test_kabul_1.py::test_genel_kdv_toplu_matrah_yuvarlama_farki",
+   "karar": "belirsiz",
+   "gerekce": "KDV mantığı açık olsa da --indirim olmadan çağrının geçerli olduğu belirsiz.",
+   "tur": 1
+  },
+  {
+   "test": ".usta_kabul/test_kabul_1.py::test_json_tek_satir_bes_anahtar",
+   "karar": "belirsiz",
+   "gerekce": "JSON anahtarları açık ama --indirim eksikken başarının bekleneceği açık değil.",
+   "tur": 1
+  },
+  {
+   "test": ".usta_kabul/test_kabul_1.py::test_paket_kdv_yuzde10",
+   "karar": "belirsiz",
+   "gerekce": "KDV oranı açık ancak --indirim bayrağının zorunluluğu tek anlamlı değil.",
+   "tur": 1
+  },
+  {
+   "test": ".usta_kabul/test_kabul_1.py::test_satir_kdv_yarim_kurus_yukari_yuvarlanir",
+   "karar": "belirsiz",
+   "gerekce": "Yuvarlama kuralı açık ama --indirim olmadan çalışmanın zorunlu olduğu açık değil.",
+   "tur": 1
+  },
+  {
+   "test": ".usta_kabul/test_kabul_1.py::test_satir_matrah_yarim_kurus_yukari_yuvarlanir",
+   "karar": "belirsiz",
+   "gerekce": "Yuvarlama beklentisi açık fakat --indirim yokken başarı koşulu belirtilmemiş.",
+   "tur": 1
+  },
+  {
+   "test": ".usta_kabul/test_kabul_1.py::test_servis_kdv_yuzde20",
+   "karar": "belirsiz",
+   "gerekce": "KDV oranı açık ancak testin --indirim içermeyen çağrısı görevde garanti edilmiyor.",
+   "tur": 1
+  },
+  {
+   "test": ".usta_kabul/test_kabul_1.py::test_tur_buyuk_kucuk_harf_duyarsiz",
+   "karar": "belirsiz",
+   "gerekce": "Harf duyarsızlığı açık ama --indirim verilmeden başarının bekleneceği açık değil.",
+   "tur": 1
+  },
+  {
+   "test": ".usta_kabul/test_kabul_1.py::test_tur_noktali_I_donusumu",
+   "karar": "belirsiz",
+   "gerekce": "İ dönüşümü açık olsa da --indirim eksik çağrının geçerliliği belirsiz.",
+   "tur": 1
+  }
+ ],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [
+  ".usta_kabul/test_kabul_1.py::test_fis_esit_tutar_giris_sirasi_korunur",
+  ".usta_kabul/test_kabul_1.py::test_fis_giris_sirasini_korur",
+  ".usta_kabul/test_kabul_1.py::test_genel_kdv_toplu_matrah_yuvarlama_farki",
+  ".usta_kabul/test_kabul_1.py::test_json_tek_satir_bes_anahtar",
+  ".usta_kabul/test_kabul_1.py::test_paket_kdv_yuzde10",
+  ".usta_kabul/test_kabul_1.py::test_satir_kdv_yarim_kurus_yukari_yuvarlanir",
+  ".usta_kabul/test_kabul_1.py::test_satir_matrah_yarim_kurus_yukari_yuvarlanir",
+  ".usta_kabul/test_kabul_1.py::test_servis_kdv_yuzde20",
+  ".usta_kabul/test_kabul_1.py::test_tur_buyuk_kucuk_harf_duyarsiz",
+  ".usta_kabul/test_kabul_1.py::test_tur_noktali_I_donusumu"
+ ],
+ "kabul_test_sayisi": 48,
+ "kabul_gecti": true,
+ "ozet": "bolu_lokanta_cli.py yazıldı: argparse ile --kalem/--indirim/--cikti, Türkçe duyarsız TUR, Decimal+ROUND_HALF_UP, tur bazlı KDV ve yuvarlama_farki, 750 limiti, json/fis çıktı. pytest 8 test geçti.",
+ "adim": 5,
+ "yurutucu_token": {
+  "girdi": 14345,
+  "cikti": 26468
+ },
+ "yurutucu_usd": 0.006728100000000001,
+ "bitirdi": true,
+ "sure_sn": 1575.8,
+ "gizli": {
+  "gecti": false,
+  "gecen": 9,
+  "toplam": 21,
+  "cikti": "alem\", \"servis:100.00:1\", \"--cikti\", \"fis\")\n>       assert r.returncode == 0\nE       AssertionError: assert 2 == 0\nE        +  where 2 = CompletedProcess(args=['/usr/bin/python', '/home/usta/is/5a17fa940edd/bolu_lokanta_cli.py', '--kalem', 'paket:100.00:1...n                           {json,fis}\\nbolu_lokanta_cli.py: error: the following arguments are required: --indirim\\n').returncode\n\n.gizli/test_gizli.py:147: AssertionError\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_json_keys_single_line - AssertionError: ass...\nFAILED .gizli/test_gizli.py::test_paket_rate - AssertionError: assert 2 == 0\nFAILED .gizli/test_gizli.py::test_servis_rate - AssertionError: assert 2 == 0\nFAILED .gizli/test_gizli.py::test_paket_case_insensitive - AssertionError: PA...\nFAILED .gizli/test_gizli.py::test_servis_dotted_I - AssertionError: assert 2 ...\nFAILED .gizli/test_gizli.py::test_mixed_case_servis - AssertionError: assert ...\nFAILED .gizli/test_gizli.py::test_half_kurus_matrah_up - AssertionError: asse...\nFAILED .gizli/test_gizli.py::test_half_kurus_kdv_up - AssertionError: assert ...\nFAILED .gizli/test_gizli.py::test_yuvarlama_farki - AssertionError: assert 2 ...\nFAILED .gizli/test_gizli.py::test_success_exit0 - AssertionError: assert 2 == 0\nFAILED .gizli/test_gizli.py::test_fis_order - AssertionError: assert 2 == 0\nFAILED .gizli/test_gizli.py::test_fis_equal_stable - AssertionError: assert 2...\n12 failed, 9 passed in 2.52s\n"
+ }
+}

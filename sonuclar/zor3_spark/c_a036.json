@@ -1,0 +1,110 @@
+{
+ "id": "a036",
+ "kip": "c",
+ "tekrar": 1,
+ "kategori": "CSV/JSON ile çalışan ve uç durumları çok olan veri işleme (BOM, ; ayırıcı, 1.234,56 sayı biçimi, boş/bozuk satır)",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": false,
+   "toplam": 50,
+   "basarili": 42
+  },
+  {
+   "gecti": true,
+   "toplam": 50,
+   "basarili": 50
+  }
+ ],
+ "spark_usd": 0.01252,
+ "arayuz": "",
+ "kabul_yazar": 3,
+ "mutasyon": {
+  "mutant": 13,
+  "ham_mutant": 14,
+  "turlar": [
+   {
+    "oldurulen": 12,
+    "toplam": 13
+   },
+   {
+    "oldurulen": 13,
+    "toplam": 13
+   }
+  ],
+  "hayatta": []
+ },
+ "hakem": [
+  {
+   "test": ".usta_kabul/test_kabul_1.py::test_kod_esitliginde_turkce_ad_siralamasi",
+   "karar": "gerekli",
+   "gerekce": "Görev kod eşitliğinde Türkçe ad sıralamasını açıkça istiyor ve ı harfi i harfinden önce gelir.",
+   "tur": 1
+  },
+  {
+   "test": ".usta_kabul/test_kabul_2.py::test_adet_bos_valueerror",
+   "karar": "gerekli",
+   "gerekce": "Görev adet değerinin boş bırakılamayacağını ve boş değerin ValueError ile çıkış 3 vereceğini açıkça istiyor.",
+   "tur": 1
+  },
+  {
+   "test": ".usta_kabul/test_kabul_2.py::test_dosya_kontrolu_basliktan_once",
+   "karar": "gerekli",
+   "gerekce": "Görev dosya yokluğunda FileNotFoundError ile çıkış 1 verilmesini ve kontrolün başlıktan önce yapılmasını açıkça istiyor.",
+   "tur": 1
+  },
+  {
+   "test": ".usta_kabul/test_kabul_2.py::test_dosya_yok_cikis1",
+   "karar": "gerekli",
+   "gerekce": "Görev dosya yokluğunda FileNotFoundError ile çıkış kodu 1 verilmesini açıkça istiyor.",
+   "tur": 1
+  },
+  {
+   "test": ".usta_kabul/test_kabul_2.py::test_sayilan_bos_valueerror",
+   "karar": "gerekli",
+   "gerekce": "Görev sayilan değerinin boş bırakılamayacağını ve boş değerin ValueError doğuracağını açıkça istiyor.",
+   "tur": 1
+  },
+  {
+   "test": ".usta_kabul/test_kabul_2.py::test_sayim_kod_eksik_valueerror_cikis3",
+   "karar": "gerekli",
+   "gerekce": "Görev sayım kaydında kod alanı eksikse ValueError ile çıkış 3 verilmesini açıkça istiyor.",
+   "tur": 1
+  },
+  {
+   "test": ".usta_kabul/test_kabul_2.py::test_sayim_sayilan_eksik_valueerror_cikis3",
+   "karar": "gerekli",
+   "gerekce": "Görev sayım kaydında sayilan alanı eksikse ValueError ile çıkış 3 verilmesini açıkça istiyor.",
+   "tur": 1
+  },
+  {
+   "test": ".usta_kabul/test_kabul_3.py::test_kod_esitken_turkce_ad_siralamasi",
+   "karar": "gerekli",
+   "gerekce": "Görev kod eşitliğinde Türkçe ad sıralamasını açıkça istiyor ve cam sözcüğü çay sözcüğünden önce gelir.",
+   "tur": 1
+  }
+ ],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [
+  ".usta_kabul/test_kabul_2.py::test_kod_esitliginde_ad_siralamasi_turkce",
+  ".usta_kabul/test_kabul_3.py::test_binlik_nokta_hatali_bicim_hata"
+ ],
+ "kabul_test_sayisi": 50,
+ "kabul_gecti": true,
+ "ozet": "Düzeltmeler: hata mesajlarına FileNotFoundError/ValueError eklendi (çıkış 1/3), binlik nokta katı doğrulandı (1.00 hata), aynı kodlu satırlar ayrı yazıldı. Kabul: 51/52. Kalan test_kod_esitliginde_ad_siralamasi_turkce görev metniyle çelişiyor (çıktıda ad metni arıyor, oysa başlık kod;fark olmalı), görev metnine uyuldu.",
+ "adim": 20,
+ "yurutucu_token": {
+  "girdi": 244200,
+  "cikti": 56859
+ },
+ "yurutucu_usd": 0.0357918,
+ "bitirdi": true,
+ "sure_sn": 1036.2,
+ "gizli": {
+  "gecti": true,
+  "gecen": 21,
+  "toplam": 21,
+  "cikti": ".....................                                                    [100%]\n21 passed in 1.65s\n"
+ }
+}

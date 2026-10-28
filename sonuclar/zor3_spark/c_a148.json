@@ -1,0 +1,26 @@
+{
+ "id": "a148",
+ "kip": "c",
+ "tekrar": 1,
+ "kategori": "CSV/JSON ile çalışan ve uç durumları çok olan veri işleme (BOM, ; ayırıcı, 1.234,56 sayı biçimi, boş/bozuk satır)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.00012140000000000001,
+ "arayuz": "",
+ "kabul_gecti": false,
+ "dogrulanamadi": true,
+ "ozet": "nareksisi_parti.py içinde birlestir işlevi yazıldı: CSV utf-8-sig/;/çift-tırnak ile okunup başlık strip sonrası birebir doğrulanıyor, Türkçe sayılar Decimal ile ayrıştırılıp boşta ValueError veriliyor, boş/ayırıcı-satırlar atlanıp sütun hatasında ValueError yükseltiliyor, JSON utf-8-sig okunup sonuclar yoksa ValueError veriliyor, puan Decimal ile ROUND_HALF_UP 2 basamak hesaplanıp 68 eşiğinde kabul/red belirleniyor, ad eşleştirme I->ı/İ->i+casefold+strip ile yapılıp puan azalan/Türkçe alfabetik/id artan sıralama uygulanıyor; dosya yokluğu FileNotFoundError öncelikli, veri yoksa boş liste dönüyor. pytest ile 11 test geçti.",
+ "adim": 16,
+ "yurutucu_token": {
+  "girdi": 122018,
+  "cikti": 60210
+ },
+ "yurutucu_usd": 0.024243800000000003,
+ "sure_sn": 640.3,
+ "gizli": {
+  "gecti": false,
+  "gecen": 6,
+  "toplam": 22,
+  "cikti": "h g: veri=json.load(g)\n        if not rows: raise ValueError(\"baslik yok\")\n>       if [h.strip() for h in rows[0]]!=H: raise ValueError(\"baslik\")\nE       ValueError: baslik\n\nnareksisi_parti.py:50: ValueError\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_normal_birlestirme - ValueError: baslik\nFAILED .gizli/test_gizli.py::test_red_durumu - ValueError: baslik\nFAILED .gizli/test_gizli.py::test_esik_68_kabul - ValueError: baslik\nFAILED .gizli/test_gizli.py::test_esik_alti_red - ValueError: baslik\nFAILED .gizli/test_gizli.py::test_binlik_nokta_virgul - ValueError: baslik\nFAILED .gizli/test_gizli.py::test_bos_satir_atlama - ValueError: baslik\nFAILED .gizli/test_gizli.py::test_ayirici_bosluk_satir_atlama - ValueError: b...\nFAILED .gizli/test_gizli.py::test_baslik_hatasi - Failed: DID NOT RAISE <clas...\nFAILED .gizli/test_gizli.py::test_baslik_bosluk_trim - ValueError: baslik\nFAILED .gizli/test_gizli.py::test_yuvarlama_half_up - ValueError: baslik\nFAILED .gizli/test_gizli.py::test_isim_eslestirme_I - ValueError: baslik\nFAILED .gizli/test_gizli.py::test_isim_eslestirme_dottedI_strip - ValueError:...\nFAILED .gizli/test_gizli.py::test_siralama_puan_azalan - ValueError: baslik\nFAILED .gizli/test_gizli.py::test_siralama_turkce_alfabe - ValueError: baslik\nFAILED .gizli/test_gizli.py::test_bos_liste - ValueError: baslik\nFAILED .gizli/test_gizli.py::test_cift_tirnak_ayirici - ValueError: baslik\n16 failed, 6 passed in 0.43s\n"
+ }
+}

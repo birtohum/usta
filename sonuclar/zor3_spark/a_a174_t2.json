@@ -1,0 +1,24 @@
+{
+ "id": "a174",
+ "kip": "a",
+ "tekrar": 2,
+ "kategori": "KDV, tevkifat, stopaj, taksit ve kuruş yuvarlama (Decimal, ROUND_HALF_UP, satır bazında ve toplamda yuvarlama farkı)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "isparta_gul.py içinde GulYagiSatisDefteri yazıldı: ekle() tip→pozitiflik→oran sırasıyla TypeError/ValueError verir, matrah ROUND_HALF_UP ile saklanır, kdv_oran yalnızca 20; ozet() satır KDV toplamı ile genel KDV farkını en büyük miktarlı (eşitlikte önce eklenen) satıra yansıtır, 20000,00 TL eşiğinde %1 stopaj uygular, boşken sıfırlar döner, Türkçe notları I→ı, İ→i çevirisiyle sıralar. Yalnızca decimal kullanıldı.",
+ "adim": 16,
+ "yurutucu_token": {
+  "girdi": 193890,
+  "cikti": 51255
+ },
+ "yurutucu_usd": 0.029640000000000003,
+ "bitirdi": true,
+ "sure_sn": 513.3,
+ "gizli": {
+  "gecti": false,
+  "gecen": 18,
+  "toplam": 20,
+  "cikti": "________________________ test_18_turkce_esitlik_koruma _________________________\n\n    def test_18_turkce_esitlik_koruma():\n        d = GulYagiSatisDefteri()\n        d.not_ekle(\"I\")\n        d.not_ekle(\"ı\")\n>       assert d.sirali_notlar() == [\"I\", \"ı\"]\n\n.gizli/test_gizli.py:143: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nself = <isparta_gul.GulYagiSatisDefteri object at 0x7951ba235d90>\nad = 'sirali_notlar'\n\n    def __getattr__(self, ad):\n        if ad.startswith(\"__\") and ad.endswith(\"__\"):\n            raise AttributeError(ad)\n        dusuk = ad.lower()\n        if (\"not\" in dusuk or \"aciklama\" in dusuk or \"kod\" in dusuk) and (\"ekle\" in dusuk or \"kaydet\" in dusuk):\n            def _ekle(not_metni: str):\n                return self.not_ekle(not_metni)\n            return _ekle\n>       raise AttributeError(ad)\nE       AttributeError: sirali_notlar\n\nisparta_gul.py:43: AttributeError\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_17_turkce_siralama - AttributeError: sirali...\nFAILED .gizli/test_gizli.py::test_18_turkce_esitlik_koruma - AttributeError: ...\n2 failed, 18 passed in 0.10s\n"
+ }
+}

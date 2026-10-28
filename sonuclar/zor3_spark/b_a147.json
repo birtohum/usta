@@ -1,0 +1,24 @@
+{
+ "id": "a147",
+ "kip": "b",
+ "tekrar": 1,
+ "kategori": "çok dosyalı küçük modül: iki-üç dosyaya bölünmüş, ortak hata sınıfları ve bir komut satırı girişi olan araç",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "hatalar.py, isot.py (Harman, Türkçe duyarsız kod, ağırlıklı ortalama HALF_UP, %3 fire floor, ±500 bant) ve cli.py (depo.json okuyup sayı veya sınıf adı yazma) yazıldı; pytest ile 12 test geçti.",
+ "adim": 10,
+ "yurutucu_token": {
+  "girdi": 35246,
+  "cikti": 51287
+ },
+ "yurutucu_usd": 0.013782000000000003,
+ "bitirdi": true,
+ "sure_sn": 486.5,
+ "gizli": {
+  "gecti": false,
+  "gecen": 19,
+  "toplam": 20,
+  "cikti": ">           h.harman_acilik(['ABC12'])\n\n.gizli/test_gizli.py:44: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nself = <isot.Harman object at 0x7989dabfe000>, parti_kodlari = ['ABC12']\n\n    def harman_acilik(self, parti_kodlari: list[str]) -> int:\n        # boş liste geçersiz\n        if not isinstance(parti_kodlari, list) or len(parti_kodlari) == 0:\n            raise HataliAcilikHatasi(\"bos liste\")\n        # kod biçimi önceliği: önce tüm kodların biçimini kontrol et\n        normlar = []\n        for k in parti_kodlari:\n            if not isinstance(k, str):\n                raise ValueError(\"hatali kod\")\n            n = tr_upper(k)\n            if not _kod_gecerli_mi(n):\n                raise ValueError(\"hatali kod\")\n            normlar.append(n)\n        # bilinmeyen kod\n        for n in normlar:\n            if n not in self._partiler:\n>               raise ValueError(\"bilinmeyen kod\")\nE               ValueError: bilinmeyen kod\n\nisot.py:87: ValueError\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_hic_parti_yoksa_hatali_acilik - ValueError:...\n1 failed, 19 passed in 0.33s\n"
+ }
+}

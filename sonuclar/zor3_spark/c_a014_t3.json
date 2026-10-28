@@ -1,0 +1,72 @@
+{
+ "id": "a014",
+ "kip": "c",
+ "tekrar": 3,
+ "kategori": "KDV, tevkifat, stopaj, taksit ve kuruş yuvarlama (Decimal, ROUND_HALF_UP, satır bazında ve toplamda yuvarlama farkı)",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 52,
+   "basarili": 52
+  }
+ ],
+ "spark_usd": 0.014524400000000002,
+ "arayuz": "",
+ "kabul_yazar": 3,
+ "mutasyon": {
+  "mutant": 14,
+  "ham_mutant": 14,
+  "turlar": [
+   {
+    "oldurulen": 11,
+    "toplam": 14
+   },
+   {
+    "oldurulen": 13,
+    "toplam": 14
+   },
+   {
+    "oldurulen": 13,
+    "toplam": 14
+   }
+  ],
+  "hayatta": [
+   "ROUND_HALF_UP ile yuvarlama yapilmali gereksinimini cigner, varsayilan ROUND_HALF_EVEN kullanir"
+  ]
+ },
+ "hakem": [
+  {
+   "test": ".usta_kabul/test_kabul_m1.py::test_tahsilat_gider_toplamini_icerir",
+   "karar": "belirsiz",
+   "gerekce": "Görev metni tahsilat ve net formülünü açıkça tanımlamadığı için giderin tahsilata nasıl ekleneceği tek anlamlı değildir.",
+   "tur": 1
+  }
+ ],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [
+  ".usta_kabul/test_kabul_1.py::test_birden_fazla_gider_toplami",
+  ".usta_kabul/test_kabul_1.py::test_gider_esik_esit_stopaja_eklenmez",
+  ".usta_kabul/test_kabul_1.py::test_gider_esik_ustu_tamami_stopaja_eklenir",
+  ".usta_kabul/test_kabul_1.py::test_kdv_brut_arti_gider_uzerinden",
+  ".usta_kabul/test_kabul_m1.py::test_tahsilat_gider_toplamini_icerir"
+ ],
+ "kabul_test_sayisi": 52,
+ "kabul_gecti": true,
+ "ozet": "makbuz.py içinde SerbestMeslekMakbuzu sınıfı oluşturuldu: brut Decimal ile tutulur, %20 stopaj (brüt üzerinden, gider toplamı 5000.00'ı aşarsa giderler dahil) ve %20 KDV (brüt+gider üzerinden), ROUND_HALF_UP yuvarlama, net/tahsilat yuvarlanmış kalemlerin toplamı. Hata önceliği TypeError>ValueError, 0/negatif brüt reddi, boş/geçersiz gider eklenmemesi sağlandı. pytest ile 15 test geçti.",
+ "adim": 6,
+ "yurutucu_token": {
+  "girdi": 18047,
+  "cikti": 29124
+ },
+ "yurutucu_usd": 0.007629500000000001,
+ "bitirdi": true,
+ "sure_sn": 1114.2,
+ "gizli": {
+  "gecti": true,
+  "gecen": 20,
+  "toplam": 20,
+  "cikti": "....................                                                     [100%]\n20 passed in 0.08s\n"
+ }
+}

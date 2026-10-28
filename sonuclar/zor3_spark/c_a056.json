@@ -1,0 +1,59 @@
+{
+ "id": "a056",
+ "kip": "c",
+ "tekrar": 1,
+ "kategori": "KDV, tevkifat, stopaj, taksit ve kuruş yuvarlama (Decimal, ROUND_HALF_UP, satır bazında ve toplamda yuvarlama farkı)",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 43,
+   "basarili": 43
+  }
+ ],
+ "spark_usd": 0.024847500000000005,
+ "arayuz": "",
+ "kabul_yazar": 2,
+ "mutasyon": {
+  "mutant": 15,
+  "ham_mutant": 15,
+  "turlar": [
+   {
+    "oldurulen": 14,
+    "toplam": 15
+   },
+   {
+    "oldurulen": 14,
+    "toplam": 15
+   },
+   {
+    "oldurulen": 14,
+    "toplam": 15
+   }
+  ],
+  "hayatta": [
+   "Turkce I-ı ve İ-i donusumlerini dogru yapan yontem ve casefold gereksinimini cigner"
+  ]
+ },
+ "hakem": [],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [],
+ "kabul_test_sayisi": 43,
+ "kabul_gecti": true,
+ "ozet": "kira.py içinde netten_brute_hesapla fonksiyonu yazıldı: tüm hesaplar Decimal + ROUND_HALF_UP ile kuruşa yuvarlanıyor, brüt=net/(1-stopaj), stopaj/KDV/damga (binde 9,48) brüt üzerinden, toplam=brüt+KDV, yuvarlama farkı ekleniyor; tip→dönüşüm→değer önceliği, oran aralıkları, Türkçe casefold açıklama kontrolü ve stabil sıralama uygulandı. pytest ile 11 test geçti.",
+ "adim": 4,
+ "yurutucu_token": {
+  "girdi": 16035,
+  "cikti": 14334
+ },
+ "yurutucu_usd": 0.0044703,
+ "bitirdi": true,
+ "sure_sn": 1107.3,
+ "gizli": {
+  "gecti": true,
+  "gecen": 22,
+  "toplam": 22,
+  "cikti": "......................                                                   [100%]\n22 passed in 0.07s\n"
+ }
+}

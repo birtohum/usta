@@ -1,0 +1,68 @@
+{
+ "id": "a178",
+ "kip": "c",
+ "tekrar": 3,
+ "kategori": "CSV/JSON ile çalışan ve uç durumları çok olan veri işleme (BOM, ; ayırıcı, 1.234,56 sayı biçimi, boş/bozuk satır)",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 25,
+   "basarili": 25
+  }
+ ],
+ "spark_usd": 0.037631300000000006,
+ "arayuz": "",
+ "kabul_yazar": 1,
+ "mutasyon": {
+  "mutant": 15,
+  "ham_mutant": 15,
+  "turlar": [
+   {
+    "oldurulen": 9,
+    "toplam": 15
+   },
+   {
+    "oldurulen": 14,
+    "toplam": 15
+   },
+   {
+    "oldurulen": 14,
+    "toplam": 15
+   }
+  ],
+  "hayatta": [
+   "Turkce kucuk harf donusumu I-Is farkini ayni depo sayma gereksinimini ihlal eder"
+  ]
+ },
+ "hakem": [
+  {
+   "test": ".usta_kabul/test_kabul_1.py::test_depo_adi_turkce_kucuk_harf_ile_birlesir",
+   "karar": "belirsiz",
+   "gerekce": "Görev metni stok gruplamanın depo_koduna mı yoksa Türkçe normalize depo_adına mı göre yapılacağını açıkça tanımlamıyor.",
+   "tur": 1
+  }
+ ],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [
+  ".usta_kabul/test_kabul_1.py::test_depo_adi_turkce_kucuk_harf_ile_birlesir"
+ ],
+ "kabul_test_sayisi": 25,
+ "kabul_gecti": true,
+ "ozet": "patates_stok_cli.py yazıldı: utf-8-sig + noktalı virgül okuma, boş satır yoksayma, Decimal Türkçe sayı çözümleme, exit 2/3/4 kuralları, negatif stok, Türkçe sıralama, ROUND_HALF_UP Türkçe kg biçimi. 15 pytest testi geçti.",
+ "adim": 14,
+ "yurutucu_token": {
+  "girdi": 70764,
+  "cikti": 65043
+ },
+ "yurutucu_usd": 0.020085,
+ "bitirdi": true,
+ "sure_sn": 1038.9,
+ "gizli": {
+  "gecti": true,
+  "gecen": 20,
+  "toplam": 20,
+  "cikti": "....................                                                     [100%]\n20 passed in 0.65s\n"
+ }
+}

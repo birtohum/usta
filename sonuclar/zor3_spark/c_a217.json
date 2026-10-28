@@ -1,0 +1,55 @@
+{
+ "id": "a217",
+ "kip": "c",
+ "tekrar": 1,
+ "kategori": "KDV, tevkifat, stopaj, taksit ve kuruş yuvarlama (Decimal, ROUND_HALF_UP, satır bazında ve toplamda yuvarlama farkı)",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 56,
+   "basarili": 56
+  }
+ ],
+ "spark_usd": 0.0102819,
+ "arayuz": "",
+ "kabul_yazar": 3,
+ "mutasyon": {
+  "mutant": 14,
+  "ham_mutant": 14,
+  "turlar": [
+   {
+    "oldurulen": 13,
+    "toplam": 14
+   },
+   {
+    "oldurulen": 14,
+    "toplam": 14
+   }
+  ],
+  "hayatta": []
+ },
+ "hakem": [],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [
+  ".usta_kabul/test_kabul_3.py::test_hata_matrah"
+ ],
+ "kabul_test_sayisi": 56,
+ "kabul_gecti": true,
+ "ozet": "mermer_cli.py yazıldı: argparse ile --kalem/--taksit/--sirala ayrıştırma, Decimal ile satır KDV/tevkifat/ödenecek hesabı (ROUND_HALF_UP), toplamlar, kdv_yuvarlama_farki, ROUND_DOWN taksit bölüşümü, ödenecek+matrah+ilk görülme sıralaması, sınır kuralları ve öncelikli HATA kontrolleri (exit 2). 25 pytest testi geçiyor.",
+ "adim": 10,
+ "yurutucu_token": {
+  "girdi": 78936,
+  "cikti": 23156
+ },
+ "yurutucu_usd": 0.0125248,
+ "bitirdi": true,
+ "sure_sn": 596.2,
+ "gizli": {
+  "gecti": true,
+  "gecen": 22,
+  "toplam": 22,
+  "cikti": "......................                                                   [100%]\n22 passed in 2.38s\n"
+ }
+}

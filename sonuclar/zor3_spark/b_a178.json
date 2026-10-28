@@ -1,0 +1,24 @@
+{
+ "id": "a178",
+ "kip": "b",
+ "tekrar": 1,
+ "kategori": "CSV/JSON ile çalışan ve uç durumları çok olan veri işleme (BOM, ; ayırıcı, 1.234,56 sayı biçimi, boş/bozuk satır)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": null,
+ "adim": 5,
+ "yurutucu_token": {
+  "girdi": 8618,
+  "cikti": 48499
+ },
+ "yurutucu_usd": 0.0105616,
+ "bitirdi": false,
+ "sure_sn": 498.9,
+ "gizli": {
+  "gecti": false,
+  "gecen": 0,
+  "toplam": 20,
+  "cikti": "hort test summary info ============================\nFAILED .gizli/test_gizli.py::test_01_rapor_anahtarlari - assert 2 == 0\nFAILED .gizli/test_gizli.py::test_02_net_hesap - assert 2 == 0\nFAILED .gizli/test_gizli.py::test_03_turkce_sayi_binlik - assert 2 == 0\nFAILED .gizli/test_gizli.py::test_04_bos_satir_yoksay - assert 2 == 0\nFAILED .gizli/test_gizli.py::test_05_bozuk_satir_sayac - assert 2 == 0\nFAILED .gizli/test_gizli.py::test_06_dosya_yok_giris - assert 'dosya bulunama...\nFAILED .gizli/test_gizli.py::test_07_dosya_yok_cikis - assert 'dosya bulunama...\nFAILED .gizli/test_gizli.py::test_08_baslik_hatasi - assert 2 == 3\nFAILED .gizli/test_gizli.py::test_09_dosya_yok_oncelikli - assert 'dosya bulu...\nFAILED .gizli/test_gizli.py::test_10_negatif_stok - assert 2 == 0\nFAILED .gizli/test_gizli.py::test_11_sifir_negatif_degil - assert 2 == 0\nFAILED .gizli/test_gizli.py::test_12_turkce_kucuk_harf_ayni_depo - assert 2 == 0\nFAILED .gizli/test_gizli.py::test_13_I_ve_I_farki - assert 2 == 0\nFAILED .gizli/test_gizli.py::test_14_esit_kilo_turkce_siralama - assert 2 == 0\nFAILED .gizli/test_gizli.py::test_15_kod_siralama - assert 2 == 0\nFAILED .gizli/test_gizli.py::test_16_half_up_yuvarlama - assert 2 == 0\nFAILED .gizli/test_gizli.py::test_17_turkce_bicim - assert 2 == 0\nFAILED .gizli/test_gizli.py::test_18_bos_dosyalar - assert 2 == 0\nFAILED .gizli/test_gizli.py::test_19_hata_esigi_asim - assert 2 == 4\nFAILED .gizli/test_gizli.py::test_20_hata_esigi_esit - assert 2 == 0\n20 failed in 1.22s\n"
+ }
+}

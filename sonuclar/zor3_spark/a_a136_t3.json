@@ -1,0 +1,24 @@
+{
+ "id": "a136",
+ "kip": "a",
+ "tekrar": 3,
+ "kategori": "tarih ve saat: resmî tatiller parametreyle, iş günü hesabı, Türkiye saat dilimi (UTC+3, yaz saati yok), gün/ay adları Türkçe",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "nikah.py içinde uygun_gunleri_bul ve salon_kurallari.py içinde kapali_gun yazıldı. İş günü Pazartesi-Cuma, kapalı gün yalnızca Pazar, Türkçe gün adları özel küçük harf eşlemesiyle üretildi, hata önceliği ve ValueError kuralları uygulandı, iki dosya bağımsız ve yalnızca standart kütüphane kullanıyor.",
+ "adim": 11,
+ "yurutucu_token": {
+  "girdi": 51357,
+  "cikti": 15794
+ },
+ "yurutucu_usd": 0.0082945,
+ "bitirdi": true,
+ "sure_sn": 204.8,
+ "gizli": {
+  "gecti": true,
+  "gecen": 20,
+  "toplam": 20,
+  "cikti": "....................                                                     [100%]\n20 passed in 0.05s\n"
+ }
+}

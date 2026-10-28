@@ -1,0 +1,24 @@
+{
+ "id": "a114",
+ "kip": "a",
+ "tekrar": 2,
+ "kategori": "KDV, tevkifat, stopaj, taksit ve kuruş yuvarlama (Decimal, ROUND_HALF_UP, satır bazında ve toplamda yuvarlama farkı)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "avans.py yazıldı: Decimal+ROUND_HALF_UP hesaplar, kdv_dahil True/False ayrımı, hata önceliği TypeError→ValueError, 1000 TL eşiğinde TRK-6 haneli belge_no ve Türkçe I/İ normalizasyon yardımcıları eklendi.",
+ "adim": 12,
+ "yurutucu_token": {
+  "girdi": 48467,
+  "cikti": 49297
+ },
+ "yurutucu_usd": 0.014706100000000003,
+ "bitirdi": true,
+ "sure_sn": 479.1,
+ "gizli": {
+  "gecti": true,
+  "gecen": 20,
+  "toplam": 20,
+  "cikti": "....................                                                     [100%]\n20 passed in 0.17s\n"
+ }
+}

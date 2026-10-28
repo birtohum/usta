@@ -1,0 +1,53 @@
+{
+ "id": "a199",
+ "kip": "c",
+ "tekrar": 2,
+ "kategori": "KDV, tevkifat, stopaj, taksit ve kuruş yuvarlama (Decimal, ROUND_HALF_UP, satır bazında ve toplamda yuvarlama farkı)",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 51,
+   "basarili": 51
+  }
+ ],
+ "spark_usd": 0.016657500000000002,
+ "arayuz": "",
+ "kabul_yazar": 3,
+ "mutasyon": {
+  "mutant": 14,
+  "ham_mutant": 14,
+  "turlar": [
+   {
+    "oldurulen": 13,
+    "toplam": 14
+   },
+   {
+    "oldurulen": 14,
+    "toplam": 14
+   }
+  ],
+  "hayatta": []
+ },
+ "hakem": [],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [],
+ "kabul_test_sayisi": 51,
+ "kabul_gecti": true,
+ "ozet": "aksaray_yem.py içinde YemStopajDefteri yazıldı: str tip kontrolü önce TypeError, oran %2/%4 dışı ValueError, boş üretici ve sıfır/negatif tutar ValueError, boşken ozet ValueError, stopaj/net/KDV ve prim ROUND_HALF_UP ile Decimal, prim yalnızca brüt>10000 iken %1, Türkçe i→İ/ı→I büyük harf ve Türkçe alfabetik tie-break sıralama, dokum Türkçe büyük isimler ve toplamları içerir. test_aksaray.py ile 15 test geçiyor.",
+ "adim": 11,
+ "yurutucu_token": {
+  "girdi": 90764,
+  "cikti": 29545
+ },
+ "yurutucu_usd": 0.014985400000000001,
+ "bitirdi": true,
+ "sure_sn": 563.2,
+ "gizli": {
+  "gecti": true,
+  "gecen": 22,
+  "toplam": 22,
+  "cikti": "......................                                                   [100%]\n22 passed in 0.09s\n"
+ }
+}

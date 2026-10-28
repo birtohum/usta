@@ -1,0 +1,63 @@
+{
+ "id": "a181",
+ "kip": "c",
+ "tekrar": 2,
+ "kategori": "tarih ve saat: resmî tatiller parametreyle, iş günü hesabı, Türkiye saat dilimi (UTC+3, yaz saati yok), gün/ay adları Türkçe",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 54,
+   "basarili": 54
+  }
+ ],
+ "spark_usd": 0.018816400000000004,
+ "arayuz": "",
+ "kabul_yazar": 3,
+ "mutasyon": {
+  "mutant": 15,
+  "ham_mutant": 15,
+  "turlar": [
+   {
+    "oldurulen": 10,
+    "toplam": 15
+   },
+   {
+    "oldurulen": 10,
+    "toplam": 15
+   },
+   {
+    "oldurulen": 14,
+    "toplam": 15
+   }
+  ],
+  "hayatta": [
+   "kucuk True ise Turkce kucuk harf I->i degil I->ı olmasi gereksinimini cigner"
+  ]
+ },
+ "hakem": [],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [
+  ".usta_kabul/test_kabul_2.py::test_cumartesi_pazara_kayma_pazartesi",
+  ".usta_kabul/test_kabul_2.py::test_haftasonu_ve_tatil_birlesik_kayma",
+  ".usta_kabul/test_kabul_2.py::test_takvim_gunu_ekleme"
+ ],
+ "kabul_test_sayisi": 54,
+ "kabul_gecti": true,
+ "ozet": "recete.py içinde recete_bitisi ve tr_etiket işlevlerini yazdım: UTC girdiyi +3 saatle Türkiye tarihine çevirme, dahil gün hesabı, hafta sonu/tatil kaydırması, gun=0 kuralı, Türkçe ay/gün adlarıyla etiket ve Türkçe küçük harf (I→ı). Hata sırası (önce tarih, sonra gün) uygulandı. test_recete.py ile 19 pytest testi geçti.",
+ "adim": 8,
+ "yurutucu_token": {
+  "girdi": 29143,
+  "cikti": 27466
+ },
+ "yurutucu_usd": 0.0084075,
+ "bitirdi": true,
+ "sure_sn": 875.7,
+ "gizli": {
+  "gecti": false,
+  "gecen": 16,
+  "toplam": 21,
+  "cikti": ".gizli/test_gizli.py:21: AssertionError\n________________________ test_07_zincir_tatil_haftasonu ________________________\n\n    def test_07_zincir_tatil_haftasonu():\n>       assert recete_bitisi(\"2024-01-12\", 1, [\"2024-01-15\"]) == \"2024-01-16\"\nE       AssertionError: assert '2024-01-12' == '2024-01-16'\nE         - 2024-01-16\nE         ?          ^\nE         + 2024-01-12\nE         ?          ^\n\n.gizli/test_gizli.py:24: AssertionError\n_____________________ test_08_yinelenen_tatil_tek_sayilir ______________________\n\n    def test_08_yinelenen_tatil_tek_sayilir():\n>       assert recete_bitisi(\"2024-01-15\", 1, [\"2024-01-16\", \"2024-01-16\"]) == \"2024-01-17\"\nE       AssertionError: assert '2024-01-15' == '2024-01-17'\nE         - 2024-01-17\nE         ?          ^\nE         + 2024-01-15\nE         ?          ^\n\n.gizli/test_gizli.py:27: AssertionError\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_01_temel_haftaici - AssertionError: assert ...\nFAILED .gizli/test_gizli.py::test_05_haftasonu_kaydirma - AssertionError: ass...\nFAILED .gizli/test_gizli.py::test_06_tatil_kaydirma - AssertionError: assert ...\nFAILED .gizli/test_gizli.py::test_07_zincir_tatil_haftasonu - AssertionError:...\nFAILED .gizli/test_gizli.py::test_08_yinelenen_tatil_tek_sayilir - AssertionE...\n5 failed, 16 passed in 0.11s\n"
+ }
+}

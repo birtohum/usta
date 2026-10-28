@@ -1,0 +1,24 @@
+{
+ "id": "a206",
+ "kip": "a",
+ "tekrar": 1,
+ "kategori": "tarih ve saat: resmî tatiller parametreyle, iş günü hesabı, Türkiye saat dilimi (UTC+3, yaz saati yok), gün/ay adları Türkçe",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "muayene_cli.py yazıldı: Europe/Istanbul bilinçli iş günü hesabı (Cumartesi varsayılan kapalı, --cumartesi-acik ile açık, Pazar kapalı, tatiller hariç), başlangıç dahil adet iş günü üretimi, YYYY-AA-GG,Türkçe gün,uzun tarih çıktısı, Türkçe I/İ küçük harf, sıra-no sıralama ve tavan gün hesabı yardımcıları, geçersiz tarih ve eksik bayrakta çıkış kodu 2; yalnızca standart kütüphane kullanıldı.",
+ "adim": 9,
+ "yurutucu_token": {
+  "girdi": 46802,
+  "cikti": 13281
+ },
+ "yurutucu_usd": 0.0073364,
+ "bitirdi": true,
+ "sure_sn": 172.0,
+ "gizli": {
+  "gecti": true,
+  "gecen": 20,
+  "toplam": 20,
+  "cikti": "....................                                                     [100%]\n20 passed in 0.92s\n"
+ }
+}

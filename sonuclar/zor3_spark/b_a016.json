@@ -1,0 +1,24 @@
+{
+ "id": "a016",
+ "kip": "b",
+ "tekrar": 1,
+ "kategori": "tarih ve saat: resmî tatiller parametreyle, iş günü hesabı, Türkiye saat dilimi (UTC+3, yaz saati yok), gün/ay adları Türkçe",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "randevu.py içinde uygun_slotlari_bul ve tarihce_tr gerçeklendi: TR (+3, DST yok) normalizasyon, hafta içi 09:00–17:00 filtresi, tatil/hafta sonu eleme, yarı-açık çakışma kuralı, TypeError öncelikli hata kontrolleri, sure_dakika ve aralık doğrulamaları. 18 pytest testi yazıldı ve hepsi geçti.",
+ "adim": 4,
+ "yurutucu_token": {
+  "girdi": 14932,
+  "cikti": 12534
+ },
+ "yurutucu_usd": 0.004,
+ "bitirdi": true,
+ "sure_sn": 114.3,
+ "gizli": {
+  "gecti": true,
+  "gecen": 22,
+  "toplam": 22,
+  "cikti": "......................                                                   [100%]\n22 passed in 0.03s\n"
+ }
+}

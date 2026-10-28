@@ -1,0 +1,65 @@
+{
+ "id": "a001",
+ "kip": "c",
+ "tekrar": 3,
+ "kategori": "Türkiye'ye özgü kimlik ve hesap numaraları (TC kimlik, VKN, IBAN, MERSİS, plaka, telefon) — birden çok kuralın birlikte uygulandığı",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 50,
+   "basarili": 50
+  }
+ ],
+ "spark_usd": 0.016253800000000002,
+ "arayuz": "",
+ "kabul_yazar": 3,
+ "mutasyon": {
+  "mutant": 14,
+  "ham_mutant": 14,
+  "turlar": [
+   {
+    "oldurulen": 13,
+    "toplam": 14
+   },
+   {
+    "oldurulen": 13,
+    "toplam": 14
+   },
+   {
+    "oldurulen": 13,
+    "toplam": 14
+   }
+  ],
+  "hayatta": [
+   "ic/dis bosluk iceren girdiyi sessizce temizleme yasagini cigner"
+  ]
+ },
+ "hakem": [],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [
+  ".usta_kabul/test_kabul_m2.py::test_dis_bosluk_temizlenemez_bosluk",
+  ".usta_kabul/test_kabul_m2.py::test_dis_bosluk_temizlenemez_cr",
+  ".usta_kabul/test_kabul_m2.py::test_dis_bosluk_temizlenemez_farkli_onbes",
+  ".usta_kabul/test_kabul_m2.py::test_dis_bosluk_temizlenemez_newline",
+  ".usta_kabul/test_kabul_m2.py::test_dis_bosluk_temizlenemez_tab"
+ ],
+ "kabul_test_sayisi": 50,
+ "kabul_gecti": true,
+ "ozet": "mersis_denetim.py yazıldı: ağırlıklı toplam (tek konum x3, çift konum x1) ve (10-toplam%10)%10 formülü uygulandı; tip/boş öncelikli hata sırası, ayraç temizlememe, 15 sıfır→\"0\" ve dogrula'da True/False+istisna ayrımı gerçeklendi. 12 pytest testi geçti.",
+ "adim": 8,
+ "yurutucu_token": {
+  "girdi": 21097,
+  "cikti": 45572
+ },
+ "yurutucu_usd": 0.0112241,
+ "bitirdi": true,
+ "sure_sn": 935.4,
+ "gizli": {
+  "gecti": true,
+  "gecen": 22,
+  "toplam": 22,
+  "cikti": "......................                                                   [100%]\n22 passed in 0.05s\n"
+ }
+}

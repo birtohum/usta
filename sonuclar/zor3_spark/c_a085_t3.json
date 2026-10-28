@@ -1,0 +1,53 @@
+{
+ "id": "a085",
+ "kip": "c",
+ "tekrar": 3,
+ "kategori": "Türkçe büyük/küçük harf (İ/i, I/ı), Türk alfabesiyle sıralama, sayıyı yazıya çevirme, ünlü uyumuna göre ek",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 55,
+   "basarili": 55
+  }
+ ],
+ "spark_usd": 0.0092506,
+ "arayuz": "denetim.py içinde IcerikDenetci sınıfı; __init__(self); yasakli_ekle(self, kelime: str)->None; denetle(self, metin: str)->dict, dict anahtarları bulundu:bool, eslesenler:list, sayi:int",
+ "kabul_yazar": 3,
+ "mutasyon": {
+  "mutant": 14,
+  "ham_mutant": 14,
+  "turlar": [
+   {
+    "oldurulen": 13,
+    "toplam": 14
+   },
+   {
+    "oldurulen": 14,
+    "toplam": 14
+   }
+  ],
+  "hayatta": []
+ },
+ "hakem": [],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [],
+ "kabul_test_sayisi": 55,
+ "kabul_gecti": true,
+ "ozet": "denetim.py içinde IcerikDenetci sınıfı yazıldı: Türkçe küçültme (I→ı, İ→i), sözcük sınırı için alnum kontrolü, boş girdide ValueError, tekrarda sessiz yoksayma, tip hatasında TypeError, ekleme sırasını koruyan liste. pytest ile 14 test yazıldı ve hepsi geçti.",
+ "adim": 4,
+ "yurutucu_token": {
+  "girdi": 10556,
+  "cikti": 13539
+ },
+ "yurutucu_usd": 0.003763400000000001,
+ "bitirdi": true,
+ "sure_sn": 598.3,
+ "gizli": {
+  "gecti": true,
+  "gecen": 20,
+  "toplam": 20,
+  "cikti": "....................                                                     [100%]\n20 passed in 0.14s\n"
+ }
+}

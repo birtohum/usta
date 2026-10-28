@@ -1,0 +1,61 @@
+{
+ "id": "a001",
+ "kip": "c",
+ "tekrar": 2,
+ "kategori": "Türkiye'ye özgü kimlik ve hesap numaraları (TC kimlik, VKN, IBAN, MERSİS, plaka, telefon) — birden çok kuralın birlikte uygulandığı",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 54,
+   "basarili": 54
+  }
+ ],
+ "spark_usd": 0.014793,
+ "arayuz": "",
+ "kabul_yazar": 3,
+ "mutasyon": {
+  "mutant": 14,
+  "ham_mutant": 14,
+  "turlar": [
+   {
+    "oldurulen": 11,
+    "toplam": 14
+   },
+   {
+    "oldurulen": 13,
+    "toplam": 14
+   },
+   {
+    "oldurulen": 13,
+    "toplam": 14
+   }
+  ],
+  "hayatta": [
+   "tire/bosluk ayrac iceren girdiyi temizleyerek dogrulama gereksinimini cigner"
+  ]
+ },
+ "hakem": [],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [
+  ".usta_kabul/test_kabul_2.py::test_hesapla_sifir_sinir_durumu_sifir_dondurur"
+ ],
+ "kabul_test_sayisi": 54,
+ "kabul_gecti": true,
+ "ozet": "mersis_denetim.py içinde mersis_dogrula ve mersis_son_haneyi_hesapla yazıldı: tip→boş→uzunluk→rakam→ilk-hane-sıfır→sağlama önceliği, ağırlıklı toplam (tek konum×3, çift konum×1, son hane=(10-toplam%10)%10), ayraç temizlemeden reddetme ve 15-sıfır sınır durumunda \"0\" sonucu uygulandı. test_mersis.py ile 19 pytest testi geçti.",
+ "adim": 5,
+ "yurutucu_token": {
+  "girdi": 17295,
+  "cikti": 15467
+ },
+ "yurutucu_usd": 0.004822900000000001,
+ "bitirdi": true,
+ "sure_sn": 980.7,
+ "gizli": {
+  "gecti": true,
+  "gecen": 22,
+  "toplam": 22,
+  "cikti": "......................                                                   [100%]\n22 passed in 0.05s\n"
+ }
+}

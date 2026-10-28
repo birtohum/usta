@@ -1,0 +1,24 @@
+{
+ "id": "a198",
+ "kip": "a",
+ "tekrar": 3,
+ "kategori": "CSV/JSON ile çalışan ve uç durumları çok olan veri işleme (BOM, ; ayırıcı, 1.234,56 sayı biçimi, boş/bozuk satır)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "filo_yakit.py yazıldı: FiloMutabakat sınıfı; utf-8-sig noktalı virgül CSV, ilk kayıt koruma, Decimal Türkçe sayı, ROUND_HALF_UP, TR küçük harf (lower yok), 0 km hariç, fiş tarih+fis_no sıralama, boş çağrıda boş dağıtım, toplam litre azalan + TR plaka sıralama, kuruş farkı en küçük plakaya. FileNotFoundError/JSONDecodeError ve önce sefer denetimi uygulandı.",
+ "adim": 11,
+ "yurutucu_token": {
+  "girdi": 55028,
+  "cikti": 53080
+ },
+ "yurutucu_usd": 0.016118800000000003,
+ "bitirdi": true,
+ "sure_sn": 595.9,
+ "gizli": {
+  "gecti": false,
+  "gecen": 17,
+  "toplam": 20,
+  "cikti": "        fj = tmp_path / 'f.json'\n        yaz_json(fj, [{'fis_no': '2', 'tarih': '2024-02-01', 'litre': '10'}, {'fis_no': '1', 'tarih': '2024-01-01', 'litre': '10'}])\n        f = FiloMutabakat()\n        f.sefer_yukle(str(p))\n        s = f.paylastir(str(fj))\n>       assert s['islem_sirasi'] == ['1', '2']\nE       KeyError: 'islem_sirasi'\n\n.gizli/test_gizli.py:127: KeyError\n____________________________ test15_fis_no_siralama ____________________________\n\ntmp_path = PosixPath('/home/usta/is/b9e10c02491a/.tmp/pytest-of-usta/pytest-0/test15_fis_no_siralama0')\n\n    def test15_fis_no_siralama(tmp_path):\n        p = tmp_path / 's.csv'\n        yaz_csv(p, 'sefer_id;plaka;surucu;kilometre\\n1;34ABC01;Ali;100\\n')\n        fj = tmp_path / 'f.json'\n        yaz_json(fj, [{'fis_no': '10', 'tarih': '2024-01-01', 'litre': '5'}, {'fis_no': '2', 'tarih': '2024-01-01', 'litre': '5'}])\n        f = FiloMutabakat()\n        f.sefer_yukle(str(p))\n        s = f.paylastir(str(fj))\n>       assert s['islem_sirasi'] == ['2', '10']\nE       KeyError: 'islem_sirasi'\n\n.gizli/test_gizli.py:137: KeyError\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test05_turkce_sayi_parse - AttributeError: 'Filo...\nFAILED .gizli/test_gizli.py::test14_fis_tarih_siralama - KeyError: 'islem_sir...\nFAILED .gizli/test_gizli.py::test15_fis_no_siralama - KeyError: 'islem_sirasi'\n3 failed, 17 passed in 0.08s\n"
+ }
+}

@@ -1,0 +1,76 @@
+{
+ "id": "a046",
+ "kip": "c",
+ "tekrar": 3,
+ "kategori": "tarih ve saat: resmî tatiller parametreyle, iş günü hesabı, Türkiye saat dilimi (UTC+3, yaz saati yok), gün/ay adları Türkçe",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 49,
+   "basarili": 49
+  }
+ ],
+ "spark_usd": 0.0105193,
+ "arayuz": "",
+ "kabul_yazar": 3,
+ "mutasyon": {
+  "mutant": 15,
+  "ham_mutant": 15,
+  "turlar": [
+   {
+    "oldurulen": 13,
+    "toplam": 15
+   },
+   {
+    "oldurulen": 15,
+    "toplam": 15
+   }
+  ],
+  "hayatta": []
+ },
+ "hakem": [
+  {
+   "test": ".usta_kabul/test_kabul_1.py::test_stdlib_disinda_bagimlilik_yok",
+   "karar": "hatali",
+   "gerekce": "Test masum 'datetime.timedelta' içindeki 'time.time' alt dizesini yasaklı çağrı sanıyor.",
+   "tur": 1
+  },
+  {
+   "test": ".usta_kabul/test_kabul_2.py::test_yalnizca_stdlib_agsiz_zamansiz_rastgeleliksiz",
+   "karar": "hatali",
+   "gerekce": "Test masum 'datetime.timedelta' içindeki 'time.time' alt dizesini yasaklı çağrı sanıyor.",
+   "tur": 1
+  },
+  {
+   "test": ".usta_kabul/test_kabul_3.py::test_yalnizca_stdlib_zaman_ag_rastgelelik_yok",
+   "karar": "hatali",
+   "gerekce": "Test masum 'datetime.timedelta' içindeki 'time.time' alt dizesini yasaklı çağrı sanıyor.",
+   "tur": 1
+  }
+ ],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [
+  ".usta_kabul/test_kabul_1.py::test_stdlib_disinda_bagimlilik_yok",
+  ".usta_kabul/test_kabul_2.py::test_yalnizca_stdlib_agsiz_zamansiz_rastgeleliksiz",
+  ".usta_kabul/test_kabul_3.py::test_yalnizca_stdlib_zaman_ag_rastgelelik_yok"
+ ],
+ "kabul_test_sayisi": 49,
+ "kabul_gecti": true,
+ "ozet": "dava_sure.py içinde DavaTakvimi sınıfı yazıldı: tatiller kümede tutuldu, son_gun başlangıçtan sonraki iş günlerini sayar (sure=0 ise aynı gün iş günüyse aynen yoksa ileri öteleme), hafta sonu Türkçe büyük harf karşılaştırmasıyla elenir, biçim denetimi önce ValueError verir sonra sure denetimi TypeError verir, gun_adi Türkçe gün adı döndürür; yalnızca datetime kullanıldı. pytest ile 10 test geçirildi.",
+ "adim": 9,
+ "yurutucu_token": {
+  "girdi": 42652,
+  "cikti": 17707
+ },
+ "yurutucu_usd": 0.0078066,
+ "bitirdi": true,
+ "sure_sn": 560.6,
+ "gizli": {
+  "gecti": true,
+  "gecen": 22,
+  "toplam": 22,
+  "cikti": "......................                                                   [100%]\n22 passed in 0.08s\n"
+ }
+}

@@ -1,0 +1,24 @@
+{
+ "id": "a060",
+ "kip": "a",
+ "tekrar": 3,
+ "kategori": "CSV/JSON ile çalışan ve uç durumları çok olan veri işleme (BOM, ; ayırıcı, 1.234,56 sayı biçimi, boş/bozuk satır)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "narenciye_secim.py yazıldı: SecimMotoru; utf-8-sig + noktalı virgül zorunluluğu, başlık trim, Decimal ağırlık (binlik nokta silme, virgül→nokta), fire ROUND_HALF_UP 3 basamak, boş satır atlama, sütun uyumsuzluğunda ValueError, negatifte ValueError, Türkçe I→ı/İ→i normalizasyon, 1000g ikinci kalite ve altı ıskarta (rapor dışı), append yükleme, boş raporda {}, toplam net azalan + Türkçe alfabetik sıralama, hata önceliği korundu.",
+ "adim": 10,
+ "yurutucu_token": {
+  "girdi": 33012,
+  "cikti": 60561
+ },
+ "yurutucu_usd": 0.015413400000000002,
+ "bitirdi": true,
+ "sure_sn": 677.7,
+ "gizli": {
+  "gecti": false,
+  "gecen": 16,
+  "toplam": 20,
+  "cikti": "            _yaz(p, \"\\u00e7e\\u015fit;a\\u011f\\u0131rl\\u0131k;fire_oran\\u0131\\nL\\u0130MON;2000;0\\nlimon;2000;0\\n\")\n            m.yukle(p)\n            r = m.rapor()\n            assert len(r) == 1\n>           assert list(r.keys())[0] == \"limon\"\nE           AssertionError: assert 'LİMON' == 'limon'\nE             - limon\nE             + LİMON\n\n.gizli/test_gizli.py:94: AssertionError\n______________________________ test_rapor_icerik _______________________________\n\n    def test_rapor_icerik():\n        import tempfile, os\n        m = SecimMotoru()\n        with tempfile.TemporaryDirectory() as d:\n            p = os.path.join(d, \"a.csv\")\n            _yaz(p, \"\\u00e7e\\u015fit;a\\u011f\\u0131rl\\u0131k;fire_oran\\u0131\\nPortakal;2000;0\\nportakal;3000;0\\n\")\n            m.yukle(p)\n            r = m.rapor()\n>           v = r[\"portakal\"]\nE           KeyError: 'portakal'\n\n.gizli/test_gizli.py:158: KeyError\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_agirlik_binlik_cevirme - AssertionError: as...\nFAILED .gizli/test_gizli.py::test_fire_half_up - AssertionError: assert 2000....\nFAILED .gizli/test_gizli.py::test_turkce_I_normalize_ayni_grup - AssertionErr...\nFAILED .gizli/test_gizli.py::test_rapor_icerik - KeyError: 'portakal'\n4 failed, 16 passed in 0.35s\n"
+ }
+}

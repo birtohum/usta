@@ -1,0 +1,60 @@
+{
+ "id": "a181",
+ "kip": "c",
+ "tekrar": 3,
+ "kategori": "tarih ve saat: resmî tatiller parametreyle, iş günü hesabı, Türkiye saat dilimi (UTC+3, yaz saati yok), gün/ay adları Türkçe",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 59,
+   "basarili": 59
+  }
+ ],
+ "spark_usd": 0.0173902,
+ "arayuz": "",
+ "kabul_yazar": 3,
+ "mutasyon": {
+  "mutant": 13,
+  "ham_mutant": 14,
+  "turlar": [
+   {
+    "oldurulen": 8,
+    "toplam": 13
+   },
+   {
+    "oldurulen": 11,
+    "toplam": 13
+   },
+   {
+    "oldurulen": 11,
+    "toplam": 13
+   }
+  ],
+  "hayatta": [
+   "saniye 30 ve uzeri olsa bile yukari yuvarlama yapilmaz; 30 saniye eklemek gun kararini bozar",
+   "kucuk True ise Turkce kucuk harf I harfi ı olur; normal lower ihlal eder"
+  ]
+ },
+ "hakem": [],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [],
+ "kabul_test_sayisi": 59,
+ "kabul_gecti": true,
+ "ozet": "recete.py içinde recete_bitisi ve tr_etiket işlevleri tanımlandı: UTC girdisi (+3 saat, DST yok) TR tarihine çevrilir, gün dahil eklenip hafta sonu/tatil sonraki iş gününe kaydırılır, Türkçe etiket GG AyAdı YYYY GünAdı biçiminde ve Türkçe küçük harf desteğiyle üretilir. Hatalı biçim ve eksi gün ValueError verir (önce tarih denetlenir). pytest ile 16 test geçti.",
+ "adim": 9,
+ "yurutucu_token": {
+  "girdi": 42010,
+  "cikti": 23549
+ },
+ "yurutucu_usd": 0.0089108,
+ "bitirdi": true,
+ "sure_sn": 850.1,
+ "gizli": {
+  "gecti": false,
+  "gecen": 16,
+  "toplam": 21,
+  "cikti": ".gizli/test_gizli.py:21: AssertionError\n________________________ test_07_zincir_tatil_haftasonu ________________________\n\n    def test_07_zincir_tatil_haftasonu():\n>       assert recete_bitisi(\"2024-01-12\", 1, [\"2024-01-15\"]) == \"2024-01-16\"\nE       AssertionError: assert '2024-01-12' == '2024-01-16'\nE         - 2024-01-16\nE         ?          ^\nE         + 2024-01-12\nE         ?          ^\n\n.gizli/test_gizli.py:24: AssertionError\n_____________________ test_08_yinelenen_tatil_tek_sayilir ______________________\n\n    def test_08_yinelenen_tatil_tek_sayilir():\n>       assert recete_bitisi(\"2024-01-15\", 1, [\"2024-01-16\", \"2024-01-16\"]) == \"2024-01-17\"\nE       AssertionError: assert '2024-01-15' == '2024-01-17'\nE         - 2024-01-17\nE         ?          ^\nE         + 2024-01-15\nE         ?          ^\n\n.gizli/test_gizli.py:27: AssertionError\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_01_temel_haftaici - AssertionError: assert ...\nFAILED .gizli/test_gizli.py::test_05_haftasonu_kaydirma - AssertionError: ass...\nFAILED .gizli/test_gizli.py::test_06_tatil_kaydirma - AssertionError: assert ...\nFAILED .gizli/test_gizli.py::test_07_zincir_tatil_haftasonu - AssertionError:...\nFAILED .gizli/test_gizli.py::test_08_yinelenen_tatil_tek_sayilir - AssertionE...\n5 failed, 16 passed in 0.04s\n"
+ }
+}

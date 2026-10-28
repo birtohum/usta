@@ -1,0 +1,24 @@
+{
+ "id": "a070",
+ "kip": "b",
+ "tekrar": 2,
+ "kategori": "tarih ve saat: resmî tatiller parametreyle, iş günü hesabı, Türkiye saat dilimi (UTC+3, yaz saati yok), gün/ay adları Türkçe",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "ders_program.py yazıldı: DersProgrami(tatiller), ekle(tarih,baslangic,bitis) UTC+3, haftalik_plan(pazartesi) Türkçe gün adlarıyla; sıfır süre, ValueError/TypeError önceliği, hafta sonu+tatil eleme, TR küçük harf, kararlı sıralama, yalnızca stdlib. pytest 6 test geçti.",
+ "adim": 7,
+ "yurutucu_token": {
+  "girdi": 24541,
+  "cikti": 26234
+ },
+ "yurutucu_usd": 0.007700900000000001,
+ "bitirdi": true,
+ "sure_sn": 276.4,
+ "gizli": {
+  "gecti": false,
+  "gecen": 9,
+  "toplam": 20,
+  "cikti": "i/test_gizli.py:178: AssertionError\n_____________________ test_20_bos_hafta_ve_disaridaki_ders _____________________\n\n    def test_20_bos_hafta_ve_disaridaki_ders():\n        dp = DersProgrami([])\n        dp.ekle(\"2024-01-08\", \"09:00\", \"10:00\")\n        plan = dp.haftalik_plan(\"2024-01-01\")\n        for g in plan:\n            assert g[\"dersler\"] == [] or g[\"tarih\"] != \"2024-01-08\"\n>       gun = [g for g in plan if g[\"tarih\"] == \"2024-01-01\"][0]\nE       IndexError: list index out of range\n\n.gizli/test_gizli.py:186: IndexError\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_01_bos_tatil_hafta_doner - assert 0 == 7\nFAILED .gizli/test_gizli.py::test_02_ekle_normal_gorunur - KeyError: 'dersler'\nFAILED .gizli/test_gizli.py::test_03_aralik_pazartesi_pazar - AssertionError:...\nFAILED .gizli/test_gizli.py::test_04_gun_adlari_turkce - AssertionError: asse...\nFAILED .gizli/test_gizli.py::test_05_tatil_gunleri_atlanir - assert 0 == 6\nFAILED .gizli/test_gizli.py::test_06_sifir_dakika - KeyError: 'dersler'\nFAILED .gizli/test_gizli.py::test_11_hafta_sonu_sayilmaz - IndexError: list i...\nFAILED .gizli/test_gizli.py::test_13_turkce_kucuk_harf - AssertionError: asse...\nFAILED .gizli/test_gizli.py::test_14_ayni_saatte_sira_korunur - KeyError: 'de...\nFAILED .gizli/test_gizli.py::test_19_toplam_sure_hesabi - assert 90 == 135\nFAILED .gizli/test_gizli.py::test_20_bos_hafta_ve_disaridaki_ders - IndexErro...\n11 failed, 9 passed in 0.29s\n"
+ }
+}

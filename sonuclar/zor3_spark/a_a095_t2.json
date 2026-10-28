@@ -1,0 +1,24 @@
+{
+ "id": "a095",
+ "kip": "a",
+ "tekrar": 2,
+ "kategori": "Türkçe büyük/küçük harf (İ/i, I/ı), Türk alfabesiyle sıralama, sayıyı yazıya çevirme, ünlü uyumuna göre ek",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "derskitabi.py oluşturuldu: sayiyi_yaziya 0-9999 arası sayıları standart küçük harf Türkçe sözcüklerle yazar (sıfır, yüz, bin, yüz bir, bin yüz kurallarına uygun); sira_sozcugu sayiyi_yaziya'yı çağırıp son sözcüğe ünlü uyumuna göre ıncı/inci/uncu/üncü eki getirir, ünlüyle biterse n kaynaştırması yapar (birinci, onuncu, yüzüncü, bininci, yedinci, altıncı). Her iki fonksiyonda önce TypeError (bool dahil non-int) sonra ValueError (aralık dışı) denetimi yapılır; harici kütüphane kullanılmadı.",
+ "adim": 7,
+ "yurutucu_token": {
+  "girdi": 19664,
+  "cikti": 15692
+ },
+ "yurutucu_usd": 0.0051048,
+ "bitirdi": true,
+ "sure_sn": 173.7,
+ "gizli": {
+  "gecti": true,
+  "gecen": 24,
+  "toplam": 24,
+  "cikti": "........................                                                 [100%]\n24 passed in 0.06s\n"
+ }
+}

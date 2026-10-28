@@ -1,0 +1,24 @@
+{
+ "id": "a085",
+ "kip": "b",
+ "tekrar": 3,
+ "kategori": "Türkçe büyük/küçük harf (İ/i, I/ı), Türk alfabesiyle sıralama, sayıyı yazıya çevirme, ünlü uyumuna göre ek",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "denetim.py içinde IcerikDenetci yazıldı: Türkçe küçültme (I→ı, İ→i), sözcük sınırı, ValueError/TypeError kuralları, ekleme sırası korundu. pytest ile 5 test geçti.",
+ "adim": 7,
+ "yurutucu_token": {
+  "girdi": 15573,
+  "cikti": 31790
+ },
+ "yurutucu_usd": 0.0079153,
+ "bitirdi": true,
+ "sure_sn": 367.6,
+ "gizli": {
+  "gecti": true,
+  "gecen": 20,
+  "toplam": 20,
+  "cikti": "....................                                                     [100%]\n20 passed in 0.12s\n"
+ }
+}

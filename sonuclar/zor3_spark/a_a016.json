@@ -1,0 +1,24 @@
+{
+ "id": "a016",
+ "kip": "a",
+ "tekrar": 1,
+ "kategori": "tarih ve saat: resmî tatiller parametreyle, iş günü hesabı, Türkiye saat dilimi (UTC+3, yaz saati yok), gün/ay adları Türkçe",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "randevu.py oluşturuldu: uygun_slotlari_bul (TRT dönüşümü, hafta içi 09:00–17:00, hafta sonu/tatil eleme, başlangıçtan sürekli adımlama, [başlangıç,bitiş) çakışma, TypeError>ValueError önceliği, sure_dakika ve aralık doğrulamaları) ve tarihce_tr (örn. \"5 Şubat 2026 Perşembe\") gerçeklendi; davranışlar testlerle doğrulandı.",
+ "adim": 6,
+ "yurutucu_token": {
+  "girdi": 19955,
+  "cikti": 17720
+ },
+ "yurutucu_usd": 0.005539499999999999,
+ "bitirdi": true,
+ "sure_sn": 164.2,
+ "gizli": {
+  "gecti": true,
+  "gecen": 22,
+  "toplam": 22,
+  "cikti": "......................                                                   [100%]\n22 passed in 0.04s\n"
+ }
+}

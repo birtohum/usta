@@ -1,0 +1,24 @@
+{
+ "id": "a008",
+ "kip": "a",
+ "tekrar": 1,
+ "kategori": "KDV, tevkifat, stopaj, taksit ve kuruş yuvarlama (Decimal, ROUND_HALF_UP, satır bazında ve toplamda yuvarlama farkı)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "tevkifat.py içinde tevkifat_hesapla fonksiyonu yazıldı: önce tip kontrolü (TypeError öncelikli), sonra boş dize kontrolü, sonra oran üyelik kontrolü, ardından Decimal ile KDV (matrah*oran/100 → ROUND_HALF_UP), tevkifat (yuvarlanmış KDV*pay → ROUND_HALF_UP) ve odenecek (matrah+KDV-tevkifat) hesaplanıyor; 0.00/negatif matrah ValueError veriyor.",
+ "adim": 4,
+ "yurutucu_token": {
+  "girdi": 9181,
+  "cikti": 11986
+ },
+ "yurutucu_usd": 0.0033153,
+ "bitirdi": true,
+ "sure_sn": 105.3,
+ "gizli": {
+  "gecti": true,
+  "gecen": 21,
+  "toplam": 21,
+  "cikti": ".....................                                                    [100%]\n21 passed in 0.03s\n"
+ }
+}

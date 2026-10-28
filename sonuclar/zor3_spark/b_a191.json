@@ -1,0 +1,24 @@
+{
+ "id": "a191",
+ "kip": "b",
+ "tekrar": 1,
+ "kategori": "tarih ve saat: resmî tatiller parametreyle, iş günü hesabı, Türkiye saat dilimi (UTC+3, yaz saati yok), gün/ay adları Türkçe",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "balon_cli.py yazıldı: tarih aralığı tarama, uçuş günü ve tatil filtresi, Türkçe gün adları ve --kucuk ile Türkçe küçük harf, UTC damgada saniye atma ve +3 saat, hatalı tarihte stderr+çıkış 2 (bilinmeyen bayraktan önce tarih denetimi). pytest ile 8 test geçti.",
+ "adim": 6,
+ "yurutucu_token": {
+  "girdi": 19893,
+  "cikti": 33375
+ },
+ "yurutucu_usd": 0.008664300000000002,
+ "bitirdi": true,
+ "sure_sn": 344.4,
+ "gizli": {
+  "gecti": false,
+  "gecen": 19,
+  "toplam": 22,
+  "cikti": "utc-damgasi', '2025-04-01T20:59:30Z'], returncode=2, stdout='', stderr='eksik arguman\\n').returncode\n\n.gizli/test_gizli.py:99: AssertionError\n___________________________ test_utc_uc_saat_eklenir ___________________________\n\n    def test_utc_uc_saat_eklenir():\n        r = run(\"--utc-damgasi\", \"2025-04-01T22:00:00Z\")\n>       assert r.returncode == 0\nE       AssertionError: assert 2 == 0\nE        +  where 2 = CompletedProcess(args=['/usr/bin/python', '/home/usta/is/200459aad6b3/balon_cli.py', '--utc-damgasi', '2025-04-01T22:00:00Z'], returncode=2, stdout='', stderr='eksik arguman\\n').returncode\n\n.gizli/test_gizli.py:104: AssertionError\n________________________________ test_utc_kucuk ________________________________\n\n    def test_utc_kucuk():\n        r = run(\"--utc-damgasi\", \"2025-04-01T22:00:00Z\", \"--kucuk\")\n>       assert r.returncode == 0\nE       AssertionError: assert 2 == 0\nE        +  where 2 = CompletedProcess(args=['/usr/bin/python', '/home/usta/is/200459aad6b3/balon_cli.py', '--utc-damgasi', '2025-04-01T22:00:00Z', '--kucuk'], returncode=2, stdout='', stderr='eksik arguman\\n').returncode\n\n.gizli/test_gizli.py:109: AssertionError\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_utc_saniye_atilir - AssertionError: assert ...\nFAILED .gizli/test_gizli.py::test_utc_uc_saat_eklenir - AssertionError: asser...\nFAILED .gizli/test_gizli.py::test_utc_kucuk - AssertionError: assert 2 == 0\n3 failed, 19 passed in 1.13s\n"
+ }
+}

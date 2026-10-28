@@ -1,0 +1,59 @@
+{
+ "id": "a216",
+ "kip": "c",
+ "tekrar": 3,
+ "kategori": "tarih ve saat: resmî tatiller parametreyle, iş günü hesabı, Türkiye saat dilimi (UTC+3, yaz saati yok), gün/ay adları Türkçe",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 38,
+   "basarili": 38
+  }
+ ],
+ "spark_usd": 0.0093001,
+ "arayuz": "",
+ "kabul_yazar": 3,
+ "mutasyon": {
+  "mutant": 14,
+  "ham_mutant": 14,
+  "turlar": [
+   {
+    "oldurulen": 14,
+    "toplam": 14
+   }
+  ],
+  "hayatta": []
+ },
+ "hakem": [],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [
+  ".usta_kabul/test_kabul_1.py::test_baslangic_kurala_uyarsa_dahil",
+  ".usta_kabul/test_kabul_1.py::test_baslangic_kurala_uymazsa_sonraki_aday",
+  ".usta_kabul/test_kabul_1.py::test_gecersiz_tatiller_icerik_valueerror",
+  ".usta_kabul/test_kabul_1.py::test_sonuclar_tarih_artarak_dizilir",
+  ".usta_kabul/test_kabul_1.py::test_tatil_adayi_atlar_sonraki_adaydan_devam",
+  ".usta_kabul/test_kabul_1.py::test_tatiller_none_bos_kume_sayilir",
+  ".usta_kabul/test_kabul_1.py::test_turkce_gun_adlari_ve_ozel_karakter",
+  ".usta_kabul/test_kabul_1.py::test_yalnizca_mezat_gunleri_aday",
+  ".usta_kabul/test_kabul_1.py::test_zoneinfo_europe_istanbul_kullanimi"
+ ],
+ "kabul_test_sayisi": 38,
+ "kabul_gecti": true,
+ "ozet": "mezat.py içinde mezat_takvimi fonksiyonu yazıldı: başlangıç tarihi sıkı YYYY-AA-GG doğrulamasıyla çözümleniyor, hata önceliği (başlangıç, mezat_günleri, gün_sayısı, tatiller) sırasıyla ValueError veriyor, hafta günü Europe/Istanbul bilinçli datetime üzerinden bulunuyor, tatil günleri atlanıp aday günlerden gün_sayısı kadar (ISO, \"D Ay YYYY Gün\") demeti üretiliyor. Türkçe gün/ay adları doğru yazıldı, yalnızca standart kütüphane kullanıldı. pytest ile 16 test yazıldı ve hepsi geçti.",
+ "adim": 6,
+ "yurutucu_token": {
+  "girdi": 17776,
+  "cikti": 21528
+ },
+ "yurutucu_usd": 0.0060832,
+ "bitirdi": true,
+ "sure_sn": 302.3,
+ "gizli": {
+  "gecti": true,
+  "gecen": 20,
+  "toplam": 20,
+  "cikti": "....................                                                     [100%]\n20 passed in 0.03s\n"
+ }
+}

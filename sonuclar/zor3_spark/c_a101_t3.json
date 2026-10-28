@@ -1,0 +1,60 @@
+{
+ "id": "a101",
+ "kip": "c",
+ "tekrar": 3,
+ "kategori": "tarih ve saat: resmî tatiller parametreyle, iş günü hesabı, Türkiye saat dilimi (UTC+3, yaz saati yok), gün/ay adları Türkçe",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 63,
+   "basarili": 63
+  }
+ ],
+ "spark_usd": 0.0118013,
+ "arayuz": "",
+ "kabul_yazar": 3,
+ "mutasyon": {
+  "mutant": 16,
+  "ham_mutant": 16,
+  "turlar": [
+   {
+    "oldurulen": 13,
+    "toplam": 16
+   },
+   {
+    "oldurulen": 14,
+    "toplam": 16
+   },
+   {
+    "oldurulen": 14,
+    "toplam": 16
+   }
+  ],
+  "hayatta": [
+   "yalnizca Z veya +00:00 biten ISO8601 UTC gereksinimini ihlal eder",
+   "gecersiz tatil YYYY-MM-DD bicim denetimini atlar"
+  ]
+ },
+ "hakem": [],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [],
+ "kabul_test_sayisi": 63,
+ "kabul_gecti": true,
+ "ozet": "bakim_sla.py oluşturuldu: kesinti_suresi_is_saati yalnızca Z/+00:00 UTC girdisini +3 saatle TR'ye çevirip Pzt-Cuma 08:00-18:00 kesişimini dakika (aşağı yuvarlama) toplar; tatiller set ile tek sayılır, hafta sonu hariçtir. gun_adi yalnızca Türkçe gün adı döndürür (İ/I korunur). Doğrulama sırası zaman→tatil→sıralama, hepsi ValueError. 14 pytest testi geçiyor.",
+ "adim": 7,
+ "yurutucu_token": {
+  "girdi": 33952,
+  "cikti": 15691
+ },
+ "yurutucu_usd": 0.006533400000000001,
+ "bitirdi": true,
+ "sure_sn": 754.6,
+ "gizli": {
+  "gecti": true,
+  "gecen": 20,
+  "toplam": 20,
+  "cikti": "....................                                                     [100%]\n20 passed in 0.06s\n"
+ }
+}

@@ -1,0 +1,59 @@
+{
+ "id": "a049",
+ "kip": "c",
+ "tekrar": 3,
+ "kategori": "Türkiye'ye özgü kimlik ve hesap numaraları (TC kimlik, VKN, IBAN, MERSİS, plaka, telefon) — birden çok kuralın birlikte uygulandığı",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 65,
+   "basarili": 65
+  }
+ ],
+ "spark_usd": 0.0137327,
+ "arayuz": "",
+ "kabul_yazar": 3,
+ "mutasyon": {
+  "mutant": 14,
+  "ham_mutant": 14,
+  "turlar": [
+   {
+    "oldurulen": 8,
+    "toplam": 14
+   },
+   {
+    "oldurulen": 13,
+    "toplam": 14
+   },
+   {
+    "oldurulen": 13,
+    "toplam": 14
+   }
+  ],
+  "hayatta": [
+   "Plaka ic tire gecersizdir kuralini bozar"
+  ]
+ },
+ "hakem": [],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [],
+ "kabul_test_sayisi": 65,
+ "kabul_gecti": true,
+ "ozet": "otopark_abone.py yazıldı: TC (11 hane, ilk hane≠0, 10./11. hane checksum), plaka (strip+TR normalize, iç boşluk/tire yasak, il 01-81, 1-3 harf QWX yasak, 2-4 rakam), telefon (tire/boşluk/parantez temizleme, 0/+90 atma, 5xx + aralık), IBAN (ham 26, TR, kontrol 02-98, MOD97=1), ay (1-12, ücret=ay*750) doğrulamaları ve bos>tc>plaka>telefon>iban>ay önceliğiyle ONAY/HATA çıktısı uygulandı. pytest ile 9 test geçti.",
+ "adim": 6,
+ "yurutucu_token": {
+  "girdi": 22494,
+  "cikti": 26834
+ },
+ "yurutucu_usd": 0.0076162,
+ "bitirdi": true,
+ "sure_sn": 1094.4,
+ "gizli": {
+  "gecti": true,
+  "gecen": 22,
+  "toplam": 22,
+  "cikti": "......................                                                   [100%]\n22 passed in 1.28s\n"
+ }
+}

@@ -1,0 +1,24 @@
+{
+ "id": "a203",
+ "kip": "a",
+ "tekrar": 1,
+ "kategori": "CSV/JSON ile çalışan ve uç durumları çok olan veri işleme (BOM, ; ayırıcı, 1.234,56 sayı biçimi, boş/bozuk satır)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "bakir_fire_cli.py yazıldı: utf-8-sig ve noktalı virgül okuma, boş satır atlama, Decimal Türkçe sayı ayrıştırma, exit 2/3 kontrolleri, %2,50 sınırında limit-dışı saymama, ROUND_HALF_UP yuvarlama, Türkçe küçük harf dönüşümü, sıralama ve rapor.json çıktısı sağlandı.",
+ "adim": 8,
+ "yurutucu_token": {
+  "girdi": 30709,
+  "cikti": 26406
+ },
+ "yurutucu_usd": 0.0083521,
+ "bitirdi": true,
+ "sure_sn": 293.8,
+ "gizli": {
+  "gecti": false,
+  "gecen": 19,
+  "toplam": 21,
+  "cikti": "(encoding=\"utf-8\")\n>       assert \"2,50\" in txt\nE       assert '2,50' in '{\\n  \"partiler\": [\\n    {\\n      \"parti_id\": \"P001\",\\n      \"giren_kg\": \"1.000,00\",\\n      \"cikan_kg\": \"975,00\",\\n      \"fire_orani\": 2.5,\\n      \"limit_disi\": false\\n    }\\n  ],\\n  \"bozuk_satir\": 0,\\n  \"limit_disi\": 0\\n}\\n'\n\n.gizli/test_gizli.py:140: AssertionError\n______________________________ test_round_half_up ______________________________\n\ntmp_path = PosixPath('/home/usta/is/7b6e6ecad85b/.tmp/pytest-of-usta/pytest-0/test_round_half_up0')\n\n    def test_round_half_up(tmp_path):\n        g = tmp_path / \"giris.csv\"\n        f = tmp_path / \"fire.json\"\n        c = tmp_path / \"rapor.json\"\n        write_csv(g, \"parti_id;giren_kg;cikan_kg\\nP001;1.000,00;976,55\\n\")\n        write_fire(f, {\"limit\": \"50,00\"})\n        r = run_cli(g, f, c)\n        assert r.returncode == 0\n        txt = pathlib.Path(c).read_text(encoding=\"utf-8\")\n>       assert \"2,35\" in txt\nE       assert '2,35' in '{\\n  \"partiler\": [\\n    {\\n      \"parti_id\": \"P001\",\\n      \"giren_kg\": \"1.000,00\",\\n      \"cikan_kg\": \"976,55\",\\n      \"fire_orani\": 2.35,\\n      \"limit_disi\": false\\n    }\\n  ],\\n  \"bozuk_satir\": 0,\\n  \"limit_disi\": 0\\n}\\n'\n\n.gizli/test_gizli.py:163: AssertionError\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_tam_sinir_limit_disi_degil - assert '2,50' ...\nFAILED .gizli/test_gizli.py::test_round_half_up - assert '2,35' in '{\\n  \"par...\n2 failed, 19 passed in 1.83s\n"
+ }
+}

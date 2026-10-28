@@ -1,0 +1,53 @@
+{
+ "id": "a132",
+ "kip": "c",
+ "tekrar": 3,
+ "kategori": "çok dosyalı küçük modül: iki-üç dosyaya bölünmüş, ortak hata sınıfları ve bir komut satırı girişi olan araç",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 53,
+   "basarili": 53
+  }
+ ],
+ "spark_usd": 0.011564500000000002,
+ "arayuz": "",
+ "kabul_yazar": 3,
+ "mutasyon": {
+  "mutant": 16,
+  "ham_mutant": 16,
+  "turlar": [
+   {
+    "oldurulen": 14,
+    "toplam": 16
+   },
+   {
+    "oldurulen": 16,
+    "toplam": 16
+   }
+  ],
+  "hayatta": []
+ },
+ "hakem": [],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [],
+ "kabul_test_sayisi": 53,
+ "kabul_gecti": true,
+ "ozet": "Kars yem aracı yazıldı: hatalar.py (3 ValueError alt sınıfı), yem.py (karisim_hesapla yukarı-yuvarlamalı, öncelikli doğrulama, Türkçe duyarsız yem adı, paket_listesi açgözlü 50/25/10 + yukarı yuvarlama), cli.py (istenen stdout biçimi, stok yetersizse yalnızca ad). pytest ile 10 test geçti.",
+ "adim": 8,
+ "yurutucu_token": {
+  "girdi": 24733,
+  "cikti": 37270
+ },
+ "yurutucu_usd": 0.0099273,
+ "bitirdi": true,
+ "sure_sn": 543.5,
+ "gizli": {
+  "gecti": false,
+  "gecen": 20,
+  "toplam": 22,
+  "cikti": "..............FF......                                                   [100%]\n=================================== FAILURES ===================================\n_________________________ test_yem_adi_turkce_donusum __________________________\n\n    def test_yem_adi_turkce_donusum():\n>       assert yem.tr_kucuk_harf('I') == 'ı'\nE       AttributeError: module 'yem' has no attribute 'tr_kucuk_harf'\n\n.gizli/test_gizli.py:82: AttributeError\n____________________________ test_yem_adi_gecersiz _____________________________\n\n    def test_yem_adi_gecersiz():\n>       with pytest.raises(ValueError):\nE       Failed: DID NOT RAISE <class 'ValueError'>\n\n.gizli/test_gizli.py:87: Failed\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_yem_adi_turkce_donusum - AttributeError: mo...\nFAILED .gizli/test_gizli.py::test_yem_adi_gecersiz - Failed: DID NOT RAISE <c...\n2 failed, 20 passed in 0.20s\n"
+ }
+}

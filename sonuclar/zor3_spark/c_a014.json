@@ -1,0 +1,59 @@
+{
+ "id": "a014",
+ "kip": "c",
+ "tekrar": 1,
+ "kategori": "KDV, tevkifat, stopaj, taksit ve kuruş yuvarlama (Decimal, ROUND_HALF_UP, satır bazında ve toplamda yuvarlama farkı)",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 58,
+   "basarili": 58
+  }
+ ],
+ "spark_usd": 0.010414699999999999,
+ "arayuz": "",
+ "kabul_yazar": 3,
+ "mutasyon": {
+  "mutant": 14,
+  "ham_mutant": 14,
+  "turlar": [
+   {
+    "oldurulen": 12,
+    "toplam": 14
+   },
+   {
+    "oldurulen": 13,
+    "toplam": 14
+   },
+   {
+    "oldurulen": 13,
+    "toplam": 14
+   }
+  ],
+  "hayatta": [
+   "her kalem ROUND_HALF_UP ile iki basamaga yuvarlanmali gereksinimini cigner"
+  ]
+ },
+ "hakem": [],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [],
+ "kabul_test_sayisi": 58,
+ "kabul_gecti": true,
+ "ozet": "makbuz.py içinde SerbestMeslekMakbuzu sınıfı oluşturuldu: str girişler Decimal'e çevrilip ROUND_HALF_UP ile 2 basamağa yuvarlanıyor, stopaj %20 (brüt üzerinden, gider toplamı 5000'i aşarsa brüt+gider üzerinden), KDV %20 (brüt+gider üzerinden), net ve tahsilat yuvarlanmış kalemlerden hesaplanıyor. Hata önceliği TypeError>ValueError, sıfır/negatif brüt ve giderler reddediliyor, boş dize durumu değiştirmiyor. pytest ile 13 test geçti.",
+ "adim": 6,
+ "yurutucu_token": {
+  "girdi": 25823,
+  "cikti": 10462
+ },
+ "yurutucu_usd": 0.0046747,
+ "bitirdi": true,
+ "sure_sn": 623.7,
+ "gizli": {
+  "gecti": true,
+  "gecen": 20,
+  "toplam": 20,
+  "cikti": "....................                                                     [100%]\n20 passed in 0.04s\n"
+ }
+}

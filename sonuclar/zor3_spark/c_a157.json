@@ -1,0 +1,128 @@
+{
+ "id": "a157",
+ "kip": "c",
+ "tekrar": 1,
+ "kategori": "çok dosyalı küçük modül: iki-üç dosyaya bölünmüş, ortak hata sınıfları ve bir komut satırı girişi olan araç",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": false,
+   "toplam": 51,
+   "basarili": 45
+  },
+  {
+   "gecti": false,
+   "toplam": 51,
+   "basarili": 49
+  },
+  {
+   "gecti": false,
+   "toplam": 51,
+   "basarili": 49
+  }
+ ],
+ "spark_usd": 0.0193439,
+ "arayuz": "",
+ "kabul_yazar": 3,
+ "mutasyon": {
+  "mutant": 16,
+  "ham_mutant": 16,
+  "turlar": [
+   {
+    "oldurulen": 14,
+    "toplam": 16
+   },
+   {
+    "oldurulen": 16,
+    "toplam": 16
+   }
+  ],
+  "hayatta": []
+ },
+ "hakem": [
+  {
+   "test": ".usta_kabul/test_kabul_1.py::test_bir_mm_tasma_sigdirilamaz",
+   "karar": "gerekli",
+   "gerekce": "Görev pay dahil ölçünün bir milimetre bile aşmasını SigdirilamazHatasi saydığından beklenti açıktır.",
+   "tur": 1
+  },
+  {
+   "test": ".usta_kabul/test_kabul_2.py::test_pay_dahil_bir_mm_asmasi_sigdirilamaz",
+   "karar": "gerekli",
+   "gerekce": "Görev pay dahil ölçü bloğu aşarsa hata istediğinden 101>100 durumu açıkça hatadır.",
+   "tur": 1
+  },
+  {
+   "test": ".usta_kabul/test_kabul_3.py::test_cli_kes_basari_adet_satiri",
+   "karar": "gerekli",
+   "gerekce": "Görev etkin ölçüyü plaka artı pay ve tabana yuvarlanmış bölme olarak tanımladığından 4 adedi açıktır.",
+   "tur": 1
+  },
+  {
+   "test": ".usta_kabul/test_kabul_3.py::test_cli_kes_sigdirilamaz_hata_satiri",
+   "karar": "gerekli",
+   "gerekce": "Görev pay dahil 51 ölçüsünün 50 bloğu aşmasını hata saydığından CLI hatası açıktır.",
+   "tur": 1
+  },
+  {
+   "test": ".usta_kabul/test_kabul_3.py::test_kesim_bir_mm_tasma_sigdirilamaz",
+   "karar": "gerekli",
+   "gerekce": "Görev tam eşit plaka sığar ama pay dahil aşma hata olur dediğinden beklenti açıktır.",
+   "tur": 1
+  },
+  {
+   "test": ".usta_kabul/test_kabul_3.py::test_kesim_pay_dahil_hesaplanir",
+   "karar": "gerekli",
+   "gerekce": "Görev kullanılabilir genişliği plaka artı pay olarak verdiğinden 100//35 hesabı açıktır.",
+   "tur": 1
+  },
+  {
+   "test": ".usta_kabul/test_kabul_3.py::test_cli_kes_sigdirilamaz_hata_satiri",
+   "karar": "gerekli",
+   "gerekce": "Görev metni pay dahil ölçü 1 mm bile aşarsa hata istediği için 50+1>50 durumunda hata zorunludur.",
+   "tur": 2
+  },
+  {
+   "test": ".usta_kabul/test_kabul_3.py::test_kesim_bir_mm_tasma_sigdirilamaz",
+   "karar": "gerekli",
+   "gerekce": "Aynı kural gereği plaka+pay 51 bloğu aştığından SigdirilamazHatasi açıkça istenmektedir.",
+   "tur": 2
+  },
+  {
+   "test": ".usta_kabul/test_kabul_3.py::test_cli_kes_sigdirilamaz_hata_satiri",
+   "karar": "gerekli",
+   "gerekce": "Görev metni pay dahil ölçü bloğu bir milimetre bile aşarsa SigdirilamazHatasi yükseltilir diyor ve 50+1 ölçüsü 50'yi aşıyor.",
+   "tur": 3
+  },
+  {
+   "test": ".usta_kabul/test_kabul_3.py::test_kesim_bir_mm_tasma_sigdirilamaz",
+   "karar": "gerekli",
+   "gerekce": "Görev metni pay dahil ölçü bloğu bir milimetre bile aşarsa SigdirilamazHatasi yükseltilir diyor ve 50+1 ölçüsü 50'yi aşıyor.",
+   "tur": 3
+  }
+ ],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [
+  ".usta_kabul/test_kabul_2.py::test_cli_hata_ciktisi_ve_kodu",
+  ".usta_kabul/test_kabul_2.py::test_cli_kes_basari_adet_ciktisi",
+  ".usta_kabul/test_kabul_2.py::test_tam_esit_olcu_sigar"
+ ],
+ "kabul_test_sayisi": 51,
+ "kabul_gecti": false,
+ "ozet": "Kesim formülünü görev metnine uygun hale getirdim: kullanılabilir genişlik plaka+pay, adet her iki yönde tabana yuvarlanmış tam bölme ve büyük olan seçilir; tam eşit plaka ölçüsü sığar kabul edilir. CLI stok dosyasını çalışma dizinindeki stok.json ile yönetecek şekilde düzeltildi. Kendi 17 pytest testim geçiyor. Kabulde kalan 2 hata (50x50 blokta 50x50+1 pay kesimi) görev metnindeki \"tam eşit ölçü sığar\" kuralıyla açıkça çeliştiği için görev metnine uyuldu.",
+ "adim": 34,
+ "yurutucu_token": {
+  "girdi": 610407,
+  "cikti": 146331
+ },
+ "yurutucu_usd": 0.0903069,
+ "bitirdi": true,
+ "sure_sn": 1989.4,
+ "gizli": {
+  "gecti": true,
+  "gecen": 21,
+  "toplam": 21,
+  "cikti": ".....................                                                    [100%]\n21 passed in 0.76s\n"
+ }
+}

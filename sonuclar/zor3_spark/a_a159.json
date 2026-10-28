@@ -1,0 +1,24 @@
+{
+ "id": "a159",
+ "kip": "a",
+ "tekrar": 1,
+ "kategori": "KDV, tevkifat, stopaj, taksit ve kuruş yuvarlama (Decimal, ROUND_HALF_UP, satır bazında ve toplamda yuvarlama farkı)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "zeytin_iade.py içinde ZeytinIadeKontrol sınıfı yazıldı; Decimal ROUND_HALF_UP satır yuvarlama, tevkifat filtreleme, yuvarlama farkı ve alt sınır hak kontrolü uygulandı.",
+ "adim": 6,
+ "yurutucu_token": {
+  "girdi": 13449,
+  "cikti": 21887
+ },
+ "yurutucu_usd": 0.005722300000000001,
+ "bitirdi": true,
+ "sure_sn": 213.4,
+ "gizli": {
+  "gecti": false,
+  "gecen": 21,
+  "toplam": 22,
+  "cikti": "...........F..........                                                   [100%]\n=================================== FAILURES ===================================\n_______________________ test_tevkifatsiz_satirlar_haric ________________________\n\n    def test_tevkifatsiz_satirlar_haric():\n        k = ZeytinIadeKontrol()\n        k.satis_ekle(Decimal(\"5000\"), 20, False)\n        s = k.iade_hesapla(Decimal(\"0\"))\n        assert s[\"iade_matrahi\"] == Decimal(\"0\")\n        assert s[\"iade_kdv_toplami\"] == Decimal(\"0\")\n>       assert s[\"hak_kazanildi\"] is False\nE       assert True is False\n\n.gizli/test_gizli.py:92: AssertionError\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_tevkifatsiz_satirlar_haric - assert True is...\n1 failed, 21 passed in 0.08s\n"
+ }
+}

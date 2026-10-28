@@ -1,0 +1,24 @@
+{
+ "id": "a098",
+ "kip": "a",
+ "tekrar": 2,
+ "kategori": "CSV/JSON ile çalışan ve uç durumları çok olan veri işleme (BOM, ; ayırıcı, 1.234,56 sayı biçimi, boş/bozuk satır)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "`uzum_kurutma.py` içinde `kurutma_raporu` yazıldı: utf-8-sig/`;` okuma, boş satır atlama, Türkçe sayı çözümleme/formatlama (Decimal, ROUND_HALF_UP), kuru ağırlık formülü ve sınır durumu, hatalı satır sayımı, Türkçe duyarsız gruplama (I→ı, İ→i + casefold), tutar azalan + Türkçe anahtar artan sıralama, hata önceliği (FileNotFoundError > ValueError) ve boş sonuç kuralları uygulandı.",
+ "adim": 9,
+ "yurutucu_token": {
+  "girdi": 44468,
+  "cikti": 21477
+ },
+ "yurutucu_usd": 0.008742200000000002,
+ "bitirdi": true,
+ "sure_sn": 251.0,
+ "gizli": {
+  "gecti": true,
+  "gecen": 21,
+  "toplam": 21,
+  "cikti": ".....................                                                    [100%]\n21 passed in 0.17s\n"
+ }
+}

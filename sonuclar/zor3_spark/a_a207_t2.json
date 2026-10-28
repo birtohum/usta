@@ -1,0 +1,24 @@
+{
+ "id": "a207",
+ "kip": "a",
+ "tekrar": 2,
+ "kategori": "CSV/JSON ile çalışan ve uç durumları çok olan veri işleme (BOM, ; ayırıcı, 1.234,56 sayı biçimi, boş/bozuk satır)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "balik_kabul.py yazıldı: mutabakat işlevi Türkçe sayı/tarih doğrulama, fiyat eşleme, yuvarlama ve sıralama kurallarıyla uygulandı.",
+ "adim": 4,
+ "yurutucu_token": {
+  "girdi": 9382,
+  "cikti": 29897
+ },
+ "yurutucu_usd": 0.006917600000000001,
+ "bitirdi": true,
+ "sure_sn": 311.6,
+ "gizli": {
+  "gecti": true,
+  "gecen": 21,
+  "toplam": 21,
+  "cikti": ".....................                                                    [100%]\n21 passed in 0.16s\n"
+ }
+}

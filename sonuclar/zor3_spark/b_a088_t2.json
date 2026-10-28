@@ -1,0 +1,24 @@
+{
+ "id": "a088",
+ "kip": "b",
+ "tekrar": 2,
+ "kategori": "CSV/JSON ile çalışan ve uç durumları çok olan veri işleme (BOM, ; ayırıcı, 1.234,56 sayı biçimi, boş/bozuk satır)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "`navlun_paylasim.py` içinde `dagit` yazıldı: utf-8-sig + `;` okuma, boş satır atlama, Türkçe sayı çözümleme (`.` sil, `,`→`.`), Decimal HALF_UP pay hesabı, min_tonaj altı `0,00`, Türkçe fold ile plaka gruplama + ilk yazımı koruma, pay azalan / plaka artan sıralama, Türkçe `1.234,56` formatlama, hata önceliği (sefer yokluğu FileNotFoundError > masraf ValueError). `test_nav.py` ile 17 pytest testi geçiyor.",
+ "adim": 4,
+ "yurutucu_token": {
+  "girdi": 16926,
+  "cikti": 13913
+ },
+ "yurutucu_usd": 0.0044752,
+ "bitirdi": true,
+ "sure_sn": 145.4,
+ "gizli": {
+  "gecti": true,
+  "gecen": 22,
+  "toplam": 22,
+  "cikti": "......................                                                   [100%]\n22 passed in 0.21s\n"
+ }
+}

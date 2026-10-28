@@ -1,0 +1,24 @@
+{
+ "id": "a072",
+ "kip": "a",
+ "tekrar": 3,
+ "kategori": "CSV/JSON ile çalışan ve uç durumları çok olan veri işleme (BOM, ; ayırıcı, 1.234,56 sayı biçimi, boş/bozuk satır)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "su_fatura_cli.py yazıldı: utf-8-sig CSV (; ayırıcı, \" alıntı), Decimal binlik/virgül dönüşümü ve HALF_UP yuvarlama, boş satır atlama, sütun/negatif/bozuk JSON hatalarında stderr+exit 1, eksik argümanda exit 2 (argparse), Türkçe I/İ normalize birleştirme, 20 m³ kademeli ücret, toplam sıfır/boş liste, utf-8 ensure_ascii=False indent=2 çıktı ve tutar/m³/Türkçe alfabetik sıralama.",
+ "adim": 6,
+ "yurutucu_token": {
+  "girdi": 22641,
+  "cikti": 38271
+ },
+ "yurutucu_usd": 0.009918300000000001,
+ "bitirdi": true,
+ "sure_sn": 426.3,
+ "gizli": {
+  "gecti": false,
+  "gecen": 19,
+  "toplam": 20,
+  "cikti": "....F...............                                                     [100%]\n=================================== FAILURES ===================================\n______________________ test_05_I_to_idotless_and_Idotted _______________________\n\ntmp_path = PosixPath('/home/usta/is/b7c4235eb5be/.tmp/pytest-of-usta/pytest-0/test_05_I_to_idotless_and_Idot0')\n\n    def test_05_I_to_idotless_and_Idotted(tmp_path):\n        c = tmp_path / \"t.csv\"; j = tmp_path / \"tar.json\"; o = tmp_path / \"f.json\"\n        write_csv(c, \"abone;tüketim_m3\\nISPARTA;10,00\\nısparta;5,00\\nİZMİR;7,00\\nizmir;3,00\\n\")\n        write_json(j, {\"kademe1_fiyat\": \"10,00\", \"kademe2_fiyat\": \"20,00\"})\n        r = run_cli(\"--tuketim-csv\", str(c), \"--tarife-json\", str(j), \"--cikti\", str(o))\n        assert r.returncode == 0\n        d = json.loads(o.read_text(encoding=\"utf-8\"))\n        assert len(d[\"aboneler\"]) == 2\n        isimler = {x[\"abone\"]: x for x in d[\"aboneler\"]}\n>       assert \"ısparta\" in isimler\nE       AssertionError: assert 'ısparta' in {'ISPARTA': {'abone': 'ISPARTA', 'toplam_m3': 15, 'tutar': 150.0}, 'İZMİR': {'abone': 'İZMİR', 'toplam_m3': 10, 'tutar': 100.0}}\n\n.gizli/test_gizli.py:72: AssertionError\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_05_I_to_idotless_and_Idotted - AssertionErr...\n1 failed, 19 passed in 3.02s\n"
+ }
+}

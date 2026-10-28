@@ -1,0 +1,60 @@
+{
+ "id": "a044",
+ "kip": "c",
+ "tekrar": 3,
+ "kategori": "KDV, tevkifat, stopaj, taksit ve kuruş yuvarlama (Decimal, ROUND_HALF_UP, satır bazında ve toplamda yuvarlama farkı)",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 59,
+   "basarili": 59
+  }
+ ],
+ "spark_usd": 0.013785200000000001,
+ "arayuz": "",
+ "kabul_yazar": 3,
+ "mutasyon": {
+  "mutant": 15,
+  "ham_mutant": 15,
+  "turlar": [
+   {
+    "oldurulen": 11,
+    "toplam": 15
+   },
+   {
+    "oldurulen": 12,
+    "toplam": 15
+   },
+   {
+    "oldurulen": 13,
+    "toplam": 15
+   }
+  ],
+  "hayatta": [
+   "bos dize satis_matrah ValueError vermeli, kontrol hic tetiklenmez",
+   "bos dize alis_kdv ValueError vermeli, kontrol hic tetiklenmez"
+  ]
+ },
+ "hakem": [],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [],
+ "kabul_test_sayisi": 59,
+ "kabul_gecti": true,
+ "ozet": "iade.py içinde KdvIadeHesabi sınıfı geliştirildi: satır bazında ROUND_HALF_UP yuvarlama, toplamda yeniden yuvarlama yok, 10000.00 sınırında tamamı/aşan yarısı indirilebilir kuralı, oran/negatif/boş/tip kontrolleri ve odenecek-iade-devreden Decimal sözlüğü. pytest ile 16 test geçti.",
+ "adim": 7,
+ "yurutucu_token": {
+  "girdi": 39044,
+  "cikti": 15276
+ },
+ "yurutucu_usd": 0.0069596,
+ "bitirdi": true,
+ "sure_sn": 1039.3,
+ "gizli": {
+  "gecti": true,
+  "gecen": 20,
+  "toplam": 20,
+  "cikti": "....................                                                     [100%]\n20 passed in 0.07s\n"
+ }
+}

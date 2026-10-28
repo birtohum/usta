@@ -1,0 +1,59 @@
+{
+ "id": "a071",
+ "kip": "c",
+ "tekrar": 1,
+ "kategori": "çok dosyalı küçük modül: iki-üç dosyaya bölünmüş, ortak hata sınıfları ve bir komut satırı girişi olan araç",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 55,
+   "basarili": 55
+  }
+ ],
+ "spark_usd": 0.0103201,
+ "arayuz": "",
+ "kabul_yazar": 3,
+ "mutasyon": {
+  "mutant": 15,
+  "ham_mutant": 15,
+  "turlar": [
+   {
+    "oldurulen": 13,
+    "toplam": 15
+   },
+   {
+    "oldurulen": 14,
+    "toplam": 15
+   },
+   {
+    "oldurulen": 14,
+    "toplam": 15
+   }
+  ],
+  "hayatta": [
+   "Bosluklardan olusan bos plakayi PlakaHatasi sayma gereksinimini cigner"
+  ]
+ },
+ "hakem": [],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [],
+ "kabul_test_sayisi": 55,
+ "kabul_gecti": true,
+ "ozet": "hatalar.py (doğrudan ValueError'dan türeyen PlakaHatasi/KuyrukHatasi), durak.py (20 kapasiteli FIFO DurakKuyrugu; strip, boş kontrolü PlakaHatasi, Türkçe i->İ/ı->I normalizasyonu, tekrar PlakaHatasi, dolu KuyrukHatasi, boş kuyruk KuyrukHatasi, hata öncelik sırası) ve cli.py (--ekle/--liste/--cikar, normalize liste, satır sonu) yazıldı; 16 pytest testi geçti.",
+ "adim": 7,
+ "yurutucu_token": {
+  "girdi": 21541,
+  "cikti": 24320
+ },
+ "yurutucu_usd": 0.007018100000000001,
+ "bitirdi": true,
+ "sure_sn": 1010.0,
+ "gizli": {
+  "gecti": true,
+  "gecen": 22,
+  "toplam": 22,
+  "cikti": "......................                                                   [100%]\n22 passed in 0.28s\n"
+ }
+}

@@ -1,0 +1,24 @@
+{
+ "id": "a113",
+ "kip": "b",
+ "tekrar": 1,
+ "kategori": "CSV/JSON ile çalışan ve uç durumları çok olan veri işleme (BOM, ; ayırıcı, 1.234,56 sayı biçimi, boş/bozuk satır)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "`aycicek_teslim.py` yazıldı: utf-8-sig + `;` ayrımlı CSV okuma, Türkçe sayı çözümleme (`.` sil, `,`→`.`), Decimal ile `tonaj*baz+prim` hesabı ve HALF_UP yuvarlama, hatalı satır sayımı, Türkçe duyarsız gruplama (I→ı, İ→i + casefold) ve sıralı özet JSON çıktısı; exit 1/2 öncelik kuralları uygulandı. `test_aycicek.py` ile 10 pytest testi geçiyor.",
+ "adim": 8,
+ "yurutucu_token": {
+  "girdi": 48113,
+  "cikti": 16252
+ },
+ "yurutucu_usd": 0.0080617,
+ "bitirdi": true,
+ "sure_sn": 178.0,
+ "gizli": {
+  "gecti": false,
+  "gecen": 18,
+  "toplam": 20,
+  "cikti": ">           assert d[\"ciftciler\"][0][\"tutar\"] == \"15750,75\"\nE           AssertionError: assert '15.750,75' == '15750,75'\nE             - 15750,75\nE             + 15.750,75\nE             ?   +\n\n.gizli/test_gizli.py:89: AssertionError\n______________________________ test_tonaj_binlik _______________________________\n\n    def test_tonaj_binlik():\n        import tempfile\n        with tempfile.TemporaryDirectory() as td:\n            td = pathlib.Path(td)\n            g = td / \"g.csv\"; fj = td / \"f.json\"; o = td / \"o.json\"\n            write_giris(g, [\"Ali;1.234,50;10,00\"])\n            write_fiyat(fj, baz=\"10,00\", esik=\"90,00\", prim=\"5,00\")\n            r = run_prog(g, fj, o)\n            assert r.returncode == 0\n            d = load_ozet(o)\n>           assert d[\"ciftciler\"][0][\"tutar\"] == \"12345,00\"\nE           AssertionError: assert '12.345,00' == '12345,00'\nE             - 12345,00\nE             + 12.345,00\nE             ?   +\n\n.gizli/test_gizli.py:101: AssertionError\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_binlik_ayraci_cozumleme - AssertionError: a...\nFAILED .gizli/test_gizli.py::test_tonaj_binlik - AssertionError: assert '12.3...\n2 failed, 18 passed in 1.72s\n"
+ }
+}

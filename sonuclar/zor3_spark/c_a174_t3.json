@@ -1,0 +1,90 @@
+{
+ "id": "a174",
+ "kip": "c",
+ "tekrar": 3,
+ "kategori": "KDV, tevkifat, stopaj, taksit ve kuruş yuvarlama (Decimal, ROUND_HALF_UP, satır bazında ve toplamda yuvarlama farkı)",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 44,
+   "basarili": 44
+  }
+ ],
+ "spark_usd": 0.019842600000000002,
+ "arayuz": "Dosya isparta_gul.py, sınıf GulYagiSatisDefteri; __init__(self); ekle(miktar_ml:int, birim_fiyat:str, kdv_oran:int)->None; ozet(self)->dict anahtarları matrah_toplam:Decimal, kdv_toplam:Decimal, genel_toplam:Decimal, stopaj:Decimal, satir_sayisi:int, satirlar:list",
+ "kabul_yazar": 3,
+ "mutasyon": {
+  "mutant": 14,
+  "ham_mutant": 14,
+  "turlar": [
+   {
+    "oldurulen": 13,
+    "toplam": 14
+   },
+   {
+    "oldurulen": 14,
+    "toplam": 14
+   }
+  ],
+  "hayatta": []
+ },
+ "hakem": [
+  {
+   "test": ".usta_kabul/test_kabul_m1.py::test_stabil_I_dotless_onceki_oncelikli",
+   "karar": "hatali",
+   "gerekce": "Görev bağımsız bir sıralama fonksiyonu tanımlamaz, test iç kod örüntüsü arayarak var olmayan arayüzü zorluyor.",
+   "tur": 1
+  },
+  {
+   "test": ".usta_kabul/test_kabul_m1.py::test_stabil_ascii_kucuk_buyuk",
+   "karar": "hatali",
+   "gerekce": "Görev bağımsız bir sıralama fonksiyonu tanımlamaz, test iç kod örüntüsü arayarak var olmayan arayüzü zorluyor.",
+   "tur": 1
+  },
+  {
+   "test": ".usta_kabul/test_kabul_m1.py::test_stabil_dotted_I_onceki_oncelikli",
+   "karar": "hatali",
+   "gerekce": "Görev bağımsız bir sıralama fonksiyonu tanımlamaz, test iç kod örüntüsü arayarak var olmayan arayüzü zorluyor.",
+   "tur": 1
+  },
+  {
+   "test": ".usta_kabul/test_kabul_m1.py::test_stabil_gul_kucuk_buyuk",
+   "karar": "hatali",
+   "gerekce": "Görev bağımsız bir sıralama fonksiyonu tanımlamaz, test iç kod örüntüsü arayarak var olmayan arayüzü zorluyor.",
+   "tur": 1
+  },
+  {
+   "test": ".usta_kabul/test_kabul_m1.py::test_stabil_uclu_karisik_esitlik",
+   "karar": "hatali",
+   "gerekce": "Görev bağımsız bir sıralama fonksiyonu tanımlamaz, test iç kod örüntüsü arayarak var olmayan arayüzü zorluyor.",
+   "tur": 1
+  }
+ ],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [
+  ".usta_kabul/test_kabul_m1.py::test_stabil_I_dotless_onceki_oncelikli",
+  ".usta_kabul/test_kabul_m1.py::test_stabil_ascii_kucuk_buyuk",
+  ".usta_kabul/test_kabul_m1.py::test_stabil_dotted_I_onceki_oncelikli",
+  ".usta_kabul/test_kabul_m1.py::test_stabil_gul_kucuk_buyuk",
+  ".usta_kabul/test_kabul_m1.py::test_stabil_uclu_karisik_esitlik"
+ ],
+ "kabul_test_sayisi": 44,
+ "kabul_gecti": true,
+ "ozet": "isparta_gul.py yazıldı: GulYagiSatisDefteri, matrah HALF_UP yuvarlama, KDV farkı en büyük miktarlı (eşitlikte ilk eklenen) satıra, 20000 eşiğinde stopaj, boş özet sıfır, tip→pozitiflik→oran hata sırası. pytest 8 test geçti.",
+ "adim": 8,
+ "yurutucu_token": {
+  "girdi": 28543,
+  "cikti": 34459
+ },
+ "yurutucu_usd": 0.0097461,
+ "bitirdi": true,
+ "sure_sn": 632.5,
+ "gizli": {
+  "gecti": false,
+  "gecen": 18,
+  "toplam": 20,
+  "cikti": "................FF..                                                     [100%]\n=================================== FAILURES ===================================\n___________________________ test_17_turkce_siralama ____________________________\n\n    def test_17_turkce_siralama():\n        d = GulYagiSatisDefteri()\n>       d.not_ekle(\"Isparta\")\nE       AttributeError: 'GulYagiSatisDefteri' object has no attribute 'not_ekle'\n\n.gizli/test_gizli.py:134: AttributeError\n________________________ test_18_turkce_esitlik_koruma _________________________\n\n    def test_18_turkce_esitlik_koruma():\n        d = GulYagiSatisDefteri()\n>       d.not_ekle(\"I\")\nE       AttributeError: 'GulYagiSatisDefteri' object has no attribute 'not_ekle'\n\n.gizli/test_gizli.py:141: AttributeError\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_17_turkce_siralama - AttributeError: 'GulYa...\nFAILED .gizli/test_gizli.py::test_18_turkce_esitlik_koruma - AttributeError: ...\n2 failed, 18 passed in 0.05s\n"
+ }
+}

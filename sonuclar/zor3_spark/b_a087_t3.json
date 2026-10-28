@@ -1,0 +1,24 @@
+{
+ "id": "a087",
+ "kip": "b",
+ "tekrar": 3,
+ "kategori": "çok dosyalı küçük modül: iki-üç dosyaya bölünmüş, ortak hata sınıfları ve bir komut satırı girişi olan araç",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "hatalar.py (UreticiHatasi, NemHatasi doğrudan ValueError'dan), bordro.py (net_odeme: 2500 kuruş taban fiyat, Fraction ile tam sayı kuruş aritmetiği, nem>20 aşımını yukarı yuvarlayıp %2/puan kesintiyi yukarı yuvarlama, +10000 destek primi, kilo->UreticiHatasi nem->NemHatasi önceliği, strip+boş kontrolü ve I->ı/İ->i Türkçe küçük harf), cli.py (--kilo/--nem/--destekli, tek satır 'Ödeme: X kuruş') yazıldı; pytest ile 19 test geçti.",
+ "adim": 9,
+ "yurutucu_token": {
+  "girdi": 40568,
+  "cikti": 26587
+ },
+ "yurutucu_usd": 0.009374200000000001,
+ "bitirdi": true,
+ "sure_sn": 294.4,
+ "gizli": {
+  "gecti": true,
+  "gecen": 20,
+  "toplam": 20,
+  "cikti": "....................                                                     [100%]\n20 passed in 0.24s\n"
+ }
+}

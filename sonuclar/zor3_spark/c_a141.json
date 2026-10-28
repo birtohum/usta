@@ -1,0 +1,58 @@
+{
+ "id": "a141",
+ "kip": "c",
+ "tekrar": 1,
+ "kategori": "tarih ve saat: resmî tatiller parametreyle, iş günü hesabı, Türkiye saat dilimi (UTC+3, yaz saati yok), gün/ay adları Türkçe",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 51,
+   "basarili": 51
+  }
+ ],
+ "spark_usd": 0.0157476,
+ "arayuz": "",
+ "kabul_yazar": 3,
+ "mutasyon": {
+  "mutant": 14,
+  "ham_mutant": 14,
+  "turlar": [
+   {
+    "oldurulen": 12,
+    "toplam": 14
+   },
+   {
+    "oldurulen": 14,
+    "toplam": 14
+   }
+  ],
+  "hayatta": []
+ },
+ "hakem": [],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [
+  ".usta_kabul/test_kabul_1.py::test_tatil_bicim_hatasi_valueerror_degil",
+  ".usta_kabul/test_kabul_2.py::test_bir_isgunu_ilerleme",
+  ".usta_kabul/test_kabul_3.py::test_esit_bitiste_turkce_siralama",
+  ".usta_kabul/test_kabul_3.py::test_tatil_bicim_hatasi"
+ ],
+ "kabul_test_sayisi": 51,
+ "kabul_gecti": true,
+ "ozet": "vardiya.py içinde VardiyaPlani sınıfı yazıldı: iş günü hesabı (hafta sonu+tatil atlama, isgunu=0 sonraki ilk iş günü), Türkçe i/I çevrimiyle aynı kişi kontrolü, bitişe ve Türkçe küçük harfe göre sıralama, hata önceliği ve tatil hatasının ValueError dışı bildirilmesi, iç durumda Türkçe gün adı ve küçük harf raporlama. 14 pytest testi geçti.",
+ "adim": 8,
+ "yurutucu_token": {
+  "girdi": 28483,
+  "cikti": 26578
+ },
+ "yurutucu_usd": 0.008163900000000002,
+ "bitirdi": true,
+ "sure_sn": 674.5,
+ "gizli": {
+  "gecti": true,
+  "gecen": 21,
+  "toplam": 21,
+  "cikti": ".....................                                                    [100%]\n21 passed in 0.06s\n"
+ }
+}

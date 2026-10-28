@@ -1,0 +1,55 @@
+{
+ "id": "a122",
+ "kip": "c",
+ "tekrar": 3,
+ "kategori": "çok dosyalı küçük modül: iki-üç dosyaya bölünmüş, ortak hata sınıfları ve bir komut satırı girişi olan araç",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 51,
+   "basarili": 51
+  }
+ ],
+ "spark_usd": 0.0116714,
+ "arayuz": "",
+ "kabul_yazar": 3,
+ "mutasyon": {
+  "mutant": 15,
+  "ham_mutant": 15,
+  "turlar": [
+   {
+    "oldurulen": 14,
+    "toplam": 15
+   },
+   {
+    "oldurulen": 15,
+    "toplam": 15
+   }
+  ],
+  "hayatta": []
+ },
+ "hakem": [],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [
+  ".usta_kabul/test_kabul_3.py::test_dagilim_esit_kilo_turkce_siralama"
+ ],
+ "kabul_test_sayisi": 51,
+ "kabul_gecti": true,
+ "ozet": "hatalar.py (BalonHatasi/AgirlikHatasi), balon.py (Sepet: kapasite 200-600, isim strip/20/TR-duyarsız yineleme, kilo 30-150, öncelik TypeError>isim>kilo>yineleme>kapasite, greedy dağılım) ve cli.py (--kapasite/--yolcu, `A:...|B:...` çıktısı, stderr `HATA:` + kod 2) yazıldı; 23 pytest testi geçiyor.",
+ "adim": 7,
+ "yurutucu_token": {
+  "girdi": 25665,
+  "cikti": 19008
+ },
+ "yurutucu_usd": 0.0063681000000000015,
+ "bitirdi": true,
+ "sure_sn": 495.6,
+ "gizli": {
+  "gecti": false,
+  "gecen": 21,
+  "toplam": 23,
+  "cikti": "FF.....................                                                  [100%]\n=================================== FAILURES ===================================\n__________________________ test_kapasite_alt_sinir_ok __________________________\n\n    def test_kapasite_alt_sinir_ok():\n        s = Sepet(200)\n>       assert s.kapasite_kg == 200\nE       AttributeError: 'Sepet' object has no attribute 'kapasite_kg'\n\n.gizli/test_gizli.py:12: AttributeError\n__________________________ test_kapasite_ust_sinir_ok __________________________\n\n    def test_kapasite_ust_sinir_ok():\n        s = Sepet(600)\n>       assert s.kapasite_kg == 600\nE       AttributeError: 'Sepet' object has no attribute 'kapasite_kg'\n\n.gizli/test_gizli.py:16: AttributeError\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_kapasite_alt_sinir_ok - AttributeError: 'Se...\nFAILED .gizli/test_gizli.py::test_kapasite_ust_sinir_ok - AttributeError: 'Se...\n2 failed, 21 passed in 0.26s\n"
+ }
+}

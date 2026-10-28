@@ -1,0 +1,24 @@
+{
+ "id": "a136",
+ "kip": "b",
+ "tekrar": 1,
+ "kategori": "tarih ve saat: resmî tatiller parametreyle, iş günü hesabı, Türkiye saat dilimi (UTC+3, yaz saati yok), gün/ay adları Türkçe",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "nikah.py içinde uygun_gunleri_bul ve salon_kurallari.py içinde kapali_gun yazıldı; Türkçe küçük harf dönüşümü özel harita ile (I→ı, İ→i, lower yok), hata önceliği biçim→takvim→sıra→tatil biçimi sırasıyla uygulandı, iki dosya bağımsız ve yalnızca standart kütüphane kullanıyor. pytest ile 15 test geçti.",
+ "adim": 8,
+ "yurutucu_token": {
+  "girdi": 33689,
+  "cikti": 26206
+ },
+ "yurutucu_usd": 0.0086101,
+ "bitirdi": true,
+ "sure_sn": 362.2,
+ "gizli": {
+  "gecti": true,
+  "gecen": 20,
+  "toplam": 20,
+  "cikti": "....................                                                     [100%]\n20 passed in 0.06s\n"
+ }
+}

@@ -1,0 +1,24 @@
+{
+ "id": "a036",
+ "kip": "a",
+ "tekrar": 3,
+ "kategori": "CSV/JSON ile çalışan ve uç durumları çok olan veri işleme (BOM, ; ayırıcı, 1.234,56 sayı biçimi, boş/bozuk satır)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "envanter_denetim.py yazıldı: utf-8-sig ve noktalı virgüllü CSV okuma/yazma, kod;ad;adet başlık kontrolü (hata 2), dosya yokluğu önce kontrol (hata 1), sayım JSON eksik/boş alan ValueError (hata 3), binlik nokta kabulü, Türkçe küçük harf (I→ı, İ→i), 0 fark eşleşme sayacı, kod Türkçe sıralı + ad ile eşitlik çözümü, BOM'lu kod;fark çıktısı. Yalnızca standart kütüphane.",
+ "adim": 10,
+ "yurutucu_token": {
+  "girdi": 40925,
+  "cikti": 27851
+ },
+ "yurutucu_usd": 0.009662700000000001,
+ "bitirdi": true,
+ "sure_sn": 306.2,
+ "gizli": {
+  "gecti": false,
+  "gecen": 20,
+  "toplam": 21,
+  "cikti": ".............F.......                                                    [100%]\n=================================== FAILURES ===================================\n_____________________________ test14_baslik_hatasi _____________________________\n\ntmp_path = PosixPath('/home/usta/is/0872500f1359/.tmp/pytest-of-usta/pytest-0/test14_baslik_hatasi0')\n\n    def test14_baslik_hatasi(tmp_path):\n        e = tmp_path / \"env.csv\"; s = tmp_path / \"sayim.json\"; c = tmp_path / \"fark.csv\"\n        env_yaz(e, [[\"A01\", \"Masa\", \"5\"]], header=(\"kod\", \"ad\", \"yanlis\"))\n        sayim_yaz(s, [{\"kod\": \"A01\", \"sayilan\": 5}])\n        r = calistir(e, s, c)\n>       assert r.returncode == 3\nE       assert 2 == 3\nE        +  where 2 = CompletedProcess(args=['/usr/bin/python', '/home/usta/is/0872500f1359/envanter_denetim.py', '--envanter', '/home/usta/.../pytest-0/test14_baslik_hatasi0/fark.csv'], returncode=2, stdout='', stderr=\"hatali baslik: ['kod', 'ad', 'yanlis']\\n\").returncode\n\n.gizli/test_gizli.py:147: AssertionError\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test14_baslik_hatasi - assert 2 == 3\n1 failed, 20 passed in 2.10s\n"
+ }
+}

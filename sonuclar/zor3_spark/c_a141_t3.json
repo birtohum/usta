@@ -1,0 +1,74 @@
+{
+ "id": "a141",
+ "kip": "c",
+ "tekrar": 3,
+ "kategori": "tarih ve saat: resmî tatiller parametreyle, iş günü hesabı, Türkiye saat dilimi (UTC+3, yaz saati yok), gün/ay adları Türkçe",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 27,
+   "basarili": 27
+  }
+ ],
+ "spark_usd": 0.023582699999999998,
+ "arayuz": "",
+ "kabul_yazar": 2,
+ "mutasyon": {
+  "mutant": 14,
+  "ham_mutant": 14,
+  "turlar": [
+   {
+    "oldurulen": 11,
+    "toplam": 14
+   },
+   {
+    "oldurulen": 13,
+    "toplam": 14
+   },
+   {
+    "oldurulen": 13,
+    "toplam": 14
+   }
+  ],
+  "hayatta": [
+   "Tatil bicim hatasi TypeError ile bildirilir, digerleri ValueError gereksinimini cigner"
+  ]
+ },
+ "hakem": [],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [
+  ".usta_kabul/test_kabul_3.py::test_baslangic_gunu_ayni_gun_dondurulmez",
+  ".usta_kabul/test_kabul_3.py::test_cuma_sonrasi_pazartesi",
+  ".usta_kabul/test_kabul_3.py::test_cumartesi_baslangic_pazartesi",
+  ".usta_kabul/test_kabul_3.py::test_haftaici_isgunu_bir_sonraki_gun",
+  ".usta_kabul/test_kabul_3.py::test_oncelik_personel_tatilden_once",
+  ".usta_kabul/test_kabul_3.py::test_oncelik_tarih_ve_isgunu_tatilden_once",
+  ".usta_kabul/test_kabul_3.py::test_resmi_tatil_atlanir",
+  ".usta_kabul/test_kabul_3.py::test_sirali_liste_bitise_gore_artan",
+  ".usta_kabul/test_kabul_3.py::test_sirali_liste_esit_bitiste_turkce_kucuk_harf",
+  ".usta_kabul/test_kabul_3.py::test_tatil_bicim_hatasi_valueerror_degil",
+  ".usta_kabul/test_kabul_m1.py::test_tatil_liste_degilse_valueerror_olmaz",
+  ".usta_kabul/test_kabul_m2.py::test_tatil_list_degil_None_TypeError",
+  ".usta_kabul/test_kabul_m2.py::test_tatil_list_degil_int_TypeError",
+  ".usta_kabul/test_kabul_m2.py::test_tatil_list_degil_string_TypeError"
+ ],
+ "kabul_test_sayisi": 27,
+ "kabul_gecti": true,
+ "ozet": "vardiya.py içinde VardiyaPlani sınıfı yazıldı: TR saati, iş günü hesabı, Türkçe büyük/küçük harf çevrimi, sıralama, hata önceliği ve iç durumda gün/ay adları saklandı. pytest ile 8 test geçti.",
+ "adim": 6,
+ "yurutucu_token": {
+  "girdi": 15339,
+  "cikti": 34761
+ },
+ "yurutucu_usd": 0.008486100000000002,
+ "bitirdi": true,
+ "sure_sn": 790.6,
+ "gizli": {
+  "gecti": true,
+  "gecen": 21,
+  "toplam": 21,
+  "cikti": ".....................                                                    [100%]\n21 passed in 0.04s\n"
+ }
+}

@@ -1,0 +1,55 @@
+{
+ "id": "a207",
+ "kip": "c",
+ "tekrar": 3,
+ "kategori": "CSV/JSON ile çalışan ve uç durumları çok olan veri işleme (BOM, ; ayırıcı, 1.234,56 sayı biçimi, boş/bozuk satır)",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 52,
+   "basarili": 52
+  }
+ ],
+ "spark_usd": 0.019228100000000005,
+ "arayuz": "",
+ "kabul_yazar": 3,
+ "mutasyon": {
+  "mutant": 16,
+  "ham_mutant": 16,
+  "turlar": [
+   {
+    "oldurulen": 15,
+    "toplam": 16
+   },
+   {
+    "oldurulen": 16,
+    "toplam": 16
+   }
+  ],
+  "hayatta": []
+ },
+ "hakem": [],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [
+  ".usta_kabul/test_kabul_2.py::test_turkce_kucuk_harf_birlestirme_ilk_yazim"
+ ],
+ "kabul_test_sayisi": 52,
+ "kabul_gecti": true,
+ "ozet": "`balik_kabul.py` içinde `mutabakat` işlevi yazıldı: `;` ayırıcılı CSV `utf-8-sig` ile okunuyor, boş satırlar atlanıyor, Türkçe sayı biçimi Decimal ile doğrulanıyor, GG.AA.YYYY tarih kontrolü, BOM'lu JSON fiyat okuma, I->ı/İ->i normalize birleştirme, 1000 kg sınır sayımı, ROUND_HALF_UP Türkçe biçimlendirme, sıralı dict dönüşü ve FileNotFoundError/ValueError öncelikleri uygulandı. 12 pytest testi yazıldı ve geçti.",
+ "adim": 13,
+ "yurutucu_token": {
+  "girdi": 114014,
+  "cikti": 44948
+ },
+ "yurutucu_usd": 0.020391,
+ "bitirdi": true,
+ "sure_sn": 577.3,
+ "gizli": {
+  "gecti": true,
+  "gecen": 21,
+  "toplam": 21,
+  "cikti": ".....................                                                    [100%]\n21 passed in 0.06s\n"
+ }
+}

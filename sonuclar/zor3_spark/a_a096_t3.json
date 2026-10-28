@@ -1,0 +1,24 @@
+{
+ "id": "a096",
+ "kip": "a",
+ "tekrar": 3,
+ "kategori": "tarih ve saat: resmî tatiller parametreyle, iş günü hesabı, Türkiye saat dilimi (UTC+3, yaz saati yok), gün/ay adları Türkçe",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "liman_cli.py oluşturuldu: varış sonrası iş günü sayımıyla ardiye başlangıcı hesaplar, json/metin çıktısı üretir, hata durumlarında stderr + çıkış 2 verir, yalnızca standart kütüphane kullanır.",
+ "adim": 13,
+ "yurutucu_token": {
+  "girdi": 74407,
+  "cikti": 25302
+ },
+ "yurutucu_usd": 0.012501100000000001,
+ "bitirdi": true,
+ "sure_sn": 318.5,
+ "gizli": {
+  "gecti": true,
+  "gecen": 21,
+  "toplam": 21,
+  "cikti": ".....................                                                    [100%]\n21 passed in 1.46s\n"
+ }
+}

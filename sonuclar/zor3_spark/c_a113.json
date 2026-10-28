@@ -1,0 +1,65 @@
+{
+ "id": "a113",
+ "kip": "c",
+ "tekrar": 1,
+ "kategori": "CSV/JSON ile çalışan ve uç durumları çok olan veri işleme (BOM, ; ayırıcı, 1.234,56 sayı biçimi, boş/bozuk satır)",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 37,
+   "basarili": 37
+  }
+ ],
+ "spark_usd": 0.023441600000000003,
+ "arayuz": "",
+ "kabul_yazar": 3,
+ "mutasyon": {
+  "mutant": 16,
+  "ham_mutant": 16,
+  "turlar": [
+   {
+    "oldurulen": 15,
+    "toplam": 16
+   },
+   {
+    "oldurulen": 15,
+    "toplam": 16
+   },
+   {
+    "oldurulen": 15,
+    "toplam": 16
+   }
+  ],
+  "hayatta": [
+   "GIRIS utf-8-sig ile okunur BOM yoksayilir gereksinimini cigner"
+  ]
+ },
+ "hakem": [],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [
+  ".usta_kabul/test_kabul_2.py::test_binlik_nokta_cozumlenir",
+  ".usta_kabul/test_kabul_3.py::test_primsiz_tutar",
+  ".usta_kabul/test_kabul_m1.py::test_bom_yoksayilir_hatali_sayimi",
+  ".usta_kabul/test_kabul_m1.py::test_bom_yoksayilir_iki_ciftci_siralama",
+  ".usta_kabul/test_kabul_m1.py::test_bom_yoksayilir_tek_ciftci"
+ ],
+ "kabul_test_sayisi": 38,
+ "kabul_gecti": true,
+ "ozet": "`aycicek_teslim.py` yazıldı: utf-8-sig + `;` ayrımlı CSV okuma, Türkçe sayı çözümleme (`.` sil, `,`→`.`), primli tutar hesabı (HALF_UP), Türkçe duyarsız gruplama/sıralama, istenen JSON çıktı ve exit kodları (GİRİŞ yok=1, FİYAT bozuk=2, yokluk öncelikli). `test_aycicek.py` ile 11 pytest testi geçiyor.",
+ "adim": 4,
+ "yurutucu_token": {
+  "girdi": 18757,
+  "cikti": 16292
+ },
+ "yurutucu_usd": 0.005134099999999999,
+ "bitirdi": true,
+ "sure_sn": 1177.6,
+ "gizli": {
+  "gecti": true,
+  "gecen": 20,
+  "toplam": 20,
+  "cikti": "....................                                                     [100%]\n20 passed in 1.83s\n"
+ }
+}

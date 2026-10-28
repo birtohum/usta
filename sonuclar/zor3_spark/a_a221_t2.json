@@ -1,0 +1,24 @@
+{
+ "id": "a221",
+ "kip": "a",
+ "tekrar": 2,
+ "kategori": "tarih ve saat: resmî tatiller parametreyle, iş günü hesabı, Türkiye saat dilimi (UTC+3, yaz saati yok), gün/ay adları Türkçe",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "denetim_cli.py yazıldı: iş günü hesabı (hafta sonu+tatil hariç, başvuru günü hariç, N=0 özel kuralı), iso/etiket çıktısı, Türkçe küçük harf kuralı, hata öncelik sırası ve çıkış kodları (2/3) uygulandı.",
+ "adim": 10,
+ "yurutucu_token": {
+  "girdi": 71919,
+  "cikti": 26208
+ },
+ "yurutucu_usd": 0.0124335,
+ "bitirdi": true,
+ "sure_sn": 355.2,
+ "gizli": {
+  "gecti": true,
+  "gecen": 22,
+  "toplam": 22,
+  "cikti": "......................                                                   [100%]\n22 passed in 1.53s\n"
+ }
+}

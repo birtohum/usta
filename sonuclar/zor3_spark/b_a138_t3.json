@@ -1,0 +1,24 @@
+{
+ "id": "a138",
+ "kip": "b",
+ "tekrar": 3,
+ "kategori": "CSV/JSON ile çalışan ve uç durumları çok olan veri işleme (BOM, ; ayırıcı, 1.234,56 sayı biçimi, boş/bozuk satır)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "sabun_parti.py içinde PartiTakip sınıfı yazıldı: utf-8-sig/; CSV okuma, Türkçe sayı çözümleme, Türkçe normalize+toplama, atomik üretim, yarım-yukarı maliyet yuvarlama, hata öncelikleri uygulandı. 9 pytest testi geçti.",
+ "adim": 15,
+ "yurutucu_token": {
+  "girdi": 111875,
+  "cikti": 59792
+ },
+ "yurutucu_usd": 0.0231459,
+ "bitirdi": true,
+ "sure_sn": 638.0,
+ "gizli": {
+  "gecti": true,
+  "gecen": 20,
+  "toplam": 20,
+  "cikti": "....................                                                     [100%]\n=============================== warnings summary ===============================\n.gizli/test_gizli.py:191\n  /home/usta/is/fdf037c9e0c8/.gizli/test_gizli.py:191: SyntaxWarning: invalid escape sequence '\\.'\n    for yasak in ['socket', 'requests', 'urllib', 'random', 'import time', 'import datetime', 'os\\.system', 'subprocess']:\n\n-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html\n20 passed, 1 warning in 0.07s\n"
+ }
+}

@@ -1,0 +1,55 @@
+{
+ "id": "a217",
+ "kip": "c",
+ "tekrar": 3,
+ "kategori": "KDV, tevkifat, stopaj, taksit ve kuruş yuvarlama (Decimal, ROUND_HALF_UP, satır bazında ve toplamda yuvarlama farkı)",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 55,
+   "basarili": 55
+  }
+ ],
+ "spark_usd": 0.0125269,
+ "arayuz": "",
+ "kabul_yazar": 3,
+ "mutasyon": {
+  "mutant": 14,
+  "ham_mutant": 14,
+  "turlar": [
+   {
+    "oldurulen": 12,
+    "toplam": 14
+   },
+   {
+    "oldurulen": 14,
+    "toplam": 14
+   }
+  ],
+  "hayatta": []
+ },
+ "hakem": [],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [
+  ".usta_kabul/test_kabul_3.py::test_hata_gecersiz_matrah"
+ ],
+ "kabul_test_sayisi": 55,
+ "kabul_gecti": true,
+ "ozet": "mermer_cli.py yazıldı: yalnızca argparse+sys+json+decimal kullanır, Decimal ile satır KDV/tevkifat/ödenecek hesaplar, toplamları ve kdv_yuvarlama_farkını üretir, taksitleri ROUND_DOWN ile böler, kalemleri ödenecek/matrah/ilk-sıra kuralıyla sıralar, tüm hata durumlarında stderr'e \"HATA: ...\" yazıp 2 ile çıkar. test_mermer.py ile 21 pytest testi hazırlandı ve hepsi geçti.",
+ "adim": 6,
+ "yurutucu_token": {
+  "girdi": 37200,
+  "cikti": 17052
+ },
+ "yurutucu_usd": 0.007130400000000001,
+ "bitirdi": true,
+ "sure_sn": 338.3,
+ "gizli": {
+  "gecti": true,
+  "gecen": 22,
+  "toplam": 22,
+  "cikti": "......................                                                   [100%]\n22 passed in 0.99s\n"
+ }
+}

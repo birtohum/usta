@@ -1,0 +1,61 @@
+{
+ "id": "a201",
+ "kip": "c",
+ "tekrar": 1,
+ "kategori": "tarih ve saat: resmî tatiller parametreyle, iş günü hesabı, Türkiye saat dilimi (UTC+3, yaz saati yok), gün/ay adları Türkçe",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 57,
+   "basarili": 57
+  }
+ ],
+ "spark_usd": 0.015331100000000002,
+ "arayuz": "genel_kurul.py dosyasında GenelKurulTakvimi sınıfı; __init__(self, tatiller=None, hafta_sonu_cumartesi_dahil=False), ilk_toplanti(self, duyuru_tarihi: str) -> datetime, ikinci_toplanti(self) -> datetime",
+ "kabul_yazar": 3,
+ "mutasyon": {
+  "mutant": 15,
+  "ham_mutant": 16,
+  "turlar": [
+   {
+    "oldurulen": 11,
+    "toplam": 15
+   },
+   {
+    "oldurulen": 14,
+    "toplam": 15
+   },
+   {
+    "oldurulen": 15,
+    "toplam": 15
+   }
+  ],
+  "hayatta": []
+ },
+ "hakem": [],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [
+  ".usta_kabul/test_kabul_2.py::test_hatali_tatil_icerigi_valueerror",
+  ".usta_kabul/test_kabul_2.py::test_is_gunu_olmayan_duyuruda_sayim_sonraki_is_gununden",
+  ".usta_kabul/test_kabul_m1.py::test_tatiller_gecersiz_tur_yok_sayilmamali"
+ ],
+ "kabul_test_sayisi": 57,
+ "kabul_gecti": true,
+ "ozet": "genel_kurul.py içinde GenelKurulTakvimi sınıfı yazıldı: duyurudan sonraki 7. iş günü (09:00 Europe/Istanbul), ikinci toplantı +7 günün ilk iş günü, Cumartesi bayrağı, tatil kaydırma, Türkçe etiket ve büyük harf (i→İ, ı→I), aynı gün saat eşitliğinde üye sayısına göre sıralama, hata önceliği (tarih→tatil→durum) ve RuntimeError uygulandı. 18 pytest testi geçti.",
+ "adim": 10,
+ "yurutucu_token": {
+  "girdi": 73862,
+  "cikti": 37060
+ },
+ "yurutucu_usd": 0.014798200000000001,
+ "bitirdi": true,
+ "sure_sn": 1144.1,
+ "gizli": {
+  "gecti": false,
+  "gecen": 9,
+  "toplam": 21,
+  "cikti": "attribute '_ilk_datetime'\n\n.gizli/test_gizli.py:92: AttributeError\n__________________________ test_saat_dilimi_istanbul ___________________________\n\n    def test_saat_dilimi_istanbul():\n        t = GenelKurulTakvimi(set(), False)\n        t.ilk_toplanti(\"2024-03-04\")\n>       dt = t._ilk_datetime\nE       AttributeError: 'GenelKurulTakvimi' object has no attribute '_ilk_datetime'\n\n.gizli/test_gizli.py:98: AttributeError\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_bos_kume_gecerli - AssertionError: assert d...\nFAILED .gizli/test_gizli.py::test_none_bos_kume_sayilir - AssertionError: ass...\nFAILED .gizli/test_gizli.py::test_cumartesi_dahil_false - AssertionError: ass...\nFAILED .gizli/test_gizli.py::test_cumartesi_dahil_true - AssertionError: asse...\nFAILED .gizli/test_gizli.py::test_duyuru_gunu_haric_yedinci_isgunu - Assertio...\nFAILED .gizli/test_gizli.py::test_baslangic_isgunu_degilse_sonraki_isgununden\nFAILED .gizli/test_gizli.py::test_yedinci_gun_tatilse_ileri_kayar - Assertion...\nFAILED .gizli/test_gizli.py::test_ikinci_toplanti_yedi_gun_sonra - AssertionE...\nFAILED .gizli/test_gizli.py::test_ikinci_toplanti_tatilde_kayar - AssertionEr...\nFAILED .gizli/test_gizli.py::test_etiket_gun_ay_isimleri - TypeError: argumen...\nFAILED .gizli/test_gizli.py::test_saat_dokuz_sabit - AttributeError: 'GenelKu...\nFAILED .gizli/test_gizli.py::test_saat_dilimi_istanbul - AttributeError: 'Gen...\n12 failed, 9 passed in 0.16s\n"
+ }
+}

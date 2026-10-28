@@ -1,0 +1,24 @@
+{
+ "id": "a014",
+ "kip": "b",
+ "tekrar": 2,
+ "kategori": "KDV, tevkifat, stopaj, taksit ve kuruş yuvarlama (Decimal, ROUND_HALF_UP, satır bazında ve toplamda yuvarlama farkı)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "makbuz.py içinde SerbestMeslekMakbuzu sınıfı oluşturuldu: str girişler Decimal'e çevrilip ROUND_HALF_UP ile 2 basamağa yuvarlanıyor; tip hatasında TypeError, geçersiz/3+ basamaklı sayıda ValueError, sıfır/negatifte ValueError veriliyor. ozet; stopajı brüt üzerinden (gider toplamı 5000'i aşarsa brüt+gider üzerinden), KDV'yi brüt+gider üzerinden hesaplayıp net ve tahsilatı yuvarlanmış kalemlerden türetiyor. test_makbuz.py ile 12 test yazıldı ve `python -m pytest -q` ile hepsi geçti.",
+ "adim": 5,
+ "yurutucu_token": {
+  "girdi": 15004,
+  "cikti": 18608
+ },
+ "yurutucu_usd": 0.005222,
+ "bitirdi": true,
+ "sure_sn": 181.5,
+ "gizli": {
+  "gecti": true,
+  "gecen": 20,
+  "toplam": 20,
+  "cikti": "....................                                                     [100%]\n20 passed in 0.06s\n"
+ }
+}

@@ -1,0 +1,24 @@
+{
+ "id": "a219",
+ "kip": "b",
+ "tekrar": 1,
+ "kategori": "tarih ve saat: resmî tatiller parametreyle, iş günü hesabı, Türkiye saat dilimi (UTC+3, yaz saati yok), gün/ay adları Türkçe",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "etiket_cli.py yazıldı: --tarih (YYYY-AA-GG) zorunlu, --tatiller dosyası ve --sonraki-isgunu bayrağı desteklenir; tarihler Europe/Istanbul bilinçli yorumlanır, Türkçe gün/ay adlarıyla \"Gün Ay Yıl, GünAdı\" başlığı üretilir, hafta sonu+tatil kaydırma, boş/geçersiz tarihte exit 2 ve stderr, Türkçe i/ı büyük harf, parti sıralama ve dakika yukarı yuvarlama yardımcıları eklendi. 21 pytest testi geçiyor.",
+ "adim": 10,
+ "yurutucu_token": {
+  "girdi": 63331,
+  "cikti": 33912
+ },
+ "yurutucu_usd": 0.013115500000000002,
+ "bitirdi": true,
+ "sure_sn": 365.0,
+ "gizli": {
+  "gecti": true,
+  "gecen": 20,
+  "toplam": 20,
+  "cikti": "....................                                                     [100%]\n20 passed in 2.12s\n"
+ }
+}

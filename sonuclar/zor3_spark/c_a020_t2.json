@@ -1,0 +1,53 @@
+{
+ "id": "a020",
+ "kip": "c",
+ "tekrar": 2,
+ "kategori": "KDV, tevkifat, stopaj, taksit ve kuruş yuvarlama (Decimal, ROUND_HALF_UP, satır bazında ve toplamda yuvarlama farkı)",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 61,
+   "basarili": 61
+  }
+ ],
+ "spark_usd": 0.009950500000000001,
+ "arayuz": "",
+ "kabul_yazar": 3,
+ "mutasyon": {
+  "mutant": 14,
+  "ham_mutant": 14,
+  "turlar": [
+   {
+    "oldurulen": 12,
+    "toplam": 14
+   },
+   {
+    "oldurulen": 14,
+    "toplam": 14
+   }
+  ],
+  "hayatta": []
+ },
+ "hakem": [],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [],
+ "kabul_test_sayisi": 52,
+ "kabul_gecti": true,
+ "ozet": "taksit.py içinde taksitlendir fonksiyonu uygulandı: vade farkı eklenip ROUND_HALF_UP ile borç bulunur, eşit pay yuvarlanıp fark son taksite yansıtılır, sira artan ve son taksit en sonda. Doğrulamalar (1-12 aralık, 0.01/0.00, boş dize, oran 0-1, int TypeError önceliği) eklendi; tutar/kalan iki basamaklı string uyumlu Para tipiyle hem str hem Decimal/float karşılaştırmalarında doğru çalışır. 15 pytest testi geçiyor.",
+ "adim": 14,
+ "yurutucu_token": {
+  "girdi": 106670,
+  "cikti": 32031
+ },
+ "yurutucu_usd": 0.0170732,
+ "bitirdi": true,
+ "sure_sn": 677.6,
+ "gizli": {
+  "gecti": true,
+  "gecen": 22,
+  "toplam": 22,
+  "cikti": "......................                                                   [100%]\n22 passed in 0.12s\n"
+ }
+}

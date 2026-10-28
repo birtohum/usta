@@ -1,0 +1,24 @@
+{
+ "id": "a033",
+ "kip": "a",
+ "tekrar": 3,
+ "kategori": "Türkçe büyük/küçük harf (İ/i, I/ı), Türk alfabesiyle sıralama, sayıyı yazıya çevirme, ünlü uyumuna göre ek",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "kart.py dosyasında MusteriKart sınıfı yazıldı: Türkçe'ye uygun başlıklandırma (i→İ dahil), boşluk normalleştirme, tireli parçalar, yönelme eki (a/e + y kaynaştırma + Sayın öneki), TypeError/ValueError denetimleri. Yalnızca standart kütüphane kullanıldı, testlerle doğrulandı.",
+ "adim": 9,
+ "yurutucu_token": {
+  "girdi": 35056,
+  "cikti": 10879
+ },
+ "yurutucu_usd": 0.0056814,
+ "bitirdi": true,
+ "sure_sn": 176.8,
+ "gizli": {
+  "gecti": true,
+  "gecen": 21,
+  "toplam": 21,
+  "cikti": ".....................                                                    [100%]\n21 passed in 0.09s\n"
+ }
+}

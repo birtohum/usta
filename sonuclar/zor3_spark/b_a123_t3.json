@@ -1,0 +1,24 @@
+{
+ "id": "a123",
+ "kip": "b",
+ "tekrar": 3,
+ "kategori": "CSV/JSON ile çalışan ve uç durumları çok olan veri işleme (BOM, ; ayırıcı, 1.234,56 sayı biçimi, boş/bozuk satır)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "kutuphane_ceza_cli.py yazıldı: utf-8-sig/; CSV, katı YYYY-AA-GG tarih, Türkçe alt-harf (İ→i, I→ı), boş iade hariç, gün×oran ceza, tavan ve yarım-yukarı yuvarlama (Decimal), id sıralı + eşit cezada soyad sıralı JSON çıktı, exit 2/3 ve stderr kuralları. test_cli.py ile 7 pytest testi geçiyor.",
+ "adim": 16,
+ "yurutucu_token": {
+  "girdi": 153773,
+  "cikti": 56657
+ },
+ "yurutucu_usd": 0.026708700000000005,
+ "bitirdi": true,
+ "sure_sn": 700.2,
+ "gizli": {
+  "gecti": false,
+  "gecen": 16,
+  "toplam": 20,
+  "cikti": "cezalar\"]) == 2\n        assert abs(d[\"cezalar\"][0][\"ceza\"] - abs(d[\"cezalar\"][1][\"ceza\"])) < 1e-9\n>       soyadlar = [x[\"soyad\"] for x in d[\"cezalar\"]]\nE       KeyError: 'soyad'\n\n.gizli/test_gizli.py:192: KeyError\n___________________________ test_json_yapi_hatasi_3 ____________________________\n\ntmp_path = PosixPath('/home/usta/is/999b6713a711/.tmp/pytest-of-usta/pytest-4/test_json_yapi_hatasi_30')\n\n    def test_json_yapi_hatasi_3(tmp_path):\n        od = tmp_path / \"o.csv\"; uy = tmp_path / \"u.json\"; ci = tmp_path / \"c.json\"\n        write_csv(od, HDR, [])\n        with open(uy, \"w\", encoding=\"utf-8\") as f:\n            json.dump({\"uyeler\": []}, f)\n        r = run_cli(od, uy, ci, \"10\", \"100\")\n>       assert r.returncode == 3\nE       AssertionError: assert 0 == 3\nE        +  where 0 = CompletedProcess(args=['/usr/bin/python', '/home/usta/is/999b6713a711/kutuphane_ceza_cli.py', '--odunc-csv', '/home/us...st-4/test_json_yapi_hatasi_30/c.json', '--gunluk-gecikme', '10', '--tavan', '100'], returncode=0, stdout='', stderr='').returncode\n\n.gizli/test_gizli.py:227: AssertionError\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_erken_iade_sifir - assert 0 == 1\nFAILED .gizli/test_gizli.py::test_esit_tarih_sifir - IndexError: list index o...\nFAILED .gizli/test_gizli.py::test_esit_ceza_soyad_turkce - KeyError: 'soyad'\nFAILED .gizli/test_gizli.py::test_json_yapi_hatasi_3 - AssertionError: assert...\n4 failed, 16 passed in 1.11s\n"
+ }
+}

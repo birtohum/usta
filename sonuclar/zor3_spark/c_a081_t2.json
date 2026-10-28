@@ -1,0 +1,68 @@
+{
+ "id": "a081",
+ "kip": "c",
+ "tekrar": 2,
+ "kategori": "tarih ve saat: resmî tatiller parametreyle, iş günü hesabı, Türkiye saat dilimi (UTC+3, yaz saati yok), gün/ay adları Türkçe",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 54,
+   "basarili": 54
+  }
+ ],
+ "spark_usd": 0.021372600000000002,
+ "arayuz": "",
+ "kabul_yazar": 3,
+ "mutasyon": {
+  "mutant": 15,
+  "ham_mutant": 15,
+  "turlar": [
+   {
+    "oldurulen": 14,
+    "toplam": 15
+   },
+   {
+    "oldurulen": 14,
+    "toplam": 15
+   },
+   {
+    "oldurulen": 14,
+    "toplam": 15
+   }
+  ],
+  "hayatta": [
+   "2. gereksinim: saniyeler alta yuvarlanip dakikaya indirilmeli, saniye sifirlamayi atlar"
+  ]
+ },
+ "hakem": [
+  {
+   "test": ".usta_kabul/test_kabul_2.py::test_liste_bicimi_ve_haftasonu_yok",
+   "karar": "belirsiz",
+   "gerekce": "Görev metni gun sayısının takvim günü mü iş günü mü sayılacağını açıkça tanımlamıyor.",
+   "tur": 1
+  }
+ ],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [
+  ".usta_kabul/test_kabul_2.py::test_liste_bicimi_ve_haftasonu_yok"
+ ],
+ "kabul_test_sayisi": 54,
+ "kabul_gecti": true,
+ "ozet": "kargo_cli.py yazıldı: UTC+3 çevrimi, saniye alta yuvarlama, 17:00 sınırı, iş günü filtreleme (hafta sonu/tatil YOK), gun=0/negatif kuralları, hata kodları (zaman=2 önce, gun sayı değil=3), Türkçe küçük harf (İ→i, I→ı), erken teslim sıralaması. Yalnızca standart kütüphane. 15 pytest testi geçiyor.",
+ "adim": 11,
+ "yurutucu_token": {
+  "girdi": 48816,
+  "cikti": 31501
+ },
+ "yurutucu_usd": 0.011181800000000004,
+ "bitirdi": true,
+ "sure_sn": 953.5,
+ "gizli": {
+  "gecti": true,
+  "gecen": 20,
+  "toplam": 20,
+  "cikti": "....................                                                     [100%]\n20 passed in 0.59s\n"
+ }
+}

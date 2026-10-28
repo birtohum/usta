@@ -1,0 +1,73 @@
+{
+ "id": "a136",
+ "kip": "c",
+ "tekrar": 3,
+ "kategori": "tarih ve saat: resmî tatiller parametreyle, iş günü hesabı, Türkiye saat dilimi (UTC+3, yaz saati yok), gün/ay adları Türkçe",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 59,
+   "basarili": 59
+  }
+ ],
+ "spark_usd": 0.009850100000000002,
+ "arayuz": "",
+ "kabul_yazar": 3,
+ "mutasyon": {
+  "mutant": 15,
+  "ham_mutant": 15,
+  "turlar": [
+   {
+    "oldurulen": 9,
+    "toplam": 15
+   },
+   {
+    "oldurulen": 14,
+    "toplam": 15
+   },
+   {
+    "oldurulen": 15,
+    "toplam": 15
+   }
+  ],
+  "hayatta": []
+ },
+ "hakem": [
+  {
+   "test": ".usta_kabul/test_kabul_m1.py::test_kapali_gun_bool_reddi",
+   "karar": "belirsiz",
+   "gerekce": "Görev metni bool girdisinin reddini açıkça istemiyor ve boolun int sayılması yoruma açıktır.",
+   "tur": 1
+  },
+  {
+   "test": ".usta_kabul/test_kabul_m1.py::test_kapali_yalnizca_pazar",
+   "karar": "hatali",
+   "gerekce": "Görev metni davranış istiyor, kaynakta wd == 6 yazımı gibi bir uygulama ayrıntısı şart koşmuyor.",
+   "tur": 1
+  }
+ ],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [
+  ".usta_kabul/test_kabul_m1.py::test_kapali_gun_bool_reddi",
+  ".usta_kabul/test_kabul_m1.py::test_kapali_yalnizca_pazar"
+ ],
+ "kabul_test_sayisi": 59,
+ "kabul_gecti": true,
+ "ozet": "nikah.py içinde uygun_gunleri_bul ve salon_kurallari.py içinde kapali_gun yazıldı; TRT UTC+3 gece yarısı yorumuyla iş günü + kapalı gün filtresi, artan sıra, hata önceliği ve Türkçe gün adları uygulandı. Bağımsız dosyalar, yalnızca datetime kullanıldı, pytest ile 13 test geçti.",
+ "adim": 16,
+ "yurutucu_token": {
+  "girdi": 79794,
+  "cikti": 45544
+ },
+ "yurutucu_usd": 0.0170882,
+ "bitirdi": true,
+ "sure_sn": 574.9,
+ "gizli": {
+  "gecti": true,
+  "gecen": 20,
+  "toplam": 20,
+  "cikti": "....................                                                     [100%]\n20 passed in 0.03s\n"
+ }
+}

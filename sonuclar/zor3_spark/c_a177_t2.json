@@ -1,0 +1,61 @@
+{
+ "id": "a177",
+ "kip": "c",
+ "tekrar": 2,
+ "kategori": "çok dosyalı küçük modül: iki-üç dosyaya bölünmüş, ortak hata sınıfları ve bir komut satırı girişi olan araç",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 36,
+   "basarili": 36
+  }
+ ],
+ "spark_usd": 0.019988400000000003,
+ "arayuz": "hatalar.py: BosUreticiHatasi, GecersizTartimHatasi, GecersizNemHatasi, GecersizTarihHatasi hepsi Exception alt sınıfı. safran.py: from hatalar import ...; class SafranDefteri: def __init__(self): kayıtsız başlar; def ekle(self, uretici: str, yas_miktar_g: float, nem_yuzde: float, tarih: str) -> str; def ozet(self, gun: str) -> dict. ozet sözlüğü {gun:str, toplam_kuru_g:float, toplam_tutar_tl:float, kalemler:list} kalem {id:str, uretici:str, kuru_g:float, tutar_tl:float} uretici normalize ad, kuru_g ve tutar_tl iki ondalıklı float. cli.py: veriyi aynı dizindeki defter.json dosyasında saklar, --ekle çıktısı {id:str, kuru_g:float, tutar_tl:float} tek satır JSON, --ozet çıktısı ozet sözlüğüyle aynı anahtarlar.",
+ "kabul_yazar": 2,
+ "mutasyon": {
+  "mutant": 16,
+  "ham_mutant": 16,
+  "turlar": [
+   {
+    "oldurulen": 15,
+    "toplam": 16
+   },
+   {
+    "oldurulen": 15,
+    "toplam": 16
+   },
+   {
+    "oldurulen": 15,
+    "toplam": 16
+   }
+  ],
+  "hayatta": [
+   "tarih YYYY-AA-GG biciminde sifirli iki haneli olmak zorunda gereksinimini cigner"
+  ]
+ },
+ "hakem": [],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [
+  ".usta_kabul/test_kabul_2.py::test_cli_ozet_cikti_ve_toplam"
+ ],
+ "kabul_test_sayisi": 36,
+ "kabul_gecti": true,
+ "ozet": "hatalar.py (4 hata sınıfı), safran.py (SafranDefteri: tarih/üretici/tartım/nem doğrulama, Decimal ROUND_HALF_UP kuru+tutar hesabı, %12 üstü 0.92 indirimi, kademeli fiyat, Türkçe sıralama, S-0001 kimlik) ve cli.py (defter.json kalıcılık, --ekle/--ozet tek satır JSON) yazıldı; 14 pytest testi geçiyor.",
+ "adim": 11,
+ "yurutucu_token": {
+  "girdi": 77482,
+  "cikti": 27103
+ },
+ "yurutucu_usd": 0.013168800000000001,
+ "bitirdi": true,
+ "sure_sn": 864.6,
+ "gizli": {
+  "gecti": false,
+  "gecen": 21,
+  "toplam": 22,
+  "cikti": ".....................F                                                   [100%]\n=================================== FAILURES ===================================\n_____________________________ test_cli_ozet_akisi ______________________________\n\n    def test_cli_ozet_akisi():\n        _temizle()\n        r1 = _cli(\"--ekle\", \"--uretici\", \"Ali\", \"--yas\", \"10\", \"--nem\", \"0\", \"--tarih\", \"2024-05-01\")\n        assert r1.returncode == 0, r1.stderr\n        r2 = _cli(\"--ekle\", \"--uretici\", \"Zebra\", \"--yas\", \"20\", \"--nem\", \"0\", \"--tarih\", \"2024-05-01\")\n        assert r2.returncode == 0, r2.stderr\n        r3 = _cli(\"--ozet\", \"--gun\", \"2024-05-01\")\n        assert r3.returncode == 0, r3.stderr\n        oz = json.loads(r3.stdout.strip())\n        assert oz[\"gun\"] == \"2024-05-01\"\n>       assert oz[\"toplam_kuru_g\"] == pytest.approx(30.0)\nE       assert 120.0 == 30.0 ± 3.0e-05\nE         comparison failed\nE         Obtained: 120.0\nE         Expected: 30.0 ± 3.0e-05\n\n.gizli/test_gizli.py:202: AssertionError\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_cli_ozet_akisi - assert 120.0 == 30.0 ± 3.0...\n1 failed, 21 passed in 0.49s\n"
+ }
+}

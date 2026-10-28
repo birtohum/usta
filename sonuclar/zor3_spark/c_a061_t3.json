@@ -1,0 +1,61 @@
+{
+ "id": "a061",
+ "kip": "c",
+ "tekrar": 3,
+ "kategori": "Türkiye'ye özgü kimlik ve hesap numaraları (TC kimlik, VKN, IBAN, MERSİS, plaka, telefon) — birden çok kuralın birlikte uygulandığı",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 52,
+   "basarili": 52
+  }
+ ],
+ "spark_usd": 0.0169015,
+ "arayuz": "",
+ "kabul_yazar": 3,
+ "mutasyon": {
+  "mutant": 15,
+  "ham_mutant": 15,
+  "turlar": [
+   {
+    "oldurulen": 12,
+    "toplam": 15
+   },
+   {
+    "oldurulen": 12,
+    "toplam": 15
+   },
+   {
+    "oldurulen": 12,
+    "toplam": 15
+   }
+  ],
+  "hayatta": [
+   "VKN kirpma yapilmadan ham haliyle kontrol edilmeli, bosluklu VKNi kabul eder",
+   "MERSIS ilk 10 hane VKN kuralini saglamali, kontrolu atlar",
+   "VKN-MERSIS ilk 10 hane tutarsizliginda VKN hatasi oncelikli olmali"
+  ]
+ },
+ "hakem": [],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [],
+ "kabul_test_sayisi": 52,
+ "kabul_gecti": true,
+ "ozet": "kooperatif_ortak.py içinde OrtakDefter sınıfı yazıldı: unvan kırpma+en az 3 karakter, VKN 10-hane checksum, MERSIS 16-hane ilk-hane/ilk-10-VKN/son-hane kontrolleri, IBAN TR+26 hane+02-98+mod97 kontrolleri, hata önceliği unvan>VKN>MERSIS>IBAN (MERSIS ilk-10 tutarsızlığı VKN hatası) ve unvan+VKN sıralı raporla uygulandı. pytest ile 7 test geçti.",
+ "adim": 7,
+ "yurutucu_token": {
+  "girdi": 31210,
+  "cikti": 23743
+ },
+ "yurutucu_usd": 0.007869600000000001,
+ "bitirdi": true,
+ "sure_sn": 969.8,
+ "gizli": {
+  "gecti": true,
+  "gecen": 22,
+  "toplam": 22,
+  "cikti": "......................                                                   [100%]\n22 passed in 0.09s\n"
+ }
+}

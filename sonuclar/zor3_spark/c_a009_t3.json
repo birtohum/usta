@@ -1,0 +1,51 @@
+{
+ "id": "a009",
+ "kip": "c",
+ "tekrar": 3,
+ "kategori": "Türkçe büyük/küçük harf (İ/i, I/ı), Türk alfabesiyle sıralama, sayıyı yazıya çevirme, ünlü uyumuna göre ek",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 46,
+   "basarili": 46
+  }
+ ],
+ "spark_usd": 0.007274900000000001,
+ "arayuz": "",
+ "kabul_yazar": 3,
+ "mutasyon": {
+  "mutant": 16,
+  "ham_mutant": 16,
+  "turlar": [
+   {
+    "oldurulen": 16,
+    "toplam": 16
+   }
+  ],
+  "hayatta": []
+ },
+ "hakem": [],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [
+  ".usta_kabul/test_kabul_1.py::test_donusumde_dize_uzunlugu_degismez"
+ ],
+ "kabul_test_sayisi": 46,
+ "kabul_gecti": true,
+ "ozet": "kasa_cevir.py dosyasında turkce_buyut ve turkce_kucult fonksiyonlarını harf-harf sözlük eşlemesiyle yazdım (i→İ, ı→I, İ→i, I→ı, C/Ç ayrımı dahil). TypeError kontrolü en başta, uzunluk korunuyor, idempotent. test_kasa.py ile 10 pytest testi yazıp hepsini geçirdim.",
+ "adim": 5,
+ "yurutucu_token": {
+  "girdi": 12332,
+  "cikti": 8908
+ },
+ "yurutucu_usd": 0.0030147999999999998,
+ "bitirdi": true,
+ "sure_sn": 472.4,
+ "gizli": {
+  "gecti": true,
+  "gecen": 21,
+  "toplam": 21,
+  "cikti": ".....................                                                    [100%]\n21 passed in 0.11s\n"
+ }
+}

@@ -1,0 +1,24 @@
+{
+ "id": "a036",
+ "kip": "a",
+ "tekrar": 2,
+ "kategori": "CSV/JSON ile çalışan ve uç durumları çok olan veri işleme (BOM, ; ayırıcı, 1.234,56 sayı biçimi, boş/bozuk satır)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "envanter_denetim.py yazıldı: utf-8-sig ve noktalı virgüllü CSV/JSON okuma, Türkçe küçük harf çevrimi (I→ı, İ→i), binlik noktalı tam sayı ayrıştırma, 0 fark eşleşme sayacı, kod+Türkçe ad sıralı kod;fark çıktısı, dosya yokluğunda 1 ve ValueError'da 3 çıkış kodları; yalnızca standart kütüphane kullanıldı.",
+ "adim": 8,
+ "yurutucu_token": {
+  "girdi": 38932,
+  "cikti": 21506
+ },
+ "yurutucu_usd": 0.008194400000000001,
+ "bitirdi": true,
+ "sure_sn": 235.0,
+ "gizli": {
+  "gecti": false,
+  "gecen": 20,
+  "toplam": 21,
+  "cikti": "...................F.                                                    [100%]\n=================================== FAILURES ===================================\n_______________________ test20_kod_esitliginde_ad_sirasi _______________________\n\ntmp_path = PosixPath('/home/usta/is/3272a30b0a7d/.tmp/pytest-of-usta/pytest-0/test20_kod_esitliginde_ad_sira0')\n\n    def test20_kod_esitliginde_ad_sirasi(tmp_path):\n        e = tmp_path / \"env.csv\"; s = tmp_path / \"sayim.json\"; c = tmp_path / \"fark.csv\"\n        env_yaz(e, [[\"SILGI\", \"\\u015feftali\", \"5\"], [\"s\\u0131lg\\u0131\", \"\\u00e7ilek\", \"5\"]])\n        sayim_yaz(s, [{\"kod\": \"SILGI\", \"sayilan\": 5}])\n        r = calistir(e, s, c)\n        assert r.returncode == 0\n        rows, _ = cikti_oku(c)\n>       assert len(rows) == 2\nE       AssertionError: assert 1 == 2\nE        +  where 1 = len([{'fark': '-5', 'kod': 'SILGI'}])\n\n.gizli/test_gizli.py:211: AssertionError\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test20_kod_esitliginde_ad_sirasi - AssertionErro...\n1 failed, 20 passed in 3.04s\n"
+ }
+}

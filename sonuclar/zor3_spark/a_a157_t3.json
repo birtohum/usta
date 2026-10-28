@@ -1,0 +1,24 @@
+{
+ "id": "a157",
+ "kip": "a",
+ "tekrar": 3,
+ "kategori": "çok dosyalı küçük modül: iki-üç dosyaya bölünmüş, ortak hata sınıfları ve bir komut satırı girişi olan araç",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "hatalar.py, mermer.py ve cli.py yazıldı. Türkçe kimlik normalleştirme (i→İ), döndürmeli kesim hesabı (plaka+pay, taban bölme, büyük yönelim), hata önceliği ve CLI çıktı biçimi (ADET/HATA) doğrulandı.",
+ "adim": 9,
+ "yurutucu_token": {
+  "girdi": 31880,
+  "cikti": 41304
+ },
+ "yurutucu_usd": 0.0114488,
+ "bitirdi": true,
+ "sure_sn": 452.1,
+ "gizli": {
+  "gecti": false,
+  "gecen": 20,
+  "toplam": 21,
+  "cikti": "\n    def test_08_tam_esit_sigar():\n        s = BlokStogu()\n        s.blok_ekle(\"E\", 800, 600)\n>       assert s.kesim_hesapla(\"E\", 800, 600, 10) == 1\n\n.gizli/test_gizli.py:86: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nself = <mermer.BlokStogu object at 0x7d0665637680>, blok_id = 'E'\nplaka_en = 800, plaka_boy = 600, pay_mm = 10\n\n    def kesim_hesapla(self, blok_id: str, plaka_en: int, plaka_boy: int, pay_mm: int) -> int:\n        norm = _normalize_id(blok_id)\n        if (not _pozitif_tamsayi_mi(plaka_en)\n                or not _pozitif_tamsayi_mi(plaka_boy)\n                or not _pozitif_tamsayi_mi(pay_mm)):\n            raise GirdiHatasi(\"ölçüler pozitif tam sayı olmalı\")\n        if norm not in self._bloklar:\n            raise GirdiHatasi(\"blok bulunamadı\")\n        blok_en, blok_boy = self._bloklar[norm]\n        adet = _adet_hesapla(blok_en, blok_boy, plaka_en, plaka_boy, pay_mm)\n        if adet <= 0:\n>           raise SigdirilamazHatasi(\"plaka sığmıyor\")\nE           hatalar.SigdirilamazHatasi: plaka sığmıyor\n\nmermer.py:64: SigdirilamazHatasi\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_08_tam_esit_sigar - hatalar.SigdirilamazHat...\n1 failed, 20 passed in 0.34s\n"
+ }
+}

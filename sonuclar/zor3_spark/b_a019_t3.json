@@ -1,0 +1,24 @@
+{
+ "id": "a019",
+ "kip": "b",
+ "tekrar": 3,
+ "kategori": "Türkiye'ye özgü kimlik ve hesap numaraları (TC kimlik, VKN, IBAN, MERSİS, plaka, telefon) — birden çok kuralın birlikte uygulandığı",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": null,
+ "adim": 4,
+ "yurutucu_token": {
+  "girdi": 6360,
+  "cikti": 48000
+ },
+ "yurutucu_usd": 0.010236000000000002,
+ "bitirdi": false,
+ "sure_sn": 466.4,
+ "gizli": {
+  "gecti": false,
+  "gecen": 4,
+  "toplam": 21,
+  "cikti": "8bc68767d6/kimlik_araci.py': [Errno 2] No such file or directory\\n\").returncode\n\n.gizli/test_gizli.py:170: AssertionError\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_04_tc_valid_exit0 - assert 2 == 0\nFAILED .gizli/test_gizli.py::test_05_tc_invalid_exit1 - assert 2 == 1\nFAILED .gizli/test_gizli.py::test_06_vkn_valid_exit0 - assert 2 == 0\nFAILED .gizli/test_gizli.py::test_07_iban_valid_and_invalid - assert 2 == 0\nFAILED .gizli/test_gizli.py::test_08_mersis_valid_exit0 - assert 2 == 0\nFAILED .gizli/test_gizli.py::test_09_telefon_valid_and_invalid - assert 2 == 0\nFAILED .gizli/test_gizli.py::test_10_plaka_valid_exit0 - assert 2 == 0\nFAILED .gizli/test_gizli.py::test_11_plaka_province_boundaries - AssertionErr...\nFAILED .gizli/test_gizli.py::test_12_file_plain_text_format - assert 2 == 1\nFAILED .gizli/test_gizli.py::test_13_file_json_array - assert 2 == 0\nFAILED .gizli/test_gizli.py::test_14_file_trailing_spaces_ok - assert 2 == 0\nFAILED .gizli/test_gizli.py::test_15_file_inline_spaces_invalid - assert 2 == 1\nFAILED .gizli/test_gizli.py::test_16_single_and_file_same_result - assert 2 == 1\nFAILED .gizli/test_gizli.py::test_18_cikti_file_written - assert 2 == 0\nFAILED .gizli/test_gizli.py::test_19_turkish_I_distinction - assert 2 == 0\nFAILED .gizli/test_gizli.py::test_20_stdlib_only - FileNotFoundError: [Errno ...\nFAILED .gizli/test_gizli.py::test_21_utf8_without_json - assert 2 == 0\n17 failed, 4 passed in 1.32s\n"
+ }
+}

@@ -1,0 +1,24 @@
+{
+ "id": "a183",
+ "kip": "b",
+ "tekrar": 1,
+ "kategori": "CSV/JSON ile çalışan ve uç durumları çok olan veri işleme (BOM, ; ayırıcı, 1.234,56 sayı biçimi, boş/bozuk satır)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "un_kabul.py yazıldı: UnKabul sınıfı utf-8-sig/noktalı virgül okuma, parti_id tekilleme, Decimal Türkçe sayı ayrıştırma, bozuk sayacı, FileNotFoundError/ValueError sırası, %14,50 nem eşiği, ROUND_HALF_UP ortalama, Türkçe küçük harf gruplama (lower yok), bilinmeyen grubu, sıralı puanla. pytest ile 4 test geçti.",
+ "adim": 10,
+ "yurutucu_token": {
+  "girdi": 38179,
+  "cikti": 42749
+ },
+ "yurutucu_usd": 0.012367699999999999,
+ "bitirdi": true,
+ "sure_sn": 471.5,
+ "gizli": {
+  "gecti": true,
+  "gecen": 20,
+  "toplam": 20,
+  "cikti": "....................                                                     [100%]\n20 passed in 0.20s\n"
+ }
+}

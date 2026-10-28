@@ -1,0 +1,24 @@
+{
+ "id": "a046",
+ "kip": "b",
+ "tekrar": 3,
+ "kategori": "tarih ve saat: resmî tatiller parametreyle, iş günü hesabı, Türkiye saat dilimi (UTC+3, yaz saati yok), gün/ay adları Türkçe",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "dava_sure.py içinde DavaTakvimi sınıfı yazıldı: tatiller kümede tutularak yinelenenler tek sayıldı, son_gun başlangıcın sonraki gününden itibaren hafta sonu ve tatilleri atlayarak sayar, sure=0 ise iş günüyse aynen değilse sonraki iş gününe öteler, biçim denetimi önce yapılıp hatada ValueError ve sure int değilse TypeError atılır, gun_adi Türkçe tam ad döndürür, Türkçe i->İ / ı->I çevirisi yardımcı fonksiyonla uygulandı, yalnızca datetime kullanıldı ve zaman okunmadı. pytest ile 15 test geçti.",
+ "adim": 6,
+ "yurutucu_token": {
+  "girdi": 25401,
+  "cikti": 15106
+ },
+ "yurutucu_usd": 0.005561300000000001,
+ "bitirdi": true,
+ "sure_sn": 167.1,
+ "gizli": {
+  "gecti": true,
+  "gecen": 22,
+  "toplam": 22,
+  "cikti": "......................                                                   [100%]\n22 passed in 0.07s\n"
+ }
+}

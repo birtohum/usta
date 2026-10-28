@@ -1,0 +1,24 @@
+{
+ "id": "a057",
+ "kip": "b",
+ "tekrar": 1,
+ "kategori": "Türkçe büyük/küçük harf (İ/i, I/ı), Türk alfabesiyle sıralama, sayıyı yazıya çevirme, ünlü uyumuna göre ek",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "yonetabela.py içinde YonEkiUretici.ekle yazıldı: kalın/ince uyumu, y/n buffer, özel isimde kesme, hata sıralaması uygulandı; pytest ile 12 test geçti.",
+ "adim": 7,
+ "yurutucu_token": {
+  "girdi": 19163,
+  "cikti": 25885
+ },
+ "yurutucu_usd": 0.0070933,
+ "bitirdi": true,
+ "sure_sn": 211.6,
+ "gizli": {
+  "gecti": true,
+  "gecen": 22,
+  "toplam": 22,
+  "cikti": "......................                                                   [100%]\n22 passed in 0.03s\n"
+ }
+}

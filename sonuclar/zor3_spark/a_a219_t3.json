@@ -1,0 +1,24 @@
+{
+ "id": "a219",
+ "kip": "a",
+ "tekrar": 3,
+ "kategori": "tarih ve saat: resmî tatiller parametreyle, iş günü hesabı, Türkiye saat dilimi (UTC+3, yaz saati yok), gün/ay adları Türkçe",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "etiket_cli.py yazıldı: --tarih YYYY-AA-GG zorunlu, --tatiller dosyası (boş olabilir, verilmezse boş küme), --sonraki-isgunu bayrağı ile Cumartesi/Pazar ve tatil günlerinde ileri kaydırma yapar. Tarihler zoneinfo Europe/Istanbul ile bilinçli hale getirilir, başlık \"gün ay yıl, gün adı\" biçiminde sabit Türkçe adlarla üretilir, tek satır stdout'a yazılır; boş/geçersiz tarih ve eksik bayrakta stderr'e hata + çıkış kodu 2 verilir. Yalnızca standart kütüphane (argparse, sys, re, datetime, zoneinfo) kullanıldı, ağ/rastgelelik/şimdiki zaman okuma yok.",
+ "adim": 12,
+ "yurutucu_token": {
+  "girdi": 45897,
+  "cikti": 16653
+ },
+ "yurutucu_usd": 0.007920300000000002,
+ "bitirdi": true,
+ "sure_sn": 203.2,
+ "gizli": {
+  "gecti": true,
+  "gecen": 20,
+  "toplam": 20,
+  "cikti": "....................                                                     [100%]\n20 passed in 1.53s\n"
+ }
+}

@@ -1,0 +1,26 @@
+{
+ "id": "a169",
+ "kip": "c",
+ "tekrar": 2,
+ "kategori": "KDV, tevkifat, stopaj, taksit ve kuruş yuvarlama (Decimal, ROUND_HALF_UP, satır bazında ve toplamda yuvarlama farkı)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.00027840000000000005,
+ "arayuz": "karaman_firin.py içinde firin_kdv_dagit(sepet)->dict; dönen dict anahtarları brut_toplam, matrah_toplam, kdv_toplam, fark (hepsi Decimal) ve satirlar (list); satirlar her öğesi urun, brut, matrah, kdv anahtarlı dict.",
+ "kabul_gecti": false,
+ "dogrulanamadi": true,
+ "ozet": "karaman_firin.py içinde firin_kdv_dagit yazıldı: Decimal ile brüt üzerinden matrah ayrıştırma, satır KDV farkının en yüksek brütlü (eşitlikte Türkçe küçük harf alfabetik ilk) satıra eklenmesi, 1000,00 TL sınırı aşılınca 5,00 TL indirim, TypeError öncelikli denetimler. pytest ile 7 test geçti.",
+ "adim": 5,
+ "yurutucu_token": {
+  "girdi": 15512,
+  "cikti": 21962
+ },
+ "yurutucu_usd": 0.005943600000000001,
+ "sure_sn": 494.4,
+ "gizli": {
+  "gecti": false,
+  "gecen": 18,
+  "toplam": 20,
+  "cikti": ".........FF.........                                                     [100%]\n=================================== FAILURES ===================================\n_________________________ test_indirim_esik_uygulanmaz _________________________\n\n    def test_indirim_esik_uygulanmaz():\n        r = firin_kdv_dagit([{'urun': 'Ekmek', 'adet': 100, 'etiket_fiyat': '10.00', 'kdv_oran': 10}])\n        assert r['brut_toplam'] == Decimal('1000.00')\n>       assert r['indirim'] == Decimal('0.00')\nE       KeyError: 'indirim'\n\n.gizli/test_gizli.py:85: KeyError\n_________________________ test_indirim_bir_kurus_asma __________________________\n\n    def test_indirim_bir_kurus_asma():\n        r = firin_kdv_dagit([{'urun': 'Ekmek', 'adet': 1, 'etiket_fiyat': '1000.01', 'kdv_oran': 10}])\n        assert r['brut_toplam'] == Decimal('995.01')\n>       assert r['indirim'] == Decimal('5.00')\nE       KeyError: 'indirim'\n\n.gizli/test_gizli.py:90: KeyError\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_indirim_esik_uygulanmaz - KeyError: 'indirim'\nFAILED .gizli/test_gizli.py::test_indirim_bir_kurus_asma - KeyError: 'indirim'\n2 failed, 18 passed in 0.10s\n"
+ }
+}

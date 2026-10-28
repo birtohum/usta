@@ -1,0 +1,58 @@
+{
+ "id": "a090",
+ "kip": "c",
+ "tekrar": 1,
+ "kategori": "Türkçe büyük/küçük harf (İ/i, I/ı), Türk alfabesiyle sıralama, sayıyı yazıya çevirme, ünlü uyumuna göre ek",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": false,
+   "toplam": 4,
+   "basarili": 0
+  },
+  {
+   "gecti": true,
+   "toplam": 23,
+   "basarili": 23
+  }
+ ],
+ "spark_usd": 0.0347671,
+ "arayuz": "",
+ "kabul_yazar": 1,
+ "mutasyon": {
+  "mutant": 16,
+  "ham_mutant": 16,
+  "turlar": [
+   {
+    "oldurulen": 13,
+    "toplam": 16
+   },
+   {
+    "oldurulen": 16,
+    "toplam": 16
+   }
+  ],
+  "hayatta": []
+ },
+ "hakem": [],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [],
+ "kabul_test_sayisi": 23,
+ "kabul_gecti": true,
+ "ozet": "irsaliye.py yazıldı: parca_aciklamasi(urun, adet, kisi) sayı-yazımı (100→\"yüz\"), son ünlüye göre ı/u/i/ü seçimi, ünsüz bitiminde \"s\" tamponu, pçtk'de yumuşamasız koruma, tek cümle noktalı çıktı; tip hatası önce TypeError, sonra ValueError kontrolleri. Not: görev metnindeki \"küçük harfle aynen korunur\" ifadesi, kabul testlerinin \"Vida\"/\"KITAP\" aynen korunmalı beklentisiyle çeliştiğinden \"aynen koru (lower yapma)\" olarak yorumlandı ve testlere uyuldu. Kabul testleri 23/23 ve kendi pytest testlerim geçiyor.",
+ "adim": 11,
+ "yurutucu_token": {
+  "girdi": 37176,
+  "cikti": 57650
+ },
+ "yurutucu_usd": 0.015247600000000002,
+ "bitirdi": true,
+ "sure_sn": 1117.7,
+ "gizli": {
+  "gecti": false,
+  "gecen": 6,
+  "toplam": 22,
+  "cikti": "        - kitapsı bir adet.\nE         + bir kitapsı.\n\n.gizli/test_gizli.py:98: AssertionError\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_benim_unlu - AssertionError: assert 'bir ku...\nFAILED .gizli/test_gizli.py::test_senin_unlu - AssertionError: assert 'iki ku...\nFAILED .gizli/test_gizli.py::test_onun_unlu - AssertionError: assert 'üç kutu...\nFAILED .gizli/test_gizli.py::test_benim_unsuz_s - AssertionError: assert 'iki...\nFAILED .gizli/test_gizli.py::test_onun_unsuz_s - AssertionError: assert 'iki ...\nFAILED .gizli/test_gizli.py::test_senin_unsuz_s - AssertionError: assert 'on ...\nFAILED .gizli/test_gizli.py::test_araba_a_uyumu - AssertionError: assert 'bir...\nFAILED .gizli/test_gizli.py::test_kil_uyumu - AssertionError: assert 'bir kıl...\nFAILED .gizli/test_gizli.py::test_kol_o_uyumu - AssertionError: assert 'beş k...\nFAILED .gizli/test_gizli.py::test_kilit_i_uyumu - AssertionError: assert 'yed...\nFAILED .gizli/test_gizli.py::test_yuz_yalin - AssertionError: assert 'yüz vid...\nFAILED .gizli/test_gizli.py::test_yuz_bir - AssertionError: assert 'yüz bir v...\nFAILED .gizli/test_gizli.py::test_iki_yuz - AssertionError: assert 'iki yüz v...\nFAILED .gizli/test_gizli.py::test_dokuz_yuz - AssertionError: assert 'dokuz y...\nFAILED .gizli/test_gizli.py::test_nokta_tek_cumle - AssertionError: assert 'o...\nFAILED .gizli/test_gizli.py::test_yumusama_yok - AssertionError: assert 'bir ...\n16 failed, 6 passed in 0.16s\n"
+ }
+}

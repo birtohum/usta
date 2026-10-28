@@ -1,0 +1,53 @@
+{
+ "id": "a057",
+ "kip": "c",
+ "tekrar": 2,
+ "kategori": "Türkçe büyük/küçük harf (İ/i, I/ı), Türk alfabesiyle sıralama, sayıyı yazıya çevirme, ünlü uyumuna göre ek",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 58,
+   "basarili": 58
+  }
+ ],
+ "spark_usd": 0.0091322,
+ "arayuz": "",
+ "kabul_yazar": 3,
+ "mutasyon": {
+  "mutant": 14,
+  "ham_mutant": 14,
+  "turlar": [
+   {
+    "oldurulen": 13,
+    "toplam": 14
+   },
+   {
+    "oldurulen": 14,
+    "toplam": 14
+   }
+  ],
+  "hayatta": []
+ },
+ "hakem": [],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [],
+ "kabul_test_sayisi": 58,
+ "kabul_gecti": true,
+ "ozet": "yonetabela.py içinde YonEkiUretici.ekle(isim, hal, ozel) yazıldı: son ünlüye göre kalın/ince uyumu, ünlüyle bitenlerde y/d/n kaynaştırma, özel isimde kesme işareti, tip-önce hata sırası, 11 pytest testi geçti.",
+ "adim": 8,
+ "yurutucu_token": {
+  "girdi": 28551,
+  "cikti": 19458
+ },
+ "yurutucu_usd": 0.006746700000000001,
+ "bitirdi": true,
+ "sure_sn": 494.6,
+ "gizli": {
+  "gecti": true,
+  "gecen": 22,
+  "toplam": 22,
+  "cikti": "......................                                                   [100%]\n22 passed in 0.07s\n"
+ }
+}

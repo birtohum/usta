@@ -1,0 +1,24 @@
+{
+ "id": "a184",
+ "kip": "b",
+ "tekrar": 3,
+ "kategori": "KDV, tevkifat, stopaj, taksit ve kuruş yuvarlama (Decimal, ROUND_HALF_UP, satır bazında ve toplamda yuvarlama farkı)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "bartin_kereste.py içinde kereste_taksitlendir fonksiyonu yazıldı: Decimal ile KDV dahil brütten net matrah ayrıştırma (ROUND_HALF_UP), KDV=brüt-net, net üzerinden tek seferlik vade farkı, taksitlere bölüp her taksidi yuvarlama ve son taksitle denkleştirme, taksit=1'de vade sıfır, boş/sıfır brütte tüm sıfırlar, Türkçe küçük harf çevrimi (I→ı, İ→i) ve kararlı sıralama, önce tip sonra taksit aralığı (1-12) sonra negatif denetimi. test_bartin.py ile 16 pytest testi geçiyor.",
+ "adim": 10,
+ "yurutucu_token": {
+  "girdi": 74355,
+  "cikti": 29041
+ },
+ "yurutucu_usd": 0.0132437,
+ "bitirdi": true,
+ "sure_sn": 326.4,
+ "gizli": {
+  "gecti": false,
+  "gecen": 0,
+  "toplam": 2,
+  "cikti": "\n==================================== ERRORS ====================================\n____________________ ERROR collecting .gizli/test_gizli.py _____________________\nImportError while importing test module '/home/usta/is/956ef620b2cb/.gizli/test_gizli.py'.\nHint: make sure your test modules/packages have valid Python names.\nTraceback:\n/usr/lib/python3.12/importlib/__init__.py:90: in import_module\n    return _bootstrap._gcd_import(name[level:], package, level)\n.gizli/test_gizli.py:4: in <module>\n    from bartin_kereste import kereste_taksitlendir, _turkce_kucuk_harf, musteri_unvan_sirala\nE   ImportError: cannot import name '_turkce_kucuk_harf' from 'bartin_kereste' (/home/usta/is/956ef620b2cb/bartin_kereste.py). Did you mean: 'turkce_kucuk_harf'?\n=========================== short test summary info ============================\nERROR .gizli/test_gizli.py\n!!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!\n1 error in 0.08s\n"
+ }
+}

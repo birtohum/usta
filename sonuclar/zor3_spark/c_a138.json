@@ -1,0 +1,86 @@
+{
+ "id": "a138",
+ "kip": "c",
+ "tekrar": 1,
+ "kategori": "CSV/JSON ile çalışan ve uç durumları çok olan veri işleme (BOM, ; ayırıcı, 1.234,56 sayı biçimi, boş/bozuk satır)",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": false,
+   "toplam": 29,
+   "basarili": 28
+  },
+  {
+   "gecti": false,
+   "toplam": 29,
+   "basarili": 28,
+   "geri_alindi": true
+  }
+ ],
+ "spark_usd": 0.031720500000000006,
+ "arayuz": "",
+ "kabul_yazar": 2,
+ "mutasyon": {
+  "mutant": 15,
+  "ham_mutant": 15,
+  "turlar": [
+   {
+    "oldurulen": 9,
+    "toplam": 15
+   },
+   {
+    "oldurulen": 9,
+    "toplam": 15
+   },
+   {
+    "oldurulen": 9,
+    "toplam": 15
+   }
+  ],
+  "hayatta": [
+   "(1) Stok CSV utf-8-sig ile okunmali; BOM isaretini yok sayma gereksinimini cigner",
+   "(1) Bos satirlar yok sayilmali; bos satirlari isleme sokar",
+   "(2) Negatif miktarli satir bozuk sayilip atlanmali; negatif fiyati kabul eder",
+   "(4) Stoga tam esit gereksinim yeterli sayilmali; esitligi yetersiz sayar",
+   "(4) Recetedeki her malzeme icin gerekli miktar adet ile carpilmali; carpmayi atlar",
+   "(5) Toplam yalnizca yarim yukari iki ondaliga yuvarlanmali; yanlis yuvarlama yonu kullanir"
+  ]
+ },
+ "hakem": [
+  {
+   "test": ".usta_kabul/test_kabul_2.py::test_g7_hic_gecerli_satir_sifir_uretim_basarisiz",
+   "karar": "gerekli",
+   "gerekce": "Görev (7) hiç geçerli satır yoksa üretimin başarısız sayılacağını açıkça yazıyor ve boş reçetede KeyError çelişkisi yok.",
+   "tur": 1
+  },
+  {
+   "test": ".usta_kabul/test_kabul_3.py::test_hic_gecerli_satir_yoksa_sifir_ve_basarisiz",
+   "karar": "belirsiz",
+   "gerekce": "(7) başarısız dönüş ile (8) bilinmeyen malzemede KeyError çelişiyor ve öncelik açıkça belirtilmemiş.",
+   "tur": 1
+  }
+ ],
+ "geri_alma": 1,
+ "inceleme": null,
+ "iptal_edilen_test": [
+  ".usta_kabul/test_kabul_2.py::test_g3_isim_normalizasyon_toplama",
+  ".usta_kabul/test_kabul_3.py::test_hic_gecerli_satir_yoksa_sifir_ve_basarisiz"
+ ],
+ "kabul_test_sayisi": 29,
+ "kabul_gecti": false,
+ "ozet": null,
+ "adim": 21,
+ "yurutucu_token": {
+  "girdi": 234237,
+  "cikti": 60028
+ },
+ "yurutucu_usd": 0.035429300000000004,
+ "bitirdi": false,
+ "sure_sn": 1346.1,
+ "gizli": {
+  "gecti": false,
+  "gecen": 7,
+  "toplam": 20,
+  "cikti": "========\n.gizli/test_gizli.py:191\n  /home/usta/is/04996d5f4428/.gizli/test_gizli.py:191: SyntaxWarning: invalid escape sequence '\\.'\n    for yasak in ['socket', 'requests', 'urllib', 'random', 'import time', 'import datetime', 'os\\.system', 'subprocess']:\n\n-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_csv_bom_noktali_virgul_baslik_bos_satir - V...\nFAILED .gizli/test_gizli.py::test_turkce_sayi_cozumleme - ValueError: baslik ...\nFAILED .gizli/test_gizli.py::test_malzeme_normalizasyon_toplama - ValueError:...\nFAILED .gizli/test_gizli.py::test_recete_adet_carpimi - ValueError: baslik ha...\nFAILED .gizli/test_gizli.py::test_tam_esit_yeterli - ValueError: baslik hatasi\nFAILED .gizli/test_gizli.py::test_yetersizde_stok_dusmez - ValueError: baslik...\nFAILED .gizli/test_gizli.py::test_uretim_dusme_ve_maliyet - ValueError: basli...\nFAILED .gizli/test_gizli.py::test_maliyet_yarim_yukari - ValueError: baslik h...\nFAILED .gizli/test_gizli.py::test_maliyet_sadece_toplam_yuvarlanir - ValueErr...\nFAILED .gizli/test_gizli.py::test_donus_anahtarlari - ValueError: baslik hatasi\nFAILED .gizli/test_gizli.py::test_basarisiz_maliyet_sifir_kalan_kopya - Value...\nFAILED .gizli/test_gizli.py::test_gecersiz_stok_sifir_uretim_basarisiz - Valu...\nFAILED .gizli/test_gizli.py::test_bilinmeyen_malzeme - ValueError: baslik hatasi\n13 failed, 7 passed, 1 warning in 0.84s\n"
+ }
+}

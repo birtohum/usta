@@ -1,0 +1,24 @@
+{
+ "id": "a180",
+ "kip": "a",
+ "tekrar": 2,
+ "kategori": "Türkçe büyük/küçük harf (İ/i, I/ı), Türk alfabesiyle sıralama, sayıyı yazıya çevirme, ünlü uyumuna göre ek",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "tarti.py yazıldı: --musteri/--kilo/--kasa bayraklarını okur, eksik bayrağı önce denetler, AD'yi Türkçe başlık biçimine çevirir (ı/I, i/İ), boş AD'de ValueError ile 2 koduyla çıkar, KILO'yu Decimal ile tip sonra 0-5000 aralığı denetleyip ROUND_HALF_UP ile 2 ondalığa yuvarlar, rakamla ve Türkçe sözcükle (bin'de birsiz, sıfır destekli) yazar, KASA'yı tip sonra 1-200 aralığında denetler; çıktı `Sayın AD: SS.SS kilogram (yazıyla) ve K adet kasa` tek satırıdır. Yalnızca sys+decimal kullanıldı.",
+ "adim": 8,
+ "yurutucu_token": {
+  "girdi": 39402,
+  "cikti": 25058
+ },
+ "yurutucu_usd": 0.0089518,
+ "bitirdi": true,
+ "sure_sn": 321.8,
+ "gizli": {
+  "gecti": true,
+  "gecen": 23,
+  "toplam": 23,
+  "cikti": ".......................                                                  [100%]\n23 passed in 0.49s\n"
+ }
+}

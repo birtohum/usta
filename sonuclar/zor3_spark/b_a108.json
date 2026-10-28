@@ -1,0 +1,24 @@
+{
+ "id": "a108",
+ "kip": "b",
+ "tekrar": 1,
+ "kategori": "CSV/JSON ile çalışan ve uç durumları çok olan veri işleme (BOM, ; ayırıcı, 1.234,56 sayı biçimi, boş/bozuk satır)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "yem_uretim.py içinde parti_kontrol yazıldı: utf-8-sig/BOM, `;` ayırıcı, boş satır atlama, Türkçe Decimal çözümleme, ROUND_HALF_UP yuvarlama, HATALI/SAPMA/OK mantığı, Türkçe duyarsız sıralama, hata öncelikleri uygulandı. 11 pytest testi geçiyor.",
+ "adim": 12,
+ "yurutucu_token": {
+  "girdi": 64890,
+  "cikti": 58196
+ },
+ "yurutucu_usd": 0.0181282,
+ "bitirdi": true,
+ "sure_sn": 658.7,
+ "gizli": {
+  "gecti": true,
+  "gecen": 21,
+  "toplam": 21,
+  "cikti": ".....................                                                    [100%]\n21 passed in 0.16s\n"
+ }
+}

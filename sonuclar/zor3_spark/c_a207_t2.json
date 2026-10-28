@@ -1,0 +1,56 @@
+{
+ "id": "a207",
+ "kip": "c",
+ "tekrar": 2,
+ "kategori": "CSV/JSON ile çalışan ve uç durumları çok olan veri işleme (BOM, ; ayırıcı, 1.234,56 sayı biçimi, boş/bozuk satır)",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 48,
+   "basarili": 48
+  }
+ ],
+ "spark_usd": 0.0127203,
+ "arayuz": "",
+ "kabul_yazar": 3,
+ "mutasyon": {
+  "mutant": 14,
+  "ham_mutant": 15,
+  "turlar": [
+   {
+    "oldurulen": 12,
+    "toplam": 14
+   },
+   {
+    "oldurulen": 14,
+    "toplam": 14
+   }
+  ],
+  "hayatta": []
+ },
+ "hakem": [],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [
+  ".usta_kabul/test_kabul_2.py::test_turkce_kucuk_harf_birlestirme_ilk_yazim",
+  ".usta_kabul/test_kabul_3.py::test_turkce_kucuk_harf_birlestirme"
+ ],
+ "kabul_test_sayisi": 48,
+ "kabul_gecti": true,
+ "ozet": "balik_kabul.py içinde mutabakat() yazıldı: utf-8-sig + `;` CSV okuma, boş satır atlama, Türkçe sayı ayrıştırma/Decimal, GG.AA.YYYY tarih doğrulama, BOM'lu JSON fiyat okuma, I->ı/İ->i normalizasyon, ilk yazım koruma, ROUND_HALF_UP Türkçe biçimlendirme, azalan toplam + Türkçe alfabetik sıralama, sınır=1000 sayımı, FileNotFoundError/ValueError önceliği. pytest ile 15 test geçti.",
+ "adim": 7,
+ "yurutucu_token": {
+  "girdi": 47303,
+  "cikti": 31449
+ },
+ "yurutucu_usd": 0.0110201,
+ "bitirdi": true,
+ "sure_sn": 399.8,
+ "gizli": {
+  "gecti": true,
+  "gecen": 21,
+  "toplam": 21,
+  "cikti": ".....................                                                    [100%]\n21 passed in 0.16s\n"
+ }
+}

@@ -1,0 +1,67 @@
+{
+ "id": "a066",
+ "kip": "c",
+ "tekrar": 2,
+ "kategori": "CSV/JSON ile çalışan ve uç durumları çok olan veri işleme (BOM, ; ayırıcı, 1.234,56 sayı biçimi, boş/bozuk satır)",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": false,
+   "toplam": 2,
+   "basarili": 0
+  },
+  {
+   "gecti": true,
+   "toplam": 15,
+   "basarili": 15
+  }
+ ],
+ "spark_usd": 0.0314735,
+ "arayuz": "",
+ "kabul_yazar": 1,
+ "mutasyon": {
+  "mutant": 15,
+  "ham_mutant": 16,
+  "turlar": [
+   {
+    "oldurulen": 11,
+    "toplam": 15
+   },
+   {
+    "oldurulen": 11,
+    "toplam": 15
+   },
+   {
+    "oldurulen": 11,
+    "toplam": 15
+   }
+  ],
+  "hayatta": [
+   "(3) bozuk JSON iceriginde JSONDecodeError gereksinimini cigner, bos dosyayi yutar",
+   "(6) hata onceligi CSV yoklugu sonra JSON yoklugu sirasini bozar",
+   "(7) CSV yalnizca baslik iceriyorsa tum toplamlari sifir gereksinimini cigner",
+   "(9) esitlikte Turkce alfabetik artan sira gereksinimini cigner"
+  ]
+ },
+ "hakem": [],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [],
+ "kabul_test_sayisi": 15,
+ "kabul_gecti": true,
+ "ozet": "otel_doluluk.py yazıldı: analiz_et CSV'yi utf-8-sig ve noktalı virgülle okur, binlik/ondalık dönüşümü Decimal ile yapıp ROUND_HALF_UP uygular, boş satır atlar, sütun hatasında ValueError, bozuk JSON'da JSONDecodeError verir, Türkçe küçük harfle gruplar, 7+ geceyi uzun sayar, hata önceliğine uyar, başlık-only durumda sıfır döner, gelir/gece/Türkçe-alfabe sıralaması yapar ve ilk yazımı korur. Kabul testleri 15/15 geçti.",
+ "adim": 12,
+ "yurutucu_token": {
+  "girdi": 57513,
+  "cikti": 58493
+ },
+ "yurutucu_usd": 0.017449899999999997,
+ "bitirdi": true,
+ "sure_sn": 1185.7,
+ "gizli": {
+  "gecti": false,
+  "gecen": 21,
+  "toplam": 23,
+  "cikti": "tance(actual, (Complex, Decimal))\n        ):\n            return False\n    \n        # Allow the user to control whether NaNs are considered equal to each\n        # other or not.  The abs() calls are for compatibility with complex\n        # numbers.\n        if math.isnan(abs(self.expected)):  # type: ignore[arg-type]\n            return self.nan_ok and math.isnan(abs(actual))  # type: ignore[arg-type]\n    \n        # Infinity shouldn't be approximately equal to anything but itself, but\n        # if there's a relative tolerance, it will be infinite and infinity\n        # will seem approximately equal to everything.  The equal-to-itself\n        # case would have been short circuited above, so here we can just\n        # return false if the expected value is infinite.  The abs() call is\n        # for compatibility with complex numbers.\n        if math.isinf(abs(self.expected)):  # type: ignore[arg-type]\n            return False\n    \n        # Return true if the two numbers are within the tolerance.\n>       result: bool = abs(self.expected - actual) <= self.tolerance\nE       TypeError: unsupported operand type(s) for -: 'float' and 'decimal.Decimal'\n\n/usr/lib/python3/dist-packages/_pytest/python_api.py:466: TypeError\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_binlik_ondalik_ayristirma - TypeError: unsu...\nFAILED .gizli/test_gizli.py::test_round_half_up - TypeError: unsupported oper...\n2 failed, 21 passed in 0.14s\n"
+ }
+}

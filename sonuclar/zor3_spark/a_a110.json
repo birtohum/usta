@@ -1,0 +1,24 @@
+{
+ "id": "a110",
+ "kip": "a",
+ "tekrar": 1,
+ "kategori": "Türkçe büyük/küçük harf (İ/i, I/ı), Türk alfabesiyle sıralama, sayıyı yazıya çevirme, ünlü uyumuna göre ek",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "karsilama.py oluşturuldu: iyelikli_yonelme son ünlüye göre ınız/iniz/unuz/ünüz seçip sessizde doğrudan, seslide n kaynaştırmasıyla birleştiriyor ve ınız grubuna a diğerlerine e yönelme eki getiriyor (otel→otelinize, oda→odanıza, a→anıza, e→enize); karsilama_cumlesi önce TypeError sonra ValueError denetimi yapıp ismi normalize ederek \"Sayın {isim}, odanıza hoş geldiniz\" döndürüyor. Standart kütüphane dışı, rastgelelik/zaman kullanımı yok.",
+ "adim": 5,
+ "yurutucu_token": {
+  "girdi": 12561,
+  "cikti": 10674
+ },
+ "yurutucu_usd": 0.0033909,
+ "bitirdi": true,
+ "sure_sn": 99.0,
+ "gizli": {
+  "gecti": true,
+  "gecen": 22,
+  "toplam": 22,
+  "cikti": "......................                                                   [100%]\n22 passed in 0.05s\n"
+ }
+}

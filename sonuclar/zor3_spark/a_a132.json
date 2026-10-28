@@ -1,0 +1,24 @@
+{
+ "id": "a132",
+ "kip": "a",
+ "tekrar": 1,
+ "kategori": "çok dosyalı küçük modül: iki-üç dosyaya bölünmüş, ortak hata sınıfları ve bir komut satırı girişi olan araç",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "hatalar.py, yem.py ve cli.py yazıldı; karışım hesabı, açgözlü paketleme, Türkçe duyarsız ad karşılaştırma ve CLI çıktısı doğrulandı.",
+ "adim": 19,
+ "yurutucu_token": {
+  "girdi": 87102,
+  "cikti": 87531
+ },
+ "yurutucu_usd": 0.026216399999999997,
+ "bitirdi": true,
+ "sure_sn": 968.3,
+ "gizli": {
+  "gecti": false,
+  "gecen": 20,
+  "toplam": 22,
+  "cikti": "\nkaz_sayisi = 0, gun_sayisi = 10, arpa_stok_kg = 0, bugday_stok_kg = 100\n\n    def karisim_hesapla(kaz_sayisi: int, gun_sayisi: int, arpa_stok_kg: int, bugday_stok_kg: int) -> dict[str, int]:\n        for v, ad in ((kaz_sayisi, \"kaz\"), (gun_sayisi, \"gun\"), (arpa_stok_kg, \"arpa\"), (bugday_stok_kg, \"bugday\")):\n            _int_kontrol(v, ad)\n        if not (0 <= kaz_sayisi <= 2000):\n            raise HataliMiktarHatasi(\"kaz hatali\")\n        if not (1 <= gun_sayisi <= 180):\n            raise HataliMiktarHatasi(\"gun hatali\")\n        if not (0 <= arpa_stok_kg <= 100000):\n            raise HataliMiktarHatasi(\"arpa hatali\")\n        if not (0 <= bugday_stok_kg <= 100000):\n            raise HataliMiktarHatasi(\"bugday hatali\")\n        if arpa_stok_kg < bugday_stok_kg:\n>           raise HataliOranHatasi(\"oran hatali\")\nE           hatalar.HataliOranHatasi: oran hatali\n\nyem.py:53: HataliOranHatasi\n_________________________ test_yem_adi_turkce_donusum __________________________\n\n    def test_yem_adi_turkce_donusum():\n>       assert yem.tr_kucuk_harf('I') == 'ı'\nE       AttributeError: module 'yem' has no attribute 'tr_kucuk_harf'\n\n.gizli/test_gizli.py:82: AttributeError\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_karisim_sifir_kaz - hatalar.HataliOranHatas...\nFAILED .gizli/test_gizli.py::test_yem_adi_turkce_donusum - AttributeError: mo...\n2 failed, 20 passed in 0.32s\n"
+ }
+}

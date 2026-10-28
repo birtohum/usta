@@ -1,0 +1,24 @@
+{
+ "id": "a130",
+ "kip": "b",
+ "tekrar": 3,
+ "kategori": "Türkçe büyük/küçük harf (İ/i, I/ı), Türk alfabesiyle sıralama, sayıyı yazıya çevirme, ünlü uyumuna göre ek",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "menu.py içinde tr_kucuk, belirtme_eki, fiyat_yaziya ve sirali_menu yazıldı; pytest ile 8 test geçti.",
+ "adim": 7,
+ "yurutucu_token": {
+  "girdi": 27699,
+  "cikti": 15961
+ },
+ "yurutucu_usd": 0.0059621000000000006,
+ "bitirdi": true,
+ "sure_sn": 175.9,
+ "gizli": {
+  "gecti": false,
+  "gecen": 21,
+  "toplam": 22,
+  "cikti": "..............F.......                                                   [100%]\n=================================== FAILURES ===================================\n_______________________________ test_fiyat_sinir _______________________________\n\n    def test_fiyat_sinir():\n>       assert fiyat_yaziya(0, 99) == \"s\\u0131f\\u0131r lira doksan dokuz kuru\\u015f\"\nE       AssertionError: assert 'doksan dokuz kuruş' == 'sıfır lira d...n dokuz kuruş'\nE         - sıfır lira doksan dokuz kuruş\nE         ? -----------\nE         + doksan dokuz kuruş\n\n.gizli/test_gizli.py:65: AssertionError\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_fiyat_sinir - AssertionError: assert 'doksa...\n1 failed, 21 passed in 0.09s\n"
+ }
+}

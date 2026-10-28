@@ -1,0 +1,59 @@
+{
+ "id": "a147",
+ "kip": "c",
+ "tekrar": 2,
+ "kategori": "çok dosyalı küçük modül: iki-üç dosyaya bölünmüş, ortak hata sınıfları ve bir komut satırı girişi olan araç",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 23,
+   "basarili": 23
+  }
+ ],
+ "spark_usd": 0.0310314,
+ "arayuz": "hatalar.py: HataliAcilikHatasi(ValueError), HataliGramajHatasi(ValueError), HedefDisiHatasi(ValueError); isot.py: Harman sınıfı parametresiz kurucu Harman(), parti_ekle(parti_kodu: str, agirlik_gram: int, acilik: int) -> None, harman_acilik(parti_kodlari: list[str]) -> int, paket_sayisi(hedef_acilik: int, paket_gram: int) -> int; cli.py: python cli.py --komut paket --hedef <int> --paket <int> --depo <json>",
+ "kabul_yazar": 1,
+ "mutasyon": {
+  "mutant": 15,
+  "ham_mutant": 15,
+  "turlar": [
+   {
+    "oldurulen": 12,
+    "toplam": 15
+   },
+   {
+    "oldurulen": 14,
+    "toplam": 15
+   },
+   {
+    "oldurulen": 14,
+    "toplam": 15
+   }
+  ],
+  "hayatta": [
+   "bos liste harman icin gecersizdir"
+  ]
+ },
+ "hakem": [],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [],
+ "kabul_test_sayisi": 23,
+ "kabul_gecti": true,
+ "ozet": "hatalar.py, isot.py, cli.py yazıldı; Türkçe duyarsız kod doğrulama, ağırlıklı ortalama (ROUND_HALF_UP), %3 fire ve ±500 bandı uygulandı; pytest ile 11 test geçti.",
+ "adim": 10,
+ "yurutucu_token": {
+  "girdi": 43323,
+  "cikti": 35684
+ },
+ "yurutucu_usd": 0.011469100000000001,
+ "bitirdi": true,
+ "sure_sn": 762.7,
+ "gizli": {
+  "gecti": true,
+  "gecen": 20,
+  "toplam": 20,
+  "cikti": "....................                                                     [100%]\n20 passed in 0.15s\n"
+ }
+}

@@ -1,0 +1,24 @@
+{
+ "id": "a148",
+ "kip": "b",
+ "tekrar": 1,
+ "kategori": "CSV/JSON ile çalışan ve uç durumları çok olan veri işleme (BOM, ; ayırıcı, 1.234,56 sayı biçimi, boş/bozuk satır)",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "`nareksisi_parti.py` içinde `birlestir` yazıldı: CSV utf-8-sig/`;`/çift tırnak ile okunuyor, başlık strip+birebir doğrulanıyor, boş/ayırıcı satırlar atlanıyor, sütun hatasında ValueError, Türkçe sayı (binlik nokta sil, virgül nokta) Decimal ile ayrıştırılıp boşta ValueError, JSON utf-8-sig okunup `sonuclar` yoksa ValueError, puan briks-asitlik*katsayı Decimal ROUND_HALF_UP 2 basamak, ad eşleşmesi I→ı/İ→i+casefold+strip, briks>=68 kabul, çıktı puan azalan/Türkçe alfabetik/id artan sıralı, hata önceliği FileNotFoundError>başlık>sayı, verisizse boş liste. pytest 6 test geçti.",
+ "adim": 12,
+ "yurutucu_token": {
+  "girdi": 77493,
+  "cikti": 41676
+ },
+ "yurutucu_usd": 0.016084499999999998,
+ "bitirdi": true,
+ "sure_sn": 447.8,
+ "gizli": {
+  "gecti": false,
+  "gecen": 21,
+  "toplam": 22,
+  "cikti": "..........F...........                                                   [100%]\n=================================== FAILURES ===================================\n______________________________ test_baslik_hatasi ______________________________\n\ntmp_path = PosixPath('/home/usta/is/bd64e93764ae/.tmp/pytest-of-usta/pytest-4/test_baslik_hatasi0')\n\n    def test_baslik_hatasi(tmp_path):\n        c = tmp_path / \"u.csv\"; j = tmp_path / \"a.json\"\n        csv_yaz(c, \"id;uretici;miktar;briks\\n1;Ali;10;70\\n\")\n        json_yaz(j, {\"sonuclar\": []})\n>       with pytest.raises(ValueError):\nE       Failed: DID NOT RAISE <class 'ValueError'>\n\n.gizli/test_gizli.py:93: Failed\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_baslik_hatasi - Failed: DID NOT RAISE <clas...\n1 failed, 21 passed in 0.18s\n"
+ }
+}

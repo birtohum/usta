@@ -1,0 +1,53 @@
+{
+ "id": "a217",
+ "kip": "c",
+ "tekrar": 2,
+ "kategori": "KDV, tevkifat, stopaj, taksit ve kuruş yuvarlama (Decimal, ROUND_HALF_UP, satır bazında ve toplamda yuvarlama farkı)",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 55,
+   "basarili": 55
+  }
+ ],
+ "spark_usd": 0.011749,
+ "arayuz": "",
+ "kabul_yazar": 3,
+ "mutasyon": {
+  "mutant": 16,
+  "ham_mutant": 16,
+  "turlar": [
+   {
+    "oldurulen": 14,
+    "toplam": 16
+   },
+   {
+    "oldurulen": 16,
+    "toplam": 16
+   }
+  ],
+  "hayatta": []
+ },
+ "hakem": [],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [],
+ "kabul_test_sayisi": 55,
+ "kabul_gecti": true,
+ "ozet": "mermer_cli.py yazıldı: argparse ile --kalem/--taksit/--sirala işlenir, Decimal ROUND_HALF_UP/DOWN hesapları, sıralama ve hata önceliği uygulanır, tek satır JSON üretilir. 20 pytest testi geçiyor.",
+ "adim": 9,
+ "yurutucu_token": {
+  "girdi": 52288,
+  "cikti": 27422
+ },
+ "yurutucu_usd": 0.0107132,
+ "bitirdi": true,
+ "sure_sn": 550.0,
+ "gizli": {
+  "gecti": true,
+  "gecen": 22,
+  "toplam": 22,
+  "cikti": "......................                                                   [100%]\n22 passed in 2.77s\n"
+ }
+}

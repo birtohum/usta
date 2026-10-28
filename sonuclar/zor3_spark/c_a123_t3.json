@@ -1,0 +1,73 @@
+{
+ "id": "a123",
+ "kip": "c",
+ "tekrar": 3,
+ "kategori": "CSV/JSON ile çalışan ve uç durumları çok olan veri işleme (BOM, ; ayırıcı, 1.234,56 sayı biçimi, boş/bozuk satır)",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 20,
+   "basarili": 20
+  }
+ ],
+ "spark_usd": 0.0353301,
+ "arayuz": "",
+ "kabul_yazar": 1,
+ "mutasyon": {
+  "mutant": 15,
+  "ham_mutant": 15,
+  "turlar": [
+   {
+    "oldurulen": 10,
+    "toplam": 15
+   },
+   {
+    "oldurulen": 10,
+    "toplam": 15
+   },
+   {
+    "oldurulen": 15,
+    "toplam": 15
+   }
+  ],
+  "hayatta": []
+ },
+ "hakem": [
+  {
+   "test": ".usta_kabul/test_kabul_2.py::test_req7_cikti_bicimi_ve_id_siralama",
+   "karar": "belirsiz",
+   "gerekce": "Görev metni üye kimliğine göre artan sıralamanın sözlüksel mi sayısal mı yapılacağını belirtmiyor.",
+   "tur": 1
+  },
+  {
+   "test": ".usta_kabul/test_kabul_m2.py::test_iade_bos_oduncte_haric",
+   "karar": "hatali",
+   "gerekce": "Görev metni davranışsal dışlama istiyor, belirli değişken adı ve kod kalıbı şart koşmuyor.",
+   "tur": 1
+  }
+ ],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [
+  ".usta_kabul/test_kabul_2.py::test_req7_cikti_bicimi_ve_id_siralama",
+  ".usta_kabul/test_kabul_m2.py::test_iade_bos_oduncte_haric"
+ ],
+ "kabul_test_sayisi": 20,
+ "kabul_gecti": true,
+ "ozet": "kutuphane_ceza_cli.py CLI aracı yazıldı: utf-8-sig/; CSV, katı tarih, Türkçe alt-harf, tavan+HALF_UP, sıralama, exit 2/3 stderr. test_cli.py ile 6 test geçiyor.",
+ "adim": 16,
+ "yurutucu_token": {
+  "girdi": 129817,
+  "cikti": 60755
+ },
+ "yurutucu_usd": 0.0251327,
+ "bitirdi": true,
+ "sure_sn": 1085.1,
+ "gizli": {
+  "gecti": false,
+  "gecen": 19,
+  "toplam": 20,
+  "cikti": "..................F.                                                     [100%]\n=================================== FAILURES ===================================\n___________________________ test_json_yapi_hatasi_3 ____________________________\n\ntmp_path = PosixPath('/home/usta/is/3eeb73d675fb/.tmp/pytest-of-usta/pytest-2/test_json_yapi_hatasi_30')\n\n    def test_json_yapi_hatasi_3(tmp_path):\n        od = tmp_path / \"o.csv\"; uy = tmp_path / \"u.json\"; ci = tmp_path / \"c.json\"\n        write_csv(od, HDR, [])\n        with open(uy, \"w\", encoding=\"utf-8\") as f:\n            json.dump({\"uyeler\": []}, f)\n        r = run_cli(od, uy, ci, \"10\", \"100\")\n>       assert r.returncode == 3\nE       AssertionError: assert 0 == 3\nE        +  where 0 = CompletedProcess(args=['/usr/bin/python', '/home/usta/is/3eeb73d675fb/kutuphane_ceza_cli.py', '--odunc-csv', '/home/us...st-2/test_json_yapi_hatasi_30/c.json', '--gunluk-gecikme', '10', '--tavan', '100'], returncode=0, stdout='', stderr='').returncode\n\n.gizli/test_gizli.py:227: AssertionError\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_json_yapi_hatasi_3 - AssertionError: assert...\n1 failed, 19 passed in 0.86s\n"
+ }
+}

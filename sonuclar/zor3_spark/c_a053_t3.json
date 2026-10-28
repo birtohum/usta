@@ -1,0 +1,62 @@
+{
+ "id": "a053",
+ "kip": "c",
+ "tekrar": 3,
+ "kategori": "çok dosyalı küçük modül: iki-üç dosyaya bölünmüş, ortak hata sınıfları ve bir komut satırı girişi olan araç",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 55,
+   "basarili": 55
+  }
+ ],
+ "spark_usd": 0.0073076,
+ "arayuz": "",
+ "kabul_yazar": 3,
+ "mutasyon": {
+  "mutant": 15,
+  "ham_mutant": 15,
+  "turlar": [
+   {
+    "oldurulen": 14,
+    "toplam": 15
+   },
+   {
+    "oldurulen": 14,
+    "toplam": 15
+   },
+   {
+    "oldurulen": 14,
+    "toplam": 15
+   }
+  ],
+  "hayatta": [
+   "ilk 60 dakika dahil normal fiyat sinirini bozar, 4. dilimi iki katli yapar"
+  ]
+ },
+ "hakem": [],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [
+  ".usta_kabul/test_kabul_2.py::test_gecersiz_tip_girdi_hatasi",
+  ".usta_kabul/test_kabul_2.py::test_hata_oncelik_aralik_tip"
+ ],
+ "kabul_test_sayisi": 55,
+ "kabul_gecti": true,
+ "ozet": "hatalar.py (ValueError'den doğrudan türeyen GirdiHatasi/TarifeHatasi), tarife.py (15 dk yukarı yuvarlama, gece devri, Türkçe I/İ dönüşümü, hata önceliği ve katlamalı fiyat) ve cli.py (tek satır \"Ücret: X TL\" çıktısı) yazıldı; pytest ile 15 test geçirildi.",
+ "adim": 7,
+ "yurutucu_token": {
+  "girdi": 22365,
+  "cikti": 14074
+ },
+ "yurutucu_usd": 0.0050513,
+ "bitirdi": true,
+ "sure_sn": 970.9,
+ "gizli": {
+  "gecti": false,
+  "gecen": 21,
+  "toplam": 22,
+  "cikti": "..................F...                                                   [100%]\n=================================== FAILURES ===================================\n______________________________ test_tarife_hatasi ______________________________\n\nmonkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x73cff8364b90>\n\n    def test_tarife_hatasi(monkeypatch):\n>       monkeypatch.delitem(tarife.TARIFE, \"otomobil\")\nE       AttributeError: module 'tarife' has no attribute 'TARIFE'. Did you mean: '_TARIFE'?\n\n.gizli/test_gizli.py:86: AttributeError\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_tarife_hatasi - AttributeError: module 'tar...\n1 failed, 21 passed in 0.38s\n"
+ }
+}

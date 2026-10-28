@@ -1,0 +1,78 @@
+{
+ "id": "a221",
+ "kip": "c",
+ "tekrar": 2,
+ "kategori": "tarih ve saat: resmî tatiller parametreyle, iş günü hesabı, Türkiye saat dilimi (UTC+3, yaz saati yok), gün/ay adları Türkçe",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": false,
+   "toplam": 53,
+   "basarili": 51
+  },
+  {
+   "gecti": true,
+   "toplam": 53,
+   "basarili": 53
+  }
+ ],
+ "spark_usd": 0.019457699999999998,
+ "arayuz": "",
+ "kabul_yazar": 3,
+ "mutasyon": {
+  "mutant": 14,
+  "ham_mutant": 14,
+  "turlar": [
+   {
+    "oldurulen": 12,
+    "toplam": 14
+   },
+   {
+    "oldurulen": 12,
+    "toplam": 14
+   },
+   {
+    "oldurulen": 12,
+    "toplam": 14
+   }
+  ],
+  "hayatta": [
+   "--kucuk Turkce kural I->i degil I->ı ve İ->i olmali gereksinimini cigner, standart lower kullanir",
+   "--sure negatif olamaz gereksinimini cigner, -1 kabul edilir"
+  ]
+ },
+ "hakem": [
+  {
+   "test": ".usta_kabul/test_kabul_2.py::test_kucuk_turkce_kucultme",
+   "karar": "gerekli",
+   "gerekce": "Görev metni etiket biçimini DD olarak tanımladığı için gün sıfırlı iki haneli olmalıdır.",
+   "tur": 1
+  },
+  {
+   "test": ".usta_kabul/test_kabul_3.py::test_kucuk_turkce_kucultme",
+   "karar": "gerekli",
+   "gerekce": "Görev metni etiket biçimini DD olarak tanımladığı için gün sıfırlı iki haneli olmalıdır.",
+   "tur": 1
+  }
+ ],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [],
+ "kabul_test_sayisi": 53,
+ "kabul_gecti": true,
+ "ozet": "Etiket çıktısındaki gün sayısı sıfır dolgulu iki haneye çevrildi (ör. \"04 şubat 2026 çarşamba\"); görev metnindeki \"DD Ay YYYY Gün\" biçiminde DD iki haneli günü ifade ettiğinden bu görev metniyle uyumludur. Kendi testlerimdeki ilgili beklenti de güncellendi. `python -m pytest -q` (31 test) ve kabul testleri (53 test) tamamen geçiyor.",
+ "adim": 23,
+ "yurutucu_token": {
+  "girdi": 288944,
+  "cikti": 42606
+ },
+ "yurutucu_usd": 0.0374156,
+ "bitirdi": true,
+ "sure_sn": 1380.7,
+ "gizli": {
+  "gecti": true,
+  "gecen": 22,
+  "toplam": 22,
+  "cikti": "......................                                                   [100%]\n22 passed in 1.36s\n"
+ }
+}

@@ -1,0 +1,24 @@
+{
+ "id": "a206",
+ "kip": "b",
+ "tekrar": 2,
+ "kategori": "tarih ve saat: resmî tatiller parametreyle, iş günü hesabı, Türkiye saat dilimi (UTC+3, yaz saati yok), gün/ay adları Türkçe",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "muayene_cli.py yazıldı: --baslangic/--adet zorunlu, --tatiller opsiyonel, --cumartesi-acik bayraklı; Europe/Istanbul bilinçli tarihlerle iş günü hesabı, Türkçe gün/ay adlarıyla çıktı, hatalarda çıkış kodu 2. 17 pytest testi geçti.",
+ "adim": 5,
+ "yurutucu_token": {
+  "girdi": 16813,
+  "cikti": 11057
+ },
+ "yurutucu_usd": 0.0038927000000000007,
+ "bitirdi": true,
+ "sure_sn": 119.6,
+ "gizli": {
+  "gecti": true,
+  "gecen": 20,
+  "toplam": 20,
+  "cikti": "....................                                                     [100%]\n20 passed in 0.66s\n"
+ }
+}

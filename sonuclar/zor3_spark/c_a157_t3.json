@@ -1,0 +1,56 @@
+{
+ "id": "a157",
+ "kip": "c",
+ "tekrar": 3,
+ "kategori": "çok dosyalı küçük modül: iki-üç dosyaya bölünmüş, ortak hata sınıfları ve bir komut satırı girişi olan araç",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 35,
+   "basarili": 35
+  }
+ ],
+ "spark_usd": 0.0207431,
+ "arayuz": "",
+ "kabul_yazar": 2,
+ "mutasyon": {
+  "mutant": 12,
+  "ham_mutant": 14,
+  "turlar": [
+   {
+    "oldurulen": 11,
+    "toplam": 12
+   },
+   {
+    "oldurulen": 12,
+    "toplam": 12
+   }
+  ],
+  "hayatta": []
+ },
+ "hakem": [],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [
+  ".usta_kabul/test_kabul_3.py::test_cli_hata_ciktisi_ve_kod",
+  ".usta_kabul/test_kabul_3.py::test_cli_kes_basarili_adet_ciktisi"
+ ],
+ "kabul_test_sayisi": 35,
+ "kabul_gecti": true,
+ "ozet": "hatalar.py, mermer.py ve cli.py yazıldı; Türkçe kimlik normalleştirme, döndürmeli kesim hesabı, en_verimli_blok ve kalıcı CLI eklendi. 14 pytest testi geçiyor.",
+ "adim": 10,
+ "yurutucu_token": {
+  "girdi": 47579,
+  "cikti": 37496
+ },
+ "yurutucu_usd": 0.012257100000000002,
+ "bitirdi": true,
+ "sure_sn": 655.7,
+ "gizli": {
+  "gecti": false,
+  "gecen": 19,
+  "toplam": 21,
+  "cikti": "        if not _pozitif_tamsayi_mi(plaka_en) or not _pozitif_tamsayi_mi(plaka_boy) or not _pay_gecerli_mi(pay_mm):\n            # pay 0 olabilir, plaka ölçüleri pozitif olmalı\n            # pay negatif ya da tam sayı değilse de GirdiHatasi\n            raise GirdiHatasi(\"ölçüler geçersiz\")\n        if norm not in self._stok:\n            raise GirdiHatasi(\"blok bulunamadı\")\n        blok_en, blok_boy = self._stok[norm]\n        adet = self._adet_hesap(blok_en, blok_boy, plaka_en, plaka_boy, pay_mm)\n        if adet <= 0:\n>           raise SigdirilamazHatasi(\"sığmıyor\")\nE           hatalar.SigdirilamazHatasi: sığmıyor\n\nmermer.py:74: SigdirilamazHatasi\n_________________________ test_13_kesim_girdi_kontrol __________________________\n\n    def test_13_kesim_girdi_kontrol():\n        s = BlokStogu()\n        s.blok_ekle(\"G\", 500, 500)\n        with pytest.raises(GirdiHatasi):\n            s.kesim_hesapla(\"G\", 0, 100, 5)\n        with pytest.raises(GirdiHatasi):\n            s.kesim_hesapla(\"G\", 100, -1, 5)\n>       with pytest.raises(GirdiHatasi):\nE       Failed: DID NOT RAISE <class 'hatalar.GirdiHatasi'>\n\n.gizli/test_gizli.py:120: Failed\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_08_tam_esit_sigar - hatalar.SigdirilamazHat...\nFAILED .gizli/test_gizli.py::test_13_kesim_girdi_kontrol - Failed: DID NOT RA...\n2 failed, 19 passed in 0.27s\n"
+ }
+}

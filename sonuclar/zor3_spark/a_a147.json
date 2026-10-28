@@ -1,0 +1,24 @@
+{
+ "id": "a147",
+ "kip": "a",
+ "tekrar": 1,
+ "kategori": "çok dosyalı küçük modül: iki-üç dosyaya bölünmüş, ortak hata sınıfları ve bir komut satırı girişi olan araç",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "hatalar.py (3 ValueError alt sınıfı), isot.py (Türkçe duyarsız kod normalizasyonlu Harman sınıfı, Decimal ROUND_HALF_UP ağırlıklı ortalama, %3 fire ve ±500 bandı) ve cli.py (depo.json okuyup sayı veya hata sınıf adını yazan CLI) yazıldı ve doğrulandı.",
+ "adim": 13,
+ "yurutucu_token": {
+  "girdi": 55613,
+  "cikti": 46052
+ },
+ "yurutucu_usd": 0.014771700000000004,
+ "bitirdi": true,
+ "sure_sn": 497.2,
+ "gizli": {
+  "gecti": true,
+  "gecen": 20,
+  "toplam": 20,
+  "cikti": "....................                                                     [100%]\n20 passed in 0.29s\n"
+ }
+}

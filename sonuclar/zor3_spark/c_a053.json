@@ -1,0 +1,77 @@
+{
+ "id": "a053",
+ "kip": "c",
+ "tekrar": 1,
+ "kategori": "çok dosyalı küçük modül: iki-üç dosyaya bölünmüş, ortak hata sınıfları ve bir komut satırı girişi olan araç",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 51,
+   "basarili": 51
+  }
+ ],
+ "spark_usd": 0.0083145,
+ "arayuz": "",
+ "kabul_yazar": 3,
+ "mutasyon": {
+  "mutant": 16,
+  "ham_mutant": 16,
+  "turlar": [
+   {
+    "oldurulen": 15,
+    "toplam": 16
+   },
+   {
+    "oldurulen": 16,
+    "toplam": 16
+   }
+  ],
+  "hayatta": []
+ },
+ "hakem": [
+  {
+   "test": ".usta_kabul/test_kabul_m1.py::test_tablo_eksik_gece_devri_tarife_hatasi",
+   "karar": "hatali",
+   "gerekce": "Görev metni BIRIM_UCRET adında bir değişken tanımlanmasını açıkça istemiyor.",
+   "tur": 1
+  },
+  {
+   "test": ".usta_kabul/test_kabul_m1.py::test_tablo_eksik_girdi_degil_tarife",
+   "karar": "hatali",
+   "gerekce": "Görev metni BIRIM_UCRET adında bir değişken tanımlanmasını açıkça istemiyor.",
+   "tur": 1
+  },
+  {
+   "test": ".usta_kabul/test_kabul_m1.py::test_tablo_eksik_tarife_hatasi",
+   "karar": "hatali",
+   "gerekce": "Görev metni BIRIM_UCRET adında bir değişken tanımlanmasını açıkça istemiyor.",
+   "tur": 1
+  }
+ ],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [
+  ".usta_kabul/test_kabul_2.py::test_sinir_0_1439_kabul",
+  ".usta_kabul/test_kabul_m1.py::test_tablo_eksik_gece_devri_tarife_hatasi",
+  ".usta_kabul/test_kabul_m1.py::test_tablo_eksik_girdi_degil_tarife",
+  ".usta_kabul/test_kabul_m1.py::test_tablo_eksik_tarife_hatasi"
+ ],
+ "kabul_test_sayisi": 51,
+ "kabul_gecti": true,
+ "ozet": "hatalar.py (GirdiHatasi/TarifeHatasi doğrudan ValueError'dan), tarife.py (ucret_hesapla: 0-1439 kontrolü, gece devri, 15 dk yukarı yuvarlama, ilk 4 dilim baz fiyat sonrası 2x, Türkçe küçük harf normalizasyonu, hata öncelik sırası) ve cli.py (Ücret: X TL çıktısı) yazıldı; 16 pytest testi geçiyor.",
+ "adim": 6,
+ "yurutucu_token": {
+  "girdi": 18334,
+  "cikti": 12930
+ },
+ "yurutucu_usd": 0.0044194,
+ "bitirdi": true,
+ "sure_sn": 364.6,
+ "gizli": {
+  "gecti": true,
+  "gecen": 22,
+  "toplam": 22,
+  "cikti": "......................                                                   [100%]\n22 passed in 0.30s\n"
+ }
+}

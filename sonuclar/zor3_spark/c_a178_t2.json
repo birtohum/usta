@@ -1,0 +1,91 @@
+{
+ "id": "a178",
+ "kip": "c",
+ "tekrar": 2,
+ "kategori": "CSV/JSON ile çalışan ve uç durumları çok olan veri işleme (BOM, ; ayırıcı, 1.234,56 sayı biçimi, boş/bozuk satır)",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": false,
+   "toplam": 20,
+   "basarili": 18
+  },
+  {
+   "gecti": true,
+   "toplam": 20,
+   "basarili": 20
+  }
+ ],
+ "spark_usd": 0.031493900000000005,
+ "arayuz": "",
+ "kabul_yazar": 1,
+ "mutasyon": {
+  "mutant": 14,
+  "ham_mutant": 14,
+  "turlar": [
+   {
+    "oldurulen": 11,
+    "toplam": 14
+   },
+   {
+    "oldurulen": 11,
+    "toplam": 14
+   },
+   {
+    "oldurulen": 14,
+    "toplam": 14
+   }
+  ],
+  "hayatta": []
+ },
+ "hakem": [
+  {
+   "test": ".usta_kabul/test_kabul_1.py::test_esit_kiloda_turkce_ada_gore_siralama",
+   "karar": "belirsiz",
+   "gerekce": "Görev Türkçe ada göre sıralamayı istiyor ama JSON iç alan adını açıkça tanımlamadığı için depo_adi varsayımı tek anlamlı değil.",
+   "tur": 1
+  },
+  {
+   "test": ".usta_kabul/test_kabul_m2.py::test_turkce_I_farki_ayni_depo_giris_cikis",
+   "karar": "gerekli",
+   "gerekce": "Görev I ve İ farklarının aynı depo sayılmasını açıkça istiyor, test NIGDE ile NİGDE birleşmesini denetliyor.",
+   "tur": 1
+  },
+  {
+   "test": ".usta_kabul/test_kabul_m2.py::test_turkce_I_farki_ayni_dosyada_birlesir",
+   "karar": "gerekli",
+   "gerekce": "Görev I ve İ farklarının aynı depo sayılmasını açıkça istiyor, test SIIRT ile SİİRT birleşmesini denetliyor.",
+   "tur": 1
+  }
+ ],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [
+  ".usta_kabul/test_kabul_1.py::test_depo_adi_turkce_kucuk_harf_birlesir",
+  ".usta_kabul/test_kabul_m1.py::test_bos_satir_cikis_yok_sayilir",
+  ".usta_kabul/test_kabul_m1.py::test_bos_satir_giris_yok_sayilir",
+  ".usta_kabul/test_kabul_m1.py::test_bosluk_satir_yok_sayilir",
+  ".usta_kabul/test_kabul_m1.py::test_esit_kiloda_depo_koduna_gore_siralama",
+  ".usta_kabul/test_kabul_m1.py::test_esit_kiloda_depo_koduna_gore_siralama2",
+  ".usta_kabul/test_kabul_m1.py::test_turkce_I_farki_ayni_depo",
+  ".usta_kabul/test_kabul_m1.py::test_turkce_noktasiz_i_farki_ayni_depo",
+  ".usta_kabul/test_kabul_1.py::test_esit_kiloda_turkce_ada_gore_siralama"
+ ],
+ "kabul_test_sayisi": 20,
+ "kabul_gecti": true,
+ "ozet": null,
+ "adim": 30,
+ "yurutucu_token": {
+  "girdi": 463760,
+  "cikti": 99551
+ },
+ "yurutucu_usd": 0.06628619999999999,
+ "bitirdi": false,
+ "sure_sn": 1447.3,
+ "gizli": {
+  "gecti": false,
+  "gecen": 15,
+  "toplam": 20,
+  "cikti": ", [[\"D1\",\"ISPARTA\",\"Agria\",\"10\",\"100,00\"]])\n        _write(c, [[\"D1\",\"\\u0130SPARTA\",\"Agria\",\"4\",\"40,00\"]])\n        assert _run(g, c, r).returncode == 0\n        d = _load(r)\n        assert len(d[\"stok\"]) == 1\n>       assert d[\"stok\"][0][\"cuval_sayisi\"] == 6\nE       KeyError: 'cuval_sayisi'\n\n.gizli/test_gizli.py:140: KeyError\n______________________ test_14_esit_kilo_turkce_siralama _______________________\n\ntmp_path = PosixPath('/home/usta/is/e10cd6448e83/.tmp/pytest-of-usta/pytest-12/test_14_esit_kilo_turkce_siral0')\n\n    def test_14_esit_kilo_turkce_siralama(tmp_path):\n        g = tmp_path / \"g.csv\"; c = tmp_path / \"c.csv\"; r = tmp_path / \"r.json\"\n        _write(g, [[\"D1\",\"\\u015eeker\",\"Agria\",\"5\",\"100,00\"],[\"D2\",\"Seker\",\"Agria\",\"5\",\"100,00\"],[\"D3\",\"\\u00c7am\",\"Agria\",\"5\",\"100,00\"]])\n        _write(c, [])\n        assert _run(g, c, r).returncode == 0\n        d = _load(r)\n>       adlar = [x[\"depo_adi\"] for x in d[\"stok\"]]\nE       KeyError: 'depo_adi'\n\n.gizli/test_gizli.py:148: KeyError\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_02_net_hesap - KeyError: 'cuval_sayisi'\nFAILED .gizli/test_gizli.py::test_04_bos_satir_yoksay - KeyError: 'cuval_sayisi'\nFAILED .gizli/test_gizli.py::test_12_turkce_kucuk_harf_ayni_depo - KeyError: ...\nFAILED .gizli/test_gizli.py::test_13_I_ve_I_farki - KeyError: 'cuval_sayisi'\nFAILED .gizli/test_gizli.py::test_14_esit_kilo_turkce_siralama - KeyError: 'd...\n5 failed, 15 passed in 2.23s\n"
+ }
+}

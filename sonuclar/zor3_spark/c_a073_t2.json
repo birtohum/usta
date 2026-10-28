@@ -1,0 +1,53 @@
+{
+ "id": "a073",
+ "kip": "c",
+ "tekrar": 2,
+ "kategori": "Türkiye'ye özgü kimlik ve hesap numaraları (TC kimlik, VKN, IBAN, MERSİS, plaka, telefon) — birden çok kuralın birlikte uygulandığı",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 57,
+   "basarili": 57
+  }
+ ],
+ "spark_usd": 0.016777300000000002,
+ "arayuz": "vekalet_hazirlik.py içinde VekaletHazirlayici sınıfı parametresiz kurulur; ekle(kisi_id: str, tc_vkn: str, telefon: str, iban: str) ve ozet() -> dict {kisi_sayisi: int, banka_kodlari: list}; vekalet_cli.py çağrısı python vekalet_cli.py --kisi ID --no NO --tel TEL --iban IBAN",
+ "kabul_yazar": 3,
+ "mutasyon": {
+  "mutant": 16,
+  "ham_mutant": 16,
+  "turlar": [
+   {
+    "oldurulen": 13,
+    "toplam": 16
+   },
+   {
+    "oldurulen": 16,
+    "toplam": 16
+   }
+  ],
+  "hayatta": []
+ },
+ "hakem": [],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [],
+ "kabul_test_sayisi": 57,
+ "kabul_gecti": true,
+ "ozet": "vekalet_hazirlik.py (VekaletHazirlayici: TC/VKN, telefon, IBAN doğrulama + ozet) ve vekalet_cli.py (TAMAM/HATA çıktılı CLI) yazıldı; pytest ile 10 test geçti.",
+ "adim": 9,
+ "yurutucu_token": {
+  "girdi": 33540,
+  "cikti": 23028
+ },
+ "yurutucu_usd": 0.0079596,
+ "bitirdi": true,
+ "sure_sn": 652.7,
+ "gizli": {
+  "gecti": true,
+  "gecen": 23,
+  "toplam": 23,
+  "cikti": ".......................                                                  [100%]\n23 passed in 0.38s\n"
+ }
+}

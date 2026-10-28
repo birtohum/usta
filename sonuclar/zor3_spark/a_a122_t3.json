@@ -1,0 +1,24 @@
+{
+ "id": "a122",
+ "kip": "a",
+ "tekrar": 3,
+ "kategori": "çok dosyalı küçük modül: iki-üç dosyaya bölünmüş, ortak hata sınıfları ve bir komut satırı girişi olan araç",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "hatalar.py (BalonHatasi/AgirlikHatasi), balon.py (Sepet: kapasite 200-600, isim strip/20/TR-duyarsız, kilo 30-150, öncelik sırası ve greedy dağılım) ve cli.py (--kapasite/--yolcu, A:..|B:.. çıktısı, HATA+exit 2) yazıldı ve test edildi.",
+ "adim": 11,
+ "yurutucu_token": {
+  "girdi": 45872,
+  "cikti": 22933
+ },
+ "yurutucu_usd": 0.009173800000000001,
+ "bitirdi": true,
+ "sure_sn": 261.6,
+ "gizli": {
+  "gecti": false,
+  "gecen": 21,
+  "toplam": 23,
+  "cikti": "FF.....................                                                  [100%]\n=================================== FAILURES ===================================\n__________________________ test_kapasite_alt_sinir_ok __________________________\n\n    def test_kapasite_alt_sinir_ok():\n        s = Sepet(200)\n>       assert s.kapasite_kg == 200\nE       AttributeError: 'Sepet' object has no attribute 'kapasite_kg'\n\n.gizli/test_gizli.py:12: AttributeError\n__________________________ test_kapasite_ust_sinir_ok __________________________\n\n    def test_kapasite_ust_sinir_ok():\n        s = Sepet(600)\n>       assert s.kapasite_kg == 600\nE       AttributeError: 'Sepet' object has no attribute 'kapasite_kg'\n\n.gizli/test_gizli.py:16: AttributeError\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_kapasite_alt_sinir_ok - AttributeError: 'Se...\nFAILED .gizli/test_gizli.py::test_kapasite_ust_sinir_ok - AttributeError: 'Se...\n2 failed, 21 passed in 0.25s\n"
+ }
+}

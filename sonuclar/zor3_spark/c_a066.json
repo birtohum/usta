@@ -1,0 +1,65 @@
+{
+ "id": "a066",
+ "kip": "c",
+ "tekrar": 1,
+ "kategori": "CSV/JSON ile çalışan ve uç durumları çok olan veri işleme (BOM, ; ayırıcı, 1.234,56 sayı biçimi, boş/bozuk satır)",
+ "yurutucu": "spark",
+ "turlar": [
+  {
+   "gecti": true,
+   "toplam": 15,
+   "basarili": 15
+  }
+ ],
+ "spark_usd": 0.031435700000000004,
+ "arayuz": "",
+ "kabul_yazar": 1,
+ "mutasyon": {
+  "mutant": 15,
+  "ham_mutant": 15,
+  "turlar": [
+   {
+    "oldurulen": 11,
+    "toplam": 15
+   },
+   {
+    "oldurulen": 11,
+    "toplam": 15
+   },
+   {
+    "oldurulen": 11,
+    "toplam": 15
+   }
+  ],
+  "hayatta": [
+   "(1) utf-8-sig ile okuma gereksinimini cigner, BOM birakir",
+   "(3) tamamen bos satirlari atlama gereksinimini cigner, kismen bos satiri da atlar",
+   "(6) hata onceligi CSV yoklugu once gereksinimini cigner",
+   "(9) esitlikte Turkce alfabetik artan sira gereksinimini cigner"
+  ]
+ },
+ "hakem": [],
+ "geri_alma": 0,
+ "inceleme": null,
+ "iptal_edilen_test": [
+  ".usta_kabul/test_kabul_2.py::test_turkce_alfabetik_ilk_yazim",
+  ".usta_kabul/test_kabul_2.py::test_yalnizca_noktali_virgul"
+ ],
+ "kabul_test_sayisi": 15,
+ "kabul_gecti": true,
+ "ozet": "otel_doluluk.py içinde analiz_et yazıldı; TR sayı ayrıştırma, ROUND_HALF_UP, TR küçük harf gruplama, hata önceliği ve sıralama kuralları uygulandı. 9 pytest testi geçti.",
+ "adim": 8,
+ "yurutucu_token": {
+  "girdi": 29350,
+  "cikti": 39065
+ },
+ "yurutucu_usd": 0.010748,
+ "bitirdi": true,
+ "sure_sn": 1228.7,
+ "gizli": {
+  "gecti": false,
+  "gecen": 22,
+  "toplam": 23,
+  "cikti": "\ntmp_path = PosixPath('/home/usta/is/a102478653e6/.tmp/pytest-of-usta/pytest-2/test_yalnizca_noktali_virgul0')\n\n    def test_yalnizca_noktali_virgul(tmp_path):\n        c = tmp_path / 'k.csv'; j = tmp_path / 'f.json'\n        _yaz_csv(c, 'oda_tipi,gece_sayisi\\nStandart,2\\n')\n        _yaz_json(j, {'Standart': '100,00'})\n        with pytest.raises(ValueError):\n>           analiz_et(str(c), str(j))\n\n.gizli/test_gizli.py:53: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \notel_doluluk.py:168: in analiz_et\n    gece_dec = _parse_tr_decimal(gece_raw)\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nh = 'Standart,2'\n\n    def _parse_tr_decimal(h: str) -> Decimal:\n        t = h.strip()\n        if t == \"\":\n            raise ValueError(\"boş sayı\")\n        t = t.replace(\".\", \"\").replace(\",\", \".\")\n>       return Decimal(t)\nE       decimal.InvalidOperation: [<class 'decimal.ConversionSyntax'>]\n\notel_doluluk.py:29: InvalidOperation\n=========================== short test summary info ============================\nFAILED .gizli/test_gizli.py::test_yalnizca_noktali_virgul - decimal.InvalidOp...\n1 failed, 22 passed in 0.20s\n"
+ }
+}

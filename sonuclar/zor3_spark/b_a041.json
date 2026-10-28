@@ -1,0 +1,24 @@
+{
+ "id": "a041",
+ "kip": "b",
+ "tekrar": 1,
+ "kategori": "çok dosyalı küçük modül: iki-üç dosyaya bölünmüş, ortak hata sınıfları ve bir komut satırı girişi olan araç",
+ "yurutucu": "spark",
+ "turlar": [],
+ "spark_usd": 0.0,
+ "ozet": "hatalar.py ve kargo.py yazıldı; desi tavana yuvarlanır, ücret kuruş int döner, 50/51 eşiği ve %10 indirim uygulanır, TR duyarsız il ve hata önceliği sağlanır, CLI tek satır JSON yazar. 10 pytest geçti.",
+ "adim": 13,
+ "yurutucu_token": {
+  "girdi": 48515,
+  "cikti": 43248
+ },
+ "yurutucu_usd": 0.013501100000000002,
+ "bitirdi": true,
+ "sure_sn": 378.5,
+ "gizli": {
+  "gecti": true,
+  "gecen": 20,
+  "toplam": 20,
+  "cikti": "....................                                                     [100%]\n20 passed in 0.14s\n"
+ }
+}
