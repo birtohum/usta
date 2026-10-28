@@ -22,7 +22,8 @@ from usta.arac import calisma_ac  # noqa: E402
 
 KOK = Path(__file__).resolve().parent.parent
 SETLER = {"kolay": KOK / "veri" / "degerlendirme.jsonl", "zor": KOK / "veri" / "zor.jsonl",
-          "zor2": KOK / "veri" / "zor2.jsonl"}
+          "zor2": KOK / "veri" / "zor2.jsonl", "aday3": KOK / "veri" / "aday3.jsonl",
+          "zor3": KOK / "veri" / "zor3.jsonl"}
 KAYIT = KOK / "kayitlar" / "degerlendirme"  # main() set ve yürütücü adına göre alt klasör seçer
 YURUTUCU = "glimmer"
 GIZLI_DOSYA = ".gizli/test_gizli.py"

@@ -30,12 +30,26 @@ KATEGORILER = [
     "veri yapıları ve algoritmalar (kuyruk, önbellek, arama, gruplama, birleştirme, durum makinesi)",
 ]
 
+KATEGORILER_YEREL = [
+    "Türkiye'ye özgü kimlik ve hesap numaraları (TC kimlik, VKN, IBAN, MERSİS, plaka, telefon) — birden çok kuralın birlikte uygulandığı",
+    "KDV, tevkifat, stopaj, taksit ve kuruş yuvarlama (Decimal, ROUND_HALF_UP, satır bazında ve toplamda yuvarlama farkı)",
+    "Türkçe büyük/küçük harf (İ/i, I/ı), Türk alfabesiyle sıralama, sayıyı yazıya çevirme, ünlü uyumuna göre ek",
+    "tarih ve saat: resmî tatiller parametreyle, iş günü hesabı, Türkiye saat dilimi (UTC+3, yaz saati yok), gün/ay adları Türkçe",
+    "çok dosyalı küçük modül: iki-üç dosyaya bölünmüş, ortak hata sınıfları ve bir komut satırı girişi olan araç",
+    "CSV/JSON ile çalışan ve uç durumları çok olan veri işleme (BOM, ; ayırıcı, 1.234,56 sayı biçimi, boş/bozuk satır)",
+]
+
 ZORLUK = {
     "kolay": "küçük-orta zorlukta",
     "zor": ("ZOR (güçlü bir kodlama modelinin bile ilk denemede bir ayrıntıyı kaçırabileceği) ve 2-6 cümle yerine 5-10 cümlelik; "
             "her görevde en az 6 ayrı, açıkça yazılmış gereksinim olsun (biçim kuralları, sınır değerler, hata türleri, sıralama ve "
             "eşitlik kuralları, yuvarlama). Tercihen durum tutan bir sınıf, birden çok fonksiyon ya da birden çok bayraklı komut "
             "satırı programı olsun"),
+    "cok_zor": ("ÇOK ZOR: güçlü bir kodlama modelinin ilk denemede yaklaşık yarısını kaçıracağı düzeyde, 6-12 cümlelik; her "
+                "görevde en az 8 ayrı ve açıkça yazılmış gereksinim olsun ve bunların en az üçü kolay gözden kaçan uç durum "
+                "olsun (sınırda eşitlik, boş girdi, yuvarlama yönü, Türkçe harf dönüşümü, sıralamada eşitlik kuralı, hata "
+                "türü ve öncelik sırası). Tercihen birden çok dosya ya da durum tutan bir sınıf ya da birden çok bayraklı "
+                "komut satırı programı olsun. Gereksinimler çelişmesin ve yoruma yer bırakmasın"),
 }
 
 GOREV_ISTEMI = """Bir Türkçe kodlama ajanını değerlendirmek için {n} farklı {zorluk} Python görevi yaz.
@@ -89,9 +103,9 @@ def _kategori_gorevleri(k: str, n: int, zorluk: str, parti: int = 8) -> list:
     return [(k, g) for g in gorevler[:n]]
 
 
-def gorev_listesi(n_kategori: int, zorluk: str) -> list:
-    with ThreadPoolExecutor(len(KATEGORILER)) as ex:
-        return [kg for liste in ex.map(lambda k: _kategori_gorevleri(k, n_kategori, zorluk), KATEGORILER) for kg in liste]
+def gorev_listesi(n_kategori: int, zorluk: str, kategoriler: list = KATEGORILER) -> list:
+    with ThreadPoolExecutor(len(kategoriler)) as ex:
+        return [kg for liste in ex.map(lambda k: _kategori_gorevleri(k, n_kategori, zorluk), kategoriler) for kg in liste]
 
 
 def dogrula(kg) -> dict | None:
@@ -125,16 +139,18 @@ def main():
     ap.add_argument("--cikis", default=str(CIKIS))
     ap.add_argument("--onek", default="g", help="görev kimliği öneki (setler arasında çakışmasın)")
     ap.add_argument("--paralel", type=int, default=8)
+    ap.add_argument("--yerel", action="store_true", help="Türkiye'ye özgü kurallara odaklı kategoriler")
     a = ap.parse_args()
-    test_sayisi = "6-12" if a.zorluk == "kolay" else "12-20"
-    adaylar = [(k, g, test_sayisi) for k, g in gorev_listesi(a.kategori_basina, a.zorluk)]
+    test_sayisi = {"kolay": "6-12", "zor": "12-20", "cok_zor": "16-24"}[a.zorluk]
+    kategoriler = KATEGORILER_YEREL if a.yerel else KATEGORILER
+    adaylar = [(k, g, test_sayisi) for k, g in gorev_listesi(a.kategori_basina, a.zorluk, kategoriler)]
     print(f"{len(adaylar)} aday görev")
     with ThreadPoolExecutor(a.paralel) as ex:
         alinan = [r for r in ex.map(dogrula, adaylar) if r]
     # Kategoriler dengeli kalsın: sırayla birer birer seç
-    secilen, kovalar = [], {k: [r for r in alinan if r["kategori"] == k] for k in KATEGORILER}
+    secilen, kovalar = [], {k: [r for r in alinan if r["kategori"] == k] for k in kategoriler}
     while len(secilen) < a.hedef and any(kovalar.values()):
-        for k in KATEGORILER:
+        for k in kategoriler:
             if kovalar[k] and len(secilen) < a.hedef:
                 secilen.append(kovalar[k].pop(0))
     cikis = Path(a.cikis)

@@ -48,17 +48,6 @@ def _geri_al(calisma, goruntu: dict) -> None:
         calisma._yaz(yol, icerik)
 
 
-def _secili_testler(kaynak: str, adlar: list) -> str:
-    """Inceleme dosyasından başlık (importlar, yardımcılar) + yalnızca seçilen test fonksiyonlarını alır."""
-    bas = kaynak.split("\ndef test_", 1)[0]
-    parcalar = [bas]
-    for ad in adlar:
-        m = re.search(rf"^def {ad}\(.*?(?=^def |^class |\Z)", kaynak, re.S | re.M)
-        if m:
-            parcalar.append(m.group(0).rstrip())
-    return "\n\n".join(parcalar) + "\n"
-
-
 def gorevi_yap(gorev: str, calisma, kip: str = "c", azami_tur: int = 3, azami_adim: int = 20,
                olay=lambda tur, veri: None, kabul: dict | None = None, hakem: bool = True,
                yurutucu: str = "glimmer") -> dict:
@@ -103,16 +92,18 @@ def gorevi_yap(gorev: str, calisma, kip: str = "c", azami_tur: int = 3, azami_ad
                               "sure_sn": round(time.time() - bas, 1), "kabul": None})
                 return rapor
             rapor["spark_usd"] += kabul["maliyet"]
-        olay("kabul", {"testler": kabul["testler"], "iptal": kabul["iptal"]})
+        olay("kabul", {"testler": dogrulayici.testler_metni(kabul["testler"]), "iptal": kabul["iptal"]})
         iptal = list(kabul.get("iptal", []))
-        testler = kabul["testler"]
+        testler = dogrulayici._dosyalar(kabul["testler"])
+        rapor["kabul_yazar"] = kabul.get("yazar")
+        rapor["mutasyon"] = kabul.get("mutasyon")
         rapor["hakem"], rapor["geri_alma"], rapor["inceleme"] = [], 0, None
         inceleme_yapildi = kip != "d"
         onceki = None   # (anlık görüntü, kalan test adları) — bir önceki turun sonu
         for tur in range(1, azami_tur + 1):
             olay("asama", f"Kabul testleri çalışıyor (tur {tur})")
             sonuc = dogrulayici.kabul_testlerini_calistir(calisma, testler, iptal)
-            kalan = set(dogrulayici.kalan_testler(sonuc["cikti"]))
+            kalan = set(dogrulayici.kalan_testler(sonuc["cikti"], testler))
             if onceki is not None and kalan - onceki[1]:
                 # Gerileme: düzeltme turu önceden geçen bir testi bozdu -> tur öncesine dön ve dur.
                 olay("asama", f"Gerileme: {', '.join(sorted(kalan - onceki[1]))} bozuldu; değişiklikler geri alındı")
@@ -133,23 +124,24 @@ def gorevi_yap(gorev: str, calisma, kip: str = "c", azami_tur: int = 3, azami_ad
                 if dusen:
                     iptal += dusen
                     sonuc = dogrulayici.kabul_testlerini_calistir(calisma, testler, iptal)
-                    kalan = set(dogrulayici.kalan_testler(sonuc["cikti"]))
+                    kalan = set(dogrulayici.kalan_testler(sonuc["cikti"], testler))
             if sonuc["gecti"] and not inceleme_yapildi:
                 # d kipi: kabul testleri geçti -> kanıtlı kod incelemesi (bir kez).
                 inceleme_yapildi = True
                 olay("asama", "Spark kodu inceliyor (kanıtlı inceleme)")
-                inc = dogrulayici.inceleme_testleri(gorev, _goruntu(calisma), dogrulayici.kalan_testler(sonuc["cikti"])
-                                                    or re.findall(r"def (test_\w+)", testler))
+                inc = dogrulayici.inceleme_testleri(gorev, _goruntu(calisma), dogrulayici.test_kimlikleri(testler))
                 rapor["spark_usd"] += inc["maliyet"]
                 kanitli = dogrulayici.inceleme_testlerini_sina(calisma, inc["testler"], kabul.get("cozum") or {}) \
                     if inc["testler"] else []
                 rapor["inceleme"] = {"yazilan": len(re.findall(r"def test_", inc["testler"])), "kanitli": kanitli}
                 olay("inceleme", rapor["inceleme"])
                 if kanitli:
-                    secilen = _secili_testler(inc["testler"], kanitli)
-                    testler = testler + "\n\n# --- kanıtlı inceleme testleri ---\n" + secilen
+                    # İnceleme dosyası eklenir; kanıtlanmayan inceleme testleri seçim dışı bırakılır.
+                    testler[dogrulayici.INCELEME_DOSYASI] = inc["testler"]
+                    iptal += [t for t in dogrulayici.test_kimlikleri({dogrulayici.INCELEME_DOSYASI: inc["testler"]})
+                              if t not in kanitli]
                     sonuc = dogrulayici.kabul_testlerini_calistir(calisma, testler, iptal)
-                    kalan = set(dogrulayici.kalan_testler(sonuc["cikti"]))
+                    kalan = set(dogrulayici.kalan_testler(sonuc["cikti"], testler))
             rapor["turlar"].append({k: sonuc[k] for k in ("gecti", "toplam", "basarili")})
             olay("test", {"tur": tur, **sonuc})
             if sonuc["gecti"] or tur == azami_tur:
@@ -166,6 +158,8 @@ def gorevi_yap(gorev: str, calisma, kip: str = "c", azami_tur: int = 3, azami_ad
             token["cikti"] += s["token"]["cikti"]
             yurutucu_usd += s.get("usd", 0.0)
         rapor["iptal_edilen_test"] = iptal
+        rapor["kabul_test_sayisi"] = len(set(dogrulayici.test_kimlikleri(testler)) - set(iptal))
+        kabul = {**kabul, "testler": dogrulayici.testler_metni(testler)}   # arayüzde metin olarak gösterilir
         rapor["kabul_gecti"] = rapor["turlar"][-1]["gecti"]
 
     rapor.update({"ozet": s["ozet"], "adim": toplam_adim, "yurutucu_token": token, "yurutucu_usd": yurutucu_usd,

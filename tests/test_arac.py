@@ -67,3 +67,13 @@ def test_yerel_kabuk_calisma_klasorunde_ve_wsl_degil():
     assert "system32" not in b.lower() and "windowsapps" not in b.lower()
     with YerelCalisma() as c:
         assert c.arac_calistir("Bash", {"command": "pwd"}).strip().endswith(c.kok.name)
+
+
+def test_toplama_hatasi_butun_testleri_kalmis_sayar():
+    from usta.dogrulayici import kalan_testler
+    testler = {".usta_kabul/test_kabul_1.py": "def test_a():\n    pass\n\ndef test_b():\n    pass\n",
+               ".usta_kabul/test_kabul_2.py": "def test_c():\n    pass\n"}
+    cikti = ("ERROR .usta_kabul/test_kabul_1.py\nFAILED .usta_kabul/test_kabul_2.py::test_c - assert 0\n"
+             "1 failed, 1 error in 0.1s")
+    assert kalan_testler(cikti, testler) == [".usta_kabul/test_kabul_1.py::test_a", ".usta_kabul/test_kabul_1.py::test_b",
+                                              ".usta_kabul/test_kabul_2.py::test_c"]
