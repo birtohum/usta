@@ -2,7 +2,7 @@
 
 Kullanıcı kendisi atar. Kurallarda topluluk oyu ve "most viral project" gibi ek ödüller geçiyor. Videonun 30–60 sn'lik
 kesitini doğrudan X'e yükle (bağlantıdan çok daha fazla izlenir). `#MetaHackathon` tahmindir; Discord'daki resmî
-etiketi kullan. Sayılar README'deki zor3 tablosundan (2 Kas'ta dolduruldu); `{repo_url}` depo açılınca doldurulur.
+etiketi kullan. Sayılar README'deki zor3 tablosundan (2 Kas'ta dolduruldu). Depo: https://github.com/birtohum/usta
 
 ---
 
@@ -15,7 +15,7 @@ etiketi kullan. Sayılar README'deki zor3 tablosundan (2 Kas'ta dolduruldu); `{r
 >
 > Alone: 60% · Usta: 58%. No gain. Here's why 🧵
 >
-> {repo_url} #MetaHackathon
+> https://github.com/birtohum/usta #MetaHackathon
 
 **Zincir:**
 
@@ -38,7 +38,7 @@ etiketi kullan. Sayılar README'deki zor3 tablosundan (2 Kas'ta dolduruldu); `{r
 > varsa ajan düzeltiyor. Sonra gizli testlerle 1.026 koşuda ölçtüm.
 >
 > Tek başına %60, Usta %58. Kazanç yok — nedeni ve bütün veriler depoda 👇
-> {repo_url} #MetaHackathon
+> https://github.com/birtohum/usta #MetaHackathon
 
 ---
 

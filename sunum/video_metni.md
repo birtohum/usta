@@ -30,7 +30,7 @@ Jüri ölçütleri: Demo %25 · Etki %30 · Meta araçları %25 · Teknik derinl
 | 1:05–1:40 | Vade görevi; rozetler, hakem satırları, varsa tur 2 | *Referee enforces only what the task says · repair rounds* |
 | 1:40–1:55 | Şema: yürütücü ∥ Spark testler + referans → süzgeç → hakem → düzeltme | *Writer ≠ verifier · faulty-test filter · rollback* |
 | 1:55–2:40 | README zor3 tablosu: a 60.2 / b 56.7 / c 57.6, "verified" %60 vs "done" %63 | *1,026 runs · hidden tests · no significant gain* |
-| 2:40–3:00 | Depo adresi; Muse Glimmer · Muse Spark · Muse Voice Transcribe | *{repo_url}* |
+| 2:40–3:00 | Depo adresi; Muse Glimmer · Muse Spark · Muse Voice Transcribe | *https://github.com/birtohum/usta* |
 
 ## Seslendirme
 
