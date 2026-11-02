@@ -48,7 +48,7 @@ details summary{cursor:pointer;color:var(--soluk);font-size:13px}
 <header>
   <h1>Usta</h1>
   <p>Türkçe görev ver; Usta yazar, bağımsız testlerle doğrulatır, kalan testleri düzeltir ve sonucu kanıtıyla gösterir.
-  <br><span class="soluk">Kod bu bilgisayarda geçici bir klasörde çalışır (yerel kip: ağ kısıtlaması yok).</span></p>
+  <br><span class="soluk">Kod ayrı bir WSL dağıtımında, ağsız ve yetkisiz kullanıcıyla çalışır (<code>tests/GUVENLIK.md</code>).</span></p>
 </header>
 <main>
   <section>
@@ -162,8 +162,7 @@ function isle(o) {
     v.forEach(k => ekle({ad: "HAKEM", cls: "test"}, `${k.test}: ${ad[k.karar] || k.karar}`, k.gerekce)); }
   else if (o.tur === "inceleme") ekle({ad: "İNCELEME", cls: "test"}, v.kanitli.length
       ? `Spark kodu inceledi: ${v.yazilan} şüpheden ${v.kanitli.length} tanesi kanıtlandı (ajanın kodunda kalıyor, referansta geçiyor)`
-      : `Spark kodu inceledi: ${v.yazilan} şüphe yazdı, kanıtlanan ihlal yok`, v.kanitli.join("
-"));
+      : `Spark kodu inceledi: ${v.yazilan} şüphe yazdı, kanıtlanan ihlal yok`, v.kanitli.join("\n"));
   else if (o.tur === "dusunce") ekle({ad: "AJAN", cls: ""}, kirp(v, 400));
   else if (o.tur === "arac") { const [m, k] = aracMetni(v); ekle({ad: v.ad.toUpperCase(), cls: ""}, m, k); }
   else if (o.tur === "sonuc") { if (v.ad === "Bash" || String(v.cikti).startsWith("HATA"))

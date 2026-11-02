@@ -202,7 +202,7 @@ are sent to Meta for transcription. Do not send personal data.
 |---|---|
 | `sunucu/glimmer_modal.py` | Authenticated vLLM server for Muse Glimmer on Modal |
 | `usta/ajan.py` | Agent loop (executor tool calls → workspace → results); Glimmer or Spark executor |
-| `usta/arac.py` | Tools and runners (Modal Sandbox; local Git Bash runner without network isolation) |
+| `usta/arac.py` | Tools and runners (isolated WSL distribution — default; Modal Sandbox; local runner without isolation) |
 | `usta/dogrulayici.py` | Spark naming contract, acceptance tests, reference-solution filter, arbiter |
 | `usta/surec.py` | End-to-end pipeline and the a/b/c modes |
 | `usta/spark.py` | Muse Spark client with a spending counter (stops at a set limit) |
@@ -211,6 +211,6 @@ are sent to Meta for transcription. Do not send personal data.
 | `betikler/` | Evaluation-set generation, a/b/c evaluation, end-to-end check |
 | `veri/` | Generated evaluation sets (tasks + hidden tests) |
 | `sonuclar/` | Raw evaluation records and summary |
-| `DEMO.md` | 3-minute demo script |
+| `DEMO.md`, `sunum/` | Demo script, submission texts |
 
 License: Apache 2.0.

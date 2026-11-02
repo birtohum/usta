@@ -1,70 +1,49 @@
 # X gönderisi taslakları
 
-Kullanıcı kendisi atar. Kurallarda "most viral project" ve "community vote" gibi ek ödüller geçiyor; en iyi saat
-genelde videonun yayınlandığı gün, ABD doğu sabahı (TR 16:00–18:00). Her gönderiye **videonun kendisini** (bağlantı
-değil, X'e yüklenmiş 30–60 sn kesit) ekle — X'te gömülü video bağlantıdan çok daha fazla izlenir.
-`{…}` yer tutucuları README'deki gerçek sayılarla doldur; dolmazsa o cümleyi sil. Etiketleri etkinliğin resmî
-etiketine göre güncelle (Discord/duyurularda hangisi kullanılıyorsa); aşağıda `#MetaHackathon` tahmindir.
+Kullanıcı kendisi atar. Kurallarda topluluk oyu ve "most viral project" gibi ek ödüller geçiyor. Videonun 30–60 sn'lik
+kesitini doğrudan X'e yükle (bağlantıdan çok daha fazla izlenir). `#MetaHackathon` tahmindir; Discord'daki resmî
+etiketi kullan. Sayılar README'deki zor3 tablosundan (2 Kas'ta dolduruldu); `{repo_url}` depo açılınca doldurulur.
 
 ---
 
-## 1. Ana gönderi (İngilizce, jüri ve geniş kitle) — video kesitiyle
+## 1. Ana gönderi (İngilizce)
 
-> Coding agents say "done". Mine has to prove it.
+> Can an LLM check another LLM's code?
 >
-> Usta 🇹🇷 — a Turkish coding agent:
-> • Muse Glimmer (open weights) writes code in an offline sandbox
-> • Muse Spark writes tests without seeing the code
-> • failing tests → repair loop → evidence on screen
+> I built Usta 🇹🇷, a Turkish coding agent where Muse Spark writes tests without seeing the code — then measured it
+> on 1,026 runs with hidden tests.
 >
-> Round 1: 6/14 ❌ → Round 2: 14/14 ✅
+> Alone: 60% · Usta: 58%. No gain. Here's why 🧵
 >
 > {repo_url} #MetaHackathon
 
-(~270 karakter; 280'i aşarsa ilk satırı kısalt.) Ek: rozetlerin kırmızıdan yeşile döndüğü 20–40 sn'lik kesit.
+**Zincir:**
 
-**Zincir (yanıt olarak, isteğe bağlı):**
+> 2/ The loop works: voice task (Muse Voice Transcribe) → executor writes & runs code offline → Spark's independent
+> tests → referee → repair rounds. Faulty LLM tests are dropped if Spark's own reference solution fails them.
 
-> 2/ Why a second model? LLM-written tests can be wrong. During development Spark called an invalid IBAN "valid".
-> Now Spark also writes a reference solution and any test the reference fails is dropped before it reaches the agent.
+> 3/ But the executor's mistakes were misreadings of the task, and a verifier from the same model family reads the task
+> the same way. Our tests killed 94% of code mutants and still missed those.
 
-> 3/ Measured on {n_gorev} Turkish tasks with hidden tests nobody in the loop saw:
-> Glimmer alone {a_basari} · with its own tests {b_basari} · Usta {c_basari}.
-> Task sets + scripts are open, including where it didn't help.
+> 4/ Usta's "verified" was right 60% of the time; the executor's own "done" 63%. Coverage, not repair, is the
+> bottleneck. Every task, hidden test and log is open.
 
 ---
 
-## 2. Türkçe gönderi (Türk geliştirici topluluğu, paylaşım için)
+## 2. Türkçe gönderi
 
-> Türkçe görev veriyorsunuz — yazıyla ya da sesle — ajan kodu yazıyor, ama "bitti" demesi yetmiyor:
+> Bir yapay zekâ, başka bir yapay zekânın kodunu denetleyebilir mi?
 >
-> 🧠 Muse Glimmer (açık ağırlık) kodu ağı kapalı sandbox'ta yazıyor
-> 🔍 Muse Spark, kodu görmeden bağımsız testler yazıyor
-> 🔁 Kalan test varsa hata ajana dönüyor
+> Usta'yı yaptım: Türkçe görev veriyorsunuz, ajan kodu yazıyor, Muse Spark kodu görmeden test yazıyor, kalan test
+> varsa ajan düzeltiyor. Sonra gizli testlerle 1.026 koşuda ölçtüm.
 >
-> TC kimlik, IBAN, KDV, resmî tatilli vade… Usta 👇
+> Tek başına %60, Usta %58. Kazanç yok — nedeni ve bütün veriler depoda 👇
 > {repo_url} #MetaHackathon
-
-Ek: sesle görev verme anı (Voice Transcribe metni kutuya yazıyor) + yeşil rozet.
-
----
-
-## 3. "Türk I" kancalı kısa gönderi (merak uyandıran, teknik kitle)
-
-> "Ilgaz".lower() in Python → "ilgaz". In Turkish it should be "ılgaz".
->
-> Small bugs like this are why I built Usta: a Turkish coding agent where an independent model writes the tests
-> and the agent has to pass them before it can say "done".
->
-> Open weights (Muse Glimmer) + Muse Spark as verifier. {repo_url}
-
-Ek: senaryo 6'nın (turkce.py) rozet ekranının ekran görüntüsü — **yalnızca gerçekten koşulduysa** ve gösterilen
-sonuç gerçekse.
 
 ---
 
 ## Kontrol
 
-- [ ] Gösterilen her sayı ve rozet gerçek bir koşudan; kayıtlı koşuysa "from our evaluation run" demek yeterli
-- [ ] Görüntülerde API anahtarı, `.env`, Modal panosu, gerçek TC/IBAN yok
+- [ ] Gösterilen her sayı ve rozet gerçek bir koşudan; kayıtlı koşuysa "recorded run" yaz
+- [ ] Görüntülerde API anahtarı, `.env`, gerçek TC/IBAN yok
 - [ ] Bağlantı herkese açık depoya gidiyor

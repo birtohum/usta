@@ -1,120 +1,103 @@
 # Gönderim formu metinleri
 
-Gönderim: https://cerebralvalley.ai/e/meta-ai-developer-hackathon/hackathon/submit — son tarih **4 Kasım 21:00 ET =
-5 Kasım 04:00 TR**. Formu kullanıcı kendisi doldurur (giriş gerekiyor; alanlar bu hazırlıkta görülmedi, aşağıdaki
-başlıklar olası alanlara göre). Track: **Indie developer**. Tema: **Build for Your World**.
+Gönderim: https://cerebralvalley.ai/e/meta-ai-developer-hackathon/hackathon/submit (giriş gerekiyor, formu kullanıcı
+doldurur). Son tarih: **4 Kasım 21:00 ET**. Etkinlik sayfasında bitiş "Nov 5, 5:00 AM (GMT+3)" yazıyor; güvenli
+hedef **5 Kasım 04:00 TR**. Track: **Indie developer**. Tema: **Build for Your World**.
 
-Resmî jüri ölçütleri (etkinlik kuralları): Etki %30 · Meta AI araçlarının kullanımı %25 · Teknik derinlik ve uygulama
-%20 · Demo %25. Metinler bu dört başlığa göre kuruldu.
+Jüri ölçütleri (resmî kurallar): Etki %30 · Meta AI araçlarının kullanımı %25 · Teknik derinlik %20 · Demo %25.
+Indie track: "creativity, technical ambition, and whether it works".
 
-> **Not — bonuslar:** Herkese açık etkinlik sayfasında ve resmî kurallarda "Agentic" ya da "Open-Weight" adlı bir
-> bonus kategorisi göremedim; kurallar yalnızca organizatörlerin belirleyeceği en fazla 50.000 $'lık ek ödüllerden
-> (topluluk oyu, en viral proje vb.) söz ediyor. Bonus adları formda ya da Discord'da geçiyorsa aşağıdaki gerekçeler
-> hazır; geçmiyorsa aynı metinler "Use of Meta AI Tooling" ve "Technical Depth" alanlarında kullanılabilir.
+Bütün sayılar README'deki ölçüm tablolarından (`sonuclar/ozet_zor3_spark.md`, `ozet_zor2_spark.md`,
+`ozet_zor_glimmer.md`). Formdaki alan adları görülmedi; aşağıdaki başlıklar olası alanlara göre.
 
-Yer tutucular (README ölçüm tablosu kesinleşince doldur, uydurma):
-`{n_gorev}` görev sayısı · `{a_basari}` `{b_basari}` `{c_basari}` gizli testlerle başarı oranı (a/b/c) ·
-`{c_ilk_tur}` c kipinde ilk turda geçen görev oranı · `{c_duzeltme_kurtardi}` düzeltme döngüsüyle kurtarılan görev
-sayısı · `{iptal_test}` referans süzgecinin ayıkladığı test sayısı · `{gorev_basi_usd}` görev başına Spark maliyeti ·
-`{repo_url}` · `{video_url}`.
+**Konumlandırma (2 Kas'ta güncellendi):** Usta çalışan bir ürün ve arkasında 1.000'den fazla koşuluk bir ölçüm var;
+ölçüm, bağımsız doğrulama döngüsünün başarıyı **artırmadığını** gösteriyor. Metin bunu saklamıyor, öne koyuyor:
+"çalışan ajan + kanıt ekranı + bu tür doğrulayıcıların neden yetmediğini gösteren dürüst ölçüm". Kazanç iddiası yok.
 
 ---
 
 ## Proje adı
 
-**Usta** — *a Turkish coding agent that proves its own work*
+**Usta** — *a Turkish coding agent that shows its evidence*
 
-(Yedek: "Usta: Proof, not 'done' — a Turkish coding agent on open weights")
+## Kısa açıklama (≤ 200 karakter)
 
-## Tek satır / kısa açıklama (≤ 200 karakter)
+**EN:** Give Usta a coding task in Turkish, by text or voice. One Meta model writes and runs the code; Muse Spark
+tests it independently. 1,026 measured runs show what that loop does—and doesn't—fix.
 
-**EN:** Give Usta a coding task in Turkish, by text or voice. Open-weights Muse Glimmer writes the code in an offline
-sandbox; Muse Spark independently tests it. You get evidence, not "done".
-
-**TR (gerekirse):** Usta'ya Türkçe görev verin, yazıyla ya da sesle. Açık ağırlıklı Muse Glimmer kodu ağsız sandbox'ta
-yazar; Muse Spark bağımsız olarak test eder. "Bitti" değil, kanıt.
+**TR:** Usta'ya Türkçe görev verin, yazıyla ya da sesle. Bir Meta modeli kodu yazar ve çalıştırır; Muse Spark bağımsız
+olarak test eder. 1.026 ölçülmüş koşu, bu döngünün neyi düzelttiğini ve düzeltmediğini gösteriyor.
 
 ## Uzun açıklama
 
-**The problem (Build for Your World).** More than eighty million people speak Turkish, and the everyday software of
-Turkish small businesses is full of local rules: national ID check digits, IBAN checks, VAT at 1/10/20 %, prices
-written as `1.234,50`, payment dates that slide past weekends and public holidays, and the famous dotted/dotless
-I. Coding agents can write this code, but they say "done" without showing that it works — and a non-expert user has
-no way to tell. We measured untrained Muse Glimmer 30B on a Turkish coding exam before the hackathon (88 %): the
-capability is there. What is missing is reliability.
+**The problem (Build for Your World).** More than eighty million people speak Turkish, and everyday software for
+Turkish small businesses is full of local rules: national ID check digits, IBAN mod-97, VAT at 1/10/20 %, prices
+written as `1.234,50`, due dates that slide past weekends and public holidays, the dotted/dotless I. Coding agents can
+write this code, but they say "done" without evidence, and a non-expert cannot tell whether it works.
 
-**What Usta does.** You type or say a task in Turkish. Muse Voice Transcribe turns speech into text. Muse Spark writes
-a minimal naming contract (file and function names only — it is not allowed to add behaviour). Muse Glimmer 30B,
-served by us on open weights with vLLM, then writes and runs the code with native tool calls (Write / Read / Edit /
-Bash / Done) inside a Modal Sandbox with networking disabled. In parallel, Muse Spark writes acceptance tests from the
-task text alone — it never sees Glimmer's code, and Glimmer never sees the tests. Failing tests go back to Glimmer
-for up to three repair rounds. The result screen shows which tests passed in which round, the code, the contract,
-the tests and the cost.
+**What Usta does.** You type or say a task in Turkish; Muse Voice Transcribe turns speech into text. Muse Spark writes
+a naming contract only when the task leaves file or function names open. An executor — Muse Glimmer 30B on open
+weights (served by us with vLLM on Modal) or Muse Spark — writes and runs the code with native tool calls
+(Write / Read / Edit / Bash / Done) in an isolated, network-less workspace. In parallel and in separate calls, Spark
+writes acceptance tests from the task text alone, plus a reference solution; tests the reference fails are dropped.
+Failing tests go to a Spark arbiter, which enforces only what the task explicitly requires, and then back to the
+executor for up to three repair rounds; a round that breaks a passing test is rolled back. The result screen shows
+which tests passed in which round, which were not enforced and why, the code and the cost.
 
-**Why you can trust the result.**
-- *Writer ≠ verifier:* two different models, no shared context; the test file is rewritten before every run, so the
-  agent cannot edit its way to green.
-- *Faulty-test filter:* an LLM-written test can be wrong. In development Spark asserted an IBAN as valid whose mod-97
-  checksum is invalid, and Glimmer's correct code failed for three rounds. Spark now also writes a reference solution;
-  tests the reference fails are dropped before they reach the agent.
-- *Referee:* before failures are sent back, Spark checks each failing test against the task text and only enforces
-  expectations the task explicitly states, so the agent is not pushed to break correct code.
-- *Isolation:* each task gets its own sandbox; not even DNS resolves; out-of-workspace paths, network, privilege and
-  package-install commands are rejected before execution; 60 s timeouts. The Glimmer endpoint requires an API key.
+**What we measured — and the honest result.** We built three Turkish task sets generated by Spark, each task with
+12–20 hidden tests that neither the executor nor Usta's test writer ever saw, and compared (a) executor alone,
+(b) executor told to write and pass its own tests, (c) Usta.
+- Main run, 114 very hard tasks × 3 runs (1,026 runs, Spark executor, isolated WSL runner, strongest verifier: three
+  independent test writers, majority reference filter, mutation testing): **a 60.2 %, b 56.7 %, c 57.6 %**;
+  c − a = −2.6 points (95 % CI −9.1 … +3.2).
+- Usta's "verified" verdict was correct 60 % of the time; the executor's own "done" 63 %.
+- Earlier runs (157 tasks; 34 tasks with Glimmer and with Spark) point the same way: no mode beat the executor alone
+  significantly.
 
-**Honest measurement.** On {n_gorev} Turkish tasks generated by Muse Spark (not hand-written), with hidden tests that
-neither the agent nor Usta's test writer ever saw, we compared (a) Glimmer alone: {a_basari}, (b) Glimmer told to
-write and pass its own tests: {b_basari}, (c) Usta: {c_basari}. The repair loop rescued {c_duzeltme_kurtardi} tasks
-that failed their first round. We publish the caveats too: an easy pilot set did not separate the modes, so we built a
-harder set; hidden tests and acceptance tests come from the same model family, so their errors may correlate; N is
-small. Task sets, logs and evaluation scripts are in the repository.
+Why: the executor's errors are mostly *misreadings of the task*, and a verifier from the same model family shares
+those readings. Our acceptance tests killed 94 % of code mutants of the reference solution — strong against small code
+bugs, weak against interpretation errors. Coverage, not repair, is the bottleneck. We think this is a useful result for
+anyone building "LLM checks LLM" pipelines, and every task, hidden test, log and script is in the repo.
 
-**Who it is for.** Turkish-speaking developers, students and small-business owners who need small, correct pieces of
-software in their own language — and anyone who wants an agent that shows its evidence. The verifier loop is
-language-independent; Turkish is where we started because it is our world.
+**What Usta delivers today.** A Turkish-first agent that works end to end (voice → code → tests → evidence) and a
+reproducible record of what was checked. It does not make the executor more correct, and we say so.
+
+**Who it is for.** Turkish-speaking developers, students and small-business owners who need small pieces of software
+in their own language; and builders of verification loops who want measured evidence instead of anecdotes.
 
 ## Kullanılan Meta araçları
 
-| Araç | Nasıl kullanıldı | Neden sıradan entegrasyonun ötesi |
-|---|---|---|
-| **Muse Glimmer 30B** (açık ağırlık, Apache 2.0) | Yürütücü ajan. Meta'nın `vllm/vllm-openai:muse-glimmer` imajıyla Modal H100'de kendi sunucumuz, `--tool-call-parser muse_glimmer` ile yerel araç çağrısı (doğrulandı), kimlik doğrulamalı uç nokta, boşta sıfıra ölçeklenir | Model API değil, ağırlıkları kendimiz servis ediyoruz; ajan döngüsü ve sandbox araçları sıfırdan yazıldı |
-| **Muse Spark 1.3** (Meta Model API) | Adlandırma sözleşmesi, bağımsız kabul testleri, referans çözüm (hatalı test süzgeci), hakem; değerlendirme görev setlerini ve gizli testleri üretti | Spark bir sohbet botu değil, **doğrulayıcı** rolünde: Glimmer'ın işini denetleyen ikinci, bağımsız model; `reasoning_effort` adıma göre ayarlanıyor (sözleşme low, testler medium) |
-| **Muse Voice Transcribe 1.0** | Türkçe sesli görev → metin (realtime WebSocket API), arayüzde 🎤 düğmesi | Türkçe teknik dikte (dosya/fonksiyon adları) doğrudan ajan girdisi olur |
+| Araç | Nasıl kullanıldı |
+|---|---|
+| **Muse Glimmer 30B** (açık ağırlık, Apache 2.0) | Yürütücü ajan. Meta'nın `vllm/vllm-openai:muse-glimmer` imajıyla Modal H100'de kendi sunucumuz, `--tool-call-parser muse_glimmer` ile yerel araç çağrısı, API anahtarlı uç nokta, boşta sıfıra ölçeklenir. 34 görevlik setin tamamında ölçüldü (Modal Sandbox, ağ kapalı); GPU kredisi bitince büyük setler Spark'la koşuldu. |
+| **Muse Spark 1.3** (Meta Model API) | Doğrulayıcı (sözleşme, kabul testleri, referans çözüm, hakem, mutasyon testleri), bütün görev setlerinin ve gizli testlerin üreticisi, ve ikinci yürütücü (yerel araç çağrısı). `reasoning_effort` adıma göre ayarlanıyor. |
+| **Muse Voice Transcribe 1.0** | Türkçe sesli görev → metin (realtime WebSocket API), arayüzde 🎤 düğmesi. |
 
-(Muse Code ile geliştirme yapıldıysa buraya ekle; yapılmadıysa yazma.)
+Muse Code geliştirme için kullanılmadı; formda yazma.
 
-## Open-Weight gerekçesi
+## Teknik derinlik (alan varsa)
 
-**EN:** The agent that actually writes and runs the code is **Muse Glimmer 30B on open weights**, served by us — not a
-hosted API. We deploy Meta's vLLM Glimmer image on a Modal H100 behind an API key (unauthenticated requests get 401),
-with native tool calling through vLLM's `muse_glimmer` parser, scaling to zero when idle. Open weights matter for our
-users: a Turkish small business or public institution can run the executor on its own hardware, keep its code
-private, and fine-tune it on its own domain. The closed model (Spark) is used only as an independent verifier, so the
-part that touches user code can stay fully self-hosted. {qlora_cumlesi}
-
-> `{qlora_cumlesi}`: QLoRA çalışması (ayrı oturum) bir sonuç verirse ölçülmüş tek cümle; vermezse sil.
-
-## Agentic gerekçesi
-
-**EN:** Usta is a multi-step, multi-model agent, not a single prompt. Glimmer plans and acts through native tool
-calls (Write / Read / Edit / Bash / Done) in an isolated, network-disabled sandbox, runs its own tests, and decides
-when it is done. A second agent, Spark, independently writes acceptance tests, filters its own faulty tests against a
-reference solution, and acts as a referee on failures. Failing output is fed back to Glimmer in a closed repair loop
-(up to three rounds) until independent evidence says the work is correct. Guardrails are enforced in code, before
-execution: workspace-only paths, no network, no privilege escalation or package installs, timeouts, output
-truncation, and a spending limit on API calls.
+- Ajan döngüsü, araç katmanı ve üç çalışma ortamı sıfırdan: Modal Sandbox (`block_network=True`, DNS bile
+  çözülmüyor), ayrı bir WSL dağıtımı (Windows dosyalarına erişim yok, yetkisiz kullanıcı, her komut `unshare --net`),
+  ve uyarıyla açılan yerel kip. Güvenlik incelemesi ve sınırlar `tests/GUVENLIK.md`'de.
+- Doğrulayıcı dört sürümden geçti; her değişiklik bir ölçümden çıktı (git geçmişi): davranış uyduran sözleşme →
+  yalnızca adlandırma; belirsiz görev metni → hakem; çalışan kodu bozan tur → geri alma; hatalı LLM testi → referans
+  süzgeci; tek test yazarı → üç bağımsız yazar + çoğunluk + mutasyon döngüsü.
+- Ölçüm: görev düzeyinde eşleştirilmiş bootstrap güven aralıkları, Wilson aralıkları, 3 tekrar, pilotun sonuçtan
+  ayrılması, 0 altyapı hatası.
+- Harcama sayacı salt-eklemeli defter (eşzamanlı yazmada kayıp yok), tavan aşılırsa durur. Bütün depo için Meta API
+  harcaması ≈ 31 $.
 
 ## Demo videosu ve bağlantılar
 
-- Video (3 dk): {video_url}
-- Depo: {repo_url} (Apache 2.0; tüm kod 27 Eki – 4 Kas arasında yazıldı, git geçmişinde görülebilir)
-- Çalıştırma: README "Run it" bölümü
+- Video (≤ 3 dk): {video_url}
+- Depo: {repo_url} (Apache 2.0; bütün kod 27 Eki – 4 Kas arasında yazıldı, git geçmişinde görülebilir)
+- Çalıştırma: README "Run it"
 
 ## Formdan önce kontrol listesi
 
-- [ ] README ölçüm tablosu dolu; buradaki tüm `{…}` yer tutucuları aynı sayılarla dolduruldu ya da cümle silindi
-- [ ] Depo herkese açık, `.env` ve anahtarlar depoda yok (`git log -p | grep -i key` ile bak)
-- [ ] Video herkese açık/listelenmemiş bağlantıyla izlenebiliyor, 3:00'ı aşmıyor
-- [ ] Ekip üyeleri (varsa) formda belirtildi
+- [ ] `{video_url}` ve `{repo_url}` dolduruldu
+- [ ] Depo herkese açık; `.env`, `kayitlar/`, anahtar yok (gönderimden önce taranacak)
+- [ ] Video herkese açık ya da liste dışı bağlantıyla izlenebiliyor, 3:00'ı aşmıyor
 - [ ] Track: Indie · Tema: Build for Your World
-- [ ] Glimmer sunucusu durduruldu: `modal app stop -y usta-glimmer`
+- [ ] Modal'da çalışan uygulama yok: `modal app list`

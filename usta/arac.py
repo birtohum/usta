@@ -1,12 +1,13 @@
 """Ajanın araçları ve bunları yalıtılmış bir çalışma alanında yürüten çalıştırıcılar.
 
-İki arka uç:
+Üç arka uç:
+  WslCalisma    — usta-kum WSL dağıtımı: Windows dosyalarına erişim yok, yetkisiz kullanıcı, her komut ağsız (varsayılan).
   ModalCalisma  — her görev için ayrı bir Modal Sandbox (ağ tamamen kapalı, /work klasörü).
   YerelCalisma  — yerel geçici klasör + alt süreç. İşletim sistemi düzeyinde yalıtım ve AĞ KISITLAMASI YOKTUR; yalnızca
                   aşağıdaki yol/komut denetimleri, en küçük ortam değişkenleri ve zaman aşımı uygulanır.
-Varsayılan USTA_CALISMA ortam değişkeninden gelir ("yerel" ya da "modal"; verilmezse "yerel").
+Seçim USTA_CALISMA ortam değişkeninden gelir ("wsl", "modal" ya da "yerel"; verilmezse "wsl").
 
-Her iki arka uçta da: klasör dışına çıkan yollar reddedilir, ağ/yetki/yıkıcı komut kalıpları reddedilir,
+Bütün arka uçlarda: klasör dışına çıkan yollar reddedilir, ağ/yetki/yıkıcı komut kalıpları reddedilir,
 komutlar zaman aşımıyla kesilir ve çıktı kırpılır.
 """
 import json
