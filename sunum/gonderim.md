@@ -90,13 +90,13 @@ Muse Code geliştirme için kullanılmadı; formda yazma.
 
 ## Demo videosu ve bağlantılar
 
-- Video (≤ 3 dk): {video_url}
+- Video (≤ 3 dk): https://www.youtube.com/watch?v=f9RjvBsFDiU
 - Depo: https://github.com/birtohum/usta (Apache 2.0; bütün kod 27 Eki – 4 Kas arasında yazıldı, git geçmişinde görülebilir)
 - Çalıştırma: README "Run it"
 
 ## Formdan önce kontrol listesi
 
-- [ ] `{video_url}` dolduruldu (depo: https://github.com/birtohum/usta)
+- [ ] `https://www.youtube.com/watch?v=f9RjvBsFDiU` dolduruldu (depo: https://github.com/birtohum/usta)
 - [ ] Depo herkese açık; `.env`, `kayitlar/`, anahtar yok (gönderimden önce taranacak)
 - [ ] Video herkese açık ya da liste dışı bağlantıyla izlenebiliyor, 3:00'ı aşmıyor
 - [ ] Track: Indie · Tema: Build for Your World
